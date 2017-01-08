@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://calpa.github.io/"/>
-  <updated>2017-01-08T02:39:21.000Z</updated>
+  <updated>2017-01-08T03:07:27.000Z</updated>
   <id>http://calpa.github.io/</id>
   
   <author>
@@ -14,6 +14,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>建立一個404 Page</title>
+    <link href="http://calpa.github.io/2017/01/08/hexo-404-page/"/>
+    <id>http://calpa.github.io/2017/01/08/hexo-404-page/</id>
+    <published>2017-01-08T03:02:58.000Z</published>
+    <updated>2017-01-08T03:07:27.000Z</updated>
+    
+    <content type="html"><![CDATA[<ol>
+<li>在Terminal輸入 hexo new page 404</li>
+<li>然後打開 <code>/source/404/index.md</code></li>
+<li>在頂部寫下<code>permalink: /404.html</code></li>
+</ol>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
+<li><a href="https://help.github.com/articles/creating-a-custom-404-page-for-your-github-pages-site/" target="_blank" rel="external">Creating a custom 404 page for your GitHub Pages site</a></li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;ol&gt;
+&lt;li&gt;在Terminal輸入 hexo new page 404&lt;/li&gt;
+&lt;li&gt;然後打開 &lt;code&gt;/source/404/index.md&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;在頂部寫下&lt;code&gt;permalink: /404.html&lt;/code&gt;&lt;/li&gt;
+
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="http://calpa.github.io/tags/hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
