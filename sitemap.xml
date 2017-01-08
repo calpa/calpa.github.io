@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://calpa.github.io//404.html</loc>
+    
+    <lastmod>2017-01-08T03:00:33.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://calpa.github.io/2017/01/08/hello-world/</loc>
     
     <lastmod>2017-01-08T02:39:21.000Z</lastmod>
