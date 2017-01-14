@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://calpa.github.io/2017/01/14/hoisting/</loc>
+    
+    <lastmod>2017-01-14T13:08:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://calpa.github.io//404.html</loc>
     
     <lastmod>2017-01-08T03:27:47.000Z</lastmod>

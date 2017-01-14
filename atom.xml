@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://calpa.github.io/"/>
-  <updated>2017-01-08T03:07:27.000Z</updated>
+  <updated>2017-01-14T13:08:48.000Z</updated>
   <id>http://calpa.github.io/</id>
   
   <author>
@@ -14,6 +14,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>初探Javascript變量提升</title>
+    <link href="http://calpa.github.io/2017/01/14/hoisting/"/>
+    <id>http://calpa.github.io/2017/01/14/hoisting/</id>
+    <published>2017-01-14T12:09:35.000Z</published>
+    <updated>2017-01-14T13:08:48.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>在Javascript中，hoisting是一個容易犯錯的地方。<br>在一段scope裡面，沒有定義變量就使用變量的話會彈出Reference Error。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"> // ReferenceError: poi is not defined</div><div class="line">console.log(poi);</div></pre></td></tr></table></figure></p>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var name;</div><div class="line">console.log(name); // undefined</div><div class="line">name = &apos;calpa&apos;</div><div class="line">console.log(name); // calpa</div></pre></td></tr></table></figure>
+<p>由於Javascript的解釋器會提前把所有變量函數定義，所以上面這一段代碼會變成這一段：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">console.log(name); // undefined</div><div class="line">var name = &apos;calpa&apos;;</div><div class="line">console.log(name); // calpa</div></pre></td></tr></table></figure></p>
+<p>另外，Javascript也會出現這樣的問題。。。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var name = &apos;calpa&apos;;</div><div class="line">(function () &#123;</div><div class="line">    // My name is undefined</div><div class="line">    console.log(&quot;My name is &quot; + name); </div><div class="line">    var name = &apos;poi&apos;;</div><div class="line">    // My name is poi</div><div class="line">    console.log(&quot;My name is &quot; + name); // poi</div><div class="line">&#125;)();</div></pre></td></tr></table></figure></p>
+<p>簡單來說，在寫Javascript時，我們應該提前在檔案開始位置定義變量。</p>
+<hr>
+<p>參考資料：</p>
+<ol>
+<li><a href="http://adripofjavascript.com/blog/drips/variable-and-function-hoisting" target="_blank" rel="external">Variable and Function Hoisting in JavaScript</a></li>
+<li><a href="http://jinlong.github.io/2013/09/11/var-and-fun-hoisting/" target="_blank" rel="external">JavaScript 中的变量和函数提升</a></li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在Javascript中，hoisting是一個容易犯錯的地方。&lt;br&gt;在一段scope裡面，沒有定義變量就使用變量的話會彈出Reference Error。&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;
+    
+    </summary>
+    
+    
+      <category term="Javascript" scheme="http://calpa.github.io/tags/Javascript/"/>
+    
+  </entry>
   
   <entry>
     <title>建立一個404 Page</title>
