@@ -52,12 +52,12 @@
     <link href="http://calpa.github.io/2017/01/08/hexo-404-page/"/>
     <id>http://calpa.github.io/2017/01/08/hexo-404-page/</id>
     <published>2017-01-08T03:02:58.000Z</published>
-    <updated>2017-01-08T03:07:27.000Z</updated>
+    <updated>2017-01-15T08:02:26.000Z</updated>
     
-    <content type="html"><![CDATA[<ol>
-<li>在Terminal輸入 hexo new page 404</li>
-<li>然後打開 <code>/source/404/index.md</code></li>
-<li>在頂部寫下<code>permalink: /404.html</code></li>
+    <content type="html"><![CDATA[<h1 id="建立方法"><a href="#建立方法" class="headerlink" title="建立方法"></a>建立方法</h1><ol>
+<li>在Terminal輸入 <code>hexo new page 404</code></li>
+<li>然後打開儲存404檔案的位置，比如說：<code>/source/404/index.md</code></li>
+<li>在這個檔案最頂部寫下<code>permalink: /404.html</code>就可以了。</li>
 </ol>
 <h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
 <li><a href="https://help.github.com/articles/creating-a-custom-404-page-for-your-github-pages-site/" target="_blank" rel="external">Creating a custom 404 page for your GitHub Pages site</a></li>
@@ -66,11 +66,9 @@
     
     <summary type="html">
     
-      &lt;ol&gt;
-&lt;li&gt;在Terminal輸入 hexo new page 404&lt;/li&gt;
-&lt;li&gt;然後打開 &lt;code&gt;/source/404/index.md&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;在頂部寫下&lt;code&gt;permalink: /404.html&lt;/code&gt;&lt;/li&gt;
-
+      &lt;h1 id=&quot;建立方法&quot;&gt;&lt;a href=&quot;#建立方法&quot; class=&quot;headerlink&quot; title=&quot;建立方法&quot;&gt;&lt;/a&gt;建立方法&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;在Terminal輸入 &lt;code&gt;hexo new page 404&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;然後打開
     
     </summary>
     
