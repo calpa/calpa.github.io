@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        Tags｜Calpa&#39;s blog
+        works｜Calpa&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="http://calpa.github.io/Tags/">
+    <link rel="canonical" href="http://calpa.github.io/works/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -134,127 +134,200 @@
 
 <!-- Main Content -->
 <style>
-    .intro-header .site-heading {
-        margin: 50px;
+    * {
+        /*border: thin red solid;*/
+    }
+
+    header .bg-header {
+        height: 560px;
+        background-color: hsla(174, 33%, 35%, 0.79);
+    }
+
+    /*头像*/
+    .bg-header .avatar img {
+        border-radius: 50%;
+        margin-top: 100px;
+        max-width: 170px;
+    }
+
+    .bg-header h1,
+    .bg-header h2 {
+        color: white;
+    }
+
+    /*姓名*/
+    .bg-header h1 {
+        letter-spacing: 2px;
+        text-shadow: 0 0 10px rgba(15, 15, 15, .3);
+    }
+
+    /*描述*/
+    .bg-header h2 {
+        font-size: 18px;
+        margin-top: 12px;
+    }
+
+    /*整个作品展示区*/
+    section .works-area {
+        margin-top: -150px;
+    }
+
+    .works-area .works-item {
+        border-radius: 2px;
+        border: 1px solid #eee8d5;
+        margin-bottom: 50px;
+        box-shadow: 8px 5px 10px rgba(0, 0, 0, .2);
+    }
+
+    .works-item-img {
+        margin: auto -26px;
+    }
+
+    .works-item-img img {
+        width: 100%;
+    }
+
+    .works-area .works-item {
+        background: white;
+        padding: 5px 25px;
+    }
+
+    .works-area .footer {
+        padding-top: 10px;
+        border-top: thin #eee solid;
+    }
+
+    .works-area .footer .btn {
+        padding: 7px 9px;
+        border-radius: 2px;
+        float: right;
+        margin: 8px 0;
+        text-transform: none;
+        font-size: 12px;
+        font-style: italic;
+        background: #0085a1;
+        border: none;
+        color: #fff;
+    }
+
+    .works-item .works-content {
+        padding-top: 15px;
+    }
+
+    .works-item .title {
+        padding-top: 6px;
+    }
+
+    .works-item .title h3 {
+        display: inline-block;
+        margin: 0 15px;
+        height: 33px;
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .works-item .title .title-date {
+        float: right;
+        font-size: 18px;
+    }
+
+    .works-item .use span {
+        display: inline-block;
+        font-size: 12px;
+        border-radius: 3px;
+        padding: 0 4px;
+        border: thin solid #795548;
+    }
+
+    .works-item .subtitle {
+        margin: 0;
+        font-size: 17px;
+    }
+
+    @media screen and (max-width: 400px) {
+        .works-item .footer .use {
+            font-size: 14px;
+        }
+
+        .works-item .works-item-img {
+            height: 200px;
+        }
+
+        .bg-header .avatar img {
+            max-width: 150px;
+        }
+
+        .bg-header h1 {
+            font-size: 24px;
+        }
+
+        section .works-area {
+            margin-top: -210px;
+        }
     }
 </style>
 
-<!-- Page Header -->
-<header class="intro-header">
+<div class="works-container" style="background-color: #fafafa">
+    <header>
+        <div class="bg-header text-center">
+            <div class="profile">
+                <div class="avatar">
+                    <img src="/img/profile.png">
+                </div>
+                <div class="personal-profile">
+                    <h1>
+                        Calpa
+                    </h1>
+                    <h2>作品集</h2>
+                </div>
+            </div>
+        </div>
+    </header>
     <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading text-center">
-                    <h1>Tags</h1>
-                    <span class="subheading"></span>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
+        <section class="row">
+            <div class="col-sm-10 col-sm-offset-1
+                        col-md-8 col-md-offset-2
+                      works-area">
+                
+                <div class="works-item">
+                    <div class="title">
+                        <h3>
+                            Digital Aperture
+                        </h3>
+                        <span class="title-date text-muted">
+                            2017.1.22
+                        </span>
+                    </div>
+                    <div class="works-item-img">
+                        <img src="https://raw.githubusercontent.com/calpa/Digital-Bot/master/images/chat-1.png">
+                    </div>
+                    <div class="works-content">
+                        <div class="use text-warning">
+                            
+                            <span>
+                                    Node.js
+                                </span>
+                            
+                            <span>
+                                    Machine Learning
+                                </span>
+                            
+                        </div>
+                        　
+                        <p class="subtitle"> ImagineHack 2017 (21-22/2017) </p>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <!-- 标签云 -->
-            <div id='tag_cloud' class="tags">
-                
-                <a href="#web" title="web" rel="1">web</a>
-                
-                <a href="#Javascript" title="Javascript" rel="1">Javascript</a>
-                
-                <a href="#hexo" title="hexo" rel="2">hexo</a>
-                
-                <a href="#theme" title="theme" rel="1">theme</a>
+                        <p class="text-muted"> Interactive bot 🤖 for elderly living alone and their family members. </p>
+                    </div>
+                    <div class="footer clearfix">
+                        <a class="btn btn-default" href="https://github.com/calpa/Digital-Bot" target="_blank"> Open
+                            it</a>
+                    </div>
+                </div>
                 
             </div>
-
-            <!-- 标签列表 -->
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="web">
-                    <span class="tag-text">web</span>
-                </span>
-                
-                <div class="post-preview">
-                    <a href="/2017/01/20/localstorage/">
-                        <h2 class="post-title">
-                            HTML5 Web Storage
-                        </h2>
-                        
-                    </a>
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="Javascript">
-                    <span class="tag-text">Javascript</span>
-                </span>
-                
-                <div class="post-preview">
-                    <a href="/2017/01/14/hoisting/">
-                        <h2 class="post-title">
-                            初探Javascript變量提升
-                        </h2>
-                        
-                    </a>
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="hexo">
-                    <span class="tag-text">hexo</span>
-                </span>
-                
-                <div class="post-preview">
-                    <a href="/2017/01/08/hexo-404-page/">
-                        <h2 class="post-title">
-                            建立一個404 Page
-                        </h2>
-                        
-                    </a>
-                </div>
-                <hr>
-                
-                <div class="post-preview">
-                    <a href="/2017/01/08/hello-world/">
-                        <h2 class="post-title">
-                            Hello World
-                        </h2>
-                        
-                    </a>
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="theme">
-                    <span class="tag-text">theme</span>
-                </span>
-                
-                <div class="post-preview">
-                    <a href="/2017/01/08/hello-world/">
-                        <h2 class="post-title">
-                            Hello World
-                        </h2>
-                        
-                    </a>
-                </div>
-                <hr>
-                
-            </div>
-            
-
-        </div>
+        </section>
     </div>
 </div>
-
 <!-- Footer -->
 <!-- Footer -->
 <footer>

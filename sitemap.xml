@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://calpa.github.io/works/index.html</loc>
+    
+    <lastmod>2017-01-22T04:58:45.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://calpa.github.io/2017/01/20/localstorage/</loc>
     
     <lastmod>2017-01-20T11:52:26.000Z</lastmod>
