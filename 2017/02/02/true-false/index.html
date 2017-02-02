@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        Tags｜Calpa&#39;s blog
+        Javascript中的True與False｜Calpa&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="http://calpa.github.io/Tags/">
+    <link rel="canonical" href="http://calpa.github.io/2017/02/02/true-false/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -43,7 +43,7 @@
 <!-- hack iOS CSS :active style -->
 <body ontouchstart="" class="animated fadeIn">
 <!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "false" data-istags="false
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "true" data-istags="false
 " data-ishome = "false" >
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -133,137 +133,128 @@
 </script>
 
 <!-- Main Content -->
+
+<!--only post-->
+
+
+<img class="wechat-title-img"
+     src="/img/post-default.jpg">
+
+
 <style>
-    .intro-header .site-heading {
-        margin: 50px;
+    
+    header.intro-header {
+        background-image: url('/img/post-default.jpg')
     }
+
+    
 </style>
 
-<!-- Page Header -->
 <header class="intro-header">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading text-center">
-                    <h1>Tags</h1>
-                    <span class="subheading"></span>
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <div class="post-heading">
+                    <h1>Javascript中的True與False</h1>
+                    
+                    <span class="meta">
+                         作者 Calpa
+                        <span>
+                          日期 2017-02-02
+                         </span>
+                    </span>
+                    <div class="tags text-center">
+                        
+                        <a class="tag" href="/tags/#Javascript"
+                           title="Javascript">Javascript</a>
+                        
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="post-title-haojen">
+        <span>
+            Javascript中的True與False
+        </span>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <!-- 标签云 -->
-            <div id='tag_cloud' class="tags">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
+                <p>這幾天用<a href="https://www.enki.com/" target="_blank" rel="external">Enki</a>來學習Javascript，感覺不錯，<strong>You can’t handle the truth!</strong>有一些特別True/False例子。這裡簡單記錄一下。</p>
+<p>最簡單的測試方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function test(something)&#123;</div><div class="line">  if (something) &#123;</div><div class="line">    console.log(something + &apos; is true.&apos;);</div><div class="line">  &#125; else &#123;</div><div class="line">    console.log(something + &apos; is false.&apos;);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h1 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h1><h2 id="Truthy"><a href="#Truthy" class="headerlink" title="Truthy"></a>Truthy</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">true &lt;- true當然是true...</div><div class="line">[1][0]</div><div class="line">new Date()</div><div class="line">new Number(0)</div><div class="line">Object</div><div class="line">Infinity</div><div class="line">[]</div></pre></td></tr></table></figure>
+<p>以下都是[object Object]:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&#123;a: false&#125;</div><div class="line">&#123;&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="Falsy"><a href="#Falsy" class="headerlink" title="Falsy"></a>Falsy</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">false &lt;- false當然是false...</div><div class="line">undefined</div><div class="line">&apos;&apos;</div><div class="line">&quot;&quot;</div><div class="line">[1][1] &lt;- undefined</div><div class="line">NaN</div><div class="line">null</div><div class="line">&#123;&#125;.someKey</div><div class="line">0</div><div class="line">[].length &lt;- 這個是0，所以出false</div></pre></td></tr></table></figure>
+<p>值得注意的是[]，它本身會是<code>true</code>，但如果用<code>[] == true</code>的話會輸出<code>false</code>，<br>而<code>[] == false</code>的話會輸出<code>true</code>。</p>
+
+                <hr>
                 
-                <a href="#hexo" title="hexo" rel="2">hexo</a>
+
+                <ul class="pager">
+                    
+                    
+                    <li class="next">
+                        <a href="/2017/01/20/localstorage/" data-toggle="tooltip" data-placement="top"
+                           title="HTML5 Web Storage">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
                 
-                <a href="#theme" title="theme" rel="1">theme</a>
+
                 
-                <a href="#Javascript" title="Javascript" rel="2">Javascript</a>
-                
-                <a href="#web" title="web" rel="1">web</a>
-                
+
             </div>
 
-            <!-- 标签列表 -->
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="hexo">
-                    <span class="tag-text">hexo</span>
-                </span>
-                
-                <div class="post-preview">
-                    <a href="/2017/01/08/hexo-404-page/">
-                        <h2 class="post-title">
-                            建立一個404 Page
-                        </h2>
-                        
-                    </a>
+            <div class="hidden-xs col-sm-3 toc-col">
+                <div class="toc-wrap">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#例子"><span class="toc-text">例子</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Truthy"><span class="toc-text">Truthy</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Falsy"><span class="toc-text">Falsy</span></a></li></ol></li></ol>
                 </div>
-                <hr>
-                
-                <div class="post-preview">
-                    <a href="/2017/01/08/hello-world/">
-                        <h2 class="post-title">
-                            Hello World
-                        </h2>
-                        
-                    </a>
-                </div>
-                <hr>
-                
             </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="theme">
-                    <span class="tag-text">theme</span>
-                </span>
-                
-                <div class="post-preview">
-                    <a href="/2017/01/08/hello-world/">
-                        <h2 class="post-title">
-                            Hello World
-                        </h2>
-                        
-                    </a>
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="Javascript">
-                    <span class="tag-text">Javascript</span>
-                </span>
-                
-                <div class="post-preview">
-                    <a href="/2017/01/14/hoisting/">
-                        <h2 class="post-title">
-                            初探Javascript變量提升
-                        </h2>
-                        
-                    </a>
-                </div>
-                <hr>
-                
-                <div class="post-preview">
-                    <a href="/2017/02/02/true-false/">
-                        <h2 class="post-title">
-                            Javascript中的True與False
-                        </h2>
-                        
-                    </a>
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="web">
-                    <span class="tag-text">web</span>
-                </span>
-                
-                <div class="post-preview">
-                    <a href="/2017/01/20/localstorage/">
-                        <h2 class="post-title">
-                            HTML5 Web Storage
-                        </h2>
-                        
-                    </a>
-                </div>
-                <hr>
-                
-            </div>
-            
-
         </div>
+
+        <div class="row">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5 class="text-center">
+                        <a href="/tags/">FEATURED TAGS</a>
+                    </h5>
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/#Javascript"
+                           title="Javascript">Javascript</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        </div>
+
     </div>
-</div>
+</article>
+
+
+
+
+
 
 <!-- Footer -->
 <!-- Footer -->

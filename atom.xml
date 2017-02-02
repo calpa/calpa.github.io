@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://calpa.github.io/"/>
-  <updated>2017-01-20T11:52:26.000Z</updated>
+  <updated>2017-02-02T12:55:52.000Z</updated>
   <id>http://calpa.github.io/</id>
   
   <author>
@@ -14,6 +14,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Javascript中的True與False</title>
+    <link href="http://calpa.github.io/2017/02/02/true-false/"/>
+    <id>http://calpa.github.io/2017/02/02/true-false/</id>
+    <published>2017-02-02T15:19:53.000Z</published>
+    <updated>2017-02-02T12:55:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>這幾天用<a href="https://www.enki.com/" target="_blank" rel="external">Enki</a>來學習Javascript，感覺不錯，<strong>You can’t handle the truth!</strong>有一些特別True/False例子。這裡簡單記錄一下。</p>
+<p>最簡單的測試方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function test(something)&#123;</div><div class="line">  if (something) &#123;</div><div class="line">    console.log(something + &apos; is true.&apos;);</div><div class="line">  &#125; else &#123;</div><div class="line">    console.log(something + &apos; is false.&apos;);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h1 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h1><h2 id="Truthy"><a href="#Truthy" class="headerlink" title="Truthy"></a>Truthy</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">true &lt;- true當然是true...</div><div class="line">[1][0]</div><div class="line">new Date()</div><div class="line">new Number(0)</div><div class="line">Object</div><div class="line">Infinity</div><div class="line">[]</div></pre></td></tr></table></figure>
+<p>以下都是[object Object]:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&#123;a: false&#125;</div><div class="line">&#123;&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="Falsy"><a href="#Falsy" class="headerlink" title="Falsy"></a>Falsy</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">false &lt;- false當然是false...</div><div class="line">undefined</div><div class="line">&apos;&apos;</div><div class="line">&quot;&quot;</div><div class="line">[1][1] &lt;- undefined</div><div class="line">NaN</div><div class="line">null</div><div class="line">&#123;&#125;.someKey</div><div class="line">0</div><div class="line">[].length &lt;- 這個是0，所以出false</div></pre></td></tr></table></figure>
+<p>值得注意的是[]，它本身會是<code>true</code>，但如果用<code>[] == true</code>的話會輸出<code>false</code>，<br>而<code>[] == false</code>的話會輸出<code>true</code>。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;這幾天用&lt;a href=&quot;https://www.enki.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Enki&lt;/a&gt;來學習Javascript，感覺不錯，&lt;strong&gt;You can’t handle the truth!&lt;/strong
+    
+    </summary>
+    
+    
+      <category term="Javascript" scheme="http://calpa.github.io/tags/Javascript/"/>
+    
+  </entry>
   
   <entry>
     <title>HTML5 Web Storage</title>
