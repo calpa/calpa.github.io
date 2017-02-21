@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        Tags｜Calpa&#39;s blog
+        Javascript中的Closure入門｜Calpa&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="http://calpa.github.io/Tags/">
+    <link rel="canonical" href="http://calpa.github.io/2017/02/19/js-closure/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -43,7 +43,7 @@
 <!-- hack iOS CSS :active style -->
 <body ontouchstart="" class="animated fadeIn">
 <!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "false" data-istags="false
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "true" data-istags="false
 " data-ishome = "false" >
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -133,175 +133,162 @@
 </script>
 
 <!-- Main Content -->
+
+<!--only post-->
+
+
+<img class="wechat-title-img"
+     src="/img/post-default.jpg">
+
+
 <style>
-    .intro-header .site-heading {
-        margin: 50px;
+    
+    header.intro-header {
+        background-image: url('/img/post-default.jpg')
     }
+
+    
 </style>
 
-<!-- Page Header -->
 <header class="intro-header">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading text-center">
-                    <h1>Tags</h1>
-                    <span class="subheading"></span>
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <div class="post-heading">
+                    <h1>Javascript中的Closure入門</h1>
+                    
+                    <span class="meta">
+                         作者 Calpa
+                        <span>
+                          日期 2017-02-19
+                         </span>
+                    </span>
+                    <div class="tags text-center">
+                        
+                        <a class="tag" href="/tags/#Javascript"
+                           title="Javascript">Javascript</a>
+                        
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="post-title-haojen">
+        <span>
+            Javascript中的Closure入門
+        </span>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <!-- 标签云 -->
-            <div id='tag_cloud' class="tags">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
+                <h2 id="為什麼會有這篇文章"><a href="#為什麼會有這篇文章" class="headerlink" title="為什麼會有這篇文章"></a>為什麼會有這篇文章</h2><p>打好基本功是很重要的。。。</p>
+<h2 id="最簡單的閉包"><a href="#最簡單的閉包" class="headerlink" title="最簡單的閉包"></a>最簡單的閉包</h2><ol>
+<li>先定義一個Function A</li>
+<li>在A的裡面定義一個Function B</li>
+<li>在A中返回B</li>
+<li>執行A(), 將A()的返回值賦予給b</li>
+<li>執行b()</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function A() &#123;</div><div class="line">  function B() &#123;</div><div class="line">    console.log(&quot;Hello, world!&quot;);</div><div class="line">  &#125;</div><div class="line">  return B;</div><div class="line">&#125;</div><div class="line">var b = A();</div><div class="line">b(); // Hello World</div></pre></td></tr></table></figure>
+<h2 id="加法-ES6"><a href="#加法-ES6" class="headerlink" title="加法 - ES6"></a>加法 - ES6</h2><ol>
+<li>先定義adder()</li>
+<li>定義匿名函數</li>
+<li>返回x + y</li>
+<li>定義變量 add5</li>
+<li>執行 add5()</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">let adder = (x) =&gt; (y) =&gt; x + y</div><div class="line"></div><div class="line">let add5 = adder(5);</div><div class="line">let add10 = adder(10);</div><div class="line"></div><div class="line">console.log(add5(7)); // 12</div><div class="line">console.log(add10(7)); // 17</div></pre></td></tr></table></figure>
+
+                <hr>
                 
-                <a href="#-Talk" title="-Talk" rel="0">-Talk</a>
+
+                <ul class="pager">
+                    
+                    
+                    <li class="next">
+                        <a href="/2017/02/19/supercharger-hackathon/" data-toggle="tooltip" data-placement="top"
+                           title="SuperCharger Hackathon後記">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
                 
-                <a href="#hexo" title="hexo" rel="2">hexo</a>
+
                 
-                <a href="#theme" title="theme" rel="1">theme</a>
+                <!-- disqus 评论框 start -->
+                <div class="comment">
+                    <div id="disqus_thread" class="disqus-thread"></div>
+                </div>
+                <!-- disqus 评论框 end -->
                 
-                <a href="#Javascript" title="Javascript" rel="3">Javascript</a>
-                
-                <a href="#web" title="web" rel="1">web</a>
-                
-                <a href="#Hackathon" title="Hackathon" rel="1">Hackathon</a>
-                
+
             </div>
 
-            <!-- 标签列表 -->
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="-Talk">
-                    <span class="tag-text">-Talk</span>
-                </span>
-                
+            <div class="hidden-xs col-sm-3 toc-col">
+                <div class="toc-wrap">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#為什麼會有這篇文章"><span class="toc-text">為什麼會有這篇文章</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#最簡單的閉包"><span class="toc-text">最簡單的閉包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#加法-ES6"><span class="toc-text">加法 - ES6</span></a></li></ol>
+                </div>
             </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="hexo">
-                    <span class="tag-text">hexo</span>
-                </span>
-                
-                <div class="post-preview">
-                    <a href="/2017/01/08/hello-world/">
-                        <h2 class="post-title">
-                            Hello World
-                        </h2>
-                        
-                    </a>
-                </div>
-                <hr>
-                
-                <div class="post-preview">
-                    <a href="/2017/01/08/hexo-404-page/">
-                        <h2 class="post-title">
-                            建立一個404 Page
-                        </h2>
-                        
-                    </a>
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="theme">
-                    <span class="tag-text">theme</span>
-                </span>
-                
-                <div class="post-preview">
-                    <a href="/2017/01/08/hello-world/">
-                        <h2 class="post-title">
-                            Hello World
-                        </h2>
-                        
-                    </a>
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="Javascript">
-                    <span class="tag-text">Javascript</span>
-                </span>
-                
-                <div class="post-preview">
-                    <a href="/2017/01/14/hoisting/">
-                        <h2 class="post-title">
-                            初探Javascript變量提升
-                        </h2>
-                        
-                    </a>
-                </div>
-                <hr>
-                
-                <div class="post-preview">
-                    <a href="/2017/02/19/js-closure/">
-                        <h2 class="post-title">
-                            Javascript中的Closure入門
-                        </h2>
-                        
-                    </a>
-                </div>
-                <hr>
-                
-                <div class="post-preview">
-                    <a href="/2017/02/02/true-false/">
-                        <h2 class="post-title">
-                            Javascript中的True與False
-                        </h2>
-                        
-                    </a>
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="web">
-                    <span class="tag-text">web</span>
-                </span>
-                
-                <div class="post-preview">
-                    <a href="/2017/01/20/localstorage/">
-                        <h2 class="post-title">
-                            HTML5 Web Storage
-                        </h2>
-                        
-                    </a>
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="Hackathon">
-                    <span class="tag-text">Hackathon</span>
-                </span>
-                
-                <div class="post-preview">
-                    <a href="/2017/02/19/supercharger-hackathon/">
-                        <h2 class="post-title">
-                            SuperCharger Hackathon後記
-                        </h2>
-                        
-                    </a>
-                </div>
-                <hr>
-                
-            </div>
-            
-
         </div>
+
+        <div class="row">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5 class="text-center">
+                        <a href="/tags/">FEATURED TAGS</a>
+                    </h5>
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/#Javascript"
+                           title="Javascript">Javascript</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        </div>
+
     </div>
-</div>
+</article>
+
+
+
+<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "calpas-blog";
+    var disqus_identifier = "http://calpa.github.io/2017/02/19/js-closure/";
+    var disqus_url = "http://calpa.github.io/2017/02/19/js-closure/";
+
+    (function () {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<!-- disqus 公共JS代码 end -->
+
+
+
 
 <!-- Footer -->
 <!-- Footer -->

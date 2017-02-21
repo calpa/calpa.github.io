@@ -37,7 +37,7 @@
 <style>
 
     header.intro-header {
-        background-image: url('/img/blue-blur-background.png')
+        background-image: url('/img/blue-blur-background.jpg')
     }
 </style>
 <!-- hack iOS CSS :active style -->
@@ -226,6 +226,12 @@
                 
 
                 
+                <!-- disqus 评论框 start -->
+                <div class="comment">
+                    <div id="disqus_thread" class="disqus-thread"></div>
+                </div>
+                <!-- disqus 评论框 end -->
+                
 
             </div>
 
@@ -269,6 +275,23 @@
 </article>
 
 
+
+<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "calpas-blog";
+    var disqus_identifier = "http://calpa.github.io/2017/01/20/localstorage/";
+    var disqus_url = "http://calpa.github.io/2017/01/20/localstorage/";
+
+    (function () {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<!-- disqus 公共JS代码 end -->
 
 
 

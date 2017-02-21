@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://calpa.github.io/"/>
-  <updated>2017-02-02T12:55:52.000Z</updated>
+  <updated>2017-02-21T05:35:03.000Z</updated>
   <id>http://calpa.github.io/</id>
   
   <author>
@@ -14,6 +14,79 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Javascript中的Closure入門</title>
+    <link href="http://calpa.github.io/2017/02/19/js-closure/"/>
+    <id>http://calpa.github.io/2017/02/19/js-closure/</id>
+    <published>2017-02-19T07:12:00.000Z</published>
+    <updated>2017-02-21T05:35:03.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="為什麼會有這篇文章"><a href="#為什麼會有這篇文章" class="headerlink" title="為什麼會有這篇文章"></a>為什麼會有這篇文章</h2><p>打好基本功是很重要的。。。</p>
+<h2 id="最簡單的閉包"><a href="#最簡單的閉包" class="headerlink" title="最簡單的閉包"></a>最簡單的閉包</h2><ol>
+<li>先定義一個Function A</li>
+<li>在A的裡面定義一個Function B</li>
+<li>在A中返回B</li>
+<li>執行A(), 將A()的返回值賦予給b</li>
+<li>執行b()</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function A() &#123;</div><div class="line">  function B() &#123;</div><div class="line">    console.log(&quot;Hello, world!&quot;);</div><div class="line">  &#125;</div><div class="line">  return B;</div><div class="line">&#125;</div><div class="line">var b = A();</div><div class="line">b(); // Hello World</div></pre></td></tr></table></figure>
+<h2 id="加法-ES6"><a href="#加法-ES6" class="headerlink" title="加法 - ES6"></a>加法 - ES6</h2><ol>
+<li>先定義adder()</li>
+<li>定義匿名函數</li>
+<li>返回x + y</li>
+<li>定義變量 add5</li>
+<li>執行 add5()</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">let adder = (x) =&gt; (y) =&gt; x + y</div><div class="line"></div><div class="line">let add5 = adder(5);</div><div class="line">let add10 = adder(10);</div><div class="line"></div><div class="line">console.log(add5(7)); // 12</div><div class="line">console.log(add10(7)); // 17</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;為什麼會有這篇文章&quot;&gt;&lt;a href=&quot;#為什麼會有這篇文章&quot; class=&quot;headerlink&quot; title=&quot;為什麼會有這篇文章&quot;&gt;&lt;/a&gt;為什麼會有這篇文章&lt;/h2&gt;&lt;p&gt;打好基本功是很重要的。。。&lt;/p&gt;
+&lt;h2 id=&quot;最簡單的閉包&quot;&gt;&lt;a href=
+    
+    </summary>
+    
+    
+      <category term="Javascript" scheme="http://calpa.github.io/tags/Javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SuperCharger Hackathon後記</title>
+    <link href="http://calpa.github.io/2017/02/19/supercharger-hackathon/"/>
+    <id>http://calpa.github.io/2017/02/19/supercharger-hackathon/</id>
+    <published>2017-02-19T07:12:00.000Z</published>
+    <updated>2017-02-21T05:36:19.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://i.imgur.com/7EMhgpx.jpg" alt="Imgur"></p>
+<p>如果計上這次比賽的話，我已經是第五次參加這一類編程比賽。與過往的比賽不同，合作的對象不再是大學生，而是兩間Start-up公司。在這次比賽中，我選擇<a href="http://kyc-chain.com/" target="_blank" rel="external">KYC-Chain</a>、<a href="https://www.clare.ai/" target="_blank" rel="external">Clare.ai</a>兩間公司組成的隊伍。KYC-Chain透過<a href="https://airtable.com/" target="_blank" rel="external">Airtable</a>提供一些常見的用戶問題與答案，而Clare.ai則負責寫code。</p>
+<p>Airtable有API教學，可以用node.js增加、移除、修改或者獲取資料。</p>
+<h2 id="現有問題"><a href="#現有問題" class="headerlink" title="現有問題"></a>現有問題</h2><p>如果用戶想了解一些資訊，他需要經過很多過程才能獲取答案。</p>
+<h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>利用Chatbot，用戶只需要說出自己的問題便能查詢資料，例如Identity Card，Regulatory Law等資訊。</p>
+<h2 id="將來發展"><a href="#將來發展" class="headerlink" title="將來發展"></a>將來發展</h2><ol>
+<li>獲取申請表格</li>
+<li>自動填寫各類文件</li>
+</ol>
+<h2 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h2><p>我本來以為要從零開始架構一個Chatbot，原來可以直接用Api.ai。<br>大多數時間都是和一些在外面工作的人交流。。。</p>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
+<li>我自己 XD</li>
+<li><a href="https://www.facebook.com/events/704583943057523/" target="_blank" rel="external">SuperCharger FinTech Hackathon - Facebook 活動頁</a></li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/7EMhgpx.jpg&quot; alt=&quot;Imgur&quot;&gt;&lt;/p&gt;
+&lt;p&gt;如果計上這次比賽的話，我已經是第五次參加這一類編程比賽。與過往的比賽不同，合作的對象不再是大學生，而是兩間Start-up公司。在這次比賽中，我選擇&lt;
+    
+    </summary>
+    
+    
+      <category term="Hackathon" scheme="http://calpa.github.io/tags/Hackathon/"/>
+    
+  </entry>
   
   <entry>
     <title>Javascript中的True與False</title>
