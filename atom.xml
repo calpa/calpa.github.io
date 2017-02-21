@@ -216,6 +216,30 @@
   </entry>
   
   <entry>
+    <title>Github上的README.md</title>
+    <link href="http://calpa.github.io/2017/01/08/readme/"/>
+    <id>http://calpa.github.io/2017/01/08/readme/</id>
+    <published>2017-01-08T03:02:58.000Z</published>
+    <updated>2017-02-21T13:14:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Hexo在渲染的時候默認是把source下面所有的.md檔案渲染成html，這樣的話會覆蓋掉Github上的CNAME和README.md。但是我又不想這樣，我想Github Repo下面可以直接看到這個blog的README.md內容。</p>
+<p>所以我就修改Hexo根目錄下的_config.yml：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">skip_render: README.md</div></pre></td></tr></table></figure></p>
+<p>然後輸入以往部署Hexo的指令就可以。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo g</div><div class="line">$ hexo d</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Hexo在渲染的時候默認是把source下面所有的.md檔案渲染成html，這樣的話會覆蓋掉Github上的CNAME和README.md。但是我又不想這樣，我想Github Repo下面可以直接看到這個blog的README.md內容。&lt;/p&gt;
+&lt;p&gt;所以我就修改Hexo
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="http://calpa.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hello World</title>
     <link href="http://calpa.github.io/2017/01/08/hello-world/"/>
     <id>http://calpa.github.io/2017/01/08/hello-world/</id>
