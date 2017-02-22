@@ -78,14 +78,14 @@
 					
                     
                         
-                    
-                        
 							
                         <li>
                             <a href="/Tags/">Tags</a>
                         </li>
 							
 						
+                    
+                        
                     
                         
 							
@@ -158,6 +158,34 @@
     <div class="row">
         <div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12 col-xs-12 post-container">
             <!-- Main Content -->
+
+
+
+<div class="post-preview "
+     style="background-image: url('/img/post-default.jpg')">
+    <a href="/2017/02/22/hello/">
+        <h2 class="post-title">
+            使用Web Notification推送通知
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-02-22
+        </p>
+        
+        <div class="post-content-preview">
+            <p>
+                如果要推送通知的話，我們首先要請求權限：Notification.requestPermission()
+之後檢查Notification.permission來查看是否擁有權限。該值會是下面三個其中之一：
+
+default: 從未詢問用戶
+granted: 用戶授權顯示通知的權限
+denied..
+            </p>
+        </div>
+    </a>
+
+</div>
+
+<hr>
 
 
 
@@ -344,36 +372,15 @@ Creating a custom 404 page for ..
 
 
 
-<div class="post-preview "
-     style="background-image: url('/img/post-default.jpg')">
-    <a href="/2017/01/08/hello-world/">
-        <h2 class="post-title">
-            Hello World
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-01-08
-        </p>
-        
-        <div class="post-content-preview">
-            <p>
-                Hello World這是一個用hexo建構的blog，我找了一會hexo的主題，最後選擇了 Anisina
-我修改了_config.yml裡面的post-default-img 以及 post-default-img-mobile。
-
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
 
 <!-- 翻页 pager -->
 
 <ul class="pager">
     
+    
+    <li class="next">
+        <a href="/archives/page/2/">Older Posts &rarr;</a>
+    </li>
     
 </ul>
 
@@ -439,6 +446,8 @@ Creating a custom 404 page for ..
             
             <section>
                 <div class="tags">
+                    
+                    
                     
                     
                     <a href="/tags/#hexo" title="hexo"
