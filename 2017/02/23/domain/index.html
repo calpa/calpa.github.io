@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        HTML5 Web Storage｜Calpa&#39;s blog
+        使用免費.me域名｜Calpa&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="http://calpa.github.io/2017/01/20/localstorage/">
+    <link rel="canonical" href="http://calpa.github.io/2017/02/23/domain/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -155,18 +155,18 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>HTML5 Web Storage</h1>
+                    <h1>使用免費.me域名</h1>
                     
                     <span class="meta">
                          作者 Calpa
                         <span>
-                          日期 2017-01-20
+                          日期 2017-02-23
                          </span>
                     </span>
                     <div class="tags text-center">
                         
-                        <a class="tag" href="/tags/#Web"
-                           title="Web">Web</a>
+                        <a class="tag" href="/tags/#Github"
+                           title="Github">Github</a>
                         
                     </div>
                 </div>
@@ -175,7 +175,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            HTML5 Web Storage
+            使用免費.me域名
         </span>
     </div>
 </header>
@@ -186,39 +186,17 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <h1 id="Storage"><a href="#Storage" class="headerlink" title="Storage"></a>Storage</h1><ul>
-<li>HTML5 的 <strong>Web Storage</strong> 包括了兩種儲存方式：<strong>localStorage</strong>及<strong>sessionStorage</strong>。</li>
-<li>儲存在Storage中的資料，以key-value pair的形式保存。</li>
-<li>Cookie的佔用空間非常小，大小限制于4KB左右，常見的用途是保存賬號登錄信息與登錄狀態。</li>
-<li>使用Storage物件時，可以寫<code>localStorage</code>代替<code>window.localStorage</code>。</li>
-</ul>
-<h2 id="localStorage"><a href="#localStorage" class="headerlink" title="localStorage"></a>localStorage</h2><p>即使用戶關閉瀏覽器，頁面數據依然存在。下一次用戶打開該頁面，便能夠使用該資料。舉個例子，當localStorage擁有userdata，瀏覽器可以獲取用戶資料，瀏覽器會導航用戶到登入後的畫面。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">if (localStorage.getItem(&apos;userdata&apos;)) &#123;</div><div class="line">  login();</div><div class="line">&#125; else &#123;</div><div class="line">  register();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="sessionStorage"><a href="#sessionStorage" class="headerlink" title="sessionStorage"></a>sessionStorage</h2><p>sessionStorage與localStorage相似，但如果用戶關閉當前頁面，sessionStorage中的數據就會被清空。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">window.sessionStorage.setItem(&quot;username&quot;, &quot;calpa&quot;);</div><div class="line">window.sessionStorage.getItem(&quot;username&quot;); // calpa</div></pre></td></tr></table></figure>
-<h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h1><h2 id="儲存"><a href="#儲存" class="headerlink" title="儲存"></a>儲存</h2><p>儲存資料的時候，可以利用Storage物件內的<code>setItem()</code>方法。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">localStorage.setItem(3, 3);</div><div class="line">sessionStorage.setItem(&quot;username&quot;, &quot;calpa&quot;);</div></pre></td></tr></table></figure></p>
-<h2 id="獲取"><a href="#獲取" class="headerlink" title="獲取"></a>獲取</h2><p>獲取資料的時候，則會用到<code>getItem()</code>方法。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">let username = localStorage.getItem(&quot;username&quot;);</div></pre></td></tr></table></figure></p>
-<p>如果key不是string的話，獲取資料時會出現問題。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">localStorage.3 = 3; // Uncaught SyntaxError: Unexpected number</div></pre></td></tr></table></figure></p>
-<h2 id="清除"><a href="#清除" class="headerlink" title="清除"></a>清除</h2><p>清除某個資料，可以用<code>removeItem()</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">window.localStorage.removeItem(&quot;username&quot;);</div></pre></td></tr></table></figure></p>
-<p>清除所有資料，可以用<code>clear()</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">window.localStorage.clear();</div><div class="line">window.sessionStorage.clear();</div></pre></td></tr></table></figure></p>
-<h1 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h1><ol>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API" target="_blank" rel="external">Using the Web Storage API</a></li>
-</ol>
+                <p>先開啟Github Education，</p>
 
                 <hr>
                 
 
                 <ul class="pager">
                     
-                    <li class="previous">
-                        <a href="/2017/02/02/true-false/" data-toggle="tooltip" data-placement="top"
-                           title="Javascript中的True與False">&larr; Previous Post</a>
-                    </li>
-                    
                     
                     <li class="next">
-                        <a href="/2017/01/14/hoisting/" data-toggle="tooltip" data-placement="top"
-                           title="初探Javascript變量提升">Next Post &rarr;</a>
+                        <a href="/2017/02/22/hello/" data-toggle="tooltip" data-placement="top"
+                           title="使用Web Notification推送通知">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
@@ -237,7 +215,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Storage"><span class="toc-text">Storage</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#localStorage"><span class="toc-text">localStorage</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sessionStorage"><span class="toc-text">sessionStorage</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#方法"><span class="toc-text">方法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#儲存"><span class="toc-text">儲存</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#獲取"><span class="toc-text">獲取</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#清除"><span class="toc-text">清除</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#參考資料"><span class="toc-text">參考資料</span></a></li></ol>
+                    
                 </div>
             </div>
         </div>
@@ -259,8 +237,8 @@
                     </h5>
                     <div class="tags">
                         
-                        <a class="tag" href="/tags/#Web"
-                           title="Web">Web</a>
+                        <a class="tag" href="/tags/#Github"
+                           title="Github">Github</a>
                         
                     </div>
                 </section>
@@ -280,8 +258,8 @@
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = "calpas-blog";
-    var disqus_identifier = "http://calpa.github.io/2017/01/20/localstorage/";
-    var disqus_url = "http://calpa.github.io/2017/01/20/localstorage/";
+    var disqus_identifier = "http://calpa.github.io/2017/02/23/domain/";
+    var disqus_url = "http://calpa.github.io/2017/02/23/domain/";
 
     (function () {
         var dsq = document.createElement('script');
