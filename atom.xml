@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://calpa.github.io/"/>
-  <updated>2017-02-22T15:50:16.000Z</updated>
+  <updated>2017-02-23T02:27:18.000Z</updated>
   <id>http://calpa.github.io/</id>
   
   <author>
@@ -16,19 +16,49 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>使用免費.me域名</title>
-    <link href="http://calpa.github.io/2017/02/23/domain/"/>
-    <id>http://calpa.github.io/2017/02/23/domain/</id>
+    <title>利用Github教育禮包添加免費域名</title>
+    <link href="http://calpa.github.io/2017/02/23/github-edcation-package/"/>
+    <id>http://calpa.github.io/2017/02/23/github-edcation-package/</id>
     <published>2017-02-23T02:00:00.000Z</published>
-    <updated>2017-02-22T15:50:16.000Z</updated>
+    <updated>2017-02-23T02:27:18.000Z</updated>
     
-    <content type="html"><![CDATA[<p>先開啟Github Education，</p>
+    <content type="html"><![CDATA[<p><img src="http://i.imgur.com/PmOA3IB.png?3" alt="Imgur"></p>
+<p>現在如果你看網址列的話，你會發現現在域名改成了<code>calpa.me</code>，而且加上了一個綠色的鎖。</p>
+<p><img src="https://dwa5x7aod66zk.cloudfront.net/assets/sdp-backpack-a64038716bf134f45e809ff86b9611fb97e41bbd2ccfa3181da73cf164d3c200.png" width="200px"></p>
+<h2 id="Github-禮包"><a href="#Github-禮包" class="headerlink" title="Github 禮包"></a>Github 禮包</h2><p>如果你有學生身份的話，其中一個好處就是可以使用很多免費服務。比如說<a href="https://education.github.com/" target="_blank" rel="external">Github Education</a>禮包。它裡面有很多內容，但其中比較實用的有下面這些：</p>
+<ol>
+<li><a href="https://aws.amazon.com/?nc1=h_ls" target="_blank" rel="external">AWS Educate</a>: Up to $110 in bonus AWS credits for a total of $75-$150</li>
+<li><a href="https://www.digitalocean.com/" target="_blank" rel="external">Digital Ocean</a>: Cloud hosting</li>
+<li><a href="https://github.com/" target="_blank" rel="external">Github</a>: Unlimited private repositories (normally $7/month) while you are a student.</li>
+<li><a href="https://www.namecheap.com/" target="_blank" rel="external">namecheap</a>: One year domain name registration on the .me TLD (normally $18.99/year)</li>
+<li><a href="https://travis-ci.org/" target="_blank" rel="external">Travis CI</a>: Private builds (normally $69/month) while you’re a student</li>
+<li><a href="https://www.udacity.com/" target="_blank" rel="external">UDACITY</a>: One month free access to any Nanodegree program (normally $199)</li>
+</ol>
+<p>既然namecheap提供一年免費<code>.me</code> 域名，不如我就用<code>calpa.me</code>取代之前<code>calpa.github.io</code>吧。</p>
+<h2 id="namecheap"><a href="#namecheap" class="headerlink" title="namecheap"></a>namecheap</h2><p>在<a href="https://nc.me/" target="_blank" rel="external">namecheap</a>尋找<code>calpa.me</code>是否有人註冊，如果沒有的話就可以直接將.me加入購物車。</p>
+<p><img src="http://i.imgur.com/24oQqGZ.png" alt="Imgur"><br>之後，在namecheap的dashboard會看到自己域名，然後點擊MANAGE按鈕。</p>
+<p>在Advanced DNS裡面，我們需要增加兩筆<code>A</code>記錄：</p>
+<ol>
+<li>@ 192.30.252.153</li>
+<li>@ 192.30.252.154</li>
+</ol>
+<p>之後利用<code>dig +noall +answer username.me</code>命令就可以看到記錄如上一樣。</p>
+<h2 id="HTTPS"><a href="#HTTPS" class="headerlink" title="HTTPS"></a>HTTPS</h2><p>如果要使用HTTPS，可以利用免費的Cloudflare服務。</p>
+<ol>
+<li>註冊Cloudflare</li>
+<li>打開namecheap的domain頁，將nameserver改成Custome DNS，然後加入<code>bella.ns.cloudflare.com</code>和<code>igor.ns.cloudflare.com</code>。</li>
+</ol>
+<h2 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h2><p>添加新的域名其實不難，只是需要很多時間去等待服務器修改DNS記錄。。。</p>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
+<li><a href="https://help.github.com/articles/setting-up-an-apex-domain/#configuring-a-records-with-your-dns-provider" target="_blank" rel="external">Configuring A records with your DNS provider - Github</a></li>
+</ol>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;先開啟Github Education，&lt;/p&gt;
-
+      &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/PmOA3IB.png?3&quot; alt=&quot;Imgur&quot;&gt;&lt;/p&gt;
+&lt;p&gt;現在如果你看網址列的話，你會發現現在域名改成了&lt;code&gt;calpa.me&lt;/code&gt;，而且加上了一個綠色的鎖。&lt;/p&gt;
+&lt;p&gt;&lt;img src
     
     </summary>
     
@@ -82,6 +112,41 @@
   </entry>
   
   <entry>
+    <title>SuperCharger Hackathon後記</title>
+    <link href="http://calpa.github.io/2017/02/19/supercharger-hackathon/"/>
+    <id>http://calpa.github.io/2017/02/19/supercharger-hackathon/</id>
+    <published>2017-02-19T07:12:00.000Z</published>
+    <updated>2017-02-21T05:36:19.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://i.imgur.com/7EMhgpx.jpg" alt="Imgur"></p>
+<p>如果計上這次比賽的話，我已經是第五次參加這一類編程比賽。與過往的比賽不同，合作的對象不再是大學生，而是兩間Start-up公司。在這次比賽中，我選擇<a href="http://kyc-chain.com/" target="_blank" rel="external">KYC-Chain</a>、<a href="https://www.clare.ai/" target="_blank" rel="external">Clare.ai</a>兩間公司組成的隊伍。KYC-Chain透過<a href="https://airtable.com/" target="_blank" rel="external">Airtable</a>提供一些常見的用戶問題與答案，而Clare.ai則負責寫code。</p>
+<p>Airtable有API教學，可以用node.js增加、移除、修改或者獲取資料。</p>
+<h2 id="現有問題"><a href="#現有問題" class="headerlink" title="現有問題"></a>現有問題</h2><p>如果用戶想了解一些資訊，他需要經過很多過程才能獲取答案。</p>
+<h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>利用Chatbot，用戶只需要說出自己的問題便能查詢資料，例如Identity Card，Regulatory Law等資訊。</p>
+<h2 id="將來發展"><a href="#將來發展" class="headerlink" title="將來發展"></a>將來發展</h2><ol>
+<li>獲取申請表格</li>
+<li>自動填寫各類文件</li>
+</ol>
+<h2 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h2><p>我本來以為要從零開始架構一個Chatbot，原來可以直接用Api.ai。<br>大多數時間都是和一些在外面工作的人交流。。。</p>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
+<li>我自己 XD</li>
+<li><a href="https://www.facebook.com/events/704583943057523/" target="_blank" rel="external">SuperCharger FinTech Hackathon - Facebook 活動頁</a></li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/7EMhgpx.jpg&quot; alt=&quot;Imgur&quot;&gt;&lt;/p&gt;
+&lt;p&gt;如果計上這次比賽的話，我已經是第五次參加這一類編程比賽。與過往的比賽不同，合作的對象不再是大學生，而是兩間Start-up公司。在這次比賽中，我選擇&lt;
+    
+    </summary>
+    
+    
+      <category term="Hackathon" scheme="http://calpa.github.io/tags/Hackathon/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Javascript中的Closure入門</title>
     <link href="http://calpa.github.io/2017/02/19/js-closure/"/>
     <id>http://calpa.github.io/2017/02/19/js-closure/</id>
@@ -116,41 +181,6 @@
     
     
       <category term="Javascript" scheme="http://calpa.github.io/tags/Javascript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SuperCharger Hackathon後記</title>
-    <link href="http://calpa.github.io/2017/02/19/supercharger-hackathon/"/>
-    <id>http://calpa.github.io/2017/02/19/supercharger-hackathon/</id>
-    <published>2017-02-19T07:12:00.000Z</published>
-    <updated>2017-02-21T05:36:19.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="http://i.imgur.com/7EMhgpx.jpg" alt="Imgur"></p>
-<p>如果計上這次比賽的話，我已經是第五次參加這一類編程比賽。與過往的比賽不同，合作的對象不再是大學生，而是兩間Start-up公司。在這次比賽中，我選擇<a href="http://kyc-chain.com/" target="_blank" rel="external">KYC-Chain</a>、<a href="https://www.clare.ai/" target="_blank" rel="external">Clare.ai</a>兩間公司組成的隊伍。KYC-Chain透過<a href="https://airtable.com/" target="_blank" rel="external">Airtable</a>提供一些常見的用戶問題與答案，而Clare.ai則負責寫code。</p>
-<p>Airtable有API教學，可以用node.js增加、移除、修改或者獲取資料。</p>
-<h2 id="現有問題"><a href="#現有問題" class="headerlink" title="現有問題"></a>現有問題</h2><p>如果用戶想了解一些資訊，他需要經過很多過程才能獲取答案。</p>
-<h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>利用Chatbot，用戶只需要說出自己的問題便能查詢資料，例如Identity Card，Regulatory Law等資訊。</p>
-<h2 id="將來發展"><a href="#將來發展" class="headerlink" title="將來發展"></a>將來發展</h2><ol>
-<li>獲取申請表格</li>
-<li>自動填寫各類文件</li>
-</ol>
-<h2 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h2><p>我本來以為要從零開始架構一個Chatbot，原來可以直接用Api.ai。<br>大多數時間都是和一些在外面工作的人交流。。。</p>
-<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
-<li>我自己 XD</li>
-<li><a href="https://www.facebook.com/events/704583943057523/" target="_blank" rel="external">SuperCharger FinTech Hackathon - Facebook 活動頁</a></li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/7EMhgpx.jpg&quot; alt=&quot;Imgur&quot;&gt;&lt;/p&gt;
-&lt;p&gt;如果計上這次比賽的話，我已經是第五次參加這一類編程比賽。與過往的比賽不同，合作的對象不再是大學生，而是兩間Start-up公司。在這次比賽中，我選擇&lt;
-    
-    </summary>
-    
-    
-      <category term="Hackathon" scheme="http://calpa.github.io/tags/Hackathon/"/>
     
   </entry>
   
