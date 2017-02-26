@@ -3,6 +3,26 @@
 
 
     
+    
+  <url>
+    <loc>https://calpa.me/2017/01/20/localstorage/</loc>
+    <lastmod>2017-02-26T07:20:40.000Z</lastmod>
+    <data>
+        <display>
+        <title>HTML5 Web Storage</title>
+        <pubTime>2017-01-20T11:37:38.000Z</pubTime>
+        
+        <tag>Web</tag>
+         
+        <tag>Javascript</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>https://calpa.me/2017/01/08/hello-world/</loc>
     <lastmod>2017-02-26T07:18:54.000Z</lastmod>
@@ -86,23 +106,6 @@
         <pubTime>2017-01-08T03:02:58.000Z</pubTime>
         
         <tag>Hexo</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://calpa.me/2017/01/20/localstorage/</loc>
-    <lastmod>2017-02-22T15:50:12.000Z</lastmod>
-    <data>
-        <display>
-        <title>HTML5 Web Storage</title>
-        <pubTime>2017-01-20T11:37:38.000Z</pubTime>
-        
-        <tag>Web</tag>
          
          
            
@@ -213,6 +216,5 @@
     </data>
     </url>
 
-    
     
 </urlset>
