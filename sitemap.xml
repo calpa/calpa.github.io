@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://calpa.me/2017/01/08/hello-world/</loc>
+    
+    <lastmod>2017-02-26T07:18:54.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://calpa.me/2017/02/26/hexo-url/</loc>
     
     <lastmod>2017-02-26T06:54:20.000Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>https://calpa.me/2017/02/23/github-edcation-package/</loc>
     
     <lastmod>2017-02-26T06:52:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://calpa.me/2017/01/08/hello-world/</loc>
-    
-    <lastmod>2017-02-22T15:50:15.000Z</lastmod>
     
   </url>
   

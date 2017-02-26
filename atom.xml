@@ -179,41 +179,6 @@
   </entry>
   
   <entry>
-    <title>SuperCharger Hackathon後記</title>
-    <link href="https://calpa.me/2017/02/19/supercharger-hackathon/"/>
-    <id>https://calpa.me/2017/02/19/supercharger-hackathon/</id>
-    <published>2017-02-19T07:12:00.000Z</published>
-    <updated>2017-02-21T05:36:19.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="http://i.imgur.com/7EMhgpx.jpg" alt="Imgur"></p>
-<p>如果計上這次比賽的話，我已經是第五次參加這一類編程比賽。與過往的比賽不同，合作的對象不再是大學生，而是兩間Start-up公司。在這次比賽中，我選擇<a href="http://kyc-chain.com/" rel="external nofollow noopener noreferrer" target="_blank">KYC-Chain</a>、<a href="https://www.clare.ai/" rel="external nofollow noopener noreferrer" target="_blank">Clare.ai</a>兩間公司組成的隊伍。KYC-Chain透過<a href="https://airtable.com/" rel="external nofollow noopener noreferrer" target="_blank">Airtable</a>提供一些常見的用戶問題與答案，而Clare.ai則負責寫code。</p>
-<p>Airtable有API教學，可以用node.js增加、移除、修改或者獲取資料。</p>
-<h2 id="現有問題"><a href="#現有問題" class="headerlink" title="現有問題"></a>現有問題</h2><p>如果用戶想了解一些資訊，他需要經過很多過程才能獲取答案。</p>
-<h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>利用Chatbot，用戶只需要說出自己的問題便能查詢資料，例如Identity Card，Regulatory Law等資訊。</p>
-<h2 id="將來發展"><a href="#將來發展" class="headerlink" title="將來發展"></a>將來發展</h2><ol>
-<li>獲取申請表格</li>
-<li>自動填寫各類文件</li>
-</ol>
-<h2 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h2><p>我本來以為要從零開始架構一個Chatbot，原來可以直接用Api.ai。<br>大多數時間都是和一些在外面工作的人交流。。。</p>
-<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
-<li>我自己 XD</li>
-<li><a href="https://www.facebook.com/events/704583943057523/" rel="external nofollow noopener noreferrer" target="_blank">SuperCharger FinTech Hackathon - Facebook 活動頁</a></li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/7EMhgpx.jpg&quot; alt=&quot;Imgur&quot;&gt;&lt;/p&gt;
-&lt;p&gt;如果計上這次比賽的話，我已經是第五次參加這一類編程比賽。與過往的比賽不同，合作的對象不再是大學生，而是兩間Start-up公司。在這次比賽中，我選擇&lt;
-    
-    </summary>
-    
-    
-      <category term="Hackathon" scheme="https://calpa.me/tags/Hackathon/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Javascript中的Closure入門</title>
     <link href="https://calpa.me/2017/02/19/js-closure/"/>
     <id>https://calpa.me/2017/02/19/js-closure/</id>
@@ -248,6 +213,41 @@
     
     
       <category term="Javascript" scheme="https://calpa.me/tags/Javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SuperCharger Hackathon後記</title>
+    <link href="https://calpa.me/2017/02/19/supercharger-hackathon/"/>
+    <id>https://calpa.me/2017/02/19/supercharger-hackathon/</id>
+    <published>2017-02-19T07:12:00.000Z</published>
+    <updated>2017-02-21T05:36:19.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://i.imgur.com/7EMhgpx.jpg" alt="Imgur"></p>
+<p>如果計上這次比賽的話，我已經是第五次參加這一類編程比賽。與過往的比賽不同，合作的對象不再是大學生，而是兩間Start-up公司。在這次比賽中，我選擇<a href="http://kyc-chain.com/" rel="external nofollow noopener noreferrer" target="_blank">KYC-Chain</a>、<a href="https://www.clare.ai/" rel="external nofollow noopener noreferrer" target="_blank">Clare.ai</a>兩間公司組成的隊伍。KYC-Chain透過<a href="https://airtable.com/" rel="external nofollow noopener noreferrer" target="_blank">Airtable</a>提供一些常見的用戶問題與答案，而Clare.ai則負責寫code。</p>
+<p>Airtable有API教學，可以用node.js增加、移除、修改或者獲取資料。</p>
+<h2 id="現有問題"><a href="#現有問題" class="headerlink" title="現有問題"></a>現有問題</h2><p>如果用戶想了解一些資訊，他需要經過很多過程才能獲取答案。</p>
+<h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>利用Chatbot，用戶只需要說出自己的問題便能查詢資料，例如Identity Card，Regulatory Law等資訊。</p>
+<h2 id="將來發展"><a href="#將來發展" class="headerlink" title="將來發展"></a>將來發展</h2><ol>
+<li>獲取申請表格</li>
+<li>自動填寫各類文件</li>
+</ol>
+<h2 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h2><p>我本來以為要從零開始架構一個Chatbot，原來可以直接用Api.ai。<br>大多數時間都是和一些在外面工作的人交流。。。</p>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
+<li>我自己 XD</li>
+<li><a href="https://www.facebook.com/events/704583943057523/" rel="external nofollow noopener noreferrer" target="_blank">SuperCharger FinTech Hackathon - Facebook 活動頁</a></li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/7EMhgpx.jpg&quot; alt=&quot;Imgur&quot;&gt;&lt;/p&gt;
+&lt;p&gt;如果計上這次比賽的話，我已經是第五次參加這一類編程比賽。與過往的比賽不同，合作的對象不再是大學生，而是兩間Start-up公司。在這次比賽中，我選擇&lt;
+    
+    </summary>
+    
+    
+      <category term="Hackathon" scheme="https://calpa.me/tags/Hackathon/"/>
     
   </entry>
   
@@ -407,15 +407,15 @@
     <link href="https://calpa.me/2017/01/08/hello-world/"/>
     <id>https://calpa.me/2017/01/08/hello-world/</id>
     <published>2017-01-08T02:00:00.000Z</published>
-    <updated>2017-02-22T15:50:15.000Z</updated>
+    <updated>2017-02-26T07:18:54.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h1><p>這是一個用hexo建構的blog，我找了一會hexo的主題，最後選擇了 <a href="https://github.com/Haojen/hexo-theme-Anisina" rel="external nofollow noopener noreferrer" target="_blank">Anisina</a></p>
+    <content type="html"><![CDATA[<h1 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h1><p>這是一個用hexo建構的blog，Hexo的主題是<a href="https://github.com/Haojen/hexo-theme-Anisina" rel="external nofollow noopener noreferrer" target="_blank">Anisina</a></p>
 <p>我修改了<code>_config.yml</code>裡面的<code>post-default-img</code> 以及 <code>post-default-img-mobile</code>。</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Hello-World&quot;&gt;&lt;a href=&quot;#Hello-World&quot; class=&quot;headerlink&quot; title=&quot;Hello World&quot;&gt;&lt;/a&gt;Hello World&lt;/h1&gt;&lt;p&gt;這是一個用hexo建構的blog，我找了一會hexo的主題，最後選擇
+      &lt;h1 id=&quot;Hello-World&quot;&gt;&lt;a href=&quot;#Hello-World&quot; class=&quot;headerlink&quot; title=&quot;Hello World&quot;&gt;&lt;/a&gt;Hello World&lt;/h1&gt;&lt;p&gt;這是一個用hexo建構的blog，Hexo的主題是&lt;a href=&quot;
     
     </summary>
     
