@@ -4,9 +4,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://calpa.github.io/"/>
-  <updated>2017-02-23T02:27:18.000Z</updated>
-  <id>http://calpa.github.io/</id>
+  <link href="https://calpa.me/"/>
+  <updated>2017-02-26T06:54:20.000Z</updated>
+  <id>https://calpa.me/</id>
   
   <author>
     <name>Calpa</name>
@@ -16,26 +16,91 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>簡單更改sitemap域名的方法</title>
+    <link href="https://calpa.me/2017/02/26/hexo-url/"/>
+    <id>https://calpa.me/2017/02/26/hexo-url/</id>
+    <published>2017-02-26T06:45:00.000Z</published>
+    <updated>2017-02-26T06:54:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>如果沒有做任何配置的話，<code>hexo g</code>的時候會自動輸出一個<code>sitemap.xml</code>。<br>但是現在域名不同了，需要一點更改。。。</p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><ol>
+<li>打開_config.yml</li>
+<li>修改<code>url:</code>就可以了</li>
+<li><code>hexo clean</code></li>
+<li><code>hexo g</code></li>
+</ol>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
+<li><a href="https://segmentfault.com/q/1010000004659915" rel="external nofollow noopener noreferrer" target="_blank">hexo-generator-sitemap 生成的sitemap如何配置自定义的域名？</a></li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;如果沒有做任何配置的話，&lt;code&gt;hexo g&lt;/code&gt;的時候會自動輸出一個&lt;code&gt;sitemap.xml&lt;/code&gt;。&lt;br&gt;但是現在域名不同了，需要一點更改。。。&lt;/p&gt;
+&lt;h2 id=&quot;方法&quot;&gt;&lt;a href=&quot;#方法&quot; class=&quot;headerlink
+    
+    </summary>
+    
+    
+      <category term="Hexo" scheme="https://calpa.me/tags/Hexo/"/>
+    
+      <category term="SEO" scheme="https://calpa.me/tags/SEO/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo優化之為外部鏈接添加nofollow屬性</title>
+    <link href="https://calpa.me/2017/02/26/hexo-seo-nofollow/"/>
+    <id>https://calpa.me/2017/02/26/hexo-seo-nofollow/</id>
+    <published>2017-02-25T16:11:03.000Z</published>
+    <updated>2017-02-26T06:53:30.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>我們的網頁通常會有很多鏈接，但是在爬蟲的時候可以分開哪一些是外部鏈接，哪一些是內部鏈接來優化搜尋結果。比如說增加<code>nofollow</code>標籤。nofollow是一個HTML標籤的屬性值，它可以告訴搜尋引擎不要追蹤這個鏈接。</p>
+<h2 id="手動"><a href="#手動" class="headerlink" title="手動"></a>手動</h2><p>我們可以手動把每一個鏈接都加上nofollow屬性，比如這樣：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;a href=&quot;https://github.com/calpa&quot; rel=&quot;nofollow&quot;&gt;Calpa的Github主頁&lt;/a&gt;</div><div class="line">&lt;a href=&quot;https://github.com/calpa&quot; rel=&quot;external nofollow&quot;&gt;Calpa的Github主頁&lt;/a&gt;</div></pre></td></tr></table></figure></p>
+<p><code>external nofollow</code>是更加專業的寫法，告訴搜尋引擎這是一個外部鏈接。</p>
+<h2 id="自動"><a href="#自動" class="headerlink" title="自動"></a>自動</h2><p>我們也可以利用<code>hexo-autonofollow</code>插件來做這一件事情。<br>只需要輸入<code>npm install hexo-autonofollow --save</code>，然後在<code>_config.yml</code>裡面寫上下面就可以了：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">nofollow:</div><div class="line">    enable: true</div><div class="line">    exclude:</div><div class="line">    - exclude1.com</div><div class="line">    - exclude2.com</div></pre></td></tr></table></figure></p>
+<p>exclude1.com和exclude2都是內部域名。</p>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
+<li><a href="https://liuzhichao.com/2016/hexo-auto-nofollow.html" rel="external nofollow noopener noreferrer" target="_blank">Hexo优化之为外部链接添加nofollow
+</a></li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;我們的網頁通常會有很多鏈接，但是在爬蟲的時候可以分開哪一些是外部鏈接，哪一些是內部鏈接來優化搜尋結果。比如說增加&lt;code&gt;nofollow&lt;/code&gt;標籤。nofollow是一個HTML標籤的屬性值，它可以告訴搜尋引擎不要追蹤這個鏈接。&lt;/p&gt;
+&lt;h2 id=&quot;手動&quot;&gt;
+    
+    </summary>
+    
+    
+      <category term="Hexo" scheme="https://calpa.me/tags/Hexo/"/>
+    
+      <category term="SEO" scheme="https://calpa.me/tags/SEO/"/>
+    
+  </entry>
+  
+  <entry>
     <title>利用Github教育禮包添加免費域名</title>
-    <link href="http://calpa.github.io/2017/02/23/github-edcation-package/"/>
-    <id>http://calpa.github.io/2017/02/23/github-edcation-package/</id>
+    <link href="https://calpa.me/2017/02/23/github-edcation-package/"/>
+    <id>https://calpa.me/2017/02/23/github-edcation-package/</id>
     <published>2017-02-23T02:00:00.000Z</published>
-    <updated>2017-02-23T02:27:18.000Z</updated>
+    <updated>2017-02-26T06:52:28.000Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://i.imgur.com/PmOA3IB.png?3" alt="Imgur"></p>
 <p>現在如果你看網址列的話，你會發現現在域名改成了<code>calpa.me</code>，而且加上了一個綠色的鎖。</p>
 <p><img src="https://dwa5x7aod66zk.cloudfront.net/assets/sdp-backpack-a64038716bf134f45e809ff86b9611fb97e41bbd2ccfa3181da73cf164d3c200.png" width="200px"></p>
-<h2 id="Github-禮包"><a href="#Github-禮包" class="headerlink" title="Github 禮包"></a>Github 禮包</h2><p>如果你有學生身份的話，其中一個好處就是可以使用很多免費服務。比如說<a href="https://education.github.com/" target="_blank" rel="external">Github Education</a>禮包。它裡面有很多內容，但其中比較實用的有下面這些：</p>
+<h2 id="Github-禮包"><a href="#Github-禮包" class="headerlink" title="Github 禮包"></a>Github 禮包</h2><p>如果你有學生身份的話，其中一個好處就是可以使用很多免費服務。比如說<a href="https://education.github.com/" rel="external nofollow noopener noreferrer" target="_blank">Github Education</a>禮包。它裡面有很多內容，但其中比較實用的有下面這些：</p>
 <ol>
-<li><a href="https://aws.amazon.com/?nc1=h_ls" target="_blank" rel="external">AWS Educate</a>: Up to $110 in bonus AWS credits for a total of $75-$150</li>
-<li><a href="https://www.digitalocean.com/" target="_blank" rel="external">Digital Ocean</a>: Cloud hosting</li>
-<li><a href="https://github.com/" target="_blank" rel="external">Github</a>: Unlimited private repositories (normally $7/month) while you are a student.</li>
-<li><a href="https://www.namecheap.com/" target="_blank" rel="external">namecheap</a>: One year domain name registration on the .me TLD (normally $18.99/year)</li>
-<li><a href="https://travis-ci.org/" target="_blank" rel="external">Travis CI</a>: Private builds (normally $69/month) while you’re a student</li>
-<li><a href="https://www.udacity.com/" target="_blank" rel="external">UDACITY</a>: One month free access to any Nanodegree program (normally $199)</li>
+<li><a href="https://aws.amazon.com/?nc1=h_ls" rel="external nofollow noopener noreferrer" target="_blank">AWS Educate</a>: Up to $110 in bonus AWS credits for a total of $75-$150</li>
+<li><a href="https://www.digitalocean.com/" rel="external nofollow noopener noreferrer" target="_blank">Digital Ocean</a>: Cloud hosting</li>
+<li><a href="https://github.com/" rel="external nofollow noopener noreferrer" target="_blank">Github</a>: Unlimited private repositories (normally $7/month) while you are a student.</li>
+<li><a href="https://www.namecheap.com/" rel="external nofollow noopener noreferrer" target="_blank">namecheap</a>: One year domain name registration on the .me TLD (normally $18.99/year)</li>
+<li><a href="https://travis-ci.org/" rel="external nofollow noopener noreferrer" target="_blank">Travis CI</a>: Private builds (normally $69/month) while you’re a student</li>
+<li><a href="https://www.udacity.com/" rel="external nofollow noopener noreferrer" target="_blank">UDACITY</a>: One month free access to any Nanodegree program (normally $199)</li>
 </ol>
 <p>既然namecheap提供一年免費<code>.me</code> 域名，不如我就用<code>calpa.me</code>取代之前<code>calpa.github.io</code>吧。</p>
-<h2 id="namecheap"><a href="#namecheap" class="headerlink" title="namecheap"></a>namecheap</h2><p>在<a href="https://nc.me/" target="_blank" rel="external">namecheap</a>尋找<code>calpa.me</code>是否有人註冊，如果沒有的話就可以直接將.me加入購物車。</p>
+<h2 id="namecheap"><a href="#namecheap" class="headerlink" title="namecheap"></a>namecheap</h2><p>在<a href="https://nc.me/" rel="external nofollow noopener noreferrer" target="_blank">namecheap</a>尋找<code>calpa.me</code>是否有人註冊，如果沒有的話就可以直接將.me加入購物車。</p>
 <p><img src="http://i.imgur.com/24oQqGZ.png" alt="Imgur"><br>之後，在namecheap的dashboard會看到自己域名，然後點擊MANAGE按鈕。</p>
 <p>在Advanced DNS裡面，我們需要增加兩筆<code>A</code>記錄：</p>
 <ol>
@@ -50,7 +115,7 @@
 </ol>
 <h2 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h2><p>添加新的域名其實不難，只是需要很多時間去等待服務器修改DNS記錄。。。</p>
 <h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
-<li><a href="https://help.github.com/articles/setting-up-an-apex-domain/#configuring-a-records-with-your-dns-provider" target="_blank" rel="external">Configuring A records with your DNS provider - Github</a></li>
+<li><a href="https://help.github.com/articles/setting-up-an-apex-domain/#configuring-a-records-with-your-dns-provider" rel="external nofollow noopener noreferrer" target="_blank">Configuring A records with your DNS provider - Github</a></li>
 </ol>
 ]]></content>
     
@@ -63,14 +128,16 @@
     </summary>
     
     
-      <category term="Github" scheme="http://calpa.github.io/tags/Github/"/>
+      <category term="Github" scheme="https://calpa.me/tags/Github/"/>
+    
+      <category term="Free" scheme="https://calpa.me/tags/Free/"/>
     
   </entry>
   
   <entry>
     <title>使用Web Notification推送通知</title>
-    <link href="http://calpa.github.io/2017/02/22/hello/"/>
-    <id>http://calpa.github.io/2017/02/22/hello/</id>
+    <link href="https://calpa.me/2017/02/22/hello/"/>
+    <id>https://calpa.me/2017/02/22/hello/</id>
     <published>2017-02-22T07:20:41.000Z</published>
     <updated>2017-02-22T08:14:33.000Z</updated>
     
@@ -95,7 +162,7 @@
 </ol>
 <p>我們可以監聽<code>onclick</code>，當用戶點擊通知，瀏覽器就會跳到目標頁面。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">n.onclick = (event) =&gt; &#123;</div><div class="line">	event.preventDefault();</div><div class="line">	window.open(&apos;https://calpa.github.io/&apos;, &apos;_blank&apos;);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API" target="_blank" rel="external">Using the Notification API</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API" rel="external nofollow noopener noreferrer" target="_blank">Using the Notification API</a></li>
 </ol>
 ]]></content>
     
@@ -107,14 +174,14 @@
     </summary>
     
     
-      <category term="Web" scheme="http://calpa.github.io/tags/Web/"/>
+      <category term="Web" scheme="https://calpa.me/tags/Web/"/>
     
   </entry>
   
   <entry>
     <title>Javascript中的Closure入門</title>
-    <link href="http://calpa.github.io/2017/02/19/js-closure/"/>
-    <id>http://calpa.github.io/2017/02/19/js-closure/</id>
+    <link href="https://calpa.me/2017/02/19/js-closure/"/>
+    <id>https://calpa.me/2017/02/19/js-closure/</id>
     <published>2017-02-19T07:12:00.000Z</published>
     <updated>2017-02-21T05:35:03.000Z</updated>
     
@@ -145,19 +212,19 @@
     </summary>
     
     
-      <category term="Javascript" scheme="http://calpa.github.io/tags/Javascript/"/>
+      <category term="Javascript" scheme="https://calpa.me/tags/Javascript/"/>
     
   </entry>
   
   <entry>
     <title>SuperCharger Hackathon後記</title>
-    <link href="http://calpa.github.io/2017/02/19/supercharger-hackathon/"/>
-    <id>http://calpa.github.io/2017/02/19/supercharger-hackathon/</id>
+    <link href="https://calpa.me/2017/02/19/supercharger-hackathon/"/>
+    <id>https://calpa.me/2017/02/19/supercharger-hackathon/</id>
     <published>2017-02-19T07:12:00.000Z</published>
     <updated>2017-02-21T05:36:19.000Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://i.imgur.com/7EMhgpx.jpg" alt="Imgur"></p>
-<p>如果計上這次比賽的話，我已經是第五次參加這一類編程比賽。與過往的比賽不同，合作的對象不再是大學生，而是兩間Start-up公司。在這次比賽中，我選擇<a href="http://kyc-chain.com/" target="_blank" rel="external">KYC-Chain</a>、<a href="https://www.clare.ai/" target="_blank" rel="external">Clare.ai</a>兩間公司組成的隊伍。KYC-Chain透過<a href="https://airtable.com/" target="_blank" rel="external">Airtable</a>提供一些常見的用戶問題與答案，而Clare.ai則負責寫code。</p>
+<p>如果計上這次比賽的話，我已經是第五次參加這一類編程比賽。與過往的比賽不同，合作的對象不再是大學生，而是兩間Start-up公司。在這次比賽中，我選擇<a href="http://kyc-chain.com/" rel="external nofollow noopener noreferrer" target="_blank">KYC-Chain</a>、<a href="https://www.clare.ai/" rel="external nofollow noopener noreferrer" target="_blank">Clare.ai</a>兩間公司組成的隊伍。KYC-Chain透過<a href="https://airtable.com/" rel="external nofollow noopener noreferrer" target="_blank">Airtable</a>提供一些常見的用戶問題與答案，而Clare.ai則負責寫code。</p>
 <p>Airtable有API教學，可以用node.js增加、移除、修改或者獲取資料。</p>
 <h2 id="現有問題"><a href="#現有問題" class="headerlink" title="現有問題"></a>現有問題</h2><p>如果用戶想了解一些資訊，他需要經過很多過程才能獲取答案。</p>
 <h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>利用Chatbot，用戶只需要說出自己的問題便能查詢資料，例如Identity Card，Regulatory Law等資訊。</p>
@@ -168,7 +235,7 @@
 <h2 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h2><p>我本來以為要從零開始架構一個Chatbot，原來可以直接用Api.ai。<br>大多數時間都是和一些在外面工作的人交流。。。</p>
 <h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
 <li>我自己 XD</li>
-<li><a href="https://www.facebook.com/events/704583943057523/" target="_blank" rel="external">SuperCharger FinTech Hackathon - Facebook 活動頁</a></li>
+<li><a href="https://www.facebook.com/events/704583943057523/" rel="external nofollow noopener noreferrer" target="_blank">SuperCharger FinTech Hackathon - Facebook 活動頁</a></li>
 </ol>
 ]]></content>
     
@@ -180,18 +247,18 @@
     </summary>
     
     
-      <category term="Hackathon" scheme="http://calpa.github.io/tags/Hackathon/"/>
+      <category term="Hackathon" scheme="https://calpa.me/tags/Hackathon/"/>
     
   </entry>
   
   <entry>
     <title>Javascript中的True與False</title>
-    <link href="http://calpa.github.io/2017/02/02/true-false/"/>
-    <id>http://calpa.github.io/2017/02/02/true-false/</id>
+    <link href="https://calpa.me/2017/02/02/true-false/"/>
+    <id>https://calpa.me/2017/02/02/true-false/</id>
     <published>2017-02-02T15:19:53.000Z</published>
     <updated>2017-02-02T12:55:52.000Z</updated>
     
-    <content type="html"><![CDATA[<p>這幾天用<a href="https://www.enki.com/" target="_blank" rel="external">Enki</a>來學習Javascript，感覺不錯，<strong>You can’t handle the truth!</strong>有一些特別True/False例子。這裡簡單記錄一下。</p>
+    <content type="html"><![CDATA[<p>這幾天用<a href="https://www.enki.com/" rel="external nofollow noopener noreferrer" target="_blank">Enki</a>來學習Javascript，感覺不錯，<strong>You can’t handle the truth!</strong>有一些特別True/False例子。這裡簡單記錄一下。</p>
 <p>最簡單的測試方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function test(something)&#123;</div><div class="line">  if (something) &#123;</div><div class="line">    console.log(something + &apos; is true.&apos;);</div><div class="line">  &#125; else &#123;</div><div class="line">    console.log(something + &apos; is false.&apos;);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <h1 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h1><h2 id="Truthy"><a href="#Truthy" class="headerlink" title="Truthy"></a>Truthy</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">true &lt;- true當然是true...</div><div class="line">[1][0]</div><div class="line">new Date()</div><div class="line">new Number(0)</div><div class="line">Object</div><div class="line">Infinity</div><div class="line">[]</div></pre></td></tr></table></figure>
 <p>以下都是[object Object]:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&#123;a: false&#125;</div><div class="line">&#123;&#125;</div></pre></td></tr></table></figure></p>
@@ -201,19 +268,19 @@
     
     <summary type="html">
     
-      &lt;p&gt;這幾天用&lt;a href=&quot;https://www.enki.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Enki&lt;/a&gt;來學習Javascript，感覺不錯，&lt;strong&gt;You can’t handle the truth!&lt;/strong
+      &lt;p&gt;這幾天用&lt;a href=&quot;https://www.enki.com/&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Enki&lt;/a&gt;來學習Javascript，感覺不錯，&lt;strong&gt;You ca
     
     </summary>
     
     
-      <category term="Javascript" scheme="http://calpa.github.io/tags/Javascript/"/>
+      <category term="Javascript" scheme="https://calpa.me/tags/Javascript/"/>
     
   </entry>
   
   <entry>
     <title>HTML5 Web Storage</title>
-    <link href="http://calpa.github.io/2017/01/20/localstorage/"/>
-    <id>http://calpa.github.io/2017/01/20/localstorage/</id>
+    <link href="https://calpa.me/2017/01/20/localstorage/"/>
+    <id>https://calpa.me/2017/01/20/localstorage/</id>
     <published>2017-01-20T11:37:38.000Z</published>
     <updated>2017-02-22T15:50:12.000Z</updated>
     
@@ -233,7 +300,7 @@
 <h2 id="清除"><a href="#清除" class="headerlink" title="清除"></a>清除</h2><p>清除某個資料，可以用<code>removeItem()</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">window.localStorage.removeItem(&quot;username&quot;);</div></pre></td></tr></table></figure></p>
 <p>清除所有資料，可以用<code>clear()</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">window.localStorage.clear();</div><div class="line">window.sessionStorage.clear();</div></pre></td></tr></table></figure></p>
 <h1 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h1><ol>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API" target="_blank" rel="external">Using the Web Storage API</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API" rel="external nofollow noopener noreferrer" target="_blank">Using the Web Storage API</a></li>
 </ol>
 ]]></content>
     
@@ -245,14 +312,14 @@
     </summary>
     
     
-      <category term="Web" scheme="http://calpa.github.io/tags/Web/"/>
+      <category term="Web" scheme="https://calpa.me/tags/Web/"/>
     
   </entry>
   
   <entry>
     <title>初探Javascript變量提升</title>
-    <link href="http://calpa.github.io/2017/01/14/hoisting/"/>
-    <id>http://calpa.github.io/2017/01/14/hoisting/</id>
+    <link href="https://calpa.me/2017/01/14/hoisting/"/>
+    <id>https://calpa.me/2017/01/14/hoisting/</id>
     <published>2017-01-14T12:09:35.000Z</published>
     <updated>2017-01-14T13:08:48.000Z</updated>
     
@@ -265,8 +332,8 @@
 <hr>
 <p>參考資料：</p>
 <ol>
-<li><a href="http://adripofjavascript.com/blog/drips/variable-and-function-hoisting" target="_blank" rel="external">Variable and Function Hoisting in JavaScript</a></li>
-<li><a href="http://jinlong.github.io/2013/09/11/var-and-fun-hoisting/" target="_blank" rel="external">JavaScript 中的变量和函数提升</a></li>
+<li><a href="http://adripofjavascript.com/blog/drips/variable-and-function-hoisting" rel="external nofollow noopener noreferrer" target="_blank">Variable and Function Hoisting in JavaScript</a></li>
+<li><a href="http://jinlong.github.io/2013/09/11/var-and-fun-hoisting/" rel="external nofollow noopener noreferrer" target="_blank">JavaScript 中的变量和函数提升</a></li>
 </ol>
 ]]></content>
     
@@ -277,14 +344,14 @@
     </summary>
     
     
-      <category term="Javascript" scheme="http://calpa.github.io/tags/Javascript/"/>
+      <category term="Javascript" scheme="https://calpa.me/tags/Javascript/"/>
     
   </entry>
   
   <entry>
     <title>建立一個404 Page</title>
-    <link href="http://calpa.github.io/2017/01/08/hexo-404-page/"/>
-    <id>http://calpa.github.io/2017/01/08/hexo-404-page/</id>
+    <link href="https://calpa.me/2017/01/08/hexo-404-page/"/>
+    <id>https://calpa.me/2017/01/08/hexo-404-page/</id>
     <published>2017-01-08T03:02:58.000Z</published>
     <updated>2017-02-22T15:50:13.000Z</updated>
     
@@ -294,7 +361,7 @@
 <li>在這個檔案最頂部寫下<code>permalink: /404.html</code>就可以了。</li>
 </ol>
 <h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
-<li><a href="https://help.github.com/articles/creating-a-custom-404-page-for-your-github-pages-site/" target="_blank" rel="external">Creating a custom 404 page for your GitHub Pages site</a></li>
+<li><a href="https://help.github.com/articles/creating-a-custom-404-page-for-your-github-pages-site/" rel="external nofollow noopener noreferrer" target="_blank">Creating a custom 404 page for your GitHub Pages site</a></li>
 </ol>
 ]]></content>
     
@@ -307,14 +374,14 @@
     </summary>
     
     
-      <category term="Hexo" scheme="http://calpa.github.io/tags/Hexo/"/>
+      <category term="Hexo" scheme="https://calpa.me/tags/Hexo/"/>
     
   </entry>
   
   <entry>
     <title>Github上的README.md</title>
-    <link href="http://calpa.github.io/2017/01/08/readme/"/>
-    <id>http://calpa.github.io/2017/01/08/readme/</id>
+    <link href="https://calpa.me/2017/01/08/readme/"/>
+    <id>https://calpa.me/2017/01/08/readme/</id>
     <published>2017-01-08T03:02:58.000Z</published>
     <updated>2017-02-22T15:50:10.000Z</updated>
     
@@ -331,18 +398,18 @@
     </summary>
     
     
-      <category term="Hexo" scheme="http://calpa.github.io/tags/Hexo/"/>
+      <category term="Hexo" scheme="https://calpa.me/tags/Hexo/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://calpa.github.io/2017/01/08/hello-world/"/>
-    <id>http://calpa.github.io/2017/01/08/hello-world/</id>
+    <link href="https://calpa.me/2017/01/08/hello-world/"/>
+    <id>https://calpa.me/2017/01/08/hello-world/</id>
     <published>2017-01-08T02:00:00.000Z</published>
     <updated>2017-02-22T15:50:15.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h1><p>這是一個用hexo建構的blog，我找了一會hexo的主題，最後選擇了 <a href="https://github.com/Haojen/hexo-theme-Anisina" target="_blank" rel="external">Anisina</a></p>
+    <content type="html"><![CDATA[<h1 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h1><p>這是一個用hexo建構的blog，我找了一會hexo的主題，最後選擇了 <a href="https://github.com/Haojen/hexo-theme-Anisina" rel="external nofollow noopener noreferrer" target="_blank">Anisina</a></p>
 <p>我修改了<code>_config.yml</code>裡面的<code>post-default-img</code> 以及 <code>post-default-img-mobile</code>。</p>
 ]]></content>
     
@@ -353,7 +420,7 @@
     </summary>
     
     
-      <category term="Hexo" scheme="http://calpa.github.io/tags/Hexo/"/>
+      <category term="Hexo" scheme="https://calpa.me/tags/Hexo/"/>
     
   </entry>
   

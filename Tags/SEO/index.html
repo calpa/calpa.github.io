@@ -23,7 +23,7 @@
         
     </title>
 
-    <link rel="canonical" href="https://calpa.me/tags/Javascript/">
+    <link rel="canonical" href="https://calpa.me/tags/SEO/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -163,25 +163,25 @@
 
 
 <div class="post-preview " style="background-image: url('/img/post-default.jpg')">
-    <a href="/2017/02/19/js-closure/">
+    <a href="/2017/02/26/hexo-url/">
         <h2 class="post-title">
-            Javascript中的Closure入門
+            簡單更改sitemap域名的方法
         </h2>
         <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-02-19
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-02-26
         </p>
         
         <div class="post-content-preview">
             <p>
-                為什麼會有這篇文章打好基本功是很重要的。。。
-最簡單的閉包
-先定義一個Function A
-在A的裡面定義一個Function B
-在A中返回B
-執行A(), 將A()的返回值賦予給b
-執行b()
+                如果沒有做任何配置的話，hexo g的時候會自動輸出一個sitemap.xml。但是現在域名不同了，需要一點更改。。。
+方法
+打開_config.yml
+修改url:就可以了
+hexo clean
+hexo g
 
-12345678function A() &#123;  function B() &#123;..
+參考資料
+hexo-generator-sitemap 生成的sitemap如何配..
             </p>
         </div>
     </a>
@@ -193,42 +193,18 @@
 
 
 <div class="post-preview " style="background-image: url('/img/post-default.jpg')">
-    <a href="/2017/02/02/true-false/">
+    <a href="/2017/02/26/hexo-seo-nofollow/">
         <h2 class="post-title">
-            Javascript中的True與False
+            Hexo優化之為外部鏈接添加nofollow屬性
         </h2>
         <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-02-02
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-02-26
         </p>
         
         <div class="post-content-preview">
             <p>
-                這幾天用Enki來學習Javascript，感覺不錯，You can’t handle the truth!有一些特別True/False例子。這裡簡單記錄一下。
-最簡單的測試方法：1234567function test(something)&#123;  if (something) &#1..
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-<div class="post-preview " style="background-image: url('/img/post-default.jpg')">
-    <a href="/2017/01/14/hoisting/">
-        <h2 class="post-title">
-            初探Javascript變量提升
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-01-14
-        </p>
-        
-        <div class="post-content-preview">
-            <p>
-                在Javascript中，hoisting是一個容易犯錯的地方。在一段scope裡面，沒有定義變量就使用變量的話會彈出Reference Error。12 // ReferenceError: poi is not definedconsole.log(poi);
-
-1234var name;c..
+                我們的網頁通常會有很多鏈接，但是在爬蟲的時候可以分開哪一些是外部鏈接，哪一些是內部鏈接來優化搜尋結果。比如說增加nofollow標籤。nofollow是一個HTML標籤的屬性值，它可以告訴搜尋引擎不要追蹤這個鏈接。
+手動我們可以手動把每一個鏈接都加上nofollow屬性，比如這樣：12&lt;a..
             </p>
         </div>
     </a>

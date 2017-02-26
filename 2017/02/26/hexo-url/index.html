@@ -19,11 +19,11 @@
     <meta name="google-site-verification" content="riZBcestky7i9xY__A-5J-2EE65T75X1u-zgbss37Io">
     <title>
         
-        Calpa&#39;s blog
+        簡單更改sitemap域名的方法｜Calpa&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="https://calpa.me/tags/Javascript/">
+    <link rel="canonical" href="https://calpa.me/2017/02/26/hexo-url/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -44,7 +44,7 @@
 <!-- hack iOS CSS :active style -->
 <body ontouchstart="" class="animated fadeIn">
 <!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost="false" data-istags="true
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost="true" data-istags="false
 " data-ishome="false">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -135,212 +135,154 @@
 
 <!-- Main Content -->
 
+<!--only post-->
 
-<!-- Page Header -->
-<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 visible-xs-block visible-sm-block">
-    <div class="row">
-        <header class="intro-header">
-            <div class="container">
-                <div class="site-heading text-center">
-                    <div class="about-me">
-                        <!--移动端头部显示-->
-                        <img src="/img/profile.png">
-                        <h4>Calpa</h4>
-                        <p>Learn more, Code more.</p>
+
+<img class="wechat-title-img" src="/img/post-default.jpg">
+
+
+<style>
+    
+    header.intro-header {
+        background-image: url('/img/post-default.jpg')
+    }
+
+    
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <div class="post-heading">
+                    <h1>簡單更改sitemap域名的方法</h1>
+                    
+                    <span class="meta">
+                         作者 Calpa
+                        <span>
+                          日期 2017-02-26
+                         </span>
+                    </span>
+                    <div class="tags text-center">
+                        
+                        <a class="tag" href="/tags/#Hexo" title="Hexo">Hexo</a>
+                        
+                        <a class="tag" href="/tags/#SEO" title="SEO">SEO</a>
+                        
                     </div>
                 </div>
             </div>
-        </header>
-    </div>
-</div>
-<!-- Main Content -->
-<div class="container custom-haojen-container">
-    <!-- Post Container -->
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12 col-xs-12 post-container">
-            <!-- Main Content -->
-
-
-
-<div class="post-preview " style="background-image: url('/img/post-default.jpg')">
-    <a href="/2017/02/19/js-closure/">
-        <h2 class="post-title">
-            Javascript中的Closure入門
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-02-19
-        </p>
-        
-        <div class="post-content-preview">
-            <p>
-                為什麼會有這篇文章打好基本功是很重要的。。。
-最簡單的閉包
-先定義一個Function A
-在A的裡面定義一個Function B
-在A中返回B
-執行A(), 將A()的返回值賦予給b
-執行b()
-
-12345678function A() &#123;  function B() &#123;..
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-<div class="post-preview " style="background-image: url('/img/post-default.jpg')">
-    <a href="/2017/02/02/true-false/">
-        <h2 class="post-title">
-            Javascript中的True與False
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-02-02
-        </p>
-        
-        <div class="post-content-preview">
-            <p>
-                這幾天用Enki來學習Javascript，感覺不錯，You can’t handle the truth!有一些特別True/False例子。這裡簡單記錄一下。
-最簡單的測試方法：1234567function test(something)&#123;  if (something) &#1..
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-<div class="post-preview " style="background-image: url('/img/post-default.jpg')">
-    <a href="/2017/01/14/hoisting/">
-        <h2 class="post-title">
-            初探Javascript變量提升
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-01-14
-        </p>
-        
-        <div class="post-content-preview">
-            <p>
-                在Javascript中，hoisting是一個容易犯錯的地方。在一段scope裡面，沒有定義變量就使用變量的話會彈出Reference Error。12 // ReferenceError: poi is not definedconsole.log(poi);
-
-1234var name;c..
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-
-<!-- 翻页 pager -->
-
-<ul class="pager">
-    
-    
-</ul>
-
-
-        </div>
-        <!-- Sidebar Container -->
-        <div class="
-                col-lg-3 col-lg-offset-0
-                col-md-3 col-md-offset-0
-                col-sm-12
-                col-xs-12
-                sidebar-container
-            ">
-
-            <!-- About Me -->
-            <section class="visible-md visible-lg" style="padding: 0 18px">
-                <div class="short-about">
-                    <!--侧边栏头像-->
-                    
-                    <img src="/img/profile.png">
-                    
-                    <h5>Calpa</h5>
-                    
-                    <p>Learn more, Code more.</p>
-                    
-                    <hr>
-                    <!-- SNS Link 社交 -->
-                    <ul class="list-inline">
-                        
-                        
-                        
-                        <li>
-                            <a target="_blank" href="https://www.zhihu.com/people/piao-xue-wu-ying" rel="external nofollow noopener noreferrer">
-                                        <span class="fa-stack fa-lg">
-                                            <i class="fa fa-circle fa-stack-2x"></i>
-                                            <i class="fa  fa-stack-1x fa-inverse">知</i>
-                                        </span>
-                            </a>
-                        </li>
-                        
-
-                        
-
-                        
-
-                        
-                        <li>
-                            <a target="_blank" href="https://github.com/calpa" rel="external nofollow noopener noreferrer">
-                                        <span class="fa-stack fa-lg">
-                                            <i class="fa fa-circle fa-stack-2x"></i>
-                                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                                        </span>
-                            </a>
-                        </li>
-                        
-
-                        
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Featured Tags  标签 -->
-            
-            <section>
-                <div class="tags">
-                    
-                    
-                    
-                    
-                    <a href="/tags/#Hexo" title="Hexo" rel="5">Hexo</a>
-                    
-                    
-                    
-                    <a href="/tags/#Web" title="Web" rel="2">Web</a>
-                    
-                    
-                    
-                    <a href="/tags/#Javascript" title="Javascript" rel="3">Javascript</a>
-                    
-                    
-                    
-                    
-                    
-                    <a href="/tags/#SEO" title="SEO" rel="2">SEO</a>
-                    
-                    
-                    
-                    
-                </div>
-            </section>
-            
-
-            
-
         </div>
     </div>
-</div>
+    <div class="post-title-haojen">
+        <span>
+            簡單更改sitemap域名的方法
+        </span>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
+                <p>如果沒有做任何配置的話，<code>hexo g</code>的時候會自動輸出一個<code>sitemap.xml</code>。<br>但是現在域名不同了，需要一點更改。。。</p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><ol>
+<li>打開_config.yml</li>
+<li>修改<code>url:</code>就可以了</li>
+<li><code>hexo clean</code></li>
+<li><code>hexo g</code></li>
+</ol>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
+<li><a href="https://segmentfault.com/q/1010000004659915" rel="external nofollow noopener noreferrer" target="_blank">hexo-generator-sitemap 生成的sitemap如何配置自定义的域名？</a></li>
+</ol>
+
+                <hr>
+                
+
+                <ul class="pager">
+                    
+                    
+                    <li class="next">
+                        <a href="/2017/02/26/hexo-seo-nofollow/" data-toggle="tooltip" data-placement="top" title="Hexo優化之為外部鏈接添加nofollow屬性">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+
+                
+                <!-- disqus 评论框 start -->
+                <div class="comment">
+                    <div id="disqus_thread" class="disqus-thread"></div>
+                </div>
+                <!-- disqus 评论框 end -->
+                
+
+            </div>
+
+            <div class="hidden-xs col-sm-3 toc-col">
+                <div class="toc-wrap">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#方法"><span class="toc-text">方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#參考資料"><span class="toc-text">參考資料</span></a></li></ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5 class="text-center">
+                        <a href="/tags/">FEATURED TAGS</a>
+                    </h5>
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/#Hexo" title="Hexo">Hexo</a>
+                        
+                        <a class="tag" href="/tags/#SEO" title="SEO">SEO</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        </div>
+
+    </div>
+</article>
+
+
+
+<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "calpas-blog";
+    var disqus_identifier = "https://calpa.me/2017/02/26/hexo-url/";
+    var disqus_url = "https://calpa.me/2017/02/26/hexo-url/";
+
+    (function () {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<!-- disqus 公共JS代码 end -->
+
+
+
 
 <!-- Footer -->
 <!-- Footer -->
