@@ -79,14 +79,14 @@
 					
                     
                         
-                    
-                        
 							
                         <li>
                             <a href="/Tags/">Tags</a>
                         </li>
 							
 						
+                    
+                        
                     
                         
 							
@@ -173,14 +173,8 @@
         
         <div class="post-content-preview">
             <p>
-                簡單來說，this就是指向上面的包含對象。
-全局上下文在全局中，無論是否在嚴格模式下(Strict mode)，this都是代表全局對象。
-瀏覽器：
-this.document指向document
-全局對象this為window
-
-Node.jsthis為global
-直接運用函數的話，this..
+                首先我們要理解調用函數的方法，最起碼可以用下面兩個方法：12func(arg1, arg2);func.call(thisArg, arg1, arg2);
+之前我也沒怎麼見過後者，基本上都是直接call func的。後者func(arg1, arg2) 等於 func.call(undefin..
             </p>
         </div>
     </a>
@@ -450,15 +444,11 @@ denied..
                 <div class="tags">
                     
                     
-                    
-                    
-                    
-                    
                     <a href="/Tags/#Hexo" title="Hexo" rel="5">Hexo</a>
                     
                     
                     
-                    <a href="/Tags/#Web" title="Web" rel="2">Web</a>
+                    
                     
                     
                     
@@ -467,6 +457,10 @@ denied..
                     
                     
                     <a href="/Tags/#Javascript" title="Javascript" rel="5">Javascript</a>
+                    
+                    
+                    
+                    <a href="/Tags/#Web" title="Web" rel="2">Web</a>
                     
                     
                     

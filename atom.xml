@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://calpa.me/"/>
-  <updated>2017-03-25T06:44:33.000Z</updated>
+  <updated>2017-03-25T12:04:02.000Z</updated>
   <id>https://calpa.me/</id>
   
   <author>
@@ -20,27 +20,34 @@
     <link href="https://calpa.me/2017/03/25/js-this/"/>
     <id>https://calpa.me/2017/03/25/js-this/</id>
     <published>2017-03-25T04:44:00.000Z</published>
-    <updated>2017-03-25T06:44:33.000Z</updated>
+    <updated>2017-03-25T12:04:02.000Z</updated>
     
-    <content type="html"><![CDATA[<p>簡單來說，this就是指向上面的包含對象。</p>
+    <content type="html"><![CDATA[<p>首先我們要理解調用函數的方法，最起碼可以用下面兩個方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">func(arg1, arg2);</div><div class="line">func.call(thisArg, arg1, arg2);</div></pre></td></tr></table></figure></p>
+<p>之前我也沒怎麼見過後者，基本上都是直接call func的。後者<code>func(arg1, arg2)</code> 等於 <code>func.call(undefined, arg1, arg2)</code>。簡單來說，this就是thisArg。如果thisArg沒有定義的話，它會被定義為一個全局對象，比如說global。在MDN的文檔有這一句: <code>if the method is a function in non-strict mode code, null and undefined will be replaced with the global object and primitive values will be converted to objects</code>。</p>
+<p>如果不想要this是global的話，給予thisArg一個對象就可以了：<br><code>func.call(obj, arg1, arg2)</code></p>
 <h2 id="全局上下文"><a href="#全局上下文" class="headerlink" title="全局上下文"></a>全局上下文</h2><p>在全局中，無論是否在嚴格模式下(Strict mode)，<code>this</code>都是代表全局對象。</p>
 <h3 id="瀏覽器："><a href="#瀏覽器：" class="headerlink" title="瀏覽器："></a>瀏覽器：</h3><ol>
 <li><code>this.document</code>指向<code>document</code></li>
-<li>全局對象<code>this</code>為<code>window</code></li>
+<li>全局對象為<code>window</code></li>
 </ol>
-<h3 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h3><p>this為<code>global</code></p>
-<p>直接運用函數的話，this會指向global。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function test() &#123;</div><div class="line">  this.x = 1;</div><div class="line">  return this; // global</div><div class="line">&#125;</div><div class="line"></div><div class="line">test();</div><div class="line"></div><div class="line">console.log(this.x); // 1</div></pre></td></tr></table></figure></p>
+<h3 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h3><p>全局對象為<code>global</code></p>
+<p>直接運用函數的話，this會指向global。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function test() &#123;</div><div class="line">  this.x = 1;</div><div class="line">&#125;</div><div class="line"></div><div class="line">test();</div><div class="line"></div><div class="line">console.log(this.x); // 1</div></pre></td></tr></table></figure></p>
 <p>如果是生成一個對象的話，this會指向這個對象而不是global。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function Car() &#123;</div><div class="line">  this.color = &apos;red&apos;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var c = new Car();</div><div class="line"></div><div class="line">console.log(this.color); // undefined</div><div class="line">console.log(c.color); // red</div></pre></td></tr></table></figure></p>
+<p>下次遇到問題的話，我還是MDN資料吧，裡面寫得很詳細。</p>
 <h2 id="問題"><a href="#問題" class="headerlink" title="問題"></a>問題</h2><p>在Node.js中，為什麼this.global === this.global.global的返回值為true？</p>
+<h2 id="延伸思考"><a href="#延伸思考" class="headerlink" title="延伸思考"></a>延伸思考</h2><ol>
+<li>Function.prototype.apply()</li>
+<li>Function.prototype.bind()</li>
+</ol>
 <h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
 <li><a href="this MDN技術文">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/this</a></li>
+<li><a href="Function.prototype.call MDN技術文">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call</a></li>
 </ol>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;簡單來說，this就是指向上面的包含對象。&lt;/p&gt;
-&lt;h2 id=&quot;全局上下文&quot;&gt;&lt;a href=&quot;#全局上下文&quot; class=&quot;headerlink&quot; title=&quot;全局上下文&quot;&gt;&lt;/a&gt;全局上下文&lt;/h2&gt;&lt;p&gt;在全局中，無論是否在嚴格模式下(Strict mode)，
+      &lt;p&gt;首先我們要理解調用函數的方法，最起碼可以用下面兩個方法：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;l
     
     </summary>
     
@@ -346,9 +353,9 @@
     </summary>
     
     
-      <category term="Web" scheme="https://calpa.me/Tags/Web/"/>
-    
       <category term="Javascript" scheme="https://calpa.me/Tags/Javascript/"/>
+    
+      <category term="Web" scheme="https://calpa.me/Tags/Web/"/>
     
   </entry>
   
@@ -385,30 +392,6 @@
   </entry>
   
   <entry>
-    <title>Github上的README.md</title>
-    <link href="https://calpa.me/2017/01/08/readme/"/>
-    <id>https://calpa.me/2017/01/08/readme/</id>
-    <published>2017-01-08T03:02:58.000Z</published>
-    <updated>2017-02-22T15:50:10.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Hexo在渲染的時候默認是把source下面所有的.md檔案渲染成html，這樣的話會覆蓋掉Github上的CNAME和README.md。但是我又不想這樣，我想Github Repo下面可以直接看到這個blog的README.md內容。</p>
-<p>所以我就修改Hexo根目錄下的_config.yml：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">skip_render: README.md</div></pre></td></tr></table></figure></p>
-<p>然後輸入以往部署Hexo的指令就可以。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo g</div><div class="line">$ hexo d</div></pre></td></tr></table></figure></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Hexo在渲染的時候默認是把source下面所有的.md檔案渲染成html，這樣的話會覆蓋掉Github上的CNAME和README.md。但是我又不想這樣，我想Github Repo下面可以直接看到這個blog的README.md內容。&lt;/p&gt;
-&lt;p&gt;所以我就修改Hexo
-    
-    </summary>
-    
-    
-      <category term="Hexo" scheme="https://calpa.me/Tags/Hexo/"/>
-    
-  </entry>
-  
-  <entry>
     <title>建立一個404 Page</title>
     <link href="https://calpa.me/2017/01/08/hexo-404-page/"/>
     <id>https://calpa.me/2017/01/08/hexo-404-page/</id>
@@ -430,6 +413,30 @@
       &lt;h1 id=&quot;建立方法&quot;&gt;&lt;a href=&quot;#建立方法&quot; class=&quot;headerlink&quot; title=&quot;建立方法&quot;&gt;&lt;/a&gt;建立方法&lt;/h1&gt;&lt;ol&gt;
 &lt;li&gt;在Terminal輸入 &lt;code&gt;hexo new page 404&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;然後打開
+    
+    </summary>
+    
+    
+      <category term="Hexo" scheme="https://calpa.me/Tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Github上的README.md</title>
+    <link href="https://calpa.me/2017/01/08/readme/"/>
+    <id>https://calpa.me/2017/01/08/readme/</id>
+    <published>2017-01-08T03:02:58.000Z</published>
+    <updated>2017-02-22T15:50:10.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Hexo在渲染的時候默認是把source下面所有的.md檔案渲染成html，這樣的話會覆蓋掉Github上的CNAME和README.md。但是我又不想這樣，我想Github Repo下面可以直接看到這個blog的README.md內容。</p>
+<p>所以我就修改Hexo根目錄下的_config.yml：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">skip_render: README.md</div></pre></td></tr></table></figure></p>
+<p>然後輸入以往部署Hexo的指令就可以。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo g</div><div class="line">$ hexo d</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Hexo在渲染的時候默認是把source下面所有的.md檔案渲染成html，這樣的話會覆蓋掉Github上的CNAME和README.md。但是我又不想這樣，我想Github Repo下面可以直接看到這個blog的README.md內容。&lt;/p&gt;
+&lt;p&gt;所以我就修改Hexo
     
     </summary>
     
