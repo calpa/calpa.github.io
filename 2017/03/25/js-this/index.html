@@ -19,11 +19,11 @@
     <meta name="google-site-verification" content="riZBcestky7i9xY__A-5J-2EE65T75X1u-zgbss37Io">
     <title>
         
-        簡單更改sitemap域名的方法｜Calpa&#39;s blog
+        Javascript中的this入門｜Calpa&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="https://calpa.me/2017/02/26/hexo-url/">
+    <link rel="canonical" href="https://calpa.me/2017/03/25/js-this/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -155,19 +155,17 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>簡單更改sitemap域名的方法</h1>
+                    <h1>Javascript中的this入門</h1>
                     
                     <span class="meta">
                          作者 Calpa
                         <span>
-                          日期 2017-02-26
+                          日期 2017-03-25
                          </span>
                     </span>
                     <div class="tags text-center">
                         
-                        <a class="tag" href="/Tags/#Hexo" title="Hexo">Hexo</a>
-                        
-                        <a class="tag" href="/Tags/#SEO" title="SEO">SEO</a>
+                        <a class="tag" href="/Tags/#Javascript" title="Javascript">Javascript</a>
                         
                     </div>
                 </div>
@@ -176,7 +174,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            簡單更改sitemap域名的方法
+            Javascript中的this入門
         </span>
     </div>
 </header>
@@ -187,15 +185,18 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <p>如果沒有做任何配置的話，<code>hexo g</code>的時候會自動輸出一個<code>sitemap.xml</code>。<br>但是現在域名不同了，需要一點更改。。。</p>
-<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><ol>
-<li>打開_config.yml</li>
-<li>修改<code>url:</code>就可以了</li>
-<li><code>hexo clean</code></li>
-<li><code>hexo g</code></li>
+                <p>簡單來說，this就是指向上面的包含對象。</p>
+<h2 id="全局上下文"><a href="#全局上下文" class="headerlink" title="全局上下文"></a>全局上下文</h2><p>在全局中，無論是否在嚴格模式下(Strict mode)，<code>this</code>都是代表全局對象。</p>
+<h3 id="瀏覽器："><a href="#瀏覽器：" class="headerlink" title="瀏覽器："></a>瀏覽器：</h3><ol>
+<li><code>this.document</code>指向<code>document</code></li>
+<li>全局對象<code>this</code>為<code>window</code></li>
 </ol>
+<h3 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h3><p>this為<code>global</code></p>
+<p>直接運用函數的話，this會指向global。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function test() &#123;</div><div class="line">  this.x = 1;</div><div class="line">  return this; // global</div><div class="line">&#125;</div><div class="line"></div><div class="line">test();</div><div class="line"></div><div class="line">console.log(this.x); // 1</div></pre></td></tr></table></figure></p>
+<p>如果是生成一個對象的話，this會指向這個對象而不是global。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function Car() &#123;</div><div class="line">  this.color = &apos;red&apos;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var c = new Car();</div><div class="line"></div><div class="line">console.log(this.color); // undefined</div><div class="line">console.log(c.color); // red</div></pre></td></tr></table></figure></p>
+<h2 id="問題"><a href="#問題" class="headerlink" title="問題"></a>問題</h2><p>在Node.js中，為什麼this.global === this.global.global的返回值為true？</p>
 <h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
-<li><a href="https://segmentfault.com/q/1010000004659915" rel="external nofollow noopener noreferrer" target="_blank">hexo-generator-sitemap 生成的sitemap如何配置自定义的域名？</a></li>
+<li><a href="this MDN技術文">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/this</a></li>
 </ol>
 
                 <hr>
@@ -203,13 +204,9 @@
 
                 <ul class="pager">
                     
-                    <li class="previous">
-                        <a href="/2017/03/25/js-this/" data-toggle="tooltip" data-placement="top" title="Javascript中的this入門">&larr; Previous Post</a>
-                    </li>
-                    
                     
                     <li class="next">
-                        <a href="/2017/02/26/hexo-seo-nofollow/" data-toggle="tooltip" data-placement="top" title="Hexo優化之為外部鏈接添加nofollow屬性">Next Post &rarr;</a>
+                        <a href="/2017/02/26/hexo-url/" data-toggle="tooltip" data-placement="top" title="簡單更改sitemap域名的方法">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
@@ -228,7 +225,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#方法"><span class="toc-text">方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#參考資料"><span class="toc-text">參考資料</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#全局上下文"><span class="toc-text">全局上下文</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#瀏覽器："><span class="toc-text">瀏覽器：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Node-js"><span class="toc-text">Node.js</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#問題"><span class="toc-text">問題</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#參考資料"><span class="toc-text">參考資料</span></a></li></ol>
                 </div>
             </div>
         </div>
@@ -250,9 +247,7 @@
                     </h5>
                     <div class="tags">
                         
-                        <a class="tag" href="/Tags/#Hexo" title="Hexo">Hexo</a>
-                        
-                        <a class="tag" href="/Tags/#SEO" title="SEO">SEO</a>
+                        <a class="tag" href="/Tags/#Javascript" title="Javascript">Javascript</a>
                         
                     </div>
                 </section>
@@ -272,8 +267,8 @@
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = "calpas-blog";
-    var disqus_identifier = "https://calpa.me/2017/02/26/hexo-url/";
-    var disqus_url = "https://calpa.me/2017/02/26/hexo-url/";
+    var disqus_identifier = "https://calpa.me/2017/03/25/js-this/";
+    var disqus_url = "https://calpa.me/2017/03/25/js-this/";
 
     (function () {
         var dsq = document.createElement('script');
