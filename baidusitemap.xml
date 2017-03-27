@@ -4,6 +4,23 @@
 
     
   <url>
+    <loc>https://calpa.me/2017/03/27/interview/</loc>
+    <lastmod>2017-03-27T07:22:14.000Z</lastmod>
+    <data>
+        <display>
+        <title>Interview後記</title>
+        <pubTime>2017-03-27T06:42:00.000Z</pubTime>
+        
+        <tag>Interview</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://calpa.me/2017/03/25/js-this/</loc>
     <lastmod>2017-03-25T12:04:02.000Z</lastmod>
     <data>
@@ -29,9 +46,9 @@
         <title>HTML5 Web Storage</title>
         <pubTime>2017-01-20T11:37:38.000Z</pubTime>
         
-        <tag>Javascript</tag>
-         
         <tag>Web</tag>
+         
+        <tag>Javascript</tag>
          
          
            

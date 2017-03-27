@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://calpa.me/"/>
-  <updated>2017-03-25T12:04:02.000Z</updated>
+  <updated>2017-03-27T07:22:14.000Z</updated>
   <id>https://calpa.me/</id>
   
   <author>
@@ -14,6 +14,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Interview後記</title>
+    <link href="https://calpa.me/2017/03/27/interview/"/>
+    <id>https://calpa.me/2017/03/27/interview/</id>
+    <published>2017-03-27T06:42:00.000Z</published>
+    <updated>2017-03-27T07:22:14.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="面試問題："><a href="#面試問題：" class="headerlink" title="面試問題："></a>面試問題：</h2><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><ol>
+<li>請自我介紹</li>
+<li>為什麼會從前端開始？</li>
+<li>請畫出現在項目的技術圖，並簡單介紹一下</li>
+<li>你最近在探索什麼新技術？</li>
+</ol>
+<h3 id="技術"><a href="#技術" class="headerlink" title="技術"></a>技術</h3><ol>
+<li>NoSQL和SQL的比較，優點和缺點？</li>
+<li>哪一個性能比較好？</li>
+<li>HTTPS如何加密</li>
+</ol>
+<h2 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h2><p>原本預約了兩點面試的，結果我一點多就去到，面試官讓我在一旁坐坐。感覺這次面試氣氛不錯，但是不知道為什麼每次面試，大多時間都是問Database的問題。。。</p>
+<h2 id="行動"><a href="#行動" class="headerlink" title="行動"></a>行動</h2><p>Learning by Coding，動手做項目學習吧。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;面試問題：&quot;&gt;&lt;a href=&quot;#面試問題：&quot; class=&quot;headerlink&quot; title=&quot;面試問題：&quot;&gt;&lt;/a&gt;面試問題：&lt;/h2&gt;&lt;h3 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背
+    
+    </summary>
+    
+    
+      <category term="Interview" scheme="https://calpa.me/Tags/Interview/"/>
+    
+  </entry>
   
   <entry>
     <title>Javascript中的this入門</title>
@@ -220,41 +253,6 @@
   </entry>
   
   <entry>
-    <title>SuperCharger Hackathon後記</title>
-    <link href="https://calpa.me/2017/02/19/supercharger-hackathon/"/>
-    <id>https://calpa.me/2017/02/19/supercharger-hackathon/</id>
-    <published>2017-02-19T07:12:00.000Z</published>
-    <updated>2017-02-21T05:36:19.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="http://i.imgur.com/7EMhgpx.jpg" alt="Imgur"></p>
-<p>如果計上這次比賽的話，我已經是第五次參加這一類編程比賽。與過往的比賽不同，合作的對象不再是大學生，而是兩間Start-up公司。在這次比賽中，我選擇<a href="http://kyc-chain.com/" rel="external nofollow noopener noreferrer" target="_blank">KYC-Chain</a>、<a href="https://www.clare.ai/" rel="external nofollow noopener noreferrer" target="_blank">Clare.ai</a>兩間公司組成的隊伍。KYC-Chain透過<a href="https://airtable.com/" rel="external nofollow noopener noreferrer" target="_blank">Airtable</a>提供一些常見的用戶問題與答案，而Clare.ai則負責寫code。</p>
-<p>Airtable有API教學，可以用node.js增加、移除、修改或者獲取資料。</p>
-<h2 id="現有問題"><a href="#現有問題" class="headerlink" title="現有問題"></a>現有問題</h2><p>如果用戶想了解一些資訊，他需要經過很多過程才能獲取答案。</p>
-<h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>利用Chatbot，用戶只需要說出自己的問題便能查詢資料，例如Identity Card，Regulatory Law等資訊。</p>
-<h2 id="將來發展"><a href="#將來發展" class="headerlink" title="將來發展"></a>將來發展</h2><ol>
-<li>獲取申請表格</li>
-<li>自動填寫各類文件</li>
-</ol>
-<h2 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h2><p>我本來以為要從零開始架構一個Chatbot，原來可以直接用Api.ai。<br>大多數時間都是和一些在外面工作的人交流。。。</p>
-<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
-<li>我自己 XD</li>
-<li><a href="https://www.facebook.com/events/704583943057523/" rel="external nofollow noopener noreferrer" target="_blank">SuperCharger FinTech Hackathon - Facebook 活動頁</a></li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/7EMhgpx.jpg&quot; alt=&quot;Imgur&quot;&gt;&lt;/p&gt;
-&lt;p&gt;如果計上這次比賽的話，我已經是第五次參加這一類編程比賽。與過往的比賽不同，合作的對象不再是大學生，而是兩間Start-up公司。在這次比賽中，我選擇&lt;
-    
-    </summary>
-    
-    
-      <category term="Hackathon" scheme="https://calpa.me/Tags/Hackathon/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Javascript中的Closure入門</title>
     <link href="https://calpa.me/2017/02/19/js-closure/"/>
     <id>https://calpa.me/2017/02/19/js-closure/</id>
@@ -289,6 +287,41 @@
     
     
       <category term="Javascript" scheme="https://calpa.me/Tags/Javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SuperCharger Hackathon後記</title>
+    <link href="https://calpa.me/2017/02/19/supercharger-hackathon/"/>
+    <id>https://calpa.me/2017/02/19/supercharger-hackathon/</id>
+    <published>2017-02-19T07:12:00.000Z</published>
+    <updated>2017-02-21T05:36:19.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://i.imgur.com/7EMhgpx.jpg" alt="Imgur"></p>
+<p>如果計上這次比賽的話，我已經是第五次參加這一類編程比賽。與過往的比賽不同，合作的對象不再是大學生，而是兩間Start-up公司。在這次比賽中，我選擇<a href="http://kyc-chain.com/" rel="external nofollow noopener noreferrer" target="_blank">KYC-Chain</a>、<a href="https://www.clare.ai/" rel="external nofollow noopener noreferrer" target="_blank">Clare.ai</a>兩間公司組成的隊伍。KYC-Chain透過<a href="https://airtable.com/" rel="external nofollow noopener noreferrer" target="_blank">Airtable</a>提供一些常見的用戶問題與答案，而Clare.ai則負責寫code。</p>
+<p>Airtable有API教學，可以用node.js增加、移除、修改或者獲取資料。</p>
+<h2 id="現有問題"><a href="#現有問題" class="headerlink" title="現有問題"></a>現有問題</h2><p>如果用戶想了解一些資訊，他需要經過很多過程才能獲取答案。</p>
+<h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>利用Chatbot，用戶只需要說出自己的問題便能查詢資料，例如Identity Card，Regulatory Law等資訊。</p>
+<h2 id="將來發展"><a href="#將來發展" class="headerlink" title="將來發展"></a>將來發展</h2><ol>
+<li>獲取申請表格</li>
+<li>自動填寫各類文件</li>
+</ol>
+<h2 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h2><p>我本來以為要從零開始架構一個Chatbot，原來可以直接用Api.ai。<br>大多數時間都是和一些在外面工作的人交流。。。</p>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
+<li>我自己 XD</li>
+<li><a href="https://www.facebook.com/events/704583943057523/" rel="external nofollow noopener noreferrer" target="_blank">SuperCharger FinTech Hackathon - Facebook 活動頁</a></li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/7EMhgpx.jpg&quot; alt=&quot;Imgur&quot;&gt;&lt;/p&gt;
+&lt;p&gt;如果計上這次比賽的話，我已經是第五次參加這一類編程比賽。與過往的比賽不同，合作的對象不再是大學生，而是兩間Start-up公司。在這次比賽中，我選擇&lt;
+    
+    </summary>
+    
+    
+      <category term="Hackathon" scheme="https://calpa.me/Tags/Hackathon/"/>
     
   </entry>
   
@@ -353,9 +386,9 @@
     </summary>
     
     
-      <category term="Javascript" scheme="https://calpa.me/Tags/Javascript/"/>
-    
       <category term="Web" scheme="https://calpa.me/Tags/Web/"/>
+    
+      <category term="Javascript" scheme="https://calpa.me/Tags/Javascript/"/>
     
   </entry>
   
