@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://calpa.me/"/>
-  <updated>2017-03-27T07:22:14.000Z</updated>
+  <updated>2017-04-01T14:28:48.000Z</updated>
   <id>https://calpa.me/</id>
   
   <author>
@@ -14,6 +14,40 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Git 開發工作流程 (多人)</title>
+    <link href="https://calpa.me/2017/04/01/git-workflow/"/>
+    <id>https://calpa.me/2017/04/01/git-workflow/</id>
+    <published>2017-04-01T14:22:00.000Z</published>
+    <updated>2017-04-01T14:28:48.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><ol>
+<li><code>git fetch</code> 確認遠端數據庫的內容</li>
+<li><code>git checkout dev</code> 從現有支線轉到開發支線</li>
+<li><code>git pull</code> 下載遠端數據庫到本地</li>
+<li>永遠使用<code>git pull</code>之後才使用<code>git push</code></li>
+<li><code>git commit -m &quot;Message&quot;</code> 很實用。。。</li>
+<li><code>git checkout -b &quot;New Branch&quot;</code> 可以直接開新支線，並切換到那條支線上</li>
+<li><code>git push origin &quot;updated-branch&quot;</code> 就可以推上去遠端數據庫</li>
+</ol>
+<h2 id="fetch"><a href="#fetch" class="headerlink" title="fetch"></a>fetch</h2><p>使用<code>fetch</code>指令可以避免更改本地數據庫，同時更新其他人更新遠端數據庫後的內容。</p>
+<h2 id="checkout"><a href="#checkout" class="headerlink" title="checkout"></a>checkout</h2><p><code>checkout</code>切換本地數據庫支線，正常情況下應該建立超過兩條支線，比如說<code>master</code>只用作發佈更新版本，<code>dev</code>用作開發。</p>
+<p>個人開發項目和與他人一同開發項目是兩回事來的。。。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;流程&quot;&gt;&lt;a href=&quot;#流程&quot; class=&quot;headerlink&quot; title=&quot;流程&quot;&gt;&lt;/a&gt;流程&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;git fetch&lt;/code&gt; 確認遠端數據庫的內容&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git checkout de
+    
+    </summary>
+    
+    
+      <category term="Git" scheme="https://calpa.me/Tags/Git/"/>
+    
+  </entry>
   
   <entry>
     <title>Interview後記</title>
@@ -53,11 +87,11 @@
     <link href="https://calpa.me/2017/03/25/js-this/"/>
     <id>https://calpa.me/2017/03/25/js-this/</id>
     <published>2017-03-25T04:44:00.000Z</published>
-    <updated>2017-03-25T12:04:02.000Z</updated>
+    <updated>2017-03-28T08:22:29.000Z</updated>
     
-    <content type="html"><![CDATA[<p>首先我們要理解調用函數的方法，最起碼可以用下面兩個方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">func(arg1, arg2);</div><div class="line">func.call(thisArg, arg1, arg2);</div></pre></td></tr></table></figure></p>
-<p>之前我也沒怎麼見過後者，基本上都是直接call func的。後者<code>func(arg1, arg2)</code> 等於 <code>func.call(undefined, arg1, arg2)</code>。簡單來說，this就是thisArg。如果thisArg沒有定義的話，它會被定義為一個全局對象，比如說global。在MDN的文檔有這一句: <code>if the method is a function in non-strict mode code, null and undefined will be replaced with the global object and primitive values will be converted to objects</code>。</p>
-<p>如果不想要this是global的話，給予thisArg一個對象就可以了：<br><code>func.call(obj, arg1, arg2)</code></p>
+    <content type="html"><![CDATA[<p>首先我們要理解調用函數的方法，最起碼可以用下面兩個方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">func(arg1, arg2);</div><div class="line">func.call(context, arg1, arg2);</div></pre></td></tr></table></figure></p>
+<p>之前我也沒怎麼見過後者，基本上都是直接call func的。後者<code>func(arg1, arg2)</code> 等於 <code>func.call(undefined, arg1, arg2)</code>。簡單來說，this就是context。如果context沒有定義的話，它會被定義為一個全局對象，比如說global。在MDN的文檔有這一句: <code>if the method is a function in non-strict mode code, null and undefined will be replaced with the global object and primitive values will be converted to objects</code>。</p>
+<p>如果不想要this是global的話，給予context一個對象就可以了：<br><code>func.call(obj, arg1, arg2)</code></p>
 <h2 id="全局上下文"><a href="#全局上下文" class="headerlink" title="全局上下文"></a>全局上下文</h2><p>在全局中，無論是否在嚴格模式下(Strict mode)，<code>this</code>都是代表全局對象。</p>
 <h3 id="瀏覽器："><a href="#瀏覽器：" class="headerlink" title="瀏覽器："></a>瀏覽器：</h3><ol>
 <li><code>this.document</code>指向<code>document</code></li>
@@ -253,6 +287,41 @@
   </entry>
   
   <entry>
+    <title>SuperCharger Hackathon後記</title>
+    <link href="https://calpa.me/2017/02/19/supercharger-hackathon/"/>
+    <id>https://calpa.me/2017/02/19/supercharger-hackathon/</id>
+    <published>2017-02-19T07:12:00.000Z</published>
+    <updated>2017-02-21T05:36:19.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://i.imgur.com/7EMhgpx.jpg" alt="Imgur"></p>
+<p>如果計上這次比賽的話，我已經是第五次參加這一類編程比賽。與過往的比賽不同，合作的對象不再是大學生，而是兩間Start-up公司。在這次比賽中，我選擇<a href="http://kyc-chain.com/" rel="external nofollow noopener noreferrer" target="_blank">KYC-Chain</a>、<a href="https://www.clare.ai/" rel="external nofollow noopener noreferrer" target="_blank">Clare.ai</a>兩間公司組成的隊伍。KYC-Chain透過<a href="https://airtable.com/" rel="external nofollow noopener noreferrer" target="_blank">Airtable</a>提供一些常見的用戶問題與答案，而Clare.ai則負責寫code。</p>
+<p>Airtable有API教學，可以用node.js增加、移除、修改或者獲取資料。</p>
+<h2 id="現有問題"><a href="#現有問題" class="headerlink" title="現有問題"></a>現有問題</h2><p>如果用戶想了解一些資訊，他需要經過很多過程才能獲取答案。</p>
+<h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>利用Chatbot，用戶只需要說出自己的問題便能查詢資料，例如Identity Card，Regulatory Law等資訊。</p>
+<h2 id="將來發展"><a href="#將來發展" class="headerlink" title="將來發展"></a>將來發展</h2><ol>
+<li>獲取申請表格</li>
+<li>自動填寫各類文件</li>
+</ol>
+<h2 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h2><p>我本來以為要從零開始架構一個Chatbot，原來可以直接用Api.ai。<br>大多數時間都是和一些在外面工作的人交流。。。</p>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
+<li>我自己 XD</li>
+<li><a href="https://www.facebook.com/events/704583943057523/" rel="external nofollow noopener noreferrer" target="_blank">SuperCharger FinTech Hackathon - Facebook 活動頁</a></li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/7EMhgpx.jpg&quot; alt=&quot;Imgur&quot;&gt;&lt;/p&gt;
+&lt;p&gt;如果計上這次比賽的話，我已經是第五次參加這一類編程比賽。與過往的比賽不同，合作的對象不再是大學生，而是兩間Start-up公司。在這次比賽中，我選擇&lt;
+    
+    </summary>
+    
+    
+      <category term="Hackathon" scheme="https://calpa.me/Tags/Hackathon/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Javascript中的Closure入門</title>
     <link href="https://calpa.me/2017/02/19/js-closure/"/>
     <id>https://calpa.me/2017/02/19/js-closure/</id>
@@ -287,41 +356,6 @@
     
     
       <category term="Javascript" scheme="https://calpa.me/Tags/Javascript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SuperCharger Hackathon後記</title>
-    <link href="https://calpa.me/2017/02/19/supercharger-hackathon/"/>
-    <id>https://calpa.me/2017/02/19/supercharger-hackathon/</id>
-    <published>2017-02-19T07:12:00.000Z</published>
-    <updated>2017-02-21T05:36:19.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="http://i.imgur.com/7EMhgpx.jpg" alt="Imgur"></p>
-<p>如果計上這次比賽的話，我已經是第五次參加這一類編程比賽。與過往的比賽不同，合作的對象不再是大學生，而是兩間Start-up公司。在這次比賽中，我選擇<a href="http://kyc-chain.com/" rel="external nofollow noopener noreferrer" target="_blank">KYC-Chain</a>、<a href="https://www.clare.ai/" rel="external nofollow noopener noreferrer" target="_blank">Clare.ai</a>兩間公司組成的隊伍。KYC-Chain透過<a href="https://airtable.com/" rel="external nofollow noopener noreferrer" target="_blank">Airtable</a>提供一些常見的用戶問題與答案，而Clare.ai則負責寫code。</p>
-<p>Airtable有API教學，可以用node.js增加、移除、修改或者獲取資料。</p>
-<h2 id="現有問題"><a href="#現有問題" class="headerlink" title="現有問題"></a>現有問題</h2><p>如果用戶想了解一些資訊，他需要經過很多過程才能獲取答案。</p>
-<h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>利用Chatbot，用戶只需要說出自己的問題便能查詢資料，例如Identity Card，Regulatory Law等資訊。</p>
-<h2 id="將來發展"><a href="#將來發展" class="headerlink" title="將來發展"></a>將來發展</h2><ol>
-<li>獲取申請表格</li>
-<li>自動填寫各類文件</li>
-</ol>
-<h2 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h2><p>我本來以為要從零開始架構一個Chatbot，原來可以直接用Api.ai。<br>大多數時間都是和一些在外面工作的人交流。。。</p>
-<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
-<li>我自己 XD</li>
-<li><a href="https://www.facebook.com/events/704583943057523/" rel="external nofollow noopener noreferrer" target="_blank">SuperCharger FinTech Hackathon - Facebook 活動頁</a></li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/7EMhgpx.jpg&quot; alt=&quot;Imgur&quot;&gt;&lt;/p&gt;
-&lt;p&gt;如果計上這次比賽的話，我已經是第五次參加這一類編程比賽。與過往的比賽不同，合作的對象不再是大學生，而是兩間Start-up公司。在這次比賽中，我選擇&lt;
-    
-    </summary>
-    
-    
-      <category term="Hackathon" scheme="https://calpa.me/Tags/Hackathon/"/>
     
   </entry>
   

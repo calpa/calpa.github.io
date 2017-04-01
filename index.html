@@ -284,6 +284,35 @@
 
 
 <div class="post-preview " style="background-image: url('/img/post-default.jpg')">
+    <a href="/2017/04/01/git-workflow/">
+        <h2 class="post-title">
+            Git 開發工作流程 (多人)
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-04-01
+        </p>
+        
+        <div class="post-content-preview">
+            <p>
+                流程
+git fetch 確認遠端數據庫的內容
+git checkout dev 從現有支線轉到開發支線
+git pull 下載遠端數據庫到本地
+永遠使用git pull之後才使用git push
+git commit -m &quot;Message&quot; 很實用。。。
+git chec..
+            </p>
+        </div>
+    </a>
+
+</div>
+
+<hr>
+
+
+
+
+<div class="post-preview " style="background-image: url('/img/post-default.jpg')">
     <a href="/2017/03/27/interview/">
         <h2 class="post-title">
             Interview後記
@@ -328,7 +357,7 @@ HTTPS如何加密
         
         <div class="post-content-preview">
             <p>
-                首先我們要理解調用函數的方法，最起碼可以用下面兩個方法：12func(arg1, arg2);func.call(thisArg, arg1, arg2);
+                首先我們要理解調用函數的方法，最起碼可以用下面兩個方法：12func(arg1, arg2);func.call(context, arg1, arg2);
 之前我也沒怎麼見過後者，基本上都是直接call func的。後者func(arg1, arg2) 等於 func.call(undefin..
             </p>
         </div>
@@ -453,37 +482,6 @@ denied..
 
 
 <div class="post-preview " style="background-image: url('/img/post-default.jpg')">
-    <a href="/2017/02/19/js-closure/">
-        <h2 class="post-title">
-            Javascript中的Closure入門
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-02-19
-        </p>
-        
-        <div class="post-content-preview">
-            <p>
-                為什麼會有這篇文章打好基本功是很重要的。。。
-最簡單的閉包
-先定義一個Function A
-在A的裡面定義一個Function B
-在A中返回B
-執行A(), 將A()的返回值賦予給b
-執行b()
-
-12345678function A() &#123;  function B() &#123;..
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-
-<div class="post-preview " style="background-image: url('/img/post-default.jpg')">
     <a href="/2017/02/19/supercharger-hackathon/">
         <h2 class="post-title">
             SuperCharger Hackathon後記
@@ -586,15 +584,17 @@ denied..
                     
                     
                     
+                    
+                    
                     <a href="/Tags/#Hexo" title="Hexo" rel="5">Hexo</a>
                     
                     
                     
-                    <a href="/Tags/#SEO" title="SEO" rel="2">SEO</a>
-                    
-                    
-                    
                     <a href="/Tags/#Web" title="Web" rel="2">Web</a>
+                    
+                    
+                    
+                    <a href="/Tags/#SEO" title="SEO" rel="2">SEO</a>
                     
                     
                     
