@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://calpa.me/"/>
-  <updated>2017-04-01T14:28:48.000Z</updated>
+  <updated>2017-04-03T10:04:09.000Z</updated>
   <id>https://calpa.me/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Git 開發工作流程 (多人)</title>
+    <title>Git多人開發工作流程</title>
     <link href="https://calpa.me/2017/04/01/git-workflow/"/>
     <id>https://calpa.me/2017/04/01/git-workflow/</id>
     <published>2017-04-01T14:22:00.000Z</published>
-    <updated>2017-04-01T14:28:48.000Z</updated>
+    <updated>2017-04-03T10:04:09.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><ol>
 <li><code>git fetch</code> 確認遠端數據庫的內容</li>
@@ -124,11 +124,11 @@
   </entry>
   
   <entry>
-    <title>簡單更改sitemap域名的方法</title>
+    <title>Hexo sitemap 簡單更改域名的方法</title>
     <link href="https://calpa.me/2017/02/26/hexo-url/"/>
     <id>https://calpa.me/2017/02/26/hexo-url/</id>
     <published>2017-02-26T06:45:00.000Z</published>
-    <updated>2017-02-26T06:54:20.000Z</updated>
+    <updated>2017-04-03T09:42:20.000Z</updated>
     
     <content type="html"><![CDATA[<p>如果沒有做任何配置的話，<code>hexo g</code>的時候會自動輸出一個<code>sitemap.xml</code>。<br>但是現在域名不同了，需要一點更改。。。</p>
 <h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><ol>
@@ -189,11 +189,11 @@
   </entry>
   
   <entry>
-    <title>利用Github教育禮包添加免費域名</title>
+    <title>利用Github免費教育禮包更换博客.me域名</title>
     <link href="https://calpa.me/2017/02/23/github-edcation-package/"/>
     <id>https://calpa.me/2017/02/23/github-edcation-package/</id>
     <published>2017-02-23T02:00:00.000Z</published>
-    <updated>2017-02-26T06:52:28.000Z</updated>
+    <updated>2017-04-03T09:43:16.000Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://i.imgur.com/PmOA3IB.png?3" alt="Imgur"></p>
 <p>現在如果你看網址列的話，你會發現現在域名改成了<code>calpa.me</code>，而且加上了一個綠色的鎖。</p>
@@ -243,11 +243,11 @@
   </entry>
   
   <entry>
-    <title>使用Web Notification推送通知</title>
+    <title>Web Notification推送通知</title>
     <link href="https://calpa.me/2017/02/22/hello/"/>
     <id>https://calpa.me/2017/02/22/hello/</id>
     <published>2017-02-22T07:20:41.000Z</published>
-    <updated>2017-02-22T08:14:33.000Z</updated>
+    <updated>2017-04-03T09:42:59.000Z</updated>
     
     <content type="html"><![CDATA[<p>如果要推送通知的話，我們首先要請求權限：<code>Notification.requestPermission()</code></p>
 <p>之後檢查<code>Notification.permission</code>來查看是否擁有權限。該值會是下面三個其中之一：</p>
@@ -427,17 +427,17 @@
   </entry>
   
   <entry>
-    <title>初探Javascript變量提升</title>
+    <title>Javascript的變量提升入門</title>
     <link href="https://calpa.me/2017/01/14/hoisting/"/>
     <id>https://calpa.me/2017/01/14/hoisting/</id>
     <published>2017-01-14T12:09:35.000Z</published>
-    <updated>2017-01-14T13:08:48.000Z</updated>
+    <updated>2017-04-03T09:42:33.000Z</updated>
     
     <content type="html"><![CDATA[<p>在Javascript中，hoisting是一個容易犯錯的地方。<br>在一段scope裡面，沒有定義變量就使用變量的話會彈出Reference Error。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"> // ReferenceError: poi is not defined</div><div class="line">console.log(poi);</div></pre></td></tr></table></figure></p>
 <hr>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var name;</div><div class="line">console.log(name); // undefined</div><div class="line">name = &apos;calpa&apos;</div><div class="line">console.log(name); // calpa</div></pre></td></tr></table></figure>
 <p>由於Javascript的解釋器會提前把所有變量函數定義，所以上面這一段代碼會變成這一段：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">console.log(name); // undefined</div><div class="line">var name = &apos;calpa&apos;;</div><div class="line">console.log(name); // calpa</div></pre></td></tr></table></figure></p>
-<p>另外，Javascript也會出現這樣的問題。。。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var name = &apos;calpa&apos;;</div><div class="line">(function () &#123;</div><div class="line">    // My name is undefined</div><div class="line">    console.log(&quot;My name is &quot; + name); </div><div class="line">    var name = &apos;poi&apos;;</div><div class="line">    // My name is poi</div><div class="line">    console.log(&quot;My name is &quot; + name); // poi</div><div class="line">&#125;)();</div></pre></td></tr></table></figure></p>
+<p>另外，Javascript也會出現這樣的問題。。。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var name = &apos;calpa&apos;;</div><div class="line">(function () &#123;</div><div class="line">    // My name is undefined</div><div class="line">    console.log(&quot;My name is &quot; + name);</div><div class="line">    var name = &apos;poi&apos;;</div><div class="line">    // My name is poi</div><div class="line">    console.log(&quot;My name is &quot; + name); // poi</div><div class="line">&#125;)();</div></pre></td></tr></table></figure></p>
 <p>簡單來說，在寫Javascript時，我們應該提前在檔案開始位置定義變量。</p>
 <hr>
 <p>參考資料：</p>
@@ -513,19 +513,19 @@
   </entry>
   
   <entry>
-    <title>Hello World</title>
+    <title>Hello, World!</title>
     <link href="https://calpa.me/2017/01/08/hello-world/"/>
     <id>https://calpa.me/2017/01/08/hello-world/</id>
     <published>2017-01-08T02:00:00.000Z</published>
-    <updated>2017-02-26T07:18:54.000Z</updated>
+    <updated>2017-04-01T14:50:11.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h1><p>這是一個用hexo建構的blog，Hexo的主題是<a href="https://github.com/Haojen/hexo-theme-Anisina" rel="external nofollow noopener noreferrer" target="_blank">Anisina</a></p>
+    <content type="html"><![CDATA[<h1 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h1><p>這是一個用hexo建構的blog，使用Hexo的主題<a href="https://github.com/Haojen/hexo-theme-Anisina" rel="external nofollow noopener noreferrer" target="_blank">Anisina</a></p>
 <p>我修改了<code>_config.yml</code>裡面的<code>post-default-img</code> 以及 <code>post-default-img-mobile</code>。</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Hello-World&quot;&gt;&lt;a href=&quot;#Hello-World&quot; class=&quot;headerlink&quot; title=&quot;Hello World&quot;&gt;&lt;/a&gt;Hello World&lt;/h1&gt;&lt;p&gt;這是一個用hexo建構的blog，Hexo的主題是&lt;a href=&quot;
+      &lt;h1 id=&quot;Hello-World&quot;&gt;&lt;a href=&quot;#Hello-World&quot; class=&quot;headerlink&quot; title=&quot;Hello World&quot;&gt;&lt;/a&gt;Hello World&lt;/h1&gt;&lt;p&gt;這是一個用hexo建構的blog，使用Hexo的主題&lt;a href=
     
     </summary>
     
