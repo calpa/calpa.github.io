@@ -2,6 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://calpa.me/2017/02/23/github-edcation-package/</loc>
+    
+    <lastmod>2017-04-05T15:30:37.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://calpa.me/2017/02/02/true-false/</loc>
+    
+    <lastmod>2017-04-05T15:29:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://calpa.me/2017/01/08/hexo-404-page/</loc>
+    
+    <lastmod>2017-04-05T15:28:25.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://calpa.me/2017/04/01/git-workflow/</loc>
+    
+    <lastmod>2017-04-05T15:27:53.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://calpa.me/2017/04/05/books/</loc>
+    
+    <lastmod>2017-04-05T15:26:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://calpa.me/about/index.html</loc>
     
     <lastmod>2017-04-03T10:27:34.000Z</lastmod>
@@ -19,20 +54,6 @@
     <loc>https://calpa.me//404.html</loc>
     
     <lastmod>2017-04-03T10:09:30.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://calpa.me/2017/04/01/git-workflow/</loc>
-    
-    <lastmod>2017-04-03T10:04:09.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://calpa.me/2017/02/23/github-edcation-package/</loc>
-    
-    <lastmod>2017-04-03T09:43:16.000Z</lastmod>
     
   </url>
   
@@ -93,13 +114,6 @@
   </url>
   
   <url>
-    <loc>https://calpa.me/2017/01/08/hexo-404-page/</loc>
-    
-    <lastmod>2017-02-22T15:50:13.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://calpa.me/2017/01/08/readme/</loc>
     
     <lastmod>2017-02-22T15:50:10.000Z</lastmod>
@@ -117,13 +131,6 @@
     <loc>https://calpa.me/2017/02/19/js-closure/</loc>
     
     <lastmod>2017-02-21T05:35:03.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://calpa.me/2017/02/02/true-false/</loc>
-    
-    <lastmod>2017-02-02T12:55:52.000Z</lastmod>
     
   </url>
   
