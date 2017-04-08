@@ -23,7 +23,7 @@
         
     </title>
 
-    <link rel="canonical" href="https://calpa.me/archives/2017/04/">
+    <link rel="canonical" href="https://calpa.me/page/3/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -39,7 +39,7 @@
 <body ontouchstart="" class="animated fadeIn">
 <!-- Navigation -->
 <nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost="false" data-istags="false
-" data-ishome="false">
+" data-ishome="true">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header page-scroll">
@@ -142,6 +142,126 @@
 <!-- Main Content -->
 
 
+<style>
+
+    .custom-haojen-container .post-preview:nth-of-type(1),
+    .custom-haojen-container .post-preview-poetry:nth-of-type(1) {
+        text-align: center;
+        background-repeat: no-repeat;
+        border-radius: 3px;
+        background-size: cover;
+        padding: 0;
+        height: 300px;
+        display: table;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.16);
+    }
+
+    /*去掉诗歌的背景图片*/
+    .custom-haojen-container .post-preview-poetry:nth-of-type(1) {
+        background-image: none !important;
+        background-color: rgba(255, 248, 220, 0.5);
+    }
+
+    .custom-haojen-container .post-preview:nth-child(1) h2,
+    .custom-haojen-container .post-preview:nth-child(1) .post-meta,
+    .custom-haojen-container .post-preview:nth-child(1) .post-subtitle {
+        text-shadow: 0 0 40px rgba(0, 0, 0, 1);
+        letter-spacing: 1px;
+        color: #fff;
+        margin-top: 0;
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    .custom-haojen-container .post-preview:nth-child(1) .post-meta {
+        font-size: .9em;
+        font-weight: 300;
+        margin-top: 0;
+    }
+
+    .custom-haojen-container .post-preview-poetry:nth-child(1) .post-subtitle {
+        letter-spacing: 6px;
+        font-size: 18px;
+        font-family: unset;
+        font-weight: 400;
+        color: rgba(0, 0, 0, .75)
+    }
+
+    /*不显示摘要*/
+    .custom-haojen-container .post-preview:nth-child(1) .post-content-preview {
+        display: none
+    }
+
+    /*只第一个显示背景图片*/
+    .custom-haojen-container .post-preview:not(:nth-child(1)) {
+        background-image: none !important;
+    }
+
+    /*第一个分界线去掉*/
+    .custom-haojen-container hr:nth-of-type(1) {
+        display: none;
+    }
+
+    /*主题*/
+    .custom-haojen-container .post-preview:nth-of-type(1) > a {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    /*诗词标题*/
+    .custom-haojen-container .post-preview-poetry:nth-child(1) h2 {
+        font-size: 35px;
+        font-family: STKaiti;
+        color: rgba(0, 0, 0, .8);
+    }
+
+    .custom-haojen-container .post-preview-poetry:nth-of-type(1) .post-meta {
+        color: #0e2231;
+    }
+
+    @media (max-width: 768px) {
+        .custom-haojen-container .post-preview:nth-child(1) {
+            height: 240px;
+        }
+
+        .custom-haojen-container .post-preview-poetry:nth-child(1) h2 {
+            font-size: 28px !important;
+            margin-top: 0;
+        }
+
+        .custom-haojen-container .post-preview:nth-child(1) .post-subtitle {
+            font-size: 18px;
+            font-weight: 400;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .custom-haojen-container .post-preview:nth-of-type(1) > a {
+            padding: 20px
+        }
+    }
+
+    /*手机屏幕*/
+    @media (max-width: 400px) {
+        .custom-haojen-container .post-preview:nth-child(1) {
+            height: 195px;
+        }
+
+        .custom-haojen-container .post-preview-poetry:nth-child(1) h2 {
+            font-size: 20px !important;
+        }
+
+        .custom-haojen-container .post-preview:nth-child(1) .post-subtitle {
+            font-size: 16px;
+        }
+
+        .custom-haojen-container .post-preview:nth-child(1) a {
+            padding: 30px 20px;
+        }
+    }
+</style>
+
 <!-- Page Header -->
 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 visible-xs-block visible-sm-block">
     <div class="row">
@@ -170,85 +290,19 @@
 
 
 <div class="post-preview " style="background-image: url('/img/post-default.jpg')">
-    <a href="/2017/04/08/common-http-status-code/">
+    <a href="/2017/01/08/hello-world/">
         <h2 class="post-title">
-            常見的14種HTTP狀態碼
+            Hello, World!
         </h2>
         <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-04-08
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-01-08
         </p>
         
         <div class="post-content-preview">
             <p>
-                當用戶向伺服器發出請求時，狀態碼能夠描述伺服器返回的結果。
+                Hello World這是一個用hexo建構的blog，使用Hexo的主題Anisina
+我修改了_config.yml裡面的post-default-img 以及 post-default-img-mobile。
 
-2XX 成功
-
-200 OK
-204 No Content
-206 Partial Content
-
-
-3XX 重新導向
-
-301 Moved Permanently
-302 Found
-303 See Other
-304 Not M..
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-
-<div class="post-preview " style="background-image: url('/img/post-default.jpg')">
-    <a href="/2017/04/05/books/">
-        <h2 class="post-title">
-            前端工程師的入門書單
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-04-05
-        </p>
-        
-        <div class="post-content-preview">
-            <p>
-                
-在二十一世紀資訊發達的年代，我們很容易在互聯網上獲取這些書本的內容，而且能夠獲取書籍的最新內容。比如說vczero寫的React Native入门与实战，作者已經在Github上放上自己的書本內容，以及代碼。雖然我在電腦和手機里已經看過這些書，但當我拿起實體書的時候，那種感覺是非常不同的。
-以..
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-
-<div class="post-preview " style="background-image: url('/img/post-default.jpg')">
-    <a href="/2017/04/01/git-workflow/">
-        <h2 class="post-title">
-            Git多人合作開發工作流程
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-04-01
-        </p>
-        
-        <div class="post-content-preview">
-            <p>
-                流程
-git fetch 確認遠端數據庫的內容
-git checkout dev 從現有支線轉到開發支線
-git pull 下載遠端數據庫到本地
-永遠使用git pull之後才使用git push
-git commit -m &quot;Message&quot; 很實用。。。
-git chec..
             </p>
         </div>
     </a>
@@ -264,7 +318,11 @@ git chec..
 
 <ul class="pager">
     
-    <p>Page 1 / 1</p>
+    <li class="previous">
+        <a href="/page/2/">&larr; Newer Posts</a>
+    </li>
+    
+    <p>Page 3 / 3</p>
     
 </ul>
 

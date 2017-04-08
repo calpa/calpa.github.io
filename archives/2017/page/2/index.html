@@ -35,13 +35,7 @@
     <link rel="stylesheet" href="/css/syntax.css">
 </head>
 
-<style>
 
-    header.intro-header {
-        background-image: url('/img/blue-blur-background.jpg')
-    }
-</style>
-<!-- hack iOS CSS :active style -->
 <body ontouchstart="" class="animated fadeIn">
 <!-- Navigation -->
 <nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost="false" data-istags="false
@@ -176,18 +170,22 @@
 
 
 <div class="post-preview " style="background-image: url('/img/post-default.jpg')">
-    <a href="/2017/02/19/supercharger-hackathon/">
+    <a href="/2017/02/22/hello/">
         <h2 class="post-title">
-            SuperCharger Hackathon後記
+            Web Notification推送通知
         </h2>
         <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-02-19
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-02-22
         </p>
         
         <div class="post-content-preview">
             <p>
-                
-如果計上這次比賽的話，我已經是第五次參加這一類編程比賽。與過往的比賽不同，合作的對象不再是大學生，而是兩間Start-up公司。在這次比賽中，我選擇KYC-Chain、Clare.ai兩間公司組成的隊伍。KYC-Chain透過Airtable提供一些常見的用戶問題與答案，而Clare.ai則負..
+                如果要推送通知的話，我們首先要請求權限：Notification.requestPermission()
+之後檢查Notification.permission來查看是否擁有權限。該值會是下面三個其中之一：
+
+default: 從未詢問用戶
+granted: 用戶授權顯示通知的權限
+denied..
             </p>
         </div>
     </a>
@@ -219,6 +217,30 @@
 執行b()
 
 12345678function A() &#123;  function B() &#123;..
+            </p>
+        </div>
+    </a>
+
+</div>
+
+<hr>
+
+
+
+
+<div class="post-preview " style="background-image: url('/img/post-default.jpg')">
+    <a href="/2017/02/19/supercharger-hackathon/">
+        <h2 class="post-title">
+            SuperCharger Hackathon後記
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-02-19
+        </p>
+        
+        <div class="post-content-preview">
+            <p>
+                
+如果計上這次比賽的話，我已經是第五次參加這一類編程比賽。與過往的比賽不同，合作的對象不再是大學生，而是兩間Start-up公司。在這次比賽中，我選擇KYC-Chain、Clare.ai兩間公司組成的隊伍。KYC-Chain透過Airtable提供一些常見的用戶問題與答案，而Clare.ai則負..
             </p>
         </div>
     </a>
@@ -358,31 +380,6 @@ Creating a custom 404 page for ..
 
 
 
-<div class="post-preview " style="background-image: url('/img/post-default.jpg')">
-    <a href="/2017/01/08/hello-world/">
-        <h2 class="post-title">
-            Hello, World!
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-01-08
-        </p>
-        
-        <div class="post-content-preview">
-            <p>
-                Hello World這是一個用hexo建構的blog，使用Hexo的主題Anisina
-我修改了_config.yml裡面的post-default-img 以及 post-default-img-mobile。
-
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-
 <!-- 翻页 pager -->
 
 <ul class="pager">
@@ -391,7 +388,11 @@ Creating a custom 404 page for ..
         <a href="/archives/2017/">&larr; Newer Posts</a>
     </li>
     
-    <p>Page 2 / 2</p>
+    <p>Page 2 / 3</p>
+    
+    <li class="next">
+        <a href="/archives/2017/page/3/">Older Posts &rarr;</a>
+    </li>
     
 </ul>
 
@@ -458,15 +459,17 @@ Creating a custom 404 page for ..
                 <div class="tags">
                     
                     
+                    
+                    
                     <a href="/Tags/#Web" title="Web" rel="3">Web</a>
                     
                     
                     
                     
                     
-                    
-                    
                     <a href="/Tags/#Hexo" title="Hexo" rel="5">Hexo</a>
+                    
+                    
                     
                     
                     
