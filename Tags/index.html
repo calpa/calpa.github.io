@@ -36,7 +36,7 @@
 </head>
 
 
-<body ontouchstart="" class="animated fadeIn">
+<body class="animated fadeIn">
 <!-- Navigation -->
 <nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost="false" data-istags="false
 " data-ishome="false">
@@ -74,37 +74,37 @@
                     
                         
             							
-						
+          						
                     
                         
             							
                         <li>
                             <a href="/Tags/">Tags</a>
                         </li>
-							
-						
+          							
+          						
                     
                         
             							
             								
             							
-						
+          						
                     
                         
             							
                         <li>
                             <a href="/works/">works</a>
                         </li>
-							
-						
+          							
+          						
                     
 
-					
-						<li>
-							<a href="/about">About</a>
-						</li>
-					
-                </ul>
+        					
+        						<li>
+        							<a href="/about">About</a>
+        						</li>
+        					
+                </ul>                
             </div>
         </div>
     </div>
@@ -144,8 +144,10 @@
     .intro-header .site-heading {
         margin: 50px;
     }
+    header.intro-header {
+        background-image: url('/img/blue-blur-background.jpg')
+    }
 </style>
-
 <!-- Page Header -->
 <header class="intro-header">
     <div class="container">
@@ -167,15 +169,15 @@
             <!-- 标签云 -->
             <div id="tag_cloud" class="tags">
                 
+                <a href="#Web" title="Web" rel="3">Web</a>
+                
                 <a href="#HTTP" title="HTTP" rel="1">HTTP</a>
                 
-                <a href="#Web" title="Web" rel="3">Web</a>
+                <a href="#Git" title="Git" rel="1">Git</a>
                 
                 <a href="#Github" title="Github" rel="1">Github</a>
                 
                 <a href="#Hexo" title="Hexo" rel="5">Hexo</a>
-                
-                <a href="#Git" title="Git" rel="1">Git</a>
                 
                 <a href="#SEO" title="SEO" rel="2">SEO</a>
                 
@@ -188,23 +190,6 @@
             </div>
 
             <!-- 标签列表 -->
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="HTTP">
-                    <span class="tag-text">HTTP</span>
-                </span>
-                
-                <div class="post-preview">
-                    <a href="/2017/04/08/common-http-status-code/">
-                        <h2 class="post-title">
-                            常見的14種HTTP狀態碼
-                        </h2>
-                        
-                    </a>
-                </div>
-                <hr>
-                
-            </div>
             
             <div class="one-tag-list">
                 <span class="fa fa-tag listing-seperator" id="Web">
@@ -235,6 +220,40 @@
                     <a href="/2017/01/20/localstorage/">
                         <h2 class="post-title">
                             HTML5 Web Storage
+                        </h2>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="HTTP">
+                    <span class="tag-text">HTTP</span>
+                </span>
+                
+                <div class="post-preview">
+                    <a href="/2017/04/08/common-http-status-code/">
+                        <h2 class="post-title">
+                            常見的14種HTTP狀態碼
+                        </h2>
+                        
+                    </a>
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="Git">
+                    <span class="tag-text">Git</span>
+                </span>
+                
+                <div class="post-preview">
+                    <a href="/2017/04/01/git-workflow/">
+                        <h2 class="post-title">
+                            Git多人合作開發工作流程
                         </h2>
                         
                     </a>
@@ -276,16 +295,6 @@
                 <hr>
                 
                 <div class="post-preview">
-                    <a href="/2017/02/26/hexo-url/">
-                        <h2 class="post-title">
-                            Hexo sitemap 簡單更改域名的方法
-                        </h2>
-                        
-                    </a>
-                </div>
-                <hr>
-                
-                <div class="post-preview">
                     <a href="/2017/02/26/hexo-seo-nofollow/">
                         <h2 class="post-title">
                             Hexo優化之為外部鏈接添加nofollow屬性
@@ -306,26 +315,19 @@
                 <hr>
                 
                 <div class="post-preview">
-                    <a href="/2017/01/08/readme/">
+                    <a href="/2017/02/26/hexo-url/">
                         <h2 class="post-title">
-                            Github上的README.md
+                            Hexo sitemap 簡單更改域名的方法
                         </h2>
                         
                     </a>
                 </div>
                 <hr>
                 
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="Git">
-                    <span class="tag-text">Git</span>
-                </span>
-                
                 <div class="post-preview">
-                    <a href="/2017/04/01/git-workflow/">
+                    <a href="/2017/01/08/readme/">
                         <h2 class="post-title">
-                            Git多人合作開發工作流程
+                            Github上的README.md
                         </h2>
                         
                     </a>
@@ -340,9 +342,9 @@
                 </span>
                 
                 <div class="post-preview">
-                    <a href="/2017/02/26/hexo-url/">
+                    <a href="/2017/02/26/hexo-seo-nofollow/">
                         <h2 class="post-title">
-                            Hexo sitemap 簡單更改域名的方法
+                            Hexo優化之為外部鏈接添加nofollow屬性
                         </h2>
                         
                     </a>
@@ -350,9 +352,9 @@
                 <hr>
                 
                 <div class="post-preview">
-                    <a href="/2017/02/26/hexo-seo-nofollow/">
+                    <a href="/2017/02/26/hexo-url/">
                         <h2 class="post-title">
-                            Hexo優化之為外部鏈接添加nofollow屬性
+                            Hexo sitemap 簡單更改域名的方法
                         </h2>
                         
                     </a>
@@ -377,9 +379,9 @@
                 <hr>
                 
                 <div class="post-preview">
-                    <a href="/2017/01/20/localstorage/">
+                    <a href="/2017/02/19/js-closure/">
                         <h2 class="post-title">
-                            HTML5 Web Storage
+                            Javascript中的Closure入門
                         </h2>
                         
                     </a>
@@ -397,9 +399,9 @@
                 <hr>
                 
                 <div class="post-preview">
-                    <a href="/2017/02/19/js-closure/">
+                    <a href="/2017/01/20/localstorage/">
                         <h2 class="post-title">
-                            Javascript中的Closure入門
+                            HTML5 Web Storage
                         </h2>
                         
                     </a>
