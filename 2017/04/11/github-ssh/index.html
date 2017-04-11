@@ -19,11 +19,11 @@
     <meta name="google-site-verification" content="riZBcestky7i9xY__A-5J-2EE65T75X1u-zgbss37Io">
     <title>
         
-        Calpa&#39;s blog
+        利用ssh連接Github的方法｜Calpa&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="https://calpa.me/Tags/Javascript/">
+    <link rel="canonical" href="https://calpa.me/2017/04/11/github-ssh/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -38,7 +38,7 @@
 
 <body class="animated fadeIn">
 <!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost="false" data-istags="true
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost="true" data-istags="false
 " data-ishome="false">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -141,273 +141,149 @@
 
 <!-- Main Content -->
 
+<!--only post-->
 
-<!-- Page Header -->
-<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 visible-xs-block visible-sm-block">
-    <div class="row">
-        <header class="intro-header">
-            <div class="container">
-                <div class="site-heading text-center">
-                    <div class="about-me">
-                        <!--移动端头部显示-->
-                        <img src="/img/profile.png" alt="avatar">
-                        <h4>Calpa</h4>
-                        <p>Learn more, Code more.</p>
+
+<img class="wechat-title-img" src="/img/post-default.jpg">
+
+
+<style>
+    
+    header.intro-header {
+        background-image: url('/img/post-default.jpg')
+    }
+
+    
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <div class="post-heading">
+                    <h1>利用ssh連接Github的方法</h1>
+                    
+                    <span class="meta">
+                         作者 Calpa
+                        <span>
+                          日期 2017-04-11
+                         </span>
+                    </span>
+                    <div class="tags text-center">
+                        
+                        <a class="tag" href="/Tags/#Github" title="Github">Github</a>
+                        
                     </div>
                 </div>
             </div>
-        </header>
-    </div>
-</div>
-<!-- Main Content -->
-<div class="container custom-haojen-container">
-    <!-- Post Container -->
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12 col-xs-12 post-container">
-            <!-- Main Content -->
-
-
-
-
-<div class="post-preview " style="background-image: url('/img/post-default.jpg')">
-    <a href="/2017/03/25/js-this/">
-        <h2 class="post-title">
-            Javascript中的this入門
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-03-25
-        </p>
-        
-        <div class="post-content-preview">
-            <p>
-                首先我們要理解調用函數的方法，最起碼可以用下面兩個方法：12func(arg1, arg2);func.call(context, arg1, arg2);
-之前我也沒怎麼見過後者，基本上都是直接call func的。後者func(arg1, arg2) 等於 func.call(undefin..
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-
-<div class="post-preview " style="background-image: url('/img/post-default.jpg')">
-    <a href="/2017/02/19/js-closure/">
-        <h2 class="post-title">
-            Javascript中的Closure入門
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-02-19
-        </p>
-        
-        <div class="post-content-preview">
-            <p>
-                為什麼會有這篇文章打好基本功是很重要的。。。
-最簡單的閉包
-先定義一個Function A
-在A的裡面定義一個Function B
-在A中返回B
-執行A(), 將A()的返回值賦予給b
-執行b()
-
-12345678function A() &#123;  function B() &#123;..
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-
-<div class="post-preview " style="background-image: url('/img/post-default.jpg')">
-    <a href="/2017/02/02/true-false/">
-        <h2 class="post-title">
-            Javascript中的True與False
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-02-02
-        </p>
-        
-        <div class="post-content-preview">
-            <p>
-                這幾天用Enki來學習Javascript，感覺不錯，You can’t handle the truth! 有一些特別True/False例子。這裡簡單記錄一下。
-最簡單的測試方法：1234567function test(something)&#123;  if (something) &#..
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-
-<div class="post-preview " style="background-image: url('/img/post-default.jpg')">
-    <a href="/2017/01/20/localstorage/">
-        <h2 class="post-title">
-            HTML5 Web Storage
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-01-20
-        </p>
-        
-        <div class="post-content-preview">
-            <p>
-                Storage
-HTML5 的 Web Storage 包括了兩種儲存方式：localStorage及sessionStorage。
-儲存在Storage中的資料，以key-value pair的形式保存。
-Cookie的佔用空間非常小，大小限制于4KB左右，常見的用途是保存賬號登錄信息與登錄狀..
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-
-<div class="post-preview " style="background-image: url('/img/post-default.jpg')">
-    <a href="/2017/01/14/hoisting/">
-        <h2 class="post-title">
-            Javascript的變量提升入門
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-01-14
-        </p>
-        
-        <div class="post-content-preview">
-            <p>
-                在Javascript中，hoisting是一個容易犯錯的地方。在一段scope裡面，沒有定義變量就使用變量的話會彈出Reference Error。12 // ReferenceError: poi is not definedconsole.log(poi);
-
-1234var name;c..
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-
-<!-- 翻页 pager -->
-
-<ul class="pager">
-    
-    <li>Page 1 / 1</li>
-    
-</ul>
-
-        </div>
-        <!-- Sidebar Container -->
-        <div class="
-                col-lg-3 col-lg-offset-0
-                col-md-3 col-md-offset-0
-                col-sm-12
-                col-xs-12
-                sidebar-container
-            ">
-
-            <!-- About Me -->
-            <section class="visible-md visible-lg" style="padding: 0 18px">
-                <div class="short-about">
-                    <!--侧边栏头像-->
-                    
-                    <img src="/img/profile.png" alt="avatar">
-                    
-                    <h5>Calpa</h5>
-                    
-                    <p>Learn more, Code more.</p>
-                    
-                    <hr>
-                    <!-- SNS Link 社交 -->
-                    <ul class="list-inline">
-                        
-                        
-                        
-                        <li>
-                            <a target="_blank" href="https://www.zhihu.com/people/piao-xue-wu-ying" rel="external nofollow noopener noreferrer">
-                                        <span class="fa-stack fa-lg">
-                                            <i class="fa fa-circle fa-stack-2x"></i>
-                                            <i class="fa  fa-stack-1x fa-inverse">知</i>
-                                        </span>
-                            </a>
-                        </li>
-                        
-
-                        
-
-                        
-
-                        
-                        <li>
-                            <a target="_blank" href="https://github.com/calpa" rel="external nofollow noopener noreferrer">
-                                        <span class="fa-stack fa-lg">
-                                            <i class="fa fa-circle fa-stack-2x"></i>
-                                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                                        </span>
-                            </a>
-                        </li>
-                        
-
-                        
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Featured Tags  标签 -->
-            
-            <section>
-                <div class="tags">
-                    
-                    
-                    
-                    
-                    <a href="/Tags/#Github" title="Github" rel="2">Github</a>
-                    
-                    
-                    
-                    <a href="/Tags/#Web" title="Web" rel="3">Web</a>
-                    
-                    
-                    
-                    
-                    
-                    <a href="/Tags/#Hexo" title="Hexo" rel="5">Hexo</a>
-                    
-                    
-                    
-                    <a href="/Tags/#SEO" title="SEO" rel="2">SEO</a>
-                    
-                    
-                    
-                    
-                    
-                    <a href="/Tags/#Javascript" title="Javascript" rel="5">Javascript</a>
-                    
-                    
-                    
-                    
-                    
-                    
-                </div>
-            </section>
-            
-
-            
-
         </div>
     </div>
-</div>
+    <div class="post-title-haojen">
+        <span>
+            利用ssh連接Github的方法
+        </span>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
+                <p>其實很簡單，按照下面打就是了。。。</p>
+<ol>
+<li><code>ls -la ~/.ssh/</code></li>
+<li><code>cat ~/.ssh/id_rsa.pub</code> 複製貼上到Github SSH Page</li>
+<li><code>ssh git@github.com</code></li>
+</ol>
+
+                <hr>
+                
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2017/04/11/react-native-run-android/" data-toggle="tooltip" data-placement="top" title="【React Native】安裝Android Apk而無需連接伺服器的方法">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2017/04/08/common-http-status-code/" data-toggle="tooltip" data-placement="top" title="常見的14種HTTP狀態碼">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+
+                
+                <!-- disqus 评论框 start -->
+                <div class="comment">
+                    <div id="disqus_thread" class="disqus-thread"></div>
+                </div>
+                <!-- disqus 评论框 end -->
+                
+
+            </div>
+
+            <div class="hidden-xs col-sm-3 toc-col">
+                <div class="toc-wrap">
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5 class="text-center">
+                        <a href="/Tags/">FEATURED TAGS</a>
+                    </h5>
+                    <div class="tags">
+                        
+                        <a class="tag" href="/Tags/#Github" title="Github">Github</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        </div>
+
+    </div>
+</article>
+
+
+
+<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "calpas-blog";
+    var disqus_identifier = "https://calpa.me/2017/04/11/github-ssh/";
+    var disqus_url = "https://calpa.me/2017/04/11/github-ssh/";
+
+    (function () {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<!-- disqus 公共JS代码 end -->
+
+
 
 <!-- Footer -->
 <!-- Footer -->
