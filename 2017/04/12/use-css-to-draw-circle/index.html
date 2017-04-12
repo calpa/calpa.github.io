@@ -19,11 +19,11 @@
     <meta name="google-site-verification" content="riZBcestky7i9xY__A-5J-2EE65T75X1u-zgbss37Io">
     <title>
         
-        Javascript中的True與False｜Calpa&#39;s blog
+        利用CSS畫圓｜Calpa&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="https://calpa.me/2017/02/02/true-false/">
+    <link rel="canonical" href="https://calpa.me/2017/04/12/use-css-to-draw-circle/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -161,17 +161,17 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>Javascript中的True與False</h1>
+                    <h1>利用CSS畫圓</h1>
                     
                     <span class="meta">
                          作者 Calpa
                         <span>
-                          日期 2017-02-02
+                          日期 2017-04-12
                          </span>
                     </span>
                     <div class="tags text-center">
                         
-                        <a class="tag" href="/Tags/#Javascript" title="Javascript">Javascript</a>
+                        <a class="tag" href="/Tags/#CSS" title="CSS">CSS</a>
                         
                     </div>
                 </div>
@@ -180,7 +180,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            Javascript中的True與False
+            利用CSS畫圓
         </span>
     </div>
 </header>
@@ -191,25 +191,19 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <p>這幾天用<a href="https://www.enki.com/" rel="external nofollow noopener noreferrer" target="_blank">Enki</a>來學習Javascript，感覺不錯，<strong>You can’t handle the truth!</strong> 有一些特別True/False例子。這裡簡單記錄一下。</p>
-<p>最簡單的測試方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function test(something)&#123;</div><div class="line">  if (something) &#123;</div><div class="line">    console.log(something + &apos; is true.&apos;);</div><div class="line">  &#125; else &#123;</div><div class="line">    console.log(something + &apos; is false.&apos;);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h1 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h1><h2 id="Truthy"><a href="#Truthy" class="headerlink" title="Truthy"></a>Truthy</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">true &lt;- true當然是true...</div><div class="line">[1][0]</div><div class="line">new Date()</div><div class="line">new Number(0)</div><div class="line">Object</div><div class="line">Infinity</div><div class="line">[]</div></pre></td></tr></table></figure>
-<p>以下都是[object Object]:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&#123;a: false&#125;</div><div class="line">&#123;&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="Falsy"><a href="#Falsy" class="headerlink" title="Falsy"></a>Falsy</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">false &lt;- false當然是false...</div><div class="line">undefined</div><div class="line">&apos;&apos;</div><div class="line">&quot;&quot;</div><div class="line">[1][1] &lt;- undefined</div><div class="line">NaN</div><div class="line">null</div><div class="line">&#123;&#125;.someKey</div><div class="line">0</div><div class="line">[].length &lt;- 這個是0，所以出false</div></pre></td></tr></table></figure>
-<p>值得注意的是[]，它本身會是<code>true</code>，但如果用<code>[] == true</code>的話會輸出<code>false</code>，<br>而<code>[] == false</code>的話會輸出<code>true</code>。</p>
+                <p>用CSS畫一個圓是很簡單的，用border-radius就可以了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;circle&quot;&gt;&lt;/div&gt; // HTML</div><div class="line"></div><div class="line">.circle &#123;</div><div class="line">	height: 100px;</div><div class="line">	width: 100px;</div><div class="line">	background: orange; // 可以用你喜歡的顏色</div><div class="line">	border-radius: 50%; //</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><a href="http://codepen.io/calpa/pen/xdxOvV" rel="external nofollow noopener noreferrer" target="_blank">Circle - CodePen</a></p>
+<p>但是其實border-radius可以加/來獲得特別效果XD</p>
 
                 <hr>
                 
 
                 <ul class="pager">
                     
-                    <li class="previous">
-                        <a href="/2017/02/19/js-closure/" data-toggle="tooltip" data-placement="top" title="Javascript中的Closure入門">&larr; Previous Post</a>
-                    </li>
-                    
                     
                     <li class="next">
-                        <a href="/2017/01/20/localstorage/" data-toggle="tooltip" data-placement="top" title="HTML5 Web Storage">Next Post &rarr;</a>
+                        <a href="/2017/04/11/react-native-run-android/" data-toggle="tooltip" data-placement="top" title="【React Native】安裝Android Apk而無需連接伺服器的方法">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
@@ -228,7 +222,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#例子"><span class="toc-text">例子</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Truthy"><span class="toc-text">Truthy</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Falsy"><span class="toc-text">Falsy</span></a></li></ol></li></ol>
+                    
                 </div>
             </div>
         </div>
@@ -250,7 +244,7 @@
                     </h5>
                     <div class="tags">
                         
-                        <a class="tag" href="/Tags/#Javascript" title="Javascript">Javascript</a>
+                        <a class="tag" href="/Tags/#CSS" title="CSS">CSS</a>
                         
                     </div>
                 </section>
@@ -270,8 +264,8 @@
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = "calpas-blog";
-    var disqus_identifier = "https://calpa.me/2017/02/02/true-false/";
-    var disqus_url = "https://calpa.me/2017/02/02/true-false/";
+    var disqus_identifier = "https://calpa.me/2017/04/12/use-css-to-draw-circle/";
+    var disqus_url = "https://calpa.me/2017/04/12/use-css-to-draw-circle/";
 
     (function () {
         var dsq = document.createElement('script');

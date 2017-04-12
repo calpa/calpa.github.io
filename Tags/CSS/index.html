@@ -19,11 +19,11 @@
     <meta name="google-site-verification" content="riZBcestky7i9xY__A-5J-2EE65T75X1u-zgbss37Io">
     <title>
         
-        Javascript中的True與False｜Calpa&#39;s blog
+        Calpa&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="https://calpa.me/2017/02/02/true-false/">
+    <link rel="canonical" href="https://calpa.me/Tags/CSS/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -38,7 +38,7 @@
 
 <body class="animated fadeIn">
 <!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost="true" data-istags="false
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost="false" data-istags="true
 " data-ishome="false">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -141,149 +141,169 @@
 
 <!-- Main Content -->
 
-<!--only post-->
 
-
-<img class="wechat-title-img" src="/img/post-default.jpg">
-
-
-<style>
-    
-    header.intro-header {
-        background-image: url('/img/post-default.jpg')
-    }
-
-    
-</style>
-
-<header class="intro-header">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
-                <div class="post-heading">
-                    <h1>Javascript中的True與False</h1>
-                    
-                    <span class="meta">
-                         作者 Calpa
-                        <span>
-                          日期 2017-02-02
-                         </span>
-                    </span>
-                    <div class="tags text-center">
-                        
-                        <a class="tag" href="/Tags/#Javascript" title="Javascript">Javascript</a>
-                        
+<!-- Page Header -->
+<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 visible-xs-block visible-sm-block">
+    <div class="row">
+        <header class="intro-header">
+            <div class="container">
+                <div class="site-heading text-center">
+                    <div class="about-me">
+                        <!--移动端头部显示-->
+                        <img src="/img/profile.png" alt="avatar">
+                        <h4>Calpa</h4>
+                        <p>Learn more, Code more.</p>
                     </div>
                 </div>
             </div>
-        </div>
+        </header>
     </div>
-    <div class="post-title-haojen">
-        <span>
-            Javascript中的True與False
-        </span>
-    </div>
-</header>
+</div>
+<!-- Main Content -->
+<div class="container custom-haojen-container">
+    <!-- Post Container -->
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12 col-xs-12 post-container">
+            <!-- Main Content -->
 
-<!-- Post Content -->
-<article>
-    <div class="container">
-        <div class="row">
-            <!-- Post Container -->
-            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <p>這幾天用<a href="https://www.enki.com/" rel="external nofollow noopener noreferrer" target="_blank">Enki</a>來學習Javascript，感覺不錯，<strong>You can’t handle the truth!</strong> 有一些特別True/False例子。這裡簡單記錄一下。</p>
-<p>最簡單的測試方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function test(something)&#123;</div><div class="line">  if (something) &#123;</div><div class="line">    console.log(something + &apos; is true.&apos;);</div><div class="line">  &#125; else &#123;</div><div class="line">    console.log(something + &apos; is false.&apos;);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h1 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h1><h2 id="Truthy"><a href="#Truthy" class="headerlink" title="Truthy"></a>Truthy</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">true &lt;- true當然是true...</div><div class="line">[1][0]</div><div class="line">new Date()</div><div class="line">new Number(0)</div><div class="line">Object</div><div class="line">Infinity</div><div class="line">[]</div></pre></td></tr></table></figure>
-<p>以下都是[object Object]:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&#123;a: false&#125;</div><div class="line">&#123;&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="Falsy"><a href="#Falsy" class="headerlink" title="Falsy"></a>Falsy</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">false &lt;- false當然是false...</div><div class="line">undefined</div><div class="line">&apos;&apos;</div><div class="line">&quot;&quot;</div><div class="line">[1][1] &lt;- undefined</div><div class="line">NaN</div><div class="line">null</div><div class="line">&#123;&#125;.someKey</div><div class="line">0</div><div class="line">[].length &lt;- 這個是0，所以出false</div></pre></td></tr></table></figure>
-<p>值得注意的是[]，它本身會是<code>true</code>，但如果用<code>[] == true</code>的話會輸出<code>false</code>，<br>而<code>[] == false</code>的話會輸出<code>true</code>。</p>
 
-                <hr>
-                
 
-                <ul class="pager">
-                    
-                    <li class="previous">
-                        <a href="/2017/02/19/js-closure/" data-toggle="tooltip" data-placement="top" title="Javascript中的Closure入門">&larr; Previous Post</a>
-                    </li>
-                    
-                    
-                    <li class="next">
-                        <a href="/2017/01/20/localstorage/" data-toggle="tooltip" data-placement="top" title="HTML5 Web Storage">Next Post &rarr;</a>
-                    </li>
-                    
-                </ul>
 
-                
-
-                
-                <!-- disqus 评论框 start -->
-                <div class="comment">
-                    <div id="disqus_thread" class="disqus-thread"></div>
-                </div>
-                <!-- disqus 评论框 end -->
-                
-
-            </div>
-
-            <div class="hidden-xs col-sm-3 toc-col">
-                <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#例子"><span class="toc-text">例子</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Truthy"><span class="toc-text">Truthy</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Falsy"><span class="toc-text">Falsy</span></a></li></ol></li></ol>
-                </div>
-            </div>
+<div class="post-preview " style="background-image: url('/img/post-default.jpg')">
+    <a href="/2017/04/12/use-css-to-draw-circle/">
+        <h2 class="post-title">
+            利用CSS畫圓
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-04-12
+        </p>
+        
+        <div class="post-content-preview">
+            <p>
+                用CSS畫一個圓是很簡單的，用border-radius就可以了。
+12345678&lt;div class=&quot;circle&quot;&gt;&lt;/div&gt; // HTML.circle &#123;	height: 100px;	width: 100px;	backgr..
+            </p>
         </div>
+    </a>
 
-        <div class="row">
-            <!-- Sidebar Container -->
+</div>
 
-            <div class="
-                col-lg-8 col-lg-offset-2
-                col-md-10 col-md-offset-1
-                sidebar-container">
+<hr>
 
-                <!-- Featured Tags -->
-                
-                <section>
-                    <!-- no hr -->
-                    <h5 class="text-center">
-                        <a href="/Tags/">FEATURED TAGS</a>
-                    </h5>
-                    <div class="tags">
+
+
+
+<!-- 翻页 pager -->
+
+<ul class="pager">
+    
+    <li>Page 1 / 1</li>
+    
+</ul>
+
+        </div>
+        <!-- Sidebar Container -->
+        <div class="
+                col-lg-3 col-lg-offset-0
+                col-md-3 col-md-offset-0
+                col-sm-12
+                col-xs-12
+                sidebar-container
+            ">
+
+            <!-- About Me -->
+            <section class="visible-md visible-lg" style="padding: 0 18px">
+                <div class="short-about">
+                    <!--侧边栏头像-->
+                    
+                    <img src="/img/profile.png" alt="avatar">
+                    
+                    <h5>Calpa</h5>
+                    
+                    <p>Learn more, Code more.</p>
+                    
+                    <hr>
+                    <!-- SNS Link 社交 -->
+                    <ul class="list-inline">
                         
-                        <a class="tag" href="/Tags/#Javascript" title="Javascript">Javascript</a>
                         
-                    </div>
-                </section>
-                
+                        
+                        <li>
+                            <a target="_blank" href="https://www.zhihu.com/people/piao-xue-wu-ying" rel="external nofollow noopener noreferrer">
+                                        <span class="fa-stack fa-lg">
+                                            <i class="fa fa-circle fa-stack-2x"></i>
+                                            <i class="fa  fa-stack-1x fa-inverse">知</i>
+                                        </span>
+                            </a>
+                        </li>
+                        
 
-                <!-- Friends Blog -->
-                
-            </div>
+                        
+
+                        
+
+                        
+                        <li>
+                            <a target="_blank" href="https://github.com/calpa" rel="external nofollow noopener noreferrer">
+                                        <span class="fa-stack fa-lg">
+                                            <i class="fa fa-circle fa-stack-2x"></i>
+                                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                        </span>
+                            </a>
+                        </li>
+                        
+
+                        
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Featured Tags  标签 -->
+            
+            <section>
+                <div class="tags">
+                    
+                    
+                    <a href="/Tags/#Web" title="Web" rel="3">Web</a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="/Tags/#Hexo" title="Hexo" rel="5">Hexo</a>
+                    
+                    
+                    
+                    <a href="/Tags/#Github" title="Github" rel="2">Github</a>
+                    
+                    
+                    
+                    <a href="/Tags/#SEO" title="SEO" rel="2">SEO</a>
+                    
+                    
+                    
+                    <a href="/Tags/#Javascript" title="Javascript" rel="5">Javascript</a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+            </section>
+            
+
+            
+
         </div>
-
     </div>
-</article>
-
-
-
-<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES * * */
-    var disqus_shortname = "calpas-blog";
-    var disqus_identifier = "https://calpa.me/2017/02/02/true-false/";
-    var disqus_url = "https://calpa.me/2017/02/02/true-false/";
-
-    (function () {
-        var dsq = document.createElement('script');
-        dsq.type = 'text/javascript';
-        dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<!-- disqus 公共JS代码 end -->
-
-
+</div>
 
 <!-- Footer -->
 <!-- Footer -->
