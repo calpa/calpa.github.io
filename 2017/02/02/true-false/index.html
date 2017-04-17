@@ -74,14 +74,14 @@
                     
                         
             							
-          						
-                    
-                        
-            							
                         <li>
                             <a href="/Tags/">Tags</a>
                         </li>
           							
+          						
+                    
+                        
+            							
           						
                     
                         
@@ -190,7 +190,101 @@
     <div class="container">
         <div class="row">
             <!-- Post Container -->
-            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
+            <!-- Sidebar Container -->
+<div class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 hidden-sm hidden-xs sidebar-container">
+    <!-- About Me -->
+    <section class="visible-md visible-lg" style="padding: 0 18px">
+        <div class="short-about">
+            <!--侧边栏头像-->
+            
+            <img src="/img/profile.png" alt="avatar">
+            
+            <h5>Calpa</h5>
+            
+            <p>Learn more, Code more.</p>
+            
+            <hr>
+            <!-- SNS Link 社交 -->
+            <ul class="list-inline">
+                
+                
+                
+                <li>
+                    <a target="_blank" href="https://www.zhihu.com/people/piao-xue-wu-ying" rel="external nofollow noopener noreferrer">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa  fa-stack-1x fa-inverse">知</i>
+                                </span>
+                    </a>
+                </li>
+                
+
+                
+
+                
+
+                
+                <li>
+                    <a target="_blank" href="https://github.com/calpa" rel="external nofollow noopener noreferrer">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                    </a>
+                </li>
+                
+
+                
+            </ul>
+        </div>
+    </section>
+
+    <!-- Featured Tags  标签 -->
+    
+    <section>
+        <div class="tags">
+            
+            
+            
+            
+            <a href="/Tags/#Github" title="Github" rel="2">Github</a>
+            
+            
+            
+            
+            
+            <a href="/Tags/#Web" title="Web" rel="3">Web</a>
+            
+            
+            
+            <a href="/Tags/#Hexo" title="Hexo" rel="5">Hexo</a>
+            
+            
+            
+            <a href="/Tags/#SEO" title="SEO" rel="2">SEO</a>
+            
+            
+            
+            <a href="/Tags/#Javascript" title="Javascript" rel="5">Javascript</a>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </div>
+    </section>
+    
+
+    
+</div>
+
+
+            <div class="col-lg-8 col-lg-offset-0 col-md-8 col-sm-10 post-container">
                 <p>這幾天用<a href="https://www.enki.com/" rel="external nofollow noopener noreferrer" target="_blank">Enki</a>來學習Javascript，感覺不錯，<strong>You can’t handle the truth!</strong> 有一些特別True/False例子。這裡簡單記錄一下。</p>
 <p>最簡單的測試方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function test(something)&#123;</div><div class="line">  if (something) &#123;</div><div class="line">    console.log(something + &apos; is true.&apos;);</div><div class="line">  &#125; else &#123;</div><div class="line">    console.log(something + &apos; is false.&apos;);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <h1 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h1><h2 id="Truthy"><a href="#Truthy" class="headerlink" title="Truthy"></a>Truthy</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">true &lt;- true當然是true...</div><div class="line">[1][0]</div><div class="line">new Date()</div><div class="line">new Number(0)</div><div class="line">Object</div><div class="line">Infinity</div><div class="line">[]</div></pre></td></tr></table></figure>
@@ -226,41 +320,12 @@
 
             </div>
 
-            <div class="hidden-xs col-sm-3 toc-col">
+            <div class="hidden-xs col-md-1 col-sm-2 toc-col">
                 <div class="toc-wrap">
                     <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#例子"><span class="toc-text">例子</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Truthy"><span class="toc-text">Truthy</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Falsy"><span class="toc-text">Falsy</span></a></li></ol></li></ol>
                 </div>
             </div>
         </div>
-
-        <div class="row">
-            <!-- Sidebar Container -->
-
-            <div class="
-                col-lg-8 col-lg-offset-2
-                col-md-10 col-md-offset-1
-                sidebar-container">
-
-                <!-- Featured Tags -->
-                
-                <section>
-                    <!-- no hr -->
-                    <h5 class="text-center">
-                        <a href="/Tags/">FEATURED TAGS</a>
-                    </h5>
-                    <div class="tags">
-                        
-                        <a class="tag" href="/Tags/#Javascript" title="Javascript">Javascript</a>
-                        
-                    </div>
-                </section>
-                
-
-                <!-- Friends Blog -->
-                
-            </div>
-        </div>
-
     </div>
 </article>
 

@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://calpa.me/2017/03/25/js-this/</loc>
+    
+    <lastmod>2017-04-17T13:44:30.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://calpa.me/2017/04/12/use-css-to-draw-circle/</loc>
     
     <lastmod>2017-04-14T13:19:21.000Z</lastmod>
@@ -110,13 +117,6 @@
     <loc>https://calpa.me/2017/01/08/hello-world/</loc>
     
     <lastmod>2017-04-01T14:50:11.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://calpa.me/2017/03/25/js-this/</loc>
-    
-    <lastmod>2017-03-28T08:22:29.000Z</lastmod>
     
   </url>
   
