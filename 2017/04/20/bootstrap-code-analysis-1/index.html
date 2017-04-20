@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Calpa&#39;s Blog">
+    <meta name="keyword" content="calpa">
+    <meta name="theme-color" content="#384f7c">
+    <meta name="msapplication-navbutton-color" content="#384f7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#384f7c">
+    <link rel="shortcut icon" href="/img/icon.png">
+    <link rel="alternate" type="application/atom+xml" title="Calpa" href="/atom.xml">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
+    <meta name="google-site-verification" content="riZBcestky7i9xY__A-5J-2EE65T75X1u-zgbss37Io">
+    <title>
+        
+        Bootstrap v4 源碼分析(1)｜Calpa&#39;s blog
+        
+    </title>
+
+    <link rel="canonical" href="https://calpa.me/2017/04/20/bootstrap-code-analysis-1/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+</head>
+
+
+<body class="animated fadeIn">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost="true" data-istags="false
+" data-ishome="false">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand animated pulse" href="/">
+                <span class="brand-logo">
+                    Calpa
+                </span>
+                's Blog
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <!-- /.navbar-collapse -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+	                  
+                    
+                        
+            							
+          						
+                    
+                        
+            							
+                        <li>
+                            <a href="/Tags/">Tags</a>
+                        </li>
+          							
+          						
+                    
+                        
+            							
+            								
+            							
+          						
+                    
+                        
+            							
+                        <li>
+                            <a href="/works/">works</a>
+                        </li>
+          							
+          						
+                    
+
+        					
+        						<li>
+        							<a href="/about">About</a>
+        						</li>
+        					
+                </ul>                
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+//    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+<!-- Main Content -->
+
+<!--only post-->
+
+
+<img class="wechat-title-img" src="/img/post-default.jpg">
+
+
+<style>
+    
+    header.intro-header {
+        background-image: url('/img/post-default.jpg')
+    }
+
+    
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <div class="post-heading">
+                    <h1>Bootstrap v4 源碼分析(1)</h1>
+                    
+                    <span class="meta">
+                         作者 Calpa
+                        <span>
+                          日期 2017-04-20
+                         </span>
+                    </span>
+                    <div class="tags text-center">
+                        
+                        <a class="tag" href="/Tags/#Web" title="Web">Web</a>
+                        
+                        <a class="tag" href="/Tags/#Bootstrap" title="Bootstrap">Bootstrap</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post-title-haojen">
+        <span>
+            Bootstrap v4 源碼分析(1)
+        </span>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <!-- Sidebar Container -->
+<div class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 hidden-sm hidden-xs sidebar-container">
+    <!-- About Me -->
+    <section class="visible-md visible-lg" style="padding: 0 18px">
+        <div class="short-about">
+            <!--侧边栏头像-->
+            
+            <img src="/img/profile.png" alt="avatar">
+            
+            <h5>Calpa</h5>
+            
+            <p>為什麼你這麼熟練？</p>
+            
+            <hr>
+            <!-- SNS Link 社交 -->
+            <ul class="list-inline">
+                
+                
+                
+                <li>
+                    <a target="_blank" href="https://www.zhihu.com/people/piao-xue-wu-ying" rel="external nofollow noopener noreferrer">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa  fa-stack-1x fa-inverse">知</i>
+                                </span>
+                    </a>
+                </li>
+                
+
+                
+
+                
+
+                
+                <li>
+                    <a target="_blank" href="https://github.com/calpa" rel="external nofollow noopener noreferrer">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                    </a>
+                </li>
+                
+
+                
+            </ul>
+        </div>
+    </section>
+
+    <!-- Featured Tags  标签 -->
+    
+    <section>
+        <div class="tags">
+            
+            
+            
+            
+            <a href="/Tags/#Web" title="Web" rel="4">Web</a>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <a href="/Tags/#Github" title="Github" rel="2">Github</a>
+            
+            
+            
+            <a href="/Tags/#Hexo" title="Hexo" rel="5">Hexo</a>
+            
+            
+            
+            <a href="/Tags/#SEO" title="SEO" rel="2">SEO</a>
+            
+            
+            
+            <a href="/Tags/#Javascript" title="Javascript" rel="5">Javascript</a>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </div>
+    </section>
+    
+
+    
+    <hr>
+    <h5 style="text-align: center;">友情鏈接</h5>
+    <ul class="list-inline" style="text-align: center;">
+        
+        <li><a href="http://blog.shanamaid.top/" target="_blank" rel="external nofollow noopener noreferrer">娜酱骑士团</a></li>
+        
+    </ul>
+    
+</div>
+
+
+            <div class="col-lg-7 col-lg-offset-0 col-md-7 col-sm-9 post-container">
+                <p>Bootstrap是一個Twitter推出的CSS框架，也是我第一個使用的CSS框架。本文使用最新版本v4.0.0-alpha.6，透過閱讀完整的源代碼，我們能夠更加了解Bootstrap的優缺點，以及如何自製Bootstrap輪子。</p>
+<h2 id="為什麼使用Bootstrap"><a href="#為什麼使用Bootstrap" class="headerlink" title="為什麼使用Bootstrap"></a>為什麼使用Bootstrap</h2><p>透過使用Bootstrap框架，我們可以提高開發效率，避免重複製造輪子。</p>
+<h2 id="閱讀本文所需知識"><a href="#閱讀本文所需知識" class="headerlink" title="閱讀本文所需知識"></a>閱讀本文所需知識</h2><ol>
+<li>一顆好奇心</li>
+<li>基本Bootstrap知識</li>
+<li>基本SCSS/SASS知識</li>
+</ol>
+<h2 id="Bootstrap4-的新特性"><a href="#Bootstrap4-的新特性" class="headerlink" title="Bootstrap4 的新特性"></a>Bootstrap4 的新特性</h2><p>對比起Bootstrap3，Bootstrap4作出不少改動，以下是當中比較影響大的特性：</p>
+<ol>
+<li>默認使用Flexbox</li>
+<li>使用flexbox重新製作navbar，提高可塑性和客製化能力。</li>
+<li><code>.card</code>代替<code>.panel</code>以及<code>.well</code></li>
+<li>能夠適應五種長度: xs, sm, md, lg, xl</li>
+<li>更加大的默認字體: 16px</li>
+<li>不再自帶Glyphicons圖案包。。。</li>
+<li>使用SCSS開發</li>
+</ol>
+<h2 id="Bootstarp-源碼結構"><a href="#Bootstarp-源碼結構" class="headerlink" title="Bootstarp 源碼結構"></a>Bootstarp 源碼結構</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">bootstrap/  #v4-dev branch</div><div class="line">├── build/</div><div class="line">├── dist/ # 預先編譯的CSS</div><div class="line">│   ├── css/</div><div class="line">│   └── js/</div><div class="line">├── docs/ # 文檔</div><div class="line">    └── examples/ # 官方例子</div><div class="line">├── js/</div><div class="line">    ├── dist/</div><div class="line">    ├── src/</div><div class="line">    └── tests/</div><div class="line">├── nuget/</div><div class="line">└── scss/ # 本文開始入手的地方</div><div class="line">    ├── mixins/</div><div class="line">    └── utilities/</div></pre></td></tr></table></figure>
+<h2 id="Bootstrap-Grid架構"><a href="#Bootstrap-Grid架構" class="headerlink" title="Bootstrap Grid架構"></a>Bootstrap Grid架構</h2><p>Bootstrap使用<code>container</code>-&gt;<code>row</code>-&gt;<code>col-*-number</code>的架構。</p>
+<h2 id="利用SCSS理解-Container"><a href="#利用SCSS理解-Container" class="headerlink" title="利用SCSS理解 Container"></a>利用SCSS理解 Container</h2><p>在<a href="https://github.com/twbs/bootstrap/blob/094b3a129349a41b1319b0870fb3daa9459b7284/scss/_grid.scss" rel="external nofollow noopener noreferrer" target="_blank">_grid.scss</a>的一開始代碼段落中，我們可以看到<code>.container</code>, <code>.fluid-container</code>這兩個容器。如果 $enable-grid-classes是true的話，就可以使用<code>.container</code>以及<code>.fluid-container</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">@if $enable-grid-classes &#123;</div><div class="line">  .container &#123;</div><div class="line">    @include make-container();</div><div class="line">    @include make-container-max-widths();</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">@if $enable-grid-classes &#123;</div><div class="line">  .container-fluid &#123;</div><div class="line">    width: 100%;</div><div class="line">    @include make-container();</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="理解Row"><a href="#理解Row" class="headerlink" title="理解Row"></a>理解Row</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@if $enable-grid-classes &#123;</div><div class="line">  @include make-row();</div><div class="line">  // 省略 .no-gutters</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="用到的函式-mixins"><a href="#用到的函式-mixins" class="headerlink" title="用到的函式 (mixins)"></a>用到的函式 (mixins)</h2><h3 id="container"><a href="#container" class="headerlink" title="container"></a>container</h3><h4 id="make-container-grid-scss"><a href="#make-container-grid-scss" class="headerlink" title="make-container (grid.scss)"></a>make-container (grid.scss)</h4><p>它們會調用<a href="https://github.com/twbs/bootstrap/blob/2436ad589cfc235c84160fe14e4cc4ec97a9c5ca/scss/mixins/_grid.scss" rel="external nofollow noopener noreferrer" target="_blank">mixins/_grid.scss </a>裡面的<a href="https://github.com/twbs/bootstrap/blob/2436ad589cfc235c84160fe14e4cc4ec97a9c5ca/scss/mixins/_grid.scss#L5" rel="external nofollow noopener noreferrer" target="_blank">@mixin make-container</a>以及<a href="https://github.com/twbs/bootstrap/blob/2436ad589cfc235c84160fe14e4cc4ec97a9c5ca/scss/mixins/_grid.scss#L20" rel="external nofollow noopener noreferrer" target="_blank">@mixin make-container-max-widths</a>。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">@mixin make-container($gutters: $grid-gutter-widths) &#123;</div><div class="line">  margin-right: auto;</div><div class="line">  margin-left: auto;</div><div class="line"></div><div class="line">  @each $breakpoint in map-keys($gutters) &#123;</div><div class="line">    @include media-breakpoint-up($breakpoint) &#123;</div><div class="line">      $gutter: map-get($gutters, $breakpoint);</div><div class="line">      padding-right: ($gutter / 2);</div><div class="line">      padding-left:  ($gutter / 2);</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#map_get-instance_method" rel="external nofollow noopener noreferrer" target="_blank">map-get</a>則是Sass裡面的一個函數，輸入一個map以及key，如果map裡面有該key的話，就會返回key的值。找不到的話就會返回null。</p>
+<h4 id="grid-gutter-widths-variables-scss"><a href="#grid-gutter-widths-variables-scss" class="headerlink" title="$grid-gutter-widths (variables.scss)"></a>$grid-gutter-widths (variables.scss)</h4><p>如果沒有設置$gutters，它就會默認是<a href="https://github.com/twbs/bootstrap/blob/dd0ce3e4b2a89f245ee608a1acc9f848cf8c833a/scss/_variables.scss" rel="external nofollow noopener noreferrer" target="_blank">$grid-gutter-widths</a>，以下是$grid-gutter-widths的包含的數值: xs, sm, md, lg, xl。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$grid-gutter-width-base:     30px !default;</div><div class="line">$grid-gutter-widths: (</div><div class="line">  xs: $grid-gutter-width-base, // 30px</div><div class="line">  sm: $grid-gutter-width-base, // 30px</div><div class="line">  md: $grid-gutter-width-base, // 30px</div><div class="line">  lg: $grid-gutter-width-base, // 30px</div><div class="line">  xl: $grid-gutter-width-base  // 30px</div><div class="line">) !default;</div></pre></td></tr></table></figure>
+<h4 id="grid-breakpoints-variables-scss"><a href="#grid-breakpoints-variables-scss" class="headerlink" title="$grid-breakpoints (variables.scss)"></a>$grid-breakpoints (variables.scss)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$grid-breakpoints: (</div><div class="line">  xs: 0,</div><div class="line">  sm: 576px,</div><div class="line">  md: 768px,</div><div class="line">  lg: 992px,</div><div class="line">  xl: 1200px</div><div class="line">) !default;</div></pre></td></tr></table></figure>
+<p>它定義不同設備的屏幕寬度，用於響應式設計(Responsive Web Design)。</p>
+<h4 id="media-breakpoint-up-breakpoints-scss"><a href="#media-breakpoint-up-breakpoints-scss" class="headerlink" title="media-breakpoint-up (breakpoints.scss)"></a>media-breakpoint-up (breakpoints.scss)</h4><p>而media-breakpoint-up則是在<a href="https://github.com/twbs/bootstrap/blob/7ca078da815320c75862b6cf25f46ce706570279/scss/mixins/_breakpoints.scss#L54" rel="external nofollow noopener noreferrer" target="_blank">mixins/_breakpoints.scss 第54行</a>，用處是返回最短寬度的內容。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) &#123;</div><div class="line">  $min: breakpoint-min($name, $breakpoints);</div><div class="line">  @if $min &#123;</div><div class="line">    @media (min-width: $min) &#123;</div><div class="line">      @content;</div><div class="line">    &#125;</div><div class="line">  &#125; @else &#123;</div><div class="line">    @content;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="breakpoint-min"><a href="#breakpoint-min" class="headerlink" title="breakpoint-min()"></a>breakpoint-min()</h4><p><code>breakpoint-min()</code>可以在<a href="https://github.com/twbs/bootstrap/blob/7ca078da815320c75862b6cf25f46ce706570279/scss/mixins/_breakpoints.scss#L26" rel="external nofollow noopener noreferrer" target="_blank">mixins/_breakpoints.scss 第26行</a>找到，它的用處是返回最短斷點寬度或者null。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@function breakpoint-min($name, $breakpoints: $grid-breakpoints) &#123;</div><div class="line">  $min: map-get($breakpoints, $name);</div><div class="line">  @return if($min != 0, $min, null);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="row"><a href="#row" class="headerlink" title="row"></a>row</h3><h4 id="make-row-grid-scss"><a href="#make-row-grid-scss" class="headerlink" title="make-row() (grid.scss)"></a>make-row() (grid.scss)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">@mixin make-row($gutters: $grid-gutter-widths) &#123;</div><div class="line">  display: flex;</div><div class="line">  flex-wrap: wrap;</div><div class="line"></div><div class="line">  @each $breakpoint in map-keys($gutters) &#123;</div><div class="line">    @include media-breakpoint-up($breakpoint) &#123;</div><div class="line">      $gutter: map-get($gutters, $breakpoint);</div><div class="line">      margin-right: ($gutter / -2);</div><div class="line">      margin-left:  ($gutter / -2);</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>至於Column，我們下次再說吧。。。</p>
+
+                <hr>
+                
+
+                <ul class="pager">
+                    
+                    
+                    <li class="next">
+                        <a href="/2017/04/12/use-css-to-draw-circle/" data-toggle="tooltip" data-placement="top" title="利用CSS畫圓">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+
+                
+                <!-- disqus 评论框 start -->
+                <div class="comment">
+                    <div id="disqus_thread" class="disqus-thread"></div>
+                </div>
+                <!-- disqus 评论框 end -->
+                
+
+            </div>
+
+            <div class="hidden-xs col-md-2 col-sm-3 toc-col">
+                <div class="toc-wrap">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#為什麼使用Bootstrap"><span class="toc-text">為什麼使用Bootstrap</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#閱讀本文所需知識"><span class="toc-text">閱讀本文所需知識</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Bootstrap4-的新特性"><span class="toc-text">Bootstrap4 的新特性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Bootstarp-源碼結構"><span class="toc-text">Bootstarp 源碼結構</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Bootstrap-Grid架構"><span class="toc-text">Bootstrap Grid架構</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#利用SCSS理解-Container"><span class="toc-text">利用SCSS理解 Container</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#理解Row"><span class="toc-text">理解Row</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#用到的函式-mixins"><span class="toc-text">用到的函式 (mixins)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#container"><span class="toc-text">container</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#make-container-grid-scss"><span class="toc-text">make-container (grid.scss)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#grid-gutter-widths-variables-scss"><span class="toc-text">$grid-gutter-widths (variables.scss)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#grid-breakpoints-variables-scss"><span class="toc-text">$grid-breakpoints (variables.scss)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#media-breakpoint-up-breakpoints-scss"><span class="toc-text">media-breakpoint-up (breakpoints.scss)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#breakpoint-min"><span class="toc-text">breakpoint-min()</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#row"><span class="toc-text">row</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#make-row-grid-scss"><span class="toc-text">make-row() (grid.scss)</span></a></li></ol></li></ol></li></ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "calpas-blog";
+    var disqus_identifier = "https://calpa.me/2017/04/20/bootstrap-code-analysis-1/";
+    var disqus_url = "https://calpa.me/2017/04/20/bootstrap-code-analysis-1/";
+
+    (function () {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<!-- disqus 公共JS代码 end -->
+
+
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <br>
+                <ul class="list-inline text-center">
+                
+                
+                
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/piao-xue-wu-ying" rel="external nofollow noopener noreferrer">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://github.com/calpa" rel="external nofollow noopener noreferrer">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Calpa 2017
+                    <br>
+                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
+                    <br>
+                    Theme by <a href="https://haojen.github.io/" rel="external nofollow noopener noreferrer" target="_blank">Haojen Ma</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Calpa's Magic -->
+<script src="/js/magic.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/blog.js"></script>
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://calpa.me/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+<!-- Google Analytics -->
+
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-84737574-3';
+    var _gaDomain = 'auto';
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','null','2.0.0');
+</script>
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!--wechat title img-->
+<img class="wechat-title-img" src="/img/profile.png">
+</body>
+
+</html>
