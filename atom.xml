@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://calpa.me/"/>
-  <updated>2017-04-20T15:17:54.000Z</updated>
+  <updated>2017-04-23T13:39:41.000Z</updated>
   <id>https://calpa.me/</id>
   
   <author>
@@ -14,6 +14,65 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hackUST 2017後記</title>
+    <link href="https://calpa.me/2017/04/23/hackUST-2017-hackathon-summary/"/>
+    <id>https://calpa.me/2017/04/23/hackUST-2017-hackathon-summary/</id>
+    <published>2017-04-23T12:44:00.000Z</published>
+    <updated>2017-04-23T13:39:41.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h2><p>經過一天的努力，我們成功進入最後5強。這次比賽都幾好玩，基本上由第一天中午吃到晚上，然後第二天回來也是吃吃吃。雖然最後沒有取得獎金，但也是學到很多的知識。比如說如何解決安裝npm package問題，更新npm package問題。</p>
+<p>第一天中午的時候已經把Demo做出來了，但是不知道為什麼刪除<code>node_modules</code>之後，Expo就直接崩潰了。這是因為<code>package.json</code>裡面根本就沒有把完整的<code>dependencies</code>寫出來，當我輸入<code>npm install</code>的時候就不能順利安裝。於是我只能在CodePen裡面開一個<a href="http://codepen.io/calpa/pen/LyZjPm" rel="external nofollow noopener noreferrer" target="_blank">Pen</a>用來做控制器。</p>
+<h2 id="技術細節"><a href="#技術細節" class="headerlink" title="技術細節"></a>技術細節</h2><p>這個控制器利用<code>window.addEventListener(&#39;deviceorientation&#39;, handleOrientation);</code>來監聽Android裝置的方向。當加速規偵測到裝置方向的變化，它就會調用<code>handleOrientation</code>方法。</p>
+<p>而<code>handleOrientation</code>方法有兩個目的：</p>
+<ol>
+<li><p>獲取<code>event</code>裡面的<code>alpha</code>, <code>beta</code>, <code>gamma</code>數值，它們分別代表裝置的z軸， x軸， y軸動向。</p>
+<p>z軸介乎於 0 ~ 360 度之間，x軸介乎於 -180 ~ 180 度之間，代表裝置的前後動向。y軸介乎於 -90 ~ 90 度之間，代表裝置的左右動向。</p>
+</li>
+<li><p>發送event到服務器。</p>
+<p>這個很簡單，利用socket.io就可以了。比如說<code>socket.emit(&#39;event&#39;);</code></p>
+</li>
+</ol>
+<p>而在展示用戶數據的時候，我們用<a href="http://c3js.org/" rel="external nofollow noopener noreferrer" target="_blank">C3.js</a>來做實時渲染數據。利用C3.js，我們很容易就可以產生D3圖表，而不是重寫D3代碼。我們也可以修改每一個元素的樣式。感覺再寫下去就變教學文了。。。</p>
+<iframe height="400" scrolling="no" title="Playground C3.js" src="//codepen.io/calpa/embed/MmevBr/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/calpa/pen/MmevBr/" rel="external nofollow noopener noreferrer" target="_blank">Playground C3.js</a> by Calpa Liu (<a href="http://codepen.io/calpa" rel="external nofollow noopener noreferrer" target="_blank">@calpa</a>) on <a href="http://codepen.io" rel="external nofollow noopener noreferrer" target="_blank">CodePen</a>.<br></iframe>
+
+<h2 id="比賽照片"><a href="#比賽照片" class="headerlink" title="比賽照片"></a>比賽照片</h2><p>以下是比賽時拍攝的一些照片：<br><img src="http://i.imgur.com/vXyDaoY.jpg" alt="Imgur"></p>
+<p>感謝這次一起參賽的三位隊友。</p>
+<p><img src="http://i.imgur.com/6nLsXEB.jpg" alt="Imgur"></p>
+<center>比賽場地</center>
+
+
+<p><img src="http://i.imgur.com/2mLCtBm.jpg" alt="Imgur"></p>
+<center>接待處</center>
+
+<p><img src="http://i.imgur.com/pL19qZw.jpg" alt="Imgur"></p>
+<center>宣傳物品</center>
+
+<p><img src="http://i.imgur.com/g1GZHCJ.jpg" alt="Imgur"></p>
+<center>平常用來賣官方廣告的地方現在用來賣hackUST和hardUST的廣告 XD</center>
+
+<p><img src="http://i.imgur.com/DbLEVGz.jpg" alt="Imgur"></p>
+<center>演示的場地</center>
+
+<p>這次主辦單位派發了港幣120元的餐券，還有很多零食，飲料。最重要的是，有我最喜歡的忌廉汽水www。希望以後都可以繼續參加比賽，學習更多的編程知識。</p>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Detecting_device_orientation" rel="external nofollow noopener noreferrer" target="_blank">Detecting device orientation - MDN</a></li>
+<li><a href="https://socket.io/docs/" rel="external nofollow noopener noreferrer" target="_blank">Socket.io 官方文檔</a></li>
+<li><a href="http://c3js.org/gettingstarted.html" rel="external nofollow noopener noreferrer" target="_blank">C3.js 官方Starter</a></li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;後記&quot;&gt;&lt;a href=&quot;#後記&quot; class=&quot;headerlink&quot; title=&quot;後記&quot;&gt;&lt;/a&gt;後記&lt;/h2&gt;&lt;p&gt;經過一天的努力，我們成功進入最後5強。這次比賽都幾好玩，基本上由第一天中午吃到晚上，然後第二天回來也是吃吃吃。雖然最後沒有取得獎金，但也是學
+    
+    </summary>
+    
+    
+      <category term="Hackathon" scheme="https://calpa.me/Tags/Hackathon/"/>
+    
+  </entry>
   
   <entry>
     <title>Bootstrap v4 源碼分析(1)</title>
@@ -698,36 +757,6 @@
     
     
       <category term="Javascript" scheme="https://calpa.me/Tags/Javascript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo之建立404 Page</title>
-    <link href="https://calpa.me/2017/01/08/hexo-404-page/"/>
-    <id>https://calpa.me/2017/01/08/hexo-404-page/</id>
-    <published>2017-01-08T03:02:58.000Z</published>
-    <updated>2017-04-05T15:28:25.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="建立方法"><a href="#建立方法" class="headerlink" title="建立方法"></a>建立方法</h1><ol>
-<li>在Terminal輸入 <code>hexo new page 404</code></li>
-<li>然後打開儲存404檔案的位置，比如說：<code>/source/404/index.md</code></li>
-<li>在這個檔案最頂部寫下<code>permalink: /404.html</code>就可以了。</li>
-</ol>
-<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
-<li><a href="https://help.github.com/articles/creating-a-custom-404-page-for-your-github-pages-site/" rel="external nofollow noopener noreferrer" target="_blank">Creating a custom 404 page for your GitHub Pages site</a></li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;建立方法&quot;&gt;&lt;a href=&quot;#建立方法&quot; class=&quot;headerlink&quot; title=&quot;建立方法&quot;&gt;&lt;/a&gt;建立方法&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;在Terminal輸入 &lt;code&gt;hexo new page 404&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;然後打開
-    
-    </summary>
-    
-    
-      <category term="Hexo" scheme="https://calpa.me/Tags/Hexo/"/>
     
   </entry>
   
