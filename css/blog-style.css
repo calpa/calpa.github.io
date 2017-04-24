@@ -1201,3 +1201,8 @@ img::-moz-selection {
     height:0;
     width:0;
 }
+
+/* about-me */
+.about-me {
+  margin-top: 35px;
+}
