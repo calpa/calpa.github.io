@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://calpa.me/"/>
-  <updated>2017-04-23T13:39:41.000Z</updated>
+  <updated>2017-04-25T08:59:22.000Z</updated>
   <id>https://calpa.me/</id>
   
   <author>
@@ -14,6 +14,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Coders of the Caribbean Online Contest 後記</title>
+    <link href="https://calpa.me/2017/04/25/coders-of-the-caribbean-review/"/>
+    <id>https://calpa.me/2017/04/25/coders-of-the-caribbean-review/</id>
+    <published>2017-04-25T07:35:00.000Z</published>
+    <updated>2017-04-25T08:59:22.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://i.imgur.com/HDvrCYc.png" alt="Coders of the Caribbean report for Calpa"></p>
+<p>寫了一天Code後，我就把那些代碼放置在Codingame上面。今天它寄電郵給我說有比賽結果。對於這一次的結果，我完全不感到意外。因為很多地方都沒有去優化，比如說如何去計算各種行動的優先權重。這裡就不放上代碼了，還是下一次拿到更高的排名才放出來吧 XD</p>
+<p>看來我還是要好好地刷算法才行。。。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/HDvrCYc.png&quot; alt=&quot;Coders of the Caribbean report for Calpa&quot;&gt;&lt;/p&gt;
+&lt;p&gt;寫了一天Code後，我就把那些代碼放置在Codingame上面。今天它寄電郵給我
+    
+    </summary>
+    
+    
+      <category term="Codingame" scheme="https://calpa.me/Tags/Codingame/"/>
+    
+  </entry>
   
   <entry>
     <title>hackUST 2017後記</title>
@@ -757,30 +781,6 @@
     
     
       <category term="Javascript" scheme="https://calpa.me/Tags/Javascript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Github上的README.md</title>
-    <link href="https://calpa.me/2017/01/08/readme/"/>
-    <id>https://calpa.me/2017/01/08/readme/</id>
-    <published>2017-01-08T03:02:58.000Z</published>
-    <updated>2017-02-22T15:50:10.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Hexo在渲染的時候默認是把source下面所有的.md檔案渲染成html，這樣的話會覆蓋掉Github上的CNAME和README.md。但是我又不想這樣，我想Github Repo下面可以直接看到這個blog的README.md內容。</p>
-<p>所以我就修改Hexo根目錄下的_config.yml：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">skip_render: README.md</div></pre></td></tr></table></figure></p>
-<p>然後輸入以往部署Hexo的指令就可以。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo g</div><div class="line">$ hexo d</div></pre></td></tr></table></figure></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Hexo在渲染的時候默認是把source下面所有的.md檔案渲染成html，這樣的話會覆蓋掉Github上的CNAME和README.md。但是我又不想這樣，我想Github Repo下面可以直接看到這個blog的README.md內容。&lt;/p&gt;
-&lt;p&gt;所以我就修改Hexo
-    
-    </summary>
-    
-    
-      <category term="Hexo" scheme="https://calpa.me/Tags/Hexo/"/>
     
   </entry>
   
