@@ -191,9 +191,9 @@
     </summary>
     
     
-      <category term="Web" scheme="https://calpa.me/Tags/Web/"/>
-    
       <category term="Bootstrap" scheme="https://calpa.me/Tags/Bootstrap/"/>
+    
+      <category term="Web" scheme="https://calpa.me/Tags/Web/"/>
     
   </entry>
   
@@ -616,7 +616,7 @@
     <link href="https://calpa.me/2017/02/22/using-javascript-to-push-web-notification/"/>
     <id>https://calpa.me/2017/02/22/using-javascript-to-push-web-notification/</id>
     <published>2017-02-22T07:20:41.000Z</published>
-    <updated>2017-04-26T09:24:41.000Z</updated>
+    <updated>2017-04-26T09:29:53.000Z</updated>
     
     <content type="html"><![CDATA[<p>如果要推送通知的話，我們首先要請求權限：<code>Notification.requestPermission()</code></p>
 <p>之後檢查<code>Notification.permission</code>來查看是否擁有權限。該值會是下面三個其中之一：</p>

@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://calpa.me/2017/01/20/using-javascript-to-create-web-storage/</loc>
+    <loc>https://calpa.me/archive/index.html</loc>
     
-    <lastmod>2017-04-26T09:25:31.000Z</lastmod>
+    <lastmod>2017-04-26T16:32:35.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://calpa.me/2017/02/22/using-javascript-to-push-web-notification/</loc>
     
-    <lastmod>2017-04-26T09:24:41.000Z</lastmod>
+    <lastmod>2017-04-26T09:29:53.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://calpa.me/2017/01/20/using-javascript-to-create-web-storage/</loc>
+    
+    <lastmod>2017-04-26T09:25:31.000Z</lastmod>
     
   </url>
   
