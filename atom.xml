@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://calpa.me/"/>
-  <updated>2017-04-25T08:59:22.000Z</updated>
+  <updated>2017-04-26T09:11:00.000Z</updated>
   <id>https://calpa.me/</id>
   
   <author>
@@ -16,11 +16,54 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Javascript的數據類型</title>
+    <link href="https://calpa.me/2017/04/26/javascript-data-structures/"/>
+    <id>https://calpa.me/2017/04/26/javascript-data-structures/</id>
+    <published>2017-04-26T02:00:00.000Z</published>
+    <updated>2017-04-26T09:11:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>每一種編程語言都有數據結構，但他們各有不同之處。</p>
+<p>JavaScript是一種動態語言，變量的類型不用提前聲明，在程序運行的過程中，程序會自動辨認變量的類型。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var a = &apos;apple&apos;; // String type</div><div class="line">var a = 42; // Number type</div><div class="line">var a = true; // Boolean type</div></pre></td></tr></table></figure></p>
+<p>這就和Python的寫法差不多:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">a = &apos;apple&apos; // String type</div><div class="line">a = 42 // Number type</div><div class="line">a = True // Boolean type</div></pre></td></tr></table></figure></p>
+<h2 id="數據類型"><a href="#數據類型" class="headerlink" title="數據類型"></a>數據類型</h2><p><a href="https://tc39.github.io/ecma262/#sec-ecmascript-overview" rel="external nofollow noopener noreferrer" target="_blank">ECMA Script 標準</a>定義了7種數據類型：6種原始類型 (Primitive value) 和Object。</p>
+<p>以下這6種都是Primitive value：</p>
+<ol>
+<li>Undefined</li>
+<li>Null</li>
+<li>Boolean</li>
+<li>Number</li>
+<li>String</li>
+<li>Symbol (ECMAScript 6)</li>
+</ol>
+<p>我們可以透過使用<code>typeof</code>運算符號和<code>Object.prototype.toString()</code>方法來判斷數據類型。</p>
+<h2 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a>typeof</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">typeof undefined; // &quot;undefined&quot;</div><div class="line">typeof Boolean;   // &quot;function&quot;</div><div class="line">typeof true;      // &quot;boolean&quot;</div><div class="line">typeof 42;        // &quot;number&quot;</div><div class="line">typeof &quot;42&quot;;      // &quot;string&quot;</div><div class="line">typeof Symbol();  // &quot;symbol&quot;</div></pre></td></tr></table></figure>
+<p>在一開始設計JavaScript時，JavaScript中的值(value)是由一個標籤以及實際數據值表示的。對於基本類型，標籤是1；而對於對象類型，標籤是0。由於null代表的是空指針(裡面都是0)，null的類型標籤會是0。因此<code>typeof null</code>就會返回”object”;</p>
+<p><code>typeof null; // &quot;object&quot;</code></p>
+<p>另外，如果直接用<code>typeof</code>來判斷NaN的話，它會返回<code>&quot;number&quot;</code>。。。我們可以用<code>isNaN</code>方法來判斷是否一個數字。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">typeof NaN; // &quot;number&quot;</div><div class="line">isNaN(NaN); // true</div></pre></td></tr></table></figure></p>
+<h2 id="Object-prototype-toString"><a href="#Object-prototype-toString" class="headerlink" title="Object.prototype.toString()"></a>Object.prototype.toString()</h2><p>我們可以利用Object.prototype.toString.call()或者Object.prototype.toString.apply()這兩個方法判斷Object的類型，以及null：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Object.prototype.toString.call(undefined);   // &quot;[object Undefined]&quot;</div><div class="line">Object.prototype.toString.call(new Date);    // &quot;[object Date]&quot;</div><div class="line">Object.prototype.toString.call(new String);  // &quot;[object String]&quot;</div><div class="line">Object.prototype.toString.call(Math);        // &quot;[object Math]&quot;</div><div class="line">Object.prototype.toString.call(null);        // &quot;[object Null]&quot;</div></pre></td></tr></table></figure></p>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
+<li><a href="https://tc39.github.io/ecma262/#sec-ecmascript-overview" rel="external nofollow noopener noreferrer" target="_blank">ECMAScript® 2018 Language Specification</a></li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;每一種編程語言都有數據結構，但他們各有不同之處。&lt;/p&gt;
+&lt;p&gt;JavaScript是一種動態語言，變量的類型不用提前聲明，在程序運行的過程中，程序會自動辨認變量的類型。&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td c
+    
+    </summary>
+    
+    
+      <category term="Javascript" scheme="https://calpa.me/Tags/Javascript/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Coders of the Caribbean Online Contest 後記</title>
     <link href="https://calpa.me/2017/04/25/coders-of-the-caribbean-review/"/>
     <id>https://calpa.me/2017/04/25/coders-of-the-caribbean-review/</id>
     <published>2017-04-25T07:35:00.000Z</published>
-    <updated>2017-04-25T08:59:22.000Z</updated>
+    <updated>2017-04-25T14:51:53.000Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://i.imgur.com/HDvrCYc.png" alt="Coders of the Caribbean report for Calpa"></p>
 <p>寫了一天Code後，我就把那些代碼放置在Codingame上面。今天它寄電郵給我說有比賽結果。對於這一次的結果，我完全不感到意外。因為很多地方都沒有去優化，比如說如何去計算各種行動的優先權重。這裡就不放上代碼了，還是下一次拿到更高的排名才放出來吧 XD</p>
@@ -747,38 +790,6 @@
     
     
       <category term="Web" scheme="https://calpa.me/Tags/Web/"/>
-    
-      <category term="Javascript" scheme="https://calpa.me/Tags/Javascript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Javascript的變量提升入門</title>
-    <link href="https://calpa.me/2017/01/14/hoisting/"/>
-    <id>https://calpa.me/2017/01/14/hoisting/</id>
-    <published>2017-01-14T12:09:35.000Z</published>
-    <updated>2017-04-03T09:42:33.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>在Javascript中，hoisting是一個容易犯錯的地方。<br>在一段scope裡面，沒有定義變量就使用變量的話會彈出Reference Error。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"> // ReferenceError: poi is not defined</div><div class="line">console.log(poi);</div></pre></td></tr></table></figure></p>
-<hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var name;</div><div class="line">console.log(name); // undefined</div><div class="line">name = &apos;calpa&apos;</div><div class="line">console.log(name); // calpa</div></pre></td></tr></table></figure>
-<p>由於Javascript的解釋器會提前把所有變量函數定義，所以上面這一段代碼會變成這一段：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">console.log(name); // undefined</div><div class="line">var name = &apos;calpa&apos;;</div><div class="line">console.log(name); // calpa</div></pre></td></tr></table></figure></p>
-<p>另外，Javascript也會出現這樣的問題。。。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var name = &apos;calpa&apos;;</div><div class="line">(function () &#123;</div><div class="line">    // My name is undefined</div><div class="line">    console.log(&quot;My name is &quot; + name);</div><div class="line">    var name = &apos;poi&apos;;</div><div class="line">    // My name is poi</div><div class="line">    console.log(&quot;My name is &quot; + name); // poi</div><div class="line">&#125;)();</div></pre></td></tr></table></figure></p>
-<p>簡單來說，在寫Javascript時，我們應該提前在檔案開始位置定義變量。</p>
-<hr>
-<p>參考資料：</p>
-<ol>
-<li><a href="http://adripofjavascript.com/blog/drips/variable-and-function-hoisting" rel="external nofollow noopener noreferrer" target="_blank">Variable and Function Hoisting in JavaScript</a></li>
-<li><a href="http://jinlong.github.io/2013/09/11/var-and-fun-hoisting/" rel="external nofollow noopener noreferrer" target="_blank">JavaScript 中的变量和函数提升</a></li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;在Javascript中，hoisting是一個容易犯錯的地方。&lt;br&gt;在一段scope裡面，沒有定義變量就使用變量的話會彈出Reference Error。&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;
-    
-    </summary>
-    
     
       <category term="Javascript" scheme="https://calpa.me/Tags/Javascript/"/>
     

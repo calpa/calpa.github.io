@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://calpa.me/2017/04/25/coders-of-the-caribbean-review/</loc>
+    <loc>https://calpa.me/about/index.html</loc>
     
-    <lastmod>2017-04-25T08:59:22.000Z</lastmod>
+    <lastmod>2017-04-26T09:11:56.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://calpa.me/about/index.html</loc>
+    <loc>https://calpa.me/2017/04/26/javascript-data-structures/</loc>
     
-    <lastmod>2017-04-24T13:26:10.000Z</lastmod>
+    <lastmod>2017-04-26T09:11:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://calpa.me/2017/04/25/coders-of-the-caribbean-review/</loc>
+    
+    <lastmod>2017-04-25T14:51:53.000Z</lastmod>
     
   </url>
   
