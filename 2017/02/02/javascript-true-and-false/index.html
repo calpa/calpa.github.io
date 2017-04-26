@@ -19,11 +19,11 @@
     <meta name="google-site-verification" content="riZBcestky7i9xY__A-5J-2EE65T75X1u-zgbss37Io">
     <title>
         
-        Javascript中的this入門｜Calpa&#39;s blog
+        Javascript中的True與False｜Calpa&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="https://calpa.me/2017/03/25/js-this/">
+    <link rel="canonical" href="https://calpa.me/2017/02/02/javascript-true-and-false/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -74,14 +74,14 @@
                     
                         
             							
-                        <li>
-                            <a href="/Tags/">Tags</a>
-                        </li>
-          							
           						
                     
                         
             							
+                        <li>
+                            <a href="/Tags/">Tags</a>
+                        </li>
+          							
           						
                     
                         
@@ -161,12 +161,12 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>Javascript中的this入門</h1>
+                    <h1>Javascript中的True與False</h1>
                     
                     <span class="meta">
                          作者 Calpa
                         <span>
-                          日期 2017-03-25
+                          日期 2017-02-02
                          </span>
                     </span>
                     <div class="tags text-center">
@@ -180,7 +180,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            Javascript中的this入門
+            Javascript中的True與False
         </span>
     </div>
 </header>
@@ -245,15 +245,13 @@
           <div class="tags">
               
               
+              
+              
+              
+              
+              
+              
               <a href="/Tags/#Web" title="Web" rel="4">Web</a>
-              
-              
-              
-              
-              
-              
-              
-              
               
               
               
@@ -263,11 +261,13 @@
               
               
               
-              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
-              
               
               
               <a href="/Tags/#Hexo" title="Hexo" rel="5">Hexo</a>
+              
+              
+              
+              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
               
               
               
@@ -339,27 +339,12 @@
 
 
             <div class="col-lg-7 col-lg-offset-0 col-md-7 col-sm-9 post-container">
-                <p>首先我們要理解調用函數的方法，最起碼可以用下面兩個方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">func(arg1, arg2);</div><div class="line">func.call(context, arg1, arg2);</div></pre></td></tr></table></figure></p>
-<p>之前我也沒怎麼見過後者，基本上都是直接call func的。後者<code>func(arg1, arg2)</code> 等於 <code>func.call(undefined, arg1, arg2)</code>。簡單來說，this就是context。如果context沒有定義的話，它會被定義為一個全局對象，比如說global。在MDN的文檔有這一句: <code>if the method is a function in non-strict mode code, null and undefined will be replaced with the global object and primitive values will be converted to objects</code>。</p>
-<p>如果不想要this是global的話，給予context一個對象就可以了：<br><code>func.call(obj, arg1, arg2)</code></p>
-<h2 id="全局上下文"><a href="#全局上下文" class="headerlink" title="全局上下文"></a>全局上下文</h2><p>在全局中，無論是否在嚴格模式下(Strict mode)，<code>this</code>都是代表全局對象。</p>
-<h3 id="瀏覽器"><a href="#瀏覽器" class="headerlink" title="瀏覽器"></a>瀏覽器</h3><ol>
-<li><code>this.document</code>指向<code>document</code></li>
-<li>全局對象為<code>window</code></li>
-</ol>
-<h3 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h3><p>全局對象為<code>global</code></p>
-<p>直接運用函數的話，this會指向global。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function test() &#123;</div><div class="line">  this.x = 1;</div><div class="line">&#125;</div><div class="line"></div><div class="line">test();</div><div class="line"></div><div class="line">console.log(this.x); // 1</div></pre></td></tr></table></figure></p>
-<p>如果是生成一個對象的話，this會指向這個對象而不是global。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function Car() &#123;</div><div class="line">  this.color = &apos;red&apos;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var c = new Car();</div><div class="line"></div><div class="line">console.log(this.color); // undefined</div><div class="line">console.log(c.color); // red</div></pre></td></tr></table></figure></p>
-<p>下次遇到問題的話，我還是MDN資料吧，裡面寫得很詳細。</p>
-<h2 id="問題"><a href="#問題" class="headerlink" title="問題"></a>問題</h2><p>在Node.js中，為什麼this.global === this.global.global的返回值為true？</p>
-<h2 id="延伸思考"><a href="#延伸思考" class="headerlink" title="延伸思考"></a>延伸思考</h2><ol>
-<li>Function.prototype.apply()</li>
-<li>Function.prototype.bind()</li>
-</ol>
-<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
-<li><a href="this MDN技術文">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/this</a></li>
-<li><a href="Function.prototype.call MDN技術文">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call</a></li>
-</ol>
+                <p>這幾天用<a href="https://www.enki.com/" rel="external nofollow noopener noreferrer" target="_blank">Enki</a>來學習Javascript，感覺不錯，<strong>You can’t handle the truth!</strong> 有一些特別True/False例子。這裡簡單記錄一下。</p>
+<p>最簡單的測試方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function test(something)&#123;</div><div class="line">  if (something) &#123;</div><div class="line">    console.log(something + &apos; is true.&apos;);</div><div class="line">  &#125; else &#123;</div><div class="line">    console.log(something + &apos; is false.&apos;);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h1 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h1><h2 id="Truthy"><a href="#Truthy" class="headerlink" title="Truthy"></a>Truthy</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">true &lt;- true當然是true...</div><div class="line">[1][0]</div><div class="line">new Date()</div><div class="line">new Number(0)</div><div class="line">Object</div><div class="line">Infinity</div><div class="line">[]</div></pre></td></tr></table></figure>
+<p>以下都是[object Object]:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&#123;a: false&#125;</div><div class="line">&#123;&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="Falsy"><a href="#Falsy" class="headerlink" title="Falsy"></a>Falsy</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">false &lt;- false當然是false...</div><div class="line">undefined</div><div class="line">&apos;&apos;</div><div class="line">&quot;&quot;</div><div class="line">[1][1] &lt;- undefined</div><div class="line">NaN</div><div class="line">null</div><div class="line">&#123;&#125;.someKey</div><div class="line">0</div><div class="line">[].length &lt;- 這個是0，所以出false</div></pre></td></tr></table></figure>
+<p>值得注意的是[]，它本身會是<code>true</code>，但如果用<code>[] == true</code>的話會輸出<code>false</code>，<br>而<code>[] == false</code>的話會輸出<code>true</code>。</p>
 
                 <hr>
                 
@@ -367,12 +352,12 @@
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/2017/03/27/interview/" data-toggle="tooltip" data-placement="top" title="Interview後記">&larr; Previous Post</a>
+                        <a href="/2017/02/19/supercharger-hackathon/" data-toggle="tooltip" data-placement="top" title="SuperCharger Hackathon後記">&larr; Previous Post</a>
                     </li>
                     
                     
                     <li class="next">
-                        <a href="/2017/02/26/hexo-url/" data-toggle="tooltip" data-placement="top" title="Hexo sitemap 簡單更改域名的方法">Next Post &rarr;</a>
+                        <a href="/2017/01/20/using-javascript-to-create-web-storage/" data-toggle="tooltip" data-placement="top" title="利用Javascript創建Web Storage">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
@@ -391,7 +376,7 @@
 
             <div class="hidden-xs col-md-2 col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#全局上下文"><span class="toc-text">全局上下文</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#瀏覽器"><span class="toc-text">瀏覽器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Node-js"><span class="toc-text">Node.js</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#問題"><span class="toc-text">問題</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#延伸思考"><span class="toc-text">延伸思考</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#參考資料"><span class="toc-text">參考資料</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#例子"><span class="toc-text">例子</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Truthy"><span class="toc-text">Truthy</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Falsy"><span class="toc-text">Falsy</span></a></li></ol></li></ol>
                 </div>
             </div>
         </div>
@@ -404,8 +389,8 @@
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = "calpas-blog";
-    var disqus_identifier = "https://calpa.me/2017/03/25/js-this/";
-    var disqus_url = "https://calpa.me/2017/03/25/js-this/";
+    var disqus_identifier = "https://calpa.me/2017/02/02/javascript-true-and-false/";
+    var disqus_url = "https://calpa.me/2017/02/02/javascript-true-and-false/";
 
     (function () {
         var dsq = document.createElement('script');

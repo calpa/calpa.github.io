@@ -3,6 +3,76 @@
 
 
     
+  <url>
+    <loc>https://calpa.me/2017/01/20/using-javascript-to-create-web-storage/</loc>
+    <lastmod>2017-04-26T09:25:31.000Z</lastmod>
+    <data>
+        <display>
+        <title>利用Javascript創建Web Storage</title>
+        <pubTime>2017-01-20T11:37:38.000Z</pubTime>
+        
+        <tag>Web</tag>
+         
+        <tag>Javascript</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://calpa.me/2017/02/22/using-javascript-to-push-web-notification/</loc>
+    <lastmod>2017-04-26T09:24:41.000Z</lastmod>
+    <data>
+        <display>
+        <title>利用Javascript推送Web Notification</title>
+        <pubTime>2017-02-22T07:20:41.000Z</pubTime>
+        
+        <tag>Web</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://calpa.me/2017/03/25/javascript-this/</loc>
+    <lastmod>2017-04-26T09:23:14.000Z</lastmod>
+    <data>
+        <display>
+        <title>Javascript的this</title>
+        <pubTime>2017-03-25T04:44:00.000Z</pubTime>
+        
+        <tag>Javascript</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://calpa.me/2017/02/19/javascript-closure/</loc>
+    <lastmod>2017-04-26T09:22:41.000Z</lastmod>
+    <data>
+        <display>
+        <title>Javascript的閉包(Closure)</title>
+        <pubTime>2017-02-19T07:12:00.000Z</pubTime>
+        
+        <tag>Javascript</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>https://calpa.me/2017/04/26/javascript-data-structures/</loc>
@@ -75,7 +145,7 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/04/05/books/</loc>
+    <loc>https://calpa.me/2017/04/05/front-end-booklist/</loc>
     <lastmod>2017-04-19T15:46:27.000Z</lastmod>
     <data>
         <display>
@@ -83,23 +153,6 @@
         <pubTime>2017-04-05T14:51:00.000Z</pubTime>
         
         <tag>Web</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://calpa.me/2017/03/25/js-this/</loc>
-    <lastmod>2017-04-17T13:44:30.000Z</lastmod>
-    <data>
-        <display>
-        <title>Javascript中的this入門</title>
-        <pubTime>2017-03-25T04:44:00.000Z</pubTime>
-        
-        <tag>Javascript</tag>
          
          
            
@@ -194,7 +247,7 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/02/02/true-false/</loc>
+    <loc>https://calpa.me/2017/02/02/javascript-true-and-false/</loc>
     <lastmod>2017-04-05T15:29:07.000Z</lastmod>
     <data>
         <display>
@@ -247,24 +300,7 @@
     
     
   <url>
-    <loc>https://calpa.me/2017/02/22/hello/</loc>
-    <lastmod>2017-04-03T09:42:59.000Z</lastmod>
-    <data>
-        <display>
-        <title>Web Notification推送通知</title>
-        <pubTime>2017-02-22T07:20:41.000Z</pubTime>
-        
-        <tag>Web</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://calpa.me/2017/01/14/hoisting/</loc>
+    <loc>https://calpa.me/2017/01/14/javascript-variable-hoisting/</loc>
     <lastmod>2017-04-03T09:42:33.000Z</lastmod>
     <data>
         <display>
@@ -281,7 +317,7 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/02/26/hexo-url/</loc>
+    <loc>https://calpa.me/2017/02/26/hexo-change-site-url/</loc>
     <lastmod>2017-04-03T09:42:20.000Z</lastmod>
     <data>
         <display>
@@ -325,25 +361,6 @@
         <pubTime>2017-03-27T06:42:00.000Z</pubTime>
         
         <tag>Interview</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://calpa.me/2017/01/20/localstorage/</loc>
-    <lastmod>2017-02-26T07:20:40.000Z</lastmod>
-    <data>
-        <display>
-        <title>HTML5 Web Storage</title>
-        <pubTime>2017-01-20T11:37:38.000Z</pubTime>
-        
-        <tag>Web</tag>
-         
-        <tag>Javascript</tag>
          
          
            
@@ -397,23 +414,6 @@
         <pubTime>2017-02-19T07:12:00.000Z</pubTime>
         
         <tag>Hackathon</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://calpa.me/2017/02/19/js-closure/</loc>
-    <lastmod>2017-02-21T05:35:03.000Z</lastmod>
-    <data>
-        <display>
-        <title>Javascript中的Closure入門</title>
-        <pubTime>2017-02-19T07:12:00.000Z</pubTime>
-        
-        <tag>Javascript</tag>
          
          
            

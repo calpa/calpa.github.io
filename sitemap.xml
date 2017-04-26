@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://calpa.me/2017/01/20/using-javascript-to-create-web-storage/</loc>
+    
+    <lastmod>2017-04-26T09:25:31.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://calpa.me/2017/02/22/using-javascript-to-push-web-notification/</loc>
+    
+    <lastmod>2017-04-26T09:24:41.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://calpa.me/2017/03/25/javascript-this/</loc>
+    
+    <lastmod>2017-04-26T09:23:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://calpa.me/2017/02/19/javascript-closure/</loc>
+    
+    <lastmod>2017-04-26T09:22:41.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://calpa.me/about/index.html</loc>
     
     <lastmod>2017-04-26T09:11:56.000Z</lastmod>
@@ -37,16 +65,9 @@
   </url>
   
   <url>
-    <loc>https://calpa.me/2017/04/05/books/</loc>
+    <loc>https://calpa.me/2017/04/05/front-end-booklist/</loc>
     
     <lastmod>2017-04-19T15:46:27.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://calpa.me/2017/03/25/js-this/</loc>
-    
-    <lastmod>2017-04-17T13:44:30.000Z</lastmod>
     
   </url>
   
@@ -86,7 +107,7 @@
   </url>
   
   <url>
-    <loc>https://calpa.me/2017/02/02/true-false/</loc>
+    <loc>https://calpa.me/2017/02/02/javascript-true-and-false/</loc>
     
     <lastmod>2017-04-05T15:29:07.000Z</lastmod>
     
@@ -121,21 +142,14 @@
   </url>
   
   <url>
-    <loc>https://calpa.me/2017/02/22/hello/</loc>
-    
-    <lastmod>2017-04-03T09:42:59.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://calpa.me/2017/01/14/hoisting/</loc>
+    <loc>https://calpa.me/2017/01/14/javascript-variable-hoisting/</loc>
     
     <lastmod>2017-04-03T09:42:33.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://calpa.me/2017/02/26/hexo-url/</loc>
+    <loc>https://calpa.me/2017/02/26/hexo-change-site-url/</loc>
     
     <lastmod>2017-04-03T09:42:20.000Z</lastmod>
     
@@ -152,13 +166,6 @@
     <loc>https://calpa.me/2017/03/27/interview/</loc>
     
     <lastmod>2017-03-27T07:22:14.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://calpa.me/2017/01/20/localstorage/</loc>
-    
-    <lastmod>2017-02-26T07:20:40.000Z</lastmod>
     
   </url>
   
@@ -180,13 +187,6 @@
     <loc>https://calpa.me/2017/02/19/supercharger-hackathon/</loc>
     
     <lastmod>2017-02-21T05:36:19.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://calpa.me/2017/02/19/js-closure/</loc>
-    
-    <lastmod>2017-02-21T05:35:03.000Z</lastmod>
     
   </url>
   

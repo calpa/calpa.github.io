@@ -19,11 +19,11 @@
     <meta name="google-site-verification" content="riZBcestky7i9xY__A-5J-2EE65T75X1u-zgbss37Io">
     <title>
         
-        前端工程師的入門書單｜Calpa&#39;s blog
+        Hexo sitemap 簡單更改域名的方法｜Calpa&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="https://calpa.me/2017/04/05/books/">
+    <link rel="canonical" href="https://calpa.me/2017/02/26/hexo-change-site-url/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -74,14 +74,14 @@
                     
                         
             							
-                        <li>
-                            <a href="/Tags/">Tags</a>
-                        </li>
-          							
           						
                     
                         
             							
+                        <li>
+                            <a href="/Tags/">Tags</a>
+                        </li>
+          							
           						
                     
                         
@@ -161,17 +161,19 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>前端工程師的入門書單</h1>
+                    <h1>Hexo sitemap 簡單更改域名的方法</h1>
                     
                     <span class="meta">
                          作者 Calpa
                         <span>
-                          日期 2017-04-05
+                          日期 2017-02-26
                          </span>
                     </span>
                     <div class="tags text-center">
                         
-                        <a class="tag" href="/Tags/#Web" title="Web">Web</a>
+                        <a class="tag" href="/Tags/#Hexo" title="Hexo">Hexo</a>
+                        
+                        <a class="tag" href="/Tags/#SEO" title="SEO">SEO</a>
                         
                     </div>
                 </div>
@@ -180,7 +182,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            前端工程師的入門書單
+            Hexo sitemap 簡單更改域名的方法
         </span>
     </div>
 </header>
@@ -245,15 +247,13 @@
           <div class="tags">
               
               
+              
+              
+              
+              
+              
+              
               <a href="/Tags/#Web" title="Web" rel="4">Web</a>
-              
-              
-              
-              
-              
-              
-              
-              
               
               
               
@@ -263,11 +263,13 @@
               
               
               
-              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
-              
               
               
               <a href="/Tags/#Hexo" title="Hexo" rel="5">Hexo</a>
+              
+              
+              
+              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
               
               
               
@@ -339,24 +341,15 @@
 
 
             <div class="col-lg-7 col-lg-offset-0 col-md-7 col-sm-9 post-container">
-                <p><img src="http://i.imgur.com/CTfB7K9.jpg" alt="Books"></p>
-<p>在二十一世紀資訊發達的年代，我們很容易在互聯網上獲取這些書本的內容，而且能夠獲取書籍的最新內容。比如說vczero寫的<a href="https://github.com/vczero/react-native-lesson" rel="external nofollow noopener noreferrer" target="_blank">React Native入门与实战</a>，作者已經在Github上放上自己的書本內容，以及代碼。雖然我在電腦和手機里已經看過這些書，但當我拿起實體書的時候，那種感覺是非常不同的。</p>
-<p>以下這些書都是很值得去閱讀（開坑）的：</p>
-<ol>
-<li><p>Javascript 高級程序設計(第三版)</p>
-<p>我在去年的暑假看過一次這本書，感覺能夠學到很多Javascript的細節。</p>
-</li>
-<li><p>CSS揭秘</p>
-</li>
-<li><p>圖解HTTP</p>
-<p><a href="https://calpa.me/2017/04/08/common-http-status-code/">常見的14種HTTP狀態碼</a></p>
-</li>
-<li><p>人月神話</p>
-</li>
-<li><p>Clean Code</p>
-</li>
-<li><p>Code Complete</p>
-</li>
+                <p>如果沒有做任何配置的話，<code>hexo g</code>的時候會自動輸出一個<code>sitemap.xml</code>。<br>但是現在域名不同了，需要一點更改。。。</p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><ol>
+<li>打開_config.yml</li>
+<li>修改<code>url:</code>就可以了</li>
+<li><code>hexo clean</code></li>
+<li><code>hexo g</code></li>
+</ol>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
+<li><a href="https://segmentfault.com/q/1010000004659915" rel="external nofollow noopener noreferrer" target="_blank">hexo-generator-sitemap 生成的sitemap如何配置自定义的域名？</a></li>
 </ol>
 
                 <hr>
@@ -365,12 +358,12 @@
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/2017/04/08/common-http-status-code/" data-toggle="tooltip" data-placement="top" title="常見的14種HTTP狀態碼">&larr; Previous Post</a>
+                        <a href="/2017/03/25/javascript-this/" data-toggle="tooltip" data-placement="top" title="Javascript的this">&larr; Previous Post</a>
                     </li>
                     
                     
                     <li class="next">
-                        <a href="/2017/04/01/git-workflow/" data-toggle="tooltip" data-placement="top" title="Git多人合作開發工作流程">Next Post &rarr;</a>
+                        <a href="/2017/02/26/hexo-seo-nofollow/" data-toggle="tooltip" data-placement="top" title="Hexo優化之為外部鏈接添加nofollow屬性">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
@@ -389,7 +382,7 @@
 
             <div class="hidden-xs col-md-2 col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#方法"><span class="toc-text">方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#參考資料"><span class="toc-text">參考資料</span></a></li></ol>
                 </div>
             </div>
         </div>
@@ -402,8 +395,8 @@
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = "calpas-blog";
-    var disqus_identifier = "https://calpa.me/2017/04/05/books/";
-    var disqus_url = "https://calpa.me/2017/04/05/books/";
+    var disqus_identifier = "https://calpa.me/2017/02/26/hexo-change-site-url/";
+    var disqus_url = "https://calpa.me/2017/02/26/hexo-change-site-url/";
 
     (function () {
         var dsq = document.createElement('script');

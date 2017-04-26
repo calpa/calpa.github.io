@@ -19,11 +19,11 @@
     <meta name="google-site-verification" content="riZBcestky7i9xY__A-5J-2EE65T75X1u-zgbss37Io">
     <title>
         
-        Javascript中的True與False｜Calpa&#39;s blog
+        利用Javascript推送Web Notification｜Calpa&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="https://calpa.me/2017/02/02/true-false/">
+    <link rel="canonical" href="https://calpa.me/2017/02/22/using-javascript-to-push-web-notification/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -74,14 +74,14 @@
                     
                         
             							
-                        <li>
-                            <a href="/Tags/">Tags</a>
-                        </li>
-          							
           						
                     
                         
             							
+                        <li>
+                            <a href="/Tags/">Tags</a>
+                        </li>
+          							
           						
                     
                         
@@ -161,17 +161,17 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>Javascript中的True與False</h1>
+                    <h1>利用Javascript推送Web Notification</h1>
                     
                     <span class="meta">
                          作者 Calpa
                         <span>
-                          日期 2017-02-02
+                          日期 2017-02-22
                          </span>
                     </span>
                     <div class="tags text-center">
                         
-                        <a class="tag" href="/Tags/#Javascript" title="Javascript">Javascript</a>
+                        <a class="tag" href="/Tags/#Web" title="Web">Web</a>
                         
                     </div>
                 </div>
@@ -180,7 +180,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            Javascript中的True與False
+            利用Javascript推送Web Notification
         </span>
     </div>
 </header>
@@ -245,15 +245,13 @@
           <div class="tags">
               
               
+              
+              
+              
+              
+              
+              
               <a href="/Tags/#Web" title="Web" rel="4">Web</a>
-              
-              
-              
-              
-              
-              
-              
-              
               
               
               
@@ -263,11 +261,13 @@
               
               
               
-              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
-              
               
               
               <a href="/Tags/#Hexo" title="Hexo" rel="5">Hexo</a>
+              
+              
+              
+              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
               
               
               
@@ -339,12 +339,29 @@
 
 
             <div class="col-lg-7 col-lg-offset-0 col-md-7 col-sm-9 post-container">
-                <p>這幾天用<a href="https://www.enki.com/" rel="external nofollow noopener noreferrer" target="_blank">Enki</a>來學習Javascript，感覺不錯，<strong>You can’t handle the truth!</strong> 有一些特別True/False例子。這裡簡單記錄一下。</p>
-<p>最簡單的測試方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function test(something)&#123;</div><div class="line">  if (something) &#123;</div><div class="line">    console.log(something + &apos; is true.&apos;);</div><div class="line">  &#125; else &#123;</div><div class="line">    console.log(something + &apos; is false.&apos;);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h1 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h1><h2 id="Truthy"><a href="#Truthy" class="headerlink" title="Truthy"></a>Truthy</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">true &lt;- true當然是true...</div><div class="line">[1][0]</div><div class="line">new Date()</div><div class="line">new Number(0)</div><div class="line">Object</div><div class="line">Infinity</div><div class="line">[]</div></pre></td></tr></table></figure>
-<p>以下都是[object Object]:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&#123;a: false&#125;</div><div class="line">&#123;&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="Falsy"><a href="#Falsy" class="headerlink" title="Falsy"></a>Falsy</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">false &lt;- false當然是false...</div><div class="line">undefined</div><div class="line">&apos;&apos;</div><div class="line">&quot;&quot;</div><div class="line">[1][1] &lt;- undefined</div><div class="line">NaN</div><div class="line">null</div><div class="line">&#123;&#125;.someKey</div><div class="line">0</div><div class="line">[].length &lt;- 這個是0，所以出false</div></pre></td></tr></table></figure>
-<p>值得注意的是[]，它本身會是<code>true</code>，但如果用<code>[] == true</code>的話會輸出<code>false</code>，<br>而<code>[] == false</code>的話會輸出<code>true</code>。</p>
+                <p>如果要推送通知的話，我們首先要請求權限：<code>Notification.requestPermission()</code></p>
+<p>之後檢查<code>Notification.permission</code>來查看是否擁有權限。該值會是下面三個其中之一：</p>
+<ol>
+<li>default: 從未詢問用戶</li>
+<li>granted: 用戶授權顯示通知的權限</li>
+<li>denied: 用戶不授權。。。</li>
+</ol>
+<p>創造一個通知很簡單，<code>new Notification(text)</code>可以了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var text = &quot;Hello, world&quot;;</div><div class="line">new Notification(text);</div></pre></td></tr></table></figure></p>
+<p><img src="http://i.imgur.com/l1lVFXZ.png" alt="Imgur"></p>
+<p>沒有圖片的話會比較空虛，可以加入options。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">function push() &#123;</div><div class="line">  var title = &quot;這是一個標題。。。&quot;;</div><div class="line">	var options = &#123;</div><div class="line">		body: &quot;Calpa 寫了一篇文章XD&quot;,</div><div class="line">		icon: &quot;https://calpa.github.io/img/profile.png&quot;</div><div class="line">	&#125;</div><div class="line">	var n = new Notification(title, options);</div><div class="line">&#125;</div><div class="line"></div><div class="line">push();</div></pre></td></tr></table></figure>
+<p><img src="http://i.imgur.com/uuNPUoB.png" alt="Imgur"></p>
+<p>如果要增加與用戶的互動，可以利用Notification的事件：</p>
+<ol>
+<li>onshow</li>
+<li>onclick</li>
+<li>onclose</li>
+<li>onerror</li>
+</ol>
+<p>我們可以監聽<code>onclick</code>，當用戶點擊通知，瀏覽器就會跳到目標頁面。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">n.onclick = (event) =&gt; &#123;</div><div class="line">	event.preventDefault();</div><div class="line">	window.open(&apos;https://calpa.github.io/&apos;, &apos;_blank&apos;);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API" rel="external nofollow noopener noreferrer" target="_blank">Using the Notification API</a></li>
+</ol>
 
                 <hr>
                 
@@ -352,12 +369,12 @@
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/2017/02/19/supercharger-hackathon/" data-toggle="tooltip" data-placement="top" title="SuperCharger Hackathon後記">&larr; Previous Post</a>
+                        <a href="/2017/02/23/github-edcation-package/" data-toggle="tooltip" data-placement="top" title="利用Github免費教育禮包更换.me域名">&larr; Previous Post</a>
                     </li>
                     
                     
                     <li class="next">
-                        <a href="/2017/01/20/localstorage/" data-toggle="tooltip" data-placement="top" title="HTML5 Web Storage">Next Post &rarr;</a>
+                        <a href="/2017/02/19/javascript-closure/" data-toggle="tooltip" data-placement="top" title="Javascript的閉包(Closure)">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
@@ -376,7 +393,7 @@
 
             <div class="hidden-xs col-md-2 col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#例子"><span class="toc-text">例子</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Truthy"><span class="toc-text">Truthy</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Falsy"><span class="toc-text">Falsy</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#參考資料"><span class="toc-text">參考資料</span></a></li></ol>
                 </div>
             </div>
         </div>
@@ -389,8 +406,8 @@
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = "calpas-blog";
-    var disqus_identifier = "https://calpa.me/2017/02/02/true-false/";
-    var disqus_url = "https://calpa.me/2017/02/02/true-false/";
+    var disqus_identifier = "https://calpa.me/2017/02/22/using-javascript-to-push-web-notification/";
+    var disqus_url = "https://calpa.me/2017/02/22/using-javascript-to-push-web-notification/";
 
     (function () {
         var dsq = document.createElement('script');
