@@ -23,7 +23,7 @@
         
     </title>
 
-    <link rel="canonical" href="https://calpa.me/Tags/Interview/">
+    <link rel="canonical" href="https://calpa.me/page/4/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -38,8 +38,8 @@
 
 <body class="animated fadeIn">
 <!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost="false" data-istags="true
-" data-ishome="false">
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost="false" data-istags="false
+" data-ishome="true">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header page-scroll">
@@ -148,9 +148,198 @@
 </script>
 
 <!-- Main Content -->
-<div class="container">
-  <div class="row" style="margin-top: 60px;">
-    <!-- Sidebar Container -->
+
+
+<style>
+
+    header.intro-header {
+        background-image: url('/img/blue-blur-background.jpg')
+    }
+
+    .custom-haojen-container .post-preview:nth-of-type(1),
+    .custom-haojen-container .post-preview-poetry:nth-of-type(1) {
+        text-align: center;
+        background-repeat: no-repeat;
+        border-radius: 3px;
+        background-size: cover;
+        padding: 0;
+        height: 300px;
+        display: table;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.16);
+    }
+
+    /*去掉诗歌的背景图片*/
+    .custom-haojen-container .post-preview-poetry:nth-of-type(1) {
+        background-image: none !important;
+        background-color: rgba(255, 248, 220, 0.5);
+    }
+
+    .custom-haojen-container .post-preview:nth-child(1) h2,
+    .custom-haojen-container .post-preview:nth-child(1) .post-meta,
+    .custom-haojen-container .post-preview:nth-child(1) .post-subtitle {
+        text-shadow: 0 0 40px rgba(0, 0, 0, 1);
+        letter-spacing: 1px;
+        color: #fff;
+        margin-top: 0;
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    .custom-haojen-container .post-preview:nth-child(1) .post-meta {
+        font-size: .9em;
+        font-weight: 300;
+        margin-top: 0;
+    }
+
+    .custom-haojen-container .post-preview-poetry:nth-child(1) .post-subtitle {
+        letter-spacing: 6px;
+        font-size: 18px;
+        font-family: unset;
+        font-weight: 400;
+        color: rgba(0, 0, 0, .75)
+    }
+
+    /*不显示摘要*/
+    .custom-haojen-container .post-preview:nth-child(1) .post-content-preview {
+        display: none
+    }
+
+    /*只第一个显示背景图片*/
+    .custom-haojen-container .post-preview:not(:nth-child(1)) {
+        background-image: none !important;
+    }
+
+    /*第一个分界线去掉*/
+    .custom-haojen-container hr:nth-of-type(1) {
+        display: none;
+    }
+
+    /*主题*/
+    .custom-haojen-container .post-preview:nth-of-type(1) > a {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    /*诗词标题*/
+    .custom-haojen-container .post-preview-poetry:nth-child(1) h2 {
+        font-size: 35px;
+        font-family: STKaiti;
+        color: rgba(0, 0, 0, .8);
+    }
+
+    .custom-haojen-container .post-preview-poetry:nth-of-type(1) .post-meta {
+        color: #0e2231;
+    }
+
+    @media (max-width: 768px) {
+        .custom-haojen-container .post-preview:nth-child(1) {
+            height: 240px;
+        }
+
+        .custom-haojen-container .post-preview-poetry:nth-child(1) h2 {
+            font-size: 28px !important;
+            margin-top: 0;
+        }
+
+        .custom-haojen-container .post-preview:nth-child(1) .post-subtitle {
+            font-size: 18px;
+            font-weight: 400;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .custom-haojen-container .post-preview:nth-of-type(1) > a {
+            padding: 20px
+        }
+    }
+
+    /*手机屏幕*/
+    @media (max-width: 400px) {
+        .custom-haojen-container .post-preview:nth-child(1) {
+            height: 195px;
+        }
+
+        .custom-haojen-container .post-preview-poetry:nth-child(1) h2 {
+            font-size: 20px !important;
+        }
+
+        .custom-haojen-container .post-preview:nth-child(1) .post-subtitle {
+            font-size: 16px;
+        }
+
+        .custom-haojen-container .post-preview:nth-child(1) a {
+            padding: 30px 20px;
+        }
+    }
+</style>
+
+<!-- Page Header -->
+<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 visible-xs-block visible-sm-block">
+    <div class="row">
+        <header class="intro-header">
+            <div class="container">
+                <div class="site-heading text-center">
+                    <div class="about-me">
+                        <!--移动端头部显示-->
+                        <img src="/img/profile.png" alt="avatar">
+                        <h4>Calpa</h4>
+                        <p>為什麼你這麼熟練？</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+</div>
+<!-- Main Content -->
+<div class="container custom-haojen-container">
+    <!-- Post Container -->
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12 col-xs-12 post-container">
+            <!-- Main Content -->
+
+
+
+
+<div class="post-preview " style="background-image: url('/img/post-default.jpg')">
+    <a href="/2017/01/08/hello-world/">
+        <h2 class="post-title">
+            Hello, World!
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-01-08
+        </p>
+        
+        <div class="post-content-preview">
+            <p>
+                Hello World這是一個用hexo建構的blog，使用Hexo的主題Anisina
+我修改了_config.yml裡面的post-default-img 以及 post-default-img-mobile。
+
+            </p>
+        </div>
+    </a>
+
+</div>
+
+<hr>
+
+
+
+
+<!-- 翻页 pager -->
+
+<ul class="pager">
+    
+    <li class="previous">
+        <a href="/page/3/">&larr; Newer Posts</a>
+    </li>
+    
+    <li>Page 4 / 4</li>
+    
+</ul>
+
+        </div>
+        <!-- Sidebar Container -->
 <div class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 hidden-sm hidden-xs sidebar-container">
     <!-- About Me -->
     <section class="visible-md visible-lg" style="padding: 0 18px">
@@ -350,163 +539,7 @@
 
 </div>
 
-    <div class="col-xs-12 col-sm-9">
-      <h2>全部文章 (共25篇文章)</h2>
-      <ol style="list-style-type: none;">
-        
-          <li>
-            <a href="/2017/04/27/n-ways-to-output-hello-world/">
-              4月 Hello World的四+N種方法
-            </a>
-          </li>
-        
-          <li>
-            <a href="/2017/04/26/javascript-data-structures/">
-              4月 如何判斷Javascript 數據類型
-            </a>
-          </li>
-        
-          <li>
-            <a href="/2017/04/25/coders-of-the-caribbean-review/">
-              4月 Coders of the Caribbean Online Contest 後記
-            </a>
-          </li>
-        
-          <li>
-            <a href="/2017/04/23/hackUST-2017-hackathon-summary/">
-              4月 hackUST 2017後記
-            </a>
-          </li>
-        
-          <li>
-            <a href="/2017/04/20/bootstrap-code-analysis-1/">
-              4月 Bootstrap v4 源碼分析(1)
-            </a>
-          </li>
-        
-          <li>
-            <a href="/2017/04/12/use-css-to-draw-circle/">
-              4月 利用CSS畫圓
-            </a>
-          </li>
-        
-          <li>
-            <a href="/2017/04/11/react-native-run-android/">
-              4月 【React Native】安裝Android Apk而無需連接伺服器的方法
-            </a>
-          </li>
-        
-          <li>
-            <a href="/2017/04/11/github-ssh/">
-              4月 利用ssh連接Github的方法
-            </a>
-          </li>
-        
-          <li>
-            <a href="/2017/04/08/common-http-status-code/">
-              4月 常見的14種HTTP狀態碼
-            </a>
-          </li>
-        
-          <li>
-            <a href="/2017/04/05/front-end-booklist/">
-              4月 前端工程師的入門書單
-            </a>
-          </li>
-        
-          <li>
-            <a href="/2017/04/01/git-workflow/">
-              4月 Git多人合作開發工作流程
-            </a>
-          </li>
-        
-          <li>
-            <a href="/2017/03/27/interview/">
-              3月 Interview後記
-            </a>
-          </li>
-        
-          <li>
-            <a href="/2017/03/25/javascript-this/">
-              3月 Javascript的this
-            </a>
-          </li>
-        
-          <li>
-            <a href="/2017/02/26/hexo-change-site-url/">
-              2月 Hexo sitemap 簡單更改域名的方法
-            </a>
-          </li>
-        
-          <li>
-            <a href="/2017/02/26/hexo-seo-nofollow/">
-              2月 Hexo優化之為外部鏈接添加nofollow屬性
-            </a>
-          </li>
-        
-          <li>
-            <a href="/2017/02/23/github-edcation-package/">
-              2月 利用Github免費教育禮包更换.me域名
-            </a>
-          </li>
-        
-          <li>
-            <a href="/2017/02/22/using-javascript-to-push-web-notification/">
-              2月 利用Javascript推送Web Notification
-            </a>
-          </li>
-        
-          <li>
-            <a href="/2017/02/19/supercharger-hackathon/">
-              2月 SuperCharger Hackathon後記
-            </a>
-          </li>
-        
-          <li>
-            <a href="/2017/02/19/javascript-closure/">
-              2月 Javascript的閉包(Closure)
-            </a>
-          </li>
-        
-          <li>
-            <a href="/2017/02/02/javascript-true-and-false/">
-              2月 Javascript中的True與False
-            </a>
-          </li>
-        
-          <li>
-            <a href="/2017/01/20/using-javascript-to-create-web-storage/">
-              1月 利用Javascript創建Web Storage
-            </a>
-          </li>
-        
-          <li>
-            <a href="/2017/01/14/javascript-variable-hoisting/">
-              1月 Javascript的變量提升入門
-            </a>
-          </li>
-        
-          <li>
-            <a href="/2017/01/08/readme/">
-              1月 Github上的README.md
-            </a>
-          </li>
-        
-          <li>
-            <a href="/2017/01/08/hexo-404-page/">
-              1月 Hexo之建立404 Page
-            </a>
-          </li>
-        
-          <li>
-            <a href="/2017/01/08/hello-world/">
-              1月 Hello, World!
-            </a>
-          </li>
-        
-      </ol>
     </div>
-  </div>
 </div>
 
 <!-- Footer -->

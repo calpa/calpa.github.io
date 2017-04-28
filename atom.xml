@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://calpa.me/"/>
-  <updated>2017-04-27T03:10:20.000Z</updated>
+  <updated>2017-04-28T13:57:32.000Z</updated>
   <id>https://calpa.me/</id>
   
   <author>
@@ -16,11 +16,48 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>利用typeof, Object.prototype.toString 判斷Javascript 數據類型</title>
+    <title>Hello World的四+N種方法</title>
+    <link href="https://calpa.me/2017/04/27/n-ways-to-output-hello-world/"/>
+    <id>https://calpa.me/2017/04/27/n-ways-to-output-hello-world/</id>
+    <published>2017-04-27T06:34:00.000Z</published>
+    <updated>2017-04-28T13:57:32.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>在這些時候，我可以附和著笑，老闆是決不責備的。而且老闆見了他，也每每這樣問他，引人發笑。他自己知道不能和他們談天，便只好向孩子說話。有一回對我說道：「你讀過書麼？」我略略點一點頭。他說：「讀過書，。。。我便考你一考。代碼的Hello World，怎樣寫的？」他等了許久，很懇切的說道：「不能寫罷？。。。我教給你，記著！這些字應該記著。將來做老闆的時候，Debug要用。」我暗想我和老闆的等級還很遠呢，而且我們老闆也從不將代碼上傳；又好笑，又不耐煩，懶懶的答他道：「誰要你教，不就是用alert輸出嘛」他顯出極高興的樣子，將兩個指頭的長指甲敲著鍵盤，點頭說：「對呀對呀！。。。Hello World有四樣寫法，你知道麼？」我愈不耐煩了，努著嘴走遠。他剛用指甲蘸了酒，想在鍵盤上打字，見我毫不熱心，便又歎一口氣，顯出極惋惜的樣子。</p>
+<h2 id="alert"><a href="#alert" class="headerlink" title="alert()"></a>alert()</h2><p><code>alert(&quot;Hello, World!!&quot;);</code></p>
+<h2 id="document-write"><a href="#document-write" class="headerlink" title="document.write()"></a>document.write()</h2><p>直接輸出<code>Hello, World!</code>到document:<br><code>document.write(&#39;Hello, World!&#39;);</code></p>
+<h2 id="document-writeln"><a href="#document-writeln" class="headerlink" title="document.writeln()"></a>document.writeln()</h2><p>在現有的document上增加<code>Hello, World!</code>這一行：</p>
+<p><code>Function (arg1, arg2, … , argN, body)</code></p>
+<h2 id="Function-constructor"><a href="#Function-constructor" class="headerlink" title="Function constructor"></a>Function constructor</h2><p>使用Function constructor, 以及 Immediately-Invoked Function Expression (IIFE):<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">new Function ([arg1[, arg2[, ...argN]],] functionBody);</div><div class="line">(new Function (&apos;console.log(&quot;Hello, World&quot;)&apos;))();</div></pre></td></tr></table></figure></p>
+<p>順帶一提，以下三種寫法，結果都是一樣的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">new Function(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;return a+b+c;&quot;); // 每一個arugument都用,分開</div><div class="line">new Function(&quot;a, b, c&quot;, &quot;return a+b+c;&quot;);      </div><div class="line">new Function(&quot;a,b&quot;, &quot;c&quot;, &quot;return a+b+c;&quot;);</div></pre></td></tr></table></figure></p>
+<p>輸出：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function anonymous(a, b, c</div><div class="line">/*``*/) &#123;</div><div class="line">return a+b+c;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="Function-declaration"><a href="#Function-declaration" class="headerlink" title="Function declaration"></a>Function declaration</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function sayHello() &#123;</div><div class="line">  console.log(&apos;Hello, World!&apos;);</div><div class="line">&#125;</div><div class="line"></div><div class="line">sayHello(); // Hello, World!</div><div class="line">sayHello    // function sayHello() &#123;</div><div class="line">        //   console.log(&apos;Hello, World!&apos;);</div><div class="line">        // &#125;</div></pre></td></tr></table></figure>
+<h2 id="Arrow-Function"><a href="#Arrow-Function" class="headerlink" title="Arrow Function"></a>Arrow Function</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">() =&gt; &#123; console.log(&apos;Hello, World!&apos;)&#125;;</div><div class="line">(() =&gt; &#123; console.log(&apos;Hello, World!&apos;)&#125;)(); // Hello, World!</div></pre></td></tr></table></figure>
+<h2 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h2><p>先定義一個Promise：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var helloPromise = new Promise(function(resolve)&#123;</div><div class="line">    resolve(&quot;Hello, World!&quot;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>如果resolve成功的話，就會輸出”Hello, World!”:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">helloPromise.then(function (value) &#123;</div><div class="line">  console.log(value);</div><div class="line">&#125;).catch(function (error) &#123;</div><div class="line">  console.log(error);</div><div class="line">&#125;); // Hello, World!</div></pre></td></tr></table></figure></p>
+<p>當然，你也可以利用Arrow Function這樣寫：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">let helloPromise = new Promise((resolve) =&gt; &#123;</div><div class="line">  resolve(&quot;Hello, World!&quot;);</div><div class="line">&#125;);</div><div class="line"></div><div class="line">helloPromise.then((value) =&gt; &#123;</div><div class="line">  console.log(value);</div><div class="line">&#125;).catch((error) =&gt; &#123;</div><div class="line">  console.log(error);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>有幾回，鄰舍孩子聽得笑聲，也趕熱鬧，圍住了他。他便給他們看代碼，一人一段。孩子看完代碼，仍然不散，眼睛都望著屏幕。他著了慌，伸開五指將屏幕罩住，彎腰下去說道：「不多了，我已經不多了。」直起身又看一看代碼，自己搖頭說：「不多不多！多乎哉？不多也。」於是這一群孩子都在笑聲裏走散了。</p>
+<p>他是這樣的使人快活，可是沒有他，別人也便這麼過。</p>
+<p>自此以後，又長久沒有看見爪哇文。到了年關，掌櫃取下粉板說：「爪哇文還欠十九行代碼呢！」到第二年的端午，又說「爪哇文還欠十九行代碼呢！」到中秋可是沒有說，再到年關也沒有看見他。</p>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><p><a href="https://tc39.github.io/ecma262/#sec-function-p1-p2-pn-body" rel="external nofollow noopener noreferrer" target="_blank">Function constructor - ECMAScript® 2018 Language Specification</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在這些時候，我可以附和著笑，老闆是決不責備的。而且老闆見了他，也每每這樣問他，引人發笑。他自己知道不能和他們談天，便只好向孩子說話。有一回對我說道：「你讀過書麼？」我略略點一點頭。他說：「讀過書，。。。我便考你一考。代碼的Hello World，怎樣寫的？」他等了許久，很懇
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="https://calpa.me/Tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何判斷Javascript 數據類型</title>
     <link href="https://calpa.me/2017/04/26/javascript-data-structures/"/>
     <id>https://calpa.me/2017/04/26/javascript-data-structures/</id>
     <published>2017-04-26T02:00:00.000Z</published>
-    <updated>2017-04-27T03:10:20.000Z</updated>
+    <updated>2017-04-27T06:14:17.000Z</updated>
     
     <content type="html"><![CDATA[<p>每一種編程語言都有數據結構，但他們各有不同之處。</p>
 <p>JavaScript是一種動態語言，變量的類型不用提前聲明，在程序運行的過程中，程序會自動辨認變量的類型。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var a = &apos;apple&apos;; // String type</div><div class="line">var a = 42; // Number type</div><div class="line">var a = true; // Boolean type</div></pre></td></tr></table></figure></p>
@@ -191,9 +228,9 @@
     </summary>
     
     
-      <category term="Web" scheme="https://calpa.me/Tags/Web/"/>
-    
       <category term="Bootstrap" scheme="https://calpa.me/Tags/Bootstrap/"/>
+    
+      <category term="Web" scheme="https://calpa.me/Tags/Web/"/>
     
   </entry>
   
@@ -656,6 +693,41 @@
   </entry>
   
   <entry>
+    <title>SuperCharger Hackathon後記</title>
+    <link href="https://calpa.me/2017/02/19/supercharger-hackathon/"/>
+    <id>https://calpa.me/2017/02/19/supercharger-hackathon/</id>
+    <published>2017-02-19T07:12:00.000Z</published>
+    <updated>2017-02-21T05:36:19.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://i.imgur.com/7EMhgpx.jpg" alt="Imgur"></p>
+<p>如果計上這次比賽的話，我已經是第五次參加這一類編程比賽。與過往的比賽不同，合作的對象不再是大學生，而是兩間Start-up公司。在這次比賽中，我選擇<a href="http://kyc-chain.com/" rel="external nofollow noopener noreferrer" target="_blank">KYC-Chain</a>、<a href="https://www.clare.ai/" rel="external nofollow noopener noreferrer" target="_blank">Clare.ai</a>兩間公司組成的隊伍。KYC-Chain透過<a href="https://airtable.com/" rel="external nofollow noopener noreferrer" target="_blank">Airtable</a>提供一些常見的用戶問題與答案，而Clare.ai則負責寫code。</p>
+<p>Airtable有API教學，可以用node.js增加、移除、修改或者獲取資料。</p>
+<h2 id="現有問題"><a href="#現有問題" class="headerlink" title="現有問題"></a>現有問題</h2><p>如果用戶想了解一些資訊，他需要經過很多過程才能獲取答案。</p>
+<h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>利用Chatbot，用戶只需要說出自己的問題便能查詢資料，例如Identity Card，Regulatory Law等資訊。</p>
+<h2 id="將來發展"><a href="#將來發展" class="headerlink" title="將來發展"></a>將來發展</h2><ol>
+<li>獲取申請表格</li>
+<li>自動填寫各類文件</li>
+</ol>
+<h2 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h2><p>我本來以為要從零開始架構一個Chatbot，原來可以直接用Api.ai。<br>大多數時間都是和一些在外面工作的人交流。。。</p>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
+<li>我自己 XD</li>
+<li><a href="https://www.facebook.com/events/704583943057523/" rel="external nofollow noopener noreferrer" target="_blank">SuperCharger FinTech Hackathon - Facebook 活動頁</a></li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/7EMhgpx.jpg&quot; alt=&quot;Imgur&quot;&gt;&lt;/p&gt;
+&lt;p&gt;如果計上這次比賽的話，我已經是第五次參加這一類編程比賽。與過往的比賽不同，合作的對象不再是大學生，而是兩間Start-up公司。在這次比賽中，我選擇&lt;
+    
+    </summary>
+    
+    
+      <category term="Hackathon" scheme="https://calpa.me/Tags/Hackathon/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Javascript的閉包(Closure)</title>
     <link href="https://calpa.me/2017/02/19/javascript-closure/"/>
     <id>https://calpa.me/2017/02/19/javascript-closure/</id>
@@ -694,41 +766,6 @@
   </entry>
   
   <entry>
-    <title>SuperCharger Hackathon後記</title>
-    <link href="https://calpa.me/2017/02/19/supercharger-hackathon/"/>
-    <id>https://calpa.me/2017/02/19/supercharger-hackathon/</id>
-    <published>2017-02-19T07:12:00.000Z</published>
-    <updated>2017-02-21T05:36:19.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="http://i.imgur.com/7EMhgpx.jpg" alt="Imgur"></p>
-<p>如果計上這次比賽的話，我已經是第五次參加這一類編程比賽。與過往的比賽不同，合作的對象不再是大學生，而是兩間Start-up公司。在這次比賽中，我選擇<a href="http://kyc-chain.com/" rel="external nofollow noopener noreferrer" target="_blank">KYC-Chain</a>、<a href="https://www.clare.ai/" rel="external nofollow noopener noreferrer" target="_blank">Clare.ai</a>兩間公司組成的隊伍。KYC-Chain透過<a href="https://airtable.com/" rel="external nofollow noopener noreferrer" target="_blank">Airtable</a>提供一些常見的用戶問題與答案，而Clare.ai則負責寫code。</p>
-<p>Airtable有API教學，可以用node.js增加、移除、修改或者獲取資料。</p>
-<h2 id="現有問題"><a href="#現有問題" class="headerlink" title="現有問題"></a>現有問題</h2><p>如果用戶想了解一些資訊，他需要經過很多過程才能獲取答案。</p>
-<h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>利用Chatbot，用戶只需要說出自己的問題便能查詢資料，例如Identity Card，Regulatory Law等資訊。</p>
-<h2 id="將來發展"><a href="#將來發展" class="headerlink" title="將來發展"></a>將來發展</h2><ol>
-<li>獲取申請表格</li>
-<li>自動填寫各類文件</li>
-</ol>
-<h2 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h2><p>我本來以為要從零開始架構一個Chatbot，原來可以直接用Api.ai。<br>大多數時間都是和一些在外面工作的人交流。。。</p>
-<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
-<li>我自己 XD</li>
-<li><a href="https://www.facebook.com/events/704583943057523/" rel="external nofollow noopener noreferrer" target="_blank">SuperCharger FinTech Hackathon - Facebook 活動頁</a></li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/7EMhgpx.jpg&quot; alt=&quot;Imgur&quot;&gt;&lt;/p&gt;
-&lt;p&gt;如果計上這次比賽的話，我已經是第五次參加這一類編程比賽。與過往的比賽不同，合作的對象不再是大學生，而是兩間Start-up公司。在這次比賽中，我選擇&lt;
-    
-    </summary>
-    
-    
-      <category term="Hackathon" scheme="https://calpa.me/Tags/Hackathon/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Javascript中的True與False</title>
     <link href="https://calpa.me/2017/02/02/javascript-true-and-false/"/>
     <id>https://calpa.me/2017/02/02/javascript-true-and-false/</id>
@@ -749,47 +786,6 @@
     
     </summary>
     
-    
-      <category term="Javascript" scheme="https://calpa.me/Tags/Javascript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>利用Javascript創建Web Storage</title>
-    <link href="https://calpa.me/2017/01/20/using-javascript-to-create-web-storage/"/>
-    <id>https://calpa.me/2017/01/20/using-javascript-to-create-web-storage/</id>
-    <published>2017-01-20T11:37:38.000Z</published>
-    <updated>2017-04-26T09:25:31.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Storage"><a href="#Storage" class="headerlink" title="Storage"></a>Storage</h1><ul>
-<li>HTML5 的 <strong>Web Storage</strong> 包括了兩種儲存方式：<strong>localStorage</strong>及<strong>sessionStorage</strong>。</li>
-<li>儲存在Storage中的資料，以key-value pair的形式保存。</li>
-<li>Cookie的佔用空間非常小，大小限制于4KB左右，常見的用途是保存賬號登錄信息與登錄狀態。</li>
-<li>使用Storage物件時，可以寫<code>localStorage</code>代替<code>window.localStorage</code>。</li>
-</ul>
-<h2 id="localStorage"><a href="#localStorage" class="headerlink" title="localStorage"></a>localStorage</h2><p>即使用戶關閉瀏覽器，頁面數據依然存在。下一次用戶打開該頁面，便能夠使用該資料。舉個例子，當localStorage擁有userdata，瀏覽器可以獲取用戶資料，瀏覽器會導航用戶到登入後的畫面。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">if (localStorage.getItem(&apos;userdata&apos;)) &#123;</div><div class="line">  login();</div><div class="line">&#125; else &#123;</div><div class="line">  register();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="sessionStorage"><a href="#sessionStorage" class="headerlink" title="sessionStorage"></a>sessionStorage</h2><p>sessionStorage與localStorage相似，但如果用戶關閉當前頁面，sessionStorage中的數據就會被清空。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">window.sessionStorage.setItem(&quot;username&quot;, &quot;calpa&quot;);</div><div class="line">window.sessionStorage.getItem(&quot;username&quot;); // calpa</div></pre></td></tr></table></figure>
-<h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h1><h2 id="儲存"><a href="#儲存" class="headerlink" title="儲存"></a>儲存</h2><p>儲存資料的時候，可以利用Storage物件內的<code>setItem()</code>方法。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">localStorage.setItem(3, 3);</div><div class="line">sessionStorage.setItem(&quot;username&quot;, &quot;calpa&quot;);</div></pre></td></tr></table></figure></p>
-<h2 id="獲取"><a href="#獲取" class="headerlink" title="獲取"></a>獲取</h2><p>獲取資料的時候，則會用到<code>getItem()</code>方法。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">let username = localStorage.getItem(&quot;username&quot;);</div></pre></td></tr></table></figure></p>
-<p>如果key不是string的話，獲取資料時會出現問題。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">localStorage.3 = 3; // Uncaught SyntaxError: Unexpected number</div></pre></td></tr></table></figure></p>
-<h2 id="清除"><a href="#清除" class="headerlink" title="清除"></a>清除</h2><p>清除某個資料，可以用<code>removeItem()</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">window.localStorage.removeItem(&quot;username&quot;);</div></pre></td></tr></table></figure></p>
-<p>清除所有資料，可以用<code>clear()</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">window.localStorage.clear();</div><div class="line">window.sessionStorage.clear();</div></pre></td></tr></table></figure></p>
-<h1 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h1><ol>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API" rel="external nofollow noopener noreferrer" target="_blank">Using the Web Storage API</a></li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Storage&quot;&gt;&lt;a href=&quot;#Storage&quot; class=&quot;headerlink&quot; title=&quot;Storage&quot;&gt;&lt;/a&gt;Storage&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;HTML5 的 &lt;strong&gt;Web Storage&lt;/strong&gt; 包括了兩種儲存
-    
-    </summary>
-    
-    
-      <category term="Web" scheme="https://calpa.me/Tags/Web/"/>
     
       <category term="Javascript" scheme="https://calpa.me/Tags/Javascript/"/>
     

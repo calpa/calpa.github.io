@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://calpa.me/2017/04/27/n-ways-to-output-hello-world/</loc>
+    
+    <lastmod>2017-04-28T13:57:32.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://calpa.me/2017/04/26/javascript-data-structures/</loc>
     
-    <lastmod>2017-04-27T03:10:20.000Z</lastmod>
+    <lastmod>2017-04-27T06:14:17.000Z</lastmod>
     
   </url>
   
