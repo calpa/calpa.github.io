@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://calpa.me/"/>
-  <updated>2017-04-28T13:57:32.000Z</updated>
+  <updated>2017-04-28T14:01:40.000Z</updated>
   <id>https://calpa.me/</id>
   
   <author>
@@ -20,13 +20,13 @@
     <link href="https://calpa.me/2017/04/27/n-ways-to-output-hello-world/"/>
     <id>https://calpa.me/2017/04/27/n-ways-to-output-hello-world/</id>
     <published>2017-04-27T06:34:00.000Z</published>
-    <updated>2017-04-28T13:57:32.000Z</updated>
+    <updated>2017-04-28T14:01:40.000Z</updated>
     
     <content type="html"><![CDATA[<p>在這些時候，我可以附和著笑，老闆是決不責備的。而且老闆見了他，也每每這樣問他，引人發笑。他自己知道不能和他們談天，便只好向孩子說話。有一回對我說道：「你讀過書麼？」我略略點一點頭。他說：「讀過書，。。。我便考你一考。代碼的Hello World，怎樣寫的？」他等了許久，很懇切的說道：「不能寫罷？。。。我教給你，記著！這些字應該記著。將來做老闆的時候，Debug要用。」我暗想我和老闆的等級還很遠呢，而且我們老闆也從不將代碼上傳；又好笑，又不耐煩，懶懶的答他道：「誰要你教，不就是用alert輸出嘛」他顯出極高興的樣子，將兩個指頭的長指甲敲著鍵盤，點頭說：「對呀對呀！。。。Hello World有四樣寫法，你知道麼？」我愈不耐煩了，努著嘴走遠。他剛用指甲蘸了酒，想在鍵盤上打字，見我毫不熱心，便又歎一口氣，顯出極惋惜的樣子。</p>
 <h2 id="alert"><a href="#alert" class="headerlink" title="alert()"></a>alert()</h2><p><code>alert(&quot;Hello, World!!&quot;);</code></p>
 <h2 id="document-write"><a href="#document-write" class="headerlink" title="document.write()"></a>document.write()</h2><p>直接輸出<code>Hello, World!</code>到document:<br><code>document.write(&#39;Hello, World!&#39;);</code></p>
 <h2 id="document-writeln"><a href="#document-writeln" class="headerlink" title="document.writeln()"></a>document.writeln()</h2><p>在現有的document上增加<code>Hello, World!</code>這一行：</p>
-<p><code>Function (arg1, arg2, … , argN, body)</code></p>
+<p><code>document.writeln(&#39;Hello, World!&#39;);</code></p>
 <h2 id="Function-constructor"><a href="#Function-constructor" class="headerlink" title="Function constructor"></a>Function constructor</h2><p>使用Function constructor, 以及 Immediately-Invoked Function Expression (IIFE):<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">new Function ([arg1[, arg2[, ...argN]],] functionBody);</div><div class="line">(new Function (&apos;console.log(&quot;Hello, World&quot;)&apos;))();</div></pre></td></tr></table></figure></p>
 <p>順帶一提，以下三種寫法，結果都是一樣的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">new Function(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;return a+b+c;&quot;); // 每一個arugument都用,分開</div><div class="line">new Function(&quot;a, b, c&quot;, &quot;return a+b+c;&quot;);      </div><div class="line">new Function(&quot;a,b&quot;, &quot;c&quot;, &quot;return a+b+c;&quot;);</div></pre></td></tr></table></figure></p>
 <p>輸出：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function anonymous(a, b, c</div><div class="line">/*``*/) &#123;</div><div class="line">return a+b+c;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
