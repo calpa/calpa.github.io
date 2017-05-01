@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://calpa.me/"/>
-  <updated>2017-04-28T14:02:32.000Z</updated>
+  <updated>2017-05-01T14:57:19.000Z</updated>
   <id>https://calpa.me/</id>
   
   <author>
@@ -14,6 +14,59 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CreateListFromArrayLike called on non-object 報錯的解決方法</title>
+    <link href="https://calpa.me/2017/05/01/CreateListFromArrayLike-problem-solution/"/>
+    <id>https://calpa.me/2017/05/01/CreateListFromArrayLike-problem-solution/</id>
+    <published>2017-05-01T14:50:00.000Z</published>
+    <updated>2017-05-01T14:57:19.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="解決方法"><a href="#解決方法" class="headerlink" title="解決方法"></a>解決方法</h2><p>仔細再看一下到底你是怎樣用<code>apply()</code>的。。。</p>
+<p>你可能在使用Function.prototype.apply的時候不夠熟練，把<code>call</code>和<code>apply</code>的用法混在一起。。。。<code>call</code>是用0個或者更多的arguments，而<code>apply</code>則是用一個數組。</p>
+<h2 id="錯誤例子"><a href="#錯誤例子" class="headerlink" title="錯誤例子"></a>錯誤例子</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Math.max.apply(null, 1, 2, 3);</div><div class="line">// Uncaught TypeError: CreateListFromArrayLike called on non-object</div></pre></td></tr></table></figure>
+<h2 id="正確例子"><a href="#正確例子" class="headerlink" title="正確例子"></a>正確例子</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Math.max.call(null, 1, 2, 3); // 3</div><div class="line">Math.max.apply(null, [1, 2, 5, 10]); // 10</div></pre></td></tr></table></figure>
+<h2 id="細節"><a href="#細節" class="headerlink" title="細節"></a>細節</h2><p>當調用Function.prototype.apply的時候，它會調用CreateListFromArrayLike。</p>
+<h2 id="CreateListFromArrayLike"><a href="#CreateListFromArrayLike" class="headerlink" title="CreateListFromArrayLike"></a>CreateListFromArrayLike</h2><p><code>CreateListFromArrayLike ( obj [ , elementTypes ] )</code></p>
+<p>CreateListFromArrayLike 是一個ECMAScript的內置抽象操作 (Abstract Operation)，用於建立一個List的值，它的元素由類似數組的對象的索引屬性提供。<code>elementTypes</code>是一個List，只允許List擁有ECMAScript Language 類型的值，比如<code>undefinded, null, boolean</code>等。它會執行以下步驟:</p>
+<ol>
+<li>如果沒有定義elementTypes的話，它會被定義為« Undefined, Null, Boolean, String, Symbol, Number, Object »。</li>
+<li>如果Type(obj)的類型不是Object，拋出TypeError 錯誤。</li>
+<li>定義<code>len</code>為<code>obj</code>的length。</li>
+<li>建立一個空的List <code>list</code>。</li>
+<li>定義<code>index</code>為0</li>
+<li>當index小於len的時候，重複以下步驟：<ol>
+<li>定義<code>indexName</code>為!ToString(index)</li>
+<li>定義next 為?Get(obj, indexName)</li>
+<li>如果Type(next)的類型不存在於elementType裡面，拋出TypeError 錯誤。</li>
+<li>在list的最後增加next (<code>list.push(next)</code>)</li>
+<li>index的值加1</li>
+</ol>
+</li>
+<li>返回list</li>
+</ol>
+<h2 id="延伸閱讀"><a href="#延伸閱讀" class="headerlink" title="延伸閱讀"></a>延伸閱讀</h2><ol>
+<li>看V8是怎樣實現Function.prototype.apply</li>
+<li>看V8是怎樣實現CreateListFromArrayLike</li>
+</ol>
+<p>##參考資料</p>
+<ol>
+<li><a href="https://tc39.github.io/ecma262/#sec-function.prototype.apply" rel="external nofollow noopener noreferrer" target="_blank">Function.prototype.apply - ECMAScript 2018</a></li>
+<li>踩過的坑。。。</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;解決方法&quot;&gt;&lt;a href=&quot;#解決方法&quot; class=&quot;headerlink&quot; title=&quot;解決方法&quot;&gt;&lt;/a&gt;解決方法&lt;/h2&gt;&lt;p&gt;仔細再看一下到底你是怎樣用&lt;code&gt;apply()&lt;/code&gt;的。。。&lt;/p&gt;
+&lt;p&gt;你可能在使用Function.pr
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="https://calpa.me/Tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World的四+N種方法</title>
@@ -693,44 +746,6 @@
   </entry>
   
   <entry>
-    <title>Javascript的閉包(Closure)</title>
-    <link href="https://calpa.me/2017/02/19/javascript-closure/"/>
-    <id>https://calpa.me/2017/02/19/javascript-closure/</id>
-    <published>2017-02-19T07:12:00.000Z</published>
-    <updated>2017-04-26T09:22:41.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="為什麼會有這篇文章"><a href="#為什麼會有這篇文章" class="headerlink" title="為什麼會有這篇文章"></a>為什麼會有這篇文章</h2><p>打好基本功是很重要的。。。</p>
-<h2 id="最簡單的閉包"><a href="#最簡單的閉包" class="headerlink" title="最簡單的閉包"></a>最簡單的閉包</h2><ol>
-<li>先定義一個Function A</li>
-<li>在A的裡面定義一個Function B</li>
-<li>在A中返回B</li>
-<li>執行A(), 將A()的返回值賦予給b</li>
-<li>執行b()</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function A() &#123;</div><div class="line">  function B() &#123;</div><div class="line">    console.log(&quot;Hello, world!&quot;);</div><div class="line">  &#125;</div><div class="line">  return B;</div><div class="line">&#125;</div><div class="line">var b = A();</div><div class="line">b(); // Hello World</div></pre></td></tr></table></figure>
-<h2 id="加法-ES6"><a href="#加法-ES6" class="headerlink" title="加法 - ES6"></a>加法 - ES6</h2><ol>
-<li>先定義adder()</li>
-<li>定義匿名函數</li>
-<li>返回x + y</li>
-<li>定義變量 add5</li>
-<li>執行 add5()</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">let adder = (x) =&gt; (y) =&gt; x + y</div><div class="line"></div><div class="line">let add5 = adder(5);</div><div class="line">let add10 = adder(10);</div><div class="line"></div><div class="line">console.log(add5(7)); // 12</div><div class="line">console.log(add10(7)); // 17</div></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;為什麼會有這篇文章&quot;&gt;&lt;a href=&quot;#為什麼會有這篇文章&quot; class=&quot;headerlink&quot; title=&quot;為什麼會有這篇文章&quot;&gt;&lt;/a&gt;為什麼會有這篇文章&lt;/h2&gt;&lt;p&gt;打好基本功是很重要的。。。&lt;/p&gt;
-&lt;h2 id=&quot;最簡單的閉包&quot;&gt;&lt;a href=
-    
-    </summary>
-    
-    
-      <category term="Javascript" scheme="https://calpa.me/Tags/Javascript/"/>
-    
-  </entry>
-  
-  <entry>
     <title>SuperCharger Hackathon後記</title>
     <link href="https://calpa.me/2017/02/19/supercharger-hackathon/"/>
     <id>https://calpa.me/2017/02/19/supercharger-hackathon/</id>
@@ -766,23 +781,35 @@
   </entry>
   
   <entry>
-    <title>Javascript中的True與False</title>
-    <link href="https://calpa.me/2017/02/02/javascript-true-and-false/"/>
-    <id>https://calpa.me/2017/02/02/javascript-true-and-false/</id>
-    <published>2017-02-02T15:19:53.000Z</published>
-    <updated>2017-04-05T15:29:07.000Z</updated>
+    <title>Javascript的閉包(Closure)</title>
+    <link href="https://calpa.me/2017/02/19/javascript-closure/"/>
+    <id>https://calpa.me/2017/02/19/javascript-closure/</id>
+    <published>2017-02-19T07:12:00.000Z</published>
+    <updated>2017-04-26T09:22:41.000Z</updated>
     
-    <content type="html"><![CDATA[<p>這幾天用<a href="https://www.enki.com/" rel="external nofollow noopener noreferrer" target="_blank">Enki</a>來學習Javascript，感覺不錯，<strong>You can’t handle the truth!</strong> 有一些特別True/False例子。這裡簡單記錄一下。</p>
-<p>最簡單的測試方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function test(something)&#123;</div><div class="line">  if (something) &#123;</div><div class="line">    console.log(something + &apos; is true.&apos;);</div><div class="line">  &#125; else &#123;</div><div class="line">    console.log(something + &apos; is false.&apos;);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h1 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h1><h2 id="Truthy"><a href="#Truthy" class="headerlink" title="Truthy"></a>Truthy</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">true &lt;- true當然是true...</div><div class="line">[1][0]</div><div class="line">new Date()</div><div class="line">new Number(0)</div><div class="line">Object</div><div class="line">Infinity</div><div class="line">[]</div></pre></td></tr></table></figure>
-<p>以下都是[object Object]:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&#123;a: false&#125;</div><div class="line">&#123;&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="Falsy"><a href="#Falsy" class="headerlink" title="Falsy"></a>Falsy</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">false &lt;- false當然是false...</div><div class="line">undefined</div><div class="line">&apos;&apos;</div><div class="line">&quot;&quot;</div><div class="line">[1][1] &lt;- undefined</div><div class="line">NaN</div><div class="line">null</div><div class="line">&#123;&#125;.someKey</div><div class="line">0</div><div class="line">[].length &lt;- 這個是0，所以出false</div></pre></td></tr></table></figure>
-<p>值得注意的是[]，它本身會是<code>true</code>，但如果用<code>[] == true</code>的話會輸出<code>false</code>，<br>而<code>[] == false</code>的話會輸出<code>true</code>。</p>
+    <content type="html"><![CDATA[<h2 id="為什麼會有這篇文章"><a href="#為什麼會有這篇文章" class="headerlink" title="為什麼會有這篇文章"></a>為什麼會有這篇文章</h2><p>打好基本功是很重要的。。。</p>
+<h2 id="最簡單的閉包"><a href="#最簡單的閉包" class="headerlink" title="最簡單的閉包"></a>最簡單的閉包</h2><ol>
+<li>先定義一個Function A</li>
+<li>在A的裡面定義一個Function B</li>
+<li>在A中返回B</li>
+<li>執行A(), 將A()的返回值賦予給b</li>
+<li>執行b()</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function A() &#123;</div><div class="line">  function B() &#123;</div><div class="line">    console.log(&quot;Hello, world!&quot;);</div><div class="line">  &#125;</div><div class="line">  return B;</div><div class="line">&#125;</div><div class="line">var b = A();</div><div class="line">b(); // Hello World</div></pre></td></tr></table></figure>
+<h2 id="加法-ES6"><a href="#加法-ES6" class="headerlink" title="加法 - ES6"></a>加法 - ES6</h2><ol>
+<li>先定義adder()</li>
+<li>定義匿名函數</li>
+<li>返回x + y</li>
+<li>定義變量 add5</li>
+<li>執行 add5()</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">let adder = (x) =&gt; (y) =&gt; x + y</div><div class="line"></div><div class="line">let add5 = adder(5);</div><div class="line">let add10 = adder(10);</div><div class="line"></div><div class="line">console.log(add5(7)); // 12</div><div class="line">console.log(add10(7)); // 17</div></pre></td></tr></table></figure>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;這幾天用&lt;a href=&quot;https://www.enki.com/&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Enki&lt;/a&gt;來學習Javascript，感覺不錯，&lt;strong&gt;You ca
+      &lt;h2 id=&quot;為什麼會有這篇文章&quot;&gt;&lt;a href=&quot;#為什麼會有這篇文章&quot; class=&quot;headerlink&quot; title=&quot;為什麼會有這篇文章&quot;&gt;&lt;/a&gt;為什麼會有這篇文章&lt;/h2&gt;&lt;p&gt;打好基本功是很重要的。。。&lt;/p&gt;
+&lt;h2 id=&quot;最簡單的閉包&quot;&gt;&lt;a href=
     
     </summary>
     
