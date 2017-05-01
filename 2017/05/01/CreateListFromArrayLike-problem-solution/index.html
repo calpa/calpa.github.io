@@ -86,16 +86,16 @@
                     
                         
             							
-                        <li>
-                            <a href="/archive/">Archive</a>
-                        </li>
-          							
+            								
+            							
           						
                     
                         
             							
-            								
-            							
+                        <li>
+                            <a href="/archive/">Archive</a>
+                        </li>
+          							
           						
                     
                         
@@ -152,13 +152,13 @@
 <!--only post-->
 
   
-    <img class="wechat-title-img" src="/img/post-default.jpg">
+    <img class="wechat-title-img" src="https://i.imgur.com/eySAMI1.jpg">
   
 
 <style>
     
     header.intro-header {
-        background-image: url('/img/post-default.jpg')
+        background-image: url('https://i.imgur.com/eySAMI1.jpg?imageView2/1/w/1400/h/400/interlace/1/q/90')
     }
 
     
@@ -275,15 +275,15 @@
               
               
               
-              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
-              
-              
-              
               <a href="/Tags/#Hexo" title="Hexo" rel="5">Hexo</a>
               
               
               
               <a href="/Tags/#SEO" title="SEO" rel="2">SEO</a>
+              
+              
+              
+              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
               
               
               
@@ -408,32 +408,32 @@
 
 
             <div class="col-lg-7 col-lg-offset-0 col-md-7 col-sm-9 post-container">
-                <h2 id="解決方法"><a href="#解決方法" class="headerlink" title="解決方法"></a>解決方法</h2><p>仔細再看一下到底你是怎樣用<code>apply()</code>的。。。</p>
+                <h2 id="解決方法"><a href="#解決方法" class="headerlink" title="解決方法"></a>解決方法</h2><p>仔細再看一下到底你是如何調用<code>apply</code>的。。。</p>
 <p>你可能在使用Function.prototype.apply的時候不夠熟練，把<code>call</code>和<code>apply</code>的用法混在一起。。。。<code>call</code>是用0個或者更多的arguments，而<code>apply</code>則是用一個數組。</p>
 <h2 id="錯誤例子"><a href="#錯誤例子" class="headerlink" title="錯誤例子"></a>錯誤例子</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Math.max.apply(null, 1, 2, 3);</div><div class="line">// Uncaught TypeError: CreateListFromArrayLike called on non-object</div></pre></td></tr></table></figure>
 <h2 id="正確例子"><a href="#正確例子" class="headerlink" title="正確例子"></a>正確例子</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Math.max.call(null, 1, 2, 3); // 3</div><div class="line">Math.max.apply(null, [1, 2, 5, 10]); // 10</div></pre></td></tr></table></figure>
-<h2 id="細節"><a href="#細節" class="headerlink" title="細節"></a>細節</h2><p>當調用Function.prototype.apply的時候，它會調用CreateListFromArrayLike。</p>
+<h2 id="細節"><a href="#細節" class="headerlink" title="細節"></a>細節</h2><p>當調用<code>Function.prototype.apply</code>的時候，它會調用內置抽象操作：<code>CreateListFromArrayLike</code>。</p>
 <h2 id="CreateListFromArrayLike"><a href="#CreateListFromArrayLike" class="headerlink" title="CreateListFromArrayLike"></a>CreateListFromArrayLike</h2><p><code>CreateListFromArrayLike ( obj [ , elementTypes ] )</code></p>
-<p>CreateListFromArrayLike 是一個ECMAScript的內置抽象操作 (Abstract Operation)，用於建立一個List的值，它的元素由類似數組的對象的索引屬性提供。<code>elementTypes</code>是一個List，只允許List擁有ECMAScript Language 類型的值，比如<code>undefinded, null, boolean</code>等。它會執行以下步驟:</p>
+<p>CreateListFromArrayLike 是一個ECMAScript的內置抽象操作 (Abstract Operation)，用於建立一個List的值，它的元素由類似數組的對象的索引屬性提供。<code>elementTypes</code>是一個List，只允許自身建立的<code>list</code>擁有ECMAScript Language 類型的值，比如<code>undefined, null, boolean</code>等。在調用的時候，它會執行以下步驟:</p>
 <ol>
-<li>如果沒有定義elementTypes的話，它會被定義為« Undefined, Null, Boolean, String, Symbol, Number, Object »。</li>
-<li>如果Type(obj)的類型不是Object，拋出TypeError 錯誤。</li>
+<li>如果沒有定義<code>elementTypes</code>的話，它會被定義為« Undefined, Null, Boolean, String, Symbol, Number, Object »。</li>
+<li>如果<code>Type(obj)</code>的類型不是Object，拋出TypeError 錯誤。</li>
 <li>定義<code>len</code>為<code>obj</code>的length。</li>
 <li>建立一個空的List <code>list</code>。</li>
 <li>定義<code>index</code>為0</li>
 <li>當index小於len的時候，重複以下步驟：<ol>
 <li>定義<code>indexName</code>為!ToString(index)</li>
-<li>定義next 為?Get(obj, indexName)</li>
-<li>如果Type(next)的類型不存在於elementType裡面，拋出TypeError 錯誤。</li>
-<li>在list的最後增加next (<code>list.push(next)</code>)</li>
-<li>index的值加1</li>
+<li>定義<code>next</code> 為?Get(obj, indexName)</li>
+<li>如果<code>Type(next)</code>的類型不存在於<code>elementType</code>裡面，拋出TypeError 錯誤。</li>
+<li>在<code>list</code>的最後增加next //<code>list.push(next)</code></li>
+<li><code>index</code>的值加1</li>
 </ol>
 </li>
-<li>返回list</li>
+<li>返回<code>list</code></li>
 </ol>
 <h2 id="延伸閱讀"><a href="#延伸閱讀" class="headerlink" title="延伸閱讀"></a>延伸閱讀</h2><ol>
-<li>看V8是怎樣實現Function.prototype.apply</li>
-<li>看V8是怎樣實現CreateListFromArrayLike</li>
+<li>看V8是怎樣實現<code>Function.prototype.apply</code></li>
+<li>看V8是怎樣實現<code>CreateListFromArrayLike</code></li>
 </ol>
 <p>##參考資料</p>
 <ol>
