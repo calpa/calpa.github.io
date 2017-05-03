@@ -74,14 +74,14 @@
                     
                         
             							
-          						
-                    
-                        
-            							
                         <li>
                             <a href="/Tags/">Tags</a>
                         </li>
           							
+          						
+                    
+                        
+            							
           						
                     
                         
@@ -302,6 +302,55 @@
 
 
 <div class="post-preview " style="background-image: url('https://i.imgur.com/eySAMI1.jpg')">
+    <a href="/2017/05/03/redux-array-push-function/">
+        <h2 class="post-title">
+            Redux push()是怎樣寫的？
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-05-03
+        </p>
+        
+        <div class="post-content-preview">
+            <p>
+                本來你可以直接改寫原本的數組，比如利用這個方法：arr.push(item)。但在Redux裡面不可以這樣寫，因為會改寫原本數組，違反了immutable的原則。因此，要這樣寫： arr: [...state.arr, action.newItem]。
+例子：123456789101112131..
+            </p>
+        </div>
+    </a>
+
+</div>
+
+<hr>
+
+
+
+
+<div class="post-preview " style="background-image: url('/img/post-default.jpg')">
+    <a href="/2017/05/02/how-to-generate-svg-sprite/">
+        <h2 class="post-title">
+            如何製作svg sprite
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-05-02
+        </p>
+        
+        <div class="post-content-preview">
+            <p>
+                使用SVG Sprite的好處是可以減少HTTP Request。
+製作方法你可以選擇手動把一張一張圖合在一起，也可以使用gulp-svg-sprite自動生成雪碧圖。
+另外，你可以使用svg-sprite設置幫助寫JSON, Node.js, Gruntfile 或者 Gulpfile的設定檔..
+            </p>
+        </div>
+    </a>
+
+</div>
+
+<hr>
+
+
+
+
+<div class="post-preview " style="background-image: url('https://i.imgur.com/eySAMI1.jpg')">
     <a href="/2017/05/01/CreateListFromArrayLike-problem-solution/">
         <h2 class="post-title">
             CreateListFromArrayLike called on non-object 報錯的解決方法
@@ -447,58 +496,6 @@ JavaScript是一種動態語言，變量的類型不用提前聲明，在程序�
 
 
 
-<div class="post-preview " style="background-image: url('/img/post-default.jpg')">
-    <a href="/2017/04/12/use-css-to-draw-circle/">
-        <h2 class="post-title">
-            利用CSS畫圓
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-04-12
-        </p>
-        
-        <div class="post-content-preview">
-            <p>
-                用CSS畫一個圓是很簡單的，用border-radius就可以了。
-
-
-但是其實border-radius可以加/來獲得特別效果XD
-
-
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-
-<div class="post-preview " style="background-image: url('/img/post-default.jpg')">
-    <a href="/2017/04/11/react-native-run-android/">
-        <h2 class="post-title">
-            【React Native】安裝Android Apk而無需連接伺服器的方法
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-04-11
-        </p>
-        
-        <div class="post-content-preview">
-            <p>
-                正常情況下，我們會用命令react-native run-android來在自己的電話中測試app，但是這個方法需要連接電腦。
-我們可以利用以下命令：1234react-native bundle --dev false --platform android --entry-file index..
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-
 <!-- 翻页 pager -->
 
 <ul class="pager">
@@ -569,9 +566,7 @@ JavaScript是一種動態語言，變量的類型不用提前聲明，在程序�
               
               
               
-              <a href="/Tags/#JavaScript" title="JavaScript" rel="2">JavaScript</a>
-              
-              
+              <a href="/Tags/#JavaScript" title="JavaScript" rel="3">JavaScript</a>
               
               
               
@@ -585,7 +580,13 @@ JavaScript是一種動態語言，變量的類型不用提前聲明，在程序�
               
               
               
+              
+              
               <a href="/Tags/#Github" title="Github" rel="2">Github</a>
+              
+              
+              
+              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
               
               
               
@@ -597,7 +598,7 @@ JavaScript是一種動態語言，變量的類型不用提前聲明，在程序�
               
               
               
-              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
+              
               
               
               
@@ -632,6 +633,18 @@ JavaScript是一種動態語言，變量的類型不用提前聲明，在程序�
       <ul class="list-inline" style="text-align: center;">
         
           <li>
+            <a href="/2017/05/03/redux-array-push-function/">
+              Redux push()是怎樣寫的？
+            </a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/02/how-to-generate-svg-sprite/">
+              如何製作svg sprite
+            </a>
+          </li>
+        
+          <li>
             <a href="/2017/05/01/CreateListFromArrayLike-problem-solution/">
               CreateListFromArrayLike called on non-object 報錯的解決方法
             </a>
@@ -649,23 +662,11 @@ JavaScript是一種動態語言，變量的類型不用提前聲明，在程序�
             </a>
           </li>
         
-          <li>
-            <a href="/2017/04/25/coders-of-the-caribbean-review/">
-              Coders of the Caribbean Online Contest 後記
-            </a>
-          </li>
-        
-          <li>
-            <a href="/2017/04/23/hackUST-2017-hackathon-summary/">
-              hackUST 2017後記
-            </a>
-          </li>
-        
       </ul>
     
     <hr>
 
-    <h5 style="text-align: center;">共26篇文章</h5>
+    <h5 style="text-align: center;">共28篇文章</h5>
     <hr>
 
     <!-- All Blog Posts -->
@@ -673,23 +674,16 @@ JavaScript是一種動態語言，變量的類型不用提前聲明，在程序�
       <h5 style="text-align: center;">所有文章</h5>
       <ul style="text-align: center; list-style-type: none; padding: 0;">
         
-              <li>
-                <a href="/archives/">
-                  1月(5)
-                </a>
-              </li>
-            
+          
+          
+          
+          
+          
+          
           
               <li>
                 <a href="/archives/">
-                  2月(7)
-                </a>
-              </li>
-            
-          
-              <li>
-                <a href="/archives/">
-                  3月(2)
+                  5月(3)
                 </a>
               </li>
             
@@ -703,17 +697,24 @@ JavaScript是一種動態語言，變量的類型不用提前聲明，在程序�
           
               <li>
                 <a href="/archives/">
-                  5月(1)
+                  3月(2)
                 </a>
               </li>
             
           
+              <li>
+                <a href="/archives/">
+                  2月(7)
+                </a>
+              </li>
+            
           
-          
-          
-          
-          
-          
+              <li>
+                <a href="/archives/">
+                  1月(5)
+                </a>
+              </li>
+            
           
       </ul>
     

@@ -74,14 +74,14 @@
                     
                         
             							
-          						
-                    
-                        
-            							
                         <li>
                             <a href="/Tags/">Tags</a>
                         </li>
           							
+          						
+                    
+                        
+            							
           						
                     
                         
@@ -302,6 +302,61 @@
 
 
 <div class="post-preview " style="background-image: url('/img/post-default.jpg')">
+    <a href="/2017/02/26/hexo-change-site-url/">
+        <h2 class="post-title">
+            Hexo sitemap 簡單更改域名的方法
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-02-26
+        </p>
+        
+        <div class="post-content-preview">
+            <p>
+                如果沒有做任何配置的話，hexo g的時候會自動輸出一個sitemap.xml。但是現在域名不同了，需要一點更改。。。
+方法
+打開_config.yml
+修改url:就可以了
+hexo clean
+hexo g
+
+參考資料
+hexo-generator-sitemap 生成的sitemap如何配..
+            </p>
+        </div>
+    </a>
+
+</div>
+
+<hr>
+
+
+
+
+<div class="post-preview " style="background-image: url('/img/post-default.jpg')">
+    <a href="/2017/02/26/hexo-seo-nofollow/">
+        <h2 class="post-title">
+            Hexo優化之為外部鏈接添加nofollow屬性
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-02-26
+        </p>
+        
+        <div class="post-content-preview">
+            <p>
+                我們的網頁通常會有很多鏈接，但是在爬蟲的時候可以分開哪一些是外部鏈接，哪一些是內部鏈接來優化搜尋結果。比如說增加nofollow標籤。nofollow是一個HTML標籤的屬性值，它可以告訴搜尋引擎不要追蹤這個鏈接。
+手動我們可以手動把每一個鏈接都加上nofollow屬性，比如這樣：12&lt;a..
+            </p>
+        </div>
+    </a>
+
+</div>
+
+<hr>
+
+
+
+
+<div class="post-preview " style="background-image: url('/img/post-default.jpg')">
     <a href="/2017/02/23/github-edcation-package/">
         <h2 class="post-title">
             利用Github免費教育禮包更换.me域名
@@ -462,55 +517,6 @@ Cookie的佔用空間非常小，大小限制于4KB左右，常見的用途是�
 
 
 
-<div class="post-preview " style="background-image: url('/img/post-default.jpg')">
-    <a href="/2017/01/14/javascript-variable-hoisting/">
-        <h2 class="post-title">
-            Javascript的變量提升入門
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-01-14
-        </p>
-        
-        <div class="post-content-preview">
-            <p>
-                在Javascript中，hoisting是一個容易犯錯的地方。在一段scope裡面，沒有定義變量就使用變量的話會彈出Reference Error。12 // ReferenceError: poi is not definedconsole.log(poi);
-
-1234var name;c..
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-
-<div class="post-preview " style="background-image: url('/img/post-default.jpg')">
-    <a href="/2017/01/08/readme/">
-        <h2 class="post-title">
-            Github上的README.md
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-01-08
-        </p>
-        
-        <div class="post-content-preview">
-            <p>
-                Hexo在渲染的時候默認是把source下面所有的.md檔案渲染成html，這樣的話會覆蓋掉Github上的CNAME和README.md。但是我又不想這樣，我想Github Repo下面可以直接看到這個blog的README.md內容。
-所以我就修改Hexo根目錄下的_config.yml：1..
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-
 <!-- 翻页 pager -->
 
 <ul class="pager">
@@ -585,9 +591,7 @@ Cookie的佔用空間非常小，大小限制于4KB左右，常見的用途是�
               
               
               
-              <a href="/Tags/#JavaScript" title="JavaScript" rel="2">JavaScript</a>
-              
-              
+              <a href="/Tags/#JavaScript" title="JavaScript" rel="3">JavaScript</a>
               
               
               
@@ -601,7 +605,13 @@ Cookie的佔用空間非常小，大小限制于4KB左右，常見的用途是�
               
               
               
+              
+              
               <a href="/Tags/#Github" title="Github" rel="2">Github</a>
+              
+              
+              
+              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
               
               
               
@@ -613,7 +623,7 @@ Cookie的佔用空間非常小，大小限制于4KB左右，常見的用途是�
               
               
               
-              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
+              
               
               
               
@@ -648,6 +658,18 @@ Cookie的佔用空間非常小，大小限制于4KB左右，常見的用途是�
       <ul class="list-inline" style="text-align: center;">
         
           <li>
+            <a href="/2017/05/03/redux-array-push-function/">
+              Redux push()是怎樣寫的？
+            </a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/02/how-to-generate-svg-sprite/">
+              如何製作svg sprite
+            </a>
+          </li>
+        
+          <li>
             <a href="/2017/05/01/CreateListFromArrayLike-problem-solution/">
               CreateListFromArrayLike called on non-object 報錯的解決方法
             </a>
@@ -665,23 +687,11 @@ Cookie的佔用空間非常小，大小限制于4KB左右，常見的用途是�
             </a>
           </li>
         
-          <li>
-            <a href="/2017/04/25/coders-of-the-caribbean-review/">
-              Coders of the Caribbean Online Contest 後記
-            </a>
-          </li>
-        
-          <li>
-            <a href="/2017/04/23/hackUST-2017-hackathon-summary/">
-              hackUST 2017後記
-            </a>
-          </li>
-        
       </ul>
     
     <hr>
 
-    <h5 style="text-align: center;">共26篇文章</h5>
+    <h5 style="text-align: center;">共28篇文章</h5>
     <hr>
 
     <!-- All Blog Posts -->
@@ -689,23 +699,16 @@ Cookie的佔用空間非常小，大小限制于4KB左右，常見的用途是�
       <h5 style="text-align: center;">所有文章</h5>
       <ul style="text-align: center; list-style-type: none; padding: 0;">
         
-              <li>
-                <a href="/archives/">
-                  1月(5)
-                </a>
-              </li>
-            
+          
+          
+          
+          
+          
+          
           
               <li>
                 <a href="/archives/">
-                  2月(7)
-                </a>
-              </li>
-            
-          
-              <li>
-                <a href="/archives/">
-                  3月(2)
+                  5月(3)
                 </a>
               </li>
             
@@ -719,17 +722,24 @@ Cookie的佔用空間非常小，大小限制于4KB左右，常見的用途是�
           
               <li>
                 <a href="/archives/">
-                  5月(1)
+                  3月(2)
                 </a>
               </li>
             
           
+              <li>
+                <a href="/archives/">
+                  2月(7)
+                </a>
+              </li>
+            
           
-          
-          
-          
-          
-          
+              <li>
+                <a href="/archives/">
+                  1月(5)
+                </a>
+              </li>
+            
           
       </ul>
     

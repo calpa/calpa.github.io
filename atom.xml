@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://calpa.me/"/>
-  <updated>2017-05-01T15:08:53.000Z</updated>
+  <updated>2017-05-03T15:28:29.000Z</updated>
   <id>https://calpa.me/</id>
   
   <author>
@@ -16,11 +16,66 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Redux push()是怎樣寫的？</title>
+    <link href="https://calpa.me/2017/05/03/redux-array-push-function/"/>
+    <id>https://calpa.me/2017/05/03/redux-array-push-function/</id>
+    <published>2017-05-03T15:20:00.000Z</published>
+    <updated>2017-05-03T15:28:29.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>本來你可以直接改寫原本的數組，比如利用這個方法：<code>arr.push(item)</code>。<br>但在Redux裡面不可以這樣寫，因為會改寫原本數組，違反了immutable的原則。<br>因此，要這樣寫： <code>arr: [...state.arr, action.newItem]</code>。</p>
+<p>例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">import &#123; ADD_ITEM &#125; from &apos;../Actions/UserActions&apos;</div><div class="line">const initialUserState = &#123;</div><div class="line">  arr: []</div><div class="line">&#125;</div><div class="line"></div><div class="line">export default function userState(state = initialUserState, action) &#123;</div><div class="line">  console.log(arr);</div><div class="line">  switch (action.type) &#123;</div><div class="line">    case ADD_ITEM:</div><div class="line">      return &#123;</div><div class="line">        ...state,</div><div class="line">        arr: [...state.arr, action.newItem]</div><div class="line">      &#125;</div><div class="line"></div><div class="line">    default:</div><div class="line">      return state;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>另外，你也可以利用<code>concat()</code>方法。</p>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
+<li><a href="http://stackoverflow.com/questions/40911194/how-do-i-add-an-element-to-array-in-reducer-of-react-native-redux" rel="external nofollow noopener noreferrer" target="_blank">How do I add an element to array in reducer of React native redux? - stackoverflow</a></li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本來你可以直接改寫原本的數組，比如利用這個方法：&lt;code&gt;arr.push(item)&lt;/code&gt;。&lt;br&gt;但在Redux裡面不可以這樣寫，因為會改寫原本數組，違反了immutable的原則。&lt;br&gt;因此，要這樣寫： &lt;code&gt;arr: [...state.arr, 
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="https://calpa.me/Tags/JavaScript/"/>
+    
+      <category term="Redux" scheme="https://calpa.me/Tags/Redux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何製作svg sprite</title>
+    <link href="https://calpa.me/2017/05/02/how-to-generate-svg-sprite/"/>
+    <id>https://calpa.me/2017/05/02/how-to-generate-svg-sprite/</id>
+    <published>2017-05-02T08:51:00.000Z</published>
+    <updated>2017-05-03T15:19:27.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>使用SVG Sprite的好處是可以減少HTTP Request。</p>
+<h2 id="製作方法"><a href="#製作方法" class="headerlink" title="製作方法"></a>製作方法</h2><p>你可以選擇手動把一張一張圖合在一起，也可以使用gulp-svg-sprite自動生成雪碧圖。</p>
+<p>另外，你可以使用<a href="http://jkphl.github.io/svg-sprite/" rel="external nofollow noopener noreferrer" target="_blank">svg-sprite設置</a>幫助寫JSON, Node.js, Gruntfile 或者 Gulpfile的設定檔案。</p>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>其中一種方法是使用<code>&lt;use&gt;</code>。我們可以如同平常一樣使用svg，唯一分別是裡面的內容換成<code>&lt;use&gt;</code>，然後把鏈接加上id來調用圖像。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;svg&gt;</div><div class="line">  &lt;use href=&quot;img/sprite.svg#item&quot;&gt;&lt;/use&gt;</div><div class="line">&lt;/svg&gt;</div></pre></td></tr></table></figure>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><p><a href="https://github.com/jkphl/gulp-svg-sprite" rel="external nofollow noopener noreferrer" target="_blank">Github Repo: gulp-svg-sprite</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;使用SVG Sprite的好處是可以減少HTTP Request。&lt;/p&gt;
+&lt;h2 id=&quot;製作方法&quot;&gt;&lt;a href=&quot;#製作方法&quot; class=&quot;headerlink&quot; title=&quot;製作方法&quot;&gt;&lt;/a&gt;製作方法&lt;/h2&gt;&lt;p&gt;你可以選擇手動把一張一張圖合在一起，也可以
+    
+    </summary>
+    
+    
+      <category term="SVG" scheme="https://calpa.me/Tags/SVG/"/>
+    
+  </entry>
+  
+  <entry>
     <title>CreateListFromArrayLike called on non-object 報錯的解決方法</title>
     <link href="https://calpa.me/2017/05/01/CreateListFromArrayLike-problem-solution/"/>
     <id>https://calpa.me/2017/05/01/CreateListFromArrayLike-problem-solution/</id>
     <published>2017-05-01T14:50:00.000Z</published>
-    <updated>2017-05-01T15:08:53.000Z</updated>
+    <updated>2017-05-01T15:12:06.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="解決方法"><a href="#解決方法" class="headerlink" title="解決方法"></a>解決方法</h2><p>仔細再看一下到底你是如何調用<code>apply</code>的。。。</p>
 <p>你可能在使用Function.prototype.apply的時候不夠熟練，把<code>call</code>和<code>apply</code>的用法混在一起。。。。<code>call</code>是用0個或者更多的arguments，而<code>apply</code>則是用一個數組。</p>
@@ -49,8 +104,7 @@
 <li>看V8是怎樣實現<code>Function.prototype.apply</code></li>
 <li>看V8是怎樣實現<code>CreateListFromArrayLike</code></li>
 </ol>
-<p>##參考資料</p>
-<ol>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
 <li><a href="https://tc39.github.io/ecma262/#sec-function.prototype.apply" rel="external nofollow noopener noreferrer" target="_blank">Function.prototype.apply - ECMAScript 2018</a></li>
 <li>踩過的坑。。。</li>
 </ol>
@@ -742,79 +796,6 @@
     
     
       <category term="Web" scheme="https://calpa.me/Tags/Web/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Javascript的閉包(Closure)</title>
-    <link href="https://calpa.me/2017/02/19/javascript-closure/"/>
-    <id>https://calpa.me/2017/02/19/javascript-closure/</id>
-    <published>2017-02-19T07:12:00.000Z</published>
-    <updated>2017-04-26T09:22:41.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="為什麼會有這篇文章"><a href="#為什麼會有這篇文章" class="headerlink" title="為什麼會有這篇文章"></a>為什麼會有這篇文章</h2><p>打好基本功是很重要的。。。</p>
-<h2 id="最簡單的閉包"><a href="#最簡單的閉包" class="headerlink" title="最簡單的閉包"></a>最簡單的閉包</h2><ol>
-<li>先定義一個Function A</li>
-<li>在A的裡面定義一個Function B</li>
-<li>在A中返回B</li>
-<li>執行A(), 將A()的返回值賦予給b</li>
-<li>執行b()</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function A() &#123;</div><div class="line">  function B() &#123;</div><div class="line">    console.log(&quot;Hello, world!&quot;);</div><div class="line">  &#125;</div><div class="line">  return B;</div><div class="line">&#125;</div><div class="line">var b = A();</div><div class="line">b(); // Hello World</div></pre></td></tr></table></figure>
-<h2 id="加法-ES6"><a href="#加法-ES6" class="headerlink" title="加法 - ES6"></a>加法 - ES6</h2><ol>
-<li>先定義adder()</li>
-<li>定義匿名函數</li>
-<li>返回x + y</li>
-<li>定義變量 add5</li>
-<li>執行 add5()</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">let adder = (x) =&gt; (y) =&gt; x + y</div><div class="line"></div><div class="line">let add5 = adder(5);</div><div class="line">let add10 = adder(10);</div><div class="line"></div><div class="line">console.log(add5(7)); // 12</div><div class="line">console.log(add10(7)); // 17</div></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;為什麼會有這篇文章&quot;&gt;&lt;a href=&quot;#為什麼會有這篇文章&quot; class=&quot;headerlink&quot; title=&quot;為什麼會有這篇文章&quot;&gt;&lt;/a&gt;為什麼會有這篇文章&lt;/h2&gt;&lt;p&gt;打好基本功是很重要的。。。&lt;/p&gt;
-&lt;h2 id=&quot;最簡單的閉包&quot;&gt;&lt;a href=
-    
-    </summary>
-    
-    
-      <category term="Javascript" scheme="https://calpa.me/Tags/Javascript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SuperCharger Hackathon後記</title>
-    <link href="https://calpa.me/2017/02/19/supercharger-hackathon/"/>
-    <id>https://calpa.me/2017/02/19/supercharger-hackathon/</id>
-    <published>2017-02-19T07:12:00.000Z</published>
-    <updated>2017-02-21T05:36:19.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="http://i.imgur.com/7EMhgpx.jpg" alt="Imgur"></p>
-<p>如果計上這次比賽的話，我已經是第五次參加這一類編程比賽。與過往的比賽不同，合作的對象不再是大學生，而是兩間Start-up公司。在這次比賽中，我選擇<a href="http://kyc-chain.com/" rel="external nofollow noopener noreferrer" target="_blank">KYC-Chain</a>、<a href="https://www.clare.ai/" rel="external nofollow noopener noreferrer" target="_blank">Clare.ai</a>兩間公司組成的隊伍。KYC-Chain透過<a href="https://airtable.com/" rel="external nofollow noopener noreferrer" target="_blank">Airtable</a>提供一些常見的用戶問題與答案，而Clare.ai則負責寫code。</p>
-<p>Airtable有API教學，可以用node.js增加、移除、修改或者獲取資料。</p>
-<h2 id="現有問題"><a href="#現有問題" class="headerlink" title="現有問題"></a>現有問題</h2><p>如果用戶想了解一些資訊，他需要經過很多過程才能獲取答案。</p>
-<h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>利用Chatbot，用戶只需要說出自己的問題便能查詢資料，例如Identity Card，Regulatory Law等資訊。</p>
-<h2 id="將來發展"><a href="#將來發展" class="headerlink" title="將來發展"></a>將來發展</h2><ol>
-<li>獲取申請表格</li>
-<li>自動填寫各類文件</li>
-</ol>
-<h2 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h2><p>我本來以為要從零開始架構一個Chatbot，原來可以直接用Api.ai。<br>大多數時間都是和一些在外面工作的人交流。。。</p>
-<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
-<li>我自己 XD</li>
-<li><a href="https://www.facebook.com/events/704583943057523/" rel="external nofollow noopener noreferrer" target="_blank">SuperCharger FinTech Hackathon - Facebook 活動頁</a></li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/7EMhgpx.jpg&quot; alt=&quot;Imgur&quot;&gt;&lt;/p&gt;
-&lt;p&gt;如果計上這次比賽的話，我已經是第五次參加這一類編程比賽。與過往的比賽不同，合作的對象不再是大學生，而是兩間Start-up公司。在這次比賽中，我選擇&lt;
-    
-    </summary>
-    
-    
-      <category term="Hackathon" scheme="https://calpa.me/Tags/Hackathon/"/>
     
   </entry>
   

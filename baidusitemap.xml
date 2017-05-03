@@ -4,8 +4,44 @@
 
     
   <url>
+    <loc>https://calpa.me/2017/05/03/redux-array-push-function/</loc>
+    <lastmod>2017-05-03T15:28:29.000Z</lastmod>
+    <data>
+        <display>
+        <title>Redux push()是怎樣寫的？</title>
+        <pubTime>2017-05-03T15:20:00.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+        <tag>Redux</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://calpa.me/2017/05/02/how-to-generate-svg-sprite/</loc>
+    <lastmod>2017-05-03T15:19:27.000Z</lastmod>
+    <data>
+        <display>
+        <title>如何製作svg sprite</title>
+        <pubTime>2017-05-02T08:51:00.000Z</pubTime>
+        
+        <tag>SVG</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://calpa.me/2017/05/01/CreateListFromArrayLike-problem-solution/</loc>
-    <lastmod>2017-05-01T15:08:53.000Z</lastmod>
+    <lastmod>2017-05-01T15:12:06.000Z</lastmod>
     <data>
         <display>
         <title>CreateListFromArrayLike called on non-object 報錯的解決方法</title>

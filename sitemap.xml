@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://calpa.me/2017/05/03/redux-array-push-function/</loc>
+    
+    <lastmod>2017-05-03T15:28:29.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://calpa.me/2017/05/02/how-to-generate-svg-sprite/</loc>
+    
+    <lastmod>2017-05-03T15:19:27.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://calpa.me/2017/05/01/CreateListFromArrayLike-problem-solution/</loc>
     
-    <lastmod>2017-05-01T15:08:53.000Z</lastmod>
+    <lastmod>2017-05-01T15:12:06.000Z</lastmod>
     
   </url>
   
