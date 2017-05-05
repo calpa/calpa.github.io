@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://calpa.me/2017/05/05/javascript-array/</loc>
+    
+    <lastmod>2017-05-05T15:14:13.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://calpa.me/2017/05/03/redux-array-push-function/</loc>
     
     <lastmod>2017-05-03T15:28:29.000Z</lastmod>

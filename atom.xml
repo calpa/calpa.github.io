@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://calpa.me/"/>
-  <updated>2017-05-03T15:28:29.000Z</updated>
+  <updated>2017-05-05T15:14:13.000Z</updated>
   <id>https://calpa.me/</id>
   
   <author>
@@ -14,6 +14,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JavaScript 數組去重</title>
+    <link href="https://calpa.me/2017/05/05/javascript-array/"/>
+    <id>https://calpa.me/2017/05/05/javascript-array/</id>
+    <published>2017-05-05T14:53:00.000Z</published>
+    <updated>2017-05-05T15:14:13.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>顧著做化工模擬功課，差點忘記怎樣寫代碼。。。</p>
+<h1 id="內置方法"><a href="#內置方法" class="headerlink" title="內置方法"></a>內置方法</h1><p>使用JavaScript內置的去重複方法<code>Set()</code>，比如說：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">let arr = [1, 2, 3, 3, 4, 5];</div><div class="line">Array.from(new Set(arr)); // [1, 2, 3, 4, 5]</div><div class="line">[...new Set(arr)]; // [1, 2, 3, 4, 5]</div></pre></td></tr></table></figure>
+<h2 id="第一時間會想到的方法"><a href="#第一時間會想到的方法" class="headerlink" title="第一時間會想到的方法"></a>第一時間會想到的方法</h2><ol>
+<li>雙重遍歷</li>
+<li>使用hash table</li>
+</ol>
+<h2 id="Underscore"><a href="#Underscore" class="headerlink" title="Underscore"></a>Underscore</h2><p>最後來看一下underscore是如何實現unique()方法吧。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">_.uniq = _.unique = function(array, isSorted, iteratee, context) &#123;</div><div class="line">  // 如果數組不是已經排序</div><div class="line">  if (!_.isBoolean(isSorted)) &#123;</div><div class="line">    // 將function(array, isSorted, iteratee, context)</div><div class="line">    // 換成function(array, false, isSorted, iteratee)</div><div class="line">    context = iteratee;</div><div class="line">    iteratee = isSorted;</div><div class="line">    isSorted = false;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  // 如果存在iteratee</div><div class="line">  if (iteratee != null) iteratee = cb(iteratee, context);</div><div class="line">  var result = [];</div><div class="line">  var seen = [];</div><div class="line">  for (var i = 0, length = getLength(array); i &lt; length; i++) &#123;</div><div class="line">    var value = array[i],</div><div class="line">        computed = iteratee ? iteratee(value, i, array) : value;</div><div class="line">    // 如果已經排序，就直接增加數值(第一個值)。</div><div class="line">    // 非0 就是 true</div><div class="line">    // 或者see不是computed</div><div class="line">    if (isSorted) &#123;</div><div class="line">      if (!i || seen !== computed) result.push(value);</div><div class="line">      seen = computed;</div><div class="line">    &#125; else if (iteratee) &#123;</div><div class="line">      // 使用_.contains查詢數組裡面是否擁有這個值</div><div class="line">      if (!_.contains(seen, computed)) &#123;</div><div class="line">        seen.push(computed);</div><div class="line">        result.push(value);</div><div class="line">      &#125;</div><div class="line">    &#125; else if (!_.contains(result, value)) &#123;</div><div class="line">      result.push(value);</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  return result;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;顧著做化工模擬功課，差點忘記怎樣寫代碼。。。&lt;/p&gt;
+&lt;h1 id=&quot;內置方法&quot;&gt;&lt;a href=&quot;#內置方法&quot; class=&quot;headerlink&quot; title=&quot;內置方法&quot;&gt;&lt;/a&gt;內置方法&lt;/h1&gt;&lt;p&gt;使用JavaScript內置的去重複方法&lt;code&gt;Set()&lt;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="https://calpa.me/Tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>Redux push()是怎樣寫的？</title>
@@ -752,50 +782,6 @@
     
     
       <category term="Github" scheme="https://calpa.me/Tags/Github/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>利用Javascript推送Web Notification</title>
-    <link href="https://calpa.me/2017/02/22/using-javascript-to-push-web-notification/"/>
-    <id>https://calpa.me/2017/02/22/using-javascript-to-push-web-notification/</id>
-    <published>2017-02-22T07:20:41.000Z</published>
-    <updated>2017-04-26T09:29:53.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>如果要推送通知的話，我們首先要請求權限：<code>Notification.requestPermission()</code></p>
-<p>之後檢查<code>Notification.permission</code>來查看是否擁有權限。該值會是下面三個其中之一：</p>
-<ol>
-<li>default: 從未詢問用戶</li>
-<li>granted: 用戶授權顯示通知的權限</li>
-<li>denied: 用戶不授權。。。</li>
-</ol>
-<p>創造一個通知很簡單，<code>new Notification(text)</code>可以了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var text = &quot;Hello, world&quot;;</div><div class="line">new Notification(text);</div></pre></td></tr></table></figure></p>
-<p><img src="http://i.imgur.com/l1lVFXZ.png" alt="Imgur"></p>
-<p>沒有圖片的話會比較空虛，可以加入options。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">function push() &#123;</div><div class="line">  var title = &quot;這是一個標題。。。&quot;;</div><div class="line">	var options = &#123;</div><div class="line">		body: &quot;Calpa 寫了一篇文章XD&quot;,</div><div class="line">		icon: &quot;https://calpa.github.io/img/profile.png&quot;</div><div class="line">	&#125;</div><div class="line">	var n = new Notification(title, options);</div><div class="line">&#125;</div><div class="line"></div><div class="line">push();</div></pre></td></tr></table></figure>
-<p><img src="http://i.imgur.com/uuNPUoB.png" alt="Imgur"></p>
-<p>如果要增加與用戶的互動，可以利用Notification的事件：</p>
-<ol>
-<li>onshow</li>
-<li>onclick</li>
-<li>onclose</li>
-<li>onerror</li>
-</ol>
-<p>我們可以監聽<code>onclick</code>，當用戶點擊通知，瀏覽器就會跳到目標頁面。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">n.onclick = (event) =&gt; &#123;</div><div class="line">	event.preventDefault();</div><div class="line">	window.open(&apos;https://calpa.github.io/&apos;, &apos;_blank&apos;);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API" rel="external nofollow noopener noreferrer" target="_blank">Using the Notification API</a></li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;如果要推送通知的話，我們首先要請求權限：&lt;code&gt;Notification.requestPermission()&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;之後檢查&lt;code&gt;Notification.permission&lt;/code&gt;來查看是否擁有權限。該值會是下面三個其中之一：&lt;
-    
-    </summary>
-    
-    
-      <category term="Web" scheme="https://calpa.me/Tags/Web/"/>
     
   </entry>
   
