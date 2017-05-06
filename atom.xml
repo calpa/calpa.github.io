@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://calpa.me/"/>
-  <updated>2017-05-06T06:33:18.000Z</updated>
+  <updated>2017-05-06T12:19:56.000Z</updated>
   <id>https://calpa.me/</id>
   
   <author>
@@ -14,6 +14,50 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>初探正則表達式</title>
+    <link href="https://calpa.me/2017/05/06/introduction-to-regular-expression/"/>
+    <id>https://calpa.me/2017/05/06/introduction-to-regular-expression/</id>
+    <published>2017-05-06T12:13:00.000Z</published>
+    <updated>2017-05-06T12:19:56.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>正則表達式是一個非常簡單的語法，但它也是神兵利器，可以說是程序員必須要理解的工具之一。它就像一本會不斷成長的寶刀，隨著程序員對它的理解，它的威力也跟著增強。</p>
+<p>一些當下熱門的編輯器(Atom, Sublime)或者 IDE (WebStorm)都支持正則表達式尋找。如果你有瞭解過JavaScript中的方法 (exec, test, match, search, replace, split)的話，做下面的題目時會更加得心應手。</p>
+<h2 id="任務目的"><a href="#任務目的" class="headerlink" title="任務目的"></a>任務目的</h2><ol>
+<li>掌握正則表達式編寫規則</li>
+<li>瞭解正則表達式的特殊字元</li>
+<li>瞭解JavaScript提供的正則表達式相關方法</li>
+<li>能用正則表達式做一些簡單文本或者數字校驗</li>
+</ol>
+<h2 id="任務描述"><a href="#任務描述" class="headerlink" title="任務描述"></a>任務描述</h2><ol>
+<li><p>編寫一個匹配URL的正則表達式，測試用例參照但不限於：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">https://calpa.me/2017/05/06/introduction-to-regular-expression/</div><div class="line">https://google.com</div><div class="line">https://github.com/leviding/T-Plan/blob/master/tasks/task0005/README.md</div><div class="line">http://blog.csdn.net/</div></pre></td></tr></table></figure>
+</li>
+<li><p>編寫一個驗證電子郵箱地址的正則表達式，測試用例參照但不限於：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">myEmail@gmail.com</div><div class="line">steve.jobs@apple.com</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>完成任務之後，可以對比別人的實現方案，但不建議未嘗試就直接搜索答案。<br>在正則表達式的世界中，一個問題往往不止一種方案，可以嘗試多種方法。</p>
+<h2 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h2><p>你可以想利用一些工具，例如在線的正則表達式工具 (<a href="http://regexr.com/" rel="external nofollow noopener noreferrer" target="_blank">RegExr</a>, <a href="https://regex101.com/" rel="external nofollow noopener noreferrer" target="_blank">Regex101</a>)來幫助學習、編寫正則表達式。</p>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions" rel="external nofollow noopener noreferrer" target="_blank">MDN Regular Expressions</a>: 瞭解JavaScript中正則表達式的基本知識</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;正則表達式是一個非常簡單的語法，但它也是神兵利器，可以說是程序員必須要理解的工具之一。它就像一本會不斷成長的寶刀，隨著程序員對它的理解，它的威力也跟著增強。&lt;/p&gt;
+&lt;p&gt;一些當下熱門的編輯器(Atom, Sublime)或者 IDE (WebStorm)都支持正則表達式尋
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="https://calpa.me/Tags/JavaScript/"/>
+    
+      <category term="Regular Expression" scheme="https://calpa.me/Tags/Regular-Expression/"/>
+    
+  </entry>
   
   <entry>
     <title>CSS垂直置中的4種方法</title>
@@ -731,38 +775,6 @@
     
       &lt;p&gt;如果沒有做任何配置的話，&lt;code&gt;hexo g&lt;/code&gt;的時候會自動輸出一個&lt;code&gt;sitemap.xml&lt;/code&gt;。&lt;br&gt;但是現在域名不同了，需要一點更改。。。&lt;/p&gt;
 &lt;h2 id=&quot;方法&quot;&gt;&lt;a href=&quot;#方法&quot; class=&quot;headerlink
-    
-    </summary>
-    
-    
-      <category term="Hexo" scheme="https://calpa.me/Tags/Hexo/"/>
-    
-      <category term="SEO" scheme="https://calpa.me/Tags/SEO/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo優化之為外部鏈接添加nofollow屬性</title>
-    <link href="https://calpa.me/2017/02/26/hexo-seo-nofollow/"/>
-    <id>https://calpa.me/2017/02/26/hexo-seo-nofollow/</id>
-    <published>2017-02-25T16:11:03.000Z</published>
-    <updated>2017-02-26T06:53:30.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>我們的網頁通常會有很多鏈接，但是在爬蟲的時候可以分開哪一些是外部鏈接，哪一些是內部鏈接來優化搜尋結果。比如說增加<code>nofollow</code>標籤。nofollow是一個HTML標籤的屬性值，它可以告訴搜尋引擎不要追蹤這個鏈接。</p>
-<h2 id="手動"><a href="#手動" class="headerlink" title="手動"></a>手動</h2><p>我們可以手動把每一個鏈接都加上nofollow屬性，比如這樣：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;a href=&quot;https://github.com/calpa&quot; rel=&quot;nofollow&quot;&gt;Calpa的Github主頁&lt;/a&gt;</div><div class="line">&lt;a href=&quot;https://github.com/calpa&quot; rel=&quot;external nofollow&quot;&gt;Calpa的Github主頁&lt;/a&gt;</div></pre></td></tr></table></figure></p>
-<p><code>external nofollow</code>是更加專業的寫法，告訴搜尋引擎這是一個外部鏈接。</p>
-<h2 id="自動"><a href="#自動" class="headerlink" title="自動"></a>自動</h2><p>我們也可以利用<code>hexo-autonofollow</code>插件來做這一件事情。<br>只需要輸入<code>npm install hexo-autonofollow --save</code>，然後在<code>_config.yml</code>裡面寫上下面就可以了：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">nofollow:</div><div class="line">    enable: true</div><div class="line">    exclude:</div><div class="line">    - exclude1.com</div><div class="line">    - exclude2.com</div></pre></td></tr></table></figure></p>
-<p>exclude1.com和exclude2都是內部域名。</p>
-<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
-<li><a href="https://liuzhichao.com/2016/hexo-auto-nofollow.html" rel="external nofollow noopener noreferrer" target="_blank">Hexo优化之为外部链接添加nofollow
-</a></li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;我們的網頁通常會有很多鏈接，但是在爬蟲的時候可以分開哪一些是外部鏈接，哪一些是內部鏈接來優化搜尋結果。比如說增加&lt;code&gt;nofollow&lt;/code&gt;標籤。nofollow是一個HTML標籤的屬性值，它可以告訴搜尋引擎不要追蹤這個鏈接。&lt;/p&gt;
-&lt;h2 id=&quot;手動&quot;&gt;
     
     </summary>
     
