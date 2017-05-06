@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://calpa.me/"/>
-  <updated>2017-05-05T15:14:13.000Z</updated>
+  <updated>2017-05-06T06:33:18.000Z</updated>
   <id>https://calpa.me/</id>
   
   <author>
@@ -14,6 +14,46 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CSS垂直置中的4種方法</title>
+    <link href="https://calpa.me/2017/05/06/vertical-align-with-css/"/>
+    <id>https://calpa.me/2017/05/06/vertical-align-with-css/</id>
+    <published>2017-05-06T04:59:00.000Z</published>
+    <updated>2017-05-06T06:33:18.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>這是一道送分題，如果想要垂直置中元素的話，起碼會有四種方法：<strong>padding</strong>, <strong>line-height</strong>, <strong>table</strong> 和 <strong>Flexbox</strong>。使用Flexbox的話，日後要更改元素的位置會非常方便。</p>
+<h2 id="padding"><a href="#padding" class="headerlink" title="padding"></a>padding</h2><p>如果你要置中的元素是<code>inine</code>或者是<code>inline-*</code>的話，比如說文字和鏈接，你可以用<strong>padding</strong>來實現垂直置中：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.vCenter &#123;</div><div class="line">  padding-top: 30px;</div><div class="line">  padding-bottom: 30px;</div><div class="line">  background: #eee;</div><div class="line">  text-align: center;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>因為<code>padding-top</code>和<code>padding-bottom</code>的數值是一樣，所以我們可以透過這個方法來實現垂直置中。</p>
+<iframe height="265" scrolling="no" title="padding 垂直置中" src="//codepen.io/calpa/embed/pPdowv/?height=265&theme-id=0&default-tab=css,result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="https://codepen.io/calpa/pen/pPdowv/" rel="external nofollow noopener noreferrer" target="_blank">padding 垂直置中</a> by Calpa Liu (<a href="http://codepen.io/calpa" rel="external nofollow noopener noreferrer" target="_blank">@calpa</a>) on <a href="http://codepen.io" rel="external nofollow noopener noreferrer" target="_blank">CodePen</a>.<br></iframe>
+
+<h2 id="line-height"><a href="#line-height" class="headerlink" title="line-height"></a>line-height</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.anotherCenter &#123;</div><div class="line">  height: 100px;</div><div class="line">  line-height: 100px;</div><div class="line">  background: #6cf;</div><div class="line">  text-align: center;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如果你不想用<code>padding</code>來實現垂直置中的話，你可以利用<code>line-height</code>等於<code>height</code>。</p>
+<iframe height="265" scrolling="no" title="line-height 垂直置中" src="//codepen.io/calpa/embed/JNOjJJ/?height=265&theme-id=0&default-tab=css,result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="https://codepen.io/calpa/pen/JNOjJJ/" rel="external nofollow noopener noreferrer" target="_blank">line-height 垂直置中</a> by Calpa Liu (<a href="http://codepen.io/calpa" rel="external nofollow noopener noreferrer" target="_blank">@calpa</a>) on <a href="http://codepen.io" rel="external nofollow noopener noreferrer" target="_blank">CodePen</a>.<br></iframe>
+
+<h2 id="table"><a href="#table" class="headerlink" title="table"></a>table</h2><p>你可以透過<code>valign</code>來控制位置。</p>
+<p>另外，你可以利用<code>display: table-cell</code>來改變顯示的方式。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">.fakeTable &#123;</div><div class="line">  height: 200px;</div><div class="line">  width: 200px;</div><div class="line">  display: table-cell;</div><div class="line">  border: 1px solid black;</div><div class="line">  text-align: center;</div><div class="line">  vertical-align: middle;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<iframe height="265" scrolling="no" title="Table 垂直置中" src="//codepen.io/calpa/embed/xdPxLr/?height=265&theme-id=0&default-tab=html,result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/calpa/pen/xdPxLr/" rel="external nofollow noopener noreferrer" target="_blank">Table 垂直置中</a> by Calpa Liu (<a href="http://codepen.io/calpa" rel="external nofollow noopener noreferrer" target="_blank">@calpa</a>) on <a href="http://codepen.io" rel="external nofollow noopener noreferrer" target="_blank">CodePen</a>.<br></iframe>
+
+<h2 id="Flexbox"><a href="#Flexbox" class="headerlink" title="Flexbox"></a>Flexbox</h2><p>另外，你也可以使用<strong>Flexbox</strong>來實現垂直置中，只需要寫justify-content和align-items就可以了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.vertical-center &#123;</div><div class="line">  display: flex;</div><div class="line">  flex-direction: column;</div><div class="line">  justify-content: center;</div><div class="line">  align-items: center;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<iframe height="265" scrolling="no" title="FlexBox 垂直置中" src="//codepen.io/calpa/embed/NjwWjV/?height=265&theme-id=0&default-tab=css,result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="https://codepen.io/calpa/pen/NjwWjV/" rel="external nofollow noopener noreferrer" target="_blank">FlexBox 垂直置中</a> by Calpa Liu (<a href="http://codepen.io/calpa" rel="external nofollow noopener noreferrer" target="_blank">@calpa</a>) on <a href="http://codepen.io" rel="external nofollow noopener noreferrer" target="_blank">CodePen</a>.<br></iframe>
+
+<h2 id="延伸閱讀"><a href="#延伸閱讀" class="headerlink" title="延伸閱讀"></a>延伸閱讀</h2><ol>
+<li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" rel="external nofollow noopener noreferrer" target="_blank">A Complete Guide to Flexbox | CSS-Tricks</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes" rel="external nofollow noopener noreferrer" target="_blank">Using CSS Flexible Boxes - CSS | MDN</a></li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;這是一道送分題，如果想要垂直置中元素的話，起碼會有四種方法：&lt;strong&gt;padding&lt;/strong&gt;, &lt;strong&gt;line-height&lt;/strong&gt;, &lt;strong&gt;table&lt;/strong&gt; 和 &lt;strong&gt;Flexbox&lt;/strong&gt;。使
+    
+    </summary>
+    
+    
+      <category term="CSS" scheme="https://calpa.me/Tags/CSS/"/>
+    
+  </entry>
   
   <entry>
     <title>JavaScript 數組去重</title>
@@ -730,58 +770,6 @@
       <category term="Hexo" scheme="https://calpa.me/Tags/Hexo/"/>
     
       <category term="SEO" scheme="https://calpa.me/Tags/SEO/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>利用Github免費教育禮包更换.me域名</title>
-    <link href="https://calpa.me/2017/02/23/github-edcation-package/"/>
-    <id>https://calpa.me/2017/02/23/github-edcation-package/</id>
-    <published>2017-02-23T02:00:00.000Z</published>
-    <updated>2017-04-05T15:30:37.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="http://i.imgur.com/PmOA3IB.png?3" alt="Imgur"></p>
-<p>現在如果你看網址列的話，你會發現現在域名改成了<code>calpa.me</code>，而且加上了一個綠色的鎖。</p>
-<p><img src="https://dwa5x7aod66zk.cloudfront.net/assets/sdp-backpack-a64038716bf134f45e809ff86b9611fb97e41bbd2ccfa3181da73cf164d3c200.png" width="200px"></p>
-<h2 id="Github-禮包"><a href="#Github-禮包" class="headerlink" title="Github 禮包"></a>Github 禮包</h2><p>如果你有學生身份的話，其中一個好處就是可以使用很多免費服務。比如說<a href="https://education.github.com/" rel="external nofollow noopener noreferrer" target="_blank">Github Education</a>禮包。它裡面有很多內容，但其中比較實用的有下面這些：</p>
-<ol>
-<li><a href="https://aws.amazon.com/?nc1=h_ls" rel="external nofollow noopener noreferrer" target="_blank">AWS Educate</a>: Up to $110 in bonus AWS credits for a total of $75-$150</li>
-<li><a href="https://www.digitalocean.com/" rel="external nofollow noopener noreferrer" target="_blank">Digital Ocean</a>: Cloud hosting</li>
-<li><a href="https://github.com/" rel="external nofollow noopener noreferrer" target="_blank">Github</a>: Unlimited private repositories (normally $7/month) while you are a student.</li>
-<li><a href="https://www.namecheap.com/" rel="external nofollow noopener noreferrer" target="_blank">namecheap</a>: One year domain name registration on the .me TLD (normally $18.99/year)</li>
-<li><a href="https://travis-ci.org/" rel="external nofollow noopener noreferrer" target="_blank">Travis CI</a>: Private builds (normally $69/month) while you’re a student</li>
-<li><a href="https://www.udacity.com/" rel="external nofollow noopener noreferrer" target="_blank">UDACITY</a>: One month free access to any Nanodegree program (normally $199)</li>
-</ol>
-<p>既然namecheap提供一年免費<code>.me</code> 域名，不如我就用<code>calpa.me</code>取代之前<code>calpa.github.io</code>吧。</p>
-<h2 id="namecheap"><a href="#namecheap" class="headerlink" title="namecheap"></a>namecheap</h2><p>在<a href="https://nc.me/" rel="external nofollow noopener noreferrer" target="_blank">namecheap</a>尋找<code>calpa.me</code>是否有人註冊，如果沒有的話就可以直接將.me加入購物車。</p>
-<p><img src="http://i.imgur.com/24oQqGZ.png" alt="Imgur"><br>之後，在namecheap的dashboard會看到自己域名，然後點擊MANAGE按鈕。</p>
-<p>在Advanced DNS裡面，我們需要增加兩筆<code>A</code>記錄：</p>
-<ol>
-<li>@ 192.30.252.153</li>
-<li>@ 192.30.252.154</li>
-</ol>
-<p>之後利用<code>dig +noall +answer username.me</code>命令就可以看到記錄如上一樣。</p>
-<h2 id="HTTPS"><a href="#HTTPS" class="headerlink" title="HTTPS"></a>HTTPS</h2><p>如果要使用HTTPS，可以利用免費的Cloudflare服務。</p>
-<ol>
-<li>註冊Cloudflare</li>
-<li>打開namecheap的domain頁，將nameserver改成Custome DNS，然後加入<code>bella.ns.cloudflare.com</code>和<code>igor.ns.cloudflare.com</code>。</li>
-</ol>
-<h2 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h2><p>添加新的域名其實不難，只是需要很多時間去等待服務器修改DNS記錄。。。</p>
-<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
-<li><a href="https://help.github.com/articles/setting-up-an-apex-domain/#configuring-a-records-with-your-dns-provider" rel="external nofollow noopener noreferrer" target="_blank">Configuring A records with your DNS provider - Github</a></li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/PmOA3IB.png?3&quot; alt=&quot;Imgur&quot;&gt;&lt;/p&gt;
-&lt;p&gt;現在如果你看網址列的話，你會發現現在域名改成了&lt;code&gt;calpa.me&lt;/code&gt;，而且加上了一個綠色的鎖。&lt;/p&gt;
-&lt;p&gt;&lt;img src
-    
-    </summary>
-    
-    
-      <category term="Github" scheme="https://calpa.me/Tags/Github/"/>
     
   </entry>
   
