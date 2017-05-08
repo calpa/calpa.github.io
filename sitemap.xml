@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://calpa.me/about/index.html</loc>
+    
+    <lastmod>2017-05-08T15:03:04.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://calpa.me/2017/05/06/introduction-to-regular-expression/</loc>
     
     <lastmod>2017-05-06T12:19:56.000Z</lastmod>
@@ -89,13 +96,6 @@
     <loc>https://calpa.me/2017/02/19/javascript-closure/</loc>
     
     <lastmod>2017-04-26T09:22:41.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://calpa.me/about/index.html</loc>
-    
-    <lastmod>2017-04-26T09:11:56.000Z</lastmod>
     
   </url>
   
