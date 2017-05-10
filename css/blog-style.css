@@ -5,7 +5,6 @@
     }
 }
 
-
 hr{
     margin:0;
 }
@@ -1205,4 +1204,11 @@ img::-moz-selection {
 /* about-me */
 .about-me {
   margin-top: 35px;
+}
+
+*[id]:before {
+  content:"";
+  display:block;
+  height: 60px; /* fixed header height*/
+  margin: -60px 0 0; /* negative fixed header height */
 }
