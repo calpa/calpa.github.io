@@ -19,7 +19,7 @@
     <meta name="google-site-verification" content="riZBcestky7i9xY__A-5J-2EE65T75X1u-zgbss37Io">
     <title>
         
-        React 組件生命週期(1) - 加載組件｜Calpa&#39;s blog
+        React 組件生命週期 - 加載組件｜Calpa&#39;s blog
         
     </title>
 
@@ -165,7 +165,7 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>React 組件生命週期(1) - 加載組件</h1>
+                    <h1>React 組件生命週期 - 加載組件</h1>
                     
                     <span>
                       作者 Calpa
@@ -175,7 +175,7 @@
                     </span>
 
                     
-                      <span class="post-count">共960字</span>
+                      <span class="post-count">共996字</span>
                     
 
                     <div class="tags text-center">
@@ -191,7 +191,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            React 組件生命週期(1) - 加載組件
+            React 組件生命週期 - 加載組件
         </span>
     </div>
 </header>
@@ -332,7 +332,7 @@
         
           <li>
             <a href="/2017/05/16/react-component-lifecycle/">
-              React 組件生命週期(1) - 加載組件
+              React 組件生命週期 - 加載組件
             </a>
           </li>
         
@@ -421,10 +421,11 @@
 
 
             <div class="col-lg-7 col-lg-offset-0 col-md-7 col-sm-9 post-container">
-                <p><code>React</code>提供<code>React.Component</code>，我們可以透過使用<code>Component</code>，拆分UI為可以重複使用的獨立部分。<code>React.Component</code>是一個抽象的base class。我們甚少直接運用<code>React.Component</code>，通常是透過創建一個子類，並使用<code>render()</code>方法。</p>
+                <h2 id="tl-dr"><a href="#tl-dr" class="headerlink" title="tl:dr;"></a>tl:dr;</h2><img src="/img/react-mount.svg" width="300" title="auto React LifeCycle Mount">
+<h2 id="組件"><a href="#組件" class="headerlink" title="組件"></a>組件</h2><p><code>React</code>提供<code>React.Component</code>，我們可以透過使用組件，拆分UI為可以重複使用的獨立部分。<code>React.Component</code>是一個抽象的base class。我們甚少直接運用<code>React.Component</code>，通常是透過創建一個子類，並使用<code>render()</code>方法。</p>
 <p>例子：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Greeting</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</div><div class="line">  render() &#123;</div><div class="line">    <span class="keyword">return</span> &lt;h1&gt;Hello, &#123;this.props.name&#125;&lt;/h1&gt;;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>如果你不選擇使用ES6，你可以使用模組<code>create-react-class</code>。你可以參考<a href="https://facebook.github.io/react/docs/react-without-es6.html" rel="external nofollow noopener noreferrer" target="_blank">React Without ES6</a>。<br>下面這一段和ES6的寫法效果一樣：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> createReactClass = <span class="built_in">require</span>(<span class="string">'create-react-class'</span>);</div><div class="line"><span class="keyword">var</span> Greeting = createReactClass(&#123;</div><div class="line">  <span class="attr">render</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> &lt;h1&gt;Hello, &#123;this.props.name&#125;&lt;/h1&gt;;</div><div class="line">  &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
-<h2 id="組件生命週期"><a href="#組件生命週期" class="headerlink" title="組件生命週期"></a>組件生命週期</h2><p>每一個組件都會有幾個生命週期的方法，你可以在程序運行的指定時間，透過覆蓋他們來運行特定代碼。對於這些方法，我們會用<code>will-</code>來表示它會在某些事情發生之前的一刻被調用，而<code>did-</code>則是表示它會在某些事情發生之後的一刻被調用。</p>
+<h2 id="組件生命週期"><a href="#組件生命週期" class="headerlink" title="組件生命週期"></a>組件生命週期</h2><p>每一個組件都會有幾個生命週期的方法，你可以在程序運行的指定時間，透過覆蓋他們來運行特定代碼。對於這些方法，我們會用<code>will-</code>來表示它會在某些事情發生之前的一刻被調用，而<code>did-</code>則是表示它會在某些事情發生之後的一刻被調用。本文會細說加載組件中發生了什麼事情。</p>
 <h3 id="加載-Mounting"><a href="#加載-Mounting" class="headerlink" title="加載 (Mounting)"></a>加載 (Mounting)</h3><ol>
 <li><code>constructor()</code></li>
 <li><code>componentWillMount()</code></li>
@@ -443,7 +444,7 @@
 <ol>
 <li>componentWillUnmount()</li>
 </ol>
-<h3 id="其他-APIs"><a href="#其他-APIs" class="headerlink" title="其他 APIs"></a>其他 APIs</h3><ol>
+<h3 id="其他內置方法"><a href="#其他內置方法" class="headerlink" title="其他內置方法"></a>其他內置方法</h3><ol>
 <li>setState()</li>
 <li>forceUpdate()</li>
 </ol>
@@ -469,6 +470,7 @@
 <h4 id="測試代碼"><a href="#測試代碼" class="headerlink" title="測試代碼"></a>測試代碼</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Greeting</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</div><div class="line">  _log(method, args) &#123;</div><div class="line">    <span class="built_in">console</span>.log(method, args);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">constructor</span>(props) &#123;</div><div class="line">    <span class="keyword">super</span>(props);</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'constructor'</span>, props);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  render() &#123;</div><div class="line">    <span class="keyword">this</span>._log(<span class="string">'render'</span>, <span class="keyword">this</span>.props.name);</div><div class="line">    <span class="keyword">return</span> &lt;h1&gt;Hello, &#123;this.props.name&#125;&lt;/h1&gt;;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  componentWillMount() &#123;</div><div class="line">    <span class="keyword">this</span>._log(<span class="string">'componentWillMount'</span>);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  componentDidMount() &#123;</div><div class="line">    <span class="keyword">this</span>._log(<span class="string">'componentDidMount'</span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">ReactDOM.render(</div><div class="line">  &lt;Greeting name="Calpa" /&gt;,</div><div class="line">  document.getElementById('app')</div><div class="line">);</div></pre></td></tr></table></figure>
 <p>Console Output:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&quot;constructor&quot; Object &#123;</div><div class="line">  name: &quot;Calpa&quot;</div><div class="line">&#125;</div><div class="line">&quot;componentWillMount&quot; undefined</div><div class="line">&quot;render&quot; &quot;Calpa&quot;</div><div class="line">&quot;componentDidMount&quot; undefined</div></pre></td></tr></table></figure></p>
 <p>你可以在<a href="https://codepen.io/calpa/full/xdJrQm/" rel="external nofollow noopener noreferrer" target="_blank">CodePen</a>中獲取，並測試這段代碼。</p>
+<p>不知道拿哪一張當封面好。。。</p>
 
                 <hr>
                 
@@ -496,7 +498,7 @@
 
             <div class="hidden-xs col-md-2 col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#組件生命週期"><span class="toc-text">組件生命週期</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#加載-Mounting"><span class="toc-text">加載 (Mounting)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#更新-Updating"><span class="toc-text">更新 (Updating)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#斷開連接-Unmounting"><span class="toc-text">斷開連接 (Unmounting)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#其他-APIs"><span class="toc-text">其他 APIs</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#constructor-NaN"><span class="toc-text">constructor()</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#注意事項"><span class="toc-text">注意事項</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#componentWillMount"><span class="toc-text">componentWillMount()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#render"><span class="toc-text">render()</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#注意事項-1"><span class="toc-text">注意事項</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#componentDidMount"><span class="toc-text">componentDidMount()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#測試代碼"><span class="toc-text">測試代碼</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#tl-dr"><span class="toc-text">tl:dr;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#組件"><span class="toc-text">組件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#組件生命週期"><span class="toc-text">組件生命週期</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#加載-Mounting"><span class="toc-text">加載 (Mounting)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#更新-Updating"><span class="toc-text">更新 (Updating)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#斷開連接-Unmounting"><span class="toc-text">斷開連接 (Unmounting)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#其他內置方法"><span class="toc-text">其他內置方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#constructor-NaN"><span class="toc-text">constructor()</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#注意事項"><span class="toc-text">注意事項</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#componentWillMount"><span class="toc-text">componentWillMount()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#render"><span class="toc-text">render()</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#注意事項-1"><span class="toc-text">注意事項</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#componentDidMount"><span class="toc-text">componentDidMount()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#測試代碼"><span class="toc-text">測試代碼</span></a></li></ol></li></ol></li></ol>
                 </div>
             </div>
         </div>
