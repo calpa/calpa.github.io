@@ -19,11 +19,11 @@
     <meta name="google-site-verification" content="riZBcestky7i9xY__A-5J-2EE65T75X1u-zgbss37Io">
     <title>
         
-        JavaScript 數組去重｜Calpa&#39;s blog
+        React 組件生命週期(1) - 加載組件｜Calpa&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="https://calpa.me/2017/05/05/javascript-array/">
+    <link rel="canonical" href="https://calpa.me/2017/05/16/react-component-lifecycle/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -165,22 +165,24 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>JavaScript 數組去重</h1>
+                    <h1>React 組件生命週期(1) - 加載組件</h1>
                     
                     <span>
                       作者 Calpa
                     </span>
                     <span>
-                      日期 2017-05-05
+                      日期 2017-05-16
                     </span>
 
                     
-                      <span class="post-count">共259字</span>
+                      <span class="post-count">共960字</span>
                     
 
                     <div class="tags text-center">
                         
-                        <a class="tag" href="/Tags/#JavaScript" title="JavaScript">JavaScript</a>
+                        <a class="tag" href="/Tags/#Web" title="Web">Web</a>
+                        
+                        <a class="tag" href="/Tags/#React" title="React">React</a>
                         
                     </div>
                 </div>
@@ -189,7 +191,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            JavaScript 數組去重
+            React 組件生命週期(1) - 加載組件
         </span>
     </div>
 </header>
@@ -419,28 +421,63 @@
 
 
             <div class="col-lg-7 col-lg-offset-0 col-md-7 col-sm-9 post-container">
-                <p>顧著做化工模擬功課，差點忘記怎樣寫代碼。。。</p>
-<h1 id="內置方法"><a href="#內置方法" class="headerlink" title="內置方法"></a>內置方法</h1><p>使用JavaScript內置的去重複方法<code>Set()</code>，比如說：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">let arr = [1, 2, 3, 3, 4, 5];</div><div class="line">Array.from(new Set(arr)); // [1, 2, 3, 4, 5]</div><div class="line">[...new Set(arr)]; // [1, 2, 3, 4, 5]</div></pre></td></tr></table></figure>
-<h2 id="第一時間會想到的方法"><a href="#第一時間會想到的方法" class="headerlink" title="第一時間會想到的方法"></a>第一時間會想到的方法</h2><ol>
-<li>雙重遍歷</li>
-<li>使用hash table</li>
+                <p><code>React</code>提供<code>React.Component</code>，我們可以透過使用<code>Component</code>，拆分UI為可以重複使用的獨立部分。<code>React.Component</code>是一個抽象的base class。我們甚少直接運用<code>React.Component</code>，通常是透過創建一個子類，並使用<code>render()</code>方法。</p>
+<p>例子：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Greeting</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</div><div class="line">  render() &#123;</div><div class="line">    <span class="keyword">return</span> &lt;h1&gt;Hello, &#123;this.props.name&#125;&lt;/h1&gt;;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>如果你不選擇使用ES6，你可以使用模組<code>create-react-class</code>。你可以參考<a href="https://facebook.github.io/react/docs/react-without-es6.html" rel="external nofollow noopener noreferrer" target="_blank">React Without ES6</a>。<br>下面這一段和ES6的寫法效果一樣：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> createReactClass = <span class="built_in">require</span>(<span class="string">'create-react-class'</span>);</div><div class="line"><span class="keyword">var</span> Greeting = createReactClass(&#123;</div><div class="line">  <span class="attr">render</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> &lt;h1&gt;Hello, &#123;this.props.name&#125;&lt;/h1&gt;;</div><div class="line">  &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<h2 id="組件生命週期"><a href="#組件生命週期" class="headerlink" title="組件生命週期"></a>組件生命週期</h2><p>每一個組件都會有幾個生命週期的方法，你可以在程序運行的指定時間，透過覆蓋他們來運行特定代碼。對於這些方法，我們會用<code>will-</code>來表示它會在某些事情發生之前的一刻被調用，而<code>did-</code>則是表示它會在某些事情發生之後的一刻被調用。</p>
+<h3 id="加載-Mounting"><a href="#加載-Mounting" class="headerlink" title="加載 (Mounting)"></a>加載 (Mounting)</h3><ol>
+<li><code>constructor()</code></li>
+<li><code>componentWillMount()</code></li>
+<li><code>render()</code></li>
+<li><code>componentDidMount()</code></li>
 </ol>
-<h2 id="Underscore"><a href="#Underscore" class="headerlink" title="Underscore"></a>Underscore</h2><p>最後來看一下underscore是如何實現unique()方法吧。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">_.uniq = _.unique = function(array, isSorted, iteratee, context) &#123;</div><div class="line">  // 如果數組不是已經排序</div><div class="line">  if (!_.isBoolean(isSorted)) &#123;</div><div class="line">    // 將function(array, isSorted, iteratee, context)</div><div class="line">    // 換成function(array, false, isSorted, iteratee)</div><div class="line">    context = iteratee;</div><div class="line">    iteratee = isSorted;</div><div class="line">    isSorted = false;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  // 如果存在iteratee</div><div class="line">  if (iteratee != null) iteratee = cb(iteratee, context);</div><div class="line">  var result = [];</div><div class="line">  var seen = [];</div><div class="line">  for (var i = 0, length = getLength(array); i &lt; length; i++) &#123;</div><div class="line">    var value = array[i],</div><div class="line">        computed = iteratee ? iteratee(value, i, array) : value;</div><div class="line">    // 如果已經排序，就直接增加數值(第一個值)。</div><div class="line">    // 非0 就是 true</div><div class="line">    // 或者see不是computed</div><div class="line">    if (isSorted) &#123;</div><div class="line">      if (!i || seen !== computed) result.push(value);</div><div class="line">      seen = computed;</div><div class="line">    &#125; else if (iteratee) &#123;</div><div class="line">      // 使用_.contains查詢數組裡面是否擁有這個值</div><div class="line">      if (!_.contains(seen, computed)) &#123;</div><div class="line">        seen.push(computed);</div><div class="line">        result.push(value);</div><div class="line">      &#125;</div><div class="line">    &#125; else if (!_.contains(result, value)) &#123;</div><div class="line">      result.push(value);</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  return result;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h3 id="更新-Updating"><a href="#更新-Updating" class="headerlink" title="更新 (Updating)"></a>更新 (Updating)</h3><p>當 props 或者 state 更新的時候，下面這些方法會被調用：</p>
+<ol>
+<li>componentWillReceiveProps()</li>
+<li>shouldComponentUpdate()</li>
+<li>componentWillUpdate()</li>
+<li>render()</li>
+<li>componentDidUpdate()</li>
+</ol>
+<h3 id="斷開連接-Unmounting"><a href="#斷開連接-Unmounting" class="headerlink" title="斷開連接 (Unmounting)"></a>斷開連接 (Unmounting)</h3><p>當組件脫離DOM的時候，下面這個方法回被調用：</p>
+<ol>
+<li>componentWillUnmount()</li>
+</ol>
+<h3 id="其他-APIs"><a href="#其他-APIs" class="headerlink" title="其他 APIs"></a>其他 APIs</h3><ol>
+<li>setState()</li>
+<li>forceUpdate()</li>
+</ol>
+<h4 id="constructor-NaN"><a href="#constructor-NaN" class="headerlink" title="constructor()"></a>constructor()</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">constructor</span>(props)</div></pre></td></tr></table></figure>
+<p>在React加載組件之前，它會調用<code>constructor</code>。你可以在<code>constructor</code>中去賦予組件的初始<code>state</code>。如果你使用<code>props</code>創造初始<code>state</code>的話，這也是可以接受的。這會很有效地<code>fork</code>組件的<code>props</code>，然後賦予初始<code>state</code>的值。</p>
+<p>有效的<code>constructor</code>例子：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">constructor</span>(props) &#123;</div><div class="line">  <span class="keyword">super</span>(props);</div><div class="line">  <span class="keyword">this</span>.state = &#123;</div><div class="line">    <span class="attr">color</span>: props.initialColor</div><div class="line">  &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h5 id="注意事項"><a href="#注意事項" class="headerlink" title="注意事項"></a>注意事項</h5><ol>
+<li>如果你不需要賦予初始<code>state</code>，你不需要在 React 的組件中植入<code>constructor</code>。</li>
+<li>當你使用在<code>React.Component</code>的子類中加載<code>constructor()</code>方法時，你應該第一時間調用<code>super(props)</code>，而不是在任何statement之後。不然，我們獲取<code>this.props</code>值的時候，它會是<code>undefined</code>。</li>
+<li>在一些類似上面的例子，<code>state</code>未必會及時與任何的<code>props</code>更新。如果你需要同步<code>state</code>的話，你其實是想要<a href="https://facebook.github.io/react/docs/lifting-state-up.html" rel="external nofollow noopener noreferrer" target="_blank">lift the state up</a>。</li>
+</ol>
+<h4 id="componentWillMount"><a href="#componentWillMount" class="headerlink" title="componentWillMount()"></a>componentWillMount()</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">componentWillMount()</div></pre></td></tr></table></figure>
+<p>它會在組件<code>render()</code>之前執行一次，然後不能再執行。如果在這裡定義了<code>setState</code>方法，頁面只會在加載之前更新一次，不會重複渲染。React 官方推薦使用<code>constructor()</code>代替這個方法。</p>
+<h4 id="render"><a href="#render" class="headerlink" title="render()"></a>render()</h4><p><code>React.Component</code>必須有這個方法，即使你返回<code>null</code>，或者<code>false</code>。當你返回<code>null</code>，或者<code>false</code>的時候，<code>ReactDOM.findDOMNode(this)</code> 會返回<code>null</code>。</p>
+<p>當它被調用的時候，它會檢查<code>this.props</code>和<code>this.state</code>，然後返回一個單獨的 React 元素。這個元素會是一個純正的<code>DOM</code>組件，例如<div>，或者自定義的 composite 組件。</div></p>
+<h5 id="注意事項-1"><a href="#注意事項-1" class="headerlink" title="注意事項"></a>注意事項</h5><ol>
+<li><code>render()</code>方法應該是<code>pure</code>：它不會改寫任何組件的<code>state</code>。每一次調用它都會返回同樣的結果。它不會直接接觸到瀏覽器層面。</li>
+<li>如果你需要接觸到瀏覽器層面，你應該在<code>componentDidMount()</code>或者其他生命週期方法中接觸瀏覽器。</li>
+<li>保持<code>render()</code>方法 pure 來讓組件更加容易被人理解。</li>
+</ol>
+<h4 id="componentDidMount"><a href="#componentDidMount" class="headerlink" title="componentDidMount()"></a>componentDidMount()</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">componentDidMount()</div></pre></td></tr></table></figure>
+<p>它會在組件加載之後執行一次。如果你的初始程序需要DOM nodes，你應該在這裡寫。如果你需要從其他地方加載資料，這裡也是一個不錯的地方去執行網絡請求。如果在這裡定義了<code>setState</code>方法，會觸發重複渲染。</p>
+<h4 id="測試代碼"><a href="#測試代碼" class="headerlink" title="測試代碼"></a>測試代碼</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Greeting</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</div><div class="line">  _log(method, args) &#123;</div><div class="line">    <span class="built_in">console</span>.log(method, args);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">constructor</span>(props) &#123;</div><div class="line">    <span class="keyword">super</span>(props);</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'constructor'</span>, props);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  render() &#123;</div><div class="line">    <span class="keyword">this</span>._log(<span class="string">'render'</span>, <span class="keyword">this</span>.props.name);</div><div class="line">    <span class="keyword">return</span> &lt;h1&gt;Hello, &#123;this.props.name&#125;&lt;/h1&gt;;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  componentWillMount() &#123;</div><div class="line">    <span class="keyword">this</span>._log(<span class="string">'componentWillMount'</span>);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  componentDidMount() &#123;</div><div class="line">    <span class="keyword">this</span>._log(<span class="string">'componentDidMount'</span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">ReactDOM.render(</div><div class="line">  &lt;Greeting name="Calpa" /&gt;,</div><div class="line">  document.getElementById('app')</div><div class="line">);</div></pre></td></tr></table></figure>
+<p>Console Output:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&quot;constructor&quot; Object &#123;</div><div class="line">  name: &quot;Calpa&quot;</div><div class="line">&#125;</div><div class="line">&quot;componentWillMount&quot; undefined</div><div class="line">&quot;render&quot; &quot;Calpa&quot;</div><div class="line">&quot;componentDidMount&quot; undefined</div></pre></td></tr></table></figure></p>
+<p>你可以在<a href="https://codepen.io/calpa/full/xdJrQm/" rel="external nofollow noopener noreferrer" target="_blank">CodePen</a>中獲取，並測試這段代碼。</p>
 
                 <hr>
                 
 
                 <ul class="pager">
                     
-                    <li class="previous">
-                        <a href="/2017/05/06/vertical-align-with-css/" data-toggle="tooltip" data-placement="top" title="CSS垂直置中的4種方法">&larr; Previous Post</a>
-                    </li>
-                    
                     
                     <li class="next">
-                        <a href="/2017/05/03/redux-array-push-function/" data-toggle="tooltip" data-placement="top" title="Redux push()是怎樣寫的？">Next Post &rarr;</a>
+                        <a href="/2017/05/06/introduction-to-regular-expression/" data-toggle="tooltip" data-placement="top" title="初探正則表達式">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
@@ -459,7 +496,7 @@
 
             <div class="hidden-xs col-md-2 col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#內置方法"><span class="toc-text">內置方法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#第一時間會想到的方法"><span class="toc-text">第一時間會想到的方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Underscore"><span class="toc-text">Underscore</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#組件生命週期"><span class="toc-text">組件生命週期</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#加載-Mounting"><span class="toc-text">加載 (Mounting)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#更新-Updating"><span class="toc-text">更新 (Updating)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#斷開連接-Unmounting"><span class="toc-text">斷開連接 (Unmounting)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#其他-APIs"><span class="toc-text">其他 APIs</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#constructor-NaN"><span class="toc-text">constructor()</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#注意事項"><span class="toc-text">注意事項</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#componentWillMount"><span class="toc-text">componentWillMount()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#render"><span class="toc-text">render()</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#注意事項-1"><span class="toc-text">注意事項</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#componentDidMount"><span class="toc-text">componentDidMount()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#測試代碼"><span class="toc-text">測試代碼</span></a></li></ol></li></ol></li></ol>
                 </div>
             </div>
         </div>
@@ -472,8 +509,8 @@
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = "calpas-blog";
-    var disqus_identifier = "https://calpa.me/2017/05/05/javascript-array/";
-    var disqus_url = "https://calpa.me/2017/05/05/javascript-array/";
+    var disqus_identifier = "https://calpa.me/2017/05/16/react-component-lifecycle/";
+    var disqus_url = "https://calpa.me/2017/05/16/react-component-lifecycle/";
 
     (function () {
         var dsq = document.createElement('script');

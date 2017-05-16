@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://calpa.me/2017/05/16/react-component-lifecycle/</loc>
+    
+    <lastmod>2017-05-16T15:48:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://calpa.me/about/index.html</loc>
     
     <lastmod>2017-05-10T12:31:00.000Z</lastmod>
