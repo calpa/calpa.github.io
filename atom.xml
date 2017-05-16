@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://calpa.me/"/>
-  <updated>2017-05-16T18:00:39.000Z</updated>
+  <updated>2017-05-16T18:03:20.000Z</updated>
   <id>https://calpa.me/</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="https://calpa.me/2017/05/16/react-component-lifecycle/"/>
     <id>https://calpa.me/2017/05/16/react-component-lifecycle/</id>
     <published>2017-05-16T14:40:00.000Z</published>
-    <updated>2017-05-16T18:00:39.000Z</updated>
+    <updated>2017-05-16T18:03:20.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="tl-dr"><a href="#tl-dr" class="headerlink" title="tl:dr;"></a>tl:dr;</h2><img src="/img/react-mount.svg" width="300" title="auto React LifeCycle Mount">
+    <content type="html"><![CDATA[<img src="/img/react-mount.svg" width="300" title="auto React LifeCycle Mount">
 <h2 id="組件"><a href="#組件" class="headerlink" title="組件"></a>組件</h2><p><code>React</code>提供<code>React.Component</code>，我們可以透過使用組件，拆分UI為可以重複使用的獨立部分。<code>React.Component</code>是一個抽象的base class。我們甚少直接運用<code>React.Component</code>，通常是透過創建一個子類，並使用<code>render()</code>方法。</p>
 <p>例子：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Greeting</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</div><div class="line">  render() &#123;</div><div class="line">    <span class="keyword">return</span> &lt;h1&gt;Hello, &#123;this.props.name&#125;&lt;/h1&gt;;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>如果你不選擇使用ES6，你可以使用模組<code>create-react-class</code>。你可以參考<a href="https://facebook.github.io/react/docs/react-without-es6.html" rel="external nofollow noopener noreferrer" target="_blank">React Without ES6</a>。<br>下面這一段和ES6的寫法效果一樣：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> createReactClass = <span class="built_in">require</span>(<span class="string">'create-react-class'</span>);</div><div class="line"><span class="keyword">var</span> Greeting = createReactClass(&#123;</div><div class="line">  <span class="attr">render</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> &lt;h1&gt;Hello, &#123;this.props.name&#125;&lt;/h1&gt;;</div><div class="line">  &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
@@ -76,7 +76,8 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;tl-dr&quot;&gt;&lt;a href=&quot;#tl-dr&quot; class=&quot;headerlink&quot; title=&quot;tl:dr;&quot;&gt;&lt;/a&gt;tl:dr;&lt;/h2&gt;&lt;img src=&quot;/img/react-mount.svg&quot; width=&quot;300&quot; title=&quot;auto Rea
+      &lt;img src=&quot;/img/react-mount.svg&quot; width=&quot;300&quot; title=&quot;auto React LifeCycle Mount&quot;&gt;
+&lt;h2 id=&quot;組件&quot;&gt;&lt;a href=&quot;#組件&quot; class=&quot;headerlink&quot; title=&quot;組件&quot;&gt;&lt;/a&gt;
     
     </summary>
     
