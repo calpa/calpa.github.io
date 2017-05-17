@@ -789,9 +789,9 @@
     <link href="https://calpa.me/2017/03/25/javascript-this/"/>
     <id>https://calpa.me/2017/03/25/javascript-this/</id>
     <published>2017-03-25T04:44:00.000Z</published>
-    <updated>2017-04-26T09:23:14.000Z</updated>
+    <updated>2017-05-17T05:55:53.000Z</updated>
     
-    <content type="html"><![CDATA[<p>首先我們要理解調用函數的方法，最起碼可以用下面兩個方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">func(arg1, arg2);</div><div class="line">func.call(context, arg1, arg2);</div></pre></td></tr></table></figure></p>
+    <content type="html"><![CDATA[<p>首先我們要理解調用函數的方法，最起碼可以用下面兩個方法：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">func(arg1, arg2);</div><div class="line">func.call(context, arg1, arg2);</div></pre></td></tr></table></figure></p>
 <p>之前我也沒怎麼見過後者，基本上都是直接call func的。後者<code>func(arg1, arg2)</code> 等於 <code>func.call(undefined, arg1, arg2)</code>。簡單來說，this就是context。如果context沒有定義的話，它會被定義為一個全局對象，比如說global。在MDN的文檔有這一句: <code>if the method is a function in non-strict mode code, null and undefined will be replaced with the global object and primitive values will be converted to objects</code>。</p>
 <p>如果不想要this是global的話，給予context一個對象就可以了：<br><code>func.call(obj, arg1, arg2)</code></p>
 <h2 id="全局上下文"><a href="#全局上下文" class="headerlink" title="全局上下文"></a>全局上下文</h2><p>在全局中，無論是否在嚴格模式下(Strict mode)，<code>this</code>都是代表全局對象。</p>
@@ -800,23 +800,23 @@
 <li>全局對象為<code>window</code></li>
 </ol>
 <h3 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h3><p>全局對象為<code>global</code></p>
-<p>直接運用函數的話，this會指向global。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function test() &#123;</div><div class="line">  this.x = 1;</div><div class="line">&#125;</div><div class="line"></div><div class="line">test();</div><div class="line"></div><div class="line">console.log(this.x); // 1</div></pre></td></tr></table></figure></p>
-<p>如果是生成一個對象的話，this會指向這個對象而不是global。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function Car() &#123;</div><div class="line">  this.color = &apos;red&apos;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var c = new Car();</div><div class="line"></div><div class="line">console.log(this.color); // undefined</div><div class="line">console.log(c.color); // red</div></pre></td></tr></table></figure></p>
+<p>直接運用函數的話，this會指向global。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">this</span>.x = <span class="number">1</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line">test();</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">this</span>.x); <span class="comment">// 1</span></div></pre></td></tr></table></figure></p>
+<p>如果是生成一個對象的話，this會指向這個對象而不是global。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Car</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">this</span>.color = <span class="string">'red'</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> c = <span class="keyword">new</span> Car();</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">this</span>.color); <span class="comment">// undefined</span></div><div class="line"><span class="built_in">console</span>.log(c.color); <span class="comment">// red</span></div></pre></td></tr></table></figure></p>
 <p>下次遇到問題的話，我還是MDN資料吧，裡面寫得很詳細。</p>
 <h2 id="問題"><a href="#問題" class="headerlink" title="問題"></a>問題</h2><p>在Node.js中，為什麼this.global === this.global.global的返回值為true？</p>
 <h2 id="延伸思考"><a href="#延伸思考" class="headerlink" title="延伸思考"></a>延伸思考</h2><ol>
-<li>Function.prototype.apply()</li>
+<li>Function.prototype.apply()和call()方法有什麼不同</li>
 <li>Function.prototype.bind()</li>
 </ol>
 <h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
-<li><a href="this MDN技術文">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/this</a></li>
-<li><a href="Function.prototype.call MDN技術文">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/this" rel="external nofollow noopener noreferrer" target="_blank">this - MDN</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call" rel="external nofollow noopener noreferrer" target="_blank">Function.prototype.call - MDN</a></li>
 </ol>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;首先我們要理解調用函數的方法，最起碼可以用下面兩個方法：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;l
+      &lt;p&gt;首先我們要理解調用函數的方法，最起碼可以用下面兩個方法：&lt;br&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div cla
     
     </summary>
     

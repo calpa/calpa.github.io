@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://calpa.me/2017/03/25/javascript-this/</loc>
+    
+    <lastmod>2017-05-17T05:55:53.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://calpa.me/2017/05/16/react-component-lifecycle/</loc>
     
     <lastmod>2017-05-16T18:03:20.000Z</lastmod>
@@ -89,13 +96,6 @@
     <loc>https://calpa.me/2017/01/20/using-javascript-to-create-web-storage/</loc>
     
     <lastmod>2017-04-26T09:25:31.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://calpa.me/2017/03/25/javascript-this/</loc>
-    
-    <lastmod>2017-04-26T09:23:14.000Z</lastmod>
     
   </url>
   
