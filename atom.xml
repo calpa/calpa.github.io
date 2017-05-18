@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://calpa.me/"/>
-  <updated>2017-05-16T18:03:20.000Z</updated>
+  <updated>2017-05-18T06:08:33.000Z</updated>
   <id>https://calpa.me/</id>
   
   <author>
@@ -16,14 +16,142 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>利用 ECMAScript 学习如何判断数据类型</title>
+    <link href="https://calpa.me/2017/05/18/javascript-data-structures/"/>
+    <id>https://calpa.me/2017/05/18/javascript-data-structures/</id>
+    <published>2017-05-18T06:00:00.000Z</published>
+    <updated>2017-05-18T06:08:33.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>每一种编程语言都有数据结构，但他们各有不同之处。JavaScript 是一种动态语言，变量的类型不用提前声明，你可以使用同一个变量来保存不同的数据类型。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="string">'apple'</span>; <span class="comment">// String type</span></div><div class="line"><span class="keyword">var</span> a = <span class="number">42</span>; <span class="comment">// Number type</span></div><div class="line"><span class="keyword">var</span> a = <span class="literal">true</span>; <span class="comment">// Boolean type</span></div></pre></td></tr></table></figure></p>
+<p>这就和Python的写法差不多:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">a = <span class="string">'apple'</span> // String type</div><div class="line">a = <span class="number">42</span> // Number type</div><div class="line">a = <span class="keyword">True</span> // Boolean type</div></pre></td></tr></table></figure></p>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p><a href="https://tc39.github.io/ecma262/#sec-ecmascript-overview" rel="external nofollow noopener noreferrer" target="_blank">ECMAScript 标準</a>明确定义了7种数据类型：6种原始类型 (Primitive value) 和Object。</p>
+<img src="/img/javascript-data-structures.svg" width="300" title="auto JavaScript Data Structure">
+<p>原始数据类型：</p>
+<ol>
+<li>Undefined</li>
+<li>Null</li>
+<li>Boolean</li>
+<li>Number</li>
+<li>String</li>
+<li>Symbol (ECMAScript 2015)</li>
+</ol>
+<h2 id="判断方法"><a href="#判断方法" class="headerlink" title="判断方法"></a>判断方法</h2><p>我们可以透过使用<code>typeof</code>和<code>Object.prototype.toString()</code>来判断数据类型。</p>
+<h3 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a>typeof</h3><p>在一开始设计 JavaScript 时，数值是由一个标签以及实际数据值表示的。对于基本类型，标签是1；而对于对象类型，标签是0。由于null代表的是空指针(里面都是0)，null的类型标签会是0。因此<code>typeof null</code>就会返回”object”;</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">typeof</span> <span class="literal">undefined</span>; <span class="comment">// "undefined"</span></div><div class="line"><span class="keyword">typeof</span> <span class="built_in">Boolean</span>;   <span class="comment">// "function"</span></div><div class="line"><span class="keyword">typeof</span> <span class="literal">true</span>;      <span class="comment">// "boolean"</span></div><div class="line"><span class="keyword">typeof</span> <span class="number">42</span>;        <span class="comment">// "number"</span></div><div class="line"><span class="keyword">typeof</span> <span class="string">"42"</span>;      <span class="comment">// "string"</span></div><div class="line"><span class="keyword">typeof</span> <span class="built_in">Symbol</span>();  <span class="comment">// "symbol"</span></div></pre></td></tr></table></figure>
+<p>我们可以看一下ECMAScript是怎样定义typeof的：</p>
+<ol>
+<li>Let val be the result of evaluating UnaryExpression.</li>
+<li>If Type(val) is Reference, then<br>a. If IsUnresolvableReference(val) is true, return “undefined”.</li>
+<li>Set val to ? GetValue(val).</li>
+<li>Return a String according to Table 35.</li>
+</ol>
+<p>Table 35: typeof Operator Results</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Typeof val</th>
+<th style="text-align:left">结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Item One</td>
+<td style="text-align:left">Item Two</td>
+</tr>
+<tr>
+<td style="text-align:left">Type of val</td>
+<td style="text-align:left">Result</td>
+</tr>
+<tr>
+<td style="text-align:left">Undefined</td>
+<td style="text-align:left">“undefined”</td>
+</tr>
+<tr>
+<td style="text-align:left">Null</td>
+<td style="text-align:left">“object”</td>
+</tr>
+<tr>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left">“boolean”</td>
+</tr>
+<tr>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">“number”</td>
+</tr>
+<tr>
+<td style="text-align:left">String</td>
+<td style="text-align:left">“string”</td>
+</tr>
+<tr>
+<td style="text-align:left">Symbol</td>
+<td style="text-align:left">“symbol”</td>
+</tr>
+<tr>
+<td style="text-align:left">Object (ordinary and does not implement [[Call]])</td>
+<td style="text-align:left">“object”</td>
+</tr>
+<tr>
+<td style="text-align:left">Object (standard exotic and does not implement [[Call]])</td>
+<td style="text-align:left">“object”</td>
+</tr>
+<tr>
+<td style="text-align:left">Object (implements [[Call]])</td>
+<td style="text-align:left">“function”</td>
+</tr>
+<tr>
+<td style="text-align:left">Object (non-standard exotic and does not implement [[Call]])</td>
+<td style="text-align:left">Implementation-defined. Must not be “undefined”, “boolean”,  “function”, “number”, “symbol”, or “string”.</td>
+</tr>
+</tbody>
+</table>
+<p>另外，如果直接用<code>typeof</code>来判断 NaN 的话，它会返回<code>&quot;number&quot;</code>，对于 NaN 我们可以用<code>isNaN</code>方法来判断是否一个数字。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">typeof</span> <span class="literal">NaN</span>; <span class="comment">// "number"</span></div><div class="line"><span class="built_in">isNaN</span>(<span class="literal">NaN</span>); <span class="comment">// true</span></div></pre></td></tr></table></figure></p>
+<h3 id="Object-prototype-toString"><a href="#Object-prototype-toString" class="headerlink" title="Object.prototype.toString()"></a>Object.prototype.toString()</h3><p>我们可以利用<code>Object.prototype.toString.call()</code>或者<code>Object.prototype.toString.apply()</code>这两个方法判断 Object 的类型，以及 null：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="literal">undefined</span>);   <span class="comment">// "[object Undefined]"</span></div><div class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="keyword">new</span> <span class="built_in">Date</span>);    <span class="comment">// "[object Date]"</span></div><div class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="keyword">new</span> <span class="built_in">String</span>);  <span class="comment">// "[object String]"</span></div><div class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="built_in">Math</span>);        <span class="comment">// "[object Math]"</span></div><div class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="literal">null</span>);        <span class="comment">// "[object Null]"</span></div></pre></td></tr></table></figure></p>
+<p>ECMAScript 19.1.3.6 明确定义 Object.prototype.toString()：</p>
+<ol>
+<li>If the <code>this</code> value is <code>undefined</code>, return <code>&quot;[object Undefined]&quot;</code>.</li>
+<li>If the <code>this</code> value is <code>null</code>, return <code>&quot;[object Null]&quot;</code>.</li>
+<li>Let <code>O</code> be ! <a href="https://tc39.github.io/ecma262/#sec-toobject" rel="external nofollow noopener noreferrer" target="_blank">ToObject</a>(<code>this</code> value).</li>
+<li>Let <code>isArray</code> be ? <a href="https://tc39.github.io/ecma262/#sec-isarray" rel="external nofollow noopener noreferrer" target="_blank">IsArray</a>(<code>O</code>).</li>
+<li>If <code>isArray</code> is <code>true</code>, let <code>builtinTag</code> be <code>&quot;Array&quot;</code>.</li>
+<li>Else if <code>O</code> is a String exotic object, let <code>builtinTag</code> be <code>&quot;String&quot;</code>.</li>
+<li>Else if <code>O</code> has a [[ParameterMap]] internal slot, let <code>builtinTag</code> be <code>&quot;Arguments&quot;</code>.</li>
+<li>Else if <code>O</code> has a [[Call]] internal method, let <code>builtinTag</code> be <code>&quot;Function&quot;</code>.</li>
+<li>Else if <code>O</code> has an [[ErrorData]] internal slot, let <code>builtinTag</code> be <code>&quot;Error&quot;</code>.</li>
+<li>Else if <code>O</code> has a [[BooleanData]] internal slot, let <code>builtinTag</code> be <code>&quot;Boolean&quot;</code>.</li>
+<li>Else if <code>O</code> has a [[NumberData]] internal slot, let <code>builtinTag</code> be <code>&quot;Number&quot;</code>.</li>
+<li>Else if <code>O</code> has a [[DateValue]] internal slot, let <code>builtinTag</code> be <code>&quot;Date&quot;</code>.</li>
+<li>Else if <code>O</code> has a [[RegExpMatcher]] internal slot, let <code>builtinTag</code> be <code>&quot;RegExp&quot;</code>.</li>
+<li>Else, let <code>builtinTag</code> be <code>&quot;Object&quot;</code>.</li>
+<li>Let <code>tag</code> be ? <a href="https://tc39.github.io/ecma262/#sec-get-o-p" rel="external nofollow noopener noreferrer" target="_blank">Get</a>(<code>O</code>, @@toStringTag).</li>
+<li>If <a href="https://tc39.github.io/ecma262/#sec-ecmascript-data-types-and-values" rel="external nofollow noopener noreferrer" target="_blank">Type</a>(<code>tag</code>) is not String, let <code>tag</code> be <code>builtinTag</code>.</li>
+<li>Return the String that is the result of concatenating <code>&quot;[object &quot;</code>, <code>tag</code>, and <code>&quot;]&quot;</code>.</li>
+</ol>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ol>
+<li><a href="https://tc39.github.io/ecma262/#sec-ecmascript-overview" rel="external nofollow noopener noreferrer" target="_blank">ECMAScript® 2018 Language Specification</a></li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;每一种编程语言都有数据结构，但他们各有不同之处。JavaScript 是一种动态语言，变量的类型不用提前声明，你可以使用同一个变量来保存不同的数据类型。&lt;br&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="https://calpa.me/Tags/JavaScript/"/>
+    
+      <category term="ECMAScript" scheme="https://calpa.me/Tags/ECMAScript/"/>
+    
+  </entry>
+  
+  <entry>
     <title>React 組件生命週期 - 加載組件</title>
     <link href="https://calpa.me/2017/05/16/react-component-lifecycle/"/>
     <id>https://calpa.me/2017/05/16/react-component-lifecycle/</id>
     <published>2017-05-16T14:40:00.000Z</published>
-    <updated>2017-05-16T18:03:20.000Z</updated>
+    <updated>2017-05-18T06:07:19.000Z</updated>
     
-    <content type="html"><![CDATA[<img src="/img/react-mount.svg" width="300" title="auto React LifeCycle Mount">
-<h2 id="組件"><a href="#組件" class="headerlink" title="組件"></a>組件</h2><p><code>React</code>提供<code>React.Component</code>，我們可以透過使用組件，拆分UI為可以重複使用的獨立部分。<code>React.Component</code>是一個抽象的base class。我們甚少直接運用<code>React.Component</code>，通常是透過創建一個子類，並使用<code>render()</code>方法。</p>
+    <content type="html"><![CDATA[<h2 id="組件"><a href="#組件" class="headerlink" title="組件"></a>組件</h2><p><code>React</code>提供<code>React.Component</code>，我們可以透過使用組件，拆分UI為可以重複使用的獨立部分。<code>React.Component</code>是一個抽象的base class。我們甚少直接運用<code>React.Component</code>，通常是透過創建一個子類，並使用<code>render()</code>方法。</p>
 <p>例子：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Greeting</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</div><div class="line">  render() &#123;</div><div class="line">    <span class="keyword">return</span> &lt;h1&gt;Hello, &#123;this.props.name&#125;&lt;/h1&gt;;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>如果你不選擇使用ES6，你可以使用模組<code>create-react-class</code>。你可以參考<a href="https://facebook.github.io/react/docs/react-without-es6.html" rel="external nofollow noopener noreferrer" target="_blank">React Without ES6</a>。<br>下面這一段和ES6的寫法效果一樣：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> createReactClass = <span class="built_in">require</span>(<span class="string">'create-react-class'</span>);</div><div class="line"><span class="keyword">var</span> Greeting = createReactClass(&#123;</div><div class="line">  <span class="attr">render</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> &lt;h1&gt;Hello, &#123;this.props.name&#125;&lt;/h1&gt;;</div><div class="line">  &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
 <h2 id="組件生命週期"><a href="#組件生命週期" class="headerlink" title="組件生命週期"></a>組件生命週期</h2><p>每一個組件都會有幾個生命週期的方法，你可以在程序運行的指定時間，透過覆蓋他們來運行特定代碼。對於這些方法，我們會用<code>will-</code>來表示它會在某些事情發生之前的一刻被調用，而<code>did-</code>則是表示它會在某些事情發生之後的一刻被調用。本文會細說加載組件中發生了什麼事情。</p>
@@ -49,6 +177,8 @@
 <li>setState()</li>
 <li>forceUpdate()</li>
 </ol>
+<p>我們會在下文討論一下React是如何加載組件。</p>
+<img src="/img/react-mount.svg" width="300" title="auto React LifeCycle Mount">
 <h4 id="constructor-NaN"><a href="#constructor-NaN" class="headerlink" title="constructor()"></a>constructor()</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">constructor</span>(props)</div></pre></td></tr></table></figure>
 <p>在React加載組件之前，它會調用<code>constructor</code>。你可以在<code>constructor</code>中去賦予組件的初始<code>state</code>。如果你使用<code>props</code>創造初始<code>state</code>的話，這也是可以接受的。這會很有效地<code>fork</code>組件的<code>props</code>，然後賦予初始<code>state</code>的值。</p>
 <p>有效的<code>constructor</code>例子：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">constructor</span>(props) &#123;</div><div class="line">  <span class="keyword">super</span>(props);</div><div class="line">  <span class="keyword">this</span>.state = &#123;</div><div class="line">    <span class="attr">color</span>: props.initialColor</div><div class="line">  &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
@@ -76,8 +206,7 @@
     
     <summary type="html">
     
-      &lt;img src=&quot;/img/react-mount.svg&quot; width=&quot;300&quot; title=&quot;auto React LifeCycle Mount&quot;&gt;
-&lt;h2 id=&quot;組件&quot;&gt;&lt;a href=&quot;#組件&quot; class=&quot;headerlink&quot; title=&quot;組件&quot;&gt;&lt;/a&gt;
+      &lt;h2 id=&quot;組件&quot;&gt;&lt;a href=&quot;#組件&quot; class=&quot;headerlink&quot; title=&quot;組件&quot;&gt;&lt;/a&gt;組件&lt;/h2&gt;&lt;p&gt;&lt;code&gt;React&lt;/code&gt;提供&lt;code&gt;React.Component&lt;/code&gt;，我們可以透過使用組件，拆分UI為可以重複使
     
     </summary>
     
@@ -93,7 +222,7 @@
     <link href="https://calpa.me/2017/05/06/introduction-to-regular-expression/"/>
     <id>https://calpa.me/2017/05/06/introduction-to-regular-expression/</id>
     <published>2017-05-06T12:13:00.000Z</published>
-    <updated>2017-05-06T12:19:56.000Z</updated>
+    <updated>2017-05-18T06:07:19.000Z</updated>
     
     <content type="html"><![CDATA[<p>正則表達式是一個非常簡單的語法，但它也是神兵利器，可以說是程序員必須要理解的工具之一。它就像一本會不斷成長的寶刀，隨著程序員對它的理解，它的威力也跟著增強。</p>
 <p>一些當下熱門的編輯器(Atom, Sublime)或者 IDE (WebStorm)都支持正則表達式尋找。如果你有瞭解過JavaScript中的方法 (exec, test, match, search, replace, split)的話，做下面的題目時會更加得心應手。</p>
@@ -177,7 +306,7 @@
     <link href="https://calpa.me/2017/05/05/javascript-array/"/>
     <id>https://calpa.me/2017/05/05/javascript-array/</id>
     <published>2017-05-05T14:53:00.000Z</published>
-    <updated>2017-05-05T15:14:13.000Z</updated>
+    <updated>2017-05-18T06:07:19.000Z</updated>
     
     <content type="html"><![CDATA[<p>顧著做化工模擬功課，差點忘記怎樣寫代碼。。。</p>
 <h1 id="內置方法"><a href="#內置方法" class="headerlink" title="內置方法"></a>內置方法</h1><p>使用JavaScript內置的去重複方法<code>Set()</code>，比如說：</p>
@@ -207,7 +336,7 @@
     <link href="https://calpa.me/2017/05/03/redux-array-push-function/"/>
     <id>https://calpa.me/2017/05/03/redux-array-push-function/</id>
     <published>2017-05-03T15:20:00.000Z</published>
-    <updated>2017-05-03T15:28:29.000Z</updated>
+    <updated>2017-05-18T06:07:19.000Z</updated>
     
     <content type="html"><![CDATA[<p>本來你可以直接改寫原本的數組，比如利用這個方法：<code>arr.push(item)</code>。<br>但在Redux裡面不可以這樣寫，因為會改寫原本數組，違反了immutable的原則。<br>因此，要這樣寫： <code>arr: [...state.arr, action.newItem]</code>。</p>
 <p>例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">import &#123; ADD_ITEM &#125; from &apos;../Actions/UserActions&apos;</div><div class="line">const initialUserState = &#123;</div><div class="line">  arr: []</div><div class="line">&#125;</div><div class="line"></div><div class="line">export default function userState(state = initialUserState, action) &#123;</div><div class="line">  console.log(arr);</div><div class="line">  switch (action.type) &#123;</div><div class="line">    case ADD_ITEM:</div><div class="line">      return &#123;</div><div class="line">        ...state,</div><div class="line">        arr: [...state.arr, action.newItem]</div><div class="line">      &#125;</div><div class="line"></div><div class="line">    default:</div><div class="line">      return state;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
@@ -262,7 +391,7 @@
     <link href="https://calpa.me/2017/05/01/CreateListFromArrayLike-problem-solution/"/>
     <id>https://calpa.me/2017/05/01/CreateListFromArrayLike-problem-solution/</id>
     <published>2017-05-01T14:50:00.000Z</published>
-    <updated>2017-05-01T15:12:06.000Z</updated>
+    <updated>2017-05-18T06:07:19.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="解決方法"><a href="#解決方法" class="headerlink" title="解決方法"></a>解決方法</h2><p>仔細再看一下到底你是如何調用<code>apply</code>的。。。</p>
 <p>你可能在使用Function.prototype.apply的時候不夠熟練，把<code>call</code>和<code>apply</code>的用法混在一起。。。。<code>call</code>是用0個或者更多的arguments，而<code>apply</code>則是用一個數組。</p>
@@ -314,7 +443,7 @@
     <link href="https://calpa.me/2017/04/27/n-ways-to-output-hello-world/"/>
     <id>https://calpa.me/2017/04/27/n-ways-to-output-hello-world/</id>
     <published>2017-04-27T06:34:00.000Z</published>
-    <updated>2017-04-28T14:02:32.000Z</updated>
+    <updated>2017-05-18T06:07:19.000Z</updated>
     
     <content type="html"><![CDATA[<p>在這些時候，我可以附和著笑，老闆是決不責備的。而且老闆見了他，也每每這樣問他，引人發笑。他自己知道不能和他們談天，便只好向孩子說話。有一回對我說道：「你讀過書麼？」我略略點一點頭。他說：「讀過書，。。。我便考你一考。代碼的Hello World，怎樣寫的？」他等了許久，很懇切的說道：「不能寫罷？。。。我教給你，記著！這些字應該記著。將來做老闆的時候，Debug要用。」我暗想我和老闆的等級還很遠呢，而且我們老闆也從不將代碼上傳；又好笑，又不耐煩，懶懶的答他道：「誰要你教，不就是用alert輸出嘛」他顯出極高興的樣子，將兩個指頭的長指甲敲著鍵盤，點頭說：「對呀對呀！。。。Hello World有四樣寫法，你知道麼？」我愈不耐煩了，努著嘴走遠。他剛用指甲蘸了酒，想在鍵盤上打字，見我毫不熱心，便又歎一口氣，顯出極惋惜的樣子。</p>
 <h2 id="alert"><a href="#alert" class="headerlink" title="alert()"></a>alert()</h2><p><code>alert(&quot;Hello, World!!&quot;);</code></p>
@@ -343,49 +472,6 @@
     
     
       <category term="JavaScript" scheme="https://calpa.me/Tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何判斷Javascript 數據類型</title>
-    <link href="https://calpa.me/2017/04/26/javascript-data-structures/"/>
-    <id>https://calpa.me/2017/04/26/javascript-data-structures/</id>
-    <published>2017-04-26T02:00:00.000Z</published>
-    <updated>2017-04-27T06:14:17.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>每一種編程語言都有數據結構，但他們各有不同之處。</p>
-<p>JavaScript是一種動態語言，變量的類型不用提前聲明，在程序運行的過程中，程序會自動辨認變量的類型。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var a = &apos;apple&apos;; // String type</div><div class="line">var a = 42; // Number type</div><div class="line">var a = true; // Boolean type</div></pre></td></tr></table></figure></p>
-<p>這就和Python的寫法差不多:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">a = &apos;apple&apos; // String type</div><div class="line">a = 42 // Number type</div><div class="line">a = True // Boolean type</div></pre></td></tr></table></figure></p>
-<h2 id="數據類型"><a href="#數據類型" class="headerlink" title="數據類型"></a>數據類型</h2><p><a href="https://tc39.github.io/ecma262/#sec-ecmascript-overview" rel="external nofollow noopener noreferrer" target="_blank">ECMA Script 標準</a>定義了7種數據類型：6種原始類型 (Primitive value) 和Object。</p>
-<p>以下這6種都是Primitive value：</p>
-<ol>
-<li>Undefined</li>
-<li>Null</li>
-<li>Boolean</li>
-<li>Number</li>
-<li>String</li>
-<li>Symbol (ECMAScript 6)</li>
-</ol>
-<p>我們可以透過使用<code>typeof</code>運算符號和<code>Object.prototype.toString()</code>方法來判斷數據類型。</p>
-<h2 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a>typeof</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">typeof undefined; // &quot;undefined&quot;</div><div class="line">typeof Boolean;   // &quot;function&quot;</div><div class="line">typeof true;      // &quot;boolean&quot;</div><div class="line">typeof 42;        // &quot;number&quot;</div><div class="line">typeof &quot;42&quot;;      // &quot;string&quot;</div><div class="line">typeof Symbol();  // &quot;symbol&quot;</div></pre></td></tr></table></figure>
-<p>在一開始設計JavaScript時，JavaScript中的值(value)是由一個標籤以及實際數據值表示的。對於基本類型，標籤是1；而對於對象類型，標籤是0。由於null代表的是空指針(裡面都是0)，null的類型標籤會是0。因此<code>typeof null</code>就會返回”object”;</p>
-<p><code>typeof null; // &quot;object&quot;</code></p>
-<p>另外，如果直接用<code>typeof</code>來判斷NaN的話，它會返回<code>&quot;number&quot;</code>。。。我們可以用<code>isNaN</code>方法來判斷是否一個數字。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">typeof NaN; // &quot;number&quot;</div><div class="line">isNaN(NaN); // true</div></pre></td></tr></table></figure></p>
-<h2 id="Object-prototype-toString"><a href="#Object-prototype-toString" class="headerlink" title="Object.prototype.toString()"></a>Object.prototype.toString()</h2><p>我們可以利用Object.prototype.toString.call()或者Object.prototype.toString.apply()這兩個方法判斷Object的類型，以及null：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Object.prototype.toString.call(undefined);   // &quot;[object Undefined]&quot;</div><div class="line">Object.prototype.toString.call(new Date);    // &quot;[object Date]&quot;</div><div class="line">Object.prototype.toString.call(new String);  // &quot;[object String]&quot;</div><div class="line">Object.prototype.toString.call(Math);        // &quot;[object Math]&quot;</div><div class="line">Object.prototype.toString.call(null);        // &quot;[object Null]&quot;</div></pre></td></tr></table></figure></p>
-<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
-<li><a href="https://tc39.github.io/ecma262/#sec-ecmascript-overview" rel="external nofollow noopener noreferrer" target="_blank">ECMAScript® 2018 Language Specification</a></li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;每一種編程語言都有數據結構，但他們各有不同之處。&lt;/p&gt;
-&lt;p&gt;JavaScript是一種動態語言，變量的類型不用提前聲明，在程序運行的過程中，程序會自動辨認變量的類型。&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td c
-    
-    </summary>
-    
-    
-      <category term="Javascript" scheme="https://calpa.me/Tags/Javascript/"/>
     
   </entry>
   
@@ -682,14 +768,14 @@
     <link href="https://calpa.me/2017/04/05/front-end-booklist/"/>
     <id>https://calpa.me/2017/04/05/front-end-booklist/</id>
     <published>2017-04-05T14:51:00.000Z</published>
-    <updated>2017-04-19T15:46:27.000Z</updated>
+    <updated>2017-05-18T06:07:19.000Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://i.imgur.com/CTfB7K9.jpg" alt="Books"></p>
 <p>在二十一世紀資訊發達的年代，我們很容易在互聯網上獲取這些書本的內容，而且能夠獲取書籍的最新內容。比如說vczero寫的<a href="https://github.com/vczero/react-native-lesson" rel="external nofollow noopener noreferrer" target="_blank">React Native入门与实战</a>，作者已經在Github上放上自己的書本內容，以及代碼。雖然我在電腦和手機里已經看過這些書，但當我拿起實體書的時候，那種感覺是非常不同的。</p>
 <p>以下這些書都是很值得去閱讀（開坑）的：</p>
 <ol>
-<li><p>Javascript 高級程序設計(第三版)</p>
-<p>我在去年的暑假看過一次這本書，感覺能夠學到很多Javascript的細節。</p>
+<li><p>JavaScript 高級程序設計(第三版)</p>
+<p>我在去年的暑假看過一次這本書，感覺能夠學到很多JavaScript的細節。</p>
 </li>
 <li><p>CSS揭秘</p>
 </li>
@@ -785,11 +871,11 @@
   </entry>
   
   <entry>
-    <title>Javascript的this</title>
+    <title>JavaScript的this</title>
     <link href="https://calpa.me/2017/03/25/javascript-this/"/>
     <id>https://calpa.me/2017/03/25/javascript-this/</id>
     <published>2017-03-25T04:44:00.000Z</published>
-    <updated>2017-05-17T05:55:53.000Z</updated>
+    <updated>2017-05-18T06:07:19.000Z</updated>
     
     <content type="html"><![CDATA[<p>首先我們要理解調用函數的方法，最起碼可以用下面兩個方法：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">func(arg1, arg2);</div><div class="line">func.call(context, arg1, arg2);</div></pre></td></tr></table></figure></p>
 <p>之前我也沒怎麼見過後者，基本上都是直接call func的。後者<code>func(arg1, arg2)</code> 等於 <code>func.call(undefined, arg1, arg2)</code>。簡單來說，this就是context。如果context沒有定義的話，它會被定義為一個全局對象，比如說global。在MDN的文檔有這一句: <code>if the method is a function in non-strict mode code, null and undefined will be replaced with the global object and primitive values will be converted to objects</code>。</p>
@@ -821,7 +907,7 @@
     </summary>
     
     
-      <category term="Javascript" scheme="https://calpa.me/Tags/Javascript/"/>
+      <category term="JavaScript" scheme="https://calpa.me/Tags/JavaScript/"/>
     
   </entry>
   

@@ -1,6 +1,6 @@
 # [Calpa's Blog](https://calpa.github.io/)
 ```
-Keyword: Javascript, Python2
+Keyword: JavaScript, Python2
 ```
 ## Hackathon
 1. HackJam (Organizer)

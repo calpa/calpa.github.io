@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Calpa的技術博客，開發日常，以及遇到的坑">
-    <meta name="keyword" content="calpa, blog, javascript">
+    <meta name="keyword" content="calpa, blog, JavaScript">
     <meta name="theme-color" content="#384f7c">
     <meta name="msapplication-navbutton-color" content="#384f7c">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -19,7 +19,7 @@
     <meta name="google-site-verification" content="riZBcestky7i9xY__A-5J-2EE65T75X1u-zgbss37Io">
     <title>
         
-        Javascript中的True與False｜Calpa&#39;s blog
+        JavaScript中的True與False｜Calpa&#39;s blog
         
     </title>
 
@@ -165,7 +165,7 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>Javascript中的True與False</h1>
+                    <h1>JavaScript中的True與False</h1>
                     
                     <span>
                       作者 Calpa
@@ -180,7 +180,7 @@
 
                     <div class="tags text-center">
                         
-                        <a class="tag" href="/Tags/#Javascript" title="Javascript">Javascript</a>
+                        <a class="tag" href="/Tags/#JavaScript" title="JavaScript">JavaScript</a>
                         
                     </div>
                 </div>
@@ -189,7 +189,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            Javascript中的True與False
+            JavaScript中的True與False
         </span>
     </div>
 </header>
@@ -254,7 +254,9 @@
           <div class="tags">
               
               
-              <a href="/Tags/#JavaScript" title="JavaScript" rel="5">JavaScript</a>
+              <a href="/Tags/#JavaScript" title="JavaScript" rel="11">JavaScript</a>
+              
+              
               
               
               
@@ -268,11 +270,9 @@
               
               
               
-              
-              
-              
-              
               <a href="/Tags/#Github" title="Github" rel="2">Github</a>
+              
+              
               
               
               
@@ -293,8 +293,6 @@
               
               
               
-              
-              <a href="/Tags/#Javascript" title="Javascript" rel="6">Javascript</a>
               
               
               
@@ -329,6 +327,12 @@
       <ul class="list-inline" style="text-align: center;">
         
           <li>
+            <a href="/2017/05/18/javascript-data-structures/">
+              利用 ECMAScript 学习如何判断数据类型
+            </a>
+          </li>
+        
+          <li>
             <a href="/2017/05/16/react-component-lifecycle/">
               React 組件生命週期 - 加載組件
             </a>
@@ -349,12 +353,6 @@
           <li>
             <a href="/2017/05/05/javascript-array/">
               JavaScript 數組去重
-            </a>
-          </li>
-        
-          <li>
-            <a href="/2017/05/03/redux-array-push-function/">
-              Redux push()是怎樣寫的？
             </a>
           </li>
         
@@ -379,14 +377,14 @@
           
               <li>
                 <a href="/archive/#2017-5">
-                  5月(7)
+                  5月(8)
                 </a>
               </li>
             
           
               <li>
                 <a href="/archive/#2017-4">
-                  4月(11)
+                  4月(10)
                 </a>
               </li>
             
@@ -419,7 +417,7 @@
 
 
             <div class="col-lg-7 col-lg-offset-0 col-md-7 col-sm-9 post-container">
-                <p>這幾天用<a href="https://www.enki.com/" rel="external nofollow noopener noreferrer" target="_blank">Enki</a>來學習Javascript，感覺不錯，<strong>You can’t handle the truth!</strong> 有一些特別True/False例子。這裡簡單記錄一下。</p>
+                <p>這幾天用<a href="https://www.enki.com/" rel="external nofollow noopener noreferrer" target="_blank">Enki</a>來學習JavaScript，感覺不錯，<strong>You can’t handle the truth!</strong> 有一些特別True/False例子。這裡簡單記錄一下。</p>
 <p>最簡單的測試方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function test(something)&#123;</div><div class="line">  if (something) &#123;</div><div class="line">    console.log(something + &apos; is true.&apos;);</div><div class="line">  &#125; else &#123;</div><div class="line">    console.log(something + &apos; is false.&apos;);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <h1 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h1><h2 id="Truthy"><a href="#Truthy" class="headerlink" title="Truthy"></a>Truthy</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">true &lt;- true當然是true...</div><div class="line">[1][0]</div><div class="line">new Date()</div><div class="line">new Number(0)</div><div class="line">Object</div><div class="line">Infinity</div><div class="line">[]</div></pre></td></tr></table></figure>
 <p>以下都是[object Object]:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&#123;a: false&#125;</div><div class="line">&#123;&#125;</div></pre></td></tr></table></figure></p>
@@ -437,7 +435,7 @@
                     
                     
                     <li class="next">
-                        <a href="/2017/01/20/using-javascript-to-create-web-storage/" data-toggle="tooltip" data-placement="top" title="利用Javascript創建Web Storage">Next Post &rarr;</a>
+                        <a href="/2017/01/20/using-javascript-to-create-web-storage/" data-toggle="tooltip" data-placement="top" title="利用JavaScript創建Web Storage">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
