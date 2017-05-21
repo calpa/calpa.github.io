@@ -19,11 +19,11 @@
     <meta name="google-site-verification" content="riZBcestky7i9xY__A-5J-2EE65T75X1u-zgbss37Io">
     <title>
         
-        常見的14種HTTP狀態碼｜Calpa&#39;s blog
+        Calpa&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="https://calpa.me/2017/04/08/common-http-status-code/">
+    <link rel="canonical" href="https://calpa.me/page/5/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -38,8 +38,8 @@
 
 <body class="animated fadeIn">
 <!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost="true" data-istags="false
-" data-ishome="false">
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost="false" data-istags="false
+" data-ishome="true">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header page-scroll">
@@ -145,61 +145,197 @@
 
 <!-- Main Content -->
 
-<!--only post-->
-
-  
-    <img class="wechat-title-img" src="/img/post-default.jpg">
-  
 
 <style>
-    
+
     header.intro-header {
-        background-image: url('/img/post-default.jpg')
+        background-image: url('/img/blue-blur-background.jpg')
     }
 
-    
+    .custom-haojen-container .post-preview:nth-of-type(1),
+    .custom-haojen-container .post-preview-poetry:nth-of-type(1) {
+        text-align: center;
+        background-repeat: no-repeat;
+        border-radius: 3px;
+        background-size: cover;
+        padding: 0;
+        height: 300px;
+        display: table;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.16);
+    }
+
+    /*去掉诗歌的背景图片*/
+    .custom-haojen-container .post-preview-poetry:nth-of-type(1) {
+        background-image: none !important;
+        background-color: rgba(255, 248, 220, 0.5);
+    }
+
+    .custom-haojen-container .post-preview:nth-child(1) h2,
+    .custom-haojen-container .post-preview:nth-child(1) .post-meta,
+    .custom-haojen-container .post-preview:nth-child(1) .post-subtitle {
+        text-shadow: 0 0 40px rgba(0, 0, 0, 1);
+        letter-spacing: 1px;
+        color: #fff;
+        margin-top: 0;
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    .custom-haojen-container .post-preview:nth-child(1) .post-meta {
+        font-size: .9em;
+        font-weight: 300;
+        margin-top: 0;
+    }
+
+    .custom-haojen-container .post-preview-poetry:nth-child(1) .post-subtitle {
+        letter-spacing: 6px;
+        font-size: 18px;
+        font-family: unset;
+        font-weight: 400;
+        color: rgba(0, 0, 0, .75)
+    }
+
+    /*不显示摘要*/
+    .custom-haojen-container .post-preview:nth-child(1) .post-content-preview {
+        display: none
+    }
+
+    /*只第一个显示背景图片*/
+    .custom-haojen-container .post-preview:not(:nth-child(1)) {
+        background-image: none !important;
+    }
+
+    /*第一个分界线去掉*/
+    .custom-haojen-container hr:nth-of-type(1) {
+        display: none;
+    }
+
+    /*主题*/
+    .custom-haojen-container .post-preview:nth-of-type(1) > a {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    /*诗词标题*/
+    .custom-haojen-container .post-preview-poetry:nth-child(1) h2 {
+        font-size: 35px;
+        font-family: STKaiti;
+        color: rgba(0, 0, 0, .8);
+    }
+
+    .custom-haojen-container .post-preview-poetry:nth-of-type(1) .post-meta {
+        color: #0e2231;
+    }
+
+    @media (max-width: 768px) {
+        .custom-haojen-container .post-preview:nth-child(1) {
+            height: 240px;
+        }
+
+        .custom-haojen-container .post-preview-poetry:nth-child(1) h2 {
+            font-size: 28px !important;
+            margin-top: 0;
+        }
+
+        .custom-haojen-container .post-preview:nth-child(1) .post-subtitle {
+            font-size: 18px;
+            font-weight: 400;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .custom-haojen-container .post-preview:nth-of-type(1) > a {
+            padding: 20px
+        }
+    }
+
+    /*手机屏幕*/
+    @media (max-width: 400px) {
+        .custom-haojen-container .post-preview:nth-child(1) {
+            height: 195px;
+        }
+
+        .custom-haojen-container .post-preview-poetry:nth-child(1) h2 {
+            font-size: 20px !important;
+        }
+
+        .custom-haojen-container .post-preview:nth-child(1) .post-subtitle {
+            font-size: 16px;
+        }
+
+        .custom-haojen-container .post-preview:nth-child(1) a {
+            padding: 30px 20px;
+        }
+    }
 </style>
 
-<header class="intro-header">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
-                <div class="post-heading">
-                    <h1>常見的14種HTTP狀態碼</h1>
-                    
-                    <span>
-                      作者 Calpa
-                    </span>
-                    <span>
-                      日期 2017-04-08
-                    </span>
-
-                    
-                      <span class="post-count">共128字</span>
-                    
-
-                    <div class="tags text-center">
-                        
-                        <a class="tag" href="/Tags/#HTTP" title="HTTP">HTTP</a>
-                        
+<!-- Page Header -->
+<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 visible-xs-block visible-sm-block">
+    <div class="row">
+        <header class="intro-header">
+            <div class="container">
+                <div class="site-heading text-center">
+                    <div class="about-me">
+                        <!--移动端头部显示-->
+                        <img src="/img/profile.png" alt="avatar">
+                        <h4>Calpa</h4>
+                        <p>夢裡不覺秋已深，餘情豈是為他人。</p>
                     </div>
                 </div>
             </div>
-        </div>
+        </header>
     </div>
-    <div class="post-title-haojen">
-        <span>
-            常見的14種HTTP狀態碼
-        </span>
-    </div>
-</header>
+</div>
+<!-- Main Content -->
+<div class="container custom-haojen-container">
+    <!-- Post Container -->
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12 col-xs-12 post-container">
+            <!-- Main Content -->
 
-<!-- Post Content -->
-<article>
-    <div class="container">
-        <div class="row">
-            <!-- Post Container -->
-            <!-- Sidebar Container -->
+
+
+
+<div class="post-preview " style="background-image: url('/img/post-default.jpg')">
+    <a href="/2017/01/08/hello-world/">
+        <h2 class="post-title">
+            Hello, World!
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-01-08
+        </p>
+        
+        <div class="post-content-preview">
+            <p>
+                Hello World這是一個用hexo建構的blog，使用Hexo的主題Anisina
+我修改了_config.yml裡面的post-default-img 以及 post-default-img-mobile。
+
+            </p>
+        </div>
+    </a>
+
+</div>
+
+<hr>
+
+
+
+
+<!-- 翻页 pager -->
+
+<ul class="pager">
+    
+    <li class="previous">
+        <a href="/page/4/">&larr; Newer Posts</a>
+    </li>
+    
+    <li>Page 5 / 5</li>
+    
+</ul>
+
+        </div>
+        <!-- Sidebar Container -->
 <div class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 hidden-sm hidden-xs sidebar-container">
     <!-- About Me -->
     <section class="visible-md visible-lg" style="padding: 0 18px">
@@ -415,105 +551,8 @@
 
 </div>
 
-
-            <div class="col-lg-7 col-lg-offset-0 col-md-7 col-sm-9 post-container">
-                <p>當用戶向伺服器發出請求時，狀態碼能夠描述伺服器返回的結果。</p>
-<ol>
-<li><p>2XX 成功</p>
-<ol>
-<li>200 OK</li>
-<li>204 No Content</li>
-<li>206 Partial Content</li>
-</ol>
-</li>
-<li><p>3XX 重新導向</p>
-<ol>
-<li>301 Moved Permanently</li>
-<li>302 Found</li>
-<li>303 See Other</li>
-<li>304 Not Modified</li>
-<li>307 Temporary Redirect</li>
-</ol>
-</li>
-<li><p>4XX 客戶端錯誤</p>
-<ol>
-<li><p>400 Bad Request</p>
-<p>伺服器無法理解當前請求</p>
-</li>
-<li>401 Unauthorized</li>
-<li>403 Forbidden</li>
-<li>404 Not Found</li>
-</ol>
-</li>
-<li><p>5XX 伺服器錯誤</p>
-<ol>
-<li>500 Internal Server Error</li>
-<li>503 Service Unavailable</li>
-</ol>
-</li>
-</ol>
-<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
-<li>圖解HTTP</li>
-<li><a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html" rel="external nofollow noopener noreferrer" target="_blank">10 Status Code Definitions</a></li>
-</ol>
-
-                <hr>
-                
-
-                <ul class="pager">
-                    
-                    <li class="previous">
-                        <a href="/2017/04/11/github-ssh/" data-toggle="tooltip" data-placement="top" title="利用ssh連接Github的方法">&larr; Previous Post</a>
-                    </li>
-                    
-                    
-                    <li class="next">
-                        <a href="/2017/04/05/front-end-booklist/" data-toggle="tooltip" data-placement="top" title="前端工程師的入門書單">Next Post &rarr;</a>
-                    </li>
-                    
-                </ul>
-
-                
-
-                
-                <!-- disqus 评论框 start -->
-                <div class="comment">
-                    <div id="disqus_thread" class="disqus-thread"></div>
-                </div>
-                <!-- disqus 评论框 end -->
-                
-
-            </div>
-
-            <div class="hidden-xs col-md-2 col-sm-3 toc-col">
-                <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#參考資料"><span class="toc-text">參考資料</span></a></li></ol>
-                </div>
-            </div>
-        </div>
     </div>
-</article>
-
-
-
-<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES * * */
-    var disqus_shortname = "calpas-blog";
-    var disqus_identifier = "https://calpa.me/2017/04/08/common-http-status-code/";
-    var disqus_url = "https://calpa.me/2017/04/08/common-http-status-code/";
-
-    (function () {
-        var dsq = document.createElement('script');
-        dsq.type = 'text/javascript';
-        dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<!-- disqus 公共JS代码 end -->
-
-
+</div>
 
 <!-- Footer -->
 <!-- Footer -->

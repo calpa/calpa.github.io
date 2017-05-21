@@ -297,6 +297,31 @@
 
 
 
+<div class="post-preview " style="background-image: url('https://i.imgur.com/eySAMI1.jpg')">
+    <a href="/2017/05/01/CreateListFromArrayLike-problem-solution/">
+        <h2 class="post-title">
+            CreateListFromArrayLike called on non-object 報錯的解決方法
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-05-01
+        </p>
+        
+        <div class="post-content-preview">
+            <p>
+                解決方法仔細再看一下到底你是如何調用apply的。。。
+你可能在使用Function.prototype.apply的時候不夠熟練，把call和apply的用法混在一起。。。。call是用0個或者更多的arguments，而apply則是用一個數組。
+錯誤例子12Math.max.apply(n..
+            </p>
+        </div>
+    </a>
+
+</div>
+
+<hr>
+
+
+
+
 <div class="post-preview " style="background-image: url('/img/post-default.jpg')">
     <a href="/2017/04/27/n-ways-to-output-hello-world/">
         <h2 class="post-title">
@@ -475,43 +500,6 @@ ssh git@github.com
 
 
 
-<div class="post-preview " style="background-image: url('/img/post-default.jpg')">
-    <a href="/2017/04/08/common-http-status-code/">
-        <h2 class="post-title">
-            常見的14種HTTP狀態碼
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-04-08
-        </p>
-        
-        <div class="post-content-preview">
-            <p>
-                當用戶向伺服器發出請求時，狀態碼能夠描述伺服器返回的結果。
-
-2XX 成功
-
-200 OK
-204 No Content
-206 Partial Content
-
-
-3XX 重新導向
-
-301 Moved Permanently
-302 Found
-303 See Other
-304 Not M..
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-
 <!-- 翻页 pager -->
 
 <ul class="pager">
@@ -520,7 +508,7 @@ ssh git@github.com
         <a href="/">&larr; Newer Posts</a>
     </li>
     
-    <li>Page 2 / 4</li>
+    <li>Page 2 / 5</li>
     
     <li class="next">
         <a href="/page/3/">Older Posts &rarr;</a>
@@ -584,9 +572,7 @@ ssh git@github.com
           <div class="tags">
               
               
-              <a href="/Tags/#JavaScript" title="JavaScript" rel="11">JavaScript</a>
-              
-              
+              <a href="/Tags/#JavaScript" title="JavaScript" rel="12">JavaScript</a>
               
               
               
@@ -600,13 +586,15 @@ ssh git@github.com
               
               
               
+              
+              
               <a href="/Tags/#Github" title="Github" rel="2">Github</a>
               
               
               
-              
-              
               <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
+              
+              
               
               
               
@@ -657,6 +645,12 @@ ssh git@github.com
       <ul class="list-inline" style="text-align: center;">
         
           <li>
+            <a href="/2017/05/21/learn-javascript-in-six-steps/">
+              打好 JavaScript 基礎的6個步驟
+            </a>
+          </li>
+        
+          <li>
             <a href="/2017/05/18/javascript-data-structures/">
               利用 ECMAScript 学习如何判断数据类型
             </a>
@@ -680,17 +674,11 @@ ssh git@github.com
             </a>
           </li>
         
-          <li>
-            <a href="/2017/05/05/javascript-array/">
-              JavaScript 數組去重
-            </a>
-          </li>
-        
       </ul>
     
     <hr>
 
-    <h5 style="text-align: center;">共32篇文章</h5>
+    <h5 style="text-align: center;">共33篇文章</h5>
     <hr>
 
     <!-- All Blog Posts -->
@@ -707,7 +695,7 @@ ssh git@github.com
           
               <li>
                 <a href="/archive/#2017-5">
-                  5月(8)
+                  5月(9)
                 </a>
               </li>
             

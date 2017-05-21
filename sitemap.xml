@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://calpa.me/2017/05/21/learn-javascript-in-six-steps/</loc>
+    
+    <lastmod>2017-05-21T14:00:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://calpa.me/2017/05/18/javascript-data-structures/</loc>
     
     <lastmod>2017-05-18T06:08:33.000Z</lastmod>
@@ -9,21 +16,7 @@
   </url>
   
   <url>
-    <loc>https://calpa.me/2017/05/01/CreateListFromArrayLike-problem-solution/</loc>
-    
-    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://calpa.me/about/index.html</loc>
-    
-    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://calpa.me/2017/02/22/using-javascript-to-push-web-notification/</loc>
     
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     
@@ -38,6 +31,13 @@
   
   <url>
     <loc>https://calpa.me/2017/01/20/using-javascript-to-create-web-storage/</loc>
+    
+    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://calpa.me/2017/02/22/using-javascript-to-push-web-notification/</loc>
     
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     
@@ -65,13 +65,6 @@
   </url>
   
   <url>
-    <loc>https://calpa.me/2017/02/02/javascript-true-and-false/</loc>
-    
-    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://calpa.me/2017/01/14/javascript-variable-hoisting/</loc>
     
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
@@ -86,6 +79,13 @@
   </url>
   
   <url>
+    <loc>https://calpa.me/2017/02/02/javascript-true-and-false/</loc>
+    
+    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://calpa.me/2017/02/19/javascript-closure/</loc>
     
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
@@ -94,6 +94,13 @@
   
   <url>
     <loc>https://calpa.me/2017/05/05/javascript-array/</loc>
+    
+    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://calpa.me/2017/05/01/CreateListFromArrayLike-problem-solution/</loc>
     
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     

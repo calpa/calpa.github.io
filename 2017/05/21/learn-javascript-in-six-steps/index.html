@@ -19,11 +19,11 @@
     <meta name="google-site-verification" content="riZBcestky7i9xY__A-5J-2EE65T75X1u-zgbss37Io">
     <title>
         
-        常見的14種HTTP狀態碼｜Calpa&#39;s blog
+        打好 JavaScript 基礎的6個步驟｜Calpa&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="https://calpa.me/2017/04/08/common-http-status-code/">
+    <link rel="canonical" href="https://calpa.me/2017/05/21/learn-javascript-in-six-steps/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -148,13 +148,13 @@
 <!--only post-->
 
   
-    <img class="wechat-title-img" src="/img/post-default.jpg">
+    <img class="wechat-title-img" src="https://i.imgur.com/KMksHxZ.png">
   
 
 <style>
     
     header.intro-header {
-        background-image: url('/img/post-default.jpg')
+        background-image: url('https://i.imgur.com/KMksHxZ.png?imageView2/1/w/1400/h/400/interlace/1/q/90')
     }
 
     
@@ -165,22 +165,22 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>常見的14種HTTP狀態碼</h1>
+                    <h1>打好 JavaScript 基礎的6個步驟</h1>
                     
                     <span>
                       作者 Calpa
                     </span>
                     <span>
-                      日期 2017-04-08
+                      日期 2017-05-21
                     </span>
 
                     
-                      <span class="post-count">共128字</span>
+                      <span class="post-count">共578字</span>
                     
 
                     <div class="tags text-center">
                         
-                        <a class="tag" href="/Tags/#HTTP" title="HTTP">HTTP</a>
+                        <a class="tag" href="/Tags/#JavaScript" title="JavaScript">JavaScript</a>
                         
                     </div>
                 </div>
@@ -189,7 +189,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            常見的14種HTTP狀態碼
+            打好 JavaScript 基礎的6個步驟
         </span>
     </div>
 </header>
@@ -417,58 +417,34 @@
 
 
             <div class="col-lg-7 col-lg-offset-0 col-md-7 col-sm-9 post-container">
-                <p>當用戶向伺服器發出請求時，狀態碼能夠描述伺服器返回的結果。</p>
+                <p>平日開發的時候，我們會選擇使用一些框架來避免重複製造輪子，減輕我們的工作量。然而，我們卻不能透過使用更好的工具，或者更換框架來解決一些基礎開發問題。因此打好基礎很重要，不但決定前端程序員解決基礎問題的能力，還決定了面對日新月異框架時的掌握能力。當我開發 React 應用的時候，遇到的問題多是我對於 JavaScript 的理解不夠充分。因此，我在這裡寫一下如何打好 JavaScript 基礎，希望拋磚引玉 XD</p>
 <ol>
-<li><p>2XX 成功</p>
-<ol>
-<li>200 OK</li>
-<li>204 No Content</li>
-<li>206 Partial Content</li>
-</ol>
+<li><p>看一些經典的書<br>JavaScript: 紅寶書 (JavaScript高級程序設計)，犀牛書 (JavaScript: The Definitive Guide)，You Don’t Know JS<br>計算機經典: 算法導論，SICP</p>
+<img src="http://i.imgur.com/xm6R14W.jpg" width="300" title="auto JavaScript高級程序設計">
+<img src="http://i.imgur.com/autEZuV.jpg" width="300" title="auto JavaScript: The Definitive Guide">
+<img src="http://i.imgur.com/ajLLsUg.gif" width="300" title="auto You Don" alt="t Know JS">
 </li>
-<li><p>3XX 重新導向</p>
-<ol>
-<li>301 Moved Permanently</li>
-<li>302 Found</li>
-<li>303 See Other</li>
-<li>304 Not Modified</li>
-<li>307 Temporary Redirect</li>
-</ol>
+<li><p>嘗試用不同的工具，增加自己的視野。<br>你可以做一些玩具，自己嘗試一下寫TODO APP 的不同寫法。</p>
 </li>
-<li><p>4XX 客戶端錯誤</p>
-<ol>
-<li><p>400 Bad Request</p>
-<p>伺服器無法理解當前請求</p>
+<li><p>看工具的源碼：React, Vue, Underscore.js<br>這些開源項目的代碼都已經放在 Github，網絡上也有對它們的源碼分析，隨便一找就有了。透過閱讀代碼，可以學習一下代碼規範，理解什麼才是好的代碼。</p>
 </li>
-<li>401 Unauthorized</li>
-<li>403 Forbidden</li>
-<li>404 Not Found</li>
-</ol>
+<li><p>自己把這些工具、框架的某些功能做出來。<br>你可以實現<a href="http://underscorejs.org/" rel="external nofollow noopener noreferrer" target="_blank">Underscore.js</a>裡面的一些方法，例如<code>_.uniq(array, [isSorted], [iteratee])</code> 數組去重方法，然後看一下自己和人家寫得有什麼分別，為什麼人家會這樣寫？它有運用到什麼設計模式？</p>
 </li>
-<li><p>5XX 伺服器錯誤</p>
-<ol>
-<li>500 Internal Server Error</li>
-<li>503 Service Unavailable</li>
-</ol>
+<li><p>看ECMAScript規範。<br>你可以閱讀<a href="https://tc39.github.io/ecma262" rel="external nofollow noopener noreferrer" target="_blank">ECMAScript 規範</a>，人家對於不同的數據類型和函數是怎樣定義的，思考一下為什麼需要這樣定義，為什麼不這樣定義。<br>為什麼<code>typeof null</code>會是<code>object</code>？不定義為<code>null</code>？</p>
+</li>
+<li><p>記錄你學了什麼知識並分享。<br>記錄一下自己學習了什麼知識，遇到了什麼坑。透過和其他人交流一下，可以了解到自己有什麼不足之處。其中一個方法是利用 Hexo 建立博客，可以透過修改主題練習HTML, JavaScript, CSS。我也是這樣寫博客的：<a href="https://calpa.me">https://calpa.me</a></p>
 </li>
 </ol>
-<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
-<li>圖解HTTP</li>
-<li><a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html" rel="external nofollow noopener noreferrer" target="_blank">10 Status Code Definitions</a></li>
-</ol>
+<p>這裡就作為我的一個學習小總結，不繼續展開了。。。</p>
 
                 <hr>
                 
 
                 <ul class="pager">
                     
-                    <li class="previous">
-                        <a href="/2017/04/11/github-ssh/" data-toggle="tooltip" data-placement="top" title="利用ssh連接Github的方法">&larr; Previous Post</a>
-                    </li>
-                    
                     
                     <li class="next">
-                        <a href="/2017/04/05/front-end-booklist/" data-toggle="tooltip" data-placement="top" title="前端工程師的入門書單">Next Post &rarr;</a>
+                        <a href="/2017/05/18/javascript-data-structures/" data-toggle="tooltip" data-placement="top" title="利用 ECMAScript 学习如何判断数据类型">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
@@ -487,7 +463,7 @@
 
             <div class="hidden-xs col-md-2 col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#參考資料"><span class="toc-text">參考資料</span></a></li></ol>
+                    
                 </div>
             </div>
         </div>
@@ -500,8 +476,8 @@
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = "calpas-blog";
-    var disqus_identifier = "https://calpa.me/2017/04/08/common-http-status-code/";
-    var disqus_url = "https://calpa.me/2017/04/08/common-http-status-code/";
+    var disqus_identifier = "https://calpa.me/2017/05/21/learn-javascript-in-six-steps/";
+    var disqus_url = "https://calpa.me/2017/05/21/learn-javascript-in-six-steps/";
 
     (function () {
         var dsq = document.createElement('script');

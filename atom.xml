@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://calpa.me/"/>
-  <updated>2017-05-18T06:08:33.000Z</updated>
+  <updated>2017-05-21T14:00:07.000Z</updated>
   <id>https://calpa.me/</id>
   
   <author>
@@ -14,6 +14,45 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打好 JavaScript 基礎的6個步驟</title>
+    <link href="https://calpa.me/2017/05/21/learn-javascript-in-six-steps/"/>
+    <id>https://calpa.me/2017/05/21/learn-javascript-in-six-steps/</id>
+    <published>2017-05-21T12:00:00.000Z</published>
+    <updated>2017-05-21T14:00:07.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>平日開發的時候，我們會選擇使用一些框架來避免重複製造輪子，減輕我們的工作量。然而，我們卻不能透過使用更好的工具，或者更換框架來解決一些基礎開發問題。因此打好基礎很重要，不但決定前端程序員解決基礎問題的能力，還決定了面對日新月異框架時的掌握能力。當我開發 React 應用的時候，遇到的問題多是我對於 JavaScript 的理解不夠充分。因此，我在這裡寫一下如何打好 JavaScript 基礎，希望拋磚引玉 XD</p>
+<ol>
+<li><p>看一些經典的書<br>JavaScript: 紅寶書 (JavaScript高級程序設計)，犀牛書 (JavaScript: The Definitive Guide)，You Don’t Know JS<br>計算機經典: 算法導論，SICP</p>
+<img src="http://i.imgur.com/xm6R14W.jpg" width="300" title="auto JavaScript高級程序設計">
+<img src="http://i.imgur.com/autEZuV.jpg" width="300" title="auto JavaScript: The Definitive Guide">
+<img src="http://i.imgur.com/ajLLsUg.gif" width="300" title="auto You Don" alt="t Know JS">
+</li>
+<li><p>嘗試用不同的工具，增加自己的視野。<br>你可以做一些玩具，自己嘗試一下寫TODO APP 的不同寫法。</p>
+</li>
+<li><p>看工具的源碼：React, Vue, Underscore.js<br>這些開源項目的代碼都已經放在 Github，網絡上也有對它們的源碼分析，隨便一找就有了。透過閱讀代碼，可以學習一下代碼規範，理解什麼才是好的代碼。</p>
+</li>
+<li><p>自己把這些工具、框架的某些功能做出來。<br>你可以實現<a href="http://underscorejs.org/" rel="external nofollow noopener noreferrer" target="_blank">Underscore.js</a>裡面的一些方法，例如<code>_.uniq(array, [isSorted], [iteratee])</code> 數組去重方法，然後看一下自己和人家寫得有什麼分別，為什麼人家會這樣寫？它有運用到什麼設計模式？</p>
+</li>
+<li><p>看ECMAScript規範。<br>你可以閱讀<a href="https://tc39.github.io/ecma262" rel="external nofollow noopener noreferrer" target="_blank">ECMAScript 規範</a>，人家對於不同的數據類型和函數是怎樣定義的，思考一下為什麼需要這樣定義，為什麼不這樣定義。<br>為什麼<code>typeof null</code>會是<code>object</code>？不定義為<code>null</code>？</p>
+</li>
+<li><p>記錄你學了什麼知識並分享。<br>記錄一下自己學習了什麼知識，遇到了什麼坑。透過和其他人交流一下，可以了解到自己有什麼不足之處。其中一個方法是利用 Hexo 建立博客，可以透過修改主題練習HTML, JavaScript, CSS。我也是這樣寫博客的：<a href="https://calpa.me">https://calpa.me</a></p>
+</li>
+</ol>
+<p>這裡就作為我的一個學習小總結，不繼續展開了。。。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;平日開發的時候，我們會選擇使用一些框架來避免重複製造輪子，減輕我們的工作量。然而，我們卻不能透過使用更好的工具，或者更換框架來解決一些基礎開發問題。因此打好基礎很重要，不但決定前端程序員解決基礎問題的能力，還決定了面對日新月異框架時的掌握能力。當我開發 React 應用的時
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="https://calpa.me/Tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>利用 ECMAScript 学习如何判断数据类型</title>
@@ -867,47 +906,6 @@
     
     
       <category term="Interview" scheme="https://calpa.me/Tags/Interview/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript的this</title>
-    <link href="https://calpa.me/2017/03/25/javascript-this/"/>
-    <id>https://calpa.me/2017/03/25/javascript-this/</id>
-    <published>2017-03-25T04:44:00.000Z</published>
-    <updated>2017-05-18T06:07:19.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>首先我們要理解調用函數的方法，最起碼可以用下面兩個方法：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">func(arg1, arg2);</div><div class="line">func.call(context, arg1, arg2);</div></pre></td></tr></table></figure></p>
-<p>之前我也沒怎麼見過後者，基本上都是直接call func的。後者<code>func(arg1, arg2)</code> 等於 <code>func.call(undefined, arg1, arg2)</code>。簡單來說，this就是context。如果context沒有定義的話，它會被定義為一個全局對象，比如說global。在MDN的文檔有這一句: <code>if the method is a function in non-strict mode code, null and undefined will be replaced with the global object and primitive values will be converted to objects</code>。</p>
-<p>如果不想要this是global的話，給予context一個對象就可以了：<br><code>func.call(obj, arg1, arg2)</code></p>
-<h2 id="全局上下文"><a href="#全局上下文" class="headerlink" title="全局上下文"></a>全局上下文</h2><p>在全局中，無論是否在嚴格模式下(Strict mode)，<code>this</code>都是代表全局對象。</p>
-<h3 id="瀏覽器"><a href="#瀏覽器" class="headerlink" title="瀏覽器"></a>瀏覽器</h3><ol>
-<li><code>this.document</code>指向<code>document</code></li>
-<li>全局對象為<code>window</code></li>
-</ol>
-<h3 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h3><p>全局對象為<code>global</code></p>
-<p>直接運用函數的話，this會指向global。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">this</span>.x = <span class="number">1</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line">test();</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">this</span>.x); <span class="comment">// 1</span></div></pre></td></tr></table></figure></p>
-<p>如果是生成一個對象的話，this會指向這個對象而不是global。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Car</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">this</span>.color = <span class="string">'red'</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> c = <span class="keyword">new</span> Car();</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">this</span>.color); <span class="comment">// undefined</span></div><div class="line"><span class="built_in">console</span>.log(c.color); <span class="comment">// red</span></div></pre></td></tr></table></figure></p>
-<p>下次遇到問題的話，我還是MDN資料吧，裡面寫得很詳細。</p>
-<h2 id="問題"><a href="#問題" class="headerlink" title="問題"></a>問題</h2><p>在Node.js中，為什麼this.global === this.global.global的返回值為true？</p>
-<h2 id="延伸思考"><a href="#延伸思考" class="headerlink" title="延伸思考"></a>延伸思考</h2><ol>
-<li>Function.prototype.apply()和call()方法有什麼不同</li>
-<li>Function.prototype.bind()</li>
-</ol>
-<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
-<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/this" rel="external nofollow noopener noreferrer" target="_blank">this - MDN</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call" rel="external nofollow noopener noreferrer" target="_blank">Function.prototype.call - MDN</a></li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;首先我們要理解調用函數的方法，最起碼可以用下面兩個方法：&lt;br&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div cla
-    
-    </summary>
-    
-    
-      <category term="JavaScript" scheme="https://calpa.me/Tags/JavaScript/"/>
     
   </entry>
   
