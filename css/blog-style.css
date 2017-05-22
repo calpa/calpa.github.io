@@ -257,6 +257,10 @@ article blockquote footer{
         transition: opacity 450ms cubic-bezier(0.23, 1, 0.32, 1) 205ms;
     }
 
+    #huxblog_navbar.in::before {
+      display: none;
+    }
+
     #huxblog_navbar.in {
         transform: scaleX(1);
         opacity: 1;
