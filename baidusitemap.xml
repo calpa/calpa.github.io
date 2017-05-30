@@ -4,6 +4,23 @@
 
     
   <url>
+    <loc>https://calpa.me/2017/05/30/why-i-write-blog-posts/</loc>
+    <lastmod>2017-05-30T14:26:17.000Z</lastmod>
+    <data>
+        <display>
+        <title>為什麼要寫技術博客？</title>
+        <pubTime>2017-05-30T12:00:00.000Z</pubTime>
+        
+        <tag>Blog</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://calpa.me/2017/05/21/learn-javascript-in-six-steps/</loc>
     <lastmod>2017-05-21T14:00:07.000Z</lastmod>
     <data>
@@ -40,12 +57,12 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/03/25/javascript-this/</loc>
+    <loc>https://calpa.me/2017/04/27/n-ways-to-output-hello-world/</loc>
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     <data>
         <display>
-        <title>JavaScript的this</title>
-        <pubTime>2017-03-25T04:44:00.000Z</pubTime>
+        <title>Hello World的四+N種方法</title>
+        <pubTime>2017-04-27T06:34:00.000Z</pubTime>
         
         <tag>JavaScript</tag>
          
@@ -56,22 +73,6 @@
     </url>
 
     
-  <url>
-    <loc>https://calpa.me/2017/04/05/front-end-booklist/</loc>
-    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
-    <data>
-        <display>
-        <title>前端工程師的入門書單</title>
-        <pubTime>2017-04-05T14:51:00.000Z</pubTime>
-        
-        <tag>Web</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>https://calpa.me/2017/02/02/javascript-true-and-false/</loc>
@@ -91,30 +92,12 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/01/14/javascript-variable-hoisting/</loc>
+    <loc>https://calpa.me/2017/03/25/javascript-this/</loc>
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     <data>
         <display>
-        <title>JavaScript的變量提升入門</title>
-        <pubTime>2017-01-14T12:09:35.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-    
-  <url>
-    <loc>https://calpa.me/2017/05/01/CreateListFromArrayLike-problem-solution/</loc>
-    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
-    <data>
-        <display>
-        <title>CreateListFromArrayLike called on non-object 報錯的解決方法</title>
-        <pubTime>2017-05-01T14:50:00.000Z</pubTime>
+        <title>JavaScript的this</title>
+        <pubTime>2017-03-25T04:44:00.000Z</pubTime>
         
         <tag>JavaScript</tag>
          
@@ -162,14 +145,14 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/05/05/javascript-array/</loc>
+    <loc>https://calpa.me/2017/04/05/front-end-booklist/</loc>
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     <data>
         <display>
-        <title>JavaScript 數組去重</title>
-        <pubTime>2017-05-05T14:53:00.000Z</pubTime>
+        <title>前端工程師的入門書單</title>
+        <pubTime>2017-04-05T14:51:00.000Z</pubTime>
         
-        <tag>JavaScript</tag>
+        <tag>Web</tag>
          
          
            
@@ -198,12 +181,29 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/04/27/n-ways-to-output-hello-world/</loc>
+    <loc>https://calpa.me/2017/05/01/CreateListFromArrayLike-problem-solution/</loc>
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     <data>
         <display>
-        <title>Hello World的四+N種方法</title>
-        <pubTime>2017-04-27T06:34:00.000Z</pubTime>
+        <title>CreateListFromArrayLike called on non-object 報錯的解決方法</title>
+        <pubTime>2017-05-01T14:50:00.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://calpa.me/2017/02/19/javascript-closure/</loc>
+    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
+    <data>
+        <display>
+        <title>JavaScript的閉包(Closure)</title>
+        <pubTime>2017-02-19T07:12:00.000Z</pubTime>
         
         <tag>JavaScript</tag>
          
@@ -253,12 +253,29 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/02/19/javascript-closure/</loc>
+    <loc>https://calpa.me/2017/05/05/javascript-array/</loc>
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     <data>
         <display>
-        <title>JavaScript的閉包(Closure)</title>
-        <pubTime>2017-02-19T07:12:00.000Z</pubTime>
+        <title>JavaScript 數組去重</title>
+        <pubTime>2017-05-05T14:53:00.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://calpa.me/2017/01/14/javascript-variable-hoisting/</loc>
+    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
+    <data>
+        <display>
+        <title>JavaScript的變量提升入門</title>
+        <pubTime>2017-01-14T12:09:35.000Z</pubTime>
         
         <tag>JavaScript</tag>
          
