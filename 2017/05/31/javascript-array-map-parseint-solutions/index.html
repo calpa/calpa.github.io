@@ -19,11 +19,11 @@
     <meta name="google-site-verification" content="riZBcestky7i9xY__A-5J-2EE65T75X1u-zgbss37Io">
     <title>
         
-        About｜Calpa&#39;s blog
+        JavaScript Array.map(parseInt) 錯誤解決方案｜Calpa&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="https://calpa.me/about/">
+    <link rel="canonical" href="https://calpa.me/2017/05/31/javascript-array-map-parseint-solutions/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -38,7 +38,7 @@
 
 <body class="animated fadeIn">
 <!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost="false" data-istags="false
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost="true" data-istags="false
 " data-ishome="false">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -148,13 +148,13 @@
 <!--only post-->
 
   
-  <img class="wechat-title-img" src="/img/post-default.jpg" alt="wechat-title-image">
+    <img class="wechat-title-img" src="https://i.imgur.com/KMksHxZ.png">
   
 
 <style>
     
     header.intro-header {
-        background-image: url('/img/post-default.jpg')
+        background-image: url('https://i.imgur.com/KMksHxZ.png?imageView2/1/w/1400/h/400/interlace/1/q/90')
     }
 
     
@@ -165,15 +165,31 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>關於我</h1>
+                    <h1>JavaScript Array.map(parseInt) 錯誤解決方案</h1>
                     
+                    <span>
+                      作者 Calpa
+                    </span>
+                    <span>
+                      日期 2017-05-31
+                    </span>
+
+                    
+                      <span class="post-count">共210字</span>
+                    
+
+                    <div class="tags text-center">
+                        
+                        <a class="tag" href="/Tags/#JavaScript" title="JavaScript">JavaScript</a>
+                        
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="post-title-haojen">
         <span>
-            About
+            JavaScript Array.map(parseInt) 錯誤解決方案
         </span>
     </div>
 </header>
@@ -182,6 +198,7 @@
 <article>
     <div class="container">
         <div class="row">
+            <!-- Post Container -->
             <!-- Sidebar Container -->
 <div class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 hidden-sm hidden-xs sidebar-container">
     <!-- About Me -->
@@ -403,19 +420,21 @@
 </div>
 
 
-            <!-- Post Container -->
-            <div class="col-md-8 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-12 post-container">
-                <p>我是Calpa，現在就讀香港科技大學化學與環境工程三年級。因為不願意做重複的工序，開始了前端的路。我曾經參加過六次黑客松，並在微軟舉辦的黑客松中獲得第二名。平常喜歡看動漫，網絡小說。寫Blog是為了記錄一下開發日常，還有就是遇到的坑。</p>
-<ol>
-<li>一名自學的Web前端程序員</li>
-<li>現在就讀香港科技大學化學工程</li>
-<li>本科內容與編程好像沒有什麼關係。。。</li>
-<li>曾經參加過6次Hackathon，並寫了<a href="https://calpa.me/2017/04/23/hackUST-2017-hackathon-summary/">hackUST 2017後記</a>以及<a href="https://calpa.me/2017/02/19/supercharger-hackathon/">SuperCharger Hackathon後記</a></li>
-<li>那個。。。我最喜歡Miku XD</li>
-<li>2016年暑假時，我在香港科技大學圖書館工作，從最基本的HTML，CSS開始入門。</li>
-<li>原來世界上好多種程序員，比如說Markdown程序員，而我則是想成為一個Web前端程序員</li>
-<li>寫博客是為了記錄一下開發日常，還有就是遇到的坑</li>
-<li>推薦一本書：JavaScript高級程序設計(第3版)</li>
+            <div class="col-lg-7 col-lg-offset-0 col-md-7 col-sm-9 post-container">
+                <p>如果我想轉換數組裡面的字符串為數字的話，很自然就會想到 <code>map</code> 和 <code>parseInt</code> 這兩個方法。但是用起來的時候卻不是我想要的結果。。。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = [<span class="string">"1"</span>, <span class="string">"2"</span>, <span class="string">"3"</span>, <span class="string">"4"</span>, <span class="string">"5"</span>];</div><div class="line"></div><div class="line"><span class="keyword">var</span> b = a.map(<span class="built_in">parseInt</span>);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(b); <span class="comment">// [1, NaN, NaN, NaN, NaN]</span></div></pre></td></tr></table></figure>
+<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>如果我們細看 map 的參數，就會發現它的 callback 會有三個 arguments：<code>currentValue</code>, <code>index</code> 和 <code>array</code>。</p>
+<p>對於 <code>parseInt</code> 來說， 它會接收<code>currentValue</code>和 <code>index</code>，並用 index 作為 index 進制。。。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">parseInt</span>(<span class="string">'1'</span>, <span class="number">0</span>); <span class="comment">// OK =&gt; 1</span></div><div class="line"><span class="built_in">parseInt</span>(<span class="string">'2'</span>, <span class="number">1</span>); <span class="comment">// 不合法的進制。。。</span></div><div class="line"><span class="built_in">parseInt</span>(<span class="string">'3'</span>, <span class="number">2</span>); <span class="comment">// NaN, 二進制沒有 3</span></div><div class="line"><span class="built_in">parseInt</span>(<span class="string">'4'</span>, <span class="number">3</span>); <span class="comment">// NaN, 四進制沒有 3</span></div><div class="line"><span class="built_in">parseInt</span>(<span class="string">'5'</span>, <span class="number">4</span>); <span class="comment">// NaN, 五進制沒有 4</span></div></pre></td></tr></table></figure></p>
+<h2 id="解決方法"><a href="#解決方法" class="headerlink" title="解決方法"></a>解決方法</h2><ol>
+<li><p>用<code>.map(parseFloat)</code>，因為它只接收一個參數。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> c = a.map(<span class="built_in">parseFloat</span>);</div></pre></td></tr></table></figure>
+</li>
+<li><p>用<code>.map(Number)</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> d = a.map(<span class="built_in">Number</span>);</div></pre></td></tr></table></figure>
+</li>
+<li><p>用<code>.map(num =&gt; parseInt(num))</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> e = a.map(<span class="function"><span class="params">num</span> =&gt;</span> <span class="built_in">parseInt</span>(num));</div></pre></td></tr></table></figure>
+</li>
 </ol>
 
                 <hr>
@@ -423,6 +442,10 @@
 
                 <ul class="pager">
                     
+                    
+                    <li class="next">
+                        <a href="/2017/05/30/why-i-write-blog-posts/" data-toggle="tooltip" data-placement="top" title="為什麼要寫技術博客？">Next Post &rarr;</a>
+                    </li>
                     
                 </ul>
 
@@ -437,6 +460,12 @@
                 
 
             </div>
+
+            <div class="hidden-xs col-md-2 col-sm-3 toc-col">
+                <div class="toc-wrap">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#原因"><span class="toc-text">原因</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解決方法"><span class="toc-text">解決方法</span></a></li></ol>
+                </div>
+            </div>
         </div>
     </div>
 </article>
@@ -447,8 +476,8 @@
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = "calpas-blog";
-    var disqus_identifier = "https://calpa.me/about/index.html";
-    var disqus_url = "https://calpa.me/about/index.html";
+    var disqus_identifier = "https://calpa.me/2017/05/31/javascript-array-map-parseint-solutions/";
+    var disqus_url = "https://calpa.me/2017/05/31/javascript-array-map-parseint-solutions/";
 
     (function () {
         var dsq = document.createElement('script');

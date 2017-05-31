@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://calpa.me/"/>
-  <updated>2017-05-30T14:26:17.000Z</updated>
+  <updated>2017-05-31T03:22:13.000Z</updated>
   <id>https://calpa.me/</id>
   
   <author>
@@ -14,6 +14,42 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JavaScript Array.map(parseInt) 錯誤解決方案</title>
+    <link href="https://calpa.me/2017/05/31/javascript-array-map-parseint-solutions/"/>
+    <id>https://calpa.me/2017/05/31/javascript-array-map-parseint-solutions/</id>
+    <published>2017-05-31T03:06:00.000Z</published>
+    <updated>2017-05-31T03:22:13.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>如果我想轉換數組裡面的字符串為數字的話，很自然就會想到 <code>map</code> 和 <code>parseInt</code> 這兩個方法。但是用起來的時候卻不是我想要的結果。。。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = [<span class="string">"1"</span>, <span class="string">"2"</span>, <span class="string">"3"</span>, <span class="string">"4"</span>, <span class="string">"5"</span>];</div><div class="line"></div><div class="line"><span class="keyword">var</span> b = a.map(<span class="built_in">parseInt</span>);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(b); <span class="comment">// [1, NaN, NaN, NaN, NaN]</span></div></pre></td></tr></table></figure>
+<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>如果我們細看 map 的參數，就會發現它的 callback 會有三個 arguments：<code>currentValue</code>, <code>index</code> 和 <code>array</code>。</p>
+<p>對於 <code>parseInt</code> 來說， 它會接收<code>currentValue</code>和 <code>index</code>，並用 index 作為 index 進制。。。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">parseInt</span>(<span class="string">'1'</span>, <span class="number">0</span>); <span class="comment">// OK =&gt; 1</span></div><div class="line"><span class="built_in">parseInt</span>(<span class="string">'2'</span>, <span class="number">1</span>); <span class="comment">// 不合法的進制。。。</span></div><div class="line"><span class="built_in">parseInt</span>(<span class="string">'3'</span>, <span class="number">2</span>); <span class="comment">// NaN, 二進制沒有 3</span></div><div class="line"><span class="built_in">parseInt</span>(<span class="string">'4'</span>, <span class="number">3</span>); <span class="comment">// NaN, 四進制沒有 3</span></div><div class="line"><span class="built_in">parseInt</span>(<span class="string">'5'</span>, <span class="number">4</span>); <span class="comment">// NaN, 五進制沒有 4</span></div></pre></td></tr></table></figure></p>
+<h2 id="解決方法"><a href="#解決方法" class="headerlink" title="解決方法"></a>解決方法</h2><ol>
+<li><p>用<code>.map(parseFloat)</code>，因為它只接收一個參數。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> c = a.map(<span class="built_in">parseFloat</span>);</div></pre></td></tr></table></figure>
+</li>
+<li><p>用<code>.map(Number)</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> d = a.map(<span class="built_in">Number</span>);</div></pre></td></tr></table></figure>
+</li>
+<li><p>用<code>.map(num =&gt; parseInt(num))</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> e = a.map(<span class="function"><span class="params">num</span> =&gt;</span> <span class="built_in">parseInt</span>(num));</div></pre></td></tr></table></figure>
+</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;如果我想轉換數組裡面的字符串為數字的話，很自然就會想到 &lt;code&gt;map&lt;/code&gt; 和 &lt;code&gt;parseInt&lt;/code&gt; 這兩個方法。但是用起來的時候卻不是我想要的結果。。。&lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="https://calpa.me/Tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>為什麼要寫技術博客？</title>
@@ -877,40 +913,6 @@
     
     
       <category term="Web" scheme="https://calpa.me/Tags/Web/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Git多人合作開發工作流程</title>
-    <link href="https://calpa.me/2017/04/01/git-workflow/"/>
-    <id>https://calpa.me/2017/04/01/git-workflow/</id>
-    <published>2017-04-01T14:22:00.000Z</published>
-    <updated>2017-04-05T15:27:53.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><ol>
-<li><code>git fetch</code> 確認遠端數據庫的內容</li>
-<li><code>git checkout dev</code> 從現有支線轉到開發支線</li>
-<li><code>git pull</code> 下載遠端數據庫到本地</li>
-<li>永遠使用<code>git pull</code>之後才使用<code>git push</code></li>
-<li><code>git commit -m &quot;Message&quot;</code> 很實用。。。</li>
-<li><code>git checkout -b &quot;New Branch&quot;</code> 可以直接開新支線，並切換到那條支線上</li>
-<li><code>git push origin &quot;updated-branch&quot;</code> 就可以推上去遠端數據庫</li>
-</ol>
-<h2 id="fetch"><a href="#fetch" class="headerlink" title="fetch"></a>fetch</h2><p>使用<code>fetch</code>指令可以避免更改本地數據庫，同時更新其他人更新遠端數據庫後的內容。</p>
-<h2 id="checkout"><a href="#checkout" class="headerlink" title="checkout"></a>checkout</h2><p><code>checkout</code>切換本地數據庫支線，正常情況下應該建立超過兩條支線，比如說<code>master</code>只用作發佈更新版本，<code>dev</code>用作開發。</p>
-<p>個人開發項目和與他人一同開發項目是兩回事來的。。。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;流程&quot;&gt;&lt;a href=&quot;#流程&quot; class=&quot;headerlink&quot; title=&quot;流程&quot;&gt;&lt;/a&gt;流程&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;git fetch&lt;/code&gt; 確認遠端數據庫的內容&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;git checkout de
-    
-    </summary>
-    
-    
-      <category term="Git" scheme="https://calpa.me/Tags/Git/"/>
     
   </entry>
   
