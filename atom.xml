@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://calpa.me/"/>
-  <updated>2017-05-31T03:22:13.000Z</updated>
+  <updated>2017-06-01T09:35:17.000Z</updated>
   <id>https://calpa.me/</id>
   
   <author>
@@ -14,6 +14,48 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>5分鐘製作 Markdown PowerPoint</title>
+    <link href="https://calpa.me/2017/06/01/create-markdown-powerpoint-in-5-mins/"/>
+    <id>https://calpa.me/2017/06/01/create-markdown-powerpoint-in-5-mins/</id>
+    <published>2017-06-01T09:00:00.000Z</published>
+    <updated>2017-06-01T09:35:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<iframe width="100%" height="515" src="https://gitpitch.com/calpa/slides/master?grs=github&t=white" frameborder="0" allowfullscreen></iframe>
+
+<h2 id="關於我"><a href="#關於我" class="headerlink" title="關於我"></a>關於我</h2><ul>
+<li>自學 <span style=" color: #f48024">Web</span> 前端程序員</li>
+<li>香港科技大學化學工程三年級學生</li>
+<li>曾經參加過 6次 Hackathon</li>
+<li>技術博客: <a href="https://calpa.me">https://calpa.me</a></li>
+</ul>
+<h2 id="以前製作-PowerPoint-的方法"><a href="#以前製作-PowerPoint-的方法" class="headerlink" title="以前製作 PowerPoint 的方法"></a>以前製作 PowerPoint 的方法</h2><p>Microsoft PowerPoint</p>
+<p>Apache OpenOffice Impress</p>
+<h2 id="Git-Pitch"><a href="#Git-Pitch" class="headerlink" title="Git Pitch"></a><span style="letter-spacing: 0.1em; color: #e49436; text-transform:none">Git</span> Pitch</h2><h2 id="前置技能"><a href="#前置技能" class="headerlink" title="前置技能"></a>前置技能</h2><ul>
+<li>Github</li>
+<li>Markdown</li>
+</ul>
+<h4 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h4><p><img src="http://i.imgur.com/Riz9ctd.png" height="200" width="200"></p>
+<h4 id="Markdown"><a href="#Markdown" class="headerlink" title="Markdown"></a>Markdown</h4><h4 id="Markdown語法"><a href="#Markdown語法" class="headerlink" title="Markdown語法"></a>Markdown語法</h4><h5 id="標題"><a href="#標題" class="headerlink" title="標題"></a>標題</h5><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="section"># h1</span></div><div class="line"><span class="section">## h2</span></div><div class="line"><span class="section">### h3</span></div><div class="line"><span class="section">#### h4</span></div><div class="line"><span class="section">##### h5</span></div></pre></td></tr></table></figure>
+<h2 id="4個步驟"><a href="#4個步驟" class="headerlink" title="4個步驟"></a>4個步驟</h2><p><img src="http://i.imgur.com/HqSHVOy.png" alt="Imgur"></p>
+<p><img src="http://i.imgur.com/ZwDgHFr.png" alt="Imgur"></p>
+<p><img src="http://i.imgur.com/RLV4Ut0.png" alt="Imgur"></p>
+<p><img src="http://i.imgur.com/uOoSrMa.png" alt="Imgur"></p>
+<h3 id="GitPitch-Slideshow-URL"><a href="#GitPitch-Slideshow-URL" class="headerlink" title="GitPitch Slideshow URL"></a>GitPitch Slideshow URL</h3><p><a href="https://gitpitch.com/user/repo" rel="external nofollow noopener noreferrer" target="_blank">https://gitpitch.com/user/repo</a></p>
+<p><img src="https://calpa.me/img/qrcode.png" height="200" width="200"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;iframe width=&quot;100%&quot; height=&quot;515&quot; src=&quot;https://gitpitch.com/calpa/slides/master?grs=github&amp;t=white&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe
+    
+    </summary>
+    
+    
+      <category term="Markdown" scheme="https://calpa.me/Tags/Markdown/"/>
+    
+  </entry>
   
   <entry>
     <title>JavaScript Array.map(parseInt) 錯誤解決方案</title>
@@ -873,46 +915,6 @@
     
     
       <category term="HTTP" scheme="https://calpa.me/Tags/HTTP/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>前端工程師的入門書單</title>
-    <link href="https://calpa.me/2017/04/05/front-end-booklist/"/>
-    <id>https://calpa.me/2017/04/05/front-end-booklist/</id>
-    <published>2017-04-05T14:51:00.000Z</published>
-    <updated>2017-05-18T06:07:19.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="http://i.imgur.com/CTfB7K9.jpg" alt="Books"></p>
-<p>在二十一世紀資訊發達的年代，我們很容易在互聯網上獲取這些書本的內容，而且能夠獲取書籍的最新內容。比如說vczero寫的<a href="https://github.com/vczero/react-native-lesson" rel="external nofollow noopener noreferrer" target="_blank">React Native入门与实战</a>，作者已經在Github上放上自己的書本內容，以及代碼。雖然我在電腦和手機里已經看過這些書，但當我拿起實體書的時候，那種感覺是非常不同的。</p>
-<p>以下這些書都是很值得去閱讀（開坑）的：</p>
-<ol>
-<li><p>JavaScript 高級程序設計(第三版)</p>
-<p>我在去年的暑假看過一次這本書，感覺能夠學到很多JavaScript的細節。</p>
-</li>
-<li><p>CSS揭秘</p>
-</li>
-<li><p>圖解HTTP</p>
-<p><a href="https://calpa.me/2017/04/08/common-http-status-code/">常見的14種HTTP狀態碼</a></p>
-</li>
-<li><p>人月神話</p>
-</li>
-<li><p>Clean Code</p>
-</li>
-<li><p>Code Complete</p>
-</li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/CTfB7K9.jpg&quot; alt=&quot;Books&quot;&gt;&lt;/p&gt;
-&lt;p&gt;在二十一世紀資訊發達的年代，我們很容易在互聯網上獲取這些書本的內容，而且能夠獲取書籍的最新內容。比如說vczero寫的&lt;a href=&quot;https:/
-    
-    </summary>
-    
-    
-      <category term="Web" scheme="https://calpa.me/Tags/Web/"/>
     
   </entry>
   

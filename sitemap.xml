@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://calpa.me/2017/06/01/create-markdown-powerpoint-in-5-mins/</loc>
+    
+    <lastmod>2017-06-01T09:35:17.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://calpa.me/2017/05/31/javascript-array-map-parseint-solutions/</loc>
     
     <lastmod>2017-05-31T03:22:13.000Z</lastmod>
@@ -44,7 +51,7 @@
   </url>
   
   <url>
-    <loc>https://calpa.me/2017/01/20/using-javascript-to-create-web-storage/</loc>
+    <loc>https://calpa.me/2017/05/16/react-component-lifecycle/</loc>
     
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     
@@ -58,14 +65,7 @@
   </url>
   
   <url>
-    <loc>https://calpa.me/2017/05/16/react-component-lifecycle/</loc>
-    
-    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://calpa.me/2017/04/27/n-ways-to-output-hello-world/</loc>
+    <loc>https://calpa.me/2017/02/02/javascript-true-and-false/</loc>
     
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     
@@ -79,14 +79,14 @@
   </url>
   
   <url>
-    <loc>https://calpa.me/2017/01/14/javascript-variable-hoisting/</loc>
+    <loc>https://calpa.me/2017/04/27/n-ways-to-output-hello-world/</loc>
     
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://calpa.me/2017/02/02/javascript-true-and-false/</loc>
+    <loc>https://calpa.me/2017/01/14/javascript-variable-hoisting/</loc>
     
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     
@@ -100,7 +100,7 @@
   </url>
   
   <url>
-    <loc>https://calpa.me/2017/04/05/front-end-booklist/</loc>
+    <loc>https://calpa.me/2017/01/20/using-javascript-to-create-web-storage/</loc>
     
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     
@@ -108,6 +108,13 @@
   
   <url>
     <loc>https://calpa.me/2017/02/19/javascript-closure/</loc>
+    
+    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://calpa.me/2017/04/05/front-end-booklist/</loc>
     
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     

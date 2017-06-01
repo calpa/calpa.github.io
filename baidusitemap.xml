@@ -4,6 +4,23 @@
 
     
   <url>
+    <loc>https://calpa.me/2017/06/01/create-markdown-powerpoint-in-5-mins/</loc>
+    <lastmod>2017-06-01T09:35:17.000Z</lastmod>
+    <data>
+        <display>
+        <title>5分鐘製作 Markdown PowerPoint</title>
+        <pubTime>2017-06-01T09:00:00.000Z</pubTime>
+        
+        <tag>Markdown</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://calpa.me/2017/05/31/javascript-array-map-parseint-solutions/</loc>
     <lastmod>2017-05-31T03:22:13.000Z</lastmod>
     <data>
@@ -108,16 +125,16 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/01/20/using-javascript-to-create-web-storage/</loc>
+    <loc>https://calpa.me/2017/05/16/react-component-lifecycle/</loc>
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     <data>
         <display>
-        <title>利用JavaScript創建Web Storage</title>
-        <pubTime>2017-01-20T11:37:38.000Z</pubTime>
+        <title>React 組件生命週期 - 加載組件</title>
+        <pubTime>2017-05-16T14:40:00.000Z</pubTime>
         
-        <tag>JavaScript</tag>
-         
         <tag>Web</tag>
+         
+        <tag>React</tag>
          
          
            
@@ -146,16 +163,14 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/05/16/react-component-lifecycle/</loc>
+    <loc>https://calpa.me/2017/02/02/javascript-true-and-false/</loc>
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     <data>
         <display>
-        <title>React 組件生命週期 - 加載組件</title>
-        <pubTime>2017-05-16T14:40:00.000Z</pubTime>
+        <title>JavaScript中的True與False</title>
+        <pubTime>2017-02-02T15:19:53.000Z</pubTime>
         
-        <tag>Web</tag>
-         
-        <tag>React</tag>
+        <tag>JavaScript</tag>
          
          
            
@@ -163,6 +178,7 @@
     </data>
     </url>
 
+    
     
   <url>
     <loc>https://calpa.me/2017/04/27/n-ways-to-output-hello-world/</loc>
@@ -181,7 +197,6 @@
     </url>
 
     
-    
   <url>
     <loc>https://calpa.me/2017/01/14/javascript-variable-hoisting/</loc>
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
@@ -189,23 +204,6 @@
         <display>
         <title>JavaScript的變量提升入門</title>
         <pubTime>2017-01-14T12:09:35.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://calpa.me/2017/02/02/javascript-true-and-false/</loc>
-    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
-    <data>
-        <display>
-        <title>JavaScript中的True與False</title>
-        <pubTime>2017-02-02T15:19:53.000Z</pubTime>
         
         <tag>JavaScript</tag>
          
@@ -234,13 +232,15 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/04/05/front-end-booklist/</loc>
+    <loc>https://calpa.me/2017/01/20/using-javascript-to-create-web-storage/</loc>
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     <data>
         <display>
-        <title>前端工程師的入門書單</title>
-        <pubTime>2017-04-05T14:51:00.000Z</pubTime>
+        <title>利用JavaScript創建Web Storage</title>
+        <pubTime>2017-01-20T11:37:38.000Z</pubTime>
         
+        <tag>JavaScript</tag>
+         
         <tag>Web</tag>
          
          
@@ -259,6 +259,23 @@
         <pubTime>2017-02-19T07:12:00.000Z</pubTime>
         
         <tag>JavaScript</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://calpa.me/2017/04/05/front-end-booklist/</loc>
+    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
+    <data>
+        <display>
+        <title>前端工程師的入門書單</title>
+        <pubTime>2017-04-05T14:51:00.000Z</pubTime>
+        
+        <tag>Web</tag>
          
          
            
