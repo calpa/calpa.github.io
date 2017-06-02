@@ -25,6 +25,33 @@
 
     <link rel="canonical" href="https://calpa.me/2017/01/20/using-javascript-to-create-web-storage/">
 
+    <!-- Open Graph -->
+    
+    <meta name="description" content="Storage
+HTML5 的 Web Storage 包括了兩種儲存方式：localStorage及sessionStorage。
+儲存在Storage中的資料，以key-value pair的形式保存。
+Cookie的佔用空間非常小，大小限制于4KB左右，常見的用途是保存賬號登錄信息與登錄狀態。
+使用Storage物件時，可以寫localStorage代替window.localStorage">
+<meta property="og:type" content="article">
+<meta property="og:title" content="利用JavaScript創建Web Storage | Calpa's blog">
+<meta property="og:url" content="https://calpa.me/2017/01/20/using-javascript-to-create-web-storage/index.html">
+<meta property="og:site_name" content="Calpa">
+<meta property="og:description" content="Storage
+HTML5 的 Web Storage 包括了兩種儲存方式：localStorage及sessionStorage。
+儲存在Storage中的資料，以key-value pair的形式保存。
+Cookie的佔用空間非常小，大小限制于4KB左右，常見的用途是保存賬號登錄信息與登錄狀態。
+使用Storage物件時，可以寫localStorage代替window.localStorage">
+<meta property="og:image" content="https://calpa.me/img/post-default.jpg">
+<meta property="og:updated_time" content="2017-05-18T06:07:19.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="利用JavaScript創建Web Storage | Calpa's blog">
+<meta name="twitter:description" content="Storage
+HTML5 的 Web Storage 包括了兩種儲存方式：localStorage及sessionStorage。
+儲存在Storage中的資料，以key-value pair的形式保存。
+Cookie的佔用空間非常小，大小限制于4KB左右，常見的用途是保存賬號登錄信息與登錄狀態。
+使用Storage物件時，可以寫localStorage代替window.localStorage">
+<meta name="twitter:image" content="https://calpa.me/img/post-default.jpg">
+
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
 
@@ -103,7 +130,7 @@
                       
           							
                           <li>
-                            <a href="/works/">works</a>
+                            <a href="/works/">Works</a>
                           </li>
 						            
           						
@@ -266,11 +293,13 @@
               
               
               
-              
-              
-              
-              
               <a href="/Tags/#Web" title="Web" rel="5">Web</a>
+              
+              
+              
+              
+              
+              
               
               
               
@@ -280,17 +309,15 @@
               
               
               
-              
-              
-              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
-              
-              
-              
               <a href="/Tags/#Hexo" title="Hexo" rel="5">Hexo</a>
               
               
               
               <a href="/Tags/#SEO" title="SEO" rel="2">SEO</a>
+              
+              
+              
+              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
               
               
               
@@ -510,6 +537,11 @@
 
 <!-- Footer -->
 <!-- Footer -->
+<style>
+#busuanzi_container_site_pv {
+  display: inline;
+}
+</style>
 <footer>
     <div class="container">
         <div class="row">
@@ -550,9 +582,14 @@
                 <p class="copyright text-muted">
                     Copyright &copy; Calpa 2017
                     <br>
-                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
+                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">
+                      本站總訪問量: <span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span> 次
+                    </span>
+                    <span id="busuanzi_container_site_uv" style="font-size: 12px;">
+                      本站訪客數: <span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span> 次
+                    </span>
                     <br>
-                    Theme by <a href="https://haojen.github.io/" rel="external nofollow noopener noreferrer" target="_blank">Haojen Ma</a>
+                    Theme by <a href="https://haojen.github.io/" rel="external nofollow noopener noreferrer" target="_blank">Haojen Ma</a>, Modified by <a href="https://calpa.me">Calpa Liu </a>
                 </p>
 
             </div>
@@ -637,6 +674,9 @@
 </script>
 
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!-- AddThis -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59311b889457f301"></script>
 
 <!--wechat title img-->
 <img class="wechat-title-img" src="/img/profile.png">

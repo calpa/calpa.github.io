@@ -25,6 +25,45 @@
 
     <link rel="canonical" href="https://calpa.me/2017/02/19/javascript-closure/">
 
+    <!-- Open Graph -->
+    
+    <meta name="description" content="為什麼會有這篇文章打好基本功是很重要的。。。
+最簡單的閉包
+先定義一個Function A
+在A的裡面定義一個Function B
+在A中返回B
+執行A(), 將A()的返回值賦予給b
+執行b()
+
+12345678function A() &amp;#123;  function B() &amp;#123;    console.log(&amp;quot;Hello, world!&amp;quot;);  &amp;#125;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript的閉包(Closure) | Calpa's blog">
+<meta property="og:url" content="https://calpa.me/2017/02/19/javascript-closure/index.html">
+<meta property="og:site_name" content="Calpa">
+<meta property="og:description" content="為什麼會有這篇文章打好基本功是很重要的。。。
+最簡單的閉包
+先定義一個Function A
+在A的裡面定義一個Function B
+在A中返回B
+執行A(), 將A()的返回值賦予給b
+執行b()
+
+12345678function A() &amp;#123;  function B() &amp;#123;    console.log(&amp;quot;Hello, world!&amp;quot;);  &amp;#125;">
+<meta property="og:image" content="https://calpa.me/img/post-default.jpg">
+<meta property="og:updated_time" content="2017-05-18T06:07:19.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript的閉包(Closure) | Calpa's blog">
+<meta name="twitter:description" content="為什麼會有這篇文章打好基本功是很重要的。。。
+最簡單的閉包
+先定義一個Function A
+在A的裡面定義一個Function B
+在A中返回B
+執行A(), 將A()的返回值賦予給b
+執行b()
+
+12345678function A() &amp;#123;  function B() &amp;#123;    console.log(&amp;quot;Hello, world!&amp;quot;);  &amp;#125;">
+<meta name="twitter:image" content="https://calpa.me/img/post-default.jpg">
+
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
 
@@ -103,7 +142,7 @@
                       
           							
                           <li>
-                            <a href="/works/">works</a>
+                            <a href="/works/">Works</a>
                           </li>
 						            
           						
@@ -264,11 +303,13 @@
               
               
               
-              
-              
-              
-              
               <a href="/Tags/#Web" title="Web" rel="5">Web</a>
+              
+              
+              
+              
+              
+              
               
               
               
@@ -278,17 +319,15 @@
               
               
               
-              
-              
-              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
-              
-              
-              
               <a href="/Tags/#Hexo" title="Hexo" rel="5">Hexo</a>
               
               
               
               <a href="/Tags/#SEO" title="SEO" rel="2">SEO</a>
+              
+              
+              
+              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
               
               
               
@@ -507,6 +546,11 @@
 
 <!-- Footer -->
 <!-- Footer -->
+<style>
+#busuanzi_container_site_pv {
+  display: inline;
+}
+</style>
 <footer>
     <div class="container">
         <div class="row">
@@ -547,9 +591,14 @@
                 <p class="copyright text-muted">
                     Copyright &copy; Calpa 2017
                     <br>
-                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
+                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">
+                      本站總訪問量: <span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span> 次
+                    </span>
+                    <span id="busuanzi_container_site_uv" style="font-size: 12px;">
+                      本站訪客數: <span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span> 次
+                    </span>
                     <br>
-                    Theme by <a href="https://haojen.github.io/" rel="external nofollow noopener noreferrer" target="_blank">Haojen Ma</a>
+                    Theme by <a href="https://haojen.github.io/" rel="external nofollow noopener noreferrer" target="_blank">Haojen Ma</a>, Modified by <a href="https://calpa.me">Calpa Liu </a>
                 </p>
 
             </div>
@@ -634,6 +683,9 @@
 </script>
 
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!-- AddThis -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59311b889457f301"></script>
 
 <!--wechat title img-->
 <img class="wechat-title-img" src="/img/profile.png">
