@@ -102,7 +102,7 @@
                       
           							
                           <li>
-                            <a href="/archive/">Archive</a>
+                            <a href="/about/">About</a>
                           </li>
 						            
           						
@@ -110,7 +110,7 @@
                       
           							
                           <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archive</a>
                           </li>
 						            
           						
@@ -160,200 +160,441 @@
 
 <!-- Main Content -->
 <style>
-    * {
-        /*border: thin red solid;*/
-    }
+  .works-header {
+    height: 100px;
+    margin-top: 60px;
+    text-align: center;
+  }
 
-    header .bg-header {
-        height: 560px;
-        background-color: hsla(174, 33%, 35%, 0.79);
-    }
+  /*头像*/
+  .bg-header .avatar img {
+      border-radius: 50%;
+      margin-top: 100px;
+      max-width: 170px;
+  }
 
-    /*头像*/
-    .bg-header .avatar img {
-        border-radius: 50%;
-        margin-top: 100px;
-        max-width: 170px;
-    }
+  .bg-header h1,
+  .bg-header h2 {
+      color: white;
+  }
 
-    .bg-header h1,
-    .bg-header h2 {
-        color: white;
-    }
+  /*姓名*/
+  .bg-header h1 {
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px rgba(15, 15, 15, .3);
+  }
 
-    /*姓名*/
-    .bg-header h1 {
-        letter-spacing: 2px;
-        text-shadow: 0 0 10px rgba(15, 15, 15, .3);
-    }
+  /*描述*/
+  .bg-header h2 {
+      font-size: 18px;
+      margin-top: 12px;
+  }
 
-    /*描述*/
-    .bg-header h2 {
-        font-size: 18px;
-        margin-top: 12px;
-    }
+  /*整个作品展示区*/
+  section .works-area {
+      margin-top: -150px;
+  }
 
-    /*整个作品展示区*/
-    section .works-area {
-        margin-top: -150px;
-    }
+  .works-area .works-item {
+      border-radius: 2px;
+      border: 1px solid #eee8d5;
+      margin-bottom: 50px;
+      box-shadow: 8px 5px 10px rgba(0, 0, 0, .2);
+  }
 
-    .works-area .works-item {
-        border-radius: 2px;
-        border: 1px solid #eee8d5;
-        margin-bottom: 50px;
-        box-shadow: 8px 5px 10px rgba(0, 0, 0, .2);
-    }
+  .works-item-img {
+      margin: auto -26px;
+  }
 
-    .works-item-img {
-        margin: auto -26px;
-    }
+  .works-item-img img {
+      width: 100%;
+  }
 
-    .works-item-img img {
-        width: 100%;
-    }
+  .works-area .works-item {
+      background: white;
+      padding: 5px 25px;
+  }
 
-    .works-area .works-item {
-        background: white;
-        padding: 5px 25px;
-    }
+  .works-area .footer {
+      padding-top: 10px;
+      border-top: thin #eee solid;
+  }
 
-    .works-area .footer {
-        padding-top: 10px;
-        border-top: thin #eee solid;
-    }
+  .works-area .footer .btn {
+      padding: 7px 9px;
+      border-radius: 2px;
+      float: right;
+      margin: 8px 0;
+      text-transform: none;
+      font-size: 12px;
+      font-style: italic;
+      background: #0085a1;
+      border: none;
+      color: #fff;
+  }
 
-    .works-area .footer .btn {
-        padding: 7px 9px;
-        border-radius: 2px;
-        float: right;
-        margin: 8px 0;
-        text-transform: none;
-        font-size: 12px;
-        font-style: italic;
-        background: #0085a1;
-        border: none;
-        color: #fff;
-    }
+  .works-item .works-content {
+      padding-top: 15px;
+  }
 
-    .works-item .works-content {
-        padding-top: 15px;
-    }
+  .works-item .title {
+      padding-top: 6px;
+  }
 
-    .works-item .title {
-        padding-top: 6px;
-    }
+  .works-item .title h3 {
+      display: inline-block;
+      margin: 0 15px;
+      height: 33px;
+      font-size: 18px;
+      font-weight: 400;
+  }
 
-    .works-item .title h3 {
-        display: inline-block;
-        margin: 0 15px;
-        height: 33px;
-        font-size: 18px;
-        font-weight: 400;
-    }
+  .works-item .title .title-date {
+      float: right;
+      font-size: 18px;
+  }
 
-    .works-item .title .title-date {
-        float: right;
-        font-size: 18px;
-    }
+  .works-item .use span {
+      display: inline-block;
+      font-size: 12px;
+      border-radius: 3px;
+      padding: 0 4px;
+      border: thin solid #795548;
+  }
 
-    .works-item .use span {
-        display: inline-block;
-        font-size: 12px;
-        border-radius: 3px;
-        padding: 0 4px;
-        border: thin solid #795548;
-    }
+  .works-item .subtitle {
+      margin: 0;
+      font-size: 17px;
+  }
 
-    .works-item .subtitle {
-        margin: 0;
-        font-size: 17px;
-    }
+  @media screen and (max-width: 400px) {
+      .works-item .footer .use {
+          font-size: 14px;
+      }
 
-    @media screen and (max-width: 400px) {
-        .works-item .footer .use {
-            font-size: 14px;
-        }
+      .works-item .works-item-img {
+          height: 200px;
+      }
 
-        .works-item .works-item-img {
-            height: 200px;
-        }
+      .bg-header .avatar img {
+          max-width: 150px;
+      }
 
-        .bg-header .avatar img {
-            max-width: 150px;
-        }
+      .bg-header h1 {
+          font-size: 24px;
+      }
 
-        .bg-header h1 {
-            font-size: 24px;
-        }
-
-        section .works-area {
-            margin-top: -210px;
-        }
-    }
+      section .works-area {
+          margin-top: -210px;
+      }
+  }
 </style>
 
 <div class="works-container" style="background-color: #fafafa">
-    <header>
-        <div class="bg-header text-center">
-            <div class="profile">
-                <div class="avatar">
-                    <img src="/img/profile.png">
-                </div>
-                <div class="personal-profile">
-                    <h1>
-                        Calpa
-                    </h1>
-                    <h2>作品集</h2>
-                </div>
-            </div>
-        </div>
+    <header class="works-header">
+      <h1>Calpa</h1>
+      <h2>作品集</h2>
     </header>
+
     <div class="container">
-        <section class="row">
-            <div class="col-sm-10 col-sm-offset-1
-                        col-md-8 col-md-offset-2
-                      works-area">
+      <section class="row">
+        <!-- Sidebar Container -->
+<div class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 hidden-sm hidden-xs sidebar-container">
+    <!-- About Me -->
+    <section class="visible-md visible-lg" style="padding: 0 18px">
+        <div class="short-about">
+            <!--侧边栏头像-->
+            
+            <img src="/img/profile.png" alt="avatar">
+            
+            <h5>Calpa</h5>
+            
+            <p>夢裡不覺秋已深，餘情豈是為他人。</p>
+            
+            <hr>
+            <!-- SNS Link 社交 -->
+            <ul class="list-inline">
+                
+                
+                
+                <li>
+                    <a target="_blank" href="https://www.zhihu.com/people/piao-xue-wu-ying" rel="external nofollow noopener noreferrer">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa  fa-stack-1x fa-inverse">知</i>
+                                </span>
+                    </a>
+                </li>
+                
+
+                
+
+                
+
+                
+                <li>
+                    <a target="_blank" href="https://github.com/calpa" rel="external nofollow noopener noreferrer">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                    </a>
+                </li>
+                
+
+                
+            </ul>
+        </div>
+    </section>
+
+    <!-- Featured Tags  标签 -->
+    
+      <section>
+          <div class="tags">
+              
+              
+              <a href="/Tags/#JavaScript" title="JavaScript" rel="13">JavaScript</a>
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <a href="/Tags/#Web" title="Web" rel="5">Web</a>
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <a href="/Tags/#Github" title="Github" rel="2">Github</a>
+              
+              
+              
+              <a href="/Tags/#Hexo" title="Hexo" rel="5">Hexo</a>
+              
+              
+              
+              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
+              
+              
+              
+              <a href="/Tags/#SEO" title="SEO" rel="2">SEO</a>
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <a href="/Tags/#CSS" title="CSS" rel="2">CSS</a>
+              
+              
+              
+              
+          </div>
+      </section>
+    
+    <hr>
+
+    
+      <hr>
+      <h5 style="text-align: center;">友情鏈接</h5>
+      <ul class="list-inline" style="text-align: center;">
+          
+          <li><a href="http://blog.shanamaid.top/" target="_blank" rel="external nofollow noopener noreferrer">娜酱骑士团</a></li>
+          
+      </ul>
+    
+    <hr>
+
+    <!-- Latest Blog Post-->
+    
+      <h5 style="text-align: center;">最新文章</h5>
+      <ul class="list-inline" style="text-align: center;">
+        
+          <li>
+            <a href="/2017/06/01/create-markdown-powerpoint-in-5-mins/">
+              5分鐘製作 Markdown PowerPoint
+            </a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/31/javascript-array-map-parseint-solutions/">
+              JavaScript Array.map(parseInt) 錯誤解決方案
+            </a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/30/why-i-write-blog-posts/">
+              為什麼要寫技術博客？
+            </a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/21/learn-javascript-in-six-steps/">
+              打好 JavaScript 基礎的6個步驟
+            </a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/18/javascript-data-structures/">
+              利用 ECMAScript 学习如何判断数据类型
+            </a>
+          </li>
+        
+      </ul>
+    
+    <hr>
+
+    <h5 style="text-align: center;">共36篇文章</h5>
+    <hr>
+
+    <!-- All Blog Posts -->
+    
+      <h5 style="text-align: center;">所有文章</h5>
+      <ul style="text-align: center; list-style-type: none; padding: 0;">
+        
+          
+          
+          
+          
+          
+          
+              <li>
+                <a href="/archive/#2017-6">
+                  6月(1)
+                </a>
+              </li>
+            
+          
+              <li>
+                <a href="/archive/#2017-5">
+                  5月(11)
+                </a>
+              </li>
+            
+          
+              <li>
+                <a href="/archive/#2017-4">
+                  4月(10)
+                </a>
+              </li>
+            
+          
+              <li>
+                <a href="/archive/#2017-3">
+                  3月(2)
+                </a>
+              </li>
+            
+          
+              <li>
+                <a href="/archive/#2017-2">
+                  2月(7)
+                </a>
+              </li>
+            
+          
+              <li>
+                <a href="/archive/#2017-1">
+                  1月(5)
+                </a>
+              </li>
+            
+          
+      </ul>
+    
+
+</div>
+
+        <div class="col-lg-9 col-lg-offset-0 col-md-8 col-md-offset-1 col-sm-12 col-xs-12">
                 
                 <div class="works-item">
                     <div class="title">
-                        <h3>
-                            Digital Aperture
-                        </h3>
-                        <span class="title-date text-muted">
-                            2017.1.22
-                        </span>
+                      <h3>
+                        Light Novelist
+                      </h3>
+                      <span class="title-date text-muted">
+                        2017.6.5
+                      </span>
                     </div>
+
+                    <div class="works-item-img">
+                        <img src="http://i.imgur.com/9tQQO4z.png">
+                    </div>
+
+                    <div class="works-content">
+                        <div class="use text-warning">
+                          
+                            <span>json</span>
+                          
+                            <span>light novel</span>
+                          
+                        </div>
+                        <p class="subtitle"> 日式輕小說風中文 </p>
+                        <p class="text-muted"> 沒想到，就算是我這樣的人也能開坑。 </p>
+                    </div>
+
+                    <div class="footer clearfix">
+                        <a class="btn btn-default" href="https://github.com/calpa/light-novelist" target="_blank" rel="external nofollow noopener noreferrer"> Open it</a>
+                    </div>
+                </div>
+                
+                <div class="works-item">
+                    <div class="title">
+                      <h3>
+                        Digital Aperture
+                      </h3>
+                      <span class="title-date text-muted">
+                        2017.1.22
+                      </span>
+                    </div>
+
                     <div class="works-item-img">
                         <img src="https://raw.githubusercontent.com/calpa/Digital-Bot/master/images/chat-1.png">
                     </div>
+
                     <div class="works-content">
                         <div class="use text-warning">
-                            
-                            <span>
-                                    Node.js
-                                </span>
-                            
-                            <span>
-                                    Machine Learning
-                                </span>
-                            
+                          
+                            <span>Node.js</span>
+                          
+                            <span>Machine Learning</span>
+                          
                         </div>
-                        　
                         <p class="subtitle"> ImagineHack 2017 (21-22/2017) </p>
-
                         <p class="text-muted"> Interactive bot 🤖 for elderly living alone and their family members. </p>
                     </div>
+
                     <div class="footer clearfix">
-                        <a class="btn btn-default" href="https://github.com/calpa/Digital-Bot" target="_blank" rel="external nofollow noopener noreferrer"> Open
-                            it</a>
+                        <a class="btn btn-default" href="https://github.com/calpa/Digital-Bot" target="_blank" rel="external nofollow noopener noreferrer"> Open it</a>
                     </div>
                 </div>
                 
             </div>
-        </section>
+      </section>
     </div>
 </div>
+
 <!-- Footer -->
 <!-- Footer -->
 <style>
