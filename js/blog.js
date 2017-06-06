@@ -26,10 +26,7 @@ $(document).ready(function() {
 // 判断是不是博文页面
 function isPages(attr) {
   var currentBoolean = document.querySelector('.navbar.navbar-custom').getAttribute(attr);
-  if (currentBoolean === 'true') {
-    return true;
-  }
-  return false;
+  return currentBoolean === 'true';
 }
 /*
     滚动函数
@@ -61,17 +58,28 @@ function scrollCheck(scrollTarget, toggleClass, scrollHeight, reversed) {
 
 // Change Blog Post Navbar
 (function() {
-  if (isPages('data-ispost')) {
+  if (!isPages('data-ishome')) {
     // navbar
     var navbar = document.querySelector('.navbar-custom');
     var navbarHeight = 60;
-    var introHeader = document.querySelector('.intro-header').offsetHeight;
+    var introHeader = document.querySelector('.intro-header')
+    var headerHeight = 60;
+
+    if (introHeader) {
+      headerHeight = introHeader.offsetHeight;
+    }
+
     var introHeader = introHeader > 497 ? introHeader : 400;
     var postTitle = document.querySelector('.title-calpa');
 
     // table of content
     var toc = document.querySelector('.toc-wrap');
-    scrollCheck(toc, 'toc-fixed', introHeader);
+    if (toc) {
+      scrollCheck(toc, 'toc-fixed', introHeader);
+    }
+
+    console.log(toc, navbar, postTitle);
+
     scrollCheck(navbar, 'is-fixed', navbarHeight);
     scrollCheck(postTitle, 'display-none', navbarHeight, true);
   }
