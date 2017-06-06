@@ -78,8 +78,6 @@ function scrollCheck(scrollTarget, toggleClass, scrollHeight, reversed) {
       scrollCheck(toc, 'toc-fixed', introHeader);
     }
 
-    console.log(toc, navbar, postTitle);
-
     scrollCheck(navbar, 'is-fixed', navbarHeight);
     scrollCheck(postTitle, 'display-none', navbarHeight, true);
   }

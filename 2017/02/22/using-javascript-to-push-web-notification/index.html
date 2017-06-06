@@ -48,7 +48,7 @@ denied: 用戶不授權。。。
 
 創造一個通知很簡單，new Notification(text)可以了。12va">
 <meta property="og:image" content="https://calpa.me/img/post-default.jpg">
-<meta property="og:updated_time" content="2017-05-18T06:07:19.000Z">
+<meta property="og:updated_time" content="2017-06-06T16:27:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="利用JavaScript推送Web Notification | Calpa's blog">
 <meta name="twitter:description" content="如果要推送通知的話，我們首先要請求權限：Notification.requestPermission()
@@ -124,8 +124,8 @@ denied: 用戶不授權。。。
               
                 
                   <li>
-                    <a href="/about/">
-                      About
+                    <a href="/archive/">
+                      Archive
                     </a>
                   </li>
                 
@@ -134,8 +134,8 @@ denied: 用戶不授權。。。
               
                 
                   <li>
-                    <a href="/archive/">
-                      Archive
+                    <a href="/about/">
+                      About
                     </a>
                   </li>
                 
@@ -303,9 +303,9 @@ denied: 用戶不授權。。。
               
               
               
-              
-              
               <a href="/Tags/#Web" title="Web" rel="5">Web</a>
+              
+              
               
               
               
@@ -319,15 +319,15 @@ denied: 用戶不授權。。。
               
               
               
-              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
-              
-              
-              
               <a href="/Tags/#Hexo" title="Hexo" rel="5">Hexo</a>
               
               
               
               <a href="/Tags/#SEO" title="SEO" rel="2">SEO</a>
+              
+              
+              
+              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
               
               
               
@@ -476,10 +476,10 @@ denied: 用戶不授權。。。
 <li>denied: 用戶不授權。。。</li>
 </ol>
 <p>創造一個通知很簡單，<code>new Notification(text)</code>可以了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var text = &quot;Hello, world&quot;;</div><div class="line">new Notification(text);</div></pre></td></tr></table></figure></p>
-<p><img src="http://i.imgur.com/l1lVFXZ.png" alt="Imgur"></p>
+<p><img src="https://i.imgur.com/l1lVFXZ.png" alt="Imgur"></p>
 <p>沒有圖片的話會比較空虛，可以加入options。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">function push() &#123;</div><div class="line">  var title = &quot;這是一個標題。。。&quot;;</div><div class="line">	var options = &#123;</div><div class="line">		body: &quot;Calpa 寫了一篇文章XD&quot;,</div><div class="line">		icon: &quot;https://calpa.github.io/img/profile.png&quot;</div><div class="line">	&#125;</div><div class="line">	var n = new Notification(title, options);</div><div class="line">&#125;</div><div class="line"></div><div class="line">push();</div></pre></td></tr></table></figure>
-<p><img src="http://i.imgur.com/uuNPUoB.png" alt="Imgur"></p>
+<p><img src="https://i.imgur.com/uuNPUoB.png" alt="Imgur"></p>
 <p>如果要增加與用戶的互動，可以利用Notification的事件：</p>
 <ol>
 <li>onshow</li>

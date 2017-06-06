@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://calpa.me/"/>
-  <updated>2017-06-01T09:35:17.000Z</updated>
+  <updated>2017-06-06T16:27:26.000Z</updated>
   <id>https://calpa.me/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://calpa.me/2017/06/01/create-markdown-powerpoint-in-5-mins/"/>
     <id>https://calpa.me/2017/06/01/create-markdown-powerpoint-in-5-mins/</id>
     <published>2017-06-01T09:00:00.000Z</published>
-    <updated>2017-06-01T09:35:17.000Z</updated>
+    <updated>2017-06-06T16:27:26.000Z</updated>
     
     <content type="html"><![CDATA[<iframe width="100%" height="515" src="https://gitpitch.com/calpa/slides/master?grs=github&t=white" frameborder="0" allowfullscreen></iframe>
 
@@ -36,12 +36,12 @@
 <li>Github</li>
 <li>Markdown</li>
 </ul>
-<h4 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h4><p><img src="http://i.imgur.com/Riz9ctd.png" height="200" width="200"></p>
+<h4 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h4><p><img src="https://i.imgur.com/Riz9ctd.png" height="200" width="200"></p>
 <h4 id="Markdown"><a href="#Markdown" class="headerlink" title="Markdown"></a>Markdown</h4><h4 id="Markdown語法"><a href="#Markdown語法" class="headerlink" title="Markdown語法"></a>Markdown語法</h4><h5 id="標題"><a href="#標題" class="headerlink" title="標題"></a>標題</h5><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="section"># h1</span></div><div class="line"><span class="section">## h2</span></div><div class="line"><span class="section">### h3</span></div><div class="line"><span class="section">#### h4</span></div><div class="line"><span class="section">##### h5</span></div></pre></td></tr></table></figure>
-<h2 id="4個步驟"><a href="#4個步驟" class="headerlink" title="4個步驟"></a>4個步驟</h2><p><img src="http://i.imgur.com/HqSHVOy.png" alt="Imgur"></p>
-<p><img src="http://i.imgur.com/ZwDgHFr.png" alt="Imgur"></p>
-<p><img src="http://i.imgur.com/RLV4Ut0.png" alt="Imgur"></p>
-<p><img src="http://i.imgur.com/uOoSrMa.png" alt="Imgur"></p>
+<h2 id="4個步驟"><a href="#4個步驟" class="headerlink" title="4個步驟"></a>4個步驟</h2><p><img src="https://i.imgur.com/HqSHVOy.png" alt="Imgur"></p>
+<p><img src="https://i.imgur.com/ZwDgHFr.png" alt="Imgur"></p>
+<p><img src="https://i.imgur.com/RLV4Ut0.png" alt="Imgur"></p>
+<p><img src="https://i.imgur.com/uOoSrMa.png" alt="Imgur"></p>
 <h3 id="GitPitch-Slideshow-URL"><a href="#GitPitch-Slideshow-URL" class="headerlink" title="GitPitch Slideshow URL"></a>GitPitch Slideshow URL</h3><p><a href="https://gitpitch.com/user/repo" rel="external nofollow noopener noreferrer" target="_blank">https://gitpitch.com/user/repo</a></p>
 <p><img src="https://calpa.me/img/qrcode.png" height="200" width="200"></p>
 ]]></content>
@@ -136,14 +136,14 @@
     <link href="https://calpa.me/2017/05/21/learn-javascript-in-six-steps/"/>
     <id>https://calpa.me/2017/05/21/learn-javascript-in-six-steps/</id>
     <published>2017-05-21T12:00:00.000Z</published>
-    <updated>2017-05-21T14:00:07.000Z</updated>
+    <updated>2017-06-06T16:28:01.000Z</updated>
     
     <content type="html"><![CDATA[<p>平日開發的時候，我們會選擇使用一些框架來避免重複製造輪子，減輕我們的工作量。然而，我們卻不能透過使用更好的工具，或者更換框架來解決一些基礎開發問題。因此打好基礎很重要，不但決定前端程序員解決基礎問題的能力，還決定了面對日新月異框架時的掌握能力。當我開發 React 應用的時候，遇到的問題多是我對於 JavaScript 的理解不夠充分。因此，我在這裡寫一下如何打好 JavaScript 基礎，希望拋磚引玉 XD</p>
 <ol>
 <li><p>看一些經典的書<br>JavaScript: 紅寶書 (JavaScript高級程序設計)，犀牛書 (JavaScript: The Definitive Guide)，You Don’t Know JS<br>計算機經典: 算法導論，SICP</p>
-<img src="http://i.imgur.com/xm6R14W.jpg" width="300" title="auto JavaScript高級程序設計">
-<img src="http://i.imgur.com/autEZuV.jpg" width="300" title="auto JavaScript: The Definitive Guide">
-<img src="http://i.imgur.com/ajLLsUg.gif" width="300" title="auto You Don" alt="t Know JS">
+<img src="https://i.imgur.com/xm6R14W.jpg" width="300" title="auto JavaScript高級程序設計">
+<img src="https://i.imgur.com/autEZuV.jpg" width="300" title="auto JavaScript: The Definitive Guide">
+<img src="https://i.imgur.com/ajLLsUg.gif" width="300" title="auto You Don" alt="t Know JS">
 </li>
 <li><p>嘗試用不同的工具，增加自己的視野。<br>你可以做一些玩具，自己嘗試一下寫TODO APP 的不同寫法。</p>
 </li>
@@ -635,17 +635,17 @@
     <link href="https://calpa.me/2017/04/25/coders-of-the-caribbean-review/"/>
     <id>https://calpa.me/2017/04/25/coders-of-the-caribbean-review/</id>
     <published>2017-04-25T07:35:00.000Z</published>
-    <updated>2017-04-25T14:51:53.000Z</updated>
+    <updated>2017-06-06T16:28:01.000Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="http://i.imgur.com/HDvrCYc.png" alt="Coders of the Caribbean report for Calpa"></p>
+    <content type="html"><![CDATA[<p><img src="https://i.imgur.com/HDvrCYc.png" alt="Coders of the Caribbean report for Calpa"></p>
 <p>寫了一天Code後，我就把那些代碼放置在Codingame上面。今天它寄電郵給我說有比賽結果。對於這一次的結果，我完全不感到意外。因為很多地方都沒有去優化，比如說如何去計算各種行動的優先權重。這裡就不放上代碼了，還是下一次拿到更高的排名才放出來吧 XD</p>
 <p>看來我還是要好好地刷算法才行。。。</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/HDvrCYc.png&quot; alt=&quot;Coders of the Caribbean report for Calpa&quot;&gt;&lt;/p&gt;
-&lt;p&gt;寫了一天Code後，我就把那些代碼放置在Codingame上面。今天它寄電郵給我
+      &lt;p&gt;&lt;img src=&quot;https://i.imgur.com/HDvrCYc.png&quot; alt=&quot;Coders of the Caribbean report for Calpa&quot;&gt;&lt;/p&gt;
+&lt;p&gt;寫了一天Code後，我就把那些代碼放置在Codingame上面。今天它寄電郵給
     
     </summary>
     
@@ -659,7 +659,7 @@
     <link href="https://calpa.me/2017/04/23/hackUST-2017-hackathon-summary/"/>
     <id>https://calpa.me/2017/04/23/hackUST-2017-hackathon-summary/</id>
     <published>2017-04-23T12:44:00.000Z</published>
-    <updated>2017-04-23T13:39:41.000Z</updated>
+    <updated>2017-06-06T16:28:01.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h2><p>經過一天的努力，我們成功進入最後5強。這次比賽都幾好玩，基本上由第一天中午吃到晚上，然後第二天回來也是吃吃吃。雖然最後沒有取得獎金，但也是學到很多的知識。比如說如何解決安裝npm package問題，更新npm package問題。</p>
 <p>第一天中午的時候已經把Demo做出來了，但是不知道為什麼刪除<code>node_modules</code>之後，Expo就直接崩潰了。這是因為<code>package.json</code>裡面根本就沒有把完整的<code>dependencies</code>寫出來，當我輸入<code>npm install</code>的時候就不能順利安裝。於是我只能在CodePen裡面開一個<a href="http://codepen.io/calpa/pen/LyZjPm" rel="external nofollow noopener noreferrer" target="_blank">Pen</a>用來做控制器。</p>
@@ -676,22 +676,22 @@
 <p>而在展示用戶數據的時候，我們用<a href="http://c3js.org/" rel="external nofollow noopener noreferrer" target="_blank">C3.js</a>來做實時渲染數據。利用C3.js，我們很容易就可以產生D3圖表，而不是重寫D3代碼。我們也可以修改每一個元素的樣式。感覺再寫下去就變教學文了。。。</p>
 <iframe height="400" scrolling="no" title="Playground C3.js" src="//codepen.io/calpa/embed/MmevBr/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/calpa/pen/MmevBr/" rel="external nofollow noopener noreferrer" target="_blank">Playground C3.js</a> by Calpa Liu (<a href="http://codepen.io/calpa" rel="external nofollow noopener noreferrer" target="_blank">@calpa</a>) on <a href="http://codepen.io" rel="external nofollow noopener noreferrer" target="_blank">CodePen</a>.<br></iframe>
 
-<h2 id="比賽照片"><a href="#比賽照片" class="headerlink" title="比賽照片"></a>比賽照片</h2><p>以下是比賽時拍攝的一些照片：<br><img src="http://i.imgur.com/vXyDaoY.jpg" alt="Imgur"></p>
+<h2 id="比賽照片"><a href="#比賽照片" class="headerlink" title="比賽照片"></a>比賽照片</h2><p>以下是比賽時拍攝的一些照片：<br><img src="https://i.imgur.com/vXyDaoY.jpg" alt="Imgur"></p>
 <p>感謝這次一起參賽的三位隊友。</p>
-<p><img src="http://i.imgur.com/6nLsXEB.jpg" alt="Imgur"></p>
+<p><img src="https://i.imgur.com/6nLsXEB.jpg" alt="Imgur"></p>
 <center>比賽場地</center>
 
 
-<p><img src="http://i.imgur.com/2mLCtBm.jpg" alt="Imgur"></p>
+<p><img src="https://i.imgur.com/2mLCtBm.jpg" alt="Imgur"></p>
 <center>接待處</center>
 
-<p><img src="http://i.imgur.com/pL19qZw.jpg" alt="Imgur"></p>
+<p><img src="https://i.imgur.com/pL19qZw.jpg" alt="Imgur"></p>
 <center>宣傳物品</center>
 
-<p><img src="http://i.imgur.com/g1GZHCJ.jpg" alt="Imgur"></p>
+<p><img src="https://i.imgur.com/g1GZHCJ.jpg" alt="Imgur"></p>
 <center>平常用來賣官方廣告的地方現在用來賣hackUST和hardUST的廣告 XD</center>
 
-<p><img src="http://i.imgur.com/DbLEVGz.jpg" alt="Imgur"></p>
+<p><img src="https://i.imgur.com/DbLEVGz.jpg" alt="Imgur"></p>
 <center>演示的場地</center>
 
 <p>這次主辦單位派發了港幣120元的餐券，還有很多零食，飲料。最重要的是，有我最喜歡的忌廉汽水www。希望以後都可以繼續參加比賽，學習更多的編程知識。</p>
