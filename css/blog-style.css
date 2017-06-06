@@ -1113,65 +1113,17 @@ img::-moz-selection {
 .navbar-custom.is-fixed .navbar-toggle span {
     background: black;
 }
-.post-title-haojen{
-    display: none;
-}
 
-.post-title-fixed{
-    display: block;
-    position: fixed;
-    top:-40px;
-    width: 100%;
-    z-index: 6;
-    text-align: center;
-    white-space: nowrap;
-    left:0;
-}
-.post-title-fixed span{
-    display: inline-block;
-    max-width: 250px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    position: relative;
-    top:57px;
-}
-@media screen and (max-width: 1049px){
-    .post-title-fixed span{
-        max-width: 180px;
-        font-size: 15px;
-        margin-left: -160px;
-    }
-}
-
-@media screen and (max-width: 880px) , screen and(min-width: 770px){
-    .post-title-fixed span{
-        display: none;
-    }
-}
-
-@media screen and  (max-width: 768px){
-    .post-title-fixed span{
-        max-width: 160px;
-        font-size: 14px;
-        margin-left: 0;
-        top: 59px;
-        display: inline-block;
-    }
-}
 .post-preview > a > .post-title{
     margin-bottom: 0;
     font-weight: 200;
     text-shadow: 0 0 1px rgba(0,0,0,.15);
 }
+
 @media screen and (max-width: 500px) {
-    .post-title-fixed span{
-        display: none;
-        top:57px;
-    }
-    .post-preview > a > .post-title{
-        font-weight: normal;
-    }
+  .post-preview > a > .post-title{
+    font-weight: normal;
+  }
 }
 .site-heading .about-me img{
     width: 120px;height: 120px;
@@ -1210,9 +1162,24 @@ img::-moz-selection {
   margin-top: 35px;
 }
 
+/* Custom CSS*/
+
 *[id]:before {
   content:"";
   display:block;
   height: 60px; /* fixed header height*/
   margin: -60px 0 0; /* negative fixed header height */
+}
+
+/* navbar */
+.display-none {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+  }
 }

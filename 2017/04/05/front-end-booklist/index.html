@@ -73,107 +73,109 @@ JavaScript 高級程序設計(第三版)
 <!-- Navigation -->
 <nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost="true" data-istags="false
 " data-ishome="false">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand animated pulse" href="/">
-                <span class="brand-logo">
-                    Calpa
-                </span>
-                's Blog
-            </a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <!-- Known Issue, found by Hux:
-            <nav>'s height woule be hold on by its content.
-            so, when navbar scale out, the <nav> will cover tags.
-            also mask any touch event of tags, unfortunately.
-        -->
-        <!-- /.navbar-collapse -->
-        <div id="huxblog_navbar">
-            <div class="navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-	                  
-                    
-                      
-          							
-                          <li>
-                            <a href="/Tags/">Tags</a>
-                          </li>
-						            
-          						
-                    
-                      
-          							
-          						
-                    
-                      
-          							
-                          <li>
-                            <a href="/about/">About</a>
-                          </li>
-						            
-          						
-                    
-                      
-          							
-                          <li>
-                            <a href="/works/">Works</a>
-                          </li>
-						            
-          						
-                    
-                      
-          							
-                          <li>
-                            <a href="/archive/">Archive</a>
-                          </li>
-						            
-          						
-                    
-                </ul>
-            </div>
-        </div>
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand animated pulse" href="/">
+        <span class="brand-logo">Calpa</span>'s Blog
+      </a>
     </div>
-    <!-- /.container -->
+
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-center title-calpa display-none">
+          <li><a href="#" onclick="scrolltoTop(event)">前端工程師的入門書單</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          
+            
+              
+                
+              
+            
+              
+                
+                  <li>
+                    <a href="/Tags/">
+                      Tags
+                    </a>
+                  </li>
+                
+              
+            
+              
+                
+                  <li>
+                    <a href="/about/">
+                      About
+                    </a>
+                  </li>
+                
+              
+            
+              
+                
+                  <li>
+                    <a href="/archive/">
+                      Archive
+                    </a>
+                  </li>
+                
+              
+            
+              
+                
+                  <li>
+                    <a href="/works/">
+                      Works
+                    </a>
+                  </li>
+                
+              
+            
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- /.container -->
 </nav>
 <script>
-    // Drop Bootstarp low-performance Navbar
-    // Use customize navbar with high-quality material design animation
-    // in high-perf jank-free CSS3 implementation
-//    var $body   = document.body;
-    var $toggle = document.querySelector('.navbar-toggle');
-    var $navbar = document.querySelector('#huxblog_navbar');
-    var $collapse = document.querySelector('.navbar-collapse');
+  // Drop Bootstarp low-performance Navbar
+  // Use customize navbar with high-quality material design animation
+  // in high-perf jank-free CSS3 implementation
+  //    var $body   = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
 
-    $toggle.addEventListener('click', handleMagic)
-    function handleMagic(e){
-        if ($navbar.className.indexOf('in') > 0) {
-        // CLOSE
-            $navbar.className = " ";
-            // wait until animation end.
-            setTimeout(function(){
-                // prevent frequently toggle
-                if($navbar.className.indexOf('in') < 0) {
-                    $collapse.style.height = "0px"
-                }
-            },400)
-        }else{
-        // OPEN
-            $collapse.style.height = "auto"
-            $navbar.className += " in";
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
         }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
     }
+  }
 </script>
 
 <!-- Main Content -->
@@ -219,11 +221,6 @@ JavaScript 高級程序設計(第三版)
                 </div>
             </div>
         </div>
-    </div>
-    <div class="post-title-haojen">
-        <span>
-            前端工程師的入門書單
-        </span>
     </div>
 </header>
 
@@ -297,8 +294,6 @@ JavaScript 高級程序設計(第三版)
               
               
               
-              
-              
               <a href="/Tags/#Web" title="Web" rel="5">Web</a>
               
               
@@ -310,6 +305,8 @@ JavaScript 高級程序設計(第三版)
               
               
               <a href="/Tags/#Github" title="Github" rel="2">Github</a>
+              
+              
               
               
               
@@ -521,6 +518,7 @@ JavaScript 高級程序設計(第三版)
 
 
 
+
 <!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
@@ -538,6 +536,44 @@ JavaScript 高級程序設計(第三版)
 </script>
 <!-- disqus 公共JS代码 end -->
 
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+        var d = document, t = 'script',
+                o = d.createElement(t),
+                s = d.getElementsByTagName(t)[0];
+        o.src = u;
+        if (c) {
+            o.addEventListener('load', function (e) {
+                c(null, e);
+            }, false);
+        }
+        s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("http://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function () {
+      anchors.options = {
+        visible: 'always',
+        placement: 'left'
+      };
+      anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+      .anchorjs-link:hover {
+        color: #2500AD;
+      }
+      *:hover > .anchorjs-link {
+        transition: color .25s linear;
+      }
+    }
+</style>
 
 
 <!-- Footer -->

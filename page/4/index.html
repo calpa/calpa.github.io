@@ -58,109 +58,111 @@
 
 <body class="animated fadeIn">
 <!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost="false" data-istags="false
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top is-fixed" id="nav-top" data-ispost="false" data-istags="false
 " data-ishome="true">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand animated pulse" href="/">
-                <span class="brand-logo">
-                    Calpa
-                </span>
-                's Blog
-            </a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <!-- Known Issue, found by Hux:
-            <nav>'s height woule be hold on by its content.
-            so, when navbar scale out, the <nav> will cover tags.
-            also mask any touch event of tags, unfortunately.
-        -->
-        <!-- /.navbar-collapse -->
-        <div id="huxblog_navbar">
-            <div class="navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-	                  
-                    
-                      
-          							
-                          <li>
-                            <a href="/Tags/">Tags</a>
-                          </li>
-						            
-          						
-                    
-                      
-          							
-          						
-                    
-                      
-          							
-                          <li>
-                            <a href="/about/">About</a>
-                          </li>
-						            
-          						
-                    
-                      
-          							
-                          <li>
-                            <a href="/works/">Works</a>
-                          </li>
-						            
-          						
-                    
-                      
-          							
-                          <li>
-                            <a href="/archive/">Archive</a>
-                          </li>
-						            
-          						
-                    
-                </ul>
-            </div>
-        </div>
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand animated pulse" href="/">
+        <span class="brand-logo">Calpa</span>'s Blog
+      </a>
     </div>
-    <!-- /.container -->
+
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-center title-calpa display-none">
+          <li><a href="#" onclick="scrolltoTop(event)">home</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          
+            
+              
+                
+              
+            
+              
+                
+                  <li>
+                    <a href="/Tags/">
+                      Tags
+                    </a>
+                  </li>
+                
+              
+            
+              
+                
+                  <li>
+                    <a href="/about/">
+                      About
+                    </a>
+                  </li>
+                
+              
+            
+              
+                
+                  <li>
+                    <a href="/archive/">
+                      Archive
+                    </a>
+                  </li>
+                
+              
+            
+              
+                
+                  <li>
+                    <a href="/works/">
+                      Works
+                    </a>
+                  </li>
+                
+              
+            
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- /.container -->
 </nav>
 <script>
-    // Drop Bootstarp low-performance Navbar
-    // Use customize navbar with high-quality material design animation
-    // in high-perf jank-free CSS3 implementation
-//    var $body   = document.body;
-    var $toggle = document.querySelector('.navbar-toggle');
-    var $navbar = document.querySelector('#huxblog_navbar');
-    var $collapse = document.querySelector('.navbar-collapse');
+  // Drop Bootstarp low-performance Navbar
+  // Use customize navbar with high-quality material design animation
+  // in high-perf jank-free CSS3 implementation
+  //    var $body   = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
 
-    $toggle.addEventListener('click', handleMagic)
-    function handleMagic(e){
-        if ($navbar.className.indexOf('in') > 0) {
-        // CLOSE
-            $navbar.className = " ";
-            // wait until animation end.
-            setTimeout(function(){
-                // prevent frequently toggle
-                if($navbar.className.indexOf('in') < 0) {
-                    $collapse.style.height = "0px"
-                }
-            },400)
-        }else{
-        // OPEN
-            $collapse.style.height = "auto"
-            $navbar.className += " in";
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
         }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
     }
+  }
 </script>
 
 <!-- Main Content -->
@@ -429,30 +431,6 @@ denied..
 
 
 <div class="post-preview " style="background-image: url('/img/post-default.jpg')">
-    <a href="/2017/02/19/supercharger-hackathon/">
-        <h2 class="post-title">
-            SuperCharger Hackathon後記
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-02-19
-        </p>
-        
-        <div class="post-content-preview">
-            <p>
-                
-如果計上這次比賽的話，我已經是第五次參加這一類編程比賽。與過往的比賽不同，合作的對象不再是大學生，而是兩間Start-up公司。在這次比賽中，我選擇KYC-Chain、Clare.ai兩間公司組成的隊伍。KYC-Chain透過Airtable提供一些常見的用戶問題與答案，而Clare.ai則負..
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-
-<div class="post-preview " style="background-image: url('/img/post-default.jpg')">
     <a href="/2017/02/19/javascript-closure/">
         <h2 class="post-title">
             JavaScript的閉包(Closure)
@@ -472,6 +450,30 @@ denied..
 執行b()
 
 12345678function A() &#123;  function B() &#123;..
+            </p>
+        </div>
+    </a>
+
+</div>
+
+<hr>
+
+
+
+
+<div class="post-preview " style="background-image: url('/img/post-default.jpg')">
+    <a href="/2017/02/19/supercharger-hackathon/">
+        <h2 class="post-title">
+            SuperCharger Hackathon後記
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-02-19
+        </p>
+        
+        <div class="post-content-preview">
+            <p>
+                
+如果計上這次比賽的話，我已經是第五次參加這一類編程比賽。與過往的比賽不同，合作的對象不再是大學生，而是兩間Start-up公司。在這次比賽中，我選擇KYC-Chain、Clare.ai兩間公司組成的隊伍。KYC-Chain透過Airtable提供一些常見的用戶問題與答案，而Clare.ai則負..
             </p>
         </div>
     </a>
@@ -615,8 +617,6 @@ Cookie的佔用空間非常小，大小限制于4KB左右，常見的用途是�
               
               
               
-              
-              
               <a href="/Tags/#Web" title="Web" rel="5">Web</a>
               
               
@@ -628,6 +628,8 @@ Cookie的佔用空間非常小，大小限制于4KB左右，常見的用途是�
               
               
               <a href="/Tags/#Github" title="Github" rel="2">Github</a>
+              
+              
               
               
               

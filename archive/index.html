@@ -59,109 +59,111 @@
 
 <body class="animated fadeIn">
 <!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost="false" data-istags="false
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top is-fixed" id="nav-top" data-ispost="false" data-istags="false
 " data-ishome="false">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand animated pulse" href="/">
-                <span class="brand-logo">
-                    Calpa
-                </span>
-                's Blog
-            </a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <!-- Known Issue, found by Hux:
-            <nav>'s height woule be hold on by its content.
-            so, when navbar scale out, the <nav> will cover tags.
-            also mask any touch event of tags, unfortunately.
-        -->
-        <!-- /.navbar-collapse -->
-        <div id="huxblog_navbar">
-            <div class="navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-	                  
-                    
-                      
-          							
-                          <li>
-                            <a href="/Tags/">Tags</a>
-                          </li>
-						            
-          						
-                    
-                      
-          							
-          						
-                    
-                      
-          							
-                          <li>
-                            <a href="/about/">About</a>
-                          </li>
-						            
-          						
-                    
-                      
-          							
-                          <li>
-                            <a href="/works/">Works</a>
-                          </li>
-						            
-          						
-                    
-                      
-          							
-                          <li>
-                            <a href="/archive/">Archive</a>
-                          </li>
-						            
-          						
-                    
-                </ul>
-            </div>
-        </div>
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand animated pulse" href="/">
+        <span class="brand-logo">Calpa</span>'s Blog
+      </a>
     </div>
-    <!-- /.container -->
+
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-center title-calpa display-none">
+          <li><a href="#" onclick="scrolltoTop(event)">Archive</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          
+            
+              
+                
+              
+            
+              
+                
+                  <li>
+                    <a href="/Tags/">
+                      Tags
+                    </a>
+                  </li>
+                
+              
+            
+              
+                
+                  <li>
+                    <a href="/about/">
+                      About
+                    </a>
+                  </li>
+                
+              
+            
+              
+                
+                  <li>
+                    <a href="/archive/">
+                      Archive
+                    </a>
+                  </li>
+                
+              
+            
+              
+                
+                  <li>
+                    <a href="/works/">
+                      Works
+                    </a>
+                  </li>
+                
+              
+            
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- /.container -->
 </nav>
 <script>
-    // Drop Bootstarp low-performance Navbar
-    // Use customize navbar with high-quality material design animation
-    // in high-perf jank-free CSS3 implementation
-//    var $body   = document.body;
-    var $toggle = document.querySelector('.navbar-toggle');
-    var $navbar = document.querySelector('#huxblog_navbar');
-    var $collapse = document.querySelector('.navbar-collapse');
+  // Drop Bootstarp low-performance Navbar
+  // Use customize navbar with high-quality material design animation
+  // in high-perf jank-free CSS3 implementation
+  //    var $body   = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
 
-    $toggle.addEventListener('click', handleMagic)
-    function handleMagic(e){
-        if ($navbar.className.indexOf('in') > 0) {
-        // CLOSE
-            $navbar.className = " ";
-            // wait until animation end.
-            setTimeout(function(){
-                // prevent frequently toggle
-                if($navbar.className.indexOf('in') < 0) {
-                    $collapse.style.height = "0px"
-                }
-            },400)
-        }else{
-        // OPEN
-            $collapse.style.height = "auto"
-            $navbar.className += " in";
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
         }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
     }
+  }
 </script>
 
 <!-- Main Content -->
@@ -238,8 +240,6 @@
               
               
               
-              
-              
               <a href="/Tags/#Web" title="Web" rel="5">Web</a>
               
               
@@ -251,6 +251,8 @@
               
               
               <a href="/Tags/#Github" title="Github" rel="2">Github</a>
+              
+              
               
               
               
@@ -657,16 +659,16 @@
         
 
             <li class="posts">
-              <a href="/2017/02/19/supercharger-hackathon/">
-                19日 SuperCharger Hackathon後記
+              <a href="/2017/02/19/javascript-closure/">
+                19日 JavaScript的閉包(Closure)
               </a>
             </li>
 
         
 
             <li class="posts">
-              <a href="/2017/02/19/javascript-closure/">
-                19日 JavaScript的閉包(Closure)
+              <a href="/2017/02/19/supercharger-hackathon/">
+                19日 SuperCharger Hackathon後記
               </a>
             </li>
 
@@ -702,16 +704,16 @@
         
 
             <li class="posts">
-              <a href="/2017/01/08/hexo-404-page/">
-                8日 Hexo之建立404 Page
+              <a href="/2017/01/08/readme/">
+                8日 Github上的README.md
               </a>
             </li>
 
         
 
             <li class="posts">
-              <a href="/2017/01/08/readme/">
-                8日 Github上的README.md
+              <a href="/2017/01/08/hexo-404-page/">
+                8日 Hexo之建立404 Page
               </a>
             </li>
 
