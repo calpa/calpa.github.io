@@ -2,28 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://calpa.me/2017/02/23/github-edcation-package/</loc>
+    <loc>https://calpa.me/about/index.html</loc>
     
-    <lastmod>2017-06-06T16:28:01.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://calpa.me/2017/05/21/learn-javascript-in-six-steps/</loc>
-    
-    <lastmod>2017-06-06T16:28:01.000Z</lastmod>
+    <lastmod>2017-06-11T15:50:17.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://calpa.me/2017/04/25/coders-of-the-caribbean-review/</loc>
-    
-    <lastmod>2017-06-06T16:28:01.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://calpa.me/2017/02/19/supercharger-hackathon/</loc>
     
     <lastmod>2017-06-06T16:28:01.000Z</lastmod>
     
@@ -37,7 +23,28 @@
   </url>
   
   <url>
+    <loc>https://calpa.me/2017/02/23/github-edcation-package/</loc>
+    
+    <lastmod>2017-06-06T16:28:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://calpa.me/2017/04/23/hackUST-2017-hackathon-summary/</loc>
+    
+    <lastmod>2017-06-06T16:28:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://calpa.me/2017/02/19/supercharger-hackathon/</loc>
+    
+    <lastmod>2017-06-06T16:28:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://calpa.me/2017/05/21/learn-javascript-in-six-steps/</loc>
     
     <lastmod>2017-06-06T16:28:01.000Z</lastmod>
     
@@ -72,13 +79,6 @@
   </url>
   
   <url>
-    <loc>https://calpa.me/about/index.html</loc>
-    
-    <lastmod>2017-06-06T15:49:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://calpa.me/works/index.html</loc>
     
     <lastmod>2017-06-02T06:49:47.000Z</lastmod>
@@ -107,7 +107,7 @@
   </url>
   
   <url>
-    <loc>https://calpa.me/2017/05/06/introduction-to-regular-expression/</loc>
+    <loc>https://calpa.me/2017/02/02/javascript-true-and-false/</loc>
     
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     
@@ -121,20 +121,6 @@
   </url>
   
   <url>
-    <loc>https://calpa.me/2017/01/20/using-javascript-to-create-web-storage/</loc>
-    
-    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://calpa.me/2017/02/19/javascript-closure/</loc>
-    
-    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://calpa.me/2017/05/05/javascript-array/</loc>
     
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
@@ -142,28 +128,7 @@
   </url>
   
   <url>
-    <loc>https://calpa.me/2017/04/27/n-ways-to-output-hello-world/</loc>
-    
-    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://calpa.me/2017/05/01/CreateListFromArrayLike-problem-solution/</loc>
-    
-    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://calpa.me/2017/02/02/javascript-true-and-false/</loc>
-    
-    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://calpa.me/2017/01/14/javascript-variable-hoisting/</loc>
+    <loc>https://calpa.me/2017/02/19/javascript-closure/</loc>
     
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     
@@ -178,6 +143,41 @@
   
   <url>
     <loc>https://calpa.me/2017/03/25/javascript-this/</loc>
+    
+    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://calpa.me/2017/05/01/CreateListFromArrayLike-problem-solution/</loc>
+    
+    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://calpa.me/2017/01/14/javascript-variable-hoisting/</loc>
+    
+    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://calpa.me/2017/01/20/using-javascript-to-create-web-storage/</loc>
+    
+    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://calpa.me/2017/04/27/n-ways-to-output-hello-world/</loc>
+    
+    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://calpa.me/2017/05/06/introduction-to-regular-expression/</loc>
     
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     
