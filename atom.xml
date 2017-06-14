@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://calpa.me/"/>
-  <updated>2017-06-12T15:04:41.000Z</updated>
+  <updated>2017-06-14T15:39:05.000Z</updated>
   <id>https://calpa.me/</id>
   
   <author>
@@ -14,6 +14,93 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【多圖】2017 年香港開源年會後記</title>
+    <link href="https://calpa.me/2017/06/14/hong-kong-open-sources-conference-remarks/"/>
+    <id>https://calpa.me/2017/06/14/hong-kong-open-sources-conference-remarks/</id>
+    <published>2017-06-14T01:28:00.000Z</published>
+    <updated>2017-06-14T15:39:05.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>大約兩個星期之前，我在 Facebook上看到 2017 年的香港開源年會的消息。我想，我是不是可以透過這個機會，認識一下不同領域的程序員呢。於是，我在 EventBrite 上面買了學生票。但最終我拿到 VIP 票了，感覺有點激動。我把這一次的會議做了幾點筆記，也許，每一個人都應該參加最少一次如此有規模的大會。我會在這裡說說我參與這次會議所發生的一些事。</p>
+<p>在這一次大會之前，我參加了 Hong Kong Open Source Meeting #2，當時我是說<a href="https://calpa.me/2017/06/01/create-markdown-powerpoint-in-5-mins/">《5分鐘製作 Markdown PowerPoint》</a>。</p>
+<p>那天晚上，我才知道原來那一次演講的話，就會有一張免費 VIP 票，包含入場的資格，衣服及外套。我還拿到一些免費的票，轉送給其他認識的人了。</p>
+<img src="https://i.imgur.com/ZBautza.jpg" width="500" title="VIP Ticket">
+<center>VIP 門票</center>
+
+<img src="https://i.imgur.com/4q7YR0J.png" width="500" title="Tshirt">
+<center>大會送的衣服</center>
+
+<p>我之前幫忙舉辦 Hang Seng Bank AI Hackathon，在說大數據的時候提到了這個黑客松，並放出了團體合照。。。</p>
+<img src="https://i.imgur.com/aSRoBdc.jpg" width="500" title="Hang Seng Bank AI Hackathon">
+<center>團體合照</center>
+
+<h2 id="大數據"><a href="#大數據" class="headerlink" title="大數據"></a>大數據</h2><p>一些中國的互聯網公司對數據十分看重，並認為這些數據都是可以製造財富的資產。比如說滴滴打車收集了很多打車的交易數據，並善用這些數據優化分配司機和乘客的算法。又比如說阿里巴巴對大數據很重視，它的<a href="https://tianchi.aliyun.com/" rel="external nofollow noopener noreferrer" target="_blank">天池大數據眾智平台</a>會提供各種各樣的大數據，並舉辦比賽招聘人才。</p>
+<p>在這一次大會中，我了解到原來台灣在開放數據這一方面做得不錯。根據<a href="https://index.okfn.org/place/" rel="external nofollow noopener noreferrer" target="_blank">Global Open Data Index</a> 的開放數據顯示，台灣是排名第一的，而香港則是排行 23。就讓我們看一下香港政府是如何開放數據的。</p>
+<h3 id="香港的開放數據"><a href="#香港的開放數據" class="headerlink" title="香港的開放數據"></a>香港的開放數據</h3><p>香港政府<a href="https://data.gov.hk/tc/" rel="external nofollow noopener noreferrer" target="_blank">資料一線通</a>平台，以多種檔案格式提供多個政府部門類別，機構的一些查詢資料，比如說天氣預報，中學教育統計資料。值得注意的是，這些檔案並不是 ODF，而是 xls, xml, csv, json, gif, txt, tif。。。</p>
+<p>而且連 Hello World 都不能跑，這叫我如何是好。。。</p>
+<p>我把嘗試這個平台的過程寫成<a href="https://calpa.me/2017/06/12/hong-kong-open-data-from-zero-to-giveup/">《香港開放數據平台 - 從入門到放棄》</a>。</p>
+<h2 id="自動化構建"><a href="#自動化構建" class="headerlink" title="自動化構建"></a>自動化構建</h2><img src="https://i.imgur.com/q8g0CgG.jpg" width="500" title="Reproducible builds">
+<p>Debian 的 Leader Chirs Lamb 也來了這一次的大會，他分享了 Reproducible builds 這一個主題。</p>
+<h3 id="不可重現的原因"><a href="#不可重現的原因" class="headerlink" title="不可重現的原因"></a>不可重現的原因</h3><img src="https://i.imgur.com/NTUpphj.jpg" width="500" title="Reason of non-reproducibility">
+<ol>
+<li>Timestramps</li>
+<li>時區<br>比如說，你在美國用 <code>new Date()</code> 和我在香港用的話是不同的。</li>
+<li>Non-deterministic file ordering</li>
+<li>字典 / hash key 的次序不同<br>有些</li>
+<li>用戶，群組，系統變量不同</li>
+<li>組建的路徑不同 (eg. /home/lamby vs /home/calpa)</li>
+</ol>
+<hr>
+<h3 id="Technical-Advantages"><a href="#Technical-Advantages" class="headerlink" title="Technical Advantages"></a>Technical Advantages</h3><img src="https://i.imgur.com/5WY6bHC.jpg" width="500" title="Technical Advantages">
+<ol>
+<li>檢測構造環境程序所導致的意外。</li>
+<li>更加容易地測試更新的代碼。<br>我們可以自動構建測試所需要的生產環境，定義所需要的數據。透過這個方法，我們可以自動測試時候更新後的代碼會不會引入更多的 Bug。。。</li>
+</ol>
+<hr>
+<h2 id="最佳實踐"><a href="#最佳實踐" class="headerlink" title="最佳實踐"></a>最佳實踐</h2><h3 id="Builds"><a href="#Builds" class="headerlink" title="Builds"></a>Builds</h3><img src="https://i.imgur.com/p6pTo4O.jpg" width="500" title="Best Practices of Builds">
+<center>Best Practices of Builds</center>
+
+<ol>
+<li>把它當成是藍圖一樣</li>
+<li>避免需要登入去構建或調試<br>這個可以利用Makefile, Gulp, Grunt 等一些自動化構建工具幫忙自動構建程序</li>
+<li>善用版本控制工具去構建檔案<br>比如說用 Git…</li>
+<li>Explicit is better than implicit<br>其實這一個思想以前也</li>
+<li>每一次跑的時候都創造一個新的 layer</li>
+</ol>
+<hr>
+<h3 id="Container-Host-Security"><a href="#Container-Host-Security" class="headerlink" title="Container Host Security"></a>Container Host Security</h3><img src="https://i.imgur.com/DZ1CSib.jpg" width="500" title="Best Practices of Container Host Security">
+<p><center>Best Practices of Container Host Security</center></p>
+<ol>
+<li>不要用 root 身份去跑</li>
+<li>要限制 SSH Access</li>
+<li>用 namespaces</li>
+<li>定義資源限額</li>
+<li>開啟記錄</li>
+</ol>
+<h2 id="認識其他程序員"><a href="#認識其他程序員" class="headerlink" title="認識其他程序員"></a>認識其他程序員</h2><img src="https://i.imgur.com/NXToUgx.png" width="500" title="台北摩茲工寮網頁">
+<p>這次我認識了台北摩茲工寮的其中一個摩茲人，了解到原來他們會每個禮拜在台北會有聚會。</p>
+<p>也許，我們也可以參加他們的開源項目，作出自己小小的貢獻。</p>
+<p>如果以後過去台北的話，我也可以過去拜會一下他們。</p>
+<h2 id="食物"><a href="#食物" class="headerlink" title="食物"></a>食物</h2><img src="https://i.imgur.com/MaMW0xE.jpg" width="300" title="免費星巴克咖啡">
+<p>這次有星巴克的免費食物，比如說菠菜卷，冷麵，沙拉。味道不錯 XD</p>
+<img src="https://i.imgur.com/ouO6EVo.jpg" width="300" title="北角雞蛋仔">
+<p>最後我離開數碼港，去北角嘗試北角雞蛋仔，其實味道也是不錯的。但是如果要說到最好吃的雞蛋仔的話，那還是九龍灣流動小販賣的炭燒雞蛋仔味道最好。</p>
+<p>最後，感謝所有幫忙舉辦香港開源年會的人，讓我這樣的人也可以有一個渠道認識這個世界。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;大約兩個星期之前，我在 Facebook上看到 2017 年的香港開源年會的消息。我想，我是不是可以透過這個機會，認識一下不同領域的程序員呢。於是，我在 EventBrite 上面買了學生票。但最終我拿到 VIP 票了，感覺有點激動。我把這一次的會議做了幾點筆記，也許，每一
+    
+    </summary>
+    
+    
+      <category term="Conference" scheme="https://calpa.me/Tags/Conference/"/>
+    
+      <category term="Open Source" scheme="https://calpa.me/Tags/Open-Source/"/>
+    
+  </entry>
   
   <entry>
     <title>香港開放數據平台 - 從入門到放棄</title>
@@ -864,36 +951,6 @@
     
     
       <category term="React Native" scheme="https://calpa.me/Tags/React-Native/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>利用ssh連接Github的方法</title>
-    <link href="https://calpa.me/2017/04/11/github-ssh/"/>
-    <id>https://calpa.me/2017/04/11/github-ssh/</id>
-    <published>2017-04-11T08:30:00.000Z</published>
-    <updated>2017-04-11T13:46:43.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>其實很簡單，按照下面打就是了。。。</p>
-<ol>
-<li><code>ls -la ~/.ssh/</code></li>
-<li><code>cat ~/.ssh/id_rsa.pub</code> 複製貼上到Github SSH Page</li>
-<li><code>ssh git@github.com</code></li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;其實很簡單，按照下面打就是了。。。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;ls -la ~/.ssh/&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;cat ~/.ssh/id_rsa.pub&lt;/code&gt; 複製貼上到Github SSH Page&lt;/li&gt;
-&lt;li&gt;&lt;cod
-    
-    </summary>
-    
-    
-      <category term="Github" scheme="https://calpa.me/Tags/Github/"/>
     
   </entry>
   
