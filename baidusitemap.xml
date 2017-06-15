@@ -43,23 +43,6 @@
     
     
   <url>
-    <loc>https://calpa.me/2017/04/25/coders-of-the-caribbean-review/</loc>
-    <lastmod>2017-06-06T16:28:01.000Z</lastmod>
-    <data>
-        <display>
-        <title>Coders of the Caribbean Online Contest 後記</title>
-        <pubTime>2017-04-25T07:35:00.000Z</pubTime>
-        
-        <tag>Codingame</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://calpa.me/2017/04/05/front-end-booklist/</loc>
     <lastmod>2017-06-06T16:28:01.000Z</lastmod>
     <data>
@@ -102,6 +85,23 @@
         <pubTime>2017-05-21T12:00:00.000Z</pubTime>
         
         <tag>JavaScript</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://calpa.me/2017/04/25/coders-of-the-caribbean-review/</loc>
+    <lastmod>2017-06-06T16:28:01.000Z</lastmod>
+    <data>
+        <display>
+        <title>Coders of the Caribbean Online Contest 後記</title>
+        <pubTime>2017-04-25T07:35:00.000Z</pubTime>
+        
+        <tag>Codingame</tag>
          
          
            
@@ -235,16 +235,35 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/05/16/react-component-lifecycle/</loc>
+    <loc>https://calpa.me/2017/01/20/using-javascript-to-create-web-storage/</loc>
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     <data>
         <display>
-        <title>React 組件生命週期 - 加載組件</title>
-        <pubTime>2017-05-16T14:40:00.000Z</pubTime>
+        <title>利用JavaScript創建Web Storage</title>
+        <pubTime>2017-01-20T11:37:38.000Z</pubTime>
         
+        <tag>JavaScript</tag>
+         
         <tag>Web</tag>
          
-        <tag>React</tag>
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://calpa.me/2017/05/06/introduction-to-regular-expression/</loc>
+    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
+    <data>
+        <display>
+        <title>初探正則表達式</title>
+        <pubTime>2017-05-06T12:13:00.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+        <tag>Regular Expression</tag>
          
          
            
@@ -305,16 +324,33 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/01/20/using-javascript-to-create-web-storage/</loc>
+    <loc>https://calpa.me/2017/03/25/javascript-this/</loc>
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     <data>
         <display>
-        <title>利用JavaScript創建Web Storage</title>
-        <pubTime>2017-01-20T11:37:38.000Z</pubTime>
+        <title>JavaScript的this</title>
+        <pubTime>2017-03-25T04:44:00.000Z</pubTime>
         
         <tag>JavaScript</tag>
          
-        <tag>Web</tag>
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://calpa.me/2017/05/03/redux-array-push-function/</loc>
+    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
+    <data>
+        <display>
+        <title>Redux push()是怎樣寫的？</title>
+        <pubTime>2017-05-03T15:20:00.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+        <tag>Redux</tag>
          
          
            
@@ -330,42 +366,6 @@
         <display>
         <title>JavaScript中的True與False</title>
         <pubTime>2017-02-02T15:19:53.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://calpa.me/2017/05/06/introduction-to-regular-expression/</loc>
-    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
-    <data>
-        <display>
-        <title>初探正則表達式</title>
-        <pubTime>2017-05-06T12:13:00.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-        <tag>Regular Expression</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://calpa.me/2017/03/25/javascript-this/</loc>
-    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
-    <data>
-        <display>
-        <title>JavaScript的this</title>
-        <pubTime>2017-03-25T04:44:00.000Z</pubTime>
         
         <tag>JavaScript</tag>
          
@@ -394,16 +394,16 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/05/03/redux-array-push-function/</loc>
+    <loc>https://calpa.me/2017/05/16/react-component-lifecycle/</loc>
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     <data>
         <display>
-        <title>Redux push()是怎樣寫的？</title>
-        <pubTime>2017-05-03T15:20:00.000Z</pubTime>
+        <title>React 組件生命週期 - 加載組件</title>
+        <pubTime>2017-05-16T14:40:00.000Z</pubTime>
         
-        <tag>JavaScript</tag>
+        <tag>Web</tag>
          
-        <tag>Redux</tag>
+        <tag>React</tag>
          
          
            

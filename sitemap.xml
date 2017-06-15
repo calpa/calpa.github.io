@@ -23,13 +23,6 @@
   </url>
   
   <url>
-    <loc>https://calpa.me/2017/04/25/coders-of-the-caribbean-review/</loc>
-    
-    <lastmod>2017-06-06T16:28:01.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://calpa.me/2017/04/05/front-end-booklist/</loc>
     
     <lastmod>2017-06-06T16:28:01.000Z</lastmod>
@@ -45,6 +38,13 @@
   
   <url>
     <loc>https://calpa.me/2017/05/21/learn-javascript-in-six-steps/</loc>
+    
+    <lastmod>2017-06-06T16:28:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://calpa.me/2017/04/25/coders-of-the-caribbean-review/</loc>
     
     <lastmod>2017-06-06T16:28:01.000Z</lastmod>
     
@@ -121,7 +121,14 @@
   </url>
   
   <url>
-    <loc>https://calpa.me/2017/05/16/react-component-lifecycle/</loc>
+    <loc>https://calpa.me/2017/01/20/using-javascript-to-create-web-storage/</loc>
+    
+    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://calpa.me/2017/05/06/introduction-to-regular-expression/</loc>
     
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     
@@ -149,7 +156,14 @@
   </url>
   
   <url>
-    <loc>https://calpa.me/2017/01/20/using-javascript-to-create-web-storage/</loc>
+    <loc>https://calpa.me/2017/03/25/javascript-this/</loc>
+    
+    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://calpa.me/2017/05/03/redux-array-push-function/</loc>
     
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     
@@ -163,20 +177,6 @@
   </url>
   
   <url>
-    <loc>https://calpa.me/2017/05/06/introduction-to-regular-expression/</loc>
-    
-    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://calpa.me/2017/03/25/javascript-this/</loc>
-    
-    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://calpa.me/2017/01/14/javascript-variable-hoisting/</loc>
     
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
@@ -184,7 +184,7 @@
   </url>
   
   <url>
-    <loc>https://calpa.me/2017/05/03/redux-array-push-function/</loc>
+    <loc>https://calpa.me/2017/05/16/react-component-lifecycle/</loc>
     
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     
