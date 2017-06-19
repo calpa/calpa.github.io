@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://calpa.me/2017/06/15/front-end-performance-check-list-for-production-in-chinese/</loc>
-    <lastmod>2017-06-19T15:43:13.000Z</lastmod>
+    <lastmod>2017-06-19T15:54:14.000Z</lastmod>
     <data>
         <display>
         <title>【翻譯】前端性能測試必備工具清單</title>
@@ -66,14 +66,14 @@
     
     
   <url>
-    <loc>https://calpa.me/2017/05/21/learn-javascript-in-six-steps/</loc>
+    <loc>https://calpa.me/2017/04/05/front-end-booklist/</loc>
     <lastmod>2017-06-06T16:28:01.000Z</lastmod>
     <data>
         <display>
-        <title>打好 JavaScript 基礎的6個步驟</title>
-        <pubTime>2017-05-21T12:00:00.000Z</pubTime>
+        <title>前端工程師的入門書單</title>
+        <pubTime>2017-04-05T14:51:00.000Z</pubTime>
         
-        <tag>JavaScript</tag>
+        <tag>Web</tag>
          
          
            
@@ -100,12 +100,12 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/04/23/hackUST-2017-hackathon-summary/</loc>
+    <loc>https://calpa.me/2017/02/19/supercharger-hackathon/</loc>
     <lastmod>2017-06-06T16:28:01.000Z</lastmod>
     <data>
         <display>
-        <title>hackUST 2017後記</title>
-        <pubTime>2017-04-23T12:44:00.000Z</pubTime>
+        <title>SuperCharger Hackathon後記</title>
+        <pubTime>2017-02-19T07:12:00.000Z</pubTime>
         
         <tag>Hackathon</tag>
          
@@ -117,14 +117,14 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/04/05/front-end-booklist/</loc>
+    <loc>https://calpa.me/2017/05/21/learn-javascript-in-six-steps/</loc>
     <lastmod>2017-06-06T16:28:01.000Z</lastmod>
     <data>
         <display>
-        <title>前端工程師的入門書單</title>
-        <pubTime>2017-04-05T14:51:00.000Z</pubTime>
+        <title>打好 JavaScript 基礎的6個步驟</title>
+        <pubTime>2017-05-21T12:00:00.000Z</pubTime>
         
-        <tag>Web</tag>
+        <tag>JavaScript</tag>
          
          
            
@@ -151,12 +151,12 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/02/19/supercharger-hackathon/</loc>
+    <loc>https://calpa.me/2017/04/23/hackUST-2017-hackathon-summary/</loc>
     <lastmod>2017-06-06T16:28:01.000Z</lastmod>
     <data>
         <display>
-        <title>SuperCharger Hackathon後記</title>
-        <pubTime>2017-02-19T07:12:00.000Z</pubTime>
+        <title>hackUST 2017後記</title>
+        <pubTime>2017-04-23T12:44:00.000Z</pubTime>
         
         <tag>Hackathon</tag>
          
@@ -258,23 +258,6 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/04/27/n-ways-to-output-hello-world/</loc>
-    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hello World的四+N種方法</title>
-        <pubTime>2017-04-27T06:34:00.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://calpa.me/2017/05/06/introduction-to-regular-expression/</loc>
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     <data>
@@ -294,33 +277,16 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/05/03/redux-array-push-function/</loc>
+    <loc>https://calpa.me/2017/05/16/react-component-lifecycle/</loc>
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     <data>
         <display>
-        <title>Redux push()是怎樣寫的？</title>
-        <pubTime>2017-05-03T15:20:00.000Z</pubTime>
+        <title>React 組件生命週期 - 加載組件</title>
+        <pubTime>2017-05-16T14:40:00.000Z</pubTime>
         
-        <tag>JavaScript</tag>
+        <tag>Web</tag>
          
-        <tag>Redux</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://calpa.me/2017/05/05/javascript-array/</loc>
-    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
-    <data>
-        <display>
-        <title>JavaScript 數組去重</title>
-        <pubTime>2017-05-05T14:53:00.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
+        <tag>React</tag>
          
          
            
@@ -336,6 +302,23 @@
         <display>
         <title>CreateListFromArrayLike called on non-object 報錯的解決方法</title>
         <pubTime>2017-05-01T14:50:00.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://calpa.me/2017/05/05/javascript-array/</loc>
+    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
+    <data>
+        <display>
+        <title>JavaScript 數組去重</title>
+        <pubTime>2017-05-05T14:53:00.000Z</pubTime>
         
         <tag>JavaScript</tag>
          
@@ -383,6 +366,25 @@
 
     
   <url>
+    <loc>https://calpa.me/2017/05/03/redux-array-push-function/</loc>
+    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
+    <data>
+        <display>
+        <title>Redux push()是怎樣寫的？</title>
+        <pubTime>2017-05-03T15:20:00.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+        <tag>Redux</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://calpa.me/2017/02/02/javascript-true-and-false/</loc>
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     <data>
@@ -417,16 +419,14 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/05/16/react-component-lifecycle/</loc>
+    <loc>https://calpa.me/2017/04/27/n-ways-to-output-hello-world/</loc>
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     <data>
         <display>
-        <title>React 組件生命週期 - 加載組件</title>
-        <pubTime>2017-05-16T14:40:00.000Z</pubTime>
+        <title>Hello World的四+N種方法</title>
+        <pubTime>2017-04-27T06:34:00.000Z</pubTime>
         
-        <tag>Web</tag>
-         
-        <tag>React</tag>
+        <tag>JavaScript</tag>
          
          
            
@@ -494,9 +494,9 @@
         <title>Bootstrap v4 源碼分析(1)</title>
         <pubTime>2017-04-20T13:37:00.000Z</pubTime>
         
-        <tag>Web</tag>
-         
         <tag>Bootstrap</tag>
+         
+        <tag>Web</tag>
          
          
            
