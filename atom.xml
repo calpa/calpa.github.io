@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://calpa.me/"/>
-  <updated>2017-06-19T15:54:14.000Z</updated>
+  <updated>2017-06-19T23:11:07.000Z</updated>
   <id>https://calpa.me/</id>
   
   <author>
@@ -17,15 +17,15 @@
   
   <entry>
     <title>【翻譯】前端性能測試必備工具清單</title>
-    <link href="https://calpa.me/2017/06/15/front-end-performance-check-list-for-production-in-chinese/"/>
-    <id>https://calpa.me/2017/06/15/front-end-performance-check-list-for-production-in-chinese/</id>
-    <published>2017-06-15T08:00:00.000Z</published>
-    <updated>2017-06-19T15:54:14.000Z</updated>
+    <link href="https://calpa.me/2017/06/19/front-end-performance-check-list-for-production-in-chinese/"/>
+    <id>https://calpa.me/2017/06/19/front-end-performance-check-list-for-production-in-chinese/</id>
+    <published>2017-06-19T12:00:00.000Z</published>
+    <updated>2017-06-19T23:11:07.000Z</updated>
     
     <content type="html"><![CDATA[<p>在網頁開發的世界裡，尤其是前端開發，我們會用很多時間尋找最好的設計，以及最好的內容。雖然這是沒有錯的，但是，我們會忘記去優化我們的網頁。。。這會讓用戶需要很久的時間，比如說，瀏覽器需要六秒到十秒以上才能完成整個渲染過程。。。</p>
 <p>在這篇文章，我會分享優化網頁的檢查清單。如果你覺得我有錯漏的地方，請在下面留言。這張清單會包含一些優化搜尋引擎排名 (SEO) 的技巧，以及減少網頁加載時間的最佳實踐。</p>
 <blockquote>
-<p>編者按：很多我聽過一點或從來都沒有用過的工具，我還是要學習一個。。。</p>
+<p>編者按：很多都是我聽過或從來沒有用過的工具，我還是要學習一個。。。</p>
 </blockquote>
 <p>馬上開始！</p>
 <h2 id="那些我們忘記的基本功"><a href="#那些我們忘記的基本功" class="headerlink" title="那些我們忘記的基本功"></a>那些我們忘記的基本功</h2><h3 id="Favicon"><a href="#Favicon" class="headerlink" title="Favicon"></a>Favicon</h3><p>  請不要忘記為你的網站加上它，它就好像是你的網站的 ID。無論你有沒有 favicon.ico ，用戶的瀏覽器依然會請求它。如果你忘記加上這個檔案，你的網站就會返回 404 Not Found，這會讓瀏覽器面紅。。。所以你要小心一點，避免給予用戶負面的第一印象。要解決這個問題，你可以透過 <a href="http://realfavicongenerator.net/" rel="external nofollow noopener noreferrer" target="_blank">Favicon Generator</a> 生成 favicon 和 manifest 檔案。</p>
@@ -47,9 +47,6 @@
 <img src="https://i.imgur.com/k7FRiSi.png" width="500" title="PICSrush GZIP 測試圖">
 <center>PICSrush GZIP 測試圖</center>
 
-<img src="https://i.imgur.com/SJma5Pv.png" width="500" title="calpa blog 測試圖">
-<center>Calpa’s Blog GZIP 測試圖</center>
-
 <p>你可以在<a href="https://checkgzipcompression.com/" rel="external nofollow noopener noreferrer" target="_blank">Check GZIP compression</a> 網站中測試你的網站是否已經開啟 GZIP 壓縮功能。</p>
 <h3 id="CDN"><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h3><p>  根據<a href="https://zh.wikipedia.org/zh-hk/%E5%85%A7%E5%AE%B9%E5%82%B3%E9%81%9E%E7%B6%B2%E8%B7%AF" rel="external nofollow noopener noreferrer" target="_blank">維基百科</a>，內容傳遞網路（CDN）是指一種透過互聯網互相連接的電腦網絡系統，利用最靠近使用者的伺服器，更快地傳送檔案。簡單來說，CDN 就是一種網絡上的緩存系統。你可以使用免費的 <a href="https://www.cloudflare.com/" rel="external nofollow noopener noreferrer" target="_blank">CloudFlare</a> 來達到這個效果。</p>
 <blockquote>
@@ -64,7 +61,12 @@
 <p>Thanks for reading! feel free to leave a comment if you think I miss something.</p>
 <p>If you think other people should read this, press the 💚 button, tweet and share the post. Remember to follow me on Medium so you can get notified about my future posts.</p>
 </blockquote>
-<h2 id="譯者的話"><a href="#譯者的話" class="headerlink" title="譯者的話"></a>譯者的話</h2><p>這次翻譯英文文章，真的是很有趣呢。一開始我是去問問人家，可不可以翻譯一下他們的文章？結果就取得同意了。這次翻譯這一篇文章，讓我了解到很多對我來講是新的工具，比如說 Sentry 以及Google Tag Manager。感覺前端的路還有很長要走啊。。。</p>
+<h2 id="譯者的話"><a href="#譯者的話" class="headerlink" title="譯者的話"></a>譯者的話</h2><p>這次翻譯英文文章，真的是很有趣呢，不過要寫起來感覺沒有自己從零開始寫一篇那麼流暢。</p>
+<p>一開始我是去問問人家，可不可以翻譯一下他們的文章？結果就取得同意了。</p>
+<p>這次翻譯這一篇文章，讓我了解到很多對我來講是新的工具，比如說 Sentry 以及Google Tag Manager。我還是一個萌新，感覺前端的路還有很長要走啊。。。</p>
+<img src="https://i.imgur.com/SJma5Pv.png" width="500" title="calpa blog 測試圖">
+<center>Calpa’s Blog GZIP 測試圖</center>
+
 <hr>
 <p>原文鏈接： <a href="https://hackernoon.com/front-end-performance-check-list-for-production-4e930cb63e8a" rel="external nofollow noopener noreferrer" target="_blank">Frontend Performance Check-list For Production - Medium</a><br>原作者：<a href="https://medium.com/@yjose" rel="external nofollow noopener noreferrer" target="_blank">Youssouf El Azizi</a></p>
 ]]></content>
@@ -968,9 +970,9 @@
     </summary>
     
     
-      <category term="Bootstrap" scheme="https://calpa.me/Tags/Bootstrap/"/>
-    
       <category term="Web" scheme="https://calpa.me/Tags/Web/"/>
+    
+      <category term="Bootstrap" scheme="https://calpa.me/Tags/Bootstrap/"/>
     
   </entry>
   
