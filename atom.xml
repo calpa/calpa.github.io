@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://calpa.me/"/>
-  <updated>2017-06-14T15:39:05.000Z</updated>
+  <updated>2017-06-19T15:17:15.000Z</updated>
   <id>https://calpa.me/</id>
   
   <author>
@@ -14,6 +14,77 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【翻譯】前端性能測試必備工具清單</title>
+    <link href="https://calpa.me/2017/06/15/front-end-performance-check-list-for-production-in-chinese/"/>
+    <id>https://calpa.me/2017/06/15/front-end-performance-check-list-for-production-in-chinese/</id>
+    <published>2017-06-15T08:00:00.000Z</published>
+    <updated>2017-06-19T15:17:15.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>在網頁開發的世界裡，尤其是前端開發，我們會用很多時間尋找最好的設計，以及最好的內容。雖然這是沒有錯的，但是，我們會忘記去優化我們的網頁。。。這會讓用戶需要很久的時間，比如說，瀏覽器需要六秒到十秒以上才能完成整個渲染過程。。。</p>
+<p>在這篇文章，我會分享優化網頁的檢查清單。如果你覺得我有錯漏的地方，請在下面留言。這張清單會包含一些優化搜尋引擎排名 (SEO) 的技巧，以及減少網頁加載時間的最佳實踐。</p>
+<blockquote>
+<p>編者按：很多我聽過一點或從來都沒有用過的工具，我還是要學習一個。。。</p>
+</blockquote>
+<p>馬上開始！</p>
+<h2 id="那些我們忘記的基本功"><a href="#那些我們忘記的基本功" class="headerlink" title="那些我們忘記的基本功"></a>那些我們忘記的基本功</h2><h3 id="Favicon"><a href="#Favicon" class="headerlink" title="Favicon"></a>Favicon</h3><p>  請不要忘記為你的網站加上它，它就好像是你的網站的 ID。無論你有沒有 favicon.ico ，用戶的瀏覽器依然會請求它。如果你忘記加上這個檔案，你的網站就會返回 404 Not Found，這會讓瀏覽器面紅。。。所以你要小心一點，避免給予用戶負面的第一印象。要解決這個問題，你可以透過 <a href="http://realfavicongenerator.net/" rel="external nofollow noopener noreferrer" target="_blank">Favicon Generator</a> 生成 favicon 和 manifest 檔案。</p>
+<h3 id="Open-Graph"><a href="#Open-Graph" class="headerlink" title="Open Graph"></a>Open Graph</h3><p>  加上社交媒體的 meta 標籤，用戶更好地分享你的文章，同時 Google Ranking 也會提高，你可以使用 <a href="https://megatags.co/" rel="external nofollow noopener noreferrer" target="_blank">Meta Tags</a> 產生 Social meta tags。</p>
+<blockquote>
+<p>譯者按：產生 Open Graph Meta Tags，我的博客也加上了 Open Graph。</p>
+</blockquote>
+<h2 id="圖片優化"><a href="#圖片優化" class="headerlink" title="圖片優化"></a>圖片優化</h2><h3 id="壓縮圖像"><a href="#壓縮圖像" class="headerlink" title="壓縮圖像"></a>壓縮圖像</h3><p>  載入圖片會大幅地延長網頁的加載時間，甚至達到整體網頁載入時間的七成。如果可以的話，請使用 SVG，以及壓縮你的那些精緻圖像。你可以使用 <a href="http://compresspng.com/" rel="external nofollow noopener noreferrer" target="_blank">Compress PNG</a> 來幫忙壓縮圖像。</p>
+<h2 id="CSS-優化"><a href="#CSS-優化" class="headerlink" title="CSS 優化"></a>CSS 優化</h2><h3 id="Autoprefixer"><a href="#Autoprefixer" class="headerlink" title="Autoprefixer"></a><strong>Autoprefixer</strong></h3><p>  解決跨瀏覽器上的 CSS 問題。我們都會在自己喜歡的瀏覽器下寫 CSS 的規矩，而我則是使用 Chrome。雖然如此，你依然需要為這些規矩加上 prefix 來支持所有類型的瀏覽器。 Autoprefixer 會使用現在瀏覽器熱度，對各種屬性支持度的資料，來提供你所需要的 prefix。你可以透過命令行來運用它。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm install -g postcss-cli autoprefixer</div><div class="line">postcss *.css use autoprefixer <span class="_">-d</span> build</div></pre></td></tr></table></figure>
+<p>你也可以使用 Webpack 設置，或者使用 <a href="https://autoprefixer.github.io/" rel="external nofollow noopener noreferrer" target="_blank">Autoprefixer CSS online</a> 。</p>
+<h3 id="Purifycss"><a href="#Purifycss" class="headerlink" title="Purifycss"></a><strong>Purifycss</strong></h3><p>  刪除項目內沒有用到的 CSS 規矩。它會讀取內容 (HTML/JS/PHP) 和 CSS，然後返回必須的 CSS。它是一個非常有用的工具，如果你是在用 CSS 框架比如說 Bootstrap，這個能夠減少很多的 CSS 文檔大小。</p>
+<p>安裝方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g purify-css</div></pre></td></tr></table></figure></p>
+<p>使用方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">purifycss src/css/main.css src/css/bootstrap.css src/js/main.js — min — info — out src/dist/index.css</div></pre></td></tr></table></figure></p>
+<p>你可以在 purify-css 的 <a href="https://github.com/purifycss/purifycss" rel="external nofollow noopener noreferrer" target="_blank">Github Page</a> 中獲得更多資訊。</p>
+<h3 id="minify-CSS"><a href="#minify-CSS" class="headerlink" title="minify CSS"></a>minify CSS</h3><p>  你可以使用 purify-css 或使用網上的<a href="http://csscompressor.com/" rel="external nofollow noopener noreferrer" target="_blank">CSS Compressor</a>。</p>
+<h2 id="減少載入時間"><a href="#減少載入時間" class="headerlink" title="減少載入時間"></a>減少載入時間</h2><h3 id="PageSpeed-Insights"><a href="#PageSpeed-Insights" class="headerlink" title="PageSpeed Insights"></a><a href="https://developers.google.com/speed/pagespeed/insights/" rel="external nofollow noopener noreferrer" target="_blank">PageSpeed Insights</a></h3><p>  PageSpeed Insights 可以用來檢查載入網頁速度，它會分別在手提電話和電腦運行測試。它會使用手提電話的 user-agent，以及 Desktop 的 user-agent。PageSpeed 會檢查網頁時候已經應用網頁的最佳實踐，並提供一個 0﹣100 的分數，同時提供如何提高分數的意見。</p>
+<h3 id="GZIP"><a href="#GZIP" class="headerlink" title="GZIP"></a>GZIP</h3><p>  開啟 GZIP 壓縮，是其中一個減少網頁載入速度的最快改善方法。Just Do IT，設置 GZIP，並讓你的用戶享受飛一般的感受，下圖是節省流量的效果圖。</p>
+<img src="https://i.imgur.com/k7FRiSi.png" width="500" title="PICSrush GZIP 測試圖">
+<center>PICSrush GZIP 測試圖</center>
+
+<img src="https://i.imgur.com/SJma5Pv.png" width="500" title="Calpa" alt="s BLog 測試圖">
+<center>Calpa’s Blog GZIP 測試圖</center>
+
+<p>你可以在<a href="https://checkgzipcompression.com/" rel="external nofollow noopener noreferrer" target="_blank">Check GZIP compression</a> 網站中測試你的網站是否已經開啟 GZIP 壓縮功能。</p>
+<h3 id="CDN"><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h3><p>  這裡就不翻譯原文引用的維基百科原文，如果你不清楚什麼是 CDN 的話，你可以去 Google 一下，這裡就不展開了。你可以使用免費的 <a href="https://www.cloudflare.com/" rel="external nofollow noopener noreferrer" target="_blank">CloudFlare</a>。</p>
+<blockquote>
+<p>編者按：其實是我懶得翻譯整段段落。。。你可以用 cdnjs 或其他 cdn 。</p>
+</blockquote>
+<h2 id="優化平台"><a href="#優化平台" class="headerlink" title="優化平台"></a>優化平台</h2><h3 id="Sentry"><a href="#Sentry" class="headerlink" title="Sentry"></a><a href="https://sentry.io/welcome/" rel="external nofollow noopener noreferrer" target="_blank">Sentry</a></h3><p>  對於前端工程師來說，它是一個非常正的工具。Sentry 檢查在瀏覽器環境下，是否存在任何 uncaught JavaScript exceptions，主動追蹤發生的錯誤，並提供報告。它提供豐富的 API，使得你可以自定義如何在其他地方顯示這些數據。</p>
+<p>  它會透過 Email, SMS 或 Slack 通知你，當前端環境發生錯誤時，它亦會提供用戶回應。</p>
+<h3 id="Google-Tag-Manager"><a href="#Google-Tag-Manager" class="headerlink" title="Google Tag Manager"></a><a href="https://developers.google.com/tag-manager/" rel="external nofollow noopener noreferrer" target="_blank">Google Tag Manager</a></h3><p>  Google Tag Manager 可以一站式管理你所有會傳送到第三方，例如 Facebook 和 Twitter 的 JavaScript 代碼。透過使用它，你減少網頁的載入時間，以及更加方便地在同一個地方管理 JavaScript 代碼。</p>
+<div class="video-container"><iframe src="//www.youtube.com/embed/KRvbFpeZ11Y" frameborder="0" allowfullscreen></iframe></div>
+<blockquote>
+<p>Thanks for reading! feel free to leave a comment if you think I miss something.</p>
+<p>If you think other people should read this, press the 💚 button, tweet and share the post. Remember to follow me on Medium so you can get notified about my future posts.</p>
+</blockquote>
+<h2 id="譯者的話"><a href="#譯者的話" class="headerlink" title="譯者的話"></a>譯者的話</h2><p>這次翻譯英文文章，真的是很有趣呢。一開始我是去問問人家，可不可以翻譯一下他們的文章？結果就取得同意了。這次翻譯這一篇文章，讓我了解到很多對我來講是新的工具，比如說 Sentry 以及Google Tag Manager。感覺前端的路還有很長要走啊。。。</p>
+<hr>
+<p>原文鏈接： <a href="https://hackernoon.com/front-end-performance-check-list-for-production-4e930cb63e8a" rel="external nofollow noopener noreferrer" target="_blank">Frontend Performance Check-list For Production - Medium</a><br>原作者：<a href="https://medium.com/@yjose" rel="external nofollow noopener noreferrer" target="_blank">Youssouf El Azizi</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在網頁開發的世界裡，尤其是前端開發，我們會用很多時間尋找最好的設計，以及最好的內容。雖然這是沒有錯的，但是，我們會忘記去優化我們的網頁。。。這會讓用戶需要很久的時間，比如說，瀏覽器需要六秒到十秒以上才能完成整個渲染過程。。。&lt;/p&gt;
+&lt;p&gt;在這篇文章，我會分享優化網頁的檢查
+    
+    </summary>
+    
+    
+      <category term="Front End" scheme="https://calpa.me/Tags/Front-End/"/>
+    
+      <category term="Performance" scheme="https://calpa.me/Tags/Performance/"/>
+    
+      <category term="Production" scheme="https://calpa.me/Tags/Production/"/>
+    
+      <category term="Check-list" scheme="https://calpa.me/Tags/Check-list/"/>
+    
+  </entry>
   
   <entry>
     <title>【多圖】2017 年香港開源年會後記</title>
@@ -925,32 +996,6 @@
     
     
       <category term="CSS" scheme="https://calpa.me/Tags/CSS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【React Native】安裝Android Apk而無需連接伺服器的方法</title>
-    <link href="https://calpa.me/2017/04/11/react-native-run-android/"/>
-    <id>https://calpa.me/2017/04/11/react-native-run-android/</id>
-    <published>2017-04-11T09:41:00.000Z</published>
-    <updated>2017-04-11T13:48:30.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>正常情況下，我們會用命令<code>react-native run-android</code>來在自己的電話中測試app，但是這個方法需要連接電腦。</p>
-<p>我們可以利用以下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">react-native bundle --dev false --platform android --entry-file index.android.js --bundle-output ./android/app/build/intermediates/assets/debug/index.android.bundle --assets-dest ./android/app/build/intermediates/res/merged/debug</div><div class="line"></div><div class="line">cd android</div><div class="line">./gradlew assembleDebug</div></pre></td></tr></table></figure></p>
-<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
-<li><a href="http://stackoverflow.com/questions/35283959/build-and-install-unsigned-apk-on-device-without-the-development-server" rel="external nofollow noopener noreferrer" target="_blank">Build and Install unsigned apk on device without the development server? - stackoverflow</a></li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;正常情況下，我們會用命令&lt;code&gt;react-native run-android&lt;/code&gt;來在自己的電話中測試app，但是這個方法需要連接電腦。&lt;/p&gt;
-&lt;p&gt;我們可以利用以下命令：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table
-    
-    </summary>
-    
-    
-      <category term="React Native" scheme="https://calpa.me/Tags/React-Native/"/>
     
   </entry>
   
