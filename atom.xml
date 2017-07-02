@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://calpa.me/"/>
-  <updated>2017-06-20T07:04:13.000Z</updated>
+  <updated>2017-07-02T15:54:05.000Z</updated>
   <id>https://calpa.me/</id>
   
   <author>
@@ -14,6 +14,48 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>神兵利器 -- HHKB Pro 2 開箱文</title>
+    <link href="https://calpa.me/2017/07/02/you-should-have-good-keyboard/"/>
+    <id>https://calpa.me/2017/07/02/you-should-have-good-keyboard/</id>
+    <published>2017-07-02T12:16:00.000Z</published>
+    <updated>2017-07-02T15:54:05.000Z</updated>
+    
+    <content type="html"><![CDATA[<img src="https://i.imgur.com/AVN6eaJ.jpg" width="500">
+<p>我一開始拿到 Happy Hacking KeyBoard Pro 2時，我就問為什麼鍵盤可以完全沒有字的，那叫我如何輸入。。。雖然我可以盲打（不看鍵盤直接輸入），但也許我未必可以有能力使用這樣的鍵盤。但寫了一天代碼之後，我才發現，原來這一切都是自己的猜疑而已。這個鍵盤打起來就是一個字，爽。</p>
+<img src="https://i.imgur.com/AbKpx2P.jpg" width="500" title="HHKB Pro 2">
+<center>HHKB Pro 2 盒子</center>
+
+<h2 id="HHKB"><a href="#HHKB" class="headerlink" title="HHKB"></a>HHKB</h2><p>在我取得這個 HHKB Pro 2 之前，我是一直在用 Cooler Master 的紅軸機械鍵盤，這個打起來也是很爽的。</p>
+<p>HHKB 的按鍵數量相對少，只提供必需的那些按鍵，它取消了數字鍵，功能鍵，以及方向鍵。但是對於 Emacs 用戶（我）來說，這些都不是問題，因為很多時候都是按 Ctrl + P/N/B/F 來達到上下左右的效果。</p>
+<p>雖則如此，我利用 Karabiner 做了四點配置：</p>
+<ol>
+<li>當 MacBook 鏈接 HHKB 的時候，電腦自帶的鍵盤不會再有輸出。</li>
+<li>右邊 Command 按鍵變為右邊 Option</li>
+<li>右邊 Option 按鍵變為右按 Mouse</li>
+<li>Option 加 IKJL 等於 上下左右</li>
+</ol>
+<img src="https://i.imgur.com/aDZMqim.png" width="500" title="配置">
+<h2 id="Emacs"><a href="#Emacs" class="headerlink" title="Emacs"></a>Emacs</h2><blockquote>
+<p>Emacs = Escape Meta Alt Ctrl Super</p>
+</blockquote>
+<p>作為一個 Emacs 重度（中毒）用戶，對 Ctrl 鍵的需求是很大的。尤其是我把 Ctrl 和 Caps Lock 的位置交換之後，左手無名指就經常發力。</p>
+<p>不知不覺之間，我就已經學會了盲打的技巧。現在打代碼就像玩遊戲一樣，我幾乎都不用看鍵盤，直接想到那個字，那句命令，直接打出來。如果你不用看鍵盤，而是直接輸入的話，每分鐘打字速度會提高很多的。。。</p>
+<p>最後，祝大家都能有自己的神兵利器，享受 Happy Hacking 的旅途。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;img src=&quot;https://i.imgur.com/AVN6eaJ.jpg&quot; width=&quot;500&quot;&gt;
+&lt;p&gt;我一開始拿到 Happy Hacking KeyBoard Pro 2時，我就問為什麼鍵盤可以完全沒有字的，那叫我如何輸入。。。雖然我可以盲打（不看鍵盤直接輸入）
+    
+    </summary>
+    
+    
+      <category term="KeyBoard" scheme="https://calpa.me/Tags/KeyBoard/"/>
+    
+  </entry>
   
   <entry>
     <title>【翻譯】前端性能測試必備工具清單</title>
@@ -343,14 +385,14 @@
     <link href="https://calpa.me/2017/05/21/learn-javascript-in-six-steps/"/>
     <id>https://calpa.me/2017/05/21/learn-javascript-in-six-steps/</id>
     <published>2017-05-21T12:00:00.000Z</published>
-    <updated>2017-06-06T16:28:01.000Z</updated>
+    <updated>2017-07-02T14:15:29.000Z</updated>
     
     <content type="html"><![CDATA[<p>平日開發的時候，我們會選擇使用一些框架來避免重複製造輪子，減輕我們的工作量。然而，我們卻不能透過使用更好的工具，或者更換框架來解決一些基礎開發問題。因此打好基礎很重要，不但決定前端程序員解決基礎問題的能力，還決定了面對日新月異框架時的掌握能力。當我開發 React 應用的時候，遇到的問題多是我對於 JavaScript 的理解不夠充分。因此，我在這裡寫一下如何打好 JavaScript 基礎，希望拋磚引玉 XD</p>
 <ol>
 <li><p>看一些經典的書<br>JavaScript: 紅寶書 (JavaScript高級程序設計)，犀牛書 (JavaScript: The Definitive Guide)，You Don’t Know JS<br>計算機經典: 算法導論，SICP</p>
-<img src="https://i.imgur.com/xm6R14W.jpg" width="300" title="auto JavaScript高級程序設計">
-<img src="https://i.imgur.com/autEZuV.jpg" width="300" title="auto JavaScript: The Definitive Guide">
-<img src="https://i.imgur.com/ajLLsUg.gif" width="300" title="auto You Don" alt="t Know JS">
+<img src="https://i.imgur.com/xm6R14W.jpg" width="300" title="JavaScript高級程序設計">
+<img src="https://i.imgur.com/autEZuV.jpg" width="300" title="JavaScript: The Definitive Guide">
+<img src="https://i.imgur.com/ajLLsUg.gif" width="300" title="You Don" alt="t Know JS">
 </li>
 <li><p>嘗試用不同的工具，增加自己的視野。<br>你可以做一些玩具，自己嘗試一下寫TODO APP 的不同寫法。</p>
 </li>
@@ -973,32 +1015,6 @@
       <category term="Web" scheme="https://calpa.me/Tags/Web/"/>
     
       <category term="Bootstrap" scheme="https://calpa.me/Tags/Bootstrap/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>利用CSS畫圓</title>
-    <link href="https://calpa.me/2017/04/12/use-css-to-draw-circle/"/>
-    <id>https://calpa.me/2017/04/12/use-css-to-draw-circle/</id>
-    <published>2017-04-12T14:00:00.000Z</published>
-    <updated>2017-04-14T13:19:21.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>用CSS畫一個圓是很簡單的，用border-radius就可以了。</p>
-<iframe height="293" scrolling="no" title="Circle" src="//codepen.io/calpa/embed/xdxOvV/?height=293&theme-id=0&default-tab=css,result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;"></iframe>
-
-<p>但是其實border-radius可以加/來獲得特別效果XD</p>
-<iframe height="265" scrolling="no" title="border-radius" src="//codepen.io/calpa/embed/eWmVwy/?height=265&theme-id=0&default-tab=css,result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;"></iframe>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;用CSS畫一個圓是很簡單的，用border-radius就可以了。&lt;/p&gt;
-&lt;iframe height=&quot;293&quot; scrolling=&quot;no&quot; title=&quot;Circle&quot; src=&quot;//codepen.io/calpa/embed/xdxOvV/?height=293
-    
-    </summary>
-    
-    
-      <category term="CSS" scheme="https://calpa.me/Tags/CSS/"/>
     
   </entry>
   

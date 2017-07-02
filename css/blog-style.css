@@ -389,6 +389,7 @@ article blockquote footer{
 .intro-header .page-heading,
 .intro-header .post-heading{
     color: #fff;
+    text-shadow: 0 0 40px black;
 }
 
 .intro-header .site-heading h1,
