@@ -4,7 +4,7 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/07/02/introduction-of-hhkb-pro-2/</loc>
+    <loc>https://calpa.me/2017/07/02/introduction-to-hhkb-pro-2/</loc>
     <lastmod>2017-07-02T15:54:05.000Z</lastmod>
     <data>
         <display>
@@ -100,14 +100,14 @@
     
     
   <url>
-    <loc>https://calpa.me/2017/02/23/github-edcation-package/</loc>
+    <loc>https://calpa.me/2017/04/05/front-end-booklist/</loc>
     <lastmod>2017-06-06T16:28:01.000Z</lastmod>
     <data>
         <display>
-        <title>利用Github免費教育禮包更换.me域名</title>
-        <pubTime>2017-02-23T02:00:00.000Z</pubTime>
+        <title>前端工程師的入門書單</title>
+        <pubTime>2017-04-05T14:51:00.000Z</pubTime>
         
-        <tag>Github</tag>
+        <tag>Web</tag>
          
          
            
@@ -134,31 +134,14 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/04/05/front-end-booklist/</loc>
+    <loc>https://calpa.me/2017/02/23/github-edcation-package/</loc>
     <lastmod>2017-06-06T16:28:01.000Z</lastmod>
     <data>
         <display>
-        <title>前端工程師的入門書單</title>
-        <pubTime>2017-04-05T14:51:00.000Z</pubTime>
+        <title>利用Github免費教育禮包更换.me域名</title>
+        <pubTime>2017-02-23T02:00:00.000Z</pubTime>
         
-        <tag>Web</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://calpa.me/2017/04/25/coders-of-the-caribbean-review/</loc>
-    <lastmod>2017-06-06T16:28:01.000Z</lastmod>
-    <data>
-        <display>
-        <title>Coders of the Caribbean Online Contest 後記</title>
-        <pubTime>2017-04-25T07:35:00.000Z</pubTime>
-        
-        <tag>Codingame</tag>
+        <tag>Github</tag>
          
          
            
@@ -176,6 +159,23 @@
         <pubTime>2017-02-19T07:12:00.000Z</pubTime>
         
         <tag>Hackathon</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://calpa.me/2017/04/25/coders-of-the-caribbean-review/</loc>
+    <lastmod>2017-06-06T16:28:01.000Z</lastmod>
+    <data>
+        <display>
+        <title>Coders of the Caribbean Online Contest 後記</title>
+        <pubTime>2017-04-25T07:35:00.000Z</pubTime>
+        
+        <tag>Codingame</tag>
          
          
            
@@ -294,16 +294,14 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/05/03/redux-array-push-function/</loc>
+    <loc>https://calpa.me/2017/05/05/javascript-array/</loc>
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     <data>
         <display>
-        <title>Redux push()是怎樣寫的？</title>
-        <pubTime>2017-05-03T15:20:00.000Z</pubTime>
+        <title>JavaScript 數組去重</title>
+        <pubTime>2017-05-05T14:53:00.000Z</pubTime>
         
         <tag>JavaScript</tag>
-         
-        <tag>Redux</tag>
          
          
            
@@ -313,12 +311,31 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/02/19/javascript-closure/</loc>
+    <loc>https://calpa.me/2017/01/20/using-javascript-to-create-web-storage/</loc>
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     <data>
         <display>
-        <title>JavaScript的閉包(Closure)</title>
-        <pubTime>2017-02-19T07:12:00.000Z</pubTime>
+        <title>利用JavaScript創建Web Storage</title>
+        <pubTime>2017-01-20T11:37:38.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+        <tag>Web</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://calpa.me/2017/05/01/CreateListFromArrayLike-problem-solution/</loc>
+    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
+    <data>
+        <display>
+        <title>CreateListFromArrayLike called on non-object 報錯的解決方法</title>
+        <pubTime>2017-05-01T14:50:00.000Z</pubTime>
         
         <tag>JavaScript</tag>
          
@@ -349,16 +366,33 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/01/20/using-javascript-to-create-web-storage/</loc>
+    <loc>https://calpa.me/2017/05/03/redux-array-push-function/</loc>
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     <data>
         <display>
-        <title>利用JavaScript創建Web Storage</title>
-        <pubTime>2017-01-20T11:37:38.000Z</pubTime>
+        <title>Redux push()是怎樣寫的？</title>
+        <pubTime>2017-05-03T15:20:00.000Z</pubTime>
         
         <tag>JavaScript</tag>
          
-        <tag>Web</tag>
+        <tag>Redux</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://calpa.me/2017/02/02/javascript-true-and-false/</loc>
+    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
+    <data>
+        <display>
+        <title>JavaScript中的True與False</title>
+        <pubTime>2017-02-02T15:19:53.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
          
          
            
@@ -374,23 +408,6 @@
         <display>
         <title>JavaScript的this</title>
         <pubTime>2017-03-25T04:44:00.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://calpa.me/2017/05/05/javascript-array/</loc>
-    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
-    <data>
-        <display>
-        <title>JavaScript 數組去重</title>
-        <pubTime>2017-05-05T14:53:00.000Z</pubTime>
         
         <tag>JavaScript</tag>
          
@@ -419,23 +436,6 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/05/01/CreateListFromArrayLike-problem-solution/</loc>
-    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
-    <data>
-        <display>
-        <title>CreateListFromArrayLike called on non-object 報錯的解決方法</title>
-        <pubTime>2017-05-01T14:50:00.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://calpa.me/2017/04/27/n-ways-to-output-hello-world/</loc>
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     <data>
@@ -453,12 +453,12 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/02/02/javascript-true-and-false/</loc>
+    <loc>https://calpa.me/2017/02/19/javascript-closure/</loc>
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     <data>
         <display>
-        <title>JavaScript中的True與False</title>
-        <pubTime>2017-02-02T15:19:53.000Z</pubTime>
+        <title>JavaScript的閉包(Closure)</title>
+        <pubTime>2017-02-19T07:12:00.000Z</pubTime>
         
         <tag>JavaScript</tag>
          
