@@ -86,15 +86,15 @@
             
               
                 
+              
+            
+              
+                
                   <li>
                     <a href="/Tags/">
                       Tags
                     </a>
                   </li>
-                
-              
-            
-              
                 
               
             
@@ -111,8 +111,8 @@
               
                 
                   <li>
-                    <a href="/archive/">
-                      Archive
+                    <a href="/works/">
+                      Works
                     </a>
                   </li>
                 
@@ -121,8 +121,8 @@
               
                 
                   <li>
-                    <a href="/works/">
-                      Works
+                    <a href="/archive/">
+                      Archive
                     </a>
                   </li>
                 
@@ -309,18 +309,22 @@
 
 
 <div class="post-preview " style="background-image: url('/img/post-default.jpg'); background-position-y: 0">
-    <a href="/2017/02/19/supercharger-hackathon/">
+    <a href="/2017/02/22/using-javascript-to-push-web-notification/">
         <h2 class="post-title">
-            SuperCharger Hackathon後記
+            利用JavaScript推送Web Notification
         </h2>
         <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-02-19
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-02-22
         </p>
         
         <div class="post-content-preview">
             <p>
-                
-如果計上這次比賽的話，我已經是第五次參加這一類編程比賽。與過往的比賽不同，合作的對象不再是大學生，而是兩間Start-up公司。在這次比賽中，我選擇KYC-Chain、Clare.ai兩間公司組成的隊伍。KYC-Chain透過Airtable提供一些常見的用戶問題與答案，而Clare.ai則負..
+                如果要推送通知的話，我們首先要請求權限：Notification.requestPermission()
+之後檢查Notification.permission來查看是否擁有權限。該值會是下面三個其中之一：
+
+default: 從未詢問用戶
+granted: 用戶授權顯示通知的權限
+denied..
             </p>
         </div>
     </a>
@@ -352,6 +356,30 @@
 執行b()
 
 12345678function A() &#123;  function B() &#123;..
+            </p>
+        </div>
+    </a>
+
+</div>
+
+<hr>
+
+
+
+
+<div class="post-preview " style="background-image: url('/img/post-default.jpg'); background-position-y: 0">
+    <a href="/2017/02/19/supercharger-hackathon/">
+        <h2 class="post-title">
+            SuperCharger Hackathon後記
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-02-19
+        </p>
+        
+        <div class="post-content-preview">
+            <p>
+                
+如果計上這次比賽的話，我已經是第五次參加這一類編程比賽。與過往的比賽不同，合作的對象不再是大學生，而是兩間Start-up公司。在這次比賽中，我選擇KYC-Chain、Clare.ai兩間公司組成的隊伍。KYC-Chain透過Airtable提供一些常見的用戶問題與答案，而Clare.ai則負..
             </p>
         </div>
     </a>
@@ -439,30 +467,6 @@ Cookie的佔用空間非常小，大小限制于4KB左右，常見的用途是�
 
 
 <div class="post-preview " style="background-image: url('/img/post-default.jpg'); background-position-y: 0">
-    <a href="/2017/01/08/readme/">
-        <h2 class="post-title">
-            Github上的README.md
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-01-08
-        </p>
-        
-        <div class="post-content-preview">
-            <p>
-                Hexo在渲染的時候默認是把source下面所有的.md檔案渲染成html，這樣的話會覆蓋掉Github上的CNAME和README.md。但是我又不想這樣，我想Github Repo下面可以直接看到這個blog的README.md內容。
-所以我就修改Hexo根目錄下的_config.yml：1..
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-
-<div class="post-preview " style="background-image: url('/img/post-default.jpg'); background-position-y: 0">
     <a href="/2017/01/08/hexo-404-page/">
         <h2 class="post-title">
             Hexo之建立404 Page
@@ -492,9 +496,9 @@ Creating a custom 404 page for ..
 
 
 <div class="post-preview " style="background-image: url('/img/post-default.jpg'); background-position-y: 0">
-    <a href="/2017/01/08/hello-world/">
+    <a href="/2017/01/08/readme/">
         <h2 class="post-title">
-            Hello, World!
+            Github上的README.md
         </h2>
         <p class="post-meta">
             <i class="fa fa-calendar" aria-hidden="true"></i> 2017-01-08
@@ -502,9 +506,8 @@ Creating a custom 404 page for ..
         
         <div class="post-content-preview">
             <p>
-                Hello World這是一個用hexo建構的blog，使用Hexo的主題Anisina
-我修改了_config.yml裡面的post-default-img 以及 post-default-img-mobile。
-
+                Hexo在渲染的時候默認是把source下面所有的.md檔案渲染成html，這樣的話會覆蓋掉Github上的CNAME和README.md。但是我又不想這樣，我想Github Repo下面可以直接看到這個blog的README.md內容。
+所以我就修改Hexo根目錄下的_config.yml：1..
             </p>
         </div>
     </a>
@@ -524,7 +527,11 @@ Creating a custom 404 page for ..
         <a href="/page/4/">&larr; Newer Posts</a>
     </li>
     
-    <li>Page 5 / 5</li>
+    <li>Page 5 / 6</li>
+    
+    <li class="next">
+        <a href="/page/6/">Older Posts &rarr;</a>
+    </li>
     
 </ul>
 
@@ -584,7 +591,7 @@ Creating a custom 404 page for ..
           <div class="tags">
               
               
-              <a href="/Tags/#JavaScript" title="JavaScript" rel="13">JavaScript</a>
+              <a href="/Tags/#JavaScript" title="JavaScript" rel="14">JavaScript</a>
               
               
               
@@ -614,8 +621,6 @@ Creating a custom 404 page for ..
               
               
               
-              
-              
               <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
               
               
@@ -625,6 +630,10 @@ Creating a custom 404 page for ..
               
               
               <a href="/Tags/#SEO" title="SEO" rel="2">SEO</a>
+              
+              
+              
+              
               
               
               
@@ -681,6 +690,12 @@ Creating a custom 404 page for ..
       <ul class="list-inline" style="text-align: center;">
         
           <li>
+            <a href="/2017/07/06/titanic-a-set-of-animated-icons/">
+              簡單易用的開源 JavaScript 動畫圖標庫 -- Titanic
+            </a>
+          </li>
+        
+          <li>
             <a href="/2017/07/02/introduction-to-hhkb-pro-2/">
               神兵利器 -- HHKB Pro 2 開箱文
             </a>
@@ -704,17 +719,11 @@ Creating a custom 404 page for ..
             </a>
           </li>
         
-          <li>
-            <a href="/2017/06/01/create-markdown-powerpoint-in-5-mins/">
-              5分鐘製作 Markdown PowerPoint
-            </a>
-          </li>
-        
       </ul>
     
     <hr>
 
-    <h5 style="text-align: center;">共40篇文章</h5>
+    <h5 style="text-align: center;">共41篇文章</h5>
     <hr>
 
     <!-- All Blog Posts -->
@@ -729,7 +738,7 @@ Creating a custom 404 page for ..
           
               <li>
                 <a href="/archive/#2017-7">
-                  7月(1)
+                  7月(2)
                 </a>
               </li>
             

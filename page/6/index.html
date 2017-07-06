@@ -18,37 +18,24 @@
     <meta name="google-site-verification" content="riZBcestky7i9xY__A-5J-2EE65T75X1u-zgbss37Io">
     <title>
         
-        利用ssh連接Github的方法｜Calpa&#39;s blog
+        Calpa&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="https://calpa.me/2017/04/11/github-ssh/">
+    <link rel="canonical" href="https://calpa.me/page/6/">
 
     <!-- Open Graph -->
     
-    <meta name="description" content="其實很簡單，按照下面打就是了。。。
-
-ls -la ~/.ssh/
-cat ~/.ssh/id_rsa.pub 複製貼上到Github SSH Page
-ssh git@github.com">
-<meta property="og:type" content="article">
-<meta property="og:title" content="利用ssh連接Github的方法 | Calpa's blog">
-<meta property="og:url" content="https://calpa.me/2017/04/11/github-ssh/index.html">
+    <meta name="description" content="Calpa的技術博客，開發日常，以及遇到的坑">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calpa's blog">
+<meta property="og:url" content="https://calpa.me/page/6/index.html">
 <meta property="og:site_name" content="Calpa">
-<meta property="og:description" content="其實很簡單，按照下面打就是了。。。
-
-ls -la ~/.ssh/
-cat ~/.ssh/id_rsa.pub 複製貼上到Github SSH Page
-ssh git@github.com">
+<meta property="og:description" content="Calpa的技術博客，開發日常，以及遇到的坑">
 <meta property="og:image" content="https://calpa.me/img/post-default.jpg">
-<meta property="og:updated_time" content="2017-04-11T13:46:43.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="利用ssh連接Github的方法 | Calpa's blog">
-<meta name="twitter:description" content="其實很簡單，按照下面打就是了。。。
-
-ls -la ~/.ssh/
-cat ~/.ssh/id_rsa.pub 複製貼上到Github SSH Page
-ssh git@github.com">
+<meta name="twitter:title" content="Calpa's blog">
+<meta name="twitter:description" content="Calpa的技術博客，開發日常，以及遇到的坑">
 <meta name="twitter:image" content="https://calpa.me/img/post-default.jpg">
 
     <!-- Bootstrap v3.3.7 Core CSS -->
@@ -70,8 +57,8 @@ ssh git@github.com">
 
 <body class="animated fadeIn">
 <!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost="true" data-istags="false
-" data-ishome="false">
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top is-fixed" id="nav-top" data-ispost="false" data-istags="false
+" data-ishome="true">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header page-scroll">
@@ -89,7 +76,7 @@ ssh git@github.com">
     <div id="huxblog_navbar">
       <div class="navbar-collapse">
         <ul class="nav navbar-nav navbar-center title-calpa display-none">
-          <li><a href="#" onclick="scrolltoTop(event)">利用ssh連接Github的方法</a></li>
+          <li><a href="#" onclick="scrolltoTop(event)">home</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li>
@@ -179,64 +166,187 @@ ssh git@github.com">
 
 <!-- Main Content -->
 
-<!--only post-->
-
-  
-    <img class="wechat-title-img" src="/img/post-default.jpg">
-  
 
 <style>
-    
+
     header.intro-header {
-      background-image: url('/img/post-default.jpg');
+        background-image: url('/img/blue-blur-background.jpg')
     }
-    
+
+    .custom-haojen-container .post-preview:nth-of-type(1),
+    .custom-haojen-container .post-preview-poetry:nth-of-type(1) {
+        text-align: center;
+        background-repeat: no-repeat;
+        border-radius: 3px;
+        background-size: cover;
+        padding: 0;
+        height: 300px;
+        display: table;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.16);
+    }
+
+    /*去掉诗歌的背景图片*/
+    .custom-haojen-container .post-preview-poetry:nth-of-type(1) {
+        background-image: none !important;
+        background-color: rgba(255, 248, 220, 0.5);
+    }
+
+    .custom-haojen-container .post-preview:nth-child(1) h2,
+    .custom-haojen-container .post-preview:nth-child(1) .post-meta,
+    .custom-haojen-container .post-preview:nth-child(1) .post-subtitle {
+        text-shadow: 0 0 40px rgba(0, 0, 0, 1);
+        letter-spacing: 1px;
+        color: #fff;
+        margin-top: 0;
+    }
+
+    .custom-haojen-container .post-preview:nth-child(1) .post-meta {
+        font-size: .9em;
+        font-weight: 300;
+        margin-top: 0;
+    }
+
+    .custom-haojen-container .post-preview-poetry:nth-child(1) .post-subtitle {
+        letter-spacing: 6px;
+        font-size: 18px;
+        font-family: unset;
+        font-weight: 400;
+        color: rgba(0, 0, 0, .75)
+    }
+
+    /*不显示摘要*/
+    .custom-haojen-container .post-preview:nth-child(1) .post-content-preview {
+        display: none
+    }
+
+    /*只第一个显示背景图片*/
+    .custom-haojen-container .post-preview:not(:nth-child(1)) {
+        background-image: none !important;
+    }
+
+    /*第一个分界线去掉*/
+    .custom-haojen-container hr:nth-of-type(1) {
+        display: none;
+    }
+
+    /*主题*/
+    .custom-haojen-container .post-preview:nth-of-type(1) > a {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    /*诗词标题*/
+    .custom-haojen-container .post-preview-poetry:nth-child(1) h2 {
+        font-size: 35px;
+        font-family: STKaiti;
+        color: rgba(0, 0, 0, .8);
+    }
+
+    .custom-haojen-container .post-preview-poetry:nth-of-type(1) .post-meta {
+        color: #0e2231;
+    }
+
+    @media (max-width: 768px) {
+        .custom-haojen-container .post-preview:nth-child(1) {
+            height: 240px;
+        }
+
+        .custom-haojen-container .post-preview-poetry:nth-child(1) h2 {
+            font-size: 28px !important;
+            margin-top: 0;
+        }
+
+        .custom-haojen-container .post-preview:nth-child(1) .post-subtitle {
+            font-size: 18px;
+            font-weight: 400;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    /*手机屏幕*/
+    @media (max-width: 400px) {
+        .custom-haojen-container .post-preview:nth-child(1) {
+            height: 195px;
+        }
+
+        .custom-haojen-container .post-preview-poetry:nth-child(1) h2 {
+            font-size: 20px !important;
+        }
+
+        .custom-haojen-container .post-preview:nth-child(1) .post-subtitle {
+            font-size: 16px;
+        }
+    }
 </style>
 
-<style>
-header.intro-header {
-  
-
-  
-}
-</style>
-
-<header class="intro-header">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
-                <div class="post-heading">
-                    <h1>利用ssh連接Github的方法</h1>
-                    
-                    <span>
-                      作者 Calpa
-                    </span>
-                    
-                    <span>
-                      日期 2017-04-11
-                    </span>
-
-                    
-                      <span class="post-count">共35字</span>
-                    
-
-                    <div class="tags text-center">
-                        
-                        <a class="tag" href="/Tags/#Github" title="Github">Github</a>
-                        
+<!-- Page Header -->
+<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 visible-xs-block visible-sm-block">
+    <div class="row">
+        <header class="intro-header">
+            <div class="container">
+                <div class="site-heading text-center">
+                    <div class="about-me">
+                        <!--移动端头部显示-->
+                        <img src="/img/profile.png" alt="avatar">
+                        <h4>Calpa</h4>
+                        <p>夢裡不覺秋已深，餘情豈是為他人。</p>
                     </div>
                 </div>
             </div>
-        </div>
+        </header>
     </div>
-</header>
+</div>
+<!-- Main Content -->
+<div class="container custom-haojen-container">
+    <!-- Post Container -->
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12 col-xs-12 post-container">
+            <!-- Main Content -->
 
-<!-- Post Content -->
-<article>
-    <div class="container">
-        <div class="row">
-            <!-- Post Container -->
-            <!-- Sidebar Container -->
+
+
+
+<div class="post-preview " style="background-image: url('/img/post-default.jpg'); background-position-y: 0">
+    <a href="/2017/01/08/hello-world/">
+        <h2 class="post-title">
+            Hello, World!
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-01-08
+        </p>
+        
+        <div class="post-content-preview">
+            <p>
+                Hello World這是一個用hexo建構的blog，使用Hexo的主題Anisina
+我修改了_config.yml裡面的post-default-img 以及 post-default-img-mobile。
+
+            </p>
+        </div>
+    </a>
+
+</div>
+
+<hr>
+
+
+
+
+<!-- 翻页 pager -->
+
+<ul class="pager">
+    
+    <li class="previous">
+        <a href="/page/5/">&larr; Newer Posts</a>
+    </li>
+    
+    <li>Page 6 / 6</li>
+    
+</ul>
+
+        </div>
+        <!-- Sidebar Container -->
 <div class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 hidden-sm hidden-xs sidebar-container">
     <!-- About Me -->
     <section class="visible-md visible-lg" style="padding: 0 18px">
@@ -490,111 +600,8 @@ header.intro-header {
 
 </div>
 
-
-            <div class="col-lg-7 col-lg-offset-0 col-md-7 col-sm-9 post-container">
-                <p>其實很簡單，按照下面打就是了。。。</p>
-<ol>
-<li><code>ls -la ~/.ssh/</code></li>
-<li><code>cat ~/.ssh/id_rsa.pub</code> 複製貼上到Github SSH Page</li>
-<li><code>ssh git@github.com</code></li>
-</ol>
-
-                <hr>
-                
-
-                <ul class="pager">
-                    
-                    <li class="previous">
-                        <a href="/2017/04/11/react-native-run-android/" data-toggle="tooltip" data-placement="top" title="【React Native】安裝Android Apk而無需連接伺服器的方法">&larr; Previous Post</a>
-                    </li>
-                    
-                    
-                    <li class="next">
-                        <a href="/2017/04/08/common-http-status-code/" data-toggle="tooltip" data-placement="top" title="常見的14種HTTP狀態碼">Next Post &rarr;</a>
-                    </li>
-                    
-                </ul>
-
-                
-
-                
-                <!-- disqus 评论框 start -->
-                <div class="comment">
-                    <div id="disqus_thread" class="disqus-thread"></div>
-                </div>
-                <!-- disqus 评论框 end -->
-                
-
-            </div>
-
-            <div class="hidden-xs col-md-2 col-sm-3 toc-col">
-                <div class="toc-wrap">
-                    
-                </div>
-            </div>
-        </div>
     </div>
-</article>
-
-
-
-
-<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES * * */
-    var disqus_shortname = "calpas-blog";
-    var disqus_identifier = "https://calpa.me/2017/04/11/github-ssh/";
-    var disqus_url = "https://calpa.me/2017/04/11/github-ssh/";
-
-    (function () {
-        var dsq = document.createElement('script');
-        dsq.type = 'text/javascript';
-        dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<!-- disqus 公共JS代码 end -->
-
-
-
-<!-- async load function -->
-<script>
-    function async(u, c) {
-        var d = document, t = 'script',
-                o = d.createElement(t),
-                s = d.getElementsByTagName(t)[0];
-        o.src = u;
-        if (c) {
-            o.addEventListener('load', function (e) {
-                c(null, e);
-            }, false);
-        }
-        s.parentNode.insertBefore(o, s);
-    }
-</script>
-<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
-<script>
-    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function () {
-      anchors.options = {
-        visible: 'always',
-        placement: 'left'
-      };
-      anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
-    })
-</script>
-<style>
-    /* place left on bigger screen */
-    @media all and (min-width: 800px) {
-      .anchorjs-link:hover {
-        color: #2500AD;
-      }
-      *:hover > .anchorjs-link {
-        transition: color .25s linear;
-      }
-    }
-</style>
-
+</div>
 
 <!-- Footer -->
 <!-- Footer -->
@@ -745,9 +752,6 @@ header.intro-header {
 <!-- busuanzi -->
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-
-<!-- AddThis -->
-<script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59311b889457f301"></script>
 
 
 <!-- fancybox -->

@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://calpa.me/2017/07/06/titanic-a-set-of-animated-icons/</loc>
+    
+    <lastmod>2017-07-06T06:58:27.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://calpa.me/2017/07/02/introduction-to-hhkb-pro-2/</loc>
     
     <lastmod>2017-07-02T15:54:05.000Z</lastmod>
@@ -44,14 +51,14 @@
   </url>
   
   <url>
-    <loc>https://calpa.me/2017/04/05/front-end-booklist/</loc>
+    <loc>https://calpa.me/2017/04/23/hackUST-2017-hackathon-summary/</loc>
     
     <lastmod>2017-06-06T16:28:01.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://calpa.me/2017/04/23/hackUST-2017-hackathon-summary/</loc>
+    <loc>https://calpa.me/2017/04/25/coders-of-the-caribbean-review/</loc>
     
     <lastmod>2017-06-06T16:28:01.000Z</lastmod>
     
@@ -65,14 +72,14 @@
   </url>
   
   <url>
-    <loc>https://calpa.me/2017/02/19/supercharger-hackathon/</loc>
+    <loc>https://calpa.me/2017/04/05/front-end-booklist/</loc>
     
     <lastmod>2017-06-06T16:28:01.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://calpa.me/2017/04/25/coders-of-the-caribbean-review/</loc>
+    <loc>https://calpa.me/2017/02/19/supercharger-hackathon/</loc>
     
     <lastmod>2017-06-06T16:28:01.000Z</lastmod>
     
@@ -142,7 +149,14 @@
   </url>
   
   <url>
-    <loc>https://calpa.me/2017/05/05/javascript-array/</loc>
+    <loc>https://calpa.me/2017/05/01/CreateListFromArrayLike-problem-solution/</loc>
+    
+    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://calpa.me/2017/02/19/javascript-closure/</loc>
     
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     
@@ -156,21 +170,7 @@
   </url>
   
   <url>
-    <loc>https://calpa.me/2017/05/01/CreateListFromArrayLike-problem-solution/</loc>
-    
-    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://calpa.me/2017/05/16/react-component-lifecycle/</loc>
-    
-    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://calpa.me/2017/05/03/redux-array-push-function/</loc>
+    <loc>https://calpa.me/2017/03/25/javascript-this/</loc>
     
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     
@@ -184,14 +184,14 @@
   </url>
   
   <url>
-    <loc>https://calpa.me/2017/03/25/javascript-this/</loc>
+    <loc>https://calpa.me/2017/05/03/redux-array-push-function/</loc>
     
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://calpa.me/2017/01/14/javascript-variable-hoisting/</loc>
+    <loc>https://calpa.me/2017/05/05/javascript-array/</loc>
     
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     
@@ -205,7 +205,14 @@
   </url>
   
   <url>
-    <loc>https://calpa.me/2017/02/19/javascript-closure/</loc>
+    <loc>https://calpa.me/2017/01/14/javascript-variable-hoisting/</loc>
+    
+    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://calpa.me/2017/05/16/react-component-lifecycle/</loc>
     
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     

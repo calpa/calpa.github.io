@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://calpa.me/"/>
-  <updated>2017-07-02T15:54:05.000Z</updated>
+  <updated>2017-07-06T06:58:27.000Z</updated>
   <id>https://calpa.me/</id>
   
   <author>
@@ -14,6 +14,82 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>簡單易用的開源 JavaScript 動畫圖標庫 -- Titanic</title>
+    <link href="https://calpa.me/2017/07/06/titanic-a-set-of-animated-icons/"/>
+    <id>https://calpa.me/2017/07/06/titanic-a-set-of-animated-icons/</id>
+    <published>2017-07-06T03:00:00.000Z</published>
+    <updated>2017-07-06T06:58:27.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>如果你用過 Font Awesome 等圖標，你可能會覺得它們很好看，用起來很很方便。但是，在用戶點擊這些圖標的時候，它們是不會有反應的。如果有這些圖標會動的話，那就更加好。Titanic 提供一系列的動畫圖標，以及以 JavaScript 的調用圖標動畫的方法。</p>
+<p>如果你想要看 Hello, World 的版本的話，你可以到我的 <a href="https://codepen.io/calpa/pen/xrzPxx" rel="external nofollow noopener noreferrer" target="_blank">Codepen</a> 裡面，測試一下。</p>
+<p><img src="https://i.imgur.com/bLmxAZ3.gif" alt="Preview"></p>
+<h2 id="安裝方法"><a href="#安裝方法" class="headerlink" title="安裝方法"></a>安裝方法</h2><p>你可以使用 CDN 或者 npm 來安裝 Titanic。</p>
+<h3 id="CDN"><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h3><p>直接在 HTML head 裡面加進下面的字符。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.rawgit.com/icons8/titanic/master/dist/js/titanic.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.5.9/bodymovin.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>然後在 body 的部分初始化 Titanic。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">    <span class="keyword">var</span> titanic = <span class="keyword">new</span> Titanic();</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>你可以透過這種標籤來加上 Titanic 圖標。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'titanic titanic_chat'</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><img src="https://i.imgur.com/aiG4BYo.png" alt="All icons"></p>
+<p>你可以透過<a href="https://rawgit.com/icons8/titanic/master/demo/index.html" rel="external nofollow noopener noreferrer" target="_blank">這裡</a>查找 Titanic 所支持的圖標，把 chat 換成以下的字詞：</p>
+<ul>
+<li>caps</li>
+<li>chat</li>
+<li>checkbox</li>
+<li>expand</li>
+<li>cheap</li>
+<li>expensive</li>
+<li>idea</li>
+<li>mailbox</li>
+<li>mic</li>
+<li>no-mic</li>
+<li>online</li>
+<li>pause</li>
+<li>power</li>
+<li>shopping</li>
+<li>smile</li>
+<li>stop</li>
+<li>unlock</li>
+<li>zoom</li>
+</ul>
+<h3 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install titanic-icons --save</div></pre></td></tr></table></figure>
+<p>鏈接：<a href="https://www.npmjs.com/package/titanic-icons" rel="external nofollow noopener noreferrer" target="_blank">titanic-icons - npmjs</a></p>
+<h3 id="使用你自己的備份"><a href="#使用你自己的備份" class="headerlink" title="使用你自己的備份"></a>使用你自己的備份</h3><p>如果你喜歡在自己的伺服器，而不是 rawgit 去使用 Titanic 的話，你只需要把 base URL 傳進 init() 裡面。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">titanic.begin(<span class="string">'/my/base/directory/'</span>);</div></pre></td></tr></table></figure>
+<p>然後，當你有一個div，id=”chat” 的時候，Titanic 會自動檢測所有在 /my/base/directory/chat.json 裡面的圖標。</p>
+<h2 id="API"><a href="#API" class="headerlink" title="API"></a>API</h2><ul>
+<li><code>titanic.isInitialized()</code> – 返回 true / false</li>
+<li><code>titanic.items</code> – 返回包含所有 titanic 圖標的一個 Array</li>
+<li><code>titanic.items[index].on(), titanic.items[index].off(), titanic.items[index].play()</code> – 調整動畫 by index</li>
+<li><code>titanic.on(token), titanic.off(token), titanic.play(token)</code> – 調整動畫 by token (name)</li>
+</ul>
+<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!--Inserting the scripts once for the whole page--&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.rawgit.com/icons8/titanic/master/dist/js/titanic.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.5.9/bodymovin.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!--Inserting an icon--&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'titanic titanic-checkbox'</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="comment">&lt;!--Initializing--&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">        <span class="keyword">var</span> titanic = <span class="keyword">new</span> Titanic(&#123;</div><div class="line">          <span class="attr">hover</span>: <span class="literal">true</span>, <span class="comment">// auto animated on hover (default true)</span></div><div class="line">          click: <span class="literal">true</span>  <span class="comment">// auto animated on click/tap (default false)</span></div><div class="line">        &#125;);</div><div class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="comment">&lt;!--Clicking turns this icon on--&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"titanic.on(getElementById('checkbox').value)"</span>&gt;</span>On<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="原作者的話"><a href="#原作者的話" class="headerlink" title="原作者的話"></a>原作者的話</h2><blockquote>
+<p>JavaScript is basically <a href="https://github.com/bodymovin/bodymovin" rel="external nofollow noopener noreferrer" target="_blank">bodymovin</a> plus few lines of my code. It’s a solid library with an awesome name. Thank you, guys.</p>
+<p>Icons are created by <a href="https://dribbble.com/imargarita" rel="external nofollow noopener noreferrer" target="_blank">Margarita Ivanchikova</a> from <a href="https://icons8.com/" rel="external nofollow noopener noreferrer" target="_blank">Icons8</a>. She has many more awesome animations in her portfolio.</p>
+<p>The code rewritten by <a href="https://github.com/dhilt" rel="external nofollow noopener noreferrer" target="_blank">Denis Alexanov</a>, my teacher and guru. Thank you!</p>
+<p>Project is produced by Icons8, author of the famous icon library, <a href="https://iconpharm.com" rel="external nofollow noopener noreferrer" target="_blank">IconPharm</a>, and <a href="https://sleeklogos.design" rel="external nofollow noopener noreferrer" target="_blank">Sleek Logos</a>.</p>
+<p>The code is created by Icons8</p>
+</blockquote>
+<p><img src="https://i.imgur.com/p8Xoj9l.gif" alt="Magritte"></p>
+<p>Github Repo: <a href="https://github.com/icons8/titanic" rel="external nofollow noopener noreferrer" target="_blank">icons 8 / titanic</a></p>
+<h2 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h2><p>我覺得這個很炫酷，我應該可以用在現有的前端開發項目，比如說博客，還有在做的一個在線學習編程平台上。如果你希望看到我如何應用 Titanic 的話，你可以打個星，關注一下我的博客。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;如果你用過 Font Awesome 等圖標，你可能會覺得它們很好看，用起來很很方便。但是，在用戶點擊這些圖標的時候，它們是不會有反應的。如果有這些圖標會動的話，那就更加好。Titanic 提供一系列的動畫圖標，以及以 JavaScript 的調用圖標動畫的方法。&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="https://calpa.me/Tags/JavaScript/"/>
+    
+      <category term="Library" scheme="https://calpa.me/Tags/Library/"/>
+    
+  </entry>
   
   <entry>
     <title>神兵利器 -- HHKB Pro 2 開箱文</title>
@@ -959,62 +1035,6 @@
     
     
       <category term="Hackathon" scheme="https://calpa.me/Tags/Hackathon/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Bootstrap v4 源碼分析(1)</title>
-    <link href="https://calpa.me/2017/04/20/bootstrap-code-analysis-1/"/>
-    <id>https://calpa.me/2017/04/20/bootstrap-code-analysis-1/</id>
-    <published>2017-04-20T13:37:00.000Z</published>
-    <updated>2017-04-20T15:17:54.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Bootstrap是一個Twitter推出的CSS框架，也是我第一個使用的CSS框架。本文使用最新版本v4.0.0-alpha.6，透過閱讀完整的源代碼，我們能夠更加了解Bootstrap的優缺點，以及如何自製Bootstrap輪子。</p>
-<h2 id="為什麼使用Bootstrap"><a href="#為什麼使用Bootstrap" class="headerlink" title="為什麼使用Bootstrap"></a>為什麼使用Bootstrap</h2><p>透過使用Bootstrap框架，我們可以提高開發效率，避免重複製造輪子。</p>
-<h2 id="閱讀本文所需知識"><a href="#閱讀本文所需知識" class="headerlink" title="閱讀本文所需知識"></a>閱讀本文所需知識</h2><ol>
-<li>一顆好奇心</li>
-<li>基本Bootstrap知識</li>
-<li>基本SCSS/SASS知識</li>
-</ol>
-<h2 id="Bootstrap4-的新特性"><a href="#Bootstrap4-的新特性" class="headerlink" title="Bootstrap4 的新特性"></a>Bootstrap4 的新特性</h2><p>對比起Bootstrap3，Bootstrap4作出不少改動，以下是當中比較影響大的特性：</p>
-<ol>
-<li>默認使用Flexbox</li>
-<li>使用flexbox重新製作navbar，提高可塑性和客製化能力。</li>
-<li><code>.card</code>代替<code>.panel</code>以及<code>.well</code></li>
-<li>能夠適應五種長度: xs, sm, md, lg, xl</li>
-<li>更加大的默認字體: 16px</li>
-<li>不再自帶Glyphicons圖案包。。。</li>
-<li>使用SCSS開發</li>
-</ol>
-<h2 id="Bootstarp-源碼結構"><a href="#Bootstarp-源碼結構" class="headerlink" title="Bootstarp 源碼結構"></a>Bootstarp 源碼結構</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">bootstrap/  #v4-dev branch</div><div class="line">├── build/</div><div class="line">├── dist/ # 預先編譯的CSS</div><div class="line">│   ├── css/</div><div class="line">│   └── js/</div><div class="line">├── docs/ # 文檔</div><div class="line">    └── examples/ # 官方例子</div><div class="line">├── js/</div><div class="line">    ├── dist/</div><div class="line">    ├── src/</div><div class="line">    └── tests/</div><div class="line">├── nuget/</div><div class="line">└── scss/ # 本文開始入手的地方</div><div class="line">    ├── mixins/</div><div class="line">    └── utilities/</div></pre></td></tr></table></figure>
-<h2 id="Bootstrap-Grid架構"><a href="#Bootstrap-Grid架構" class="headerlink" title="Bootstrap Grid架構"></a>Bootstrap Grid架構</h2><p>Bootstrap使用<code>container</code>-&gt;<code>row</code>-&gt;<code>col-*-number</code>的架構。</p>
-<h2 id="利用SCSS理解-Container"><a href="#利用SCSS理解-Container" class="headerlink" title="利用SCSS理解 Container"></a>利用SCSS理解 Container</h2><p>在<a href="https://github.com/twbs/bootstrap/blob/094b3a129349a41b1319b0870fb3daa9459b7284/scss/_grid.scss" rel="external nofollow noopener noreferrer" target="_blank">_grid.scss</a>的一開始代碼段落中，我們可以看到<code>.container</code>, <code>.fluid-container</code>這兩個容器。如果 $enable-grid-classes是true的話，就可以使用<code>.container</code>以及<code>.fluid-container</code>。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">@if $enable-grid-classes &#123;</div><div class="line">  .container &#123;</div><div class="line">    @include make-container();</div><div class="line">    @include make-container-max-widths();</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">@if $enable-grid-classes &#123;</div><div class="line">  .container-fluid &#123;</div><div class="line">    width: 100%;</div><div class="line">    @include make-container();</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="理解Row"><a href="#理解Row" class="headerlink" title="理解Row"></a>理解Row</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@if $enable-grid-classes &#123;</div><div class="line">  @include make-row();</div><div class="line">  // 省略 .no-gutters</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="用到的函式-mixins"><a href="#用到的函式-mixins" class="headerlink" title="用到的函式 (mixins)"></a>用到的函式 (mixins)</h2><h3 id="container"><a href="#container" class="headerlink" title="container"></a>container</h3><h4 id="make-container-grid-scss"><a href="#make-container-grid-scss" class="headerlink" title="make-container (grid.scss)"></a>make-container (grid.scss)</h4><p>它們會調用<a href="https://github.com/twbs/bootstrap/blob/2436ad589cfc235c84160fe14e4cc4ec97a9c5ca/scss/mixins/_grid.scss" rel="external nofollow noopener noreferrer" target="_blank">mixins/_grid.scss </a>裡面的<a href="https://github.com/twbs/bootstrap/blob/2436ad589cfc235c84160fe14e4cc4ec97a9c5ca/scss/mixins/_grid.scss#L5" rel="external nofollow noopener noreferrer" target="_blank">@mixin make-container</a>以及<a href="https://github.com/twbs/bootstrap/blob/2436ad589cfc235c84160fe14e4cc4ec97a9c5ca/scss/mixins/_grid.scss#L20" rel="external nofollow noopener noreferrer" target="_blank">@mixin make-container-max-widths</a>。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">@mixin make-container($gutters: $grid-gutter-widths) &#123;</div><div class="line">  margin-right: auto;</div><div class="line">  margin-left: auto;</div><div class="line"></div><div class="line">  @each $breakpoint in map-keys($gutters) &#123;</div><div class="line">    @include media-breakpoint-up($breakpoint) &#123;</div><div class="line">      $gutter: map-get($gutters, $breakpoint);</div><div class="line">      padding-right: ($gutter / 2);</div><div class="line">      padding-left:  ($gutter / 2);</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p><a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#map_get-instance_method" rel="external nofollow noopener noreferrer" target="_blank">map-get</a>則是Sass裡面的一個函數，輸入一個map以及key，如果map裡面有該key的話，就會返回key的值。找不到的話就會返回null。</p>
-<h4 id="grid-gutter-widths-variables-scss"><a href="#grid-gutter-widths-variables-scss" class="headerlink" title="$grid-gutter-widths (variables.scss)"></a>$grid-gutter-widths (variables.scss)</h4><p>如果沒有設置$gutters，它就會默認是<a href="https://github.com/twbs/bootstrap/blob/dd0ce3e4b2a89f245ee608a1acc9f848cf8c833a/scss/_variables.scss" rel="external nofollow noopener noreferrer" target="_blank">$grid-gutter-widths</a>，以下是$grid-gutter-widths的包含的數值: xs, sm, md, lg, xl。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$grid-gutter-width-base:     30px !default;</div><div class="line">$grid-gutter-widths: (</div><div class="line">  xs: $grid-gutter-width-base, // 30px</div><div class="line">  sm: $grid-gutter-width-base, // 30px</div><div class="line">  md: $grid-gutter-width-base, // 30px</div><div class="line">  lg: $grid-gutter-width-base, // 30px</div><div class="line">  xl: $grid-gutter-width-base  // 30px</div><div class="line">) !default;</div></pre></td></tr></table></figure>
-<h4 id="grid-breakpoints-variables-scss"><a href="#grid-breakpoints-variables-scss" class="headerlink" title="$grid-breakpoints (variables.scss)"></a>$grid-breakpoints (variables.scss)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$grid-breakpoints: (</div><div class="line">  xs: 0,</div><div class="line">  sm: 576px,</div><div class="line">  md: 768px,</div><div class="line">  lg: 992px,</div><div class="line">  xl: 1200px</div><div class="line">) !default;</div></pre></td></tr></table></figure>
-<p>它定義不同設備的屏幕寬度，用於響應式設計(Responsive Web Design)。</p>
-<h4 id="media-breakpoint-up-breakpoints-scss"><a href="#media-breakpoint-up-breakpoints-scss" class="headerlink" title="media-breakpoint-up (breakpoints.scss)"></a>media-breakpoint-up (breakpoints.scss)</h4><p>而media-breakpoint-up則是在<a href="https://github.com/twbs/bootstrap/blob/7ca078da815320c75862b6cf25f46ce706570279/scss/mixins/_breakpoints.scss#L54" rel="external nofollow noopener noreferrer" target="_blank">mixins/_breakpoints.scss 第54行</a>，用處是返回最短寬度的內容。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) &#123;</div><div class="line">  $min: breakpoint-min($name, $breakpoints);</div><div class="line">  @if $min &#123;</div><div class="line">    @media (min-width: $min) &#123;</div><div class="line">      @content;</div><div class="line">    &#125;</div><div class="line">  &#125; @else &#123;</div><div class="line">    @content;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h4 id="breakpoint-min"><a href="#breakpoint-min" class="headerlink" title="breakpoint-min()"></a>breakpoint-min()</h4><p><code>breakpoint-min()</code>可以在<a href="https://github.com/twbs/bootstrap/blob/7ca078da815320c75862b6cf25f46ce706570279/scss/mixins/_breakpoints.scss#L26" rel="external nofollow noopener noreferrer" target="_blank">mixins/_breakpoints.scss 第26行</a>找到，它的用處是返回最短斷點寬度或者null。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@function breakpoint-min($name, $breakpoints: $grid-breakpoints) &#123;</div><div class="line">  $min: map-get($breakpoints, $name);</div><div class="line">  @return if($min != 0, $min, null);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="row"><a href="#row" class="headerlink" title="row"></a>row</h3><h4 id="make-row-grid-scss"><a href="#make-row-grid-scss" class="headerlink" title="make-row() (grid.scss)"></a>make-row() (grid.scss)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">@mixin make-row($gutters: $grid-gutter-widths) &#123;</div><div class="line">  display: flex;</div><div class="line">  flex-wrap: wrap;</div><div class="line"></div><div class="line">  @each $breakpoint in map-keys($gutters) &#123;</div><div class="line">    @include media-breakpoint-up($breakpoint) &#123;</div><div class="line">      $gutter: map-get($gutters, $breakpoint);</div><div class="line">      margin-right: ($gutter / -2);</div><div class="line">      margin-left:  ($gutter / -2);</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>至於Column，我們下次再說吧。。。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Bootstrap是一個Twitter推出的CSS框架，也是我第一個使用的CSS框架。本文使用最新版本v4.0.0-alpha.6，透過閱讀完整的源代碼，我們能夠更加了解Bootstrap的優缺點，以及如何自製Bootstrap輪子。&lt;/p&gt;
-&lt;h2 id=&quot;為什麼使用Bo
-    
-    </summary>
-    
-    
-      <category term="Web" scheme="https://calpa.me/Tags/Web/"/>
-    
-      <category term="Bootstrap" scheme="https://calpa.me/Tags/Bootstrap/"/>
     
   </entry>
   
