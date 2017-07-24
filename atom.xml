@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://calpa.me/"/>
-  <updated>2017-07-06T06:58:27.000Z</updated>
+  <updated>2017-07-24T15:18:39.000Z</updated>
   <id>https://calpa.me/</id>
   
   <author>
@@ -14,6 +14,42 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>項目代碼調試：提問前要做的六個步驟</title>
+    <link href="https://calpa.me/2017/07/24/six-steps-to-debug-before-directly-ask-question/"/>
+    <id>https://calpa.me/2017/07/24/six-steps-to-debug-before-directly-ask-question/</id>
+    <published>2017-07-24T13:00:00.000Z</published>
+    <updated>2017-07-24T15:18:39.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>上天對於每個地球人都是公平的，每個人都一天只有 24 小時。為什麼有的人會停留不前，有的人卻會不斷有所成長？其中一個原因是當遇到問題時，他們解決問題的方法是非常不同的。同樣是遇到問題，與其伸手，等其他程序員幫助去解決問題，倒不如自己先嘗試各種方法，然後才問人家。。。我會在這篇文章簡單說一下在你提問之前，你可以做的六個步驟。</p>
+<h2 id="步驟"><a href="#步驟" class="headerlink" title="步驟"></a>步驟</h2><h3 id="1-檢查，試驗本地環境"><a href="#1-檢查，試驗本地環境" class="headerlink" title="1. 檢查，試驗本地環境"></a>1. 檢查，試驗本地環境</h3><p>  如果你是和其他人一齊開發項目的話，可能你會遇到 packages 安裝報錯的問題，這個時候，你應該試試安裝packages，例如<code>npm install</code>，把現有項目的 packages 更新一下，可能現有的 packages 已經不是最新的，或者有所缺乏。</p>
+<p>  另外，你也可以看一下你自己的 npm 和 node 版本，是否因為版本號太低，而導致無法安裝某些 packages。如果是的話，請先確定是否需要用那麼新的 package 版本，然後再更新 node 版本。</p>
+<h3 id="2-Google-Bing-一下"><a href="#2-Google-Bing-一下" class="headerlink" title="2. Google / Bing 一下"></a>2. Google / Bing 一下</h3><p>  <img src="https://i.imgur.com/1Djy0Gj.png" alt="Google 一下"></p>
+<p>  問題就是答案，其實你直接在搜尋引擎搜尋，就會找到這些問題的解決方法。如果你問我一些技術的問題，我很可能會直接叫你 Google，因為有時候第一個搜尋結果就是你的答案。如果你已經找過，但是找不到的話，很大機會是你的搜尋字不對，你可以加一下你的項目的 package，比如說 把 react, bootstrap 等字眼加在搜尋裡面。</p>
+<h3 id="3-閱讀官方資料"><a href="#3-閱讀官方資料" class="headerlink" title="3. 閱讀官方資料"></a>3. 閱讀官方資料</h3><p>  <img src="https://i.imgur.com/kmFRumd.png" alt="Calpa&#39;s Blog Github Repo"></p>
+<p>  先閱讀 Github上面的 README.md，然後閱讀官網上對於該項目的簡介，使用方法，再看 API。你可以再看一次 Github Repo 的說明，看看有沒有自己沒注意到的地方。你也可以直接進入官網，然後看它對於各個方法，變量的說明。如果你看不到你想要的方法，你可以返回第二步，Google 一下。</p>
+<h3 id="4-查看-Issue"><a href="#4-查看-Issue" class="headerlink" title="4. 查看 Issue"></a>4. 查看 Issue</h3><p>  如果你還是搜不到的話，看看人家有沒有遇到類似的問題，並從中獲取靈感。</p>
+<h3 id="5-閱讀源代碼"><a href="#5-閱讀源代碼" class="headerlink" title="5. 閱讀源代碼"></a>5. 閱讀源代碼</h3><p>  有時候，開源項目的作者寫得比較匆忙，急著都沒有寫好文檔，以及測試代碼。這個時候，你直接看上面的代碼吧。。。</p>
+<p>  如果是部署在 Github 上面的話，可以使用在線代碼搜尋插件，比如說 <a href="https://chrome.google.com/webstore/detail/insightio-for-github/pmhfgjjhhomfplgmbalncpcohgeijonh" rel="external nofollow noopener noreferrer" target="_blank">Insight.io for Github</a>。如果你已經把它 clone 下來的話，可以使用流行的編輯器進行全局搜尋，例如 Atom，Sublime。</p>
+<p>  <img src="http://i.imgur.com/OWuA4xP.png" alt="Insight.io"></p>
+<p>  另外，你也可以使用 <a href="https://github.com/Jianru-Lin/lambda-view" rel="external nofollow noopener noreferrer" target="_blank">lambda-view</a>，閱讀 JavaScript 源代碼時，這個很好用的。<br>  <img src="https://i.imgur.com/kmuI2NX.png" alt="lambda-view"></p>
+<h3 id="6-出去走走，喝點水"><a href="#6-出去走走，喝點水" class="headerlink" title="6. 出去走走，喝點水"></a>6. 出去走走，喝點水</h3><p>  <img src="https://i.imgur.com/oXlUIRt.gif" alt="喝點水，休息一下"></p>
+<p>  如果你看了網上的解決方法，但覺得無從入手的話，出去走一走，喝一口水，讓大腦休息一下。有時候，我上午想不到的問題，吃個午餐，然後下午就想到解決方法了。</p>
+<h2 id="禮貌地提出問題"><a href="#禮貌地提出問題" class="headerlink" title="禮貌地提出問題"></a>禮貌地提出問題</h2><p>  如果你做了以上的步驟，還是沒有辦法解決問題的話，你可以去 Repo 的 Issue 上面說一下，先不要直接說我找到一個 bug。。。</p>
+<h2 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h2><p>感覺很長時間沒有寫博客了，文筆開始生疏。這一篇文章寫的時間比以前長，可能我要努力一點才行。。。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;上天對於每個地球人都是公平的，每個人都一天只有 24 小時。為什麼有的人會停留不前，有的人卻會不斷有所成長？其中一個原因是當遇到問題時，他們解決問題的方法是非常不同的。同樣是遇到問題，與其伸手，等其他程序員幫助去解決問題，倒不如自己先嘗試各種方法，然後才問人家。。。我會在這
+    
+    </summary>
+    
+    
+      <category term="思考" scheme="https://calpa.me/Tags/%E6%80%9D%E8%80%83/"/>
+    
+  </entry>
   
   <entry>
     <title>簡單易用的開源 JavaScript 動畫圖標庫 -- Titanic</title>
@@ -138,7 +174,7 @@
     <link href="https://calpa.me/2017/06/19/front-end-performance-check-list-for-production-in-chinese/"/>
     <id>https://calpa.me/2017/06/19/front-end-performance-check-list-for-production-in-chinese/</id>
     <published>2017-06-19T12:00:00.000Z</published>
-    <updated>2017-06-20T07:04:13.000Z</updated>
+    <updated>2017-07-24T13:01:07.000Z</updated>
     
     <content type="html"><![CDATA[<p>在網頁開發的世界裡，尤其是前端開發，我們會用很多時間尋找最好的設計，以及最好的內容。雖然這是沒有錯的，但是，我們會忘記去優化我們的網頁。。。這會讓用戶需要很久的時間，比如說，瀏覽器需要六秒到十秒以上才能完成整個渲染過程。。。</p>
 <p>在這篇文章，我會分享優化網頁的檢查清單。如果你覺得我有錯漏的地方，請在下面留言。這張清單會包含一些優化搜尋引擎排名 (SEO) 的技巧，以及減少網頁加載時間的最佳實踐。</p>
@@ -976,65 +1012,6 @@
     
     
       <category term="Codingame" scheme="https://calpa.me/Tags/Codingame/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hackUST 2017後記</title>
-    <link href="https://calpa.me/2017/04/23/hackUST-2017-hackathon-summary/"/>
-    <id>https://calpa.me/2017/04/23/hackUST-2017-hackathon-summary/</id>
-    <published>2017-04-23T12:44:00.000Z</published>
-    <updated>2017-06-06T16:28:01.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h2><p>經過一天的努力，我們成功進入最後5強。這次比賽都幾好玩，基本上由第一天中午吃到晚上，然後第二天回來也是吃吃吃。雖然最後沒有取得獎金，但也是學到很多的知識。比如說如何解決安裝npm package問題，更新npm package問題。</p>
-<p>第一天中午的時候已經把Demo做出來了，但是不知道為什麼刪除<code>node_modules</code>之後，Expo就直接崩潰了。這是因為<code>package.json</code>裡面根本就沒有把完整的<code>dependencies</code>寫出來，當我輸入<code>npm install</code>的時候就不能順利安裝。於是我只能在CodePen裡面開一個<a href="http://codepen.io/calpa/pen/LyZjPm" rel="external nofollow noopener noreferrer" target="_blank">Pen</a>用來做控制器。</p>
-<h2 id="技術細節"><a href="#技術細節" class="headerlink" title="技術細節"></a>技術細節</h2><p>這個控制器利用<code>window.addEventListener(&#39;deviceorientation&#39;, handleOrientation);</code>來監聽Android裝置的方向。當加速規偵測到裝置方向的變化，它就會調用<code>handleOrientation</code>方法。</p>
-<p>而<code>handleOrientation</code>方法有兩個目的：</p>
-<ol>
-<li><p>獲取<code>event</code>裡面的<code>alpha</code>, <code>beta</code>, <code>gamma</code>數值，它們分別代表裝置的z軸， x軸， y軸動向。</p>
-<p>z軸介乎於 0 ~ 360 度之間，x軸介乎於 -180 ~ 180 度之間，代表裝置的前後動向。y軸介乎於 -90 ~ 90 度之間，代表裝置的左右動向。</p>
-</li>
-<li><p>發送event到服務器。</p>
-<p>這個很簡單，利用socket.io就可以了。比如說<code>socket.emit(&#39;event&#39;);</code></p>
-</li>
-</ol>
-<p>而在展示用戶數據的時候，我們用<a href="http://c3js.org/" rel="external nofollow noopener noreferrer" target="_blank">C3.js</a>來做實時渲染數據。利用C3.js，我們很容易就可以產生D3圖表，而不是重寫D3代碼。我們也可以修改每一個元素的樣式。感覺再寫下去就變教學文了。。。</p>
-<iframe height="400" scrolling="no" title="Playground C3.js" src="//codepen.io/calpa/embed/MmevBr/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/calpa/pen/MmevBr/" rel="external nofollow noopener noreferrer" target="_blank">Playground C3.js</a> by Calpa Liu (<a href="http://codepen.io/calpa" rel="external nofollow noopener noreferrer" target="_blank">@calpa</a>) on <a href="http://codepen.io" rel="external nofollow noopener noreferrer" target="_blank">CodePen</a>.<br></iframe>
-
-<h2 id="比賽照片"><a href="#比賽照片" class="headerlink" title="比賽照片"></a>比賽照片</h2><p>以下是比賽時拍攝的一些照片：<br><img src="https://i.imgur.com/vXyDaoY.jpg" alt="Imgur"></p>
-<p>感謝這次一起參賽的三位隊友。</p>
-<p><img src="https://i.imgur.com/6nLsXEB.jpg" alt="Imgur"></p>
-<center>比賽場地</center>
-
-
-<p><img src="https://i.imgur.com/2mLCtBm.jpg" alt="Imgur"></p>
-<center>接待處</center>
-
-<p><img src="https://i.imgur.com/pL19qZw.jpg" alt="Imgur"></p>
-<center>宣傳物品</center>
-
-<p><img src="https://i.imgur.com/g1GZHCJ.jpg" alt="Imgur"></p>
-<center>平常用來賣官方廣告的地方現在用來賣hackUST和hardUST的廣告 XD</center>
-
-<p><img src="https://i.imgur.com/DbLEVGz.jpg" alt="Imgur"></p>
-<center>演示的場地</center>
-
-<p>這次主辦單位派發了港幣120元的餐券，還有很多零食，飲料。最重要的是，有我最喜歡的忌廉汽水www。希望以後都可以繼續參加比賽，學習更多的編程知識。</p>
-<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Detecting_device_orientation" rel="external nofollow noopener noreferrer" target="_blank">Detecting device orientation - MDN</a></li>
-<li><a href="https://socket.io/docs/" rel="external nofollow noopener noreferrer" target="_blank">Socket.io 官方文檔</a></li>
-<li><a href="http://c3js.org/gettingstarted.html" rel="external nofollow noopener noreferrer" target="_blank">C3.js 官方Starter</a></li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;後記&quot;&gt;&lt;a href=&quot;#後記&quot; class=&quot;headerlink&quot; title=&quot;後記&quot;&gt;&lt;/a&gt;後記&lt;/h2&gt;&lt;p&gt;經過一天的努力，我們成功進入最後5強。這次比賽都幾好玩，基本上由第一天中午吃到晚上，然後第二天回來也是吃吃吃。雖然最後沒有取得獎金，但也是學
-    
-    </summary>
-    
-    
-      <category term="Hackathon" scheme="https://calpa.me/Tags/Hackathon/"/>
     
   </entry>
   
