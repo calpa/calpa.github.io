@@ -170,11 +170,11 @@
   </entry>
   
   <entry>
-    <title>【翻譯】前端性能測試必備工具清單</title>
+    <title>【翻譯】前端性能優化必備工具清單</title>
     <link href="https://calpa.me/2017/06/19/front-end-performance-check-list-for-production-in-chinese/"/>
     <id>https://calpa.me/2017/06/19/front-end-performance-check-list-for-production-in-chinese/</id>
     <published>2017-06-19T12:00:00.000Z</published>
-    <updated>2017-07-24T13:01:07.000Z</updated>
+    <updated>2017-07-26T08:31:31.000Z</updated>
     
     <content type="html"><![CDATA[<p>在網頁開發的世界裡，尤其是前端開發，我們會用很多時間尋找最好的設計，以及最好的內容。雖然這是沒有錯的，但是，我們會忘記去優化我們的網頁。。。這會讓用戶需要很久的時間，比如說，瀏覽器需要六秒到十秒以上才能完成整個渲染過程。。。</p>
 <p>在這篇文章，我會分享優化網頁的檢查清單。如果你覺得我有錯漏的地方，請在下面留言。這張清單會包含一些優化搜尋引擎排名 (SEO) 的技巧，以及減少網頁加載時間的最佳實踐。</p>
