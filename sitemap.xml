@@ -65,7 +65,14 @@
   </url>
   
   <url>
-    <loc>https://calpa.me/2017/02/23/github-edcation-package/</loc>
+    <loc>https://calpa.me/2017/04/23/hackUST-2017-hackathon-summary/</loc>
+    
+    <lastmod>2017-06-06T16:28:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://calpa.me/2017/04/25/coders-of-the-caribbean-review/</loc>
     
     <lastmod>2017-06-06T16:28:01.000Z</lastmod>
     
@@ -79,21 +86,14 @@
   </url>
   
   <url>
+    <loc>https://calpa.me/2017/02/23/github-edcation-package/</loc>
+    
+    <lastmod>2017-06-06T16:28:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://calpa.me/2017/02/19/supercharger-hackathon/</loc>
-    
-    <lastmod>2017-06-06T16:28:01.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://calpa.me/2017/04/23/hackUST-2017-hackathon-summary/</loc>
-    
-    <lastmod>2017-06-06T16:28:01.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://calpa.me/2017/04/25/coders-of-the-caribbean-review/</loc>
     
     <lastmod>2017-06-06T16:28:01.000Z</lastmod>
     
@@ -149,7 +149,7 @@
   </url>
   
   <url>
-    <loc>https://calpa.me/2017/05/06/introduction-to-regular-expression/</loc>
+    <loc>https://calpa.me/2017/05/01/CreateListFromArrayLike-problem-solution/</loc>
     
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     
@@ -163,7 +163,7 @@
   </url>
   
   <url>
-    <loc>https://calpa.me/2017/05/03/redux-array-push-function/</loc>
+    <loc>https://calpa.me/2017/05/16/react-component-lifecycle/</loc>
     
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     
@@ -177,7 +177,7 @@
   </url>
   
   <url>
-    <loc>https://calpa.me/2017/01/20/using-javascript-to-create-web-storage/</loc>
+    <loc>https://calpa.me/2017/05/06/introduction-to-regular-expression/</loc>
     
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     
@@ -198,7 +198,7 @@
   </url>
   
   <url>
-    <loc>https://calpa.me/2017/05/01/CreateListFromArrayLike-problem-solution/</loc>
+    <loc>https://calpa.me/2017/01/20/using-javascript-to-create-web-storage/</loc>
     
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     
@@ -212,7 +212,7 @@
   </url>
   
   <url>
-    <loc>https://calpa.me/2017/05/16/react-component-lifecycle/</loc>
+    <loc>https://calpa.me/2017/05/03/redux-array-push-function/</loc>
     
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     
