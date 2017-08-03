@@ -170,14 +170,14 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/02/19/supercharger-hackathon/</loc>
+    <loc>https://calpa.me/2017/02/23/github-edcation-package/</loc>
     <lastmod>2017-06-06T16:28:01.000Z</lastmod>
     <data>
         <display>
-        <title>SuperCharger Hackathon後記</title>
-        <pubTime>2017-02-19T07:12:00.000Z</pubTime>
+        <title>利用Github免費教育禮包更换.me域名</title>
+        <pubTime>2017-02-23T02:00:00.000Z</pubTime>
         
-        <tag>Hackathon</tag>
+        <tag>Github</tag>
          
          
            
@@ -204,14 +204,14 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/02/23/github-edcation-package/</loc>
+    <loc>https://calpa.me/2017/04/23/hackUST-2017-hackathon-summary/</loc>
     <lastmod>2017-06-06T16:28:01.000Z</lastmod>
     <data>
         <display>
-        <title>利用Github免費教育禮包更换.me域名</title>
-        <pubTime>2017-02-23T02:00:00.000Z</pubTime>
+        <title>hackUST 2017後記</title>
+        <pubTime>2017-04-23T12:44:00.000Z</pubTime>
         
-        <tag>Github</tag>
+        <tag>Hackathon</tag>
          
          
            
@@ -221,12 +221,12 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/04/23/hackUST-2017-hackathon-summary/</loc>
+    <loc>https://calpa.me/2017/02/19/supercharger-hackathon/</loc>
     <lastmod>2017-06-06T16:28:01.000Z</lastmod>
     <data>
         <display>
-        <title>hackUST 2017後記</title>
-        <pubTime>2017-04-23T12:44:00.000Z</pubTime>
+        <title>SuperCharger Hackathon後記</title>
+        <pubTime>2017-02-19T07:12:00.000Z</pubTime>
         
         <tag>Hackathon</tag>
          
@@ -311,16 +311,16 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/05/06/introduction-to-regular-expression/</loc>
+    <loc>https://calpa.me/2017/05/03/redux-array-push-function/</loc>
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     <data>
         <display>
-        <title>初探正則表達式</title>
-        <pubTime>2017-05-06T12:13:00.000Z</pubTime>
+        <title>Redux push()是怎樣寫的？</title>
+        <pubTime>2017-05-03T15:20:00.000Z</pubTime>
         
         <tag>JavaScript</tag>
          
-        <tag>Regular Expression</tag>
+        <tag>Redux</tag>
          
          
            
@@ -330,29 +330,12 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/02/19/javascript-closure/</loc>
+    <loc>https://calpa.me/2017/05/05/javascript-array/</loc>
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     <data>
         <display>
-        <title>JavaScript的閉包(Closure)</title>
-        <pubTime>2017-02-19T07:12:00.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://calpa.me/2017/05/01/CreateListFromArrayLike-problem-solution/</loc>
-    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
-    <data>
-        <display>
-        <title>CreateListFromArrayLike called on non-object 報錯的解決方法</title>
-        <pubTime>2017-05-01T14:50:00.000Z</pubTime>
+        <title>JavaScript 數組去重</title>
+        <pubTime>2017-05-05T14:53:00.000Z</pubTime>
         
         <tag>JavaScript</tag>
          
@@ -383,12 +366,12 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/03/25/javascript-this/</loc>
+    <loc>https://calpa.me/2017/05/01/CreateListFromArrayLike-problem-solution/</loc>
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     <data>
         <display>
-        <title>JavaScript的this</title>
-        <pubTime>2017-03-25T04:44:00.000Z</pubTime>
+        <title>CreateListFromArrayLike called on non-object 報錯的解決方法</title>
+        <pubTime>2017-05-01T14:50:00.000Z</pubTime>
         
         <tag>JavaScript</tag>
          
@@ -417,6 +400,23 @@
 
     
   <url>
+    <loc>https://calpa.me/2017/02/19/javascript-closure/</loc>
+    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
+    <data>
+        <display>
+        <title>JavaScript的閉包(Closure)</title>
+        <pubTime>2017-02-19T07:12:00.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://calpa.me/2017/01/14/javascript-variable-hoisting/</loc>
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     <data>
@@ -434,16 +434,16 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/05/03/redux-array-push-function/</loc>
+    <loc>https://calpa.me/2017/05/06/introduction-to-regular-expression/</loc>
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     <data>
         <display>
-        <title>Redux push()是怎樣寫的？</title>
-        <pubTime>2017-05-03T15:20:00.000Z</pubTime>
+        <title>初探正則表達式</title>
+        <pubTime>2017-05-06T12:13:00.000Z</pubTime>
         
         <tag>JavaScript</tag>
          
-        <tag>Redux</tag>
+        <tag>Regular Expression</tag>
          
          
            
@@ -489,12 +489,12 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/05/05/javascript-array/</loc>
+    <loc>https://calpa.me/2017/03/25/javascript-this/</loc>
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     <data>
         <display>
-        <title>JavaScript 數組去重</title>
-        <pubTime>2017-05-05T14:53:00.000Z</pubTime>
+        <title>JavaScript的this</title>
+        <pubTime>2017-03-25T04:44:00.000Z</pubTime>
         
         <tag>JavaScript</tag>
          
@@ -547,9 +547,9 @@
         <title>Bootstrap v4 源碼分析(1)</title>
         <pubTime>2017-04-20T13:37:00.000Z</pubTime>
         
-        <tag>Web</tag>
-         
         <tag>Bootstrap</tag>
+         
+        <tag>Web</tag>
          
          
            

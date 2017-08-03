@@ -309,21 +309,15 @@ header.intro-header {
               
               
               
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
               <a href="/Tags/#Github" title="Github" rel="2">Github</a>
               
               
               
-              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
+              
+              
+              
+              
+              
               
               
               
@@ -331,7 +325,13 @@ header.intro-header {
               
               
               
+              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
+              
+              
+              
               <a href="/Tags/#SEO" title="SEO" rel="2">SEO</a>
+              
+              
               
               
               
@@ -544,13 +544,13 @@ header.intro-header {
                 
 
                 
-                <!-- disqus 评论框 start -->
-                <div class="comment">
-                    <div id="disqus_thread" class="disqus-thread"></div>
-                </div>
-                <!-- disqus 评论框 end -->
-                
 
+                
+                <!-- Gitalk 評論區 -->
+                <div class="comment">
+                  <div id="gitalk-container"></div>
+                </div>
+                
             </div>
 
             <div class="hidden-xs col-md-2 col-sm-3 toc-col">
@@ -564,23 +564,6 @@ header.intro-header {
 
 
 
-
-<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES * * */
-    var disqus_shortname = "calpas-blog";
-    var disqus_identifier = "https://calpa.me/2017/02/23/github-edcation-package/";
-    var disqus_url = "https://calpa.me/2017/02/23/github-edcation-package/";
-
-    (function () {
-        var dsq = document.createElement('script');
-        dsq.type = 'text/javascript';
-        dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<!-- disqus 公共JS代码 end -->
 
 
 
@@ -620,6 +603,25 @@ header.intro-header {
       }
     }
 </style>
+
+
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<script>
+const gitalk = new Gitalk({
+  clientID: '18255f031b5e11edd98a',
+  clientSecret: '2ff6331da9e53f9a91bcc991d38d550c85026714',
+  repo: 'calpa.github.io',
+  owner: 'calpa',
+  admin: ['calpa'],
+  distractionFreeMode: true
+})
+gitalk.render('gitalk-container')
+</script>
+
 
 
 <!-- Footer -->
