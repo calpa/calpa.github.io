@@ -90,15 +90,15 @@
             
               
                 
+              
+            
+              
+                
                   <li>
                     <a href="/Tags/">
                       Tags
                     </a>
                   </li>
-                
-              
-            
-              
                 
               
             
@@ -302,15 +302,23 @@ header.intro-header {
               
               
               
+              
+              
+              <a href="/Tags/#Front End" title="Front End" rel="2">Front End</a>
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <a href="/Tags/#Blog" title="Blog" rel="2">Blog</a>
+              
+              
+              
               <a href="/Tags/#Github" title="Github" rel="2">Github</a>
-              
-              
-              
-              
-              
-              
-              
-              
               
               
               
@@ -323,10 +331,6 @@ header.intro-header {
               
               
               <a href="/Tags/#SEO" title="SEO" rel="2">SEO</a>
-              
-              
-              
-              
               
               
               
@@ -375,6 +379,8 @@ header.intro-header {
           
           <li><a href="http://blog.shanamaid.top/" target="_blank" rel="external nofollow noopener noreferrer">娜酱骑士团</a></li>
           
+          <li><a href="https://clarencec.github.io/" target="_blank" rel="external nofollow noopener noreferrer">Clarence Blog</a></li>
+          
       </ul>
     
     <hr>
@@ -383,6 +389,12 @@ header.intro-header {
     
       <h5 style="text-align: center;">最新文章</h5>
       <ul class="list-inline" style="text-align: center;">
+        
+          <li>
+            <a href="/2017/08/04/utilize-github-issue-by-using-gitalk/">
+              善用 Github Issue 的開源評論插件 -- Gitalk
+            </a>
+          </li>
         
           <li>
             <a href="/2017/07/24/six-steps-to-debug-before-directly-ask-question/">
@@ -408,17 +420,11 @@ header.intro-header {
             </a>
           </li>
         
-          <li>
-            <a href="/2017/06/14/hong-kong-open-sources-conference-remarks/">
-              【多圖】2017 年香港開源年會後記
-            </a>
-          </li>
-        
       </ul>
     
     <hr>
 
-    <h5 style="text-align: center;">共42篇文章</h5>
+    <h5 style="text-align: center;">共43篇文章</h5>
     <hr>
 
     <!-- All Blog Posts -->
@@ -430,6 +436,12 @@ header.intro-header {
           
           
           
+              <li>
+                <a href="/archive/#2017-8">
+                  8月(1)
+                </a>
+              </li>
+            
           
               <li>
                 <a href="/archive/#2017-7">
@@ -487,9 +499,9 @@ header.intro-header {
 
 
             <div class="col-lg-7 col-lg-offset-0 col-md-7 col-sm-9 post-container">
-                <h2 id="組件"><a href="#組件" class="headerlink" title="組件"></a>組件</h2><p><code>React</code>提供<code>React.Component</code>，我們可以透過使用組件，拆分UI為可以重複使用的獨立部分。<code>React.Component</code>是一個抽象的base class。我們甚少直接運用<code>React.Component</code>，通常是透過創建一個子類，並使用<code>render()</code>方法。</p>
-<p>例子：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Greeting</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</div><div class="line">  render() &#123;</div><div class="line">    <span class="keyword">return</span> &lt;h1&gt;Hello, &#123;this.props.name&#125;&lt;/h1&gt;;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>如果你不選擇使用ES6，你可以使用模組<code>create-react-class</code>。你可以參考<a href="https://facebook.github.io/react/docs/react-without-es6.html" rel="external nofollow noopener noreferrer" target="_blank">React Without ES6</a>。<br>下面這一段和ES6的寫法效果一樣：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> createReactClass = <span class="built_in">require</span>(<span class="string">'create-react-class'</span>);</div><div class="line"><span class="keyword">var</span> Greeting = createReactClass(&#123;</div><div class="line">  <span class="attr">render</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> &lt;h1&gt;Hello, &#123;this.props.name&#125;&lt;/h1&gt;;</div><div class="line">  &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+              <h2 id="組件"><a href="#組件" class="headerlink" title="組件"></a>組件</h2><p><code>React</code>提供<code>React.Component</code>，我們可以透過使用組件，拆分UI為可以重複使用的獨立部分。<code>React.Component</code>是一個抽象的base class。我們甚少直接運用<code>React.Component</code>，通常是透過創建一個子類，並使用<code>render()</code>方法。</p>
+<p>例子：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Greeting</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</div><div class="line">  render() &#123;</div><div class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello, &#123;this.props.name&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>如果你不選擇使用ES6，你可以使用模組<code>create-react-class</code>。你可以參考<a href="https://facebook.github.io/react/docs/react-without-es6.html" rel="external nofollow noopener noreferrer" target="_blank">React Without ES6</a>。<br>下面這一段和ES6的寫法效果一樣：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> createReactClass = <span class="built_in">require</span>(<span class="string">'create-react-class'</span>);</div><div class="line"><span class="keyword">var</span> Greeting = createReactClass(&#123;</div><div class="line">  <span class="attr">render</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello, &#123;this.props.name&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</div><div class="line">  &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
 <h2 id="組件生命週期"><a href="#組件生命週期" class="headerlink" title="組件生命週期"></a>組件生命週期</h2><p>每一個組件都會有幾個生命週期的方法，你可以在程序運行的指定時間，透過覆蓋他們來運行特定代碼。對於這些方法，我們會用<code>will-</code>來表示它會在某些事情發生之前的一刻被調用，而<code>did-</code>則是表示它會在某些事情發生之後的一刻被調用。本文會細說加載組件中發生了什麼事情。</p>
 <h3 id="加載-Mounting"><a href="#加載-Mounting" class="headerlink" title="加載 (Mounting)"></a>加載 (Mounting)</h3><ol>
 <li><code>constructor()</code></li>
@@ -534,37 +546,37 @@ header.intro-header {
 </ol>
 <h4 id="componentDidMount"><a href="#componentDidMount" class="headerlink" title="componentDidMount()"></a>componentDidMount()</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">componentDidMount()</div></pre></td></tr></table></figure>
 <p>它會在組件加載之後執行一次。如果你的初始程序需要DOM nodes，你應該在這裡寫。如果你需要從其他地方加載資料，這裡也是一個不錯的地方去執行網絡請求。如果在這裡定義了<code>setState</code>方法，會觸發重複渲染。</p>
-<h4 id="測試代碼"><a href="#測試代碼" class="headerlink" title="測試代碼"></a>測試代碼</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Greeting</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</div><div class="line">  _log(method, args) &#123;</div><div class="line">    <span class="built_in">console</span>.log(method, args);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">constructor</span>(props) &#123;</div><div class="line">    <span class="keyword">super</span>(props);</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'constructor'</span>, props);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  render() &#123;</div><div class="line">    <span class="keyword">this</span>._log(<span class="string">'render'</span>, <span class="keyword">this</span>.props.name);</div><div class="line">    <span class="keyword">return</span> &lt;h1&gt;Hello, &#123;this.props.name&#125;&lt;/h1&gt;;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  componentWillMount() &#123;</div><div class="line">    <span class="keyword">this</span>._log(<span class="string">'componentWillMount'</span>);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  componentDidMount() &#123;</div><div class="line">    <span class="keyword">this</span>._log(<span class="string">'componentDidMount'</span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">ReactDOM.render(</div><div class="line">  &lt;Greeting name="Calpa" /&gt;,</div><div class="line">  document.getElementById('app')</div><div class="line">);</div></pre></td></tr></table></figure>
+<h4 id="測試代碼"><a href="#測試代碼" class="headerlink" title="測試代碼"></a>測試代碼</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Greeting</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</div><div class="line">  _log(method, args) &#123;</div><div class="line">    <span class="built_in">console</span>.log(method, args);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">constructor</span>(props) &#123;</div><div class="line">    <span class="keyword">super</span>(props);</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'constructor'</span>, props);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  render() &#123;</div><div class="line">    <span class="keyword">this</span>._log(<span class="string">'render'</span>, <span class="keyword">this</span>.props.name);</div><div class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello, &#123;this.props.name&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  componentWillMount() &#123;</div><div class="line">    <span class="keyword">this</span>._log(<span class="string">'componentWillMount'</span>);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  componentDidMount() &#123;</div><div class="line">    <span class="keyword">this</span>._log(<span class="string">'componentDidMount'</span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">ReactDOM.render(</div><div class="line">  <span class="xml"><span class="tag">&lt;<span class="name">Greeting</span> <span class="attr">name</span>=<span class="string">"Calpa"</span> /&gt;</span>,</span></div><div class="line">  document.getElementById('app')</div><div class="line">);</div></pre></td></tr></table></figure>
 <p>Console Output:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&quot;constructor&quot; Object &#123;</div><div class="line">  name: &quot;Calpa&quot;</div><div class="line">&#125;</div><div class="line">&quot;componentWillMount&quot; undefined</div><div class="line">&quot;render&quot; &quot;Calpa&quot;</div><div class="line">&quot;componentDidMount&quot; undefined</div></pre></td></tr></table></figure></p>
 <p>你可以在<a href="https://codepen.io/calpa/full/xdJrQm/" rel="external nofollow noopener noreferrer" target="_blank">CodePen</a>中獲取，並測試這段代碼。</p>
 <p>不知道拿哪一張當封面好。。。</p>
 
-                <hr>
-                
+              
 
-                <ul class="pager">
-                    
-                    <li class="previous">
-                        <a href="/2017/05/18/javascript-data-structures/" data-toggle="tooltip" data-placement="top" title="利用 ECMAScript 学习如何判断数据类型">&larr; Previous Post</a>
-                    </li>
-                    
-                    
-                    <li class="next">
-                        <a href="/2017/05/06/introduction-to-regular-expression/" data-toggle="tooltip" data-placement="top" title="初探正則表達式">Next Post &rarr;</a>
-                    </li>
-                    
-                </ul>
+<ul class="pager">
+    
+    <li class="previous">
+        <a href="/2017/05/18/javascript-data-structures/" data-toggle="tooltip" data-placement="top" title="利用 ECMAScript 学习如何判断数据类型">&larr; Previous Post</a>
+    </li>
+    
+    
+    <li class="next">
+        <a href="/2017/05/06/introduction-to-regular-expression/" data-toggle="tooltip" data-placement="top" title="初探正則表達式">Next Post &rarr;</a>
+    </li>
+    
+</ul>
 
-                
 
-                
 
-                
-                <!-- Gitalk 評論區 -->
-                <div class="comment">
-                  <div id="gitalk-container"></div>
-                </div>
-                
+
+
+
+<!-- Gitalk 評論區 -->
+<div class="comment">
+  <div id="gitalk-container"></div>
+</div>
+
+
             </div>
 
             <div class="hidden-xs col-md-2 col-sm-3 toc-col">
@@ -575,8 +587,6 @@ header.intro-header {
         </div>
     </div>
 </article>
-
-
 
 
 
@@ -596,14 +606,14 @@ header.intro-header {
         s.parentNode.insertBefore(o, s);
     }
 </script>
-<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<!-- anchor-js, Doc:https://bryanbraun.github.io/anchorjs/ -->
 <script>
     async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function () {
-      anchors.options = {
-        visible: 'always',
-        placement: 'left'
-      };
-      anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+        anchors.options = {
+            visible: 'always',
+            placement: 'left',
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
     })
 </script>
 <style>
@@ -635,6 +645,7 @@ const gitalk = new Gitalk({
 })
 gitalk.render('gitalk-container')
 </script>
+
 
 
 

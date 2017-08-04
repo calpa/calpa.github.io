@@ -90,15 +90,15 @@
             
               
                 
+              
+            
+              
+                
                   <li>
                     <a href="/Tags/">
                       Tags
                     </a>
                   </li>
-                
-              
-            
-              
                 
               
             
@@ -300,15 +300,23 @@ header.intro-header {
               
               
               
+              
+              
+              <a href="/Tags/#Front End" title="Front End" rel="2">Front End</a>
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <a href="/Tags/#Blog" title="Blog" rel="2">Blog</a>
+              
+              
+              
               <a href="/Tags/#Github" title="Github" rel="2">Github</a>
-              
-              
-              
-              
-              
-              
-              
-              
               
               
               
@@ -321,10 +329,6 @@ header.intro-header {
               
               
               <a href="/Tags/#SEO" title="SEO" rel="2">SEO</a>
-              
-              
-              
-              
               
               
               
@@ -373,6 +377,8 @@ header.intro-header {
           
           <li><a href="http://blog.shanamaid.top/" target="_blank" rel="external nofollow noopener noreferrer">娜酱骑士团</a></li>
           
+          <li><a href="https://clarencec.github.io/" target="_blank" rel="external nofollow noopener noreferrer">Clarence Blog</a></li>
+          
       </ul>
     
     <hr>
@@ -381,6 +387,12 @@ header.intro-header {
     
       <h5 style="text-align: center;">最新文章</h5>
       <ul class="list-inline" style="text-align: center;">
+        
+          <li>
+            <a href="/2017/08/04/utilize-github-issue-by-using-gitalk/">
+              善用 Github Issue 的開源評論插件 -- Gitalk
+            </a>
+          </li>
         
           <li>
             <a href="/2017/07/24/six-steps-to-debug-before-directly-ask-question/">
@@ -406,17 +418,11 @@ header.intro-header {
             </a>
           </li>
         
-          <li>
-            <a href="/2017/06/14/hong-kong-open-sources-conference-remarks/">
-              【多圖】2017 年香港開源年會後記
-            </a>
-          </li>
-        
       </ul>
     
     <hr>
 
-    <h5 style="text-align: center;">共42篇文章</h5>
+    <h5 style="text-align: center;">共43篇文章</h5>
     <hr>
 
     <!-- All Blog Posts -->
@@ -428,6 +434,12 @@ header.intro-header {
           
           
           
+              <li>
+                <a href="/archive/#2017-8">
+                  8月(1)
+                </a>
+              </li>
+            
           
               <li>
                 <a href="/archive/#2017-7">
@@ -485,39 +497,39 @@ header.intro-header {
 
 
             <div class="col-lg-7 col-lg-offset-0 col-md-7 col-sm-9 post-container">
-                <p>這幾天用<a href="https://www.enki.com/" rel="external nofollow noopener noreferrer" target="_blank">Enki</a>來學習JavaScript，感覺不錯，<strong>You can’t handle the truth!</strong> 有一些特別True/False例子。這裡簡單記錄一下。</p>
+              <p>這幾天用<a href="https://www.enki.com/" rel="external nofollow noopener noreferrer" target="_blank">Enki</a>來學習JavaScript，感覺不錯，<strong>You can’t handle the truth!</strong> 有一些特別True/False例子。這裡簡單記錄一下。</p>
 <p>最簡單的測試方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function test(something)&#123;</div><div class="line">  if (something) &#123;</div><div class="line">    console.log(something + &apos; is true.&apos;);</div><div class="line">  &#125; else &#123;</div><div class="line">    console.log(something + &apos; is false.&apos;);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <h1 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h1><h2 id="Truthy"><a href="#Truthy" class="headerlink" title="Truthy"></a>Truthy</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">true &lt;- true當然是true...</div><div class="line">[1][0]</div><div class="line">new Date()</div><div class="line">new Number(0)</div><div class="line">Object</div><div class="line">Infinity</div><div class="line">[]</div></pre></td></tr></table></figure>
 <p>以下都是[object Object]:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&#123;a: false&#125;</div><div class="line">&#123;&#125;</div></pre></td></tr></table></figure></p>
 <h2 id="Falsy"><a href="#Falsy" class="headerlink" title="Falsy"></a>Falsy</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">false &lt;- false當然是false...</div><div class="line">undefined</div><div class="line">&apos;&apos;</div><div class="line">&quot;&quot;</div><div class="line">[1][1] &lt;- undefined</div><div class="line">NaN</div><div class="line">null</div><div class="line">&#123;&#125;.someKey</div><div class="line">0</div><div class="line">[].length &lt;- 這個是0，所以出false</div></pre></td></tr></table></figure>
 <p>值得注意的是[]，它本身會是<code>true</code>，但如果用<code>[] == true</code>的話會輸出<code>false</code>，<br>而<code>[] == false</code>的話會輸出<code>true</code>。</p>
 
-                <hr>
-                
+              
 
-                <ul class="pager">
-                    
-                    <li class="previous">
-                        <a href="/2017/02/19/supercharger-hackathon/" data-toggle="tooltip" data-placement="top" title="SuperCharger Hackathon後記">&larr; Previous Post</a>
-                    </li>
-                    
-                    
-                    <li class="next">
-                        <a href="/2017/01/20/using-javascript-to-create-web-storage/" data-toggle="tooltip" data-placement="top" title="利用JavaScript創建Web Storage">Next Post &rarr;</a>
-                    </li>
-                    
-                </ul>
+<ul class="pager">
+    
+    <li class="previous">
+        <a href="/2017/02/19/javascript-closure/" data-toggle="tooltip" data-placement="top" title="JavaScript的閉包(Closure)">&larr; Previous Post</a>
+    </li>
+    
+    
+    <li class="next">
+        <a href="/2017/01/20/using-javascript-to-create-web-storage/" data-toggle="tooltip" data-placement="top" title="利用JavaScript創建Web Storage">Next Post &rarr;</a>
+    </li>
+    
+</ul>
 
-                
 
-                
 
-                
-                <!-- Gitalk 評論區 -->
-                <div class="comment">
-                  <div id="gitalk-container"></div>
-                </div>
-                
+
+
+
+<!-- Gitalk 評論區 -->
+<div class="comment">
+  <div id="gitalk-container"></div>
+</div>
+
+
             </div>
 
             <div class="hidden-xs col-md-2 col-sm-3 toc-col">
@@ -528,8 +540,6 @@ header.intro-header {
         </div>
     </div>
 </article>
-
-
 
 
 
@@ -549,14 +559,14 @@ header.intro-header {
         s.parentNode.insertBefore(o, s);
     }
 </script>
-<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<!-- anchor-js, Doc:https://bryanbraun.github.io/anchorjs/ -->
 <script>
     async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function () {
-      anchors.options = {
-        visible: 'always',
-        placement: 'left'
-      };
-      anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+        anchors.options = {
+            visible: 'always',
+            placement: 'left',
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
     })
 </script>
 <style>
@@ -588,6 +598,7 @@ const gitalk = new Gitalk({
 })
 gitalk.render('gitalk-container')
 </script>
+
 
 
 

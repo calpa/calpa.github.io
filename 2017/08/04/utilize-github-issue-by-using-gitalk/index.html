@@ -18,29 +18,26 @@
     <meta name="google-site-verification" content="riZBcestky7i9xY__A-5J-2EE65T75X1u-zgbss37Io">
     <title>
         
-        Redux push()是怎樣寫的？｜Calpa&#39;s blog
+        善用 Github Issue 的開源評論插件 -- Gitalk｜Calpa&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="https://calpa.me/2017/05/03/redux-array-push-function/">
+    <link rel="canonical" href="https://calpa.me/2017/08/04/utilize-github-issue-by-using-gitalk/">
 
     <!-- Open Graph -->
     
-    <meta name="description" content="本來你可以直接改寫原本的數組，比如利用這個方法：arr.push(item)。但在Redux裡面不可以這樣寫，因為會改寫原本數組，違反了immutable的原則。因此，要這樣寫： arr: [...state.arr, action.newItem]。
-例子：123456789101112131415161718import &amp;#123; ADD_ITEM &amp;#125; from &amp;apos;..">
+    <meta name="description" content="前言以前，我的博客是用 Disqus 的評論插件，但是無論是載入速度，還是樣式上，都是有所缺乏的。我一直沒有安裝其他的評論插件，因為覺得搬家有點麻煩。但是當我試用一下之後，我就覺得這個插件安裝很方便，功能也很實用，尤其是可以寫 Markdown 評論，就讓我非常喜歡這個插件了。因此，我拜讀了一下 Gitalk Github Repo 的代碼。我會在這裡說一下我對這個插件的理解，並提交繁體中文 R">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Redux push()是怎樣寫的？ | Calpa's blog">
-<meta property="og:url" content="https://calpa.me/2017/05/03/redux-array-push-function/index.html">
+<meta property="og:title" content="善用 Github Issue 的開源評論插件 -- Gitalk | Calpa's blog">
+<meta property="og:url" content="https://calpa.me/2017/08/04/utilize-github-issue-by-using-gitalk/index.html">
 <meta property="og:site_name" content="Calpa">
-<meta property="og:description" content="本來你可以直接改寫原本的數組，比如利用這個方法：arr.push(item)。但在Redux裡面不可以這樣寫，因為會改寫原本數組，違反了immutable的原則。因此，要這樣寫： arr: [...state.arr, action.newItem]。
-例子：123456789101112131415161718import &amp;#123; ADD_ITEM &amp;#125; from &amp;apos;..">
-<meta property="og:image" content="https://i.imgur.com/eySAMI1.jpg?imageView2/1/w/1400/h/400/interlace/1/q/90">
-<meta property="og:updated_time" content="2017-05-18T06:07:19.000Z">
+<meta property="og:description" content="前言以前，我的博客是用 Disqus 的評論插件，但是無論是載入速度，還是樣式上，都是有所缺乏的。我一直沒有安裝其他的評論插件，因為覺得搬家有點麻煩。但是當我試用一下之後，我就覺得這個插件安裝很方便，功能也很實用，尤其是可以寫 Markdown 評論，就讓我非常喜歡這個插件了。因此，我拜讀了一下 Gitalk Github Repo 的代碼。我會在這裡說一下我對這個插件的理解，並提交繁體中文 R">
+<meta property="og:image" content="https://calpa.me/img/post-default.jpg">
+<meta property="og:updated_time" content="2017-08-04T14:45:19.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Redux push()是怎樣寫的？ | Calpa's blog">
-<meta name="twitter:description" content="本來你可以直接改寫原本的數組，比如利用這個方法：arr.push(item)。但在Redux裡面不可以這樣寫，因為會改寫原本數組，違反了immutable的原則。因此，要這樣寫： arr: [...state.arr, action.newItem]。
-例子：123456789101112131415161718import &amp;#123; ADD_ITEM &amp;#125; from &amp;apos;..">
-<meta name="twitter:image" content="https://i.imgur.com/eySAMI1.jpg?imageView2/1/w/1400/h/400/interlace/1/q/90">
+<meta name="twitter:title" content="善用 Github Issue 的開源評論插件 -- Gitalk | Calpa's blog">
+<meta name="twitter:description" content="前言以前，我的博客是用 Disqus 的評論插件，但是無論是載入速度，還是樣式上，都是有所缺乏的。我一直沒有安裝其他的評論插件，因為覺得搬家有點麻煩。但是當我試用一下之後，我就覺得這個插件安裝很方便，功能也很實用，尤其是可以寫 Markdown 評論，就讓我非常喜歡這個插件了。因此，我拜讀了一下 Gitalk Github Repo 的代碼。我會在這裡說一下我對這個插件的理解，並提交繁體中文 R">
+<meta name="twitter:image" content="https://calpa.me/img/post-default.jpg">
 
     <!-- Bootstrap v3.3.7 Core CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
@@ -80,7 +77,7 @@
     <div id="huxblog_navbar">
       <div class="navbar-collapse">
         <ul class="nav navbar-nav navbar-center title-calpa display-none">
-          <li><a href="#" onclick="scrolltoTop(event)">Redux push()是怎樣寫的？</a></li>
+          <li><a href="#" onclick="scrolltoTop(event)">善用 Github Issue 的開源評論插件 -- Gitalk</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li>
@@ -173,19 +170,21 @@
 <!--only post-->
 
   
-    <img class="wechat-title-img" src="https://i.imgur.com/eySAMI1.jpg">
+    <img class="wechat-title-img" src="/img/post-default.jpg">
   
 
 <style>
     
     header.intro-header {
-      background-image: url('https://i.imgur.com/eySAMI1.jpg?imageView2/1/w/1400/h/400/interlace/1/q/90');
+      background-image: url('/img/post-default.jpg');
     }
     
 </style>
 
 <style>
 header.intro-header {
+  
+    background-color: #ffffff;;
   
 
   
@@ -197,25 +196,25 @@ header.intro-header {
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>Redux push()是怎樣寫的？</h1>
+                    <h1>善用 Github Issue 的開源評論插件 -- Gitalk</h1>
                     
                     <span>
                       作者 Calpa
                     </span>
                     
                     <span>
-                      日期 2017-05-03
+                      日期 2017-08-04
                     </span>
 
                     
-                      <span class="post-count">共130字</span>
+                      <span class="post-count">共906字</span>
                     
 
                     <div class="tags text-center">
                         
-                        <a class="tag" href="/Tags/#JavaScript" title="JavaScript">JavaScript</a>
+                        <a class="tag" href="/Tags/#Front End" title="Front End">Front End</a>
                         
-                        <a class="tag" href="/Tags/#Redux" title="Redux">Redux</a>
+                        <a class="tag" href="/Tags/#Blog" title="Blog">Blog</a>
                         
                     </div>
                 </div>
@@ -499,24 +498,106 @@ header.intro-header {
 
 
             <div class="col-lg-7 col-lg-offset-0 col-md-7 col-sm-9 post-container">
-              <p>本來你可以直接改寫原本的數組，比如利用這個方法：<code>arr.push(item)</code>。<br>但在Redux裡面不可以這樣寫，因為會改寫原本數組，違反了immutable的原則。<br>因此，要這樣寫： <code>arr: [...state.arr, action.newItem]</code>。</p>
-<p>例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">import &#123; ADD_ITEM &#125; from &apos;../Actions/UserActions&apos;</div><div class="line">const initialUserState = &#123;</div><div class="line">  arr: []</div><div class="line">&#125;</div><div class="line"></div><div class="line">export default function userState(state = initialUserState, action) &#123;</div><div class="line">  console.log(arr);</div><div class="line">  switch (action.type) &#123;</div><div class="line">    case ADD_ITEM:</div><div class="line">      return &#123;</div><div class="line">        ...state,</div><div class="line">        arr: [...state.arr, action.newItem]</div><div class="line">      &#125;</div><div class="line"></div><div class="line">    default:</div><div class="line">      return state;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>另外，你也可以利用<code>concat()</code>方法。</p>
-<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
-<li><a href="http://stackoverflow.com/questions/40911194/how-do-i-add-an-element-to-array-in-reducer-of-react-native-redux" rel="external nofollow noopener noreferrer" target="_blank">How do I add an element to array in reducer of React native redux? - stackoverflow</a></li>
-</ol>
+              <p><img src="https://i.imgur.com/DqyRXB9.jpg" alt="Gitalk"></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>以前，我的博客是用 Disqus 的評論插件，但是無論是載入速度，還是樣式上，都是有所缺乏的。我一直沒有安裝其他的評論插件，因為覺得搬家有點麻煩。但是當我試用一下之後，我就覺得這個插件安裝很方便，功能也很實用，尤其是可以寫 Markdown 評論，就讓我非常喜歡這個插件了。因此，我拜讀了一下 <a href="https://github.com/gitalk/gitalk" rel="external nofollow noopener noreferrer" target="_blank">Gitalk Github Repo</a> 的代碼。我會在這裡說一下我對這個插件的理解，並提交繁體中文 README.md 到官方倉庫上。</p>
+<p>Gitalk 是一個基於 Github Issue 和 Preact 開發的評論插件。它支持多語言，包括英文，繁體中文和簡體中文，並<a href="https://github.com/gitalk/gitalk/blob/48de82ca24d4cb24a464f7cc9e72884a208b9d5c/src/gitalk.jsx#L55" rel="external nofollow noopener noreferrer" target="_blank">自動判斷用戶當前語言</a>：<code>navigator.language || navigator.userLanguage</code>。用戶只需要使用自己的個人或組織 Github 賬戶便可以登入系統。</p>
+<p>另外，它也有以下的功能：</p>
+<ul>
+<li>無干擾模式：<code>distractionFreeMode</code></li>
+<li>快捷鍵提交評論 （cmd || ctrl + enter）</li>
+</ul>
+<h2 id="安裝方法"><a href="#安裝方法" class="headerlink" title="安裝方法"></a>安裝方法</h2><h3 id="使用-cdn-引入"><a href="#使用-cdn-引入" class="headerlink" title="使用 cdn 引入"></a>使用 cdn 引入</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"https://unpkg.com/gitalk/dist/gitalk.css"</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/gitalk/dist/gitalk.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>直至8月4日，我仍然沒有在 cdnjs 上面找到 Gitalk 的，只好去 cdnjs/cdnjs 上面提交了<a href="https://github.com/cdnjs/cdnjs/issues/11668" rel="external nofollow noopener noreferrer" target="_blank">新的 cdn 需求</a>。如果你也認為有需要用到 cdnjs 的話，你可以去那裡說一下。</p>
+<h3 id="利用-npm-安裝"><a href="#利用-npm-安裝" class="headerlink" title="利用 npm 安裝"></a>利用 npm 安裝</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm i --save gitalk</div><div class="line">cnpm i --save gitalk</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> <span class="string">'gitalk/dist/gitalk.css'</span></div><div class="line"><span class="keyword">import</span> Gitalk <span class="keyword">from</span> <span class="string">'gitalk'</span></div></pre></td></tr></table></figure>
+<h3 id="去-Github-上面-clone-Gitalk"><a href="#去-Github-上面-clone-Gitalk" class="headerlink" title="去 Github 上面 clone Gitalk"></a>去 Github 上面 clone Gitalk</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> git@github.com:gitalk/gitalk.git</div><div class="line"><span class="built_in">cd</span> gitalk/dist/</div></pre></td></tr></table></figure>
+<p>然後把壓縮過的<code>gitalk.min.js</code> 放進你的項目。</p>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p><img src="http://i.imgur.com/C6HEsRv.png" alt="Register a new OAuth Application"></p>
+<p>Gitalk 需要 <strong>Github Application</strong>，如果沒有請點擊 <a href="https://github.com/settings/applications/new" rel="external nofollow noopener noreferrer" target="_blank">Register a new OAuth application</a> 申請，<code>Authorization callback URL</code> 填寫當前使用插件頁面的域名，例如我的博客就是填寫 <a href="https://calpa.me">https://calpa.me</a></p>
+<h3 id="代碼範例"><a href="#代碼範例" class="headerlink" title="代碼範例"></a>代碼範例</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> gitalk = <span class="keyword">new</span> Gitalk(&#123;</div><div class="line">  <span class="attr">clientID</span>: <span class="string">'Github Application Client ID'</span>,</div><div class="line">  <span class="attr">clientSecret</span>: <span class="string">'Github Application Client Secret'</span>,</div><div class="line">  <span class="attr">repo</span>: <span class="string">'Github repo'</span>,</div><div class="line">  <span class="attr">owner</span>: <span class="string">'Github repo owner'</span>,</div><div class="line">  <span class="attr">admin</span>: [<span class="string">'Github repo collaborators'</span>],</div><div class="line">&#125;)</div><div class="line"></div><div class="line">gitalk.render(<span class="string">'gitalk-container'</span>)</div></pre></td></tr></table></figure>
+<h2 id="Gitalk-選項"><a href="#Gitalk-選項" class="headerlink" title="Gitalk 選項"></a>Gitalk 選項</h2><ul>
+<li><p><strong>clientID</strong> <code>String</code></p>
+<p><strong>必須</strong>. Github Application Client ID.</p>
+</li>
+<li><p><strong>clientSecret</strong> <code>String</code></p>
+<p><strong>必須</strong>. Github Application Client Secret.</p>
+</li>
+<li><p><strong>repo</strong> <code>String</code></p>
+<p><strong>必須</strong>. Github repository.</p>
+</li>
+<li><p><strong>owner</strong> <code>String</code></p>
+<p><strong>必須</strong>. Github repository 所有者，可以是個人或者組織。</p>
+</li>
+<li><p><strong>admin</strong> <code>Array</code></p>
+<p><strong>必須</strong>. Github repository 合作者 (確保對這個 repository 是有寫的權限)。</p>
+</li>
+<li><p><strong>id</strong> <code>String</code></p>
+<p>Default: <code>location.href</code>.</p>
+<p>頁面的唯一標識。</p>
+</li>
+<li><p><strong>labels</strong> <code>Array</code></p>
+<p>Default: <code>[&#39;Gitalk&#39;]</code>.</p>
+<p>Github issue 的標簽。</p>
+</li>
+<li><p><strong>title</strong> <code>String</code></p>
+<p>Default: <code>document.title</code>.</p>
+<p>Github issue 的標題。</p>
+</li>
+<li><p><strong>body</strong> <code>String</code></p>
+<p>Default: <code>location.href + header.meta[description]</code>.</p>
+<p>Github issue 的內容。</p>
+</li>
+<li><p><strong>language</strong> <code>String</code></p>
+<p>Default: <code>navigator.language || navigator.userLanguage</code>.</p>
+<p>設置語言，支持 [en, zh-CN, zh-TW]。</p>
+</li>
+<li><p><strong>perPage</strong> <code>Number</code></p>
+<p>Default: <code>10</code>.</p>
+<p>每次加載的數據大小，最多 100。</p>
+</li>
+<li><p><strong>distractionFreeMode</strong> <code>Boolean</code></p>
+<p>Default: false。</p>
+<p>類似Facebook評論框的全屏遮罩效果.</p>
+</li>
+<li><p><strong>pagerDirection</strong> <code>String</code></p>
+<p>Default: ‘last’</p>
+<p>評論排序方式， <code>last</code>為按評論創建時間倒敘，<code>first</code>為按創建時間正序。</p>
+</li>
+<li><p><strong>createIssueManually</strong> <code>Boolean</code></p>
+<p>Default: <code>false</code>.</p>
+<p>如果當前頁面沒有相應的 isssue 且登錄的用戶屬於 admin，則會自動創建 issue。如果設置為 <code>true</code>，則顯示一個初始化頁面，創建 issue 需要點擊 <code>init</code> 按鈕。</p>
+</li>
+<li><p><strong>proxy</strong> <code>String</code></p>
+<p>Default: <code>https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token</code>.</p>
+<p> <a href="https://github.com/isaacs/github/issues/330" rel="external nofollow noopener noreferrer" target="_blank">Github oauth 請求到反向代理，為了支持 CORS。 </a></p>
+</li>
+<li><p><strong>flipMoveOptions</strong> <code>Object</code></p>
+<p>Default:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">staggerDelayBy</span>: <span class="number">150</span>,</div><div class="line">  <span class="attr">appearAnimation</span>: <span class="string">'accordionVertical'</span>,</div><div class="line">  <span class="attr">enterAnimation</span>: <span class="string">'accordionVertical'</span>,</div><div class="line">  <span class="attr">leaveAnimation</span>: <span class="string">'accordionVertical'</span>,</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>評論列表的動畫。 <a href="https://github.com/joshwcomeau/react-flip-move/blob/master/documentation/enter_leave_animations.md" rel="external nofollow noopener noreferrer" target="_blank">參考</a></p>
+</li>
+<li><p><strong>enableHotKey</strong> <code>Boolean</code></p>
+<p>Default: <code>true</code>.</p>
+<p>啟用快捷鍵(cmd|ctrl + enter) 提交評論.</p>
+</li>
+</ul>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><ul>
+<li><p><code>render(String/HTMLElement)</code></p>
+<p>初始化渲染並掛載插件，<a href="https://github.com/gitalk/gitalk/blob/48de82ca24d4cb24a464f7cc9e72884a208b9d5c/src/index.js#L17" rel="external nofollow noopener noreferrer" target="_blank">需要提供 HTMLElement 的 id </a>。</p>
+</li>
+<li><p><code>setPerPage(page: number)</code></p>
+<p>// TODO: 我想在構建gitalk之後，可以再次手動設置屬性 perPage 屬性，再次自行定義每個頁面的評論載入量。</p>
+</li>
+</ul>
+<h2 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h2><p>這個 Gitalk 也是蠻好用的，它界面簡潔清新，沒有廣告，還支持 Markdown 格式。而且感覺更加適合 Markdown 程序員使用。。。</p>
 
               
 
 <ul class="pager">
     
-    <li class="previous">
-        <a href="/2017/05/05/javascript-array/" data-toggle="tooltip" data-placement="top" title="JavaScript 數組去重">&larr; Previous Post</a>
-    </li>
-    
     
     <li class="next">
-        <a href="/2017/05/02/how-to-generate-svg-sprite/" data-toggle="tooltip" data-placement="top" title="如何製作svg sprite">Next Post &rarr;</a>
+        <a href="/2017/07/24/six-steps-to-debug-before-directly-ask-question/" data-toggle="tooltip" data-placement="top" title="項目代碼調試：提問前要做的六個步驟">Next Post &rarr;</a>
     </li>
     
 </ul>
@@ -536,7 +617,7 @@ header.intro-header {
 
             <div class="hidden-xs col-md-2 col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#參考資料"><span class="toc-text">參考資料</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安裝方法"><span class="toc-text">安裝方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#使用-cdn-引入"><span class="toc-text">使用 cdn 引入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用-npm-安裝"><span class="toc-text">利用 npm 安裝</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#去-Github-上面-clone-Gitalk"><span class="toc-text">去 Github 上面 clone Gitalk</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用方法"><span class="toc-text">使用方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#代碼範例"><span class="toc-text">代碼範例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Gitalk-選項"><span class="toc-text">Gitalk 選項</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法"><span class="toc-text">方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#後記"><span class="toc-text">後記</span></a></li></ol>
                 </div>
             </div>
         </div>

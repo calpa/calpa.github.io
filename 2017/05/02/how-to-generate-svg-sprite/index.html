@@ -96,15 +96,15 @@
             
               
                 
+              
+            
+              
+                
                   <li>
                     <a href="/Tags/">
                       Tags
                     </a>
                   </li>
-                
-              
-            
-              
                 
               
             
@@ -306,15 +306,23 @@ header.intro-header {
               
               
               
+              
+              
+              <a href="/Tags/#Front End" title="Front End" rel="2">Front End</a>
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <a href="/Tags/#Blog" title="Blog" rel="2">Blog</a>
+              
+              
+              
               <a href="/Tags/#Github" title="Github" rel="2">Github</a>
-              
-              
-              
-              
-              
-              
-              
-              
               
               
               
@@ -327,10 +335,6 @@ header.intro-header {
               
               
               <a href="/Tags/#SEO" title="SEO" rel="2">SEO</a>
-              
-              
-              
-              
               
               
               
@@ -379,6 +383,8 @@ header.intro-header {
           
           <li><a href="http://blog.shanamaid.top/" target="_blank" rel="external nofollow noopener noreferrer">娜酱骑士团</a></li>
           
+          <li><a href="https://clarencec.github.io/" target="_blank" rel="external nofollow noopener noreferrer">Clarence Blog</a></li>
+          
       </ul>
     
     <hr>
@@ -387,6 +393,12 @@ header.intro-header {
     
       <h5 style="text-align: center;">最新文章</h5>
       <ul class="list-inline" style="text-align: center;">
+        
+          <li>
+            <a href="/2017/08/04/utilize-github-issue-by-using-gitalk/">
+              善用 Github Issue 的開源評論插件 -- Gitalk
+            </a>
+          </li>
         
           <li>
             <a href="/2017/07/24/six-steps-to-debug-before-directly-ask-question/">
@@ -412,17 +424,11 @@ header.intro-header {
             </a>
           </li>
         
-          <li>
-            <a href="/2017/06/14/hong-kong-open-sources-conference-remarks/">
-              【多圖】2017 年香港開源年會後記
-            </a>
-          </li>
-        
       </ul>
     
     <hr>
 
-    <h5 style="text-align: center;">共42篇文章</h5>
+    <h5 style="text-align: center;">共43篇文章</h5>
     <hr>
 
     <!-- All Blog Posts -->
@@ -434,6 +440,12 @@ header.intro-header {
           
           
           
+              <li>
+                <a href="/archive/#2017-8">
+                  8月(1)
+                </a>
+              </li>
+            
           
               <li>
                 <a href="/archive/#2017-7">
@@ -491,39 +503,39 @@ header.intro-header {
 
 
             <div class="col-lg-7 col-lg-offset-0 col-md-7 col-sm-9 post-container">
-                <p>使用SVG Sprite的好處是可以減少HTTP Request。</p>
+              <p>使用SVG Sprite的好處是可以減少HTTP Request。</p>
 <h2 id="製作方法"><a href="#製作方法" class="headerlink" title="製作方法"></a>製作方法</h2><p>你可以選擇手動把一張一張圖合在一起，也可以使用gulp-svg-sprite自動生成雪碧圖。</p>
 <p>另外，你可以使用<a href="http://jkphl.github.io/svg-sprite/" rel="external nofollow noopener noreferrer" target="_blank">svg-sprite設置</a>幫助寫JSON, Node.js, Gruntfile 或者 Gulpfile的設定檔案。</p>
 <h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>其中一種方法是使用<code>&lt;use&gt;</code>。我們可以如同平常一樣使用svg，唯一分別是裡面的內容換成<code>&lt;use&gt;</code>，然後把鏈接加上id來調用圖像。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;svg&gt;</div><div class="line">  &lt;use href=&quot;img/sprite.svg#item&quot;&gt;&lt;/use&gt;</div><div class="line">&lt;/svg&gt;</div></pre></td></tr></table></figure>
 <h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><p><a href="https://github.com/jkphl/gulp-svg-sprite" rel="external nofollow noopener noreferrer" target="_blank">Github Repo: gulp-svg-sprite</a></p>
 
-                <hr>
-                
+              
 
-                <ul class="pager">
-                    
-                    <li class="previous">
-                        <a href="/2017/05/03/redux-array-push-function/" data-toggle="tooltip" data-placement="top" title="Redux push()是怎樣寫的？">&larr; Previous Post</a>
-                    </li>
-                    
-                    
-                    <li class="next">
-                        <a href="/2017/05/01/CreateListFromArrayLike-problem-solution/" data-toggle="tooltip" data-placement="top" title="CreateListFromArrayLike called on non-object 報錯的解決方法">Next Post &rarr;</a>
-                    </li>
-                    
-                </ul>
+<ul class="pager">
+    
+    <li class="previous">
+        <a href="/2017/05/03/redux-array-push-function/" data-toggle="tooltip" data-placement="top" title="Redux push()是怎樣寫的？">&larr; Previous Post</a>
+    </li>
+    
+    
+    <li class="next">
+        <a href="/2017/05/01/CreateListFromArrayLike-problem-solution/" data-toggle="tooltip" data-placement="top" title="CreateListFromArrayLike called on non-object 報錯的解決方法">Next Post &rarr;</a>
+    </li>
+    
+</ul>
 
-                
 
-                
 
-                
-                <!-- Gitalk 評論區 -->
-                <div class="comment">
-                  <div id="gitalk-container"></div>
-                </div>
-                
+
+
+
+<!-- Gitalk 評論區 -->
+<div class="comment">
+  <div id="gitalk-container"></div>
+</div>
+
+
             </div>
 
             <div class="hidden-xs col-md-2 col-sm-3 toc-col">
@@ -534,8 +546,6 @@ header.intro-header {
         </div>
     </div>
 </article>
-
-
 
 
 
@@ -555,14 +565,14 @@ header.intro-header {
         s.parentNode.insertBefore(o, s);
     }
 </script>
-<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<!-- anchor-js, Doc:https://bryanbraun.github.io/anchorjs/ -->
 <script>
     async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function () {
-      anchors.options = {
-        visible: 'always',
-        placement: 'left'
-      };
-      anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+        anchors.options = {
+            visible: 'always',
+            placement: 'left',
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
     })
 </script>
 <style>
@@ -594,6 +604,7 @@ const gitalk = new Gitalk({
 })
 gitalk.render('gitalk-container')
 </script>
+
 
 
 

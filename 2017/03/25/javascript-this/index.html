@@ -90,15 +90,15 @@
             
               
                 
+              
+            
+              
+                
                   <li>
                     <a href="/Tags/">
                       Tags
                     </a>
                   </li>
-                
-              
-            
-              
                 
               
             
@@ -300,15 +300,23 @@ header.intro-header {
               
               
               
+              
+              
+              <a href="/Tags/#Front End" title="Front End" rel="2">Front End</a>
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <a href="/Tags/#Blog" title="Blog" rel="2">Blog</a>
+              
+              
+              
               <a href="/Tags/#Github" title="Github" rel="2">Github</a>
-              
-              
-              
-              
-              
-              
-              
-              
               
               
               
@@ -321,10 +329,6 @@ header.intro-header {
               
               
               <a href="/Tags/#SEO" title="SEO" rel="2">SEO</a>
-              
-              
-              
-              
               
               
               
@@ -373,6 +377,8 @@ header.intro-header {
           
           <li><a href="http://blog.shanamaid.top/" target="_blank" rel="external nofollow noopener noreferrer">娜酱骑士团</a></li>
           
+          <li><a href="https://clarencec.github.io/" target="_blank" rel="external nofollow noopener noreferrer">Clarence Blog</a></li>
+          
       </ul>
     
     <hr>
@@ -381,6 +387,12 @@ header.intro-header {
     
       <h5 style="text-align: center;">最新文章</h5>
       <ul class="list-inline" style="text-align: center;">
+        
+          <li>
+            <a href="/2017/08/04/utilize-github-issue-by-using-gitalk/">
+              善用 Github Issue 的開源評論插件 -- Gitalk
+            </a>
+          </li>
         
           <li>
             <a href="/2017/07/24/six-steps-to-debug-before-directly-ask-question/">
@@ -406,17 +418,11 @@ header.intro-header {
             </a>
           </li>
         
-          <li>
-            <a href="/2017/06/14/hong-kong-open-sources-conference-remarks/">
-              【多圖】2017 年香港開源年會後記
-            </a>
-          </li>
-        
       </ul>
     
     <hr>
 
-    <h5 style="text-align: center;">共42篇文章</h5>
+    <h5 style="text-align: center;">共43篇文章</h5>
     <hr>
 
     <!-- All Blog Posts -->
@@ -428,6 +434,12 @@ header.intro-header {
           
           
           
+              <li>
+                <a href="/archive/#2017-8">
+                  8月(1)
+                </a>
+              </li>
+            
           
               <li>
                 <a href="/archive/#2017-7">
@@ -485,7 +497,7 @@ header.intro-header {
 
 
             <div class="col-lg-7 col-lg-offset-0 col-md-7 col-sm-9 post-container">
-                <p>首先我們要理解調用函數的方法，最起碼可以用下面兩個方法：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">func(arg1, arg2);</div><div class="line">func.call(context, arg1, arg2);</div></pre></td></tr></table></figure></p>
+              <p>首先我們要理解調用函數的方法，最起碼可以用下面兩個方法：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">func(arg1, arg2);</div><div class="line">func.call(context, arg1, arg2);</div></pre></td></tr></table></figure></p>
 <p>之前我也沒怎麼見過後者，基本上都是直接call func的。後者<code>func(arg1, arg2)</code> 等於 <code>func.call(undefined, arg1, arg2)</code>。簡單來說，this就是context。如果context沒有定義的話，它會被定義為一個全局對象，比如說global。在MDN的文檔有這一句: <code>if the method is a function in non-strict mode code, null and undefined will be replaced with the global object and primitive values will be converted to objects</code>。</p>
 <p>如果不想要this是global的話，給予context一個對象就可以了：<br><code>func.call(obj, arg1, arg2)</code></p>
 <h2 id="全局上下文"><a href="#全局上下文" class="headerlink" title="全局上下文"></a>全局上下文</h2><p>在全局中，無論是否在嚴格模式下(Strict mode)，<code>this</code>都是代表全局對象。</p>
@@ -507,32 +519,32 @@ header.intro-header {
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call" rel="external nofollow noopener noreferrer" target="_blank">Function.prototype.call - MDN</a></li>
 </ol>
 
-                <hr>
-                
+              
 
-                <ul class="pager">
-                    
-                    <li class="previous">
-                        <a href="/2017/03/27/interview/" data-toggle="tooltip" data-placement="top" title="Interview後記">&larr; Previous Post</a>
-                    </li>
-                    
-                    
-                    <li class="next">
-                        <a href="/2017/02/26/hexo-change-site-url/" data-toggle="tooltip" data-placement="top" title="Hexo sitemap 簡單更改域名的方法">Next Post &rarr;</a>
-                    </li>
-                    
-                </ul>
+<ul class="pager">
+    
+    <li class="previous">
+        <a href="/2017/03/27/interview/" data-toggle="tooltip" data-placement="top" title="Interview後記">&larr; Previous Post</a>
+    </li>
+    
+    
+    <li class="next">
+        <a href="/2017/02/26/hexo-change-site-url/" data-toggle="tooltip" data-placement="top" title="Hexo sitemap 簡單更改域名的方法">Next Post &rarr;</a>
+    </li>
+    
+</ul>
 
-                
 
-                
 
-                
-                <!-- Gitalk 評論區 -->
-                <div class="comment">
-                  <div id="gitalk-container"></div>
-                </div>
-                
+
+
+
+<!-- Gitalk 評論區 -->
+<div class="comment">
+  <div id="gitalk-container"></div>
+</div>
+
+
             </div>
 
             <div class="hidden-xs col-md-2 col-sm-3 toc-col">
@@ -543,8 +555,6 @@ header.intro-header {
         </div>
     </div>
 </article>
-
-
 
 
 
@@ -564,14 +574,14 @@ header.intro-header {
         s.parentNode.insertBefore(o, s);
     }
 </script>
-<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<!-- anchor-js, Doc:https://bryanbraun.github.io/anchorjs/ -->
 <script>
     async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function () {
-      anchors.options = {
-        visible: 'always',
-        placement: 'left'
-      };
-      anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+        anchors.options = {
+            visible: 'always',
+            placement: 'left',
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
     })
 </script>
 <style>
@@ -603,6 +613,7 @@ const gitalk = new Gitalk({
 })
 gitalk.render('gitalk-container')
 </script>
+
 
 
 

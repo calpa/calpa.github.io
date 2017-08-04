@@ -105,15 +105,15 @@ Creating a custom 404 page for your GitHub Pages site">
             
               
                 
+              
+            
+              
+                
                   <li>
                     <a href="/Tags/">
                       Tags
                     </a>
                   </li>
-                
-              
-            
-              
                 
               
             
@@ -315,15 +315,23 @@ header.intro-header {
               
               
               
+              
+              
+              <a href="/Tags/#Front End" title="Front End" rel="2">Front End</a>
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <a href="/Tags/#Blog" title="Blog" rel="2">Blog</a>
+              
+              
+              
               <a href="/Tags/#Github" title="Github" rel="2">Github</a>
-              
-              
-              
-              
-              
-              
-              
-              
               
               
               
@@ -336,10 +344,6 @@ header.intro-header {
               
               
               <a href="/Tags/#SEO" title="SEO" rel="2">SEO</a>
-              
-              
-              
-              
               
               
               
@@ -388,6 +392,8 @@ header.intro-header {
           
           <li><a href="http://blog.shanamaid.top/" target="_blank" rel="external nofollow noopener noreferrer">娜酱骑士团</a></li>
           
+          <li><a href="https://clarencec.github.io/" target="_blank" rel="external nofollow noopener noreferrer">Clarence Blog</a></li>
+          
       </ul>
     
     <hr>
@@ -396,6 +402,12 @@ header.intro-header {
     
       <h5 style="text-align: center;">最新文章</h5>
       <ul class="list-inline" style="text-align: center;">
+        
+          <li>
+            <a href="/2017/08/04/utilize-github-issue-by-using-gitalk/">
+              善用 Github Issue 的開源評論插件 -- Gitalk
+            </a>
+          </li>
         
           <li>
             <a href="/2017/07/24/six-steps-to-debug-before-directly-ask-question/">
@@ -421,17 +433,11 @@ header.intro-header {
             </a>
           </li>
         
-          <li>
-            <a href="/2017/06/14/hong-kong-open-sources-conference-remarks/">
-              【多圖】2017 年香港開源年會後記
-            </a>
-          </li>
-        
       </ul>
     
     <hr>
 
-    <h5 style="text-align: center;">共42篇文章</h5>
+    <h5 style="text-align: center;">共43篇文章</h5>
     <hr>
 
     <!-- All Blog Posts -->
@@ -443,6 +449,12 @@ header.intro-header {
           
           
           
+              <li>
+                <a href="/archive/#2017-8">
+                  8月(1)
+                </a>
+              </li>
+            
           
               <li>
                 <a href="/archive/#2017-7">
@@ -500,7 +512,7 @@ header.intro-header {
 
 
             <div class="col-lg-7 col-lg-offset-0 col-md-7 col-sm-9 post-container">
-                <h1 id="建立方法"><a href="#建立方法" class="headerlink" title="建立方法"></a>建立方法</h1><ol>
+              <h1 id="建立方法"><a href="#建立方法" class="headerlink" title="建立方法"></a>建立方法</h1><ol>
 <li>在Terminal輸入 <code>hexo new page 404</code></li>
 <li>然後打開儲存404檔案的位置，比如說：<code>/source/404/index.md</code></li>
 <li>在這個檔案最頂部寫下<code>permalink: /404.html</code>就可以了。</li>
@@ -509,32 +521,32 @@ header.intro-header {
 <li><a href="https://help.github.com/articles/creating-a-custom-404-page-for-your-github-pages-site/" rel="external nofollow noopener noreferrer" target="_blank">Creating a custom 404 page for your GitHub Pages site</a></li>
 </ol>
 
-                <hr>
-                
+              
 
-                <ul class="pager">
-                    
-                    <li class="previous">
-                        <a href="/2017/01/08/readme/" data-toggle="tooltip" data-placement="top" title="Github上的README.md">&larr; Previous Post</a>
-                    </li>
-                    
-                    
-                    <li class="next">
-                        <a href="/2017/01/08/hello-world/" data-toggle="tooltip" data-placement="top" title="Hello, World!">Next Post &rarr;</a>
-                    </li>
-                    
-                </ul>
+<ul class="pager">
+    
+    <li class="previous">
+        <a href="/2017/01/08/readme/" data-toggle="tooltip" data-placement="top" title="Github上的README.md">&larr; Previous Post</a>
+    </li>
+    
+    
+    <li class="next">
+        <a href="/2017/01/08/hello-world/" data-toggle="tooltip" data-placement="top" title="Hello, World!">Next Post &rarr;</a>
+    </li>
+    
+</ul>
 
-                
 
-                
 
-                
-                <!-- Gitalk 評論區 -->
-                <div class="comment">
-                  <div id="gitalk-container"></div>
-                </div>
-                
+
+
+
+<!-- Gitalk 評論區 -->
+<div class="comment">
+  <div id="gitalk-container"></div>
+</div>
+
+
             </div>
 
             <div class="hidden-xs col-md-2 col-sm-3 toc-col">
@@ -545,8 +557,6 @@ header.intro-header {
         </div>
     </div>
 </article>
-
-
 
 
 
@@ -566,14 +576,14 @@ header.intro-header {
         s.parentNode.insertBefore(o, s);
     }
 </script>
-<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<!-- anchor-js, Doc:https://bryanbraun.github.io/anchorjs/ -->
 <script>
     async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function () {
-      anchors.options = {
-        visible: 'always',
-        placement: 'left'
-      };
-      anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+        anchors.options = {
+            visible: 'always',
+            placement: 'left',
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
     })
 </script>
 <style>
@@ -605,6 +615,7 @@ const gitalk = new Gitalk({
 })
 gitalk.render('gitalk-container')
 </script>
+
 
 
 

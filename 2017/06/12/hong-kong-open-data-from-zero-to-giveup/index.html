@@ -90,15 +90,15 @@
             
               
                 
+              
+            
+              
+                
                   <li>
                     <a href="/Tags/">
                       Tags
                     </a>
                   </li>
-                
-              
-            
-              
                 
               
             
@@ -302,15 +302,23 @@ header.intro-header {
               
               
               
+              
+              
+              <a href="/Tags/#Front End" title="Front End" rel="2">Front End</a>
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <a href="/Tags/#Blog" title="Blog" rel="2">Blog</a>
+              
+              
+              
               <a href="/Tags/#Github" title="Github" rel="2">Github</a>
-              
-              
-              
-              
-              
-              
-              
-              
               
               
               
@@ -323,10 +331,6 @@ header.intro-header {
               
               
               <a href="/Tags/#SEO" title="SEO" rel="2">SEO</a>
-              
-              
-              
-              
               
               
               
@@ -375,6 +379,8 @@ header.intro-header {
           
           <li><a href="http://blog.shanamaid.top/" target="_blank" rel="external nofollow noopener noreferrer">娜酱骑士团</a></li>
           
+          <li><a href="https://clarencec.github.io/" target="_blank" rel="external nofollow noopener noreferrer">Clarence Blog</a></li>
+          
       </ul>
     
     <hr>
@@ -383,6 +389,12 @@ header.intro-header {
     
       <h5 style="text-align: center;">最新文章</h5>
       <ul class="list-inline" style="text-align: center;">
+        
+          <li>
+            <a href="/2017/08/04/utilize-github-issue-by-using-gitalk/">
+              善用 Github Issue 的開源評論插件 -- Gitalk
+            </a>
+          </li>
         
           <li>
             <a href="/2017/07/24/six-steps-to-debug-before-directly-ask-question/">
@@ -408,17 +420,11 @@ header.intro-header {
             </a>
           </li>
         
-          <li>
-            <a href="/2017/06/14/hong-kong-open-sources-conference-remarks/">
-              【多圖】2017 年香港開源年會後記
-            </a>
-          </li>
-        
       </ul>
     
     <hr>
 
-    <h5 style="text-align: center;">共42篇文章</h5>
+    <h5 style="text-align: center;">共43篇文章</h5>
     <hr>
 
     <!-- All Blog Posts -->
@@ -430,6 +436,12 @@ header.intro-header {
           
           
           
+              <li>
+                <a href="/archive/#2017-8">
+                  8月(1)
+                </a>
+              </li>
+            
           
               <li>
                 <a href="/archive/#2017-7">
@@ -487,7 +499,7 @@ header.intro-header {
 
 
             <div class="col-lg-7 col-lg-offset-0 col-md-7 col-sm-9 post-container">
-                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>經過 2017 年香港開源年會之後，我都沒有去看香港的開放數據做得怎麼樣。今天香港正懸掛八號風球，正好是一個機會去了解一下。香港政府有一個開放數據平台，<a href="https://data.gov.hk/tc-data/dataset" rel="external nofollow noopener noreferrer" target="_blank">資料一線通</a>，以多種檔案格式提供多個政府部門類別，機構的一些查詢資料，比如說天氣預報，中學教育統計資料。值得注意的是，這些檔案並不是 ODF，而是 xls, xml, csv, json, gif, txt, tif。。。</p>
+              <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>經過 2017 年香港開源年會之後，我都沒有去看香港的開放數據做得怎麼樣。今天香港正懸掛八號風球，正好是一個機會去了解一下。香港政府有一個開放數據平台，<a href="https://data.gov.hk/tc-data/dataset" rel="external nofollow noopener noreferrer" target="_blank">資料一線通</a>，以多種檔案格式提供多個政府部門類別，機構的一些查詢資料，比如說天氣預報，中學教育統計資料。值得注意的是，這些檔案並不是 ODF，而是 xls, xml, csv, json, gif, txt, tif。。。</p>
 <h2 id="使用-API"><a href="#使用-API" class="headerlink" title="使用 API"></a>使用 API</h2><p>第一眼看到的時候，我就想可不可以直接複製貼上測試一下，結果發現是不行的。。。</p>
 <img src="https://i.imgur.com/cwI9gp7.png" width="600" title="auto">
 <p>“歷史檔案文件列表應用程式界面” 其實這個名字會不會有點長，我在閱讀下文的時候看到這麼長的字也很難聯想到剛才有看過。而且如果直接在瀏覽器輸入第一句的話，只會返回 400 Bad Request。。。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  &quot;message&quot; : &quot;REQUEST ERROR: start parameter missing&quot;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
@@ -512,32 +524,32 @@ header.intro-header {
 <li><a href="http://yes.nctu.edu.tw/lecture/web/xml/intro/chapter1.html" rel="external nofollow noopener noreferrer" target="_blank">國立交通大學 XML教學</a></li>
 </ol>
 
-                <hr>
-                
+              
 
-                <ul class="pager">
-                    
-                    <li class="previous">
-                        <a href="/2017/06/14/hong-kong-open-sources-conference-remarks/" data-toggle="tooltip" data-placement="top" title="【多圖】2017 年香港開源年會後記">&larr; Previous Post</a>
-                    </li>
-                    
-                    
-                    <li class="next">
-                        <a href="/2017/06/01/create-markdown-powerpoint-in-5-mins/" data-toggle="tooltip" data-placement="top" title="5分鐘製作 Markdown PowerPoint">Next Post &rarr;</a>
-                    </li>
-                    
-                </ul>
+<ul class="pager">
+    
+    <li class="previous">
+        <a href="/2017/06/14/hong-kong-open-sources-conference-remarks/" data-toggle="tooltip" data-placement="top" title="【多圖】2017 年香港開源年會後記">&larr; Previous Post</a>
+    </li>
+    
+    
+    <li class="next">
+        <a href="/2017/06/01/create-markdown-powerpoint-in-5-mins/" data-toggle="tooltip" data-placement="top" title="5分鐘製作 Markdown PowerPoint">Next Post &rarr;</a>
+    </li>
+    
+</ul>
 
-                
 
-                
 
-                
-                <!-- Gitalk 評論區 -->
-                <div class="comment">
-                  <div id="gitalk-container"></div>
-                </div>
-                
+
+
+
+<!-- Gitalk 評論區 -->
+<div class="comment">
+  <div id="gitalk-container"></div>
+</div>
+
+
             </div>
 
             <div class="hidden-xs col-md-2 col-sm-3 toc-col">
@@ -548,8 +560,6 @@ header.intro-header {
         </div>
     </div>
 </article>
-
-
 
 
 
@@ -569,14 +579,14 @@ header.intro-header {
         s.parentNode.insertBefore(o, s);
     }
 </script>
-<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<!-- anchor-js, Doc:https://bryanbraun.github.io/anchorjs/ -->
 <script>
     async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function () {
-      anchors.options = {
-        visible: 'always',
-        placement: 'left'
-      };
-      anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+        anchors.options = {
+            visible: 'always',
+            placement: 'left',
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
     })
 </script>
 <style>
@@ -608,6 +618,7 @@ const gitalk = new Gitalk({
 })
 gitalk.render('gitalk-container')
 </script>
+
 
 
 
