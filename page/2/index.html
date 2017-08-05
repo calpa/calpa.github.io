@@ -178,12 +178,10 @@
         text-align: center;
         background-repeat: no-repeat;
         border-radius: 3px;
-        background-size: cover;
         padding: 0;
         height: 300px;
         display: table;
         width: 100%;
-        background-color: rgba(0, 0, 0, 0.16);
     }
 
     /*去掉诗歌的背景图片*/
@@ -218,11 +216,6 @@
     /*不显示摘要*/
     .custom-haojen-container .post-preview:nth-child(1) .post-content-preview {
         display: none
-    }
-
-    /*只第一个显示背景图片*/
-    .custom-haojen-container .post-preview:not(:nth-child(1)) {
-        background-image: none !important;
     }
 
     /*第一个分界线去掉*/
@@ -307,8 +300,19 @@
 
 
 
+<style>
+.calpaFirstImage {
+  background-position-y: 0;
+  background-size: cover;
+  background-color: #undefined;
+  
+       background-image: url('https://i.imgur.com/KMksHxZ.png');
+    
+  
+}
+</style>
 
-<div class="post-preview " style="background-image: url('https://i.imgur.com/KMksHxZ.png'); background-position-y: 0">
+<div class="post-preview calpaFirstImage">
     <a href="/2017/05/31/javascript-array-map-parseint-solutions/">
         <h2 class="post-title">
             JavaScript Array.map(parseInt) 錯誤解決方案
@@ -317,22 +321,12 @@
             <i class="fa fa-calendar" aria-hidden="true"></i> 2017-05-31
         </p>
         
-        <div class="post-content-preview">
-            <p>
-                如果我想轉換數組裡面的字符串為數字的話，很自然就會想到 map 和 parseInt 這兩個方法。但是用起來的時候卻不是我想要的結果。。。
-12345var a = ["1", "2", "3", "4", "5"];var b = a.map(parseInt);console.log(b);..
-            </p>
-        </div>
+        
     </a>
-
 </div>
 
-<hr>
 
-
-
-
-<div class="post-preview " style="background-image: url('/img/post-default.jpg'); background-position-y: 0">
+<div class="post-preview">
     <a href="/2017/05/30/why-i-write-blog-posts/">
         <h2 class="post-title">
             為什麼要寫技術博客？
@@ -341,6 +335,7 @@
             <i class="fa fa-calendar" aria-hidden="true"></i> 2017-05-30
         </p>
         
+        
         <div class="post-content-preview">
             <p>
                 從第一篇《Hello World》文章，我已經開始寫博客半年了，一共寫三十多篇，平均一個禮拜出一篇文章。其實，我沒有想那麼多，直接就開始寫文章了。可能我的博客沒有其他人寫得那麼好，但是我依然堅持寫博客。每一篇文章是需要一點時間構思、撰寫，但是這點時間是很值得的。
@@ -348,16 +343,12 @@
 重用問題解決方案我們在寫代..
             </p>
         </div>
+        
     </a>
-
 </div>
 
-<hr>
 
-
-
-
-<div class="post-preview " style="background-image: url('https://i.imgur.com/KMksHxZ.png'); background-position-y: 0">
+<div class="post-preview">
     <a href="/2017/05/21/learn-javascript-in-six-steps/">
         <h2 class="post-title">
             打好 JavaScript 基礎的6個步驟
@@ -366,21 +357,18 @@
             <i class="fa fa-calendar" aria-hidden="true"></i> 2017-05-21
         </p>
         
+        
         <div class="post-content-preview">
             <p>
                 平日開發的時候，我們會選擇使用一些框架來避免重複製造輪子，減輕我們的工作量。然而，我們卻不能透過使用更好的工具，或者更換框架來解決一些基礎開發問題。因此打好基礎很重要，不但決定前端程序員解決基礎問題的能力，還決定了面對日新月異框架時的掌握能力。當我開發 React 應用的時候，遇到的問題多是我對..
             </p>
         </div>
+        
     </a>
-
 </div>
 
-<hr>
 
-
-
-
-<div class="post-preview " style="background-image: url('https://i.imgur.com/KMksHxZ.png'); background-position-y: 0">
+<div class="post-preview">
     <a href="/2017/05/18/javascript-data-structures/">
         <h2 class="post-title">
             利用 ECMAScript 学习如何判断数据类型
@@ -389,21 +377,18 @@
             <i class="fa fa-calendar" aria-hidden="true"></i> 2017-05-18
         </p>
         
+        
         <div class="post-content-preview">
             <p>
                 每一种编程语言都有数据结构，但他们各有不同之处。JavaScript 是一种动态语言，变量的类型不用提前声明，你可以使用同一个变量来保存不同的数据类型。123var a = 'apple'; // String typevar a = 42; // Number typevar a = true..
             </p>
         </div>
+        
     </a>
-
 </div>
 
-<hr>
 
-
-
-
-<div class="post-preview " style="background-image: url('/img/post-default.jpg'); background-position-y: 0">
+<div class="post-preview">
     <a href="/2017/05/16/react-component-lifecycle/">
         <h2 class="post-title">
             React 組件生命週期 - 加載組件
@@ -412,22 +397,19 @@
             <i class="fa fa-calendar" aria-hidden="true"></i> 2017-05-16
         </p>
         
+        
         <div class="post-content-preview">
             <p>
                 組件React提供React.Component，我們可以透過使用組件，拆分UI為可以重複使用的獨立部分。React.Component是一個抽象的base class。我們甚少直接運用React.Component，通常是透過創建一個子類，並使用render()方法。
 例子：12345clas..
             </p>
         </div>
+        
     </a>
-
 </div>
 
-<hr>
 
-
-
-
-<div class="post-preview " style="background-image: url('/img/post-default.jpg'); background-position-y: 0">
+<div class="post-preview">
     <a href="/2017/05/06/introduction-to-regular-expression/">
         <h2 class="post-title">
             初探正則表達式
@@ -436,22 +418,19 @@
             <i class="fa fa-calendar" aria-hidden="true"></i> 2017-05-06
         </p>
         
+        
         <div class="post-content-preview">
             <p>
                 正則表達式是一個非常簡單的語法，但它也是神兵利器，可以說是程序員必須要理解的工具之一。它就像一本會不斷成長的寶刀，隨著程序員對它的理解，它的威力也跟著增強。
 一些當下熱門的編輯器(Atom, Sublime)或者 IDE (WebStorm)都支持正則表達式尋找。如果你有瞭解過JavaScrip..
             </p>
         </div>
+        
     </a>
-
 </div>
 
-<hr>
 
-
-
-
-<div class="post-preview " style="background-image: url('/img/post-default.jpg'); background-position-y: 0">
+<div class="post-preview">
     <a href="/2017/05/06/vertical-align-with-css/">
         <h2 class="post-title">
             CSS垂直置中的4種方法
@@ -460,22 +439,19 @@
             <i class="fa fa-calendar" aria-hidden="true"></i> 2017-05-06
         </p>
         
+        
         <div class="post-content-preview">
             <p>
                 這是一道送分題，如果想要垂直置中元素的話，起碼會有四種方法：padding, line-height, table 和 Flexbox。使用Flexbox的話，日後要更改元素的位置會非常方便。
 padding如果你要置中的元素是inine或者是inline-*的話，比如說文字和鏈接，你可以用pa..
             </p>
         </div>
+        
     </a>
-
 </div>
 
-<hr>
 
-
-
-
-<div class="post-preview " style="background-image: url('/img/post-default.jpg'); background-position-y: 0">
+<div class="post-preview">
     <a href="/2017/05/05/javascript-array/">
         <h2 class="post-title">
             JavaScript 數組去重
@@ -484,6 +460,7 @@ padding如果你要置中的元素是inine或者是inline-*的話，比如說文
             <i class="fa fa-calendar" aria-hidden="true"></i> 2017-05-05
         </p>
         
+        
         <div class="post-content-preview">
             <p>
                 顧著做化工模擬功課，差點忘記怎樣寫代碼。。。
@@ -491,12 +468,9 @@ padding如果你要置中的元素是inine或者是inline-*的話，比如說文
 123let arr = [1, 2, 3, 3, 4, 5];Array.from(new Set(arr)); // [1, 2, 3, 4, 5][...new Set(ar..
             </p>
         </div>
+        
     </a>
-
 </div>
-
-<hr>
-
 
 
 
@@ -614,11 +588,15 @@ padding如果你要置中的元素是inine或者是inline-*的話，比如說文
               
               
               
-              
-              
-              
-              
               <a href="/Tags/#SEO" title="SEO" rel="2">SEO</a>
+              
+              
+              
+              
+              
+              
+              
+              
               
               
               
@@ -646,11 +624,7 @@ padding如果你要置中的元素是inine或者是inline-*的話，比如說文
               
               
               
-              
-              
               <a href="/Tags/#Blog" title="Blog" rel="2">Blog</a>
-              
-              
               
               
               

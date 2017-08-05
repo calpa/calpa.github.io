@@ -178,12 +178,10 @@
         text-align: center;
         background-repeat: no-repeat;
         border-radius: 3px;
-        background-size: cover;
         padding: 0;
         height: 300px;
         display: table;
         width: 100%;
-        background-color: rgba(0, 0, 0, 0.16);
     }
 
     /*去掉诗歌的背景图片*/
@@ -218,11 +216,6 @@
     /*不显示摘要*/
     .custom-haojen-container .post-preview:nth-child(1) .post-content-preview {
         display: none
-    }
-
-    /*只第一个显示背景图片*/
-    .custom-haojen-container .post-preview:not(:nth-child(1)) {
-        background-image: none !important;
     }
 
     /*第一个分界线去掉*/
@@ -307,8 +300,33 @@
 
 
 
+<style>
+.calpaFirstImage {
+  background-position-y: 0;
+  background-size: cover;
+  background-color: #undefined;
+  
+       background-image: url('/img/post-default.jpg');
+    
+  
+}
+</style>
 
-<div class="post-preview " style="background-image: url('/img/post-default.jpg'); background-position-y: 0">
+<div class="post-preview calpaFirstImage">
+    <a href="/2017/01/08/readme/">
+        <h2 class="post-title">
+            Github上的README.md
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-01-08
+        </p>
+        
+        
+    </a>
+</div>
+
+
+<div class="post-preview">
     <a href="/2017/01/08/hexo-404-page/">
         <h2 class="post-title">
             Hexo之建立404 Page
@@ -316,6 +334,7 @@
         <p class="post-meta">
             <i class="fa fa-calendar" aria-hidden="true"></i> 2017-01-08
         </p>
+        
         
         <div class="post-content-preview">
             <p>
@@ -328,40 +347,12 @@
 Creating a custom 404 page for ..
             </p>
         </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-
-<div class="post-preview " style="background-image: url('/img/post-default.jpg'); background-position-y: 0">
-    <a href="/2017/01/08/readme/">
-        <h2 class="post-title">
-            Github上的README.md
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-01-08
-        </p>
         
-        <div class="post-content-preview">
-            <p>
-                Hexo在渲染的時候默認是把source下面所有的.md檔案渲染成html，這樣的話會覆蓋掉Github上的CNAME和README.md。但是我又不想這樣，我想Github Repo下面可以直接看到這個blog的README.md內容。
-所以我就修改Hexo根目錄下的_config.yml：1..
-            </p>
-        </div>
     </a>
-
 </div>
 
-<hr>
 
-
-
-
-<div class="post-preview " style="background-image: url('/img/post-default.jpg'); background-position-y: 0">
+<div class="post-preview">
     <a href="/2017/01/08/hello-world/">
         <h2 class="post-title">
             Hello, World!
@@ -370,6 +361,7 @@ Creating a custom 404 page for ..
             <i class="fa fa-calendar" aria-hidden="true"></i> 2017-01-08
         </p>
         
+        
         <div class="post-content-preview">
             <p>
                 Hello World這是一個用hexo建構的blog，使用Hexo的主題Anisina
@@ -377,12 +369,9 @@ Creating a custom 404 page for ..
 
             </p>
         </div>
+        
     </a>
-
 </div>
-
-<hr>
-
 
 
 
@@ -496,11 +485,15 @@ Creating a custom 404 page for ..
               
               
               
-              
-              
-              
-              
               <a href="/Tags/#SEO" title="SEO" rel="2">SEO</a>
+              
+              
+              
+              
+              
+              
+              
+              
               
               
               
@@ -528,11 +521,7 @@ Creating a custom 404 page for ..
               
               
               
-              
-              
               <a href="/Tags/#Blog" title="Blog" rel="2">Blog</a>
-              
-              
               
               
               

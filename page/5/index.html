@@ -178,12 +178,10 @@
         text-align: center;
         background-repeat: no-repeat;
         border-radius: 3px;
-        background-size: cover;
         padding: 0;
         height: 300px;
         display: table;
         width: 100%;
-        background-color: rgba(0, 0, 0, 0.16);
     }
 
     /*去掉诗歌的背景图片*/
@@ -218,11 +216,6 @@
     /*不显示摘要*/
     .custom-haojen-container .post-preview:nth-child(1) .post-content-preview {
         display: none
-    }
-
-    /*只第一个显示背景图片*/
-    .custom-haojen-container .post-preview:not(:nth-child(1)) {
-        background-image: none !important;
     }
 
     /*第一个分界线去掉*/
@@ -307,8 +300,19 @@
 
 
 
+<style>
+.calpaFirstImage {
+  background-position-y: 0;
+  background-size: cover;
+  background-color: #undefined;
+  
+       background-image: url('/img/post-default.jpg');
+    
+  
+}
+</style>
 
-<div class="post-preview " style="background-image: url('/img/post-default.jpg'); background-position-y: 0">
+<div class="post-preview calpaFirstImage">
     <a href="/2017/02/26/hexo-seo-nofollow/">
         <h2 class="post-title">
             Hexo優化之為外部鏈接添加nofollow屬性
@@ -317,22 +321,12 @@
             <i class="fa fa-calendar" aria-hidden="true"></i> 2017-02-26
         </p>
         
-        <div class="post-content-preview">
-            <p>
-                我們的網頁通常會有很多鏈接，但是在爬蟲的時候可以分開哪一些是外部鏈接，哪一些是內部鏈接來優化搜尋結果。比如說增加nofollow標籤。nofollow是一個HTML標籤的屬性值，它可以告訴搜尋引擎不要追蹤這個鏈接。
-手動我們可以手動把每一個鏈接都加上nofollow屬性，比如這樣：12&lt;a..
-            </p>
-        </div>
+        
     </a>
-
 </div>
 
-<hr>
 
-
-
-
-<div class="post-preview " style="background-image: url('/img/post-default.jpg'); background-position-y: 0">
+<div class="post-preview">
     <a href="/2017/02/23/github-edcation-package/">
         <h2 class="post-title">
             利用Github免費教育禮包更换.me域名
@@ -340,6 +334,7 @@
         <p class="post-meta">
             <i class="fa fa-calendar" aria-hidden="true"></i> 2017-02-23
         </p>
+        
         
         <div class="post-content-preview">
             <p>
@@ -351,16 +346,12 @@ Github 禮包如果你有學生身份的話，其中一個好處就是可以使�
 AWS Educate: Up..
             </p>
         </div>
+        
     </a>
-
 </div>
 
-<hr>
 
-
-
-
-<div class="post-preview " style="background-image: url('/img/post-default.jpg'); background-position-y: 0">
+<div class="post-preview">
     <a href="/2017/02/22/using-javascript-to-push-web-notification/">
         <h2 class="post-title">
             利用JavaScript推送Web Notification
@@ -368,6 +359,7 @@ AWS Educate: Up..
         <p class="post-meta">
             <i class="fa fa-calendar" aria-hidden="true"></i> 2017-02-22
         </p>
+        
         
         <div class="post-content-preview">
             <p>
@@ -379,16 +371,33 @@ granted: 用戶授權顯示通知的權限
 denied..
             </p>
         </div>
+        
     </a>
-
 </div>
 
-<hr>
+
+<div class="post-preview">
+    <a href="/2017/02/19/supercharger-hackathon/">
+        <h2 class="post-title">
+            SuperCharger Hackathon後記
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-02-19
+        </p>
+        
+        
+        <div class="post-content-preview">
+            <p>
+                
+如果計上這次比賽的話，我已經是第五次參加這一類編程比賽。與過往的比賽不同，合作的對象不再是大學生，而是兩間Start-up公司。在這次比賽中，我選擇KYC-Chain、Clare.ai兩間公司組成的隊伍。KYC-Chain透過Airtable提供一些常見的用戶問題與答案，而Clare.ai則負..
+            </p>
+        </div>
+        
+    </a>
+</div>
 
 
-
-
-<div class="post-preview " style="background-image: url('/img/post-default.jpg'); background-position-y: 0">
+<div class="post-preview">
     <a href="/2017/02/19/javascript-closure/">
         <h2 class="post-title">
             JavaScript的閉包(Closure)
@@ -396,6 +405,7 @@ denied..
         <p class="post-meta">
             <i class="fa fa-calendar" aria-hidden="true"></i> 2017-02-19
         </p>
+        
         
         <div class="post-content-preview">
             <p>
@@ -410,40 +420,12 @@ denied..
 12345678function A() &#123;  function B() &#123;..
             </p>
         </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-
-<div class="post-preview " style="background-image: url('/img/post-default.jpg'); background-position-y: 0">
-    <a href="/2017/02/19/supercharger-hackathon/">
-        <h2 class="post-title">
-            SuperCharger Hackathon後記
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-02-19
-        </p>
         
-        <div class="post-content-preview">
-            <p>
-                
-如果計上這次比賽的話，我已經是第五次參加這一類編程比賽。與過往的比賽不同，合作的對象不再是大學生，而是兩間Start-up公司。在這次比賽中，我選擇KYC-Chain、Clare.ai兩間公司組成的隊伍。KYC-Chain透過Airtable提供一些常見的用戶問題與答案，而Clare.ai則負..
-            </p>
-        </div>
     </a>
-
 </div>
 
-<hr>
 
-
-
-
-<div class="post-preview " style="background-image: url('/img/post-default.jpg'); background-position-y: 0">
+<div class="post-preview">
     <a href="/2017/02/02/javascript-true-and-false/">
         <h2 class="post-title">
             JavaScript中的True與False
@@ -452,22 +434,19 @@ denied..
             <i class="fa fa-calendar" aria-hidden="true"></i> 2017-02-02
         </p>
         
+        
         <div class="post-content-preview">
             <p>
                 這幾天用Enki來學習JavaScript，感覺不錯，You can’t handle the truth! 有一些特別True/False例子。這裡簡單記錄一下。
 最簡單的測試方法：1234567function test(something)&#123;  if (something) &#..
             </p>
         </div>
+        
     </a>
-
 </div>
 
-<hr>
 
-
-
-
-<div class="post-preview " style="background-image: url('/img/post-default.jpg'); background-position-y: 0">
+<div class="post-preview">
     <a href="/2017/01/20/using-javascript-to-create-web-storage/">
         <h2 class="post-title">
             利用JavaScript創建Web Storage
@@ -475,6 +454,7 @@ denied..
         <p class="post-meta">
             <i class="fa fa-calendar" aria-hidden="true"></i> 2017-01-20
         </p>
+        
         
         <div class="post-content-preview">
             <p>
@@ -484,16 +464,12 @@ HTML5 的 Web Storage 包括了兩種儲存方式：localStorage及sessionStorag
 Cookie的佔用空間非常小，大小限制于4KB左右，常見的用途是保存賬號登錄信息與登錄狀..
             </p>
         </div>
+        
     </a>
-
 </div>
 
-<hr>
 
-
-
-
-<div class="post-preview " style="background-image: url('/img/post-default.jpg'); background-position-y: 0">
+<div class="post-preview">
     <a href="/2017/01/14/javascript-variable-hoisting/">
         <h2 class="post-title">
             JavaScript的變量提升入門
@@ -502,6 +478,7 @@ Cookie的佔用空間非常小，大小限制于4KB左右，常見的用途是�
             <i class="fa fa-calendar" aria-hidden="true"></i> 2017-01-14
         </p>
         
+        
         <div class="post-content-preview">
             <p>
                 在JavaScript中，hoisting是一個容易犯錯的地方。在一段scope裡面，沒有定義變量就使用變量的話會彈出Reference Error。12 // ReferenceError: poi is not definedconsole.log(poi);
@@ -509,12 +486,9 @@ Cookie的佔用空間非常小，大小限制于4KB左右，常見的用途是�
 1234var name;c..
             </p>
         </div>
+        
     </a>
-
 </div>
-
-<hr>
-
 
 
 
@@ -632,11 +606,15 @@ Cookie的佔用空間非常小，大小限制于4KB左右，常見的用途是�
               
               
               
-              
-              
-              
-              
               <a href="/Tags/#SEO" title="SEO" rel="2">SEO</a>
+              
+              
+              
+              
+              
+              
+              
+              
               
               
               
@@ -664,11 +642,7 @@ Cookie的佔用空間非常小，大小限制于4KB左右，常見的用途是�
               
               
               
-              
-              
               <a href="/Tags/#Blog" title="Blog" rel="2">Blog</a>
-              
-              
               
               
               

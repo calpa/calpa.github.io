@@ -178,12 +178,10 @@
         text-align: center;
         background-repeat: no-repeat;
         border-radius: 3px;
-        background-size: cover;
         padding: 0;
         height: 300px;
         display: table;
         width: 100%;
-        background-color: rgba(0, 0, 0, 0.16);
     }
 
     /*去掉诗歌的背景图片*/
@@ -218,11 +216,6 @@
     /*不显示摘要*/
     .custom-haojen-container .post-preview:nth-child(1) .post-content-preview {
         display: none
-    }
-
-    /*只第一个显示背景图片*/
-    .custom-haojen-container .post-preview:not(:nth-child(1)) {
-        background-image: none !important;
     }
 
     /*第一个分界线去掉*/
@@ -307,8 +300,19 @@
 
 
 
+<style>
+.calpaFirstImage {
+  background-position-y: 50%;
+  background-size: contain;;
+  background-color: #ffffff;;
+  
+       background-image: url('https://i.imgur.com/phH7Jc4.png;');
+    
+  
+}
+</style>
 
-<div class="post-preview " style="background-image: url('/img/post-default.jpg'); background-position-y: 50%">
+<div class="post-preview calpaFirstImage">
     <a href="/2017/08/04/utilize-github-issue-by-using-gitalk/">
         <h2 class="post-title">
             善用 Github Issue 的開源評論插件 -- Gitalk
@@ -317,22 +321,12 @@
             <i class="fa fa-calendar" aria-hidden="true"></i> 2017-08-04
         </p>
         
-        <div class="post-content-preview">
-            <p>
-                
-前言以前，我的博客是用 Disqus 的評論插件，但是無論是載入速度，還是樣式上，都是有所缺乏的。我一直沒有安裝其他的評論插件，因為覺得搬家有點麻煩。但是當我試用一下之後，我就覺得這個插件安裝很方便，功能也很實用，尤其是可以寫 Markdown 評論，就讓我非常喜歡這個插件了。因此，我拜讀了一..
-            </p>
-        </div>
+        
     </a>
-
 </div>
 
-<hr>
 
-
-
-
-<div class="post-preview " style="background-image: url('https://i.imgur.com/ERjLSMf.jpg'); background-position-y: 0">
+<div class="post-preview">
     <a href="/2017/07/24/six-steps-to-debug-before-directly-ask-question/">
         <h2 class="post-title">
             項目代碼調試：提問前要做的六個步驟
@@ -341,21 +335,18 @@
             <i class="fa fa-calendar" aria-hidden="true"></i> 2017-07-24
         </p>
         
+        
         <div class="post-content-preview">
             <p>
                 上天對於每個地球人都是公平的，每個人都一天只有 24 小時。為什麼有的人會停留不前，有的人卻會不斷有所成長？其中一個原因是當遇到問題時，他們解決問題的方法是非常不同的。同樣是遇到問題，與其伸手，等其他程序員幫助去解決問題，倒不如自己先嘗試各種方法，然後才問人家。。。我會在這篇文章簡單說一下在你提..
             </p>
         </div>
+        
     </a>
-
 </div>
 
-<hr>
 
-
-
-
-<div class="post-preview " style="background-image: url('https://i.imgur.com/bLmxAZ3.gif'); background-position-y: 50%">
+<div class="post-preview">
     <a href="/2017/07/06/titanic-a-set-of-animated-icons/">
         <h2 class="post-title">
             簡單易用的開源 JavaScript 動畫圖標庫 -- Titanic
@@ -364,22 +355,19 @@
             <i class="fa fa-calendar" aria-hidden="true"></i> 2017-07-06
         </p>
         
+        
         <div class="post-content-preview">
             <p>
                 如果你用過 Font Awesome 等圖標，你可能會覺得它們很好看，用起來很很方便。但是，在用戶點擊這些圖標的時候，它們是不會有反應的。如果有這些圖標會動的話，那就更加好。Titanic 提供一系列的動畫圖標，以及以 JavaScript 的調用圖標動畫的方法。
 如果你想要看 Hello, W..
             </p>
         </div>
+        
     </a>
-
 </div>
 
-<hr>
 
-
-
-
-<div class="post-preview " style="background-image: url('https://i.imgur.com/AbKpx2P.jpg'); background-position-y: 50%">
+<div class="post-preview">
     <a href="/2017/07/02/introduction-to-hhkb-pro-2/">
         <h2 class="post-title">
             神兵利器 -- HHKB Pro 2 開箱文
@@ -388,6 +376,7 @@
             <i class="fa fa-calendar" aria-hidden="true"></i> 2017-07-02
         </p>
         
+        
         <div class="post-content-preview">
             <p>
                 
@@ -395,16 +384,12 @@
 ..
             </p>
         </div>
+        
     </a>
-
 </div>
 
-<hr>
 
-
-
-
-<div class="post-preview " style="background-image: url('https://i.imgur.com/Vb56RuU.jpg'); background-position-y: 50%">
+<div class="post-preview">
     <a href="/2017/06/19/front-end-performance-check-list-for-production-in-chinese/">
         <h2 class="post-title">
             【翻譯】前端性能優化必備工具清單
@@ -413,22 +398,19 @@
             <i class="fa fa-calendar" aria-hidden="true"></i> 2017-06-19
         </p>
         
+        
         <div class="post-content-preview">
             <p>
                 在網頁開發的世界裡，尤其是前端開發，我們會用很多時間尋找最好的設計，以及最好的內容。雖然這是沒有錯的，但是，我們會忘記去優化我們的網頁。。。這會讓用戶需要很久的時間，比如說，瀏覽器需要六秒到十秒以上才能完成整個渲染過程。。。
 在這篇文章，我會分享優化網頁的檢查清單。如果你覺得我有錯漏的地方，請在..
             </p>
         </div>
+        
     </a>
-
 </div>
 
-<hr>
 
-
-
-
-<div class="post-preview " style="background-image: url('https://i.imgur.com/1tRwQTX.jpg'); background-position-y: 0">
+<div class="post-preview">
     <a href="/2017/06/14/hong-kong-open-sources-conference-remarks/">
         <h2 class="post-title">
             【多圖】2017 年香港開源年會後記
@@ -437,21 +419,18 @@
             <i class="fa fa-calendar" aria-hidden="true"></i> 2017-06-14
         </p>
         
+        
         <div class="post-content-preview">
             <p>
                 大約兩個星期之前，我在 Facebook上看到 2017 年的香港開源年會的消息。我想，我是不是可以透過這個機會，認識一下不同領域的程序員呢。於是，我在 EventBrite 上面買了學生票。但最終我拿到 VIP 票了，感覺有點激動。我把這一次的會議做了幾點筆記，也許，每一個人都應該參加最少一次..
             </p>
         </div>
+        
     </a>
-
 </div>
 
-<hr>
 
-
-
-
-<div class="post-preview " style="background-image: url('/img/post-default.jpg'); background-position-y: 0">
+<div class="post-preview">
     <a href="/2017/06/12/hong-kong-open-data-from-zero-to-giveup/">
         <h2 class="post-title">
             香港開放數據平台 - 從入門到放棄
@@ -460,21 +439,18 @@
             <i class="fa fa-calendar" aria-hidden="true"></i> 2017-06-12
         </p>
         
+        
         <div class="post-content-preview">
             <p>
                 前言經過 2017 年香港開源年會之後，我都沒有去看香港的開放數據做得怎麼樣。今天香港正懸掛八號風球，正好是一個機會去了解一下。香港政府有一個開放數據平台，資料一線通，以多種檔案格式提供多個政府部門類別，機構的一些查詢資料，比如說天氣預報，中學教育統計資料。值得注意的是，這些檔案並不是 ODF，..
             </p>
         </div>
+        
     </a>
-
 </div>
 
-<hr>
 
-
-
-
-<div class="post-preview " style="background-image: url('/img/post-default.jpg'); background-position-y: 0">
+<div class="post-preview">
     <a href="/2017/06/01/create-markdown-powerpoint-in-5-mins/">
         <h2 class="post-title">
             5分鐘製作 Markdown PowerPoint
@@ -482,6 +458,7 @@
         <p class="post-meta">
             <i class="fa fa-calendar" aria-hidden="true"></i> 2017-06-01
         </p>
+        
         
         <div class="post-content-preview">
             <p>
@@ -498,12 +475,9 @@ Apache OpenOffice Impress
 Git ..
             </p>
         </div>
+        
     </a>
-
 </div>
-
-<hr>
-
 
 
 
@@ -617,11 +591,15 @@ Git ..
               
               
               
-              
-              
-              
-              
               <a href="/Tags/#SEO" title="SEO" rel="2">SEO</a>
+              
+              
+              
+              
+              
+              
+              
+              
               
               
               
@@ -649,11 +627,7 @@ Git ..
               
               
               
-              
-              
               <a href="/Tags/#Blog" title="Blog" rel="2">Blog</a>
-              
-              
               
               
               

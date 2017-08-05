@@ -178,12 +178,10 @@
         text-align: center;
         background-repeat: no-repeat;
         border-radius: 3px;
-        background-size: cover;
         padding: 0;
         height: 300px;
         display: table;
         width: 100%;
-        background-color: rgba(0, 0, 0, 0.16);
     }
 
     /*去掉诗歌的背景图片*/
@@ -218,11 +216,6 @@
     /*不显示摘要*/
     .custom-haojen-container .post-preview:nth-child(1) .post-content-preview {
         display: none
-    }
-
-    /*只第一个显示背景图片*/
-    .custom-haojen-container .post-preview:not(:nth-child(1)) {
-        background-image: none !important;
     }
 
     /*第一个分界线去掉*/
@@ -307,8 +300,19 @@
 
 
 
+<style>
+.calpaFirstImage {
+  background-position-y: 0;
+  background-size: cover;
+  background-color: #undefined;
+  
+       background-image: url('/img/post-default.jpg');
+    
+  
+}
+</style>
 
-<div class="post-preview " style="background-image: url('/img/post-default.jpg'); background-position-y: 0">
+<div class="post-preview calpaFirstImage">
     <a href="/2017/04/11/react-native-run-android/">
         <h2 class="post-title">
             【React Native】安裝Android Apk而無需連接伺服器的方法
@@ -317,22 +321,12 @@
             <i class="fa fa-calendar" aria-hidden="true"></i> 2017-04-11
         </p>
         
-        <div class="post-content-preview">
-            <p>
-                正常情況下，我們會用命令react-native run-android來在自己的電話中測試app，但是這個方法需要連接電腦。
-我們可以利用以下命令：1234react-native bundle --dev false --platform android --entry-file index..
-            </p>
-        </div>
+        
     </a>
-
 </div>
 
-<hr>
 
-
-
-
-<div class="post-preview " style="background-image: url('/img/post-default.jpg'); background-position-y: 0">
+<div class="post-preview">
     <a href="/2017/04/11/github-ssh/">
         <h2 class="post-title">
             利用ssh連接Github的方法
@@ -340,6 +334,7 @@
         <p class="post-meta">
             <i class="fa fa-calendar" aria-hidden="true"></i> 2017-04-11
         </p>
+        
         
         <div class="post-content-preview">
             <p>
@@ -352,16 +347,12 @@ ssh git@github.com
 
             </p>
         </div>
+        
     </a>
-
 </div>
 
-<hr>
 
-
-
-
-<div class="post-preview " style="background-image: url('/img/post-default.jpg'); background-position-y: 0">
+<div class="post-preview">
     <a href="/2017/04/08/common-http-status-code/">
         <h2 class="post-title">
             常見的14種HTTP狀態碼
@@ -369,6 +360,7 @@ ssh git@github.com
         <p class="post-meta">
             <i class="fa fa-calendar" aria-hidden="true"></i> 2017-04-08
         </p>
+        
         
         <div class="post-content-preview">
             <p>
@@ -389,16 +381,12 @@ ssh git@github.com
 304 Not M..
             </p>
         </div>
+        
     </a>
-
 </div>
 
-<hr>
 
-
-
-
-<div class="post-preview " style="background-image: url('/img/post-default.jpg'); background-position-y: 0">
+<div class="post-preview">
     <a href="/2017/04/05/front-end-booklist/">
         <h2 class="post-title">
             前端工程師的入門書單
@@ -407,6 +395,7 @@ ssh git@github.com
             <i class="fa fa-calendar" aria-hidden="true"></i> 2017-04-05
         </p>
         
+        
         <div class="post-content-preview">
             <p>
                 
@@ -414,16 +403,12 @@ ssh git@github.com
 以..
             </p>
         </div>
+        
     </a>
-
 </div>
 
-<hr>
 
-
-
-
-<div class="post-preview " style="background-image: url('/img/post-default.jpg'); background-position-y: 0">
+<div class="post-preview">
     <a href="/2017/04/01/git-workflow/">
         <h2 class="post-title">
             Git多人合作開發工作流程
@@ -431,6 +416,7 @@ ssh git@github.com
         <p class="post-meta">
             <i class="fa fa-calendar" aria-hidden="true"></i> 2017-04-01
         </p>
+        
         
         <div class="post-content-preview">
             <p>
@@ -443,16 +429,12 @@ git commit -m &quot;Message&quot; 很實用。。。
 git chec..
             </p>
         </div>
+        
     </a>
-
 </div>
 
-<hr>
 
-
-
-
-<div class="post-preview " style="background-image: url('/img/post-default.jpg'); background-position-y: 0">
+<div class="post-preview">
     <a href="/2017/03/27/interview/">
         <h2 class="post-title">
             Interview後記
@@ -460,6 +442,7 @@ git chec..
         <p class="post-meta">
             <i class="fa fa-calendar" aria-hidden="true"></i> 2017-03-27
         </p>
+        
         
         <div class="post-content-preview">
             <p>
@@ -477,16 +460,12 @@ HTTPS如何加密
 感想原本預約了兩點面試的，結果我一點多就去到，面試官讓我在一旁坐坐。感覺這次面試氣氛不錯，..
             </p>
         </div>
+        
     </a>
-
 </div>
 
-<hr>
 
-
-
-
-<div class="post-preview " style="background-image: url('/img/post-default.jpg'); background-position-y: 0">
+<div class="post-preview">
     <a href="/2017/03/25/javascript-this/">
         <h2 class="post-title">
             JavaScript的this
@@ -495,22 +474,19 @@ HTTPS如何加密
             <i class="fa fa-calendar" aria-hidden="true"></i> 2017-03-25
         </p>
         
+        
         <div class="post-content-preview">
             <p>
                 首先我們要理解調用函數的方法，最起碼可以用下面兩個方法：12func(arg1, arg2);func.call(context, arg1, arg2);
 之前我也沒怎麼見過後者，基本上都是直接call func的。後者func(arg1, arg2) 等於 func.call(undefin..
             </p>
         </div>
+        
     </a>
-
 </div>
 
-<hr>
 
-
-
-
-<div class="post-preview " style="background-image: url('/img/post-default.jpg'); background-position-y: 0">
+<div class="post-preview">
     <a href="/2017/02/26/hexo-change-site-url/">
         <h2 class="post-title">
             Hexo sitemap 簡單更改域名的方法
@@ -518,6 +494,7 @@ HTTPS如何加密
         <p class="post-meta">
             <i class="fa fa-calendar" aria-hidden="true"></i> 2017-02-26
         </p>
+        
         
         <div class="post-content-preview">
             <p>
@@ -532,12 +509,9 @@ hexo g
 hexo-generator-sitemap 生成的sitemap如何配..
             </p>
         </div>
+        
     </a>
-
 </div>
-
-<hr>
-
 
 
 
@@ -655,11 +629,15 @@ hexo-generator-sitemap 生成的sitemap如何配..
               
               
               
-              
-              
-              
-              
               <a href="/Tags/#SEO" title="SEO" rel="2">SEO</a>
+              
+              
+              
+              
+              
+              
+              
+              
               
               
               
@@ -687,11 +665,7 @@ hexo-generator-sitemap 生成的sitemap如何配..
               
               
               
-              
-              
               <a href="/Tags/#Blog" title="Blog" rel="2">Blog</a>
-              
-              
               
               
               

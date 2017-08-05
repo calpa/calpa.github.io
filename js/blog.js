@@ -28,6 +28,16 @@ function isPages(attr) {
   var currentBoolean = document.querySelector('.navbar.navbar-custom').getAttribute(attr);
   return currentBoolean === 'true';
 }
+
+// 判斷是否需要魔法
+function isMagicable() {
+  var magicable = document.querySelector('article').getAttribute('data-enableMagic');
+  if (magicable === 'false') {
+    document.getElementById('nav-top').classList.add('is-fixed');
+  }
+
+  return magicable === 'true'; // data is string type
+}
 /*
     滚动函数
     接收三个参数,
@@ -58,7 +68,7 @@ function scrollCheck(scrollTarget, toggleClass, scrollHeight, reversed) {
 
 // Change Blog Post Navbar
 (function() {
-  if (!isPages('data-ishome')) {
+  if (!isPages('data-ishome') && isMagicable() === true) {
     // navbar
     var navbar = document.querySelector('.navbar-custom');
     var navbarHeight = 60;

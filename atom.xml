@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://calpa.me/"/>
-  <updated>2017-08-04T14:45:19.000Z</updated>
+  <updated>2017-08-05T02:58:13.000Z</updated>
   <id>https://calpa.me/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://calpa.me/2017/08/04/utilize-github-issue-by-using-gitalk/"/>
     <id>https://calpa.me/2017/08/04/utilize-github-issue-by-using-gitalk/</id>
     <published>2017-08-04T12:00:00.000Z</published>
-    <updated>2017-08-04T14:45:19.000Z</updated>
+    <updated>2017-08-05T02:58:13.000Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://i.imgur.com/DqyRXB9.jpg" alt="Gitalk"></p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>以前，我的博客是用 Disqus 的評論插件，但是無論是載入速度，還是樣式上，都是有所缺乏的。我一直沒有安裝其他的評論插件，因為覺得搬家有點麻煩。但是當我試用一下之後，我就覺得這個插件安裝很方便，功能也很實用，尤其是可以寫 Markdown 評論，就讓我非常喜歡這個插件了。因此，我拜讀了一下 <a href="https://github.com/gitalk/gitalk" rel="external nofollow noopener noreferrer" target="_blank">Gitalk Github Repo</a> 的代碼。我會在這裡說一下我對這個插件的理解，並提交繁體中文 README.md 到官方倉庫上。</p>
@@ -36,7 +36,7 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> <span class="string">'gitalk/dist/gitalk.css'</span></div><div class="line"><span class="keyword">import</span> Gitalk <span class="keyword">from</span> <span class="string">'gitalk'</span></div></pre></td></tr></table></figure>
 <h3 id="去-Github-上面-clone-Gitalk"><a href="#去-Github-上面-clone-Gitalk" class="headerlink" title="去 Github 上面 clone Gitalk"></a>去 Github 上面 clone Gitalk</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> git@github.com:gitalk/gitalk.git</div><div class="line"><span class="built_in">cd</span> gitalk/dist/</div></pre></td></tr></table></figure>
 <p>然後把壓縮過的<code>gitalk.min.js</code> 放進你的項目。</p>
-<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p><img src="http://i.imgur.com/C6HEsRv.png" alt="Register a new OAuth Application"></p>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p><img src="https://i.imgur.com/C6HEsRv.png" alt="Register a new OAuth Application"></p>
 <p>Gitalk 需要 <strong>Github Application</strong>，如果沒有請點擊 <a href="https://github.com/settings/applications/new" rel="external nofollow noopener noreferrer" target="_blank">Register a new OAuth application</a> 申請，<code>Authorization callback URL</code> 填寫當前使用插件頁面的域名，例如我的博客就是填寫 <a href="https://calpa.me">https://calpa.me</a></p>
 <h3 id="代碼範例"><a href="#代碼範例" class="headerlink" title="代碼範例"></a>代碼範例</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> gitalk = <span class="keyword">new</span> Gitalk(&#123;</div><div class="line">  <span class="attr">clientID</span>: <span class="string">'Github Application Client ID'</span>,</div><div class="line">  <span class="attr">clientSecret</span>: <span class="string">'Github Application Client Secret'</span>,</div><div class="line">  <span class="attr">repo</span>: <span class="string">'Github repo'</span>,</div><div class="line">  <span class="attr">owner</span>: <span class="string">'Github repo owner'</span>,</div><div class="line">  <span class="attr">admin</span>: [<span class="string">'Github repo collaborators'</span>],</div><div class="line">&#125;)</div><div class="line"></div><div class="line">gitalk.render(<span class="string">'gitalk-container'</span>)</div></pre></td></tr></table></figure>
 <h2 id="Gitalk-選項"><a href="#Gitalk-選項" class="headerlink" title="Gitalk 選項"></a>Gitalk 選項</h2><ul>
@@ -92,7 +92,7 @@
 <p>如果當前頁面沒有相應的 isssue 且登錄的用戶屬於 admin，則會自動創建 issue。如果設置為 <code>true</code>，則顯示一個初始化頁面，創建 issue 需要點擊 <code>init</code> 按鈕。</p>
 </li>
 <li><p><strong>proxy</strong> <code>String</code></p>
-<p>Default: <code>https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token</code>.</p>
+<p>Default: <a href="https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token" rel="external nofollow noopener noreferrer" target="_blank">https://cors-anywhere/herokuapp.com</a></p>
 <p> <a href="https://github.com/isaacs/github/issues/330" rel="external nofollow noopener noreferrer" target="_blank">Github oauth 請求到反向代理，為了支持 CORS。 </a></p>
 </li>
 <li><p><strong>flipMoveOptions</strong> <code>Object</code></p>
