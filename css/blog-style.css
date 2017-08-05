@@ -384,20 +384,6 @@ article blockquote footer{
     padding: 55px 15px 15px;
 }
 
-
-.intro-header .site-heading,
-.intro-header .page-heading,
-.intro-header .post-heading{
-    color: #fff;
-    text-shadow: 0 0 40px black;
-}
-
-.intro-header .site-heading h1,
-.intro-header .page-heading h1,
-.intro-header .post-heading h1 {
-    text-shadow: 0 0 40px black;
-}
-
 .intro-header .site-heading .subheading,
 .intro-header .page-heading .subheading {
     font-size: 18px;
