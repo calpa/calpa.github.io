@@ -717,10 +717,8 @@ img::-moz-selection {
 .tags a,
 .tags .tag {
     display: inline-block;
-    border: 1px solid rgba(255, 255, 255, 0.8);
     border-radius: 4px;
     padding: 0 10px;
-    color: #ffffff;
     line-height: 24px;
     font-size: 12px;
     text-decoration: none;
@@ -732,8 +730,8 @@ img::-moz-selection {
 .tags .tag:hover,
 .tags a:active,
 .tags .tag:active {
-    color: white;
-    border-color: white;
+    color: #6cf;
+    border-color: #6cf;
     background-color: rgba(255, 255, 255, 0.4);
     text-decoration: none;
 }

@@ -86,6 +86,10 @@
             
               
                 
+              
+            
+              
+                
                   <li>
                     <a href="/Tags/">
                       Tags
@@ -96,13 +100,9 @@
             
               
                 
-              
-            
-              
-                
                   <li>
-                    <a href="/archive/">
-                      Archive
+                    <a href="/about/">
+                      About
                     </a>
                   </li>
                 
@@ -111,8 +111,8 @@
               
                 
                   <li>
-                    <a href="/about/">
-                      About
+                    <a href="/archive/">
+                      Archive
                     </a>
                   </li>
                 
@@ -311,9 +311,9 @@
 </style>
 
 <div class="post-preview calpaFirstImage">
-    <a href="/2017/01/08/readme/">
+    <a href="/2017/01/08/hexo-404-page/">
         <h2 class="post-title">
-            Github上的README.md
+            Hexo之建立404 Page
         </h2>
         <p class="post-meta">
             <i class="fa fa-calendar" aria-hidden="true"></i> 2017-01-08
@@ -325,9 +325,9 @@
 
 
 <div class="post-preview">
-    <a href="/2017/01/08/hexo-404-page/">
+    <a href="/2017/01/08/readme/">
         <h2 class="post-title">
-            Hexo之建立404 Page
+            Github上的README.md
         </h2>
         <p class="post-meta">
             <i class="fa fa-calendar" aria-hidden="true"></i> 2017-01-08
@@ -336,13 +336,8 @@
         
         <div class="post-content-preview">
             <p>
-                建立方法
-在Terminal輸入 hexo new page 404
-然後打開儲存404檔案的位置，比如說：/source/404/index.md
-在這個檔案最頂部寫下permalink: /404.html就可以了。
-
-參考資料
-Creating a custom 404 page for ..
+                Hexo在渲染的時候默認是把source下面所有的.md檔案渲染成html，這樣的話會覆蓋掉Github上的CNAME和README.md。但是我又不想這樣，我想Github Repo下面可以直接看到這個blog的README.md內容。
+所以我就修改Hexo根目錄下的_config.yml：1..
             </p>
         </div>
         
@@ -441,13 +436,17 @@ Creating a custom 404 page for ..
           <div class="tags">
               
               
-              
-              
               <a href="/Tags/#JavaScript" title="JavaScript" rel="14">JavaScript</a>
               
               
               
+              
+              
               <a href="/Tags/#Web" title="Web" rel="5">Web</a>
+              
+              
+              
+              
               
               
               
@@ -465,21 +464,17 @@ Creating a custom 404 page for ..
               
               
               
-              
-              
-              
-              
-              
-              
               <a href="/Tags/#Github" title="Github" rel="2">Github</a>
               
               
               
-              <a href="/Tags/#Hexo" title="Hexo" rel="5">Hexo</a>
-              
-              
-              
               <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
+              
+              
+              
+              
+              
+              <a href="/Tags/#Hexo" title="Hexo" rel="5">Hexo</a>
               
               
               
@@ -511,15 +506,15 @@ Creating a custom 404 page for ..
               
               
               
-              
-              
-              
-              
               <a href="/Tags/#CSS" title="CSS" rel="2">CSS</a>
               
               
               
+              
+              
               <a href="/Tags/#Blog" title="Blog" rel="2">Blog</a>
+              
+              
               
               
               
