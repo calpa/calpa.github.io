@@ -18,24 +18,24 @@
     <meta name="google-site-verification" content="riZBcestky7i9xY__A-5J-2EE65T75X1u-zgbss37Io">
     <title>
         
-        404｜Calpa&#39;s blog
+        Search｜Calpa&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="https://calpa.me//404.html">
+    <link rel="canonical" href="https://calpa.me/search/">
 
     <!-- Open Graph -->
     
     <meta name="description" content="Calpa的技術博客，開發日常，以及遇到的坑">
 <meta property="og:type" content="website">
-<meta property="og:title" content="404 | Calpa's blog">
-<meta property="og:url" content="https://calpa.me/404.html">
+<meta property="og:title" content="Search | Calpa's blog">
+<meta property="og:url" content="https://calpa.me/search/index.html">
 <meta property="og:site_name" content="Calpa">
 <meta property="og:description" content="Calpa的技術博客，開發日常，以及遇到的坑">
 <meta property="og:image" content="https://calpa.me/img/post-default.jpg">
-<meta property="og:updated_time" content="2017-04-03T10:09:30.000Z">
+<meta property="og:updated_time" content="2017-08-26T12:55:59.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="404 | Calpa's blog">
+<meta name="twitter:title" content="Search | Calpa's blog">
 <meta name="twitter:description" content="Calpa的技術博客，開發日常，以及遇到的坑">
 <meta name="twitter:image" content="https://calpa.me/img/post-default.jpg">
 
@@ -83,7 +83,7 @@
     <div id="huxblog_navbar">
       <div class="navbar-collapse">
         <ul class="nav navbar-nav navbar-center title-calpa display-none">
-          <li><a href="#" onclick="scrolltoTop(event)">404</a></li>
+          <li><a href="#" onclick="scrolltoTop(event)">Search</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li>
@@ -182,23 +182,103 @@
 </script>
 
 <!-- Main Content -->
+<style>
+    .intro-header .site-heading {
+        margin: 50px;
+    }
+    header.intro-header {
+        background-image: url('/img/blue-blur-background.jpg')
+    }
+
+    .intro-header .site-heading,
+    .intro-header .page-heading,
+    .intro-header .post-heading{
+        color: #fff;
+        text-shadow: 0 0 40px black;
+    }
+
+    .intro-header .site-heading h1,
+    .intro-header .page-heading h1,
+    .intro-header .post-heading h1 {
+        text-shadow: 0 0 40px black;
+    }
+</style>
+
 
 <!-- Page Header -->
-<header class="intro-header" style="background-image: url('/img/blue-blur-background.jpg')">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading">
-                    <h1>找不到(￣▽￣") 汗</h1>
-                    <span class="subheading"></span>
+                <div class="site-heading text-center">
+                    <h1 class="title">站內搜尋</h1>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <input type="text" id="search-box">
+      <div id="hits-container"></div>
+      <div id="pagination-container"></div>
+    </div>
+  </div>
+</div>
+
+<script type="text/html" id="hit-template">
+  <a class="hit-content"  href="{{_highlightResult.permalink.value}}">
+    <p class="hit-name">{{{_highlightResult.title.value}}}</p>
+    <p class="hit-date">{{{_highlightResult.formattedDate.value}}}</p>
+  </a>
+</script>
+
 <script>
-    document.body.classList.add('page-fullscreen');
+  var search = instantsearch({
+    appId: 'ABS4QV1E9V',
+    apiKey: 'd9adae0b31ed52fc0f6c4c75aad428bf',
+    indexName: 'blog',
+    urlSync: true
+  });
+
+
+  search.addWidget(
+    instantsearch.widgets.searchBox({
+      container: '#search-box',
+      placeholder: '搜尋博客內容'
+    })
+  );
+
+  search.addWidget(
+    instantsearch.widgets.hits({
+      container: '#hits-container',
+      templates: {
+        item: document.getElementById('hit-template').innerHTML,
+        empty: "找不到 <em>{{query}}</em> 。。。"
+      }
+    })
+  );
+
+  search.addWidget(
+    instantsearch.widgets.pagination({
+      container: '#pagination-container'
+    })
+  );
+
+  search.addWidget(
+  instantsearch.widgets.analytics({
+    pushFunction: function(formattedParameters, state, results) {
+      // Google Analytics
+      window.ga('set', 'page', '/search/query/?query=' + state.query + '&' + formattedParameters + '&numberOfHits=' + results.nbHits);
+      window.ga('send', 'pageView');
+    }
+  })
+);
+
+
+  search.start();
 </script>
 
 <!-- Footer -->

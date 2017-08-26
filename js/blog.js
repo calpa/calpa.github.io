@@ -31,12 +31,16 @@ function isPages(attr) {
 
 // 判斷是否需要魔法
 function isMagicable() {
-  var magicable = document.querySelector('article').getAttribute('data-enableMagic');
-  if (magicable === 'false') {
-    document.getElementById('nav-top').classList.add('is-fixed');
+  var article = document.querySelector('article');
+  if (article) {
+    var magicable = article.getAttribute('data-enableMagic');
+    if (magicable === 'false') {
+      document.getElementById('nav-top').classList.add('is-fixed');
+    }
+    return magicable === 'true'; // data is string type
   }
 
-  return magicable === 'true'; // data is string type
+  return false;
 }
 /*
     滚动函数

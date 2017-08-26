@@ -52,6 +52,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script>
     <link rel="stylesheet" href="/css/pace-theme-minimal.min.css">
     
+
+    
+      <!-- instantsearch.js -->
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@1/dist/instantsearch.min.css">
+      <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@1/dist/instantsearch.min.js"></script>
+    
 </head>
 
 
@@ -101,6 +107,16 @@
               
                 
                   <li>
+                    <a href="/archive/">
+                      Archive
+                    </a>
+                  </li>
+                
+              
+            
+              
+                
+                  <li>
                     <a href="/about/">
                       About
                     </a>
@@ -111,8 +127,8 @@
               
                 
                   <li>
-                    <a href="/archive/">
-                      Archive
+                    <a href="/search/">
+                      Search
                     </a>
                   </li>
                 
@@ -282,7 +298,16 @@
                         <!--移动端头部显示-->
                         <img src="/img/profile.png" alt="avatar">
                         <h4>Calpa</h4>
-                        <p>夢裡不覺秋已深，餘情豈是為他人。</p>
+
+                        <!-- 關於我的一言兩句 -->
+                        
+  
+      <p>夢裡不覺秋已深</p>
+    
+      <p>餘情豈是為他人</p>
+    
+
+
                     </div>
                 </div>
             </div>
@@ -506,10 +531,19 @@
             <img src="/img/profile.png" alt="avatar">
             
             <h5>Calpa</h5>
+            <!-- 關於我的一言兩句 -->
             
-            <p>夢裡不覺秋已深，餘情豈是為他人。</p>
-            
+  
+      <p>夢裡不覺秋已深</p>
+    
+      <p>餘情豈是為他人</p>
+    
+
+
             <hr>
+
+            <!-- 跳轉到搜尋 -->
+            <input href="/search" placeholder="搜尋博客內容" onblur="navigateToSearch()" onkeypress="handleEnter(event)" id="customSearch">
             <!-- SNS Link 社交 -->
             <ul class="list-inline">
                 
@@ -551,6 +585,8 @@
           <div class="tags">
               
               
+              
+              
               <a href="/Tags/#JavaScript" title="JavaScript" rel="14">JavaScript</a>
               
               
@@ -558,6 +594,8 @@
               
               
               <a href="/Tags/#Web" title="Web" rel="5">Web</a>
+              
+              
               
               
               
@@ -577,17 +615,15 @@
               
               
               
-              
-              
               <a href="/Tags/#Github" title="Github" rel="2">Github</a>
               
               
               
-              <a href="/Tags/#Hexo" title="Hexo" rel="5">Hexo</a>
-              
-              
-              
               <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
+              
+              
+              
+              <a href="/Tags/#Hexo" title="Hexo" rel="5">Hexo</a>
               
               
               
@@ -628,8 +664,6 @@
               
               
               <a href="/Tags/#Blog" title="Blog" rel="2">Blog</a>
-              
-              
               
               
               
@@ -763,8 +797,20 @@
           
       </ul>
     
-
 </div>
+
+<script>
+function navigateToSearch() {
+  var q = document.getElementById("customSearch").value;
+  location.href="https://calpa.me/search/?q=" + q;
+}
+
+function handleEnter(e) {
+  if (e.keyCode == 13) {
+    navigateToSearch();
+  }
+}
+</script>
 
     </div>
 </div>
