@@ -101,7 +101,11 @@
     height: 56px;
     line-height: 25px; }
     .navbar-custom .navbar-brand:hover {
-      color: rgba(255, 255, 255, 0.8); }
+      color: #0085a1; }
+    @media (min-width: 768px) {
+      .navbar-custom .navbar-brand {
+        padding: 20px;
+        line-height: 17px; } }
   .navbar-custom .nav li a {
     text-transform: uppercase;
     font-size: 12px;
@@ -111,26 +115,21 @@
     text-shadow: 0 0 1px rgba(0, 0, 0, 0.1); }
     .navbar-custom .nav li a:active {
       background: rgba(0, 0, 0, 0.12); }
+    @media (min-width: 768px) {
+      .navbar-custom .nav li a {
+        color: white;
+        padding: 20px; }
+        .navbar-custom .nav li a:hover, .navbar-custom .nav li a:focus {
+          color: #FC7097; }
+        .navbar-custom .nav li a:active {
+          background: none; } }
 
 @media only screen and (min-width: 768px) {
   .navbar-custom {
     background: transparent;
     border-bottom: 1px solid transparent; }
     .navbar-custom body {
-      font-size: 20px; }
-    .navbar-custom .navbar-brand {
-      color: white;
-      padding: 20px;
-      line-height: 17px; }
-      .navbar-custom .navbar-brand:hover, .navbar-custom .navbar-brand:focus {
-        color: rgba(255, 255, 255, 0.8); }
-    .navbar-custom .nav li a {
-      color: white;
-      padding: 20px; }
-      .navbar-custom .nav li a:hover, .navbar-custom .nav li a:focus {
-        color: #FC7097; }
-      .navbar-custom .nav li a:active {
-        background: none; } }
+      font-size: 20px; } }
 
 @media only screen and (min-width: 1170px) {
   .navbar-custom {
@@ -393,6 +392,10 @@ footer {
 
 .post-tags {
   justify-content: center; }
+  .post-tags .tag {
+    background-color: transparent; }
+    .post-tags .tag:hover {
+      color: #0085a1; }
 
 .pager {
   margin: 20px 0 0 !important;
@@ -434,6 +437,38 @@ footer {
     background-color: #404040;
     cursor: not-allowed; }
 
+.toc-wrap {
+  margin-top: 30px;
+  list-style: none;
+  color: darkgrey;
+  border-left: #eee 3px solid;
+  padding-left: 12px; }
+  .toc-wrap .toc {
+    list-style: none;
+    padding-left: 0; }
+  .toc-wrap li > ol {
+    padding-left: 8px;
+    list-style: none; }
+  .toc-wrap .toc-level-2 .toc-link {
+    color: #0085a1;
+    font-size: .9em; }
+    .toc-wrap .toc-level-2 .toc-link:hover {
+      color: #00afd4; }
+  .toc-wrap .toc-level-2 .toc-level-3 .toc-link {
+    color: #404040;
+    font-size: .85em;
+    padding-left: 5px; }
+    .toc-wrap .toc-level-2 .toc-level-3 .toc-link:hover {
+      color: #5a5a5a; }
+  .toc-wrap.toc-fixed {
+    position: fixed;
+    top: 85px;
+    margin-top: 0;
+    max-height: 81%;
+    overflow: auto;
+    z-index: 1;
+    background-color: #fff; }
+
 *[id]:before {
   content: "";
   display: block;
@@ -442,11 +477,19 @@ footer {
   /* negative fixed header height */
   margin: -60px 0 0; }
 
+/** Anchor.js **/
+/* place left on bigger screen */
+@media (min-width: 800px) {
+  .anchorjs-link:hover {
+    color: #0085a1; }
+  *:hover > .anchorjs-link {
+    transition: color .25s linear; } }
+
 .list-inline {
   margin: 0; }
 
 hr {
-  margin: 0; }
+  margin: 10px; }
 
 body {
   line-height: 1.7;
@@ -701,37 +744,6 @@ form .row:first-child .floating-label-form-group {
 */
 .sidebar-container .short-about {
   text-align: center; }
-
-.container .toc-col {
-  padding: 0; }
-
-.container .toc-wrap {
-  margin-top: 30px;
-  list-style: none;
-  color: darkgrey;
-  border-left: #eee 3px solid;
-  padding-left: 12px; }
-  .container .toc-wrap > ol {
-    list-style: none;
-    padding-left: 0; }
-  .container .toc-wrap li > ol {
-    padding-left: 8px;
-    list-style: none; }
-  .container .toc-wrap .toc-level-2 > a {
-    color: #0085a1;
-    font-size: .9em; }
-  .container .toc-wrap li ol a {
-    color: #555;
-    font-size: .85em;
-    padding-left: 5px; }
-  .container .toc-wrap.toc-fixed {
-    position: fixed;
-    top: 85px;
-    margin-top: 0;
-    max-height: 81%;
-    overflow: auto;
-    z-index: 1;
-    background-color: #fff; }
 
 .post-preview > a > .post-title {
   margin-bottom: 0;

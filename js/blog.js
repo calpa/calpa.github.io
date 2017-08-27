@@ -72,7 +72,7 @@ function scrollCheck(scrollTarget, toggleClass, scrollHeight, reversed) {
 
 // Change Blog Post Navbar
 (function() {
-  if (!isPages('data-ishome') && isMagicable() === true) {
+  if (!isPages('data-ishome')) {
     // navbar
     var navbar = document.querySelector('.navbar-custom');
     var navbarHeight = 60;
@@ -92,8 +92,10 @@ function scrollCheck(scrollTarget, toggleClass, scrollHeight, reversed) {
       scrollCheck(toc, 'toc-fixed', introHeader);
     }
 
-    scrollCheck(navbar, 'is-fixed', navbarHeight);
-    scrollCheck(postTitle, 'display-none', navbarHeight, true);
+    if (isMagicable() === true) {
+      scrollCheck(navbar, 'is-fixed', navbarHeight);
+      scrollCheck(postTitle, 'display-none', navbarHeight, true);
+    }
   }
 })();
 

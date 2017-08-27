@@ -339,6 +339,10 @@ header.intro-header {
               
               
               
+              <a href="/Tags/#React" title="React" rel="2">React</a>
+              
+              
+              
               
               
               
@@ -397,8 +401,6 @@ header.intro-header {
               
               
               
-              
-              
               <a href="/Tags/#CSS" title="CSS" rel="2">CSS</a>
               
               
@@ -414,7 +416,6 @@ header.intro-header {
     <hr>
 
     
-      <hr>
       <h5 style="text-align: center;">友情鏈接</h5>
       <ul class="list-inline" style="text-align: center;">
           
@@ -432,6 +433,12 @@ header.intro-header {
     
       <h5 style="text-align: center;">最新文章</h5>
       <ul class="list-inline" style="text-align: center;">
+        
+          <li>
+            <a href="/2017/08/27/react-app-optimization-1-source-map/">
+              React 應用輕量化（一）Source Map
+            </a>
+          </li>
         
           <li>
             <a href="/2017/08/04/utilize-github-issue-by-using-gitalk/">
@@ -457,17 +464,11 @@ header.intro-header {
             </a>
           </li>
         
-          <li>
-            <a href="/2017/06/19/front-end-performance-check-list-for-production-in-chinese/">
-              【翻譯】前端性能優化必備工具清單
-            </a>
-          </li>
-        
       </ul>
     
     <hr>
 
-    <h5 style="text-align: center;">共43篇文章</h5>
+    <h5 style="text-align: center;">共44篇文章</h5>
     <hr>
 
     <!-- All Blog Posts -->
@@ -481,7 +482,7 @@ header.intro-header {
           
               <li>
                 <a href="/archive/#2017-8">
-                  8月(1)
+                  8月(2)
                 </a>
               </li>
             
@@ -577,7 +578,7 @@ function handleEnter(e) {
     
     
     <li class="next">
-        <a href="/2017/01/08/readme/" data-toggle="tooltip" data-placement="top" title="Github上的README.md">Next Post &rarr;</a>
+        <a href="/2017/01/08/hexo-404-page/" data-toggle="tooltip" data-placement="top" title="Hexo之建立404 Page">Next Post &rarr;</a>
     </li>
     
 </ul>
@@ -626,23 +627,12 @@ function handleEnter(e) {
 <script>
     async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function () {
         anchors.options = {
-            visible: 'always',
+            visible: 'hover',
             placement: 'left',
         };
         anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
     })
 </script>
-<style>
-    /* place left on bigger screen */
-    @media all and (min-width: 800px) {
-      .anchorjs-link:hover {
-        color: #2500AD;
-      }
-      *:hover > .anchorjs-link {
-        transition: color .25s linear;
-      }
-    }
-</style>
 
 
 

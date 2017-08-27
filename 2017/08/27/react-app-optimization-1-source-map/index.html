@@ -18,38 +18,26 @@
     <meta name="google-site-verification" content="riZBcestky7i9xY__A-5J-2EE65T75X1u-zgbss37Io">
     <title>
         
-        神兵利器 -- HHKB Pro 2 開箱文｜Calpa&#39;s blog
+        React 應用輕量化（一）Source Map｜Calpa&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="https://calpa.me/2017/07/02/introduction-to-hhkb-pro-2/">
+    <link rel="canonical" href="https://calpa.me/2017/08/27/react-app-optimization-1-source-map/">
 
     <!-- Open Graph -->
     
-    <meta name="description" content="我一開始拿到 Happy Hacking KeyBoard Pro 2時，我就問為什麼鍵盤可以完全沒有字的，那叫我如何輸入。。。雖然我可以盲打（不看鍵盤直接輸入），但也許我未必可以有能力使用這樣的鍵盤。但寫了一天代碼之後，我才發現，原來這一切都是自己的猜疑而已。這個鍵盤打起來就是一個字，爽。
-
-HHKB Pro 2 盒子
-
-HHKB在我取得這個 HHKB Pro 2 之前，我是一直在用 Cool">
+    <meta name="description" content="前言create-react-app 提供了很方便的創建 React 應用途徑。它已經把 webpack, Babel, Autoprefixer, ESLint, Jest 等常用工具打包進去。可以說是一個非常方便，好用的製造 React 應用工具。當我打算把包裝好的檔案推上去的時候，我卻發現打包之後的檔案大小有點大，因此我就開始優化這個網頁應用了。第一點我優化的地方就是 Source Map。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="神兵利器 -- HHKB Pro 2 開箱文 | Calpa's blog">
-<meta property="og:url" content="https://calpa.me/2017/07/02/introduction-to-hhkb-pro-2/index.html">
+<meta property="og:title" content="React 應用輕量化（一）Source Map | Calpa's blog">
+<meta property="og:url" content="https://calpa.me/2017/08/27/react-app-optimization-1-source-map/index.html">
 <meta property="og:site_name" content="Calpa">
-<meta property="og:description" content="我一開始拿到 Happy Hacking KeyBoard Pro 2時，我就問為什麼鍵盤可以完全沒有字的，那叫我如何輸入。。。雖然我可以盲打（不看鍵盤直接輸入），但也許我未必可以有能力使用這樣的鍵盤。但寫了一天代碼之後，我才發現，原來這一切都是自己的猜疑而已。這個鍵盤打起來就是一個字，爽。
-
-HHKB Pro 2 盒子
-
-HHKB在我取得這個 HHKB Pro 2 之前，我是一直在用 Cool">
-<meta property="og:image" content="https://i.imgur.com/AbKpx2P.jpg?imageView2/1/w/1400/h/400/interlace/1/q/90">
-<meta property="og:updated_time" content="2017-07-02T15:54:05.000Z">
+<meta property="og:description" content="前言create-react-app 提供了很方便的創建 React 應用途徑。它已經把 webpack, Babel, Autoprefixer, ESLint, Jest 等常用工具打包進去。可以說是一個非常方便，好用的製造 React 應用工具。當我打算把包裝好的檔案推上去的時候，我卻發現打包之後的檔案大小有點大，因此我就開始優化這個網頁應用了。第一點我優化的地方就是 Source Map。">
+<meta property="og:image" content="https://i.imgur.com/UtbKsLJ.jpg">
+<meta property="og:updated_time" content="2017-08-27T03:36:42.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="神兵利器 -- HHKB Pro 2 開箱文 | Calpa's blog">
-<meta name="twitter:description" content="我一開始拿到 Happy Hacking KeyBoard Pro 2時，我就問為什麼鍵盤可以完全沒有字的，那叫我如何輸入。。。雖然我可以盲打（不看鍵盤直接輸入），但也許我未必可以有能力使用這樣的鍵盤。但寫了一天代碼之後，我才發現，原來這一切都是自己的猜疑而已。這個鍵盤打起來就是一個字，爽。
-
-HHKB Pro 2 盒子
-
-HHKB在我取得這個 HHKB Pro 2 之前，我是一直在用 Cool">
-<meta name="twitter:image" content="https://i.imgur.com/AbKpx2P.jpg?imageView2/1/w/1400/h/400/interlace/1/q/90">
+<meta name="twitter:title" content="React 應用輕量化（一）Source Map | Calpa's blog">
+<meta name="twitter:description" content="前言create-react-app 提供了很方便的創建 React 應用途徑。它已經把 webpack, Babel, Autoprefixer, ESLint, Jest 等常用工具打包進去。可以說是一個非常方便，好用的製造 React 應用工具。當我打算把包裝好的檔案推上去的時候，我卻發現打包之後的檔案大小有點大，因此我就開始優化這個網頁應用了。第一點我優化的地方就是 Source Map。">
+<meta name="twitter:image" content="https://i.imgur.com/UtbKsLJ.jpg">
 
     <!-- Bootstrap v3.3.7 Core CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
@@ -95,7 +83,7 @@ HHKB在我取得這個 HHKB Pro 2 之前，我是一直在用 Cool">
     <div id="huxblog_navbar">
       <div class="navbar-collapse">
         <ul class="nav navbar-nav navbar-center title-calpa display-none">
-          <li><a href="#" onclick="scrolltoTop(event)">神兵利器 -- HHKB Pro 2 開箱文</a></li>
+          <li><a href="#" onclick="scrolltoTop(event)">React 應用輕量化（一）Source Map</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li>
@@ -198,13 +186,13 @@ HHKB在我取得這個 HHKB Pro 2 之前，我是一直在用 Cool">
 <!--only post-->
 
   
-    <img class="wechat-title-img" src="https://i.imgur.com/AbKpx2P.jpg">
+    <img class="wechat-title-img" src="https://i.imgur.com/IYhTVXU.png">
   
 
 <style>
     
     header.intro-header {
-      background-image: url('https://i.imgur.com/AbKpx2P.jpg?imageView2/1/w/1400/h/400/interlace/1/q/90');
+      background-image: url('https://i.imgur.com/IYhTVXU.png?imageView2/1/w/1400/h/400/interlace/1/q/90');
     }
     
 </style>
@@ -212,22 +200,28 @@ HHKB在我取得這個 HHKB Pro 2 之前，我是一直在用 Cool">
 <style>
 header.intro-header {
   
+    margin-top: 60px;
+  
+  
+    background-color: #fff;;
   
 
+  
+    background-size: contain;;
   
 }
 
 .post-heading {
   
-    color: #fff;
-    text-shadow: 0 0 40px rgba(0, 0, 0, 1);
+    color: black;
+    text-shadow: none;
   
 }
 
 .post-tags >.tag{
   
-    color: #fff;
-    border-color: rgba(255, 255, 255, 0.4);
+    color: black;
+    border: 1px solid black;
   
 }
 </style>
@@ -237,23 +231,23 @@ header.intro-header {
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>神兵利器 -- HHKB Pro 2 開箱文</h1>
+                    <h1>React 應用輕量化（一）Source Map</h1>
                     
                     <span>
                       作者 Calpa
                     </span>
                     
                     <span>
-                      日期 2017-07-02
+                      日期 2017-08-27
                     </span>
 
                     
-                      <span class="post-count">共453字</span>
+                      <span class="post-count">共515字</span>
                     
 
                     <div class="tags text-center post-tags">
                         
-                        <a class="tag" href="/Tags/#KeyBoard" title="KeyBoard">KeyBoard</a>
+                        <a class="tag" href="/Tags/#React" title="React">React</a>
                         
                     </div>
                 </div>
@@ -263,7 +257,7 @@ header.intro-header {
 </header>
 
 <!-- Post Content -->
-<article data-enablemagic="true">
+<article data-enablemagic="false">
     <div class="container">
         <div class="row">
             <!-- Post Container -->
@@ -561,39 +555,44 @@ function handleEnter(e) {
 
 
             <div class="col-lg-7 col-lg-offset-0 col-md-7 col-sm-9 post-container">
-              <img src="https://i.imgur.com/AVN6eaJ.jpg" width="500">
-<p>我一開始拿到 Happy Hacking KeyBoard Pro 2時，我就問為什麼鍵盤可以完全沒有字的，那叫我如何輸入。。。雖然我可以盲打（不看鍵盤直接輸入），但也許我未必可以有能力使用這樣的鍵盤。但寫了一天代碼之後，我才發現，原來這一切都是自己的猜疑而已。這個鍵盤打起來就是一個字，爽。</p>
-<img src="https://i.imgur.com/AbKpx2P.jpg" width="500" title="HHKB Pro 2">
-<center>HHKB Pro 2 盒子</center>
-
-<h2 id="HHKB"><a href="#HHKB" class="headerlink" title="HHKB"></a>HHKB</h2><p>在我取得這個 HHKB Pro 2 之前，我是一直在用 Cooler Master 的紅軸機械鍵盤，這個打起來也是很爽的。</p>
-<p>HHKB 的按鍵數量相對少，只提供必需的那些按鍵，它取消了數字鍵，功能鍵，以及方向鍵。但是對於 Emacs 用戶（我）來說，這些都不是問題，因為很多時候都是按 Ctrl + P/N/B/F 來達到上下左右的效果。</p>
-<p>雖則如此，我利用 Karabiner 做了四點配置：</p>
-<ol>
-<li>當 MacBook 鏈接 HHKB 的時候，電腦自帶的鍵盤不會再有輸出。</li>
-<li>右邊 Command 按鍵變為右邊 Option</li>
-<li>右邊 Option 按鍵變為右按 Mouse</li>
-<li>Option 加 IKJL 等於 上下左右</li>
-</ol>
-<img src="https://i.imgur.com/aDZMqim.png" width="500" title="配置">
-<h2 id="Emacs"><a href="#Emacs" class="headerlink" title="Emacs"></a>Emacs</h2><blockquote>
-<p>Emacs = Escape Meta Alt Ctrl Super</p>
+              <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><code>create-react-app</code> 提供了很方便的創建 React 應用途徑。它已經把 webpack, Babel, Autoprefixer, ESLint, Jest 等常用工具打包進去。可以說是一個非常方便，好用的製造 React 應用工具。當我打算把包裝好的檔案推上去的時候，我卻發現打包之後的檔案大小有點大，因此我就開始優化這個網頁應用了。第一點我優化的地方就是 Source Map。</p>
+<p>如果你細心看 README.md 的話，你會發現下面這一句，它把 Source Map 也打包進去。。。</p>
+<blockquote>
+<p>A build script to bundle JS, CSS, and images for production, with sourcemaps.</p>
 </blockquote>
-<p>作為一個 Emacs 重度（中毒）用戶，對 Ctrl 鍵的需求是很大的。尤其是我把 Ctrl 和 Caps Lock 的位置交換之後，左手無名指就經常發力。</p>
-<p>不知不覺之間，我就已經學會了盲打的技巧。現在打代碼就像玩遊戲一樣，我幾乎都不用看鍵盤，直接想到那個字，那句命令，直接打出來。如果你不用看鍵盤，而是直接輸入的話，每分鐘打字速度會提高很多的。。。</p>
-<p>最後，祝大家都能有自己的神兵利器，享受 Happy Hacking 的旅途。</p>
+<p>在測試環境中，我們可以透過 sourcemap 找到 bundle 過後的對應項目組件，這個是蠻方便的。</p>
+<p>但是，在生產環境中，如果有 sourcemap 的話，就會直接暴露項目中的架構，以及檔案，同時會增加網站大小。。。</p>
+<h2 id="解決方法"><a href="#解決方法" class="headerlink" title="解決方法"></a>解決方法</h2><h3 id="快速方法"><a href="#快速方法" class="headerlink" title="快速方法"></a>快速方法</h3><p>排除 <code>*.map</code>，避免部署 sourcemap 到上面。。。</p>
+<p>這個方法並不能從根源解決問題，因為產生 sourcemap 需時較長，另外，也會產生一個不需要的檔案大小略大的 sourcemap 檔案。</p>
+<h3 id="徹底方法"><a href="#徹底方法" class="headerlink" title="徹底方法"></a>徹底方法</h3><ol>
+<li><code>npm run eject</code>，如果你沒有 Eject 過的話。</li>
+</ol>
+<p>Eject 是一個特殊命令，把 <code>create-react-app</code> 的懶人包變成自定義的項目。在 Eject 之前，請想清楚你是否需要掌握項目的每一個細節。</p>
+<p>對應日新月異的產品需求以及開發需求，我選擇 Eject。比如說 SCSS，CSS 模組化。</p>
+<ol>
+<li><p>用你喜歡的文字編輯器 或 IDE 打開 <code>/config/webpack.config.prod.js</code></p>
+</li>
+<li><p>刪除或注釋第五十三行 <code>devtool: &#39;source-map&#39;</code></p>
+</li>
+</ol>
+<p>在上面你可以看到這樣的注釋：</p>
+<blockquote>
+<p>// We generate sourcemaps in production. This is slow but gives good results.<br>// You can exclude the *.map files from the build during deployment.</p>
+</blockquote>
+<p>它這裡寫就是說產生 sourcemap 會給出好的結果，雖然產生時間會更加長。。。</p>
+<p>另外，你可以排除 <code>*.map</code>，避免部署 Source Map 到上面。。。</p>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
+<li><a href="https://github.com/facebookincubator/create-react-app" rel="external nofollow noopener noreferrer" target="_blank">create-react-app README</a></li>
+<li><a href="https://github.com/facebookincubator/create-react-app/issues/2005" rel="external nofollow noopener noreferrer" target="_blank">Disable webpack production sourcemaps</a></li>
+</ol>
 
               
 
 <ul class="pager">
     
-    <li class="previous">
-        <a href="/2017/07/06/titanic-a-set-of-animated-icons/" data-toggle="tooltip" data-placement="top" title="簡單易用的開源 JavaScript 動畫圖標庫 -- Titanic">&larr; Previous Post</a>
-    </li>
-    
     
     <li class="next">
-        <a href="/2017/06/19/front-end-performance-check-list-for-production-in-chinese/" data-toggle="tooltip" data-placement="top" title="【翻譯】前端性能優化必備工具清單">Next Post &rarr;</a>
+        <a href="/2017/08/04/utilize-github-issue-by-using-gitalk/" data-toggle="tooltip" data-placement="top" title="善用 Github Issue 的開源評論插件 -- Gitalk">Next Post &rarr;</a>
     </li>
     
 </ul>
@@ -613,7 +612,7 @@ function handleEnter(e) {
 
             <div class="hidden-xs col-md-2 col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#HHKB"><span class="toc-text">HHKB</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Emacs"><span class="toc-text">Emacs</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解決方法"><span class="toc-text">解決方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#快速方法"><span class="toc-text">快速方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#徹底方法"><span class="toc-text">徹底方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#參考資料"><span class="toc-text">參考資料</span></a></li></ol>
                 </div>
             </div>
         </div>

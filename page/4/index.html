@@ -326,6 +326,7 @@
 <style>
 .calpaFirstImage {
   background-position-y: 0;
+  background-position-x: 0;
   background-size: cover;
   background-color: #undefined;
   
@@ -336,6 +337,20 @@
 </style>
 
 <div class="post-preview calpaFirstImage">
+    <a href="/2017/04/12/use-css-to-draw-circle/">
+        <h2 class="post-title">
+            利用CSS畫圓
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-04-12
+        </p>
+        
+        
+    </a>
+</div>
+
+
+<div class="post-preview">
     <a href="/2017/04/11/react-native-run-android/">
         <h2 class="post-title">
             【React Native】安裝Android Apk而無需連接伺服器的方法
@@ -344,6 +359,13 @@
             <i class="fa fa-calendar" aria-hidden="true"></i> 2017-04-11
         </p>
         
+        
+        <div class="post-content-preview">
+            <p>
+                正常情況下，我們會用命令react-native run-android來在自己的電話中測試app，但是這個方法需要連接電腦。
+我們可以利用以下命令：1234react-native bundle --dev false --platform android --entry-file index..
+            </p>
+        </div>
         
     </a>
 </div>
@@ -509,34 +531,6 @@ HTTPS如何加密
 </div>
 
 
-<div class="post-preview">
-    <a href="/2017/02/26/hexo-change-site-url/">
-        <h2 class="post-title">
-            Hexo sitemap 簡單更改域名的方法
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-02-26
-        </p>
-        
-        
-        <div class="post-content-preview">
-            <p>
-                如果沒有做任何配置的話，hexo g的時候會自動輸出一個sitemap.xml。但是現在域名不同了，需要一點更改。。。
-方法
-打開_config.yml
-修改url:就可以了
-hexo clean
-hexo g
-
-參考資料
-hexo-generator-sitemap 生成的sitemap如何配..
-            </p>
-        </div>
-        
-    </a>
-</div>
-
-
 
 <!-- 翻页 pager -->
 
@@ -633,6 +627,10 @@ hexo-generator-sitemap 生成的sitemap如何配..
               
               
               
+              <a href="/Tags/#React" title="React" rel="2">React</a>
+              
+              
+              
               
               
               
@@ -691,8 +689,6 @@ hexo-generator-sitemap 生成的sitemap如何配..
               
               
               
-              
-              
               <a href="/Tags/#CSS" title="CSS" rel="2">CSS</a>
               
               
@@ -708,7 +704,6 @@ hexo-generator-sitemap 生成的sitemap如何配..
     <hr>
 
     
-      <hr>
       <h5 style="text-align: center;">友情鏈接</h5>
       <ul class="list-inline" style="text-align: center;">
           
@@ -726,6 +721,12 @@ hexo-generator-sitemap 生成的sitemap如何配..
     
       <h5 style="text-align: center;">最新文章</h5>
       <ul class="list-inline" style="text-align: center;">
+        
+          <li>
+            <a href="/2017/08/27/react-app-optimization-1-source-map/">
+              React 應用輕量化（一）Source Map
+            </a>
+          </li>
         
           <li>
             <a href="/2017/08/04/utilize-github-issue-by-using-gitalk/">
@@ -751,17 +752,11 @@ hexo-generator-sitemap 生成的sitemap如何配..
             </a>
           </li>
         
-          <li>
-            <a href="/2017/06/19/front-end-performance-check-list-for-production-in-chinese/">
-              【翻譯】前端性能優化必備工具清單
-            </a>
-          </li>
-        
       </ul>
     
     <hr>
 
-    <h5 style="text-align: center;">共43篇文章</h5>
+    <h5 style="text-align: center;">共44篇文章</h5>
     <hr>
 
     <!-- All Blog Posts -->
@@ -775,7 +770,7 @@ hexo-generator-sitemap 生成的sitemap如何配..
           
               <li>
                 <a href="/archive/#2017-8">
-                  8月(1)
+                  8月(2)
                 </a>
               </li>
             
