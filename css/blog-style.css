@@ -395,7 +395,8 @@ footer {
   .post-tags .tag {
     background-color: transparent; }
     .post-tags .tag:hover {
-      color: #0085a1; }
+      color: #ebebeb;
+      background-color: #0085a1; }
 
 .pager {
   margin: 20px 0 0 !important;
@@ -528,10 +529,20 @@ h6 {
 article .post-container h2 {
   font-weight: 600; }
 
+.calpaFirstImage .black {
+  color: #ebebeb; }
+  .calpaFirstImage .black:hover, .calpaFirstImage .black:focus {
+    color: #337ab7; }
+
+.calpaFirstImage .white {
+  color: #404040; }
+  .calpaFirstImage .white:hover, .calpaFirstImage .white:focus {
+    color: #337ab7; }
+
 a {
   color: #404040; }
   a:hover, a:focus {
-    color: #0085a1;
+    color: #337ab7;
     text-decoration: none; }
   a img:hover, a img:focus {
     cursor: zoom-in; }
