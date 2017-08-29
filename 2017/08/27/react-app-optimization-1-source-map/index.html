@@ -33,7 +33,7 @@
 <meta property="og:site_name" content="Calpa">
 <meta property="og:description" content="前言create-react-app 提供了很方便的創建 React 應用途徑。它已經把 webpack, Babel, Autoprefixer, ESLint, Jest 等常用工具打包進去。可以說是一個非常方便，好用的製造 React 應用工具。當我打算把包裝好的檔案推上去的時候，我卻發現打包之後的檔案大小有點大，因此我就開始優化這個網頁應用了。第一點我優化的地方就是 Source Map。">
 <meta property="og:image" content="https://i.imgur.com/UtbKsLJ.jpg">
-<meta property="og:updated_time" content="2017-08-27T03:36:42.000Z">
+<meta property="og:updated_time" content="2017-08-29T00:55:11.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React 應用輕量化（一）Source Map | Calpa's blog">
 <meta name="twitter:description" content="前言create-react-app 提供了很方便的創建 React 應用途徑。它已經把 webpack, Babel, Autoprefixer, ESLint, Jest 等常用工具打包進去。可以說是一個非常方便，好用的製造 React 應用工具。當我打算把包裝好的檔案推上去的時候，我卻發現打包之後的檔案大小有點大，因此我就開始優化這個網頁應用了。第一點我優化的地方就是 Source Map。">
@@ -108,16 +108,6 @@
               
                 
                   <li>
-                    <a href="/archive/">
-                      Archive
-                    </a>
-                  </li>
-                
-              
-            
-              
-                
-                  <li>
                     <a href="/about/">
                       About
                     </a>
@@ -128,8 +118,8 @@
               
                 
                   <li>
-                    <a href="/search/">
-                      Search
+                    <a href="/archive/">
+                      Archive
                     </a>
                   </li>
                 
@@ -140,6 +130,16 @@
                   <li>
                     <a href="/works/">
                       Works
+                    </a>
+                  </li>
+                
+              
+            
+              
+                
+                  <li>
+                    <a href="/search/">
+                      Search
                     </a>
                   </li>
                 
@@ -224,6 +224,13 @@ header.intro-header {
     border: 1px solid black;
   
 }
+
+
+.tags .juejin {
+  background: url('https://badge.juejin.im/entry/59a2419a51882524481c9309/likes.svg?style=flat') no-repeat;
+  margin-top: 10px;
+}
+
 </style>
 
 <header class="intro-header">
@@ -246,9 +253,12 @@ header.intro-header {
                     
 
                     <div class="tags text-center post-tags">
-                        
-                        <a class="tag" href="/Tags/#React" title="React">React</a>
-                        
+                      
+                      <a class="tag" href="/Tags/#React" title="React">React</a>
+                      
+                      
+                        <a href="https://juejin.im/entry/59a2419a51882524481c9309/detail" class="juejin" rel="external nofollow noopener noreferrer" target="_blank"></a>
+                      
                     </div>
                 </div>
             </div>
@@ -325,9 +335,9 @@ header.intro-header {
           <div class="tags">
               
               
-              
-              
               <a href="/Tags/#JavaScript" title="JavaScript" rel="14">JavaScript</a>
+              
+              
               
               
               
@@ -339,17 +349,11 @@ header.intro-header {
               
               
               
-              <a href="/Tags/#React" title="React" rel="2">React</a>
-              
-              
-              
-              
-              
-              
-              
               
               
               <a href="/Tags/#Front End" title="Front End" rel="2">Front End</a>
+              
+              
               
               
               
@@ -391,6 +395,8 @@ header.intro-header {
               
               
               
+              <a href="/Tags/#React" title="React" rel="2">React</a>
+              
               
               
               
@@ -406,6 +412,10 @@ header.intro-header {
               
               
               <a href="/Tags/#Blog" title="Blog" rel="2">Blog</a>
+              
+              
+              
+              
               
               
               
