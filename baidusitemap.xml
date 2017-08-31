@@ -4,12 +4,12 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/08/27/react-markdown-render-markdown-as-component/</loc>
-    <lastmod>2017-08-31T06:17:43.000Z</lastmod>
+    <loc>https://calpa.me/2017/08/31/react-markdown-render-markdown-as-component/</loc>
+    <lastmod>2017-08-31T06:25:43.000Z</lastmod>
     <data>
         <display>
         <title>React-markdown -- 實時渲染 Markdown 的 React 工具</title>
-        <pubTime>2017-08-27T02:03:00.000Z</pubTime>
+        <pubTime>2017-08-31T06:25:00.000Z</pubTime>
         
         <tag>Markdown</tag>
          
@@ -367,16 +367,16 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/05/16/react-component-lifecycle/</loc>
+    <loc>https://calpa.me/2017/05/03/redux-array-push-function/</loc>
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     <data>
         <display>
-        <title>React 組件生命週期 - 加載組件</title>
-        <pubTime>2017-05-16T14:40:00.000Z</pubTime>
+        <title>Redux push()是怎樣寫的？</title>
+        <pubTime>2017-05-03T15:20:00.000Z</pubTime>
         
-        <tag>Web</tag>
+        <tag>JavaScript</tag>
          
-        <tag>React</tag>
+        <tag>Redux</tag>
          
          
            
@@ -403,46 +403,12 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/03/25/javascript-this/</loc>
-    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
-    <data>
-        <display>
-        <title>JavaScript的this</title>
-        <pubTime>2017-03-25T04:44:00.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://calpa.me/2017/04/27/n-ways-to-output-hello-world/</loc>
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     <data>
         <display>
         <title>Hello World的四+N種方法</title>
         <pubTime>2017-04-27T06:34:00.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://calpa.me/2017/02/19/javascript-closure/</loc>
-    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
-    <data>
-        <display>
-        <title>JavaScript的閉包(Closure)</title>
-        <pubTime>2017-02-19T07:12:00.000Z</pubTime>
         
         <tag>JavaScript</tag>
          
@@ -488,16 +454,14 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/05/03/redux-array-push-function/</loc>
+    <loc>https://calpa.me/2017/03/25/javascript-this/</loc>
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     <data>
         <display>
-        <title>Redux push()是怎樣寫的？</title>
-        <pubTime>2017-05-03T15:20:00.000Z</pubTime>
+        <title>JavaScript的this</title>
+        <pubTime>2017-03-25T04:44:00.000Z</pubTime>
         
         <tag>JavaScript</tag>
-         
-        <tag>Redux</tag>
          
          
            
@@ -507,16 +471,33 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/01/20/using-javascript-to-create-web-storage/</loc>
+    <loc>https://calpa.me/2017/05/16/react-component-lifecycle/</loc>
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     <data>
         <display>
-        <title>利用JavaScript創建Web Storage</title>
-        <pubTime>2017-01-20T11:37:38.000Z</pubTime>
+        <title>React 組件生命週期 - 加載組件</title>
+        <pubTime>2017-05-16T14:40:00.000Z</pubTime>
+        
+        <tag>Web</tag>
+         
+        <tag>React</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://calpa.me/2017/02/19/javascript-closure/</loc>
+    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
+    <data>
+        <display>
+        <title>JavaScript的閉包(Closure)</title>
+        <pubTime>2017-02-19T07:12:00.000Z</pubTime>
         
         <tag>JavaScript</tag>
-         
-        <tag>Web</tag>
          
          
            
@@ -536,6 +517,25 @@
         <tag>JavaScript</tag>
          
         <tag>Regular Expression</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://calpa.me/2017/01/20/using-javascript-to-create-web-storage/</loc>
+    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
+    <data>
+        <display>
+        <title>利用JavaScript創建Web Storage</title>
+        <pubTime>2017-01-20T11:37:38.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+        <tag>Web</tag>
          
          
            

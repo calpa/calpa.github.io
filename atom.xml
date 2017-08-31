@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://calpa.me/"/>
-  <updated>2017-08-31T06:17:43.000Z</updated>
+  <updated>2017-08-31T06:25:43.000Z</updated>
   <id>https://calpa.me/</id>
   
   <author>
@@ -17,10 +17,10 @@
   
   <entry>
     <title>React-markdown -- 實時渲染 Markdown 的 React 工具</title>
-    <link href="https://calpa.me/2017/08/27/react-markdown-render-markdown-as-component/"/>
-    <id>https://calpa.me/2017/08/27/react-markdown-render-markdown-as-component/</id>
-    <published>2017-08-27T02:03:00.000Z</published>
-    <updated>2017-08-31T06:17:43.000Z</updated>
+    <link href="https://calpa.me/2017/08/31/react-markdown-render-markdown-as-component/"/>
+    <id>https://calpa.me/2017/08/31/react-markdown-render-markdown-as-component/</id>
+    <published>2017-08-31T06:25:00.000Z</published>
+    <updated>2017-08-31T06:25:43.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>要寫出優雅的文檔是有難度的，尤其是需要格式規範的文章。而利用 Markdown，則可以專心寫作。Markdown 除了可以直接編譯為 HTML，還能編譯為 PowerPoint, Resume，還有 React 組件。無論是<a href="https://calpa.me/2017/06/01/create-markdown-powerpoint-in-5-mins/">利用 Markdown 製作 PowerPoint</a>，還是利用 Markdown 製作簡歷，都是非常方便的。如果你不是很熟悉 Markdown 語法的話，你可以在下文看 <a href="#Markdown-語法">Markdown 語法</a>。但是如果可以接受他人傳進來的 Markdown 文章，然後渲染他們的文章，那就會更加好。所以我就找了一下 React + Markdown 的組合，發現這個 React-markdown 工具下載的人數蠻多的。雖然那個項目還在開發階段，但是你可以在 <a href="http://rexxars.github.io/react-markdown" rel="external nofollow noopener noreferrer" target="_blank">Live Demo</a> 測試一下渲染為 React 組件的效果。</p>
 <hr>
