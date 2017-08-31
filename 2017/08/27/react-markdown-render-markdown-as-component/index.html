@@ -18,29 +18,26 @@
     <meta name="google-site-verification" content="riZBcestky7i9xY__A-5J-2EE65T75X1u-zgbss37Io">
     <title>
         
-        About｜Calpa&#39;s blog
+        React-markdown -- 實時渲染 Markdown 的 React 工具｜Calpa&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="https://calpa.me/about/">
+    <link rel="canonical" href="https://calpa.me/2017/08/27/react-markdown-render-markdown-as-component/">
 
     <!-- Open Graph -->
     
-    <meta name="description" content="自我介紹我是廖學堯，現在就讀香港科技大學三年級，化學及環境工程，自學前端開發，曾經參加七次黑客松。我在微軟舉辦的ImagineHack中取得第二名，最受歡迎獎，並在 TechCrunch 2017 黑客松深圳站取得第三名。現開發React，Vue程序，平常亦有著作技術博客。
-對於前端的看法在我前端生涯的前兩年，我會繼續打好前端的基礎，學習多一些技能，比如跟著《打好 JavaScript 基礎的6個">
-<meta property="og:type" content="website">
-<meta property="og:title" content="About | Calpa's blog">
-<meta property="og:url" content="https://calpa.me/about/index.html">
+    <meta name="description" content="前言要寫出優雅的文檔是有難度的，尤其是需要格式規範的文章。而利用 Markdown，則可以專心寫作。Markdown 除了可以直接編譯為 HTML，還能編譯為 PowerPoint, Resume，還有 React 組件。無論是利用 Markdown 製作 PowerPoint，還是利用 Markdown 製作簡歷，都是非常方便的。如果你不是很熟悉 Markdown 語法的話，你可以在下文看 Ma">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React-markdown -- 實時渲染 Markdown 的 React 工具 | Calpa's blog">
+<meta property="og:url" content="https://calpa.me/2017/08/27/react-markdown-render-markdown-as-component/index.html">
 <meta property="og:site_name" content="Calpa">
-<meta property="og:description" content="自我介紹我是廖學堯，現在就讀香港科技大學三年級，化學及環境工程，自學前端開發，曾經參加七次黑客松。我在微軟舉辦的ImagineHack中取得第二名，最受歡迎獎，並在 TechCrunch 2017 黑客松深圳站取得第三名。現開發React，Vue程序，平常亦有著作技術博客。
-對於前端的看法在我前端生涯的前兩年，我會繼續打好前端的基礎，學習多一些技能，比如跟著《打好 JavaScript 基礎的6個">
-<meta property="og:image" content="https://calpa.me/img/post-default.jpg">
-<meta property="og:updated_time" content="2017-08-08T06:20:25.000Z">
+<meta property="og:description" content="前言要寫出優雅的文檔是有難度的，尤其是需要格式規範的文章。而利用 Markdown，則可以專心寫作。Markdown 除了可以直接編譯為 HTML，還能編譯為 PowerPoint, Resume，還有 React 組件。無論是利用 Markdown 製作 PowerPoint，還是利用 Markdown 製作簡歷，都是非常方便的。如果你不是很熟悉 Markdown 語法的話，你可以在下文看 Ma">
+<meta property="og:image" content="https://i.imgur.com/UtbKsLJ.jpg">
+<meta property="og:updated_time" content="2017-08-31T06:17:43.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="About | Calpa's blog">
-<meta name="twitter:description" content="自我介紹我是廖學堯，現在就讀香港科技大學三年級，化學及環境工程，自學前端開發，曾經參加七次黑客松。我在微軟舉辦的ImagineHack中取得第二名，最受歡迎獎，並在 TechCrunch 2017 黑客松深圳站取得第三名。現開發React，Vue程序，平常亦有著作技術博客。
-對於前端的看法在我前端生涯的前兩年，我會繼續打好前端的基礎，學習多一些技能，比如跟著《打好 JavaScript 基礎的6個">
-<meta name="twitter:image" content="https://calpa.me/img/post-default.jpg">
+<meta name="twitter:title" content="React-markdown -- 實時渲染 Markdown 的 React 工具 | Calpa's blog">
+<meta name="twitter:description" content="前言要寫出優雅的文檔是有難度的，尤其是需要格式規範的文章。而利用 Markdown，則可以專心寫作。Markdown 除了可以直接編譯為 HTML，還能編譯為 PowerPoint, Resume，還有 React 組件。無論是利用 Markdown 製作 PowerPoint，還是利用 Markdown 製作簡歷，都是非常方便的。如果你不是很熟悉 Markdown 語法的話，你可以在下文看 Ma">
+<meta name="twitter:image" content="https://i.imgur.com/UtbKsLJ.jpg">
 
     <!-- Bootstrap v3.3.7 Core CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
@@ -67,7 +64,7 @@
 
 <body class="animated fadeIn">
 <!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top is-fixed" id="nav-top" data-ispost="false" data-istags="false
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost="true" data-istags="false
 " data-ishome="false">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -86,7 +83,7 @@
     <div id="huxblog_navbar">
       <div class="navbar-collapse">
         <ul class="nav navbar-nav navbar-center title-calpa display-none">
-          <li><a href="#" onclick="scrolltoTop(event)">About</a></li>
+          <li><a href="#" onclick="scrolltoTop(event)">React-markdown -- 實時渲染 Markdown 的 React 工具</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li>
@@ -189,49 +186,86 @@
 <!--only post-->
 
   
-  <img class="wechat-title-img" src="/img/post-default.jpg" alt="wechat-title-image">
+    <img class="wechat-title-img" src="https://i.imgur.com/IYhTVXU.png">
   
 
 <style>
     
     header.intro-header {
-        background-image: url('/img/post-default.jpg')
+      background-image: url('https://i.imgur.com/IYhTVXU.png?imageView2/1/w/1400/h/400/interlace/1/q/90');
     }
-
     
+</style>
 
-    .intro-header .site-heading,
-    .intro-header .page-heading,
-    .intro-header .post-heading{
-        color: #fff;
-        text-shadow: 0 0 40px black;
-    }
+<style>
+header.intro-header {
+  
+    margin-top: 60px;
+  
+  
+    background-color: #fff;;
+  
 
-    .intro-header .site-heading h1,
-    .intro-header .page-heading h1,
-    .intro-header .post-heading h1 {
-        text-shadow: 0 0 40px black;
-    }
+  
+    background-size: contain;;
+  
+}
+
+.post-heading {
+  
+    color: black;
+    text-shadow: none;
+  
+}
+
+.post-tags >.tag{
+  
+    color: black;
+    border: 1px solid black;
+  
+}
+
+
 </style>
 
 <header class="intro-header">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-        <div class="site-heading text-center">
-          <h1>關於我的一些事</h1>
-          <span class="subheading"></span>
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
-
-
-<!-- Post Content -->
-<article>
     <div class="container">
         <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <div class="post-heading">
+                    <h1>React-markdown -- 實時渲染 Markdown 的 React 工具</h1>
+                    
+                    <span>
+                      作者 Calpa
+                    </span>
+                    
+                    <span>
+                      日期 2017-08-27
+                    </span>
+
+                    
+                      <span class="post-count">共824字</span>
+                    
+
+                    <div class="tags text-center post-tags">
+                      
+                      <a class="tag" href="/Tags/#Markdown" title="Markdown">Markdown</a>
+                      
+                      <a class="tag" href="/Tags/#React" title="React">React</a>
+                      
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article data-enablemagic="false">
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
             <!-- Sidebar Container -->
 <div class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 hidden-sm hidden-xs sidebar-container">
     <!-- About Me -->
@@ -527,44 +561,64 @@ function handleEnter(e) {
 </script>
 
 
-            <!-- Post Container -->
-            <div class="col-md-8 col-md-offset-0 col-sm-12 col-xs-12 post-container">
-                <h2 id="自我介紹"><a href="#自我介紹" class="headerlink" title="自我介紹"></a>自我介紹</h2><p>我是廖學堯，現在就讀香港科技大學三年級，化學及環境工程，自學前端開發，曾經參加七次黑客松。我在微軟舉辦的ImagineHack中取得第二名，最受歡迎獎，並在 TechCrunch 2017 黑客松深圳站取得第三名。現開發React，Vue程序，平常亦有著作技術博客。</p>
-<h2 id="對於前端的看法"><a href="#對於前端的看法" class="headerlink" title="對於前端的看法"></a>對於前端的看法</h2><p>在我前端生涯的前兩年，我會繼續打好前端的基礎，學習多一些技能，比如跟著<a href="https://calpa.me/2017/05/21/learn-javascript-in-six-steps/">《打好 JavaScript 基礎的6個步驟》</a>來做。</p>
-<p>到了三到四年的時候，我希望可以從普通的程序員，做到一個小組的領導，可以統籌部下的工作，和不同的小組談笑風生。這就需要我提高自己的能力，認知，格局，以及大局觀。</p>
-<p>提高自己的技能，只是足夠生存；而提高自己的能力，則是開發大規模應用所需要的。</p>
-<h2 id="關於我的一些事"><a href="#關於我的一些事" class="headerlink" title="關於我的一些事"></a>關於我的一些事</h2><ol>
-<li>一名自學的Web前端程序員</li>
-<li>本科內容與編程好像沒有什麼關係。。。</li>
-<li>那個。。。我最喜歡Miku XD</li>
-<li>2016年暑假時，我在香港科技大學圖書館工作，從最基本的HTML，CSS開始入門。</li>
-<li>原來世界上好多種程序員，比如說Markdown程序員，而我則是想成為一個Web前端程序員</li>
-<li>寫博客是為了記錄一下開發日常，還有就是遇到的坑</li>
-<li>推薦一本書：JavaScript高級程序設計(第3版)</li>
-</ol>
-<h2 id="寫博客的動機"><a href="#寫博客的動機" class="headerlink" title="寫博客的動機"></a>寫博客的動機</h2><p>最初寫博客，是為了記錄一下開發日常，還有遇到的坑。不知不覺，博客的 PV 已經超過了 <del>8</del> 30k，用戶數量也到達了 16k 了，這個數字可能還是很小，但這讓我有了去優化博客瀏覽速度的動機 XD</p>
-<p>感謝您閱讀我的自我介紹，以及我的其他文章。</p>
-<h2 id="關於內推，校招"><a href="#關於內推，校招" class="headerlink" title="關於內推，校招"></a>關於內推，校招</h2><p>現在是2017年8月，又是內推校招的時節，如果你看到這篇自我介紹的話，你可以留下郵箱。這裡是我的<a href="https://calpa.me/resume/resume-calpa-liu-hok-yiu.pdf">簡歷</a>，以及一點小總結。</p>
-<ol>
-<li>就讀港科大</li>
-<li>知識面廣，接觸過 Python, Node, Angular, Web Socket, React, Vue</li>
-<li>自學能力強，7次黑客馬拉松，屢次獲獎</li>
-<li>各社區踴躍參與，並具有一定影響力，現於掘金設有專欄</li>
-<li>英語閲讀無任何障礙，並能流利溝通</li>
-</ol>
+            <div class="col-lg-7 col-lg-offset-0 col-md-7 col-sm-9 post-container">
+              <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>要寫出優雅的文檔是有難度的，尤其是需要格式規範的文章。而利用 Markdown，則可以專心寫作。Markdown 除了可以直接編譯為 HTML，還能編譯為 PowerPoint, Resume，還有 React 組件。無論是<a href="https://calpa.me/2017/06/01/create-markdown-powerpoint-in-5-mins/">利用 Markdown 製作 PowerPoint</a>，還是利用 Markdown 製作簡歷，都是非常方便的。如果你不是很熟悉 Markdown 語法的話，你可以在下文看 <a href="#Markdown-語法">Markdown 語法</a>。但是如果可以接受他人傳進來的 Markdown 文章，然後渲染他們的文章，那就會更加好。所以我就找了一下 React + Markdown 的組合，發現這個 React-markdown 工具下載的人數蠻多的。雖然那個項目還在開發階段，但是你可以在 <a href="http://rexxars.github.io/react-markdown" rel="external nofollow noopener noreferrer" target="_blank">Live Demo</a> 測試一下渲染為 React 組件的效果。</p>
+<hr>
+<p><img src="https://i.imgur.com/UFkBeEN.png" alt="Live Demo"></p>
+<p><img src="https://i.imgur.com/q2q2RJv.png" alt="直接渲染為 React 組件"></p>
+<h2 id="react-markdown"><a href="#react-markdown" class="headerlink" title="react-markdown"></a>react-markdown</h2><p>Github: <a href="https://github.com/rexxars/react-markdown" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/rexxars/react-markdown</a><br>npmjs: <a href="https://www.npmjs.com/package/react-markdown" rel="external nofollow noopener noreferrer" target="_blank">https://www.npmjs.com/package/react-markdown</a></p>
+<h3 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install --save react-markdown</div></pre></td></tr></table></figure>
+<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><p>使用 ES6 Import <code>ReactMarkdown</code>，然后使用 <reactmarkdown>，並傳入 Markdown 到 source。</reactmarkdown></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> ReactMarkdown <span class="keyword">from</span> <span class="string">'react-markdown'</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> input = <span class="string">'# This is a header\n\nAnd this is a paragraph'</span>;</div><div class="line"></div><div class="line">&lt;ReactMarkdown source=&#123;input&#125; /&gt;</div></pre></td></tr></table></figure>
+<p>然後你會看到這樣的：</p>
+<p><img src="https://i.imgur.com/zR2Olai.png" alt="React Markdown 例子"></p>
+<p>官網上是這樣說的：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> React = <span class="built_in">require</span>(<span class="string">'react'</span>);</div><div class="line"><span class="keyword">var</span> ReactDOM = <span class="built_in">require</span>(<span class="string">'react-dom'</span>);</div><div class="line"><span class="keyword">var</span> ReactMarkdown = <span class="built_in">require</span>(<span class="string">'react-markdown'</span>);</div><div class="line"></div><div class="line"><span class="keyword">var</span> input = <span class="string">'# This is a header\n\nAnd this is a paragraph'</span>;</div><div class="line"></div><div class="line">ReactDOM.render(</div><div class="line">    &lt;ReactMarkdown source=&#123;input&#125; /&gt;,</div><div class="line">    document.getElementById('container')</div><div class="line">);</div></pre></td></tr></table></figure></p>
+<h3 id="Webpack-1-配置"><a href="#Webpack-1-配置" class="headerlink" title="Webpack 1 配置"></a>Webpack 1 配置</h3><p>如果你是用 Webpack 1 的話，你需要安裝 json-loader：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install --save json-loader</div></pre></td></tr></table></figure></p>
+<p>並在你的 webpack 設置裡面加上：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">module</span>: &#123;</div><div class="line">    <span class="attr">loaders</span>: [&#123;</div><div class="line">      <span class="attr">test</span>: <span class="regexp">/\.json$/</span>,</div><div class="line">      <span class="attr">loader</span>: <span class="string">'json-loader'</span></div><div class="line">    &#125;]</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如果你設置 <code>escapeHtml</code> 或 <code>skipHtml</code> 為 <code>true</code>，該組件就不會使用<code>dangerouslySetInnerHTML</code>。</p>
+<h3 id="選項"><a href="#選項" class="headerlink" title="選項"></a>選項</h3><p>以下選項除了<code>source</code>之外都是可選的，其實這個工具已經配置成開箱即用，這裡就說幾個最底部的選項，更多的選項請去官網看。</p>
+<ul>
+<li><code>source</code> - 你的 Markdown 來源（必須）- string</li>
+<li><code>className</code> - 容器的 className - string</li>
+<li><code>containerTagName</code> - 容器的標籤名字 ，因為 Markdown 會有很多不同層次的 elements，容器需要把它們封裝。默認是<code>div</code> - string</li>
+</ul>
+<p>這個渲染器會渲染的組件有：</p>
+<ul>
+<li><code>HtmlInline</code> - 行內 HTML</li>
+<li><code>HtmlBlock</code> - HTML 塊</li>
+<li><code>Text</code> - 文字 (在段落裡面)</li>
+<li><code>Paragraph</code> - 段落 (<code>&lt;p&gt;</code>)</li>
+<li><code>Heading</code> - 標題 (<code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code> etc)</li>
+<li><code>Softbreak</code> - 換行</li>
+<li><code>Hardbreak</code> - 斷行（強制換行） (<code>&lt;br&gt;</code>)</li>
+<li><code>Link</code> - 鏈接 (<code>&lt;a&gt;</code>)</li>
+<li><code>Image</code> - 圖像 (<code>&lt;img&gt;</code>)</li>
+<li><code>Emph</code> - 強調 (<code>&lt;em&gt;</code>)</li>
+<li><code>Code</code> - Inline code nodes (<code>&lt;code&gt;</code>)</li>
+<li><code>CodeBlock</code> - Blocks of code (<code>&lt;code&gt;</code>)</li>
+<li><code>BlockQuote</code> - 參照 (<code>&lt;blockquote&gt;</code>)</li>
+<li><code>List</code> - 列表 (<code>&lt;ol&gt;</code>, <code>&lt;ul&gt;</code>)</li>
+<li><code>Item</code> - 列表 (<code>&lt;li&gt;</code>)</li>
+<li><code>Strong</code> - Strong/bold nodes (<code>&lt;strong&gt;</code>)</li>
+<li><code>ThematicBreak</code> - 水平分割線 (<code>&lt;hr&gt;</code>)</li>
+</ul>
+<h2 id="Markdown-語法"><a href="#Markdown-語法" class="headerlink" title="Markdown 語法"></a>Markdown 語法</h2><p>Markdown 的目標是易讀易寫，而它能夠幫助程序員專注開發，減少編寫文檔時候遇到的格式問題。Markdown 和 HTML 的寫法差不多，雖然 HTML 已經很容易寫，但是 Markdown 則是更加格式化，如果你直接閱讀 Markdown 文檔，你也可以想象到它渲染後的樣式。</p>
+<h3 id="標題"><a href="#標題" class="headerlink" title="標題"></a>標題</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># H1</div><div class="line">## H2</div><div class="line">### H3</div></pre></td></tr></table></figure>
+<h3 id="清單"><a href="#清單" class="headerlink" title="清單"></a>清單</h3><p>無序清單使用<code>*</code>, <code>+</code> 或<code>-</code>，而我這是常用<code>-</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">*   Red</div><div class="line">*   Green</div><div class="line">*   Blue</div><div class="line"></div><div class="line">+   Red</div><div class="line">+   Green</div><div class="line">+   Blue</div><div class="line"></div><div class="line">-   Red</div><div class="line">-   Green</div><div class="line">-   Blue</div></pre></td></tr></table></figure></p>
+<p>有序清單則使用數字接著一個英文句點：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">1.  Apple</div><div class="line">2.  Banana</div><div class="line">3.  Watermelon</div></pre></td></tr></table></figure></p>
+<h2 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h2><p>順帶說一下，我的博客已經配置好 Service Worker，現在可以離線訪問網站。也就是下次訪問的時候，即使沒有 Wifi 或者連接到網絡，你也能夠瀏覽到文章內容。</p>
+<p>有機會的話，我會說說如何配置 Service Worker，以及當中的原理。</p>
+<p>我的簡歷也差不多重構一次了（逃。。。</p>
 
-                <hr>
-                
-
-                <ul class="pager">
-                    
-                    
-                </ul>
-
-                
+              
 
 <ul class="pager">
     
+    
+    <li class="next">
+        <a href="/2017/08/27/react-app-optimization-1-source-map/" data-toggle="tooltip" data-placement="top" title="React 應用輕量化（一）Source Map">Next Post &rarr;</a>
+    </li>
     
 </ul>
 
@@ -579,7 +633,12 @@ function handleEnter(e) {
 </div>
 
 
+            </div>
 
+            <div class="hidden-xs col-md-2 col-sm-3 toc-col">
+                <div class="toc-wrap">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#react-markdown"><span class="toc-text">react-markdown</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安裝"><span class="toc-text">安裝</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用方法"><span class="toc-text">使用方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Webpack-1-配置"><span class="toc-text">Webpack 1 配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#選項"><span class="toc-text">選項</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Markdown-語法"><span class="toc-text">Markdown 語法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#標題"><span class="toc-text">標題</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#清單"><span class="toc-text">清單</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#後記"><span class="toc-text">後記</span></a></li></ol>
+                </div>
             </div>
         </div>
     </div>

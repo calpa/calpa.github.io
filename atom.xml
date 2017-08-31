@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://calpa.me/"/>
-  <updated>2017-08-29T12:10:11.000Z</updated>
+  <updated>2017-08-31T06:17:43.000Z</updated>
   <id>https://calpa.me/</id>
   
   <author>
@@ -14,6 +14,76 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>React-markdown -- 實時渲染 Markdown 的 React 工具</title>
+    <link href="https://calpa.me/2017/08/27/react-markdown-render-markdown-as-component/"/>
+    <id>https://calpa.me/2017/08/27/react-markdown-render-markdown-as-component/</id>
+    <published>2017-08-27T02:03:00.000Z</published>
+    <updated>2017-08-31T06:17:43.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>要寫出優雅的文檔是有難度的，尤其是需要格式規範的文章。而利用 Markdown，則可以專心寫作。Markdown 除了可以直接編譯為 HTML，還能編譯為 PowerPoint, Resume，還有 React 組件。無論是<a href="https://calpa.me/2017/06/01/create-markdown-powerpoint-in-5-mins/">利用 Markdown 製作 PowerPoint</a>，還是利用 Markdown 製作簡歷，都是非常方便的。如果你不是很熟悉 Markdown 語法的話，你可以在下文看 <a href="#Markdown-語法">Markdown 語法</a>。但是如果可以接受他人傳進來的 Markdown 文章，然後渲染他們的文章，那就會更加好。所以我就找了一下 React + Markdown 的組合，發現這個 React-markdown 工具下載的人數蠻多的。雖然那個項目還在開發階段，但是你可以在 <a href="http://rexxars.github.io/react-markdown" rel="external nofollow noopener noreferrer" target="_blank">Live Demo</a> 測試一下渲染為 React 組件的效果。</p>
+<hr>
+<p><img src="https://i.imgur.com/UFkBeEN.png" alt="Live Demo"></p>
+<p><img src="https://i.imgur.com/q2q2RJv.png" alt="直接渲染為 React 組件"></p>
+<h2 id="react-markdown"><a href="#react-markdown" class="headerlink" title="react-markdown"></a>react-markdown</h2><p>Github: <a href="https://github.com/rexxars/react-markdown" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/rexxars/react-markdown</a><br>npmjs: <a href="https://www.npmjs.com/package/react-markdown" rel="external nofollow noopener noreferrer" target="_blank">https://www.npmjs.com/package/react-markdown</a></p>
+<h3 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install --save react-markdown</div></pre></td></tr></table></figure>
+<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><p>使用 ES6 Import <code>ReactMarkdown</code>，然后使用 <reactmarkdown>，並傳入 Markdown 到 source。</reactmarkdown></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> ReactMarkdown <span class="keyword">from</span> <span class="string">'react-markdown'</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> input = <span class="string">'# This is a header\n\nAnd this is a paragraph'</span>;</div><div class="line"></div><div class="line">&lt;ReactMarkdown source=&#123;input&#125; /&gt;</div></pre></td></tr></table></figure>
+<p>然後你會看到這樣的：</p>
+<p><img src="https://i.imgur.com/zR2Olai.png" alt="React Markdown 例子"></p>
+<p>官網上是這樣說的：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> React = <span class="built_in">require</span>(<span class="string">'react'</span>);</div><div class="line"><span class="keyword">var</span> ReactDOM = <span class="built_in">require</span>(<span class="string">'react-dom'</span>);</div><div class="line"><span class="keyword">var</span> ReactMarkdown = <span class="built_in">require</span>(<span class="string">'react-markdown'</span>);</div><div class="line"></div><div class="line"><span class="keyword">var</span> input = <span class="string">'# This is a header\n\nAnd this is a paragraph'</span>;</div><div class="line"></div><div class="line">ReactDOM.render(</div><div class="line">    &lt;ReactMarkdown source=&#123;input&#125; /&gt;,</div><div class="line">    document.getElementById('container')</div><div class="line">);</div></pre></td></tr></table></figure></p>
+<h3 id="Webpack-1-配置"><a href="#Webpack-1-配置" class="headerlink" title="Webpack 1 配置"></a>Webpack 1 配置</h3><p>如果你是用 Webpack 1 的話，你需要安裝 json-loader：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install --save json-loader</div></pre></td></tr></table></figure></p>
+<p>並在你的 webpack 設置裡面加上：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">module</span>: &#123;</div><div class="line">    <span class="attr">loaders</span>: [&#123;</div><div class="line">      <span class="attr">test</span>: <span class="regexp">/\.json$/</span>,</div><div class="line">      <span class="attr">loader</span>: <span class="string">'json-loader'</span></div><div class="line">    &#125;]</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如果你設置 <code>escapeHtml</code> 或 <code>skipHtml</code> 為 <code>true</code>，該組件就不會使用<code>dangerouslySetInnerHTML</code>。</p>
+<h3 id="選項"><a href="#選項" class="headerlink" title="選項"></a>選項</h3><p>以下選項除了<code>source</code>之外都是可選的，其實這個工具已經配置成開箱即用，這裡就說幾個最底部的選項，更多的選項請去官網看。</p>
+<ul>
+<li><code>source</code> - 你的 Markdown 來源（必須）- string</li>
+<li><code>className</code> - 容器的 className - string</li>
+<li><code>containerTagName</code> - 容器的標籤名字 ，因為 Markdown 會有很多不同層次的 elements，容器需要把它們封裝。默認是<code>div</code> - string</li>
+</ul>
+<p>這個渲染器會渲染的組件有：</p>
+<ul>
+<li><code>HtmlInline</code> - 行內 HTML</li>
+<li><code>HtmlBlock</code> - HTML 塊</li>
+<li><code>Text</code> - 文字 (在段落裡面)</li>
+<li><code>Paragraph</code> - 段落 (<code>&lt;p&gt;</code>)</li>
+<li><code>Heading</code> - 標題 (<code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code> etc)</li>
+<li><code>Softbreak</code> - 換行</li>
+<li><code>Hardbreak</code> - 斷行（強制換行） (<code>&lt;br&gt;</code>)</li>
+<li><code>Link</code> - 鏈接 (<code>&lt;a&gt;</code>)</li>
+<li><code>Image</code> - 圖像 (<code>&lt;img&gt;</code>)</li>
+<li><code>Emph</code> - 強調 (<code>&lt;em&gt;</code>)</li>
+<li><code>Code</code> - Inline code nodes (<code>&lt;code&gt;</code>)</li>
+<li><code>CodeBlock</code> - Blocks of code (<code>&lt;code&gt;</code>)</li>
+<li><code>BlockQuote</code> - 參照 (<code>&lt;blockquote&gt;</code>)</li>
+<li><code>List</code> - 列表 (<code>&lt;ol&gt;</code>, <code>&lt;ul&gt;</code>)</li>
+<li><code>Item</code> - 列表 (<code>&lt;li&gt;</code>)</li>
+<li><code>Strong</code> - Strong/bold nodes (<code>&lt;strong&gt;</code>)</li>
+<li><code>ThematicBreak</code> - 水平分割線 (<code>&lt;hr&gt;</code>)</li>
+</ul>
+<h2 id="Markdown-語法"><a href="#Markdown-語法" class="headerlink" title="Markdown 語法"></a>Markdown 語法</h2><p>Markdown 的目標是易讀易寫，而它能夠幫助程序員專注開發，減少編寫文檔時候遇到的格式問題。Markdown 和 HTML 的寫法差不多，雖然 HTML 已經很容易寫，但是 Markdown 則是更加格式化，如果你直接閱讀 Markdown 文檔，你也可以想象到它渲染後的樣式。</p>
+<h3 id="標題"><a href="#標題" class="headerlink" title="標題"></a>標題</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># H1</div><div class="line">## H2</div><div class="line">### H3</div></pre></td></tr></table></figure>
+<h3 id="清單"><a href="#清單" class="headerlink" title="清單"></a>清單</h3><p>無序清單使用<code>*</code>, <code>+</code> 或<code>-</code>，而我這是常用<code>-</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">*   Red</div><div class="line">*   Green</div><div class="line">*   Blue</div><div class="line"></div><div class="line">+   Red</div><div class="line">+   Green</div><div class="line">+   Blue</div><div class="line"></div><div class="line">-   Red</div><div class="line">-   Green</div><div class="line">-   Blue</div></pre></td></tr></table></figure></p>
+<p>有序清單則使用數字接著一個英文句點：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">1.  Apple</div><div class="line">2.  Banana</div><div class="line">3.  Watermelon</div></pre></td></tr></table></figure></p>
+<h2 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h2><p>順帶說一下，我的博客已經配置好 Service Worker，現在可以離線訪問網站。也就是下次訪問的時候，即使沒有 Wifi 或者連接到網絡，你也能夠瀏覽到文章內容。</p>
+<p>有機會的話，我會說說如何配置 Service Worker，以及當中的原理。</p>
+<p>我的簡歷也差不多重構一次了（逃。。。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;要寫出優雅的文檔是有難度的，尤其是需要格式規範的文章。而利用 Markdown，則可以專心寫作。Markdown 除了可以直接編譯為 HTM
+    
+    </summary>
+    
+    
+      <category term="Markdown" scheme="https://calpa.me/Tags/Markdown/"/>
+    
+      <category term="React" scheme="https://calpa.me/Tags/React/"/>
+    
+  </entry>
   
   <entry>
     <title>React 應用輕量化（一）Source Map</title>
@@ -1064,58 +1134,6 @@
     
     
       <category term="SVG" scheme="https://calpa.me/Tags/SVG/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CreateListFromArrayLike called on non-object 報錯的解決方法</title>
-    <link href="https://calpa.me/2017/05/01/CreateListFromArrayLike-problem-solution/"/>
-    <id>https://calpa.me/2017/05/01/CreateListFromArrayLike-problem-solution/</id>
-    <published>2017-05-01T14:50:00.000Z</published>
-    <updated>2017-05-18T06:07:19.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="解決方法"><a href="#解決方法" class="headerlink" title="解決方法"></a>解決方法</h2><p>仔細再看一下到底你是如何調用<code>apply</code>的。。。</p>
-<p>你可能在使用Function.prototype.apply的時候不夠熟練，把<code>call</code>和<code>apply</code>的用法混在一起。。。。<code>call</code>是用0個或者更多的arguments，而<code>apply</code>則是用一個數組。</p>
-<h2 id="錯誤例子"><a href="#錯誤例子" class="headerlink" title="錯誤例子"></a>錯誤例子</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Math.max.apply(null, 1, 2, 3);</div><div class="line">// Uncaught TypeError: CreateListFromArrayLike called on non-object</div></pre></td></tr></table></figure>
-<h2 id="正確例子"><a href="#正確例子" class="headerlink" title="正確例子"></a>正確例子</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Math.max.call(null, 1, 2, 3); // 3</div><div class="line">Math.max.apply(null, [1, 2, 5, 10]); // 10</div></pre></td></tr></table></figure>
-<h2 id="細節"><a href="#細節" class="headerlink" title="細節"></a>細節</h2><p>當調用<code>Function.prototype.apply</code>的時候，它會調用內置抽象操作：<code>CreateListFromArrayLike</code>。</p>
-<h2 id="CreateListFromArrayLike"><a href="#CreateListFromArrayLike" class="headerlink" title="CreateListFromArrayLike"></a>CreateListFromArrayLike</h2><p><code>CreateListFromArrayLike ( obj [ , elementTypes ] )</code></p>
-<p>CreateListFromArrayLike 是一個ECMAScript的內置抽象操作 (Abstract Operation)，用於建立一個List的值，它的元素由類似數組的對象的索引屬性提供。<code>elementTypes</code>是一個List，只允許自身建立的<code>list</code>擁有ECMAScript Language 類型的值，比如<code>undefined, null, boolean</code>等。在調用的時候，它會執行以下步驟:</p>
-<ol>
-<li>如果沒有定義<code>elementTypes</code>的話，它會被定義為« Undefined, Null, Boolean, String, Symbol, Number, Object »。</li>
-<li>如果<code>Type(obj)</code>的類型不是Object，拋出TypeError 錯誤。</li>
-<li>定義<code>len</code>為<code>obj</code>的length。</li>
-<li>建立一個空的List <code>list</code>。</li>
-<li>定義<code>index</code>為0</li>
-<li>當index小於len的時候，重複以下步驟：<ol>
-<li>定義<code>indexName</code>為!ToString(index)</li>
-<li>定義<code>next</code> 為?Get(obj, indexName)</li>
-<li>如果<code>Type(next)</code>的類型不存在於<code>elementType</code>裡面，拋出TypeError 錯誤。</li>
-<li>在<code>list</code>的最後增加next //<code>list.push(next)</code></li>
-<li><code>index</code>的值加1</li>
-</ol>
-</li>
-<li>返回<code>list</code></li>
-</ol>
-<h2 id="延伸閱讀"><a href="#延伸閱讀" class="headerlink" title="延伸閱讀"></a>延伸閱讀</h2><ol>
-<li>看V8是怎樣實現<code>Function.prototype.apply</code></li>
-<li>看V8是怎樣實現<code>CreateListFromArrayLike</code></li>
-</ol>
-<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ol>
-<li><a href="https://tc39.github.io/ecma262/#sec-function.prototype.apply" rel="external nofollow noopener noreferrer" target="_blank">Function.prototype.apply - ECMAScript 2018</a></li>
-<li>踩過的坑。。。</li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;解決方法&quot;&gt;&lt;a href=&quot;#解決方法&quot; class=&quot;headerlink&quot; title=&quot;解決方法&quot;&gt;&lt;/a&gt;解決方法&lt;/h2&gt;&lt;p&gt;仔細再看一下到底你是如何調用&lt;code&gt;apply&lt;/code&gt;的。。。&lt;/p&gt;
-&lt;p&gt;你可能在使用Function.pro
-    
-    </summary>
-    
-    
-      <category term="JavaScript" scheme="https://calpa.me/Tags/JavaScript/"/>
     
   </entry>
   

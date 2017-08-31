@@ -540,9 +540,9 @@ article .post-container h2 {
     color: #337ab7; }
 
 a {
-  color: #404040; }
+  color: #337ab7; }
   a:hover, a:focus {
-    color: #337ab7;
+    color: #0085a1;
     text-decoration: none; }
   a img:hover, a img:focus {
     cursor: zoom-in; }
@@ -756,13 +756,17 @@ form .row:first-child .floating-label-form-group {
 .sidebar-container .short-about {
   text-align: center; }
 
-.post-preview > a > .post-title {
-  margin-bottom: 0;
-  font-weight: 200;
-  text-shadow: 0 0 1px rgba(0, 0, 0, 0.15); }
-  @media screen and (max-width: 500px) {
-    .post-preview > a > .post-title {
-      font-weight: normal; } }
+.post-preview a {
+  color: #404040; }
+  .post-preview a:hover {
+    color: #337ab7; }
+  .post-preview a .post-title {
+    margin-bottom: 0;
+    font-weight: 200;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.15); }
+    @media screen and (max-width: 500px) {
+      .post-preview a .post-title {
+        font-weight: normal; } }
 
 .site-heading .about-me h4 {
   color: #ebebeb; }
