@@ -35,7 +35,7 @@
 <meta property="og:description" content="前言異步操作是非常常見的操作，也是其中一題常見的前端工程師面試題目。在日常開發中，我們會和伺服器交互，或者是和用戶的行動作出反應，比如說監聽某些點擊事件。這個時候，其實我們是執行了異步操作，我們需要等待對方若干時間才能收到返回值，甚至是一個錯誤的值。。。因此，異步操作很容易產生一些誤會。這裡，我會說一下異步操作，及其返回的處理方法。
 同步與異步的分別在同步的世界裡面，我們希望執行某些操作之後，就能">
 <meta property="og:image" content="https://i.imgur.com/KMksHxZ.png?imageView2/1/w/1400/h/400/interlace/1/q/90">
-<meta property="og:updated_time" content="2017-09-27T14:45:06.000Z">
+<meta property="og:updated_time" content="2017-09-27T15:28:25.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="異步操作見聞錄 | Calpa's blog">
 <meta name="twitter:description" content="前言異步操作是非常常見的操作，也是其中一題常見的前端工程師面試題目。在日常開發中，我們會和伺服器交互，或者是和用戶的行動作出反應，比如說監聽某些點擊事件。這個時候，其實我們是執行了異步操作，我們需要等待對方若干時間才能收到返回值，甚至是一個錯誤的值。。。因此，異步操作很容易產生一些誤會。這裡，我會說一下異步操作，及其返回的處理方法。
@@ -96,13 +96,23 @@
             
               
                 
+                  <li>
+                    <a href="/Tags/">
+                      Tags
+                    </a>
+                  </li>
+                
+              
+            
+              
+                
               
             
               
                 
                   <li>
-                    <a href="/Tags/">
-                      Tags
+                    <a href="/archive/">
+                      Archive
                     </a>
                   </li>
                 
@@ -121,8 +131,8 @@
               
                 
                   <li>
-                    <a href="/archive/">
-                      Archive
+                    <a href="/works/">
+                      Works
                     </a>
                   </li>
                 
@@ -133,16 +143,6 @@
                   <li>
                     <a href="/search/">
                       Search
-                    </a>
-                  </li>
-                
-              
-            
-              
-                
-                  <li>
-                    <a href="/works/">
-                      Works
                     </a>
                   </li>
                 
@@ -245,7 +245,7 @@ header.intro-header {
                     </span>
 
                     
-                      <span class="post-count">共1,478字</span>
+                      <span class="post-count">共1,542字</span>
                     
 
                     <div class="tags text-center post-tags">
@@ -411,9 +411,9 @@ header.intro-header {
               
               
               
+              
+              
               <a href="/Tags/#Blog" title="Blog" rel="2">Blog</a>
-              
-              
               
               
               
@@ -608,6 +608,8 @@ function handleEnter(e) {
 <p>我們簡單的讀一下這段代碼：</p>
 <p>一個異步的不變量 <code>getPosts</code> 是一個箭頭函數，內部操作為等待 axios 的 GET 請求到地址：<a href="https://calpa.me">http://calpa.me</a>，並返回伺服器返回的資料。</p>
 <p>這是一個非常簡單的異步操作吧，但是如果是這樣的呢？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">async const getUserData = () =&gt; &#123;</div><div class="line">  await posts = axios.get(&apos;https://calpa.me/posts&apos;);</div><div class="line">  await accountInfo = axios.get(&apos;https://calpa.me/about&apos;);</div><div class="line">  /* ... */</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>如果你想要使用 Async / Await 的話，可以使用<br><a href="https://www.infoq.com/news/2017/02/node-76-async-await" rel="external nofollow noopener noreferrer" target="_blank">Node.js 7.6</a> 或以上的版本。例如使用 nvm 安裝 v8: <code>nvm install v8</code>，然後 <code>nvm use v8</code>。</p>
+<p>另外，如果你不想更新 Node 版本的話，你可以安裝 <a href="https://caolan.github.io/async/" rel="external nofollow noopener noreferrer" target="_blank">async 工具庫</a>。</p>
 <h2 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h2><p>異步操作已經成為了前端工程師面試常見的問題之一，感覺是對於前端工程師的技術水平需求越來越提高了。雖然這些都是在 MDN 上面寫好的介紹，但是只有自己用過才會知道什麼比較好。</p>
 <p>如果公司的 Node 版本可以支持 Async/Await 的話，那就直接用 Async/Await 就好了。不行的話，那就用 Promise 吧，不然 Generator 的設計對於強迫症患者來說很不順眼。。。</p>
 
