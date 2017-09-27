@@ -18,32 +18,29 @@
     <meta name="google-site-verification" content="riZBcestky7i9xY__A-5J-2EE65T75X1u-zgbss37Io">
     <title>
         
-        JavaScript的變量提升入門｜Calpa&#39;s blog
+        異步操作見聞錄｜Calpa&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="https://calpa.me/2017/01/14/javascript-variable-hoisting/">
+    <link rel="canonical" href="https://calpa.me/2017/09/27/async-summary/">
 
     <!-- Open Graph -->
     
-    <meta name="description" content="在JavaScript中，hoisting是一個容易犯錯的地方。在一段scope裡面，沒有定義變量就使用變量的話會彈出Reference Error。12 // ReferenceError: poi is not definedconsole.log(poi);
-
-1234var name;console.log(name); // undefinedname = &amp;apos;calpa&amp;apo">
+    <meta name="description" content="前言異步操作是非常常見的操作，也是其中一題常見的前端工程師面試題目。在日常開發中，我們會和伺服器交互，或者是和用戶的行動作出反應，比如說監聽某些點擊事件。這個時候，其實我們是執行了異步操作，我們需要等待對方若干時間才能收到返回值，甚至是一個錯誤的值。。。因此，異步操作很容易產生一些誤會。這裡，我會說一下異步操作，及其返回的處理方法。
+同步與異步的分別在同步的世界裡面，我們希望執行某些操作之後，就能">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript的變量提升入門 | Calpa's blog">
-<meta property="og:url" content="https://calpa.me/2017/01/14/javascript-variable-hoisting/index.html">
+<meta property="og:title" content="異步操作見聞錄 | Calpa's blog">
+<meta property="og:url" content="https://calpa.me/2017/09/27/async-summary/index.html">
 <meta property="og:site_name" content="Calpa">
-<meta property="og:description" content="在JavaScript中，hoisting是一個容易犯錯的地方。在一段scope裡面，沒有定義變量就使用變量的話會彈出Reference Error。12 // ReferenceError: poi is not definedconsole.log(poi);
-
-1234var name;console.log(name); // undefinedname = &amp;apos;calpa&amp;apo">
-<meta property="og:image" content="https://calpa.me/img/post-default.jpg">
-<meta property="og:updated_time" content="2017-05-18T06:07:19.000Z">
+<meta property="og:description" content="前言異步操作是非常常見的操作，也是其中一題常見的前端工程師面試題目。在日常開發中，我們會和伺服器交互，或者是和用戶的行動作出反應，比如說監聽某些點擊事件。這個時候，其實我們是執行了異步操作，我們需要等待對方若干時間才能收到返回值，甚至是一個錯誤的值。。。因此，異步操作很容易產生一些誤會。這裡，我會說一下異步操作，及其返回的處理方法。
+同步與異步的分別在同步的世界裡面，我們希望執行某些操作之後，就能">
+<meta property="og:image" content="https://i.imgur.com/KMksHxZ.png?imageView2/1/w/1400/h/400/interlace/1/q/90">
+<meta property="og:updated_time" content="2017-09-27T14:45:06.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScript的變量提升入門 | Calpa's blog">
-<meta name="twitter:description" content="在JavaScript中，hoisting是一個容易犯錯的地方。在一段scope裡面，沒有定義變量就使用變量的話會彈出Reference Error。12 // ReferenceError: poi is not definedconsole.log(poi);
-
-1234var name;console.log(name); // undefinedname = &amp;apos;calpa&amp;apo">
-<meta name="twitter:image" content="https://calpa.me/img/post-default.jpg">
+<meta name="twitter:title" content="異步操作見聞錄 | Calpa's blog">
+<meta name="twitter:description" content="前言異步操作是非常常見的操作，也是其中一題常見的前端工程師面試題目。在日常開發中，我們會和伺服器交互，或者是和用戶的行動作出反應，比如說監聽某些點擊事件。這個時候，其實我們是執行了異步操作，我們需要等待對方若干時間才能收到返回值，甚至是一個錯誤的值。。。因此，異步操作很容易產生一些誤會。這裡，我會說一下異步操作，及其返回的處理方法。
+同步與異步的分別在同步的世界裡面，我們希望執行某些操作之後，就能">
+<meta name="twitter:image" content="https://i.imgur.com/KMksHxZ.png?imageView2/1/w/1400/h/400/interlace/1/q/90">
 
     <!-- Bootstrap v3.3.7 Core CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
@@ -89,7 +86,7 @@
     <div id="huxblog_navbar">
       <div class="navbar-collapse">
         <ul class="nav navbar-nav navbar-center title-calpa display-none">
-          <li><a href="#" onclick="scrolltoTop(event)">JavaScript的變量提升入門</a></li>
+          <li><a href="#" onclick="scrolltoTop(event)">異步操作見聞錄</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li>
@@ -192,13 +189,13 @@
 <!--only post-->
 
   
-    <img class="wechat-title-img" src="/img/post-default.jpg">
+    <img class="wechat-title-img" src="https://i.imgur.com/KMksHxZ.png">
   
 
 <style>
     
     header.intro-header {
-      background-image: url('/img/post-default.jpg');
+      background-image: url('https://i.imgur.com/KMksHxZ.png?imageView2/1/w/1400/h/400/interlace/1/q/90');
     }
     
 </style>
@@ -207,7 +204,11 @@
 header.intro-header {
   
   
+    background-color: #f0db51;
+  
 
+  
+    background-size: contain;
   
 }
 
@@ -233,23 +234,25 @@ header.intro-header {
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>JavaScript的變量提升入門</h1>
+                    <h1>異步操作見聞錄</h1>
                     
                     <span>
                       作者 Calpa
                     </span>
                     
                     <span>
-                      日期 2017-01-14
+                      日期 2017-09-27
                     </span>
 
                     
-                      <span class="post-count">共191字</span>
+                      <span class="post-count">共1,478字</span>
                     
 
                     <div class="tags text-center post-tags">
                       
                       <a class="tag" href="/Tags/#JavaScript" title="JavaScript">JavaScript</a>
+                      
+                      <a class="tag" href="/Tags/#Front End" title="Front End">Front End</a>
                       
                       
                     </div>
@@ -566,30 +569,55 @@ function handleEnter(e) {
 
 
             <div class="col-lg-7 col-lg-offset-0 col-md-7 col-sm-9 post-container">
-              <p>在JavaScript中，hoisting是一個容易犯錯的地方。<br>在一段scope裡面，沒有定義變量就使用變量的話會彈出Reference Error。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"> // ReferenceError: poi is not defined</div><div class="line">console.log(poi);</div></pre></td></tr></table></figure></p>
-<hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var name;</div><div class="line">console.log(name); // undefined</div><div class="line">name = &apos;calpa&apos;</div><div class="line">console.log(name); // calpa</div></pre></td></tr></table></figure>
-<p>由於JavaScript的解釋器會提前把所有變量函數定義，所以上面這一段代碼會變成這一段：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">console.log(name); // undefined</div><div class="line">var name = &apos;calpa&apos;;</div><div class="line">console.log(name); // calpa</div></pre></td></tr></table></figure></p>
-<p>另外，JavaScript也會出現這樣的問題。。。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var name = &apos;calpa&apos;;</div><div class="line">(function () &#123;</div><div class="line">    // My name is undefined</div><div class="line">    console.log(&quot;My name is &quot; + name);</div><div class="line">    var name = &apos;poi&apos;;</div><div class="line">    // My name is poi</div><div class="line">    console.log(&quot;My name is &quot; + name); // poi</div><div class="line">&#125;)();</div></pre></td></tr></table></figure></p>
-<p>簡單來說，在寫JavaScript時，我們應該提前在檔案開始位置定義變量。</p>
-<hr>
-<p>參考資料：</p>
-<ol>
-<li><a href="http://adripofJavaScript.com/blog/drips/variable-and-function-hoisting" rel="external nofollow noopener noreferrer" target="_blank">Variable and Function Hoisting in JavaScript</a></li>
-<li><a href="http://jinlong.github.io/2013/09/11/var-and-fun-hoisting/" rel="external nofollow noopener noreferrer" target="_blank">JavaScript 中的变量和函数提升</a></li>
+              <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>異步操作是非常常見的操作，也是其中一題常見的前端工程師面試題目。在日常開發中，我們會和伺服器交互，或者是和用戶的行動作出反應，比如說監聽某些點擊事件。這個時候，其實我們是執行了異步操作，我們需要等待對方若干時間才能收到返回值，甚至是一個錯誤的值。。。因此，異步操作很容易產生一些誤會。這裡，我會說一下異步操作，及其返回的處理方法。</p>
+<h2 id="同步與異步的分別"><a href="#同步與異步的分別" class="headerlink" title="同步與異步的分別"></a>同步與異步的分別</h2><p>在同步的世界裡面，我們希望執行某些操作之後，就能夠馬上拿到返回的值，然後執行下一步。然而，當我們發出 HTTP 請求的時候，我們可能需要等待世界的另外一端返回信息，這需要時間，便不是同步了。。。</p>
+<p>如果沒有異步的話，當你發出 HTTP 請求的時候，瀏覽器需要等待伺服器返回才執行下一步。這就是代表瀏覽器會卡住。。。</p>
+<p>異步處理，簡單來說就是我們發出了一個行動，但是不是馬上得到結果，我們會繼續執行後面的指令，等到函數裡面有一個返回，我們才拿那個返回值來使用。最簡單的說法，就是我們向服務器發出請求，但是服務器需要時間處理，並且返回處理過的內容。</p>
+<h2 id="異步操作處理方法"><a href="#異步操作處理方法" class="headerlink" title="異步操作處理方法"></a>異步操作處理方法</h2><ol>
+<li>Callback</li>
+<li>Promise （思想）</li>
+<li>Generator</li>
+<li>Async await （推薦）</li>
 </ol>
+<h3 id="Callback"><a href="#Callback" class="headerlink" title="Callback"></a>Callback</h3><p>我們看一下維基百科上面對於 Callback 的說明：</p>
+<blockquote>
+<p>在電腦程式設計中，回呼函式，或簡稱回呼（Callback 即call then back 被主函數呼叫運算後會返回主函數），是指通過函數參數傳遞到其它代碼的，某一塊可執行代碼的參照。這一設計允許了底層代碼呼叫在高層定義的子程式。</p>
+</blockquote>
+<p>這樣好像說得蠻複雜的，但其實很簡單，你把一個函數 cb (Function) 作為參數 (Argument)傳進這個函數 B 裡面，然後在函數 B 使用函數 cb。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function func(x, cb) &#123;</div><div class="line">  cb(x)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>舉個例子，比如我們要在 Node.js 裡面讀取一個檔案，我們的代碼會是下面這樣的：</p>
+<p>hello.txt:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Hello World, I&apos;m Calpa Liu.</div></pre></td></tr></table></figure></p>
+<hr>
+<p>index.js:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">var fs = require(&apos;fs&apos;);</div><div class="line"></div><div class="line">fs.readFile(&apos;hello.txt&apos;, function (err, data) &#123;</div><div class="line">     if (err) &#123;</div><div class="line">          return console.error(err);</div><div class="line">     &#125;</div><div class="line"></div><div class="line">     console.log(data);</div><div class="line">&#125;);</div><div class="line"></div><div class="line">console.log(&apos;Finished&apos;);</div></pre></td></tr></table></figure></p>
+<p>我們會在 callback 裡面處理 callback，也就是一個回調裡面做另外一件事情，那可能是另外一個 callback，那麼你可以想象一下，我們越寫越深。。。這樣有兩個問題，第一：代碼的耦合性會很高，不容易去拆分代碼；第二：代碼的維護性很差。</p>
+<p><img src="https://i.imgur.com/bjHDvVN.jpg" alt="Imgur"></p>
+<h3 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h3><p>Promise 是說如果你做了 A 的事情，成功了就做 B，不成功就做 C，你還可以繼續做 D 的事情，然後進行成功和不成功的處理。這樣說可能比較虛，但是你看一下 MDN 上面的圖就會明白了。</p>
+<p><img src="https://i.imgur.com/w9BxjmL.png" alt="Promise - MDN"></p>
+<p>一個發射子彈的動作可以這樣寫：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var fire = new Promise(function(resolve, reject) &#123;</div><div class="line">     setTimeout(function() &#123;</div><div class="line">          resolve(&apos;已命中三千里外的目標&apos;);</div><div class="line">     &#125;, 3000)</div><div class="line">&#125;);</div><div class="line"></div><div class="line">fire.then(function(result) &#123;</div><div class="line">     console.log(result);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>你可以在 Windows 平台按 F12 或 Ctrl + Shift + I，或在 Mac 上 按 Cmd + Opt + I，打開 Google Chrome Developer Tools ，然後在 Console 貼上上面的代碼，三秒後就會輸出<code>已命中三千里外的目標</code>。</p>
+<p>你也可以在 then() 裡面寫 1個到 N個的 Promise。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">var fire = new Promise(function(resolve, reject) &#123;</div><div class="line">     setTimeout(function() &#123;</div><div class="line">          resolve(&apos;已命中三千里外的目標&apos;);</div><div class="line">     &#125;, 3000)</div><div class="line">&#125;);</div><div class="line"></div><div class="line">fire.then(function(result) &#123;</div><div class="line">     console.log(result);</div><div class="line">     console.log(&apos;正在返回司令部&apos;);</div><div class="line">     return fire.then(function (result) &#123;</div><div class="line">          console.log(result);</div><div class="line">     &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="Generator"><a href="#Generator" class="headerlink" title="Generator"></a>Generator</h3><p>Generator 其實是一個狀態機，內部保存機器的運行狀態。我們透過獲取機器的完成狀態 (done)，我們能夠重複調用機器。我們可以使用 yield 暫停一個函數，並跳出函數。從外面的角度來看，我們可以從上而下去寫代碼，但是代碼會複雜，難以理解。</p>
+<p>雖然它已經寫進 ECMAScript 2015 的正式規範裡面，但是我不太喜歡使用 Generator。我們簡單看一下 Generator 就好了，因為現在是 2017 年，異步操作的有更加好的處理方法。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">function* gen() &#123;</div><div class="line">  yield 1;</div><div class="line">  yield 2;</div><div class="line">  yield 3;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var g = gen(); // &quot;Generator &#123; &#125;&quot;</div><div class="line">g; //</div><div class="line">g.next(); // &#123;value: 1, done: false&#125;</div><div class="line">g.next(); // &#123;value: 2, done: false&#125;</div><div class="line">g.next(); // &#123;value: 3, done: false&#125;</div><div class="line">g.next() // &#123;value: undefined, done: true&#125;</div></pre></td></tr></table></figure>
+<h3 id="Async-Await"><a href="#Async-Await" class="headerlink" title="Async/Await"></a>Async/Await</h3><p>對於技術的要求，是無止境的。為了寫出更加優美的代碼，你又可以付出什麼的代價呢？</p>
+<p>如果你沒有試過 Async/Await 的話，那麼你就應該試一下，因為實在是太優雅了。</p>
+<p>這里我就放出一段現在博客在用的代碼：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">async const getPosts = () =&gt; &#123;</div><div class="line">  await res = axios.get(&apos;https://calpa.me/posts&apos;);</div><div class="line">  return res.data;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>我們簡單的讀一下這段代碼：</p>
+<p>一個異步的不變量 <code>getPosts</code> 是一個箭頭函數，內部操作為等待 axios 的 GET 請求到地址：<a href="https://calpa.me">http://calpa.me</a>，並返回伺服器返回的資料。</p>
+<p>這是一個非常簡單的異步操作吧，但是如果是這樣的呢？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">async const getUserData = () =&gt; &#123;</div><div class="line">  await posts = axios.get(&apos;https://calpa.me/posts&apos;);</div><div class="line">  await accountInfo = axios.get(&apos;https://calpa.me/about&apos;);</div><div class="line">  /* ... */</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h2><p>異步操作已經成為了前端工程師面試常見的問題之一，感覺是對於前端工程師的技術水平需求越來越提高了。雖然這些都是在 MDN 上面寫好的介紹，但是只有自己用過才會知道什麼比較好。</p>
+<p>如果公司的 Node 版本可以支持 Async/Await 的話，那就直接用 Async/Await 就好了。不行的話，那就用 Promise 吧，不然 Generator 的設計對於強迫症患者來說很不順眼。。。</p>
 
               
 
 <ul class="pager">
     
-    <li class="previous">
-        <a href="/2017/01/20/using-javascript-to-create-web-storage/" data-toggle="tooltip" data-placement="top" title="利用JavaScript創建Web Storage">&larr; Previous Post</a>
-    </li>
-    
     
     <li class="next">
-        <a href="/2017/01/08/hexo-404-page/" data-toggle="tooltip" data-placement="top" title="Hexo之建立404 Page">Next Post &rarr;</a>
+        <a href="/2017/08/31/react-markdown-render-markdown-as-component/" data-toggle="tooltip" data-placement="top" title="React-markdown -- 實時渲染 Markdown 的 React 工具">Next Post &rarr;</a>
     </li>
     
 </ul>
@@ -609,7 +637,7 @@ function handleEnter(e) {
 
             <div class="hidden-xs col-md-2 col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#同步與異步的分別"><span class="toc-text">同步與異步的分別</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#異步操作處理方法"><span class="toc-text">異步操作處理方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Callback"><span class="toc-text">Callback</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Promise"><span class="toc-text">Promise</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generator"><span class="toc-text">Generator</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Async-Await"><span class="toc-text">Async/Await</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#感想"><span class="toc-text">感想</span></a></li></ol>
                 </div>
             </div>
         </div>
