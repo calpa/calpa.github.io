@@ -4,6 +4,25 @@
 
     
   <url>
+    <loc>https://calpa.me/2017/09/27/async-summary/</loc>
+    <lastmod>2017-09-30T09:25:08.000Z</lastmod>
+    <data>
+        <display>
+        <title>異步操作見聞錄</title>
+        <pubTime>2017-09-27T12:00:00.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+        <tag>Front End</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://calpa.me/2017/09/30/hang-zhou-interview-summary/</loc>
     <lastmod>2017-09-30T09:23:34.000Z</lastmod>
     <data>
@@ -18,25 +37,6 @@
         <tag>杭州</tag>
          
         <tag>掘金技術征文</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://calpa.me/2017/09/27/async-summary/</loc>
-    <lastmod>2017-09-30T09:23:17.000Z</lastmod>
-    <data>
-        <display>
-        <title>異步操作見聞錄</title>
-        <pubTime>2017-09-27T12:00:00.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-        <tag>Front End</tag>
          
          
            
@@ -251,23 +251,6 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/04/25/coders-of-the-caribbean-review/</loc>
-    <lastmod>2017-06-06T16:28:01.000Z</lastmod>
-    <data>
-        <display>
-        <title>Coders of the Caribbean Online Contest 後記</title>
-        <pubTime>2017-04-25T07:35:00.000Z</pubTime>
-        
-        <tag>Codingame</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://calpa.me/2017/02/23/github-edcation-package/</loc>
     <lastmod>2017-06-06T16:28:01.000Z</lastmod>
     <data>
@@ -302,14 +285,14 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/04/05/front-end-booklist/</loc>
+    <loc>https://calpa.me/2017/04/23/hackUST-2017-hackathon-summary/</loc>
     <lastmod>2017-06-06T16:28:01.000Z</lastmod>
     <data>
         <display>
-        <title>前端工程師的入門書單</title>
-        <pubTime>2017-04-05T14:51:00.000Z</pubTime>
+        <title>hackUST 2017後記</title>
+        <pubTime>2017-04-23T12:44:00.000Z</pubTime>
         
-        <tag>Web</tag>
+        <tag>Hackathon</tag>
          
          
            
@@ -319,14 +302,31 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/04/23/hackUST-2017-hackathon-summary/</loc>
+    <loc>https://calpa.me/2017/04/25/coders-of-the-caribbean-review/</loc>
     <lastmod>2017-06-06T16:28:01.000Z</lastmod>
     <data>
         <display>
-        <title>hackUST 2017後記</title>
-        <pubTime>2017-04-23T12:44:00.000Z</pubTime>
+        <title>Coders of the Caribbean Online Contest 後記</title>
+        <pubTime>2017-04-25T07:35:00.000Z</pubTime>
         
-        <tag>Hackathon</tag>
+        <tag>Codingame</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://calpa.me/2017/04/05/front-end-booklist/</loc>
+    <lastmod>2017-06-06T16:28:01.000Z</lastmod>
+    <data>
+        <display>
+        <title>前端工程師的入門書單</title>
+        <pubTime>2017-04-05T14:51:00.000Z</pubTime>
+        
+        <tag>Web</tag>
          
          
            
@@ -409,12 +409,46 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/03/25/javascript-this/</loc>
+    <loc>https://calpa.me/2017/02/19/javascript-closure/</loc>
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     <data>
         <display>
-        <title>JavaScript的this</title>
-        <pubTime>2017-03-25T04:44:00.000Z</pubTime>
+        <title>JavaScript的閉包(Closure)</title>
+        <pubTime>2017-02-19T07:12:00.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://calpa.me/2017/02/02/javascript-true-and-false/</loc>
+    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
+    <data>
+        <display>
+        <title>JavaScript中的True與False</title>
+        <pubTime>2017-02-02T15:19:53.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://calpa.me/2017/01/14/javascript-variable-hoisting/</loc>
+    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
+    <data>
+        <display>
+        <title>JavaScript的變量提升入門</title>
+        <pubTime>2017-01-14T12:09:35.000Z</pubTime>
         
         <tag>JavaScript</tag>
          
@@ -443,12 +477,12 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/02/02/javascript-true-and-false/</loc>
+    <loc>https://calpa.me/2017/04/27/n-ways-to-output-hello-world/</loc>
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     <data>
         <display>
-        <title>JavaScript中的True與False</title>
-        <pubTime>2017-02-02T15:19:53.000Z</pubTime>
+        <title>Hello World的四+N種方法</title>
+        <pubTime>2017-04-27T06:34:00.000Z</pubTime>
         
         <tag>JavaScript</tag>
          
@@ -479,31 +513,12 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/05/16/react-component-lifecycle/</loc>
+    <loc>https://calpa.me/2017/03/25/javascript-this/</loc>
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     <data>
         <display>
-        <title>React 組件生命週期 - 加載組件</title>
-        <pubTime>2017-05-16T14:40:00.000Z</pubTime>
-        
-        <tag>Web</tag>
-         
-        <tag>React</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://calpa.me/2017/02/19/javascript-closure/</loc>
-    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
-    <data>
-        <display>
-        <title>JavaScript的閉包(Closure)</title>
-        <pubTime>2017-02-19T07:12:00.000Z</pubTime>
+        <title>JavaScript的this</title>
+        <pubTime>2017-03-25T04:44:00.000Z</pubTime>
         
         <tag>JavaScript</tag>
          
@@ -534,12 +549,12 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/01/14/javascript-variable-hoisting/</loc>
+    <loc>https://calpa.me/2017/05/01/CreateListFromArrayLike-problem-solution/</loc>
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     <data>
         <display>
-        <title>JavaScript的變量提升入門</title>
-        <pubTime>2017-01-14T12:09:35.000Z</pubTime>
+        <title>CreateListFromArrayLike called on non-object 報錯的解決方法</title>
+        <pubTime>2017-05-01T14:50:00.000Z</pubTime>
         
         <tag>JavaScript</tag>
          
@@ -551,14 +566,16 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/04/27/n-ways-to-output-hello-world/</loc>
+    <loc>https://calpa.me/2017/05/16/react-component-lifecycle/</loc>
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     <data>
         <display>
-        <title>Hello World的四+N種方法</title>
-        <pubTime>2017-04-27T06:34:00.000Z</pubTime>
+        <title>React 組件生命週期 - 加載組件</title>
+        <pubTime>2017-05-16T14:40:00.000Z</pubTime>
         
-        <tag>JavaScript</tag>
+        <tag>Web</tag>
+         
+        <tag>React</tag>
          
          
            
@@ -578,23 +595,6 @@
         <tag>JavaScript</tag>
          
         <tag>Redux</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://calpa.me/2017/05/01/CreateListFromArrayLike-problem-solution/</loc>
-    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
-    <data>
-        <display>
-        <title>CreateListFromArrayLike called on non-object 報錯的解決方法</title>
-        <pubTime>2017-05-01T14:50:00.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
          
          
            
