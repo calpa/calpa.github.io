@@ -692,7 +692,8 @@ body {
   padding: 1.7rem;
   width: 100%; }
   .card .card-header {
-    height: 15em; }
+    height: 15em;
+    cursor: pointer; }
   .card .menu-content {
     margin: 0;
     padding: 0;
@@ -733,7 +734,8 @@ body {
     bottom: 0;
     width: 100%;
     transform: translateY(calc(70px + 1em));
-    transition: transform 0.3s; }
+    transition: transform 0.3s;
+    cursor: pointer; }
     .card .data .content {
       padding: 1em;
       position: relative;
