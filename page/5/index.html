@@ -58,6 +58,9 @@
       <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@1/dist/instantsearch.min.css">
       <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@1/dist/instantsearch.min.js"></script>
     
+
+    <!-- lazy loading -->
+    <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 </head>
 
 
@@ -92,15 +95,15 @@
             
               
                 
+              
+            
+              
+                
                   <li>
                     <a href="/Tags/">
                       Tags
                     </a>
                   </li>
-                
-              
-            
-              
                 
               
             
@@ -127,8 +130,8 @@
               
                 
                   <li>
-                    <a href="/works/">
-                      Works
+                    <a href="/search/">
+                      Search
                     </a>
                   </li>
                 
@@ -137,8 +140,8 @@
               
                 
                   <li>
-                    <a href="/search/">
-                      Search
+                    <a href="/works/">
+                      Works
                     </a>
                   </li>
                 
@@ -296,7 +299,7 @@
                 <div class="site-heading text-center">
                     <div class="about-me">
                         <!--移动端头部显示-->
-                        <img src="/img/profile.png" alt="avatar">
+                        <img class="lozad" data-src="https://calpa.me/img/profile.png" alt="avatar">
                         <h4>Calpa</h4>
 
                         <!-- 關於我的一言兩句 -->
@@ -337,6 +340,20 @@
 </style>
 
 <div class="post-preview calpaFirstImage">
+    <a href="/2017/04/01/git-workflow/" class="black">
+        <h2 class="post-title">
+            Git多人合作開發工作流程
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-04-01
+        </p>
+        
+        
+    </a>
+</div>
+
+
+<div class="post-preview">
     <a href="/2017/03/27/interview/" class="black">
         <h2 class="post-title">
             Interview後記
@@ -345,6 +362,23 @@
             <i class="fa fa-calendar" aria-hidden="true"></i> 2017-03-27
         </p>
         
+        
+        <div class="post-content-preview">
+            <p>
+                面試問題：背景
+請自我介紹
+為什麼會從前端開始？
+請畫出現在項目的技術圖，並簡單介紹一下
+你最近在探索什麼新技術？
+
+技術
+NoSQL和SQL的比較，優點和缺點？
+哪一個性能比較好？
+HTTPS如何加密
+
+感想原本預約了兩點面試的，結果我一點多就去到，面試官讓我在一旁坐坐。感覺這次面試氣氛不錯，..
+            </p>
+        </div>
         
     </a>
 </div>
@@ -491,34 +525,6 @@ denied..
 </div>
 
 
-<div class="post-preview">
-    <a href="/2017/02/19/javascript-closure/" class="black">
-        <h2 class="post-title">
-            JavaScript的閉包(Closure)
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-02-19
-        </p>
-        
-        
-        <div class="post-content-preview">
-            <p>
-                為什麼會有這篇文章打好基本功是很重要的。。。
-最簡單的閉包
-先定義一個Function A
-在A的裡面定義一個Function B
-在A中返回B
-執行A(), 將A()的返回值賦予給b
-執行b()
-
-12345678function A() &#123;  function B() &#123;..
-            </p>
-        </div>
-        
-    </a>
-</div>
-
-
 
 <!-- 翻页 pager -->
 
@@ -544,7 +550,7 @@ denied..
         <div class="short-about">
             <!--侧边栏头像-->
             
-            <img src="/img/profile.png" alt="avatar">
+            <img alt="avatar" class="lozad" data-src="https://calpa.me/img/profile.png">
             
             <h5>Calpa</h5>
             <!-- 關於我的一言兩句 -->
@@ -613,7 +619,7 @@ denied..
               
               
               
-              <a href="/Tags/#Front End" title="Front End" rel="3">Front End</a>
+              <a href="/Tags/#Front End" title="Front End" rel="4">Front End</a>
               
               
               
@@ -637,7 +643,9 @@ denied..
               
               
               
-              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
+              <a href="/Tags/#Interview" title="Interview" rel="2">Interview</a>
+              
+              
               
               
               
@@ -645,9 +653,11 @@ denied..
               
               
               
+              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
+              
+              
+              
               <a href="/Tags/#SEO" title="SEO" rel="2">SEO</a>
-              
-              
               
               
               
@@ -675,9 +685,9 @@ denied..
               
               
               
+              
+              
               <a href="/Tags/#CSS" title="CSS" rel="2">CSS</a>
-              
-              
               
               
               
@@ -713,6 +723,12 @@ denied..
       <ul class="list-inline" style="text-align: center;">
         
           <li>
+            <a href="/2017/09/30/hang-zhou-interview-summary/">
+              【圖多】《遠征成功﹣﹣一個香港人北上杭州豬場的前端面試之路》
+            </a>
+          </li>
+        
+          <li>
             <a href="/2017/09/27/async-summary/">
               異步操作見聞錄
             </a>
@@ -736,17 +752,11 @@ denied..
             </a>
           </li>
         
-          <li>
-            <a href="/2017/07/24/six-steps-to-debug-before-directly-ask-question/">
-              項目代碼調試：提問前要做的六個步驟
-            </a>
-          </li>
-        
       </ul>
     
     <hr>
 
-    <h5 style="text-align: center;">共46篇文章</h5>
+    <h5 style="text-align: center;">共47篇文章</h5>
     <hr>
 
     <!-- All Blog Posts -->
@@ -759,7 +769,7 @@ denied..
           
               <li>
                 <a href="/archive/#2017-9">
-                  9月(1)
+                  9月(2)
                 </a>
               </li>
             
@@ -874,8 +884,6 @@ function handleEnter(e) {
     </div>
 </footer>
 
-<!--wechat title img-->
-<img class="wechat-title-img" src="/img/profile.png">
 
 <!-- jQuery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -975,6 +983,12 @@ function handleEnter(e) {
     })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
 
+
+<!-- lazy loading -->
+<script>
+var observer = lozad(); // lazy loads elements with default selector as '.lozad'
+observer.observe();
+</script>
 
 </body>
 </html>

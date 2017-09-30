@@ -59,6 +59,9 @@
       <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@1/dist/instantsearch.min.css">
       <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@1/dist/instantsearch.min.js"></script>
     
+
+    <!-- lazy loading -->
+    <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 </head>
 
 
@@ -93,15 +96,15 @@
             
               
                 
+              
+            
+              
+                
                   <li>
                     <a href="/Tags/">
                       Tags
                     </a>
                   </li>
-                
-              
-            
-              
                 
               
             
@@ -128,8 +131,8 @@
               
                 
                   <li>
-                    <a href="/works/">
-                      Works
+                    <a href="/search/">
+                      Search
                     </a>
                   </li>
                 
@@ -138,8 +141,8 @@
               
                 
                   <li>
-                    <a href="/search/">
-                      Search
+                    <a href="/works/">
+                      Works
                     </a>
                   </li>
                 
@@ -315,8 +318,6 @@
     </div>
 </footer>
 
-<!--wechat title img-->
-<img class="wechat-title-img" src="/img/profile.png">
 
 <!-- jQuery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -419,6 +420,12 @@
     })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
 
+
+<!-- lazy loading -->
+<script>
+var observer = lozad(); // lazy loads elements with default selector as '.lozad'
+observer.observe();
+</script>
 
 </body>
 </html>

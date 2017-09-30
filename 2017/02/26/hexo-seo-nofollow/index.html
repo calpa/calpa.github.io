@@ -62,6 +62,9 @@
       <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@1/dist/instantsearch.min.css">
       <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@1/dist/instantsearch.min.js"></script>
     
+
+    <!-- lazy loading -->
+    <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 </head>
 
 
@@ -96,15 +99,15 @@
             
               
                 
+              
+            
+              
+                
                   <li>
                     <a href="/Tags/">
                       Tags
                     </a>
                   </li>
-                
-              
-            
-              
                 
               
             
@@ -131,8 +134,8 @@
               
                 
                   <li>
-                    <a href="/works/">
-                      Works
+                    <a href="/search/">
+                      Search
                     </a>
                   </li>
                 
@@ -141,8 +144,8 @@
               
                 
                   <li>
-                    <a href="/search/">
-                      Search
+                    <a href="/works/">
+                      Works
                     </a>
                   </li>
                 
@@ -189,7 +192,7 @@
 <!--only post-->
 
   
-    <img class="wechat-title-img" src="/img/post-default.jpg">
+    <img class="wechat-title-img" data-src="/img/post-default.jpg">
   
 
 <style>
@@ -270,7 +273,7 @@ header.intro-header {
         <div class="short-about">
             <!--侧边栏头像-->
             
-            <img src="/img/profile.png" alt="avatar">
+            <img alt="avatar" class="lozad" data-src="https://calpa.me/img/profile.png">
             
             <h5>Calpa</h5>
             <!-- 關於我的一言兩句 -->
@@ -339,7 +342,7 @@ header.intro-header {
               
               
               
-              <a href="/Tags/#Front End" title="Front End" rel="3">Front End</a>
+              <a href="/Tags/#Front End" title="Front End" rel="4">Front End</a>
               
               
               
@@ -363,7 +366,9 @@ header.intro-header {
               
               
               
-              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
+              <a href="/Tags/#Interview" title="Interview" rel="2">Interview</a>
+              
+              
               
               
               
@@ -371,9 +376,11 @@ header.intro-header {
               
               
               
+              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
+              
+              
+              
               <a href="/Tags/#SEO" title="SEO" rel="2">SEO</a>
-              
-              
               
               
               
@@ -401,9 +408,9 @@ header.intro-header {
               
               
               
+              
+              
               <a href="/Tags/#CSS" title="CSS" rel="2">CSS</a>
-              
-              
               
               
               
@@ -439,6 +446,12 @@ header.intro-header {
       <ul class="list-inline" style="text-align: center;">
         
           <li>
+            <a href="/2017/09/30/hang-zhou-interview-summary/">
+              【圖多】《遠征成功﹣﹣一個香港人北上杭州豬場的前端面試之路》
+            </a>
+          </li>
+        
+          <li>
             <a href="/2017/09/27/async-summary/">
               異步操作見聞錄
             </a>
@@ -462,17 +475,11 @@ header.intro-header {
             </a>
           </li>
         
-          <li>
-            <a href="/2017/07/24/six-steps-to-debug-before-directly-ask-question/">
-              項目代碼調試：提問前要做的六個步驟
-            </a>
-          </li>
-        
       </ul>
     
     <hr>
 
-    <h5 style="text-align: center;">共46篇文章</h5>
+    <h5 style="text-align: center;">共47篇文章</h5>
     <hr>
 
     <!-- All Blog Posts -->
@@ -485,7 +492,7 @@ header.intro-header {
           
               <li>
                 <a href="/archive/#2017-9">
-                  9月(1)
+                  9月(2)
                 </a>
               </li>
             
@@ -696,8 +703,6 @@ gitalk.render('gitalk-container')
     </div>
 </footer>
 
-<!--wechat title img-->
-<img class="wechat-title-img" src="/img/profile.png">
 
 <!-- jQuery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -800,6 +805,12 @@ gitalk.render('gitalk-container')
     })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
 
+
+<!-- lazy loading -->
+<script>
+var observer = lozad(); // lazy loads elements with default selector as '.lozad'
+observer.observe();
+</script>
 
 </body>
 </html>

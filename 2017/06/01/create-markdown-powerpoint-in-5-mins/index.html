@@ -98,6 +98,9 @@ MarkdownMarkdown語法">
       <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@1/dist/instantsearch.min.css">
       <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@1/dist/instantsearch.min.js"></script>
     
+
+    <!-- lazy loading -->
+    <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 </head>
 
 
@@ -132,15 +135,15 @@ MarkdownMarkdown語法">
             
               
                 
+              
+            
+              
+                
                   <li>
                     <a href="/Tags/">
                       Tags
                     </a>
                   </li>
-                
-              
-            
-              
                 
               
             
@@ -167,8 +170,8 @@ MarkdownMarkdown語法">
               
                 
                   <li>
-                    <a href="/works/">
-                      Works
+                    <a href="/search/">
+                      Search
                     </a>
                   </li>
                 
@@ -177,8 +180,8 @@ MarkdownMarkdown語法">
               
                 
                   <li>
-                    <a href="/search/">
-                      Search
+                    <a href="/works/">
+                      Works
                     </a>
                   </li>
                 
@@ -225,7 +228,7 @@ MarkdownMarkdown語法">
 <!--only post-->
 
   
-    <img class="wechat-title-img" src="/img/post-default.jpg">
+    <img class="wechat-title-img" data-src="/img/post-default.jpg">
   
 
 <style>
@@ -304,7 +307,7 @@ header.intro-header {
         <div class="short-about">
             <!--侧边栏头像-->
             
-            <img src="/img/profile.png" alt="avatar">
+            <img alt="avatar" class="lozad" data-src="https://calpa.me/img/profile.png">
             
             <h5>Calpa</h5>
             <!-- 關於我的一言兩句 -->
@@ -373,7 +376,7 @@ header.intro-header {
               
               
               
-              <a href="/Tags/#Front End" title="Front End" rel="3">Front End</a>
+              <a href="/Tags/#Front End" title="Front End" rel="4">Front End</a>
               
               
               
@@ -397,7 +400,9 @@ header.intro-header {
               
               
               
-              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
+              <a href="/Tags/#Interview" title="Interview" rel="2">Interview</a>
+              
+              
               
               
               
@@ -405,9 +410,11 @@ header.intro-header {
               
               
               
+              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
+              
+              
+              
               <a href="/Tags/#SEO" title="SEO" rel="2">SEO</a>
-              
-              
               
               
               
@@ -435,9 +442,9 @@ header.intro-header {
               
               
               
+              
+              
               <a href="/Tags/#CSS" title="CSS" rel="2">CSS</a>
-              
-              
               
               
               
@@ -473,6 +480,12 @@ header.intro-header {
       <ul class="list-inline" style="text-align: center;">
         
           <li>
+            <a href="/2017/09/30/hang-zhou-interview-summary/">
+              【圖多】《遠征成功﹣﹣一個香港人北上杭州豬場的前端面試之路》
+            </a>
+          </li>
+        
+          <li>
             <a href="/2017/09/27/async-summary/">
               異步操作見聞錄
             </a>
@@ -496,17 +509,11 @@ header.intro-header {
             </a>
           </li>
         
-          <li>
-            <a href="/2017/07/24/six-steps-to-debug-before-directly-ask-question/">
-              項目代碼調試：提問前要做的六個步驟
-            </a>
-          </li>
-        
       </ul>
     
     <hr>
 
-    <h5 style="text-align: center;">共46篇文章</h5>
+    <h5 style="text-align: center;">共47篇文章</h5>
     <hr>
 
     <!-- All Blog Posts -->
@@ -519,7 +526,7 @@ header.intro-header {
           
               <li>
                 <a href="/archive/#2017-9">
-                  9月(1)
+                  9月(2)
                 </a>
               </li>
             
@@ -613,14 +620,14 @@ function handleEnter(e) {
 <li>Github</li>
 <li>Markdown</li>
 </ul>
-<h4 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h4><p><img src="https://i.imgur.com/Riz9ctd.png" height="200" width="200"></p>
+<h4 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h4><p><img class="lozad" data-src="https://i.imgur.com/Riz9ctd.png" height="200" width="200"></p>
 <h4 id="Markdown"><a href="#Markdown" class="headerlink" title="Markdown"></a>Markdown</h4><h4 id="Markdown語法"><a href="#Markdown語法" class="headerlink" title="Markdown語法"></a>Markdown語法</h4><h5 id="標題"><a href="#標題" class="headerlink" title="標題"></a>標題</h5><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="section"># h1</span></div><div class="line"><span class="section">## h2</span></div><div class="line"><span class="section">### h3</span></div><div class="line"><span class="section">#### h4</span></div><div class="line"><span class="section">##### h5</span></div></pre></td></tr></table></figure>
-<h2 id="4個步驟"><a href="#4個步驟" class="headerlink" title="4個步驟"></a>4個步驟</h2><p><img src="https://i.imgur.com/HqSHVOy.png" alt="Imgur"></p>
-<p><img src="https://i.imgur.com/ZwDgHFr.png" alt="Imgur"></p>
-<p><img src="https://i.imgur.com/RLV4Ut0.png" alt="Imgur"></p>
-<p><img src="https://i.imgur.com/uOoSrMa.png" alt="Imgur"></p>
+<h2 id="4個步驟"><a href="#4個步驟" class="headerlink" title="4個步驟"></a>4個步驟</h2><p><img class="lozad" data-src="https://i.imgur.com/HqSHVOy.png" alt="Imgur"></p>
+<p><img class="lozad" data-src="https://i.imgur.com/ZwDgHFr.png" alt="Imgur"></p>
+<p><img class="lozad" data-src="https://i.imgur.com/RLV4Ut0.png" alt="Imgur"></p>
+<p><img class="lozad" data-src="https://i.imgur.com/uOoSrMa.png" alt="Imgur"></p>
 <h3 id="GitPitch-Slideshow-URL"><a href="#GitPitch-Slideshow-URL" class="headerlink" title="GitPitch Slideshow URL"></a>GitPitch Slideshow URL</h3><p><a href="https://gitpitch.com/user/repo" rel="external nofollow noopener noreferrer" target="_blank">https://gitpitch.com/user/repo</a></p>
-<p><img src="https://calpa.me/img/qrcode.png" height="200" width="200"></p>
+<p><img class="lozad" data-src="https://calpa.me/img/qrcode.png" height="200" width="200"></p>
 
               
 
@@ -743,8 +750,6 @@ gitalk.render('gitalk-container')
     </div>
 </footer>
 
-<!--wechat title img-->
-<img class="wechat-title-img" src="/img/profile.png">
 
 <!-- jQuery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -847,6 +852,12 @@ gitalk.render('gitalk-container')
     })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
 
+
+<!-- lazy loading -->
+<script>
+var observer = lozad(); // lazy loads elements with default selector as '.lozad'
+observer.observe();
+</script>
 
 </body>
 </html>

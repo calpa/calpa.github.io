@@ -58,6 +58,9 @@
       <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@1/dist/instantsearch.min.css">
       <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@1/dist/instantsearch.min.js"></script>
     
+
+    <!-- lazy loading -->
+    <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 </head>
 
 
@@ -92,15 +95,15 @@
             
               
                 
+              
+            
+              
+                
                   <li>
                     <a href="/Tags/">
                       Tags
                     </a>
                   </li>
-                
-              
-            
-              
                 
               
             
@@ -127,8 +130,8 @@
               
                 
                   <li>
-                    <a href="/works/">
-                      Works
+                    <a href="/search/">
+                      Search
                     </a>
                   </li>
                 
@@ -137,8 +140,8 @@
               
                 
                   <li>
-                    <a href="/search/">
-                      Search
+                    <a href="/works/">
+                      Works
                     </a>
                   </li>
                 
@@ -296,7 +299,7 @@
                 <div class="site-heading text-center">
                     <div class="about-me">
                         <!--移动端头部显示-->
-                        <img src="/img/profile.png" alt="avatar">
+                        <img class="lozad" data-src="https://calpa.me/img/profile.png" alt="avatar">
                         <h4>Calpa</h4>
 
                         <!-- 關於我的一言兩句 -->
@@ -337,6 +340,20 @@
 </style>
 
 <div class="post-preview calpaFirstImage">
+    <a href="/2017/05/16/react-component-lifecycle/" class="black">
+        <h2 class="post-title">
+            React 組件生命週期 - 加載組件
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-05-16
+        </p>
+        
+        
+    </a>
+</div>
+
+
+<div class="post-preview">
     <a href="/2017/05/06/introduction-to-regular-expression/" class="black">
         <h2 class="post-title">
             初探正則表達式
@@ -345,6 +362,13 @@
             <i class="fa fa-calendar" aria-hidden="true"></i> 2017-05-06
         </p>
         
+        
+        <div class="post-content-preview">
+            <p>
+                正則表達式是一個非常簡單的語法，但它也是神兵利器，可以說是程序員必須要理解的工具之一。它就像一本會不斷成長的寶刀，隨著程序員對它的理解，它的威力也跟著增強。
+一些當下熱門的編輯器(Atom, Sublime)或者 IDE (WebStorm)都支持正則表達式尋找。如果你有瞭解過JavaScrip..
+            </p>
+        </div>
         
     </a>
 </div>
@@ -478,29 +502,6 @@ padding如果你要置中的元素是inine或者是inline-*的話，比如說文
 </div>
 
 
-<div class="post-preview">
-    <a href="/2017/04/25/coders-of-the-caribbean-review/" class="black">
-        <h2 class="post-title">
-            Coders of the Caribbean Online Contest 後記
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-04-25
-        </p>
-        
-        
-        <div class="post-content-preview">
-            <p>
-                
-寫了一天Code後，我就把那些代碼放置在Codingame上面。今天它寄電郵給我說有比賽結果。對於這一次的結果，我完全不感到意外。因為很多地方都沒有去優化，比如說如何去計算各種行動的優先權重。這裡就不放上代碼了，還是下一次拿到更高的排名才放出來吧 XD
-看來我還是要好好地刷算法才行。。。
-
-            </p>
-        </div>
-        
-    </a>
-</div>
-
-
 
 <!-- 翻页 pager -->
 
@@ -526,7 +527,7 @@ padding如果你要置中的元素是inine或者是inline-*的話，比如說文
         <div class="short-about">
             <!--侧边栏头像-->
             
-            <img src="/img/profile.png" alt="avatar">
+            <img alt="avatar" class="lozad" data-src="https://calpa.me/img/profile.png">
             
             <h5>Calpa</h5>
             <!-- 關於我的一言兩句 -->
@@ -595,7 +596,7 @@ padding如果你要置中的元素是inine或者是inline-*的話，比如說文
               
               
               
-              <a href="/Tags/#Front End" title="Front End" rel="3">Front End</a>
+              <a href="/Tags/#Front End" title="Front End" rel="4">Front End</a>
               
               
               
@@ -619,7 +620,9 @@ padding如果你要置中的元素是inine或者是inline-*的話，比如說文
               
               
               
-              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
+              <a href="/Tags/#Interview" title="Interview" rel="2">Interview</a>
+              
+              
               
               
               
@@ -627,9 +630,11 @@ padding如果你要置中的元素是inine或者是inline-*的話，比如說文
               
               
               
+              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
+              
+              
+              
               <a href="/Tags/#SEO" title="SEO" rel="2">SEO</a>
-              
-              
               
               
               
@@ -657,9 +662,9 @@ padding如果你要置中的元素是inine或者是inline-*的話，比如說文
               
               
               
+              
+              
               <a href="/Tags/#CSS" title="CSS" rel="2">CSS</a>
-              
-              
               
               
               
@@ -695,6 +700,12 @@ padding如果你要置中的元素是inine或者是inline-*的話，比如說文
       <ul class="list-inline" style="text-align: center;">
         
           <li>
+            <a href="/2017/09/30/hang-zhou-interview-summary/">
+              【圖多】《遠征成功﹣﹣一個香港人北上杭州豬場的前端面試之路》
+            </a>
+          </li>
+        
+          <li>
             <a href="/2017/09/27/async-summary/">
               異步操作見聞錄
             </a>
@@ -718,17 +729,11 @@ padding如果你要置中的元素是inine或者是inline-*的話，比如說文
             </a>
           </li>
         
-          <li>
-            <a href="/2017/07/24/six-steps-to-debug-before-directly-ask-question/">
-              項目代碼調試：提問前要做的六個步驟
-            </a>
-          </li>
-        
       </ul>
     
     <hr>
 
-    <h5 style="text-align: center;">共46篇文章</h5>
+    <h5 style="text-align: center;">共47篇文章</h5>
     <hr>
 
     <!-- All Blog Posts -->
@@ -741,7 +746,7 @@ padding如果你要置中的元素是inine或者是inline-*的話，比如說文
           
               <li>
                 <a href="/archive/#2017-9">
-                  9月(1)
+                  9月(2)
                 </a>
               </li>
             
@@ -856,8 +861,6 @@ function handleEnter(e) {
     </div>
 </footer>
 
-<!--wechat title img-->
-<img class="wechat-title-img" src="/img/profile.png">
 
 <!-- jQuery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -957,6 +960,12 @@ function handleEnter(e) {
     })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
 
+
+<!-- lazy loading -->
+<script>
+var observer = lozad(); // lazy loads elements with default selector as '.lozad'
+observer.observe();
+</script>
 
 </body>
 </html>

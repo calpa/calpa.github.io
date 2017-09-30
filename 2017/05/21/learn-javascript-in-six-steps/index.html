@@ -32,12 +32,12 @@
 <meta property="og:url" content="https://calpa.me/2017/05/21/learn-javascript-in-six-steps/index.html">
 <meta property="og:site_name" content="Calpa">
 <meta property="og:description" content="平日開發的時候，我們會選擇使用一些框架來避免重複製造輪子，減輕我們的工作量。然而，我們卻不能透過使用更好的工具，或者更換框架來解決一些基礎開發問題。因此打好基礎很重要，不但決定前端程序員解決基礎問題的能力，還決定了面對日新月異框架時的掌握能力。當我開發 React 應用的時候，遇到的問題多是我對於 JavaScript 的理解不夠充分。因此，我在這裡寫一下如何打好 JavaScript 基礎，希望">
-<meta property="og:image" content="https://i.imgur.com/KMksHxZ.png?imageView2/1/w/1400/h/400/interlace/1/q/90">
+<meta property="og:image" content="https://i.imgur.com/KMksHxZ.png">
 <meta property="og:updated_time" content="2017-07-02T14:15:29.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="打好 JavaScript 基礎的6個步驟 | Calpa's blog">
 <meta name="twitter:description" content="平日開發的時候，我們會選擇使用一些框架來避免重複製造輪子，減輕我們的工作量。然而，我們卻不能透過使用更好的工具，或者更換框架來解決一些基礎開發問題。因此打好基礎很重要，不但決定前端程序員解決基礎問題的能力，還決定了面對日新月異框架時的掌握能力。當我開發 React 應用的時候，遇到的問題多是我對於 JavaScript 的理解不夠充分。因此，我在這裡寫一下如何打好 JavaScript 基礎，希望">
-<meta name="twitter:image" content="https://i.imgur.com/KMksHxZ.png?imageView2/1/w/1400/h/400/interlace/1/q/90">
+<meta name="twitter:image" content="https://i.imgur.com/KMksHxZ.png">
 
     <!-- Bootstrap v3.3.7 Core CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
@@ -59,6 +59,9 @@
       <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@1/dist/instantsearch.min.css">
       <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@1/dist/instantsearch.min.js"></script>
     
+
+    <!-- lazy loading -->
+    <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 </head>
 
 
@@ -93,15 +96,15 @@
             
               
                 
+              
+            
+              
+                
                   <li>
                     <a href="/Tags/">
                       Tags
                     </a>
                   </li>
-                
-              
-            
-              
                 
               
             
@@ -128,8 +131,8 @@
               
                 
                   <li>
-                    <a href="/works/">
-                      Works
+                    <a href="/search/">
+                      Search
                     </a>
                   </li>
                 
@@ -138,8 +141,8 @@
               
                 
                   <li>
-                    <a href="/search/">
-                      Search
+                    <a href="/works/">
+                      Works
                     </a>
                   </li>
                 
@@ -186,13 +189,13 @@
 <!--only post-->
 
   
-    <img class="wechat-title-img" src="https://i.imgur.com/KMksHxZ.png">
+    <img class="wechat-title-img" data-src="https://i.imgur.com/KMksHxZ.png">
   
 
 <style>
     
     header.intro-header {
-      background-image: url('https://i.imgur.com/KMksHxZ.png?imageView2/1/w/1400/h/400/interlace/1/q/90');
+      background-image: url('https://i.imgur.com/KMksHxZ.png');
     }
     
 </style>
@@ -265,7 +268,7 @@ header.intro-header {
         <div class="short-about">
             <!--侧边栏头像-->
             
-            <img src="/img/profile.png" alt="avatar">
+            <img alt="avatar" class="lozad" data-src="https://calpa.me/img/profile.png">
             
             <h5>Calpa</h5>
             <!-- 關於我的一言兩句 -->
@@ -334,7 +337,7 @@ header.intro-header {
               
               
               
-              <a href="/Tags/#Front End" title="Front End" rel="3">Front End</a>
+              <a href="/Tags/#Front End" title="Front End" rel="4">Front End</a>
               
               
               
@@ -358,7 +361,9 @@ header.intro-header {
               
               
               
-              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
+              <a href="/Tags/#Interview" title="Interview" rel="2">Interview</a>
+              
+              
               
               
               
@@ -366,9 +371,11 @@ header.intro-header {
               
               
               
+              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
+              
+              
+              
               <a href="/Tags/#SEO" title="SEO" rel="2">SEO</a>
-              
-              
               
               
               
@@ -396,9 +403,9 @@ header.intro-header {
               
               
               
+              
+              
               <a href="/Tags/#CSS" title="CSS" rel="2">CSS</a>
-              
-              
               
               
               
@@ -434,6 +441,12 @@ header.intro-header {
       <ul class="list-inline" style="text-align: center;">
         
           <li>
+            <a href="/2017/09/30/hang-zhou-interview-summary/">
+              【圖多】《遠征成功﹣﹣一個香港人北上杭州豬場的前端面試之路》
+            </a>
+          </li>
+        
+          <li>
             <a href="/2017/09/27/async-summary/">
               異步操作見聞錄
             </a>
@@ -457,17 +470,11 @@ header.intro-header {
             </a>
           </li>
         
-          <li>
-            <a href="/2017/07/24/six-steps-to-debug-before-directly-ask-question/">
-              項目代碼調試：提問前要做的六個步驟
-            </a>
-          </li>
-        
       </ul>
     
     <hr>
 
-    <h5 style="text-align: center;">共46篇文章</h5>
+    <h5 style="text-align: center;">共47篇文章</h5>
     <hr>
 
     <!-- All Blog Posts -->
@@ -480,7 +487,7 @@ header.intro-header {
           
               <li>
                 <a href="/archive/#2017-9">
-                  9月(1)
+                  9月(2)
                 </a>
               </li>
             
@@ -563,9 +570,9 @@ function handleEnter(e) {
               <p>平日開發的時候，我們會選擇使用一些框架來避免重複製造輪子，減輕我們的工作量。然而，我們卻不能透過使用更好的工具，或者更換框架來解決一些基礎開發問題。因此打好基礎很重要，不但決定前端程序員解決基礎問題的能力，還決定了面對日新月異框架時的掌握能力。當我開發 React 應用的時候，遇到的問題多是我對於 JavaScript 的理解不夠充分。因此，我在這裡寫一下如何打好 JavaScript 基礎，希望拋磚引玉 XD</p>
 <ol>
 <li><p>看一些經典的書<br>JavaScript: 紅寶書 (JavaScript高級程序設計)，犀牛書 (JavaScript: The Definitive Guide)，You Don’t Know JS<br>計算機經典: 算法導論，SICP</p>
-<img src="https://i.imgur.com/xm6R14W.jpg" width="300" title="JavaScript高級程序設計">
-<img src="https://i.imgur.com/autEZuV.jpg" width="300" title="JavaScript: The Definitive Guide">
-<img src="https://i.imgur.com/ajLLsUg.gif" width="300" title="You Don" alt="t Know JS">
+<img class="lozad" data-src="https://i.imgur.com/xm6R14W.jpg" width="300" title="JavaScript高級程序設計">
+<img class="lozad" data-src="https://i.imgur.com/autEZuV.jpg" width="300" title="JavaScript: The Definitive Guide">
+<img class="lozad" data-src="https://i.imgur.com/ajLLsUg.gif" width="300" title="You Don" alt="t Know JS">
 </li>
 <li><p>嘗試用不同的工具，增加自己的視野。<br>你可以做一些玩具，自己嘗試一下寫TODO APP 的不同寫法。</p>
 </li>
@@ -701,8 +708,6 @@ gitalk.render('gitalk-container')
     </div>
 </footer>
 
-<!--wechat title img-->
-<img class="wechat-title-img" src="/img/profile.png">
 
 <!-- jQuery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -805,6 +810,12 @@ gitalk.render('gitalk-container')
     })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
 
+
+<!-- lazy loading -->
+<script>
+var observer = lozad(); // lazy loads elements with default selector as '.lozad'
+observer.observe();
+</script>
 
 </body>
 </html>

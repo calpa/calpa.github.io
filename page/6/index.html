@@ -58,6 +58,9 @@
       <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@1/dist/instantsearch.min.css">
       <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@1/dist/instantsearch.min.js"></script>
     
+
+    <!-- lazy loading -->
+    <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 </head>
 
 
@@ -92,15 +95,15 @@
             
               
                 
+              
+            
+              
+                
                   <li>
                     <a href="/Tags/">
                       Tags
                     </a>
                   </li>
-                
-              
-            
-              
                 
               
             
@@ -127,8 +130,8 @@
               
                 
                   <li>
-                    <a href="/works/">
-                      Works
+                    <a href="/search/">
+                      Search
                     </a>
                   </li>
                 
@@ -137,8 +140,8 @@
               
                 
                   <li>
-                    <a href="/search/">
-                      Search
+                    <a href="/works/">
+                      Works
                     </a>
                   </li>
                 
@@ -296,7 +299,7 @@
                 <div class="site-heading text-center">
                     <div class="about-me">
                         <!--移动端头部显示-->
-                        <img src="/img/profile.png" alt="avatar">
+                        <img class="lozad" data-src="https://calpa.me/img/profile.png" alt="avatar">
                         <h4>Calpa</h4>
 
                         <!-- 關於我的一言兩句 -->
@@ -337,6 +340,20 @@
 </style>
 
 <div class="post-preview calpaFirstImage">
+    <a href="/2017/02/19/javascript-closure/" class="black">
+        <h2 class="post-title">
+            JavaScript的閉包(Closure)
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-02-19
+        </p>
+        
+        
+    </a>
+</div>
+
+
+<div class="post-preview">
     <a href="/2017/02/02/javascript-true-and-false/" class="black">
         <h2 class="post-title">
             JavaScript中的True與False
@@ -345,6 +362,13 @@
             <i class="fa fa-calendar" aria-hidden="true"></i> 2017-02-02
         </p>
         
+        
+        <div class="post-content-preview">
+            <p>
+                這幾天用Enki來學習JavaScript，感覺不錯，You can’t handle the truth! 有一些特別True/False例子。這裡簡單記錄一下。
+最簡單的測試方法：1234567function test(something)&#123;  if (something) &#..
+            </p>
+        </div>
         
     </a>
 </div>
@@ -396,27 +420,6 @@ Cookie的佔用空間非常小，大小限制于4KB左右，常見的用途是�
 
 
 <div class="post-preview">
-    <a href="/2017/01/08/readme/" class="black">
-        <h2 class="post-title">
-            Github上的README.md
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-01-08
-        </p>
-        
-        
-        <div class="post-content-preview">
-            <p>
-                Hexo在渲染的時候默認是把source下面所有的.md檔案渲染成html，這樣的話會覆蓋掉Github上的CNAME和README.md。但是我又不想這樣，我想Github Repo下面可以直接看到這個blog的README.md內容。
-所以我就修改Hexo根目錄下的_config.yml：1..
-            </p>
-        </div>
-        
-    </a>
-</div>
-
-
-<div class="post-preview">
     <a href="/2017/01/08/hexo-404-page/" class="black">
         <h2 class="post-title">
             Hexo之建立404 Page
@@ -435,6 +438,27 @@ Cookie的佔用空間非常小，大小限制于4KB左右，常見的用途是�
 
 參考資料
 Creating a custom 404 page for ..
+            </p>
+        </div>
+        
+    </a>
+</div>
+
+
+<div class="post-preview">
+    <a href="/2017/01/08/readme/" class="black">
+        <h2 class="post-title">
+            Github上的README.md
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-01-08
+        </p>
+        
+        
+        <div class="post-content-preview">
+            <p>
+                Hexo在渲染的時候默認是把source下面所有的.md檔案渲染成html，這樣的話會覆蓋掉Github上的CNAME和README.md。但是我又不想這樣，我想Github Repo下面可以直接看到這個blog的README.md內容。
+所以我就修改Hexo根目錄下的_config.yml：1..
             </p>
         </div>
         
@@ -485,7 +509,7 @@ Creating a custom 404 page for ..
         <div class="short-about">
             <!--侧边栏头像-->
             
-            <img src="/img/profile.png" alt="avatar">
+            <img alt="avatar" class="lozad" data-src="https://calpa.me/img/profile.png">
             
             <h5>Calpa</h5>
             <!-- 關於我的一言兩句 -->
@@ -554,7 +578,7 @@ Creating a custom 404 page for ..
               
               
               
-              <a href="/Tags/#Front End" title="Front End" rel="3">Front End</a>
+              <a href="/Tags/#Front End" title="Front End" rel="4">Front End</a>
               
               
               
@@ -578,7 +602,9 @@ Creating a custom 404 page for ..
               
               
               
-              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
+              <a href="/Tags/#Interview" title="Interview" rel="2">Interview</a>
+              
+              
               
               
               
@@ -586,9 +612,11 @@ Creating a custom 404 page for ..
               
               
               
+              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
+              
+              
+              
               <a href="/Tags/#SEO" title="SEO" rel="2">SEO</a>
-              
-              
               
               
               
@@ -616,9 +644,9 @@ Creating a custom 404 page for ..
               
               
               
+              
+              
               <a href="/Tags/#CSS" title="CSS" rel="2">CSS</a>
-              
-              
               
               
               
@@ -654,6 +682,12 @@ Creating a custom 404 page for ..
       <ul class="list-inline" style="text-align: center;">
         
           <li>
+            <a href="/2017/09/30/hang-zhou-interview-summary/">
+              【圖多】《遠征成功﹣﹣一個香港人北上杭州豬場的前端面試之路》
+            </a>
+          </li>
+        
+          <li>
             <a href="/2017/09/27/async-summary/">
               異步操作見聞錄
             </a>
@@ -677,17 +711,11 @@ Creating a custom 404 page for ..
             </a>
           </li>
         
-          <li>
-            <a href="/2017/07/24/six-steps-to-debug-before-directly-ask-question/">
-              項目代碼調試：提問前要做的六個步驟
-            </a>
-          </li>
-        
       </ul>
     
     <hr>
 
-    <h5 style="text-align: center;">共46篇文章</h5>
+    <h5 style="text-align: center;">共47篇文章</h5>
     <hr>
 
     <!-- All Blog Posts -->
@@ -700,7 +728,7 @@ Creating a custom 404 page for ..
           
               <li>
                 <a href="/archive/#2017-9">
-                  9月(1)
+                  9月(2)
                 </a>
               </li>
             
@@ -815,8 +843,6 @@ function handleEnter(e) {
     </div>
 </footer>
 
-<!--wechat title img-->
-<img class="wechat-title-img" src="/img/profile.png">
 
 <!-- jQuery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -916,6 +942,12 @@ function handleEnter(e) {
     })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
 
+
+<!-- lazy loading -->
+<script>
+var observer = lozad(); // lazy loads elements with default selector as '.lozad'
+observer.observe();
+</script>
 
 </body>
 </html>

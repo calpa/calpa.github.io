@@ -58,6 +58,9 @@
       <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@1/dist/instantsearch.min.css">
       <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@1/dist/instantsearch.min.js"></script>
     
+
+    <!-- lazy loading -->
+    <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 </head>
 
 
@@ -92,15 +95,15 @@
             
               
                 
+              
+            
+              
+                
                   <li>
                     <a href="/Tags/">
                       Tags
                     </a>
                   </li>
-                
-              
-            
-              
                 
               
             
@@ -127,8 +130,8 @@
               
                 
                   <li>
-                    <a href="/works/">
-                      Works
+                    <a href="/search/">
+                      Search
                     </a>
                   </li>
                 
@@ -137,8 +140,8 @@
               
                 
                   <li>
-                    <a href="/search/">
-                      Search
+                    <a href="/works/">
+                      Works
                     </a>
                   </li>
                 
@@ -296,7 +299,7 @@
                 <div class="site-heading text-center">
                     <div class="about-me">
                         <!--移动端头部显示-->
-                        <img src="/img/profile.png" alt="avatar">
+                        <img class="lozad" data-src="https://calpa.me/img/profile.png" alt="avatar">
                         <h4>Calpa</h4>
 
                         <!-- 關於我的一言兩句 -->
@@ -325,18 +328,34 @@
 
 <style>
 .calpaFirstImage {
-  background-position-y: 0;
+  background-position-y: 50%;
   background-position-x: 0;
-  background-size: cover;
+  background-size: contain;;
+  
+    background-color: #00d8e4;;
   
   
-       background-image: url('https://i.imgur.com/1tRwQTX.jpg');
+       background-image: url('https://i.imgur.com/Vb56RuU.jpg');
     
   
 }
 </style>
 
 <div class="post-preview calpaFirstImage">
+    <a href="/2017/06/19/front-end-performance-check-list-for-production-in-chinese/" class="black">
+        <h2 class="post-title">
+            【翻譯】前端性能優化必備工具清單
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-06-19
+        </p>
+        
+        
+    </a>
+</div>
+
+
+<div class="post-preview">
     <a href="/2017/06/14/hong-kong-open-sources-conference-remarks/" class="black">
         <h2 class="post-title">
             【多圖】2017 年香港開源年會後記
@@ -345,6 +364,12 @@
             <i class="fa fa-calendar" aria-hidden="true"></i> 2017-06-14
         </p>
         
+        
+        <div class="post-content-preview">
+            <p>
+                大約兩個星期之前，我在 Facebook上看到 2017 年的香港開源年會的消息。我想，我是不是可以透過這個機會，認識一下不同領域的程序員呢。於是，我在 EventBrite 上面買了學生票。但最終我拿到 VIP 票了，感覺有點激動。我把這一次的會議做了幾點筆記，也許，每一個人都應該參加最少一次..
+            </p>
+        </div>
         
     </a>
 </div>
@@ -483,27 +508,6 @@ Git ..
 </div>
 
 
-<div class="post-preview">
-    <a href="/2017/05/16/react-component-lifecycle/" class="black">
-        <h2 class="post-title">
-            React 組件生命週期 - 加載組件
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-05-16
-        </p>
-        
-        
-        <div class="post-content-preview">
-            <p>
-                組件React提供React.Component，我們可以透過使用組件，拆分UI為可以重複使用的獨立部分。React.Component是一個抽象的base class。我們甚少直接運用React.Component，通常是透過創建一個子類，並使用render()方法。
-例子：12345clas..
-            </p>
-        </div>
-        
-    </a>
-</div>
-
-
 
 <!-- 翻页 pager -->
 
@@ -529,7 +533,7 @@ Git ..
         <div class="short-about">
             <!--侧边栏头像-->
             
-            <img src="/img/profile.png" alt="avatar">
+            <img alt="avatar" class="lozad" data-src="https://calpa.me/img/profile.png">
             
             <h5>Calpa</h5>
             <!-- 關於我的一言兩句 -->
@@ -598,7 +602,7 @@ Git ..
               
               
               
-              <a href="/Tags/#Front End" title="Front End" rel="3">Front End</a>
+              <a href="/Tags/#Front End" title="Front End" rel="4">Front End</a>
               
               
               
@@ -622,7 +626,9 @@ Git ..
               
               
               
-              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
+              <a href="/Tags/#Interview" title="Interview" rel="2">Interview</a>
+              
+              
               
               
               
@@ -630,9 +636,11 @@ Git ..
               
               
               
+              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
+              
+              
+              
               <a href="/Tags/#SEO" title="SEO" rel="2">SEO</a>
-              
-              
               
               
               
@@ -660,9 +668,9 @@ Git ..
               
               
               
+              
+              
               <a href="/Tags/#CSS" title="CSS" rel="2">CSS</a>
-              
-              
               
               
               
@@ -698,6 +706,12 @@ Git ..
       <ul class="list-inline" style="text-align: center;">
         
           <li>
+            <a href="/2017/09/30/hang-zhou-interview-summary/">
+              【圖多】《遠征成功﹣﹣一個香港人北上杭州豬場的前端面試之路》
+            </a>
+          </li>
+        
+          <li>
             <a href="/2017/09/27/async-summary/">
               異步操作見聞錄
             </a>
@@ -721,17 +735,11 @@ Git ..
             </a>
           </li>
         
-          <li>
-            <a href="/2017/07/24/six-steps-to-debug-before-directly-ask-question/">
-              項目代碼調試：提問前要做的六個步驟
-            </a>
-          </li>
-        
       </ul>
     
     <hr>
 
-    <h5 style="text-align: center;">共46篇文章</h5>
+    <h5 style="text-align: center;">共47篇文章</h5>
     <hr>
 
     <!-- All Blog Posts -->
@@ -744,7 +752,7 @@ Git ..
           
               <li>
                 <a href="/archive/#2017-9">
-                  9月(1)
+                  9月(2)
                 </a>
               </li>
             
@@ -859,8 +867,6 @@ function handleEnter(e) {
     </div>
 </footer>
 
-<!--wechat title img-->
-<img class="wechat-title-img" src="/img/profile.png">
 
 <!-- jQuery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -960,6 +966,12 @@ function handleEnter(e) {
     })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
 
+
+<!-- lazy loading -->
+<script>
+var observer = lozad(); // lazy loads elements with default selector as '.lozad'
+observer.observe();
+</script>
 
 </body>
 </html>

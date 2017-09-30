@@ -26,7 +26,10 @@ $('.post-container').each(function(i){
 
     if (alt) $(this).after('<span class="caption">' + alt + '</span>');
 
-    $(this).wrap('<a data-fancybox="images" href="'+ this.src + '" title="' + alt + '" class="fancybox"></a>');
+    // From jQuery, get this.data-src
+    var src = $(this).data('src');
+
+    $(this).wrap('<a data-fancybox="images" href="'+ src + '" title="' + alt + '" class="fancybox"></a>');
   });
 
   $(this).find('.fancybox').each(function(){
@@ -37,3 +40,6 @@ $('.post-container').each(function(i){
 if ($.fancybox){
   $('[data-fancybox]').fancybox();
 }
+
+var observer = lozad(); // lazy loads elements with default selector as '.lozad'
+observer.observe();

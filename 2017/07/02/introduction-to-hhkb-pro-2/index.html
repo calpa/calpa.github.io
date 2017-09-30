@@ -40,7 +40,7 @@ HHKB在我取得這個 HHKB Pro 2 之前，我是一直在用 Cool">
 HHKB Pro 2 盒子
 
 HHKB在我取得這個 HHKB Pro 2 之前，我是一直在用 Cool">
-<meta property="og:image" content="https://i.imgur.com/AbKpx2P.jpg?imageView2/1/w/1400/h/400/interlace/1/q/90">
+<meta property="og:image" content="https://i.imgur.com/AbKpx2P.jpg">
 <meta property="og:updated_time" content="2017-07-02T15:54:05.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="神兵利器 -- HHKB Pro 2 開箱文 | Calpa's blog">
@@ -49,7 +49,7 @@ HHKB在我取得這個 HHKB Pro 2 之前，我是一直在用 Cool">
 HHKB Pro 2 盒子
 
 HHKB在我取得這個 HHKB Pro 2 之前，我是一直在用 Cool">
-<meta name="twitter:image" content="https://i.imgur.com/AbKpx2P.jpg?imageView2/1/w/1400/h/400/interlace/1/q/90">
+<meta name="twitter:image" content="https://i.imgur.com/AbKpx2P.jpg">
 
     <!-- Bootstrap v3.3.7 Core CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
@@ -71,6 +71,9 @@ HHKB在我取得這個 HHKB Pro 2 之前，我是一直在用 Cool">
       <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@1/dist/instantsearch.min.css">
       <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@1/dist/instantsearch.min.js"></script>
     
+
+    <!-- lazy loading -->
+    <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 </head>
 
 
@@ -105,15 +108,15 @@ HHKB在我取得這個 HHKB Pro 2 之前，我是一直在用 Cool">
             
               
                 
+              
+            
+              
+                
                   <li>
                     <a href="/Tags/">
                       Tags
                     </a>
                   </li>
-                
-              
-            
-              
                 
               
             
@@ -140,8 +143,8 @@ HHKB在我取得這個 HHKB Pro 2 之前，我是一直在用 Cool">
               
                 
                   <li>
-                    <a href="/works/">
-                      Works
+                    <a href="/search/">
+                      Search
                     </a>
                   </li>
                 
@@ -150,8 +153,8 @@ HHKB在我取得這個 HHKB Pro 2 之前，我是一直在用 Cool">
               
                 
                   <li>
-                    <a href="/search/">
-                      Search
+                    <a href="/works/">
+                      Works
                     </a>
                   </li>
                 
@@ -198,13 +201,13 @@ HHKB在我取得這個 HHKB Pro 2 之前，我是一直在用 Cool">
 <!--only post-->
 
   
-    <img class="wechat-title-img" src="https://i.imgur.com/AbKpx2P.jpg">
+    <img class="wechat-title-img" data-src="https://i.imgur.com/AbKpx2P.jpg">
   
 
 <style>
     
     header.intro-header {
-      background-image: url('https://i.imgur.com/AbKpx2P.jpg?imageView2/1/w/1400/h/400/interlace/1/q/90');
+      background-image: url('https://i.imgur.com/AbKpx2P.jpg');
     }
     
 </style>
@@ -277,7 +280,7 @@ header.intro-header {
         <div class="short-about">
             <!--侧边栏头像-->
             
-            <img src="/img/profile.png" alt="avatar">
+            <img alt="avatar" class="lozad" data-src="https://calpa.me/img/profile.png">
             
             <h5>Calpa</h5>
             <!-- 關於我的一言兩句 -->
@@ -346,7 +349,7 @@ header.intro-header {
               
               
               
-              <a href="/Tags/#Front End" title="Front End" rel="3">Front End</a>
+              <a href="/Tags/#Front End" title="Front End" rel="4">Front End</a>
               
               
               
@@ -370,7 +373,9 @@ header.intro-header {
               
               
               
-              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
+              <a href="/Tags/#Interview" title="Interview" rel="2">Interview</a>
+              
+              
               
               
               
@@ -378,9 +383,11 @@ header.intro-header {
               
               
               
+              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
+              
+              
+              
               <a href="/Tags/#SEO" title="SEO" rel="2">SEO</a>
-              
-              
               
               
               
@@ -408,9 +415,9 @@ header.intro-header {
               
               
               
+              
+              
               <a href="/Tags/#CSS" title="CSS" rel="2">CSS</a>
-              
-              
               
               
               
@@ -446,6 +453,12 @@ header.intro-header {
       <ul class="list-inline" style="text-align: center;">
         
           <li>
+            <a href="/2017/09/30/hang-zhou-interview-summary/">
+              【圖多】《遠征成功﹣﹣一個香港人北上杭州豬場的前端面試之路》
+            </a>
+          </li>
+        
+          <li>
             <a href="/2017/09/27/async-summary/">
               異步操作見聞錄
             </a>
@@ -469,17 +482,11 @@ header.intro-header {
             </a>
           </li>
         
-          <li>
-            <a href="/2017/07/24/six-steps-to-debug-before-directly-ask-question/">
-              項目代碼調試：提問前要做的六個步驟
-            </a>
-          </li>
-        
       </ul>
     
     <hr>
 
-    <h5 style="text-align: center;">共46篇文章</h5>
+    <h5 style="text-align: center;">共47篇文章</h5>
     <hr>
 
     <!-- All Blog Posts -->
@@ -492,7 +499,7 @@ header.intro-header {
           
               <li>
                 <a href="/archive/#2017-9">
-                  9月(1)
+                  9月(2)
                 </a>
               </li>
             
@@ -572,9 +579,9 @@ function handleEnter(e) {
 
 
             <div class="col-lg-7 col-lg-offset-0 col-md-7 col-sm-9 post-container">
-              <img src="https://i.imgur.com/AVN6eaJ.jpg" width="500">
+              <img class="lozad" data-src="https://i.imgur.com/AVN6eaJ.jpg" width="500">
 <p>我一開始拿到 Happy Hacking KeyBoard Pro 2時，我就問為什麼鍵盤可以完全沒有字的，那叫我如何輸入。。。雖然我可以盲打（不看鍵盤直接輸入），但也許我未必可以有能力使用這樣的鍵盤。但寫了一天代碼之後，我才發現，原來這一切都是自己的猜疑而已。這個鍵盤打起來就是一個字，爽。</p>
-<img src="https://i.imgur.com/AbKpx2P.jpg" width="500" title="HHKB Pro 2">
+<img class="lozad" data-src="https://i.imgur.com/AbKpx2P.jpg" width="500" title="HHKB Pro 2">
 <center>HHKB Pro 2 盒子</center>
 
 <h2 id="HHKB"><a href="#HHKB" class="headerlink" title="HHKB"></a>HHKB</h2><p>在我取得這個 HHKB Pro 2 之前，我是一直在用 Cooler Master 的紅軸機械鍵盤，這個打起來也是很爽的。</p>
@@ -586,7 +593,7 @@ function handleEnter(e) {
 <li>右邊 Option 按鍵變為右按 Mouse</li>
 <li>Option 加 IKJL 等於 上下左右</li>
 </ol>
-<img src="https://i.imgur.com/aDZMqim.png" width="500" title="配置">
+<img class="lozad" data-src="https://i.imgur.com/aDZMqim.png" width="500" title="配置">
 <h2 id="Emacs"><a href="#Emacs" class="headerlink" title="Emacs"></a>Emacs</h2><blockquote>
 <p>Emacs = Escape Meta Alt Ctrl Super</p>
 </blockquote>
@@ -715,8 +722,6 @@ gitalk.render('gitalk-container')
     </div>
 </footer>
 
-<!--wechat title img-->
-<img class="wechat-title-img" src="/img/profile.png">
 
 <!-- jQuery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -819,6 +824,12 @@ gitalk.render('gitalk-container')
     })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
 
+
+<!-- lazy loading -->
+<script>
+var observer = lozad(); // lazy loads elements with default selector as '.lozad'
+observer.observe();
+</script>
 
 </body>
 </html>

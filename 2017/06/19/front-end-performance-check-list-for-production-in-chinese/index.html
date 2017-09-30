@@ -38,7 +38,7 @@
 在這篇文章，我會分享優化網頁的檢查清單。如果你覺得我有錯漏的地方，請在下面留言。這張清單會包含一些優化搜尋引擎排名 (SEO) 的技巧，以及減少網頁加載時間的最佳實踐。
 
 編">
-<meta property="og:image" content="https://i.imgur.com/Vb56RuU.jpg?imageView2/1/w/1400/h/400/interlace/1/q/90">
+<meta property="og:image" content="https://i.imgur.com/Vb56RuU.jpg">
 <meta property="og:updated_time" content="2017-07-26T08:31:31.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【翻譯】前端性能優化必備工具清單 | Calpa's blog">
@@ -46,7 +46,7 @@
 在這篇文章，我會分享優化網頁的檢查清單。如果你覺得我有錯漏的地方，請在下面留言。這張清單會包含一些優化搜尋引擎排名 (SEO) 的技巧，以及減少網頁加載時間的最佳實踐。
 
 編">
-<meta name="twitter:image" content="https://i.imgur.com/Vb56RuU.jpg?imageView2/1/w/1400/h/400/interlace/1/q/90">
+<meta name="twitter:image" content="https://i.imgur.com/Vb56RuU.jpg">
 
     <!-- Bootstrap v3.3.7 Core CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
@@ -68,6 +68,9 @@
       <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@1/dist/instantsearch.min.css">
       <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@1/dist/instantsearch.min.js"></script>
     
+
+    <!-- lazy loading -->
+    <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 </head>
 
 
@@ -102,15 +105,15 @@
             
               
                 
+              
+            
+              
+                
                   <li>
                     <a href="/Tags/">
                       Tags
                     </a>
                   </li>
-                
-              
-            
-              
                 
               
             
@@ -137,8 +140,8 @@
               
                 
                   <li>
-                    <a href="/works/">
-                      Works
+                    <a href="/search/">
+                      Search
                     </a>
                   </li>
                 
@@ -147,8 +150,8 @@
               
                 
                   <li>
-                    <a href="/search/">
-                      Search
+                    <a href="/works/">
+                      Works
                     </a>
                   </li>
                 
@@ -195,13 +198,13 @@
 <!--only post-->
 
   
-    <img class="wechat-title-img" src="https://i.imgur.com/Vb56RuU.jpg">
+    <img class="wechat-title-img" data-src="https://i.imgur.com/Vb56RuU.jpg">
   
 
 <style>
     
     header.intro-header {
-      background-image: url('https://i.imgur.com/Vb56RuU.jpg?imageView2/1/w/1400/h/400/interlace/1/q/90');
+      background-image: url('https://i.imgur.com/Vb56RuU.jpg');
     }
     
 </style>
@@ -288,7 +291,7 @@ header.intro-header {
         <div class="short-about">
             <!--侧边栏头像-->
             
-            <img src="/img/profile.png" alt="avatar">
+            <img alt="avatar" class="lozad" data-src="https://calpa.me/img/profile.png">
             
             <h5>Calpa</h5>
             <!-- 關於我的一言兩句 -->
@@ -357,7 +360,7 @@ header.intro-header {
               
               
               
-              <a href="/Tags/#Front End" title="Front End" rel="3">Front End</a>
+              <a href="/Tags/#Front End" title="Front End" rel="4">Front End</a>
               
               
               
@@ -381,7 +384,9 @@ header.intro-header {
               
               
               
-              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
+              <a href="/Tags/#Interview" title="Interview" rel="2">Interview</a>
+              
+              
               
               
               
@@ -389,9 +394,11 @@ header.intro-header {
               
               
               
+              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
+              
+              
+              
               <a href="/Tags/#SEO" title="SEO" rel="2">SEO</a>
-              
-              
               
               
               
@@ -419,9 +426,9 @@ header.intro-header {
               
               
               
+              
+              
               <a href="/Tags/#CSS" title="CSS" rel="2">CSS</a>
-              
-              
               
               
               
@@ -457,6 +464,12 @@ header.intro-header {
       <ul class="list-inline" style="text-align: center;">
         
           <li>
+            <a href="/2017/09/30/hang-zhou-interview-summary/">
+              【圖多】《遠征成功﹣﹣一個香港人北上杭州豬場的前端面試之路》
+            </a>
+          </li>
+        
+          <li>
             <a href="/2017/09/27/async-summary/">
               異步操作見聞錄
             </a>
@@ -480,17 +493,11 @@ header.intro-header {
             </a>
           </li>
         
-          <li>
-            <a href="/2017/07/24/six-steps-to-debug-before-directly-ask-question/">
-              項目代碼調試：提問前要做的六個步驟
-            </a>
-          </li>
-        
       </ul>
     
     <hr>
 
-    <h5 style="text-align: center;">共46篇文章</h5>
+    <h5 style="text-align: center;">共47篇文章</h5>
     <hr>
 
     <!-- All Blog Posts -->
@@ -503,7 +510,7 @@ header.intro-header {
           
               <li>
                 <a href="/archive/#2017-9">
-                  9月(1)
+                  9月(2)
                 </a>
               </li>
             
@@ -605,7 +612,7 @@ function handleEnter(e) {
 <h3 id="minify-CSS"><a href="#minify-CSS" class="headerlink" title="minify CSS"></a>minify CSS</h3><p>  你可以使用 purify-css 或使用網上的<a href="http://csscompressor.com/" rel="external nofollow noopener noreferrer" target="_blank">CSS Compressor</a>。</p>
 <h2 id="減少載入時間"><a href="#減少載入時間" class="headerlink" title="減少載入時間"></a>減少載入時間</h2><h3 id="PageSpeed-Insights"><a href="#PageSpeed-Insights" class="headerlink" title="PageSpeed Insights"></a><a href="https://developers.google.com/speed/pagespeed/insights/" rel="external nofollow noopener noreferrer" target="_blank">PageSpeed Insights</a></h3><p>  PageSpeed Insights 可以用來檢查載入網頁速度，它會分別在手提電話和電腦運行測試。它會使用手提電話的 user-agent，以及 Desktop 的 user-agent。PageSpeed 會檢查網頁時候已經應用網頁的最佳實踐，並提供一個 0﹣100 的分數，同時提供如何提高分數的意見。</p>
 <h3 id="GZIP"><a href="#GZIP" class="headerlink" title="GZIP"></a>GZIP</h3><p>  開啟 GZIP 壓縮，是其中一個減少網頁載入速度的最快改善方法。Just Do IT，設置 GZIP，並讓你的用戶享受飛一般的感受，下圖是節省流量的效果圖。</p>
-<img src="https://i.imgur.com/k7FRiSi.png" width="500" title="PICSrush GZIP 測試圖">
+<img class="lozad" data-src="https://i.imgur.com/k7FRiSi.png" width="500" title="PICSrush GZIP 測試圖">
 <center>PICSrush GZIP 測試圖</center>
 
 <p>你可以在<a href="https://checkgzipcompression.com/" rel="external nofollow noopener noreferrer" target="_blank">Check GZIP compression</a> 網站中測試你的網站是否已經開啟 GZIP 壓縮功能。</p>
@@ -625,7 +632,7 @@ function handleEnter(e) {
 <h2 id="譯者的話"><a href="#譯者的話" class="headerlink" title="譯者的話"></a>譯者的話</h2><p>這次翻譯英文文章，真的是很有趣呢，不過要寫起來感覺沒有自己從零開始寫一篇那麼流暢。</p>
 <p>一開始我是去問問人家，可不可以翻譯一下他們的文章？結果就取得同意了。</p>
 <p>這次翻譯這一篇文章，讓我了解到很多對我來講是新的工具，比如說 Sentry 以及Google Tag Manager。我還是一個萌新，感覺前端的路還有很長要走啊。。。</p>
-<img src="https://i.imgur.com/SJma5Pv.png" width="500" title="calpa blog 測試圖">
+<img class="lozad" data-src="https://i.imgur.com/SJma5Pv.png" width="500" title="calpa blog 測試圖">
 <center>Calpa’s Blog GZIP 測試圖</center>
 
 <hr>
@@ -752,8 +759,6 @@ gitalk.render('gitalk-container')
     </div>
 </footer>
 
-<!--wechat title img-->
-<img class="wechat-title-img" src="/img/profile.png">
 
 <!-- jQuery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -856,6 +861,12 @@ gitalk.render('gitalk-container')
     })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
 
+
+<!-- lazy loading -->
+<script>
+var observer = lozad(); // lazy loads elements with default selector as '.lozad'
+observer.observe();
+</script>
 
 </body>
 </html>

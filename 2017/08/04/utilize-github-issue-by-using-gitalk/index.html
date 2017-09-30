@@ -59,6 +59,9 @@
       <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@1/dist/instantsearch.min.css">
       <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@1/dist/instantsearch.min.js"></script>
     
+
+    <!-- lazy loading -->
+    <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 </head>
 
 
@@ -93,15 +96,15 @@
             
               
                 
+              
+            
+              
+                
                   <li>
                     <a href="/Tags/">
                       Tags
                     </a>
                   </li>
-                
-              
-            
-              
                 
               
             
@@ -128,8 +131,8 @@
               
                 
                   <li>
-                    <a href="/works/">
-                      Works
+                    <a href="/search/">
+                      Search
                     </a>
                   </li>
                 
@@ -138,8 +141,8 @@
               
                 
                   <li>
-                    <a href="/search/">
-                      Search
+                    <a href="/works/">
+                      Works
                     </a>
                   </li>
                 
@@ -186,13 +189,13 @@
 <!--only post-->
 
   
-    <img class="wechat-title-img" src="https://i.imgur.com/phH7Jc4.png;">
+    <img class="wechat-title-img" data-src="https://i.imgur.com/phH7Jc4.png;">
   
 
 <style>
     
     header.intro-header {
-      background-image: url('https://i.imgur.com/phH7Jc4.png;?imageView2/1/w/1400/h/400/interlace/1/q/90');
+      background-image: url('https://i.imgur.com/phH7Jc4.png;');
     }
     
 </style>
@@ -273,7 +276,7 @@ header.intro-header {
         <div class="short-about">
             <!--侧边栏头像-->
             
-            <img src="/img/profile.png" alt="avatar">
+            <img alt="avatar" class="lozad" data-src="https://calpa.me/img/profile.png">
             
             <h5>Calpa</h5>
             <!-- 關於我的一言兩句 -->
@@ -342,7 +345,7 @@ header.intro-header {
               
               
               
-              <a href="/Tags/#Front End" title="Front End" rel="3">Front End</a>
+              <a href="/Tags/#Front End" title="Front End" rel="4">Front End</a>
               
               
               
@@ -366,7 +369,9 @@ header.intro-header {
               
               
               
-              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
+              <a href="/Tags/#Interview" title="Interview" rel="2">Interview</a>
+              
+              
               
               
               
@@ -374,9 +379,11 @@ header.intro-header {
               
               
               
+              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
+              
+              
+              
               <a href="/Tags/#SEO" title="SEO" rel="2">SEO</a>
-              
-              
               
               
               
@@ -404,9 +411,9 @@ header.intro-header {
               
               
               
+              
+              
               <a href="/Tags/#CSS" title="CSS" rel="2">CSS</a>
-              
-              
               
               
               
@@ -442,6 +449,12 @@ header.intro-header {
       <ul class="list-inline" style="text-align: center;">
         
           <li>
+            <a href="/2017/09/30/hang-zhou-interview-summary/">
+              【圖多】《遠征成功﹣﹣一個香港人北上杭州豬場的前端面試之路》
+            </a>
+          </li>
+        
+          <li>
             <a href="/2017/09/27/async-summary/">
               異步操作見聞錄
             </a>
@@ -465,17 +478,11 @@ header.intro-header {
             </a>
           </li>
         
-          <li>
-            <a href="/2017/07/24/six-steps-to-debug-before-directly-ask-question/">
-              項目代碼調試：提問前要做的六個步驟
-            </a>
-          </li>
-        
       </ul>
     
     <hr>
 
-    <h5 style="text-align: center;">共46篇文章</h5>
+    <h5 style="text-align: center;">共47篇文章</h5>
     <hr>
 
     <!-- All Blog Posts -->
@@ -488,7 +495,7 @@ header.intro-header {
           
               <li>
                 <a href="/archive/#2017-9">
-                  9月(1)
+                  9月(2)
                 </a>
               </li>
             
@@ -568,7 +575,7 @@ function handleEnter(e) {
 
 
             <div class="col-lg-7 col-lg-offset-0 col-md-7 col-sm-9 post-container">
-              <p><img src="https://i.imgur.com/DqyRXB9.jpg" alt="Gitalk"></p>
+              <p><img class="lozad" data-src="https://i.imgur.com/DqyRXB9.jpg" alt="Gitalk"></p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>以前，我的博客是用 Disqus 的評論插件，但是無論是載入速度，還是樣式上，都是有所缺乏的。我一直沒有安裝其他的評論插件，因為覺得搬家有點麻煩。但是當我試用一下之後，我就覺得這個插件安裝很方便，功能也很實用，尤其是可以寫 Markdown 評論，就讓我非常喜歡這個插件了。因此，我拜讀了一下 <a href="https://github.com/gitalk/gitalk" rel="external nofollow noopener noreferrer" target="_blank">Gitalk Github Repo</a> 的代碼。我會在這裡說一下我對這個插件的理解，並提交繁體中文 README.md 到官方倉庫上。如果你想試用的話，你可以到<a href="https://gitalk.github.io/" rel="external nofollow noopener noreferrer" target="_blank">官網</a>或<a href="#gitalk-container">我的博客</a>留言。</p>
 <p>Gitalk 是一個基於 Github Issue 和 Preact 開發的評論插件。它支持多語言，包括英文，繁體中文和簡體中文，並<a href="https://github.com/gitalk/gitalk/blob/48de82ca24d4cb24a464f7cc9e72884a208b9d5c/src/gitalk.jsx#L55" rel="external nofollow noopener noreferrer" target="_blank">自動判斷用戶當前語言</a>：<code>navigator.language || navigator.userLanguage</code>。用戶只需要使用自己的個人或組織 Github 賬戶便可以登入系統。</p>
 <p>另外，它也有以下的功能：</p>
@@ -582,7 +589,7 @@ function handleEnter(e) {
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> <span class="string">'gitalk/dist/gitalk.css'</span></div><div class="line"><span class="keyword">import</span> Gitalk <span class="keyword">from</span> <span class="string">'gitalk'</span></div></pre></td></tr></table></figure>
 <h3 id="去-Github-上面-clone-Gitalk"><a href="#去-Github-上面-clone-Gitalk" class="headerlink" title="去 Github 上面 clone Gitalk"></a>去 Github 上面 clone Gitalk</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> git@github.com:gitalk/gitalk.git</div><div class="line"><span class="built_in">cd</span> gitalk/dist/</div></pre></td></tr></table></figure>
 <p>然後把壓縮過的<code>gitalk.min.js</code> 放進你的項目。</p>
-<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p><img src="https://i.imgur.com/C6HEsRv.png" alt="Register a new OAuth Application"></p>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p><img class="lozad" data-src="https://i.imgur.com/C6HEsRv.png" alt="Register a new OAuth Application"></p>
 <p>Gitalk 需要 <strong>Github Application</strong>，如果沒有請點擊 <a href="https://github.com/settings/applications/new" rel="external nofollow noopener noreferrer" target="_blank">Register a new OAuth application</a> 申請，<code>Authorization callback URL</code> 填寫當前使用插件頁面的域名，例如我的博客就是填寫 <a href="https://calpa.me">https://calpa.me</a></p>
 <h3 id="代碼範例"><a href="#代碼範例" class="headerlink" title="代碼範例"></a>代碼範例</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> gitalk = <span class="keyword">new</span> Gitalk(&#123;</div><div class="line">  <span class="attr">clientID</span>: <span class="string">'Github Application Client ID'</span>,</div><div class="line">  <span class="attr">clientSecret</span>: <span class="string">'Github Application Client Secret'</span>,</div><div class="line">  <span class="attr">repo</span>: <span class="string">'Github repo'</span>,</div><div class="line">  <span class="attr">owner</span>: <span class="string">'Github repo owner'</span>,</div><div class="line">  <span class="attr">admin</span>: [<span class="string">'Github repo collaborators'</span>],</div><div class="line">&#125;)</div><div class="line"></div><div class="line">gitalk.render(<span class="string">'gitalk-container'</span>)</div></pre></td></tr></table></figure>
 <h2 id="Gitalk-選項"><a href="#Gitalk-選項" class="headerlink" title="Gitalk 選項"></a>Gitalk 選項</h2><ul>
@@ -782,8 +789,6 @@ gitalk.render('gitalk-container')
     </div>
 </footer>
 
-<!--wechat title img-->
-<img class="wechat-title-img" src="/img/profile.png">
 
 <!-- jQuery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -886,6 +891,12 @@ gitalk.render('gitalk-container')
     })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
 
+
+<!-- lazy loading -->
+<script>
+var observer = lozad(); // lazy loads elements with default selector as '.lozad'
+observer.observe();
+</script>
 
 </body>
 </html>

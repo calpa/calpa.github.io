@@ -59,6 +59,9 @@
       <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@1/dist/instantsearch.min.css">
       <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@1/dist/instantsearch.min.js"></script>
     
+
+    <!-- lazy loading -->
+    <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 </head>
 
 
@@ -93,15 +96,15 @@
             
               
                 
+              
+            
+              
+                
                   <li>
                     <a href="/Tags/">
                       Tags
                     </a>
                   </li>
-                
-              
-            
-              
                 
               
             
@@ -128,8 +131,8 @@
               
                 
                   <li>
-                    <a href="/works/">
-                      Works
+                    <a href="/search/">
+                      Search
                     </a>
                   </li>
                 
@@ -138,8 +141,8 @@
               
                 
                   <li>
-                    <a href="/search/">
-                      Search
+                    <a href="/works/">
+                      Works
                     </a>
                   </li>
                 
@@ -186,13 +189,13 @@
 <!--only post-->
 
   
-    <img class="wechat-title-img" src="https://i.imgur.com/IYhTVXU.png">
+    <img class="wechat-title-img" data-src="https://i.imgur.com/IYhTVXU.png">
   
 
 <style>
     
     header.intro-header {
-      background-image: url('https://i.imgur.com/IYhTVXU.png?imageView2/1/w/1400/h/400/interlace/1/q/90');
+      background-image: url('https://i.imgur.com/IYhTVXU.png');
     }
     
 </style>
@@ -273,7 +276,7 @@ header.intro-header {
         <div class="short-about">
             <!--侧边栏头像-->
             
-            <img src="/img/profile.png" alt="avatar">
+            <img alt="avatar" class="lozad" data-src="https://calpa.me/img/profile.png">
             
             <h5>Calpa</h5>
             <!-- 關於我的一言兩句 -->
@@ -342,7 +345,7 @@ header.intro-header {
               
               
               
-              <a href="/Tags/#Front End" title="Front End" rel="3">Front End</a>
+              <a href="/Tags/#Front End" title="Front End" rel="4">Front End</a>
               
               
               
@@ -366,7 +369,9 @@ header.intro-header {
               
               
               
-              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
+              <a href="/Tags/#Interview" title="Interview" rel="2">Interview</a>
+              
+              
               
               
               
@@ -374,9 +379,11 @@ header.intro-header {
               
               
               
+              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
+              
+              
+              
               <a href="/Tags/#SEO" title="SEO" rel="2">SEO</a>
-              
-              
               
               
               
@@ -404,9 +411,9 @@ header.intro-header {
               
               
               
+              
+              
               <a href="/Tags/#CSS" title="CSS" rel="2">CSS</a>
-              
-              
               
               
               
@@ -442,6 +449,12 @@ header.intro-header {
       <ul class="list-inline" style="text-align: center;">
         
           <li>
+            <a href="/2017/09/30/hang-zhou-interview-summary/">
+              【圖多】《遠征成功﹣﹣一個香港人北上杭州豬場的前端面試之路》
+            </a>
+          </li>
+        
+          <li>
             <a href="/2017/09/27/async-summary/">
               異步操作見聞錄
             </a>
@@ -465,17 +478,11 @@ header.intro-header {
             </a>
           </li>
         
-          <li>
-            <a href="/2017/07/24/six-steps-to-debug-before-directly-ask-question/">
-              項目代碼調試：提問前要做的六個步驟
-            </a>
-          </li>
-        
       </ul>
     
     <hr>
 
-    <h5 style="text-align: center;">共46篇文章</h5>
+    <h5 style="text-align: center;">共47篇文章</h5>
     <hr>
 
     <!-- All Blog Posts -->
@@ -488,7 +495,7 @@ header.intro-header {
           
               <li>
                 <a href="/archive/#2017-9">
-                  9月(1)
+                  9月(2)
                 </a>
               </li>
             
@@ -570,14 +577,14 @@ function handleEnter(e) {
             <div class="col-lg-7 col-lg-offset-0 col-md-7 col-sm-9 post-container">
               <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>要寫出優雅的文檔是有難度的，尤其是需要格式規範的文章。而利用 Markdown，則可以專心寫作。Markdown 除了可以直接編譯為 HTML，還能編譯為 PowerPoint, Resume，還有 React 組件。無論是<a href="https://calpa.me/2017/06/01/create-markdown-powerpoint-in-5-mins/">利用 Markdown 製作 PowerPoint</a>，還是利用 Markdown 製作簡歷，都是非常方便的。如果你不是很熟悉 Markdown 語法的話，你可以在下文看 <a href="#Markdown-語法">Markdown 語法</a>。但是如果可以接受他人傳進來的 Markdown 文章，然後渲染他們的文章，那就會更加好。所以我就找了一下 React + Markdown 的組合，發現這個 React-markdown 工具下載的人數蠻多的。雖然那個項目還在開發階段，但是你可以在 <a href="http://rexxars.github.io/react-markdown" rel="external nofollow noopener noreferrer" target="_blank">Live Demo</a> 測試一下渲染為 React 組件的效果。</p>
 <hr>
-<p><img src="https://i.imgur.com/UFkBeEN.png" alt="Live Demo"></p>
-<p><img src="https://i.imgur.com/q2q2RJv.png" alt="直接渲染為 React 組件"></p>
+<p><img class="lozad" data-src="https://i.imgur.com/UFkBeEN.png" alt="Live Demo"></p>
+<p><img class="lozad" data-src="https://i.imgur.com/q2q2RJv.png" alt="直接渲染為 React 組件"></p>
 <h2 id="react-markdown"><a href="#react-markdown" class="headerlink" title="react-markdown"></a>react-markdown</h2><p>Github: <a href="https://github.com/rexxars/react-markdown" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/rexxars/react-markdown</a><br>npmjs: <a href="https://www.npmjs.com/package/react-markdown" rel="external nofollow noopener noreferrer" target="_blank">https://www.npmjs.com/package/react-markdown</a></p>
 <h3 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install --save react-markdown</div></pre></td></tr></table></figure>
 <h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><p>使用 ES6 Import <code>ReactMarkdown</code>，然后使用 <reactmarkdown>，並傳入 Markdown 到 source。</reactmarkdown></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> ReactMarkdown <span class="keyword">from</span> <span class="string">'react-markdown'</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> input = <span class="string">'# This is a header\n\nAnd this is a paragraph'</span>;</div><div class="line"></div><div class="line">&lt;ReactMarkdown source=&#123;input&#125; /&gt;</div></pre></td></tr></table></figure>
 <p>然後你會看到這樣的：</p>
-<p><img src="https://i.imgur.com/zR2Olai.png" alt="React Markdown 例子"></p>
+<p><img class="lozad" data-src="https://i.imgur.com/zR2Olai.png" alt="React Markdown 例子"></p>
 <p>官網上是這樣說的：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> React = <span class="built_in">require</span>(<span class="string">'react'</span>);</div><div class="line"><span class="keyword">var</span> ReactDOM = <span class="built_in">require</span>(<span class="string">'react-dom'</span>);</div><div class="line"><span class="keyword">var</span> ReactMarkdown = <span class="built_in">require</span>(<span class="string">'react-markdown'</span>);</div><div class="line"></div><div class="line"><span class="keyword">var</span> input = <span class="string">'# This is a header\n\nAnd this is a paragraph'</span>;</div><div class="line"></div><div class="line">ReactDOM.render(</div><div class="line">    &lt;ReactMarkdown source=&#123;input&#125; /&gt;,</div><div class="line">    document.getElementById('container')</div><div class="line">);</div></pre></td></tr></table></figure></p>
 <h3 id="Webpack-1-配置"><a href="#Webpack-1-配置" class="headerlink" title="Webpack 1 配置"></a>Webpack 1 配置</h3><p>如果你是用 Webpack 1 的話，你需要安裝 json-loader：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install --save json-loader</div></pre></td></tr></table></figure></p>
 <p>並在你的 webpack 設置裡面加上：</p>
@@ -738,8 +745,6 @@ gitalk.render('gitalk-container')
     </div>
 </footer>
 
-<!--wechat title img-->
-<img class="wechat-title-img" src="/img/profile.png">
 
 <!-- jQuery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -842,6 +847,12 @@ gitalk.render('gitalk-container')
     })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
 
+
+<!-- lazy loading -->
+<script>
+var observer = lozad(); // lazy loads elements with default selector as '.lozad'
+observer.observe();
+</script>
 
 </body>
 </html>
