@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://calpa.me/"/>
-  <updated>2017-09-30T09:14:07.000Z</updated>
+  <updated>2017-09-30T09:23:34.000Z</updated>
   <id>https://calpa.me/</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="https://calpa.me/2017/09/30/hang-zhou-interview-summary/"/>
     <id>https://calpa.me/2017/09/30/hang-zhou-interview-summary/</id>
     <published>2017-09-30T10:00:00.000Z</published>
-    <updated>2017-09-30T09:14:07.000Z</updated>
+    <updated>2017-09-30T09:23:34.000Z</updated>
     
-    <content type="html"><![CDATA[<p>謝邀。本文圖多，流量黨慎入。</p>
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>謝邀。本文圖多，流量黨慎入。</p>
 <p>首先，我要感謝網易。作為一個香港人，能夠拿到杭州的面試機會，實屬機會難得。這次的兩輪技術面試，考察點廣泛而深入。雖然問題比較深入，但這讓我感覺對於技術要求比較高，這是一件好事，因為可以反映公司對於技術的重視。在大四的這一年裡，我會繼續努力，爭取時間學習一個。本文將會記錄我面試時遇過的問題，以及作為一個香港人在杭州遇到的困難。。。</p>
 <p><img class="lozad" data-src="https://i.imgur.com/3IAyiiO.png" alt="我想先以升級和畢業為目標努力"></p>
 <p>如果你想看圖的話，直接跳到下方的<a href="#杭州之旅">杭州之旅</a>章節就行。</p>
@@ -35,7 +35,7 @@
 <h3 id="我的問題"><a href="#我的問題" class="headerlink" title="我的問題"></a>我的問題</h3><p>前後端分離？</p>
 <h2 id="二面"><a href="#二面" class="headerlink" title="二面"></a>二面</h2><h3 id="面試官的問題-1"><a href="#面試官的問題-1" class="headerlink" title="面試官的問題"></a>面試官的問題</h3><ol>
 <li><a href="/about">自我介紹</a></li>
-<li><a href="/about">請介紹一下你的專業 (Major)</a>？</li>
+<li><a href="/about">請介紹一下你的專業 (Major)</a></li>
 <li><a href="/2017/04/23/hackUST-2017-hackathon-summary/">什麼是黑客松？做什麼的？</a></li>
 <li>最近一次黑客松你做了什麼？</li>
 <li>說一下 React 實現原理</li>
@@ -102,8 +102,8 @@
     
     <summary type="html">
     
-      &lt;p&gt;謝邀。本文圖多，流量黨慎入。&lt;/p&gt;
-&lt;p&gt;首先，我要感謝網易。作為一個香港人，能夠拿到杭州的面試機會，實屬機會難得。這次的兩輪技術面試，考察點廣泛而深入。雖然問題比較深入，但這讓我感覺對於技術要求比較高，這是一件好事，因為可以反映公司對於技術的重視。在大四的這一年裡，我會
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;謝邀。本文圖多，流量黨慎入。&lt;/p&gt;
+&lt;p&gt;首先，我要感謝網易。作為一個香港人，能夠拿到杭州的面試機會，實屬機會難得。這次的兩輪技術面試，考
     
     </summary>
     
@@ -123,7 +123,7 @@
     <link href="https://calpa.me/2017/09/27/async-summary/"/>
     <id>https://calpa.me/2017/09/27/async-summary/</id>
     <published>2017-09-27T12:00:00.000Z</published>
-    <updated>2017-09-27T15:28:25.000Z</updated>
+    <updated>2017-09-30T09:23:17.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>異步操作是非常常見的操作，也是其中一題常見的前端工程師面試題目。在日常開發中，我們會和伺服器交互，或者是和用戶的行動作出反應，比如說監聽某些點擊事件。這個時候，其實我們是執行了異步操作，我們需要等待對方若干時間才能收到返回值，甚至是一個錯誤的值。。。因此，異步操作很容易產生一些誤會。這裡，我會說一下異步操作，及其返回的處理方法。</p>
 <h2 id="同步與異步的分別"><a href="#同步與異步的分別" class="headerlink" title="同步與異步的分別"></a>同步與異步的分別</h2><p>在同步的世界裡面，我們希望執行某些操作之後，就能夠馬上拿到返回的值，然後執行下一步。然而，當我們發出 HTTP 請求的時候，我們可能需要等待世界的另外一端返回信息，這需要時間，便不是同步了。。。</p>
@@ -168,6 +168,13 @@
 <p>另外，如果你不想更新 Node 版本的話，你可以安裝 <a href="https://caolan.github.io/async/" rel="external nofollow noopener noreferrer" target="_blank">async 工具庫</a>。</p>
 <h2 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h2><p>異步操作已經成為了前端工程師面試常見的問題之一，感覺是對於前端工程師的技術水平需求越來越提高了。雖然這些都是在 MDN 上面寫好的介紹，但是只有自己用過才會知道什麼比較好。</p>
 <p>如果公司的 Node 版本可以支持 Async/Await 的話，那就直接用 Async/Await 就好了。不行的話，那就用 Promise 吧，不然 Generator 的設計對於強迫症患者來說很不順眼。。。</p>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><p>1.<a href="https://en.wikipedia.org/wiki/Callback" rel="external nofollow noopener noreferrer" target="_blank">Callback (computer programming) - Wikipedia
+</a></p>
+<ol>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" rel="external nofollow noopener noreferrer" target="_blank">Promise - MDN</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator" rel="external nofollow noopener noreferrer" target="_blank">Generator</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function" rel="external nofollow noopener noreferrer" target="_blank">async function - JavaScript MDN</a></li>
+</ol>
 ]]></content>
     
     <summary type="html">
