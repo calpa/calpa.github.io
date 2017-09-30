@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://calpa.me/"/>
-  <updated>2017-09-30T09:23:34.000Z</updated>
+  <updated>2017-09-30T12:50:29.000Z</updated>
   <id>https://calpa.me/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://calpa.me/2017/09/30/hang-zhou-interview-summary/"/>
     <id>https://calpa.me/2017/09/30/hang-zhou-interview-summary/</id>
     <published>2017-09-30T10:00:00.000Z</published>
-    <updated>2017-09-30T09:23:34.000Z</updated>
+    <updated>2017-09-30T12:50:29.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>謝邀。本文圖多，流量黨慎入。</p>
 <p>首先，我要感謝網易。作為一個香港人，能夠拿到杭州的面試機會，實屬機會難得。這次的兩輪技術面試，考察點廣泛而深入。雖然問題比較深入，但這讓我感覺對於技術要求比較高，這是一件好事，因為可以反映公司對於技術的重視。在大四的這一年裡，我會繼續努力，爭取時間學習一個。本文將會記錄我面試時遇過的問題，以及作為一個香港人在杭州遇到的困難。。。</p>
@@ -123,7 +123,7 @@
     <link href="https://calpa.me/2017/09/27/async-summary/"/>
     <id>https://calpa.me/2017/09/27/async-summary/</id>
     <published>2017-09-27T12:00:00.000Z</published>
-    <updated>2017-09-30T09:25:08.000Z</updated>
+    <updated>2017-09-30T12:44:38.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>異步操作是非常常見的操作，也是其中一題常見的前端工程師面試題目。在日常開發中，我們會和伺服器交互，或者是和用戶的行動作出反應，比如說監聽某些點擊事件。這個時候，其實我們是執行了異步操作，我們需要等待對方若干時間才能收到返回值，甚至是一個錯誤的值。。。因此，異步操作很容易產生一些誤會。這裡，我會說一下異步操作，及其返回的處理方法。</p>
 <h2 id="同步與異步的分別"><a href="#同步與異步的分別" class="headerlink" title="同步與異步的分別"></a>同步與異步的分別</h2><p>在同步的世界裡面，我們希望執行某些操作之後，就能夠馬上拿到返回的值，然後執行下一步。然而，當我們發出 HTTP 請求的時候，我們可能需要等待世界的另外一端返回信息，這需要時間，便不是同步了。。。</p>
@@ -194,7 +194,7 @@
     <link href="https://calpa.me/2017/08/31/react-markdown-render-markdown-as-component/"/>
     <id>https://calpa.me/2017/08/31/react-markdown-render-markdown-as-component/</id>
     <published>2017-08-31T06:25:00.000Z</published>
-    <updated>2017-08-31T06:25:43.000Z</updated>
+    <updated>2017-09-30T12:24:26.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>要寫出優雅的文檔是有難度的，尤其是需要格式規範的文章。而利用 Markdown，則可以專心寫作。Markdown 除了可以直接編譯為 HTML，還能編譯為 PowerPoint, Resume，還有 React 組件。無論是<a href="https://calpa.me/2017/06/01/create-markdown-powerpoint-in-5-mins/">利用 Markdown 製作 PowerPoint</a>，還是利用 Markdown 製作簡歷，都是非常方便的。如果你不是很熟悉 Markdown 語法的話，你可以在下文看 <a href="#Markdown-語法">Markdown 語法</a>。但是如果可以接受他人傳進來的 Markdown 文章，然後渲染他們的文章，那就會更加好。所以我就找了一下 React + Markdown 的組合，發現這個 React-markdown 工具下載的人數蠻多的。雖然那個項目還在開發階段，但是你可以在 <a href="http://rexxars.github.io/react-markdown" rel="external nofollow noopener noreferrer" target="_blank">Live Demo</a> 測試一下渲染為 React 組件的效果。</p>
 <hr>
@@ -264,7 +264,7 @@
     <link href="https://calpa.me/2017/08/27/react-app-optimization-1-source-map/"/>
     <id>https://calpa.me/2017/08/27/react-app-optimization-1-source-map/</id>
     <published>2017-08-27T02:03:00.000Z</published>
-    <updated>2017-08-29T12:10:11.000Z</updated>
+    <updated>2017-09-30T12:24:26.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><code>create-react-app</code> 提供了很方便的創建 React 應用途徑。它已經把 webpack, Babel, Autoprefixer, ESLint, Jest 等常用工具打包進去。可以說是一個非常方便，好用的製造 React 應用工具。當我打算把包裝好的檔案推上去的時候，我卻發現打包之後的檔案大小有點大，因此我就開始優化這個網頁應用了。第一點我優化的地方就是 Source Map。</p>
 <p>如果你細心看 README.md 的話，你會發現下面這一句，它把 Source Map 也打包進去。。。</p>
@@ -314,7 +314,7 @@
     <link href="https://calpa.me/2017/08/04/utilize-github-issue-by-using-gitalk/"/>
     <id>https://calpa.me/2017/08/04/utilize-github-issue-by-using-gitalk/</id>
     <published>2017-08-04T12:00:00.000Z</published>
-    <updated>2017-08-06T11:16:05.000Z</updated>
+    <updated>2017-09-30T12:24:33.000Z</updated>
     
     <content type="html"><![CDATA[<p><img class="lozad" data-src="https://i.imgur.com/DqyRXB9.jpg" alt="Gitalk"></p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>以前，我的博客是用 Disqus 的評論插件，但是無論是載入速度，還是樣式上，都是有所缺乏的。我一直沒有安裝其他的評論插件，因為覺得搬家有點麻煩。但是當我試用一下之後，我就覺得這個插件安裝很方便，功能也很實用，尤其是可以寫 Markdown 評論，就讓我非常喜歡這個插件了。因此，我拜讀了一下 <a href="https://github.com/gitalk/gitalk" rel="external nofollow noopener noreferrer" target="_blank">Gitalk Github Repo</a> 的代碼。我會在這裡說一下我對這個插件的理解，並提交繁體中文 README.md 到官方倉庫上。如果你想試用的話，你可以到<a href="https://gitalk.github.io/" rel="external nofollow noopener noreferrer" target="_blank">官網</a>或<a href="#gitalk-container">我的博客</a>留言。</p>
@@ -429,7 +429,7 @@
     <link href="https://calpa.me/2017/07/24/six-steps-to-debug-before-directly-ask-question/"/>
     <id>https://calpa.me/2017/07/24/six-steps-to-debug-before-directly-ask-question/</id>
     <published>2017-07-24T13:00:00.000Z</published>
-    <updated>2017-07-24T15:24:49.000Z</updated>
+    <updated>2017-09-30T12:28:08.000Z</updated>
     
     <content type="html"><![CDATA[<p>上天對於每個地球人都是公平的，每個人都一天只有 24 小時。為什麼有的人會停留不前，有的人卻會不斷有所成長？其中一個原因是當遇到問題時，他們解決問題的方法是非常不同的。同樣是遇到問題，與其伸手，等其他程序員幫助去解決問題，倒不如自己先嘗試各種方法，然後才問人家。。。我會在這篇文章簡單說一下在你提問之前，你可以做的六個步驟。</p>
 <h2 id="步驟"><a href="#步驟" class="headerlink" title="步驟"></a>步驟</h2><h3 id="1-檢查，試驗本地環境"><a href="#1-檢查，試驗本地環境" class="headerlink" title="1. 檢查，試驗本地環境"></a>1. 檢查，試驗本地環境</h3><p>  如果你是和其他人一齊開發項目的話，可能你會遇到 packages 安裝報錯的問題，這個時候，你應該試試安裝packages，例如<code>npm install</code>，把現有項目的 packages 更新一下，可能現有的 packages 已經不是最新的，或者有所缺乏。</p>
@@ -465,7 +465,7 @@
     <link href="https://calpa.me/2017/07/06/titanic-a-set-of-animated-icons/"/>
     <id>https://calpa.me/2017/07/06/titanic-a-set-of-animated-icons/</id>
     <published>2017-07-06T03:00:00.000Z</published>
-    <updated>2017-07-06T06:58:27.000Z</updated>
+    <updated>2017-09-30T12:28:23.000Z</updated>
     
     <content type="html"><![CDATA[<p>如果你用過 Font Awesome 等圖標，你可能會覺得它們很好看，用起來很很方便。但是，在用戶點擊這些圖標的時候，它們是不會有反應的。如果有這些圖標會動的話，那就更加好。Titanic 提供一系列的動畫圖標，以及以 JavaScript 的調用圖標動畫的方法。</p>
 <p>如果你想要看 Hello, World 的版本的話，你可以到我的 <a href="https://codepen.io/calpa/pen/xrzPxx" rel="external nofollow noopener noreferrer" target="_blank">Codepen</a> 裡面，測試一下。</p>
@@ -583,7 +583,7 @@
     <link href="https://calpa.me/2017/06/19/front-end-performance-check-list-for-production-in-chinese/"/>
     <id>https://calpa.me/2017/06/19/front-end-performance-check-list-for-production-in-chinese/</id>
     <published>2017-06-19T12:00:00.000Z</published>
-    <updated>2017-07-26T08:31:31.000Z</updated>
+    <updated>2017-09-30T12:28:28.000Z</updated>
     
     <content type="html"><![CDATA[<p>在網頁開發的世界裡，尤其是前端開發，我們會用很多時間尋找最好的設計，以及最好的內容。雖然這是沒有錯的，但是，我們會忘記去優化我們的網頁。。。這會讓用戶需要很久的時間，比如說，瀏覽器需要六秒到十秒以上才能完成整個渲染過程。。。</p>
 <p>在這篇文章，我會分享優化網頁的檢查清單。如果你覺得我有錯漏的地方，請在下面留言。這張清單會包含一些優化搜尋引擎排名 (SEO) 的技巧，以及減少網頁加載時間的最佳實踐。</p>
