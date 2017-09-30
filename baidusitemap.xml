@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://calpa.me/2017/09/30/hang-zhou-interview-summary/</loc>
-    <lastmod>2017-09-30T08:49:11.000Z</lastmod>
+    <lastmod>2017-09-30T09:14:07.000Z</lastmod>
     <data>
         <display>
         <title>【圖多】《遠征成功﹣﹣一個香港人北上杭州豬場的前端面試之路》</title>
@@ -15,7 +15,9 @@
          
         <tag>Interview</tag>
          
-        <tag>Hang Zhou</tag>
+        <tag>杭州</tag>
+         
+        <tag>掘金技術征文</tag>
          
          
            
@@ -249,40 +251,6 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/04/25/coders-of-the-caribbean-review/</loc>
-    <lastmod>2017-06-06T16:28:01.000Z</lastmod>
-    <data>
-        <display>
-        <title>Coders of the Caribbean Online Contest 後記</title>
-        <pubTime>2017-04-25T07:35:00.000Z</pubTime>
-        
-        <tag>Codingame</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://calpa.me/2017/02/23/github-edcation-package/</loc>
-    <lastmod>2017-06-06T16:28:01.000Z</lastmod>
-    <data>
-        <display>
-        <title>利用Github免費教育禮包更换.me域名</title>
-        <pubTime>2017-02-23T02:00:00.000Z</pubTime>
-        
-        <tag>Github</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://calpa.me/2017/04/05/front-end-booklist/</loc>
     <lastmod>2017-06-06T16:28:01.000Z</lastmod>
     <data>
@@ -300,6 +268,23 @@
 
     
   <url>
+    <loc>https://calpa.me/2017/04/25/coders-of-the-caribbean-review/</loc>
+    <lastmod>2017-06-06T16:28:01.000Z</lastmod>
+    <data>
+        <display>
+        <title>Coders of the Caribbean Online Contest 後記</title>
+        <pubTime>2017-04-25T07:35:00.000Z</pubTime>
+        
+        <tag>Codingame</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://calpa.me/2017/04/23/hackUST-2017-hackathon-summary/</loc>
     <lastmod>2017-06-06T16:28:01.000Z</lastmod>
     <data>
@@ -308,6 +293,23 @@
         <pubTime>2017-04-23T12:44:00.000Z</pubTime>
         
         <tag>Hackathon</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://calpa.me/2017/02/23/github-edcation-package/</loc>
+    <lastmod>2017-06-06T16:28:01.000Z</lastmod>
+    <data>
+        <display>
+        <title>利用Github免費教育禮包更换.me域名</title>
+        <pubTime>2017-02-23T02:00:00.000Z</pubTime>
+        
+        <tag>Github</tag>
          
          
            
@@ -424,23 +426,6 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/05/01/CreateListFromArrayLike-problem-solution/</loc>
-    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
-    <data>
-        <display>
-        <title>CreateListFromArrayLike called on non-object 報錯的解決方法</title>
-        <pubTime>2017-05-01T14:50:00.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://calpa.me/2017/01/14/javascript-variable-hoisting/</loc>
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     <data>
@@ -458,29 +443,12 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/02/19/javascript-closure/</loc>
+    <loc>https://calpa.me/2017/05/01/CreateListFromArrayLike-problem-solution/</loc>
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     <data>
         <display>
-        <title>JavaScript的閉包(Closure)</title>
-        <pubTime>2017-02-19T07:12:00.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://calpa.me/2017/05/05/javascript-array/</loc>
-    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
-    <data>
-        <display>
-        <title>JavaScript 數組去重</title>
-        <pubTime>2017-05-05T14:53:00.000Z</pubTime>
+        <title>CreateListFromArrayLike called on non-object 報錯的解決方法</title>
+        <pubTime>2017-05-01T14:50:00.000Z</pubTime>
         
         <tag>JavaScript</tag>
          
@@ -509,35 +477,14 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/05/16/react-component-lifecycle/</loc>
+    <loc>https://calpa.me/2017/02/19/javascript-closure/</loc>
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     <data>
         <display>
-        <title>React 組件生命週期 - 加載組件</title>
-        <pubTime>2017-05-16T14:40:00.000Z</pubTime>
-        
-        <tag>Web</tag>
-         
-        <tag>React</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://calpa.me/2017/01/20/using-javascript-to-create-web-storage/</loc>
-    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
-    <data>
-        <display>
-        <title>利用JavaScript創建Web Storage</title>
-        <pubTime>2017-01-20T11:37:38.000Z</pubTime>
+        <title>JavaScript的閉包(Closure)</title>
+        <pubTime>2017-02-19T07:12:00.000Z</pubTime>
         
         <tag>JavaScript</tag>
-         
-        <tag>Web</tag>
          
          
            
@@ -557,6 +504,25 @@
         <tag>JavaScript</tag>
          
         <tag>Regular Expression</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://calpa.me/2017/01/20/using-javascript-to-create-web-storage/</loc>
+    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
+    <data>
+        <display>
+        <title>利用JavaScript創建Web Storage</title>
+        <pubTime>2017-01-20T11:37:38.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+        <tag>Web</tag>
          
          
            
@@ -593,6 +559,42 @@
         <tag>JavaScript</tag>
          
         <tag>Redux</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://calpa.me/2017/05/05/javascript-array/</loc>
+    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
+    <data>
+        <display>
+        <title>JavaScript 數組去重</title>
+        <pubTime>2017-05-05T14:53:00.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://calpa.me/2017/05/16/react-component-lifecycle/</loc>
+    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
+    <data>
+        <display>
+        <title>React 組件生命週期 - 加載組件</title>
+        <pubTime>2017-05-16T14:40:00.000Z</pubTime>
+        
+        <tag>Web</tag>
+         
+        <tag>React</tag>
          
          
            

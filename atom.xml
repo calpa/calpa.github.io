@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://calpa.me/"/>
-  <updated>2017-09-30T08:49:11.000Z</updated>
+  <updated>2017-09-30T09:14:07.000Z</updated>
   <id>https://calpa.me/</id>
   
   <author>
@@ -20,22 +20,23 @@
     <link href="https://calpa.me/2017/09/30/hang-zhou-interview-summary/"/>
     <id>https://calpa.me/2017/09/30/hang-zhou-interview-summary/</id>
     <published>2017-09-30T10:00:00.000Z</published>
-    <updated>2017-09-30T08:49:11.000Z</updated>
+    <updated>2017-09-30T09:14:07.000Z</updated>
     
     <content type="html"><![CDATA[<p>謝邀。本文圖多，流量黨慎入。</p>
 <p>首先，我要感謝網易。作為一個香港人，能夠拿到杭州的面試機會，實屬機會難得。這次的兩輪技術面試，考察點廣泛而深入。雖然問題比較深入，但這讓我感覺對於技術要求比較高，這是一件好事，因為可以反映公司對於技術的重視。在大四的這一年裡，我會繼續努力，爭取時間學習一個。本文將會記錄我面試時遇過的問題，以及作為一個香港人在杭州遇到的困難。。。</p>
 <p><img class="lozad" data-src="https://i.imgur.com/3IAyiiO.png" alt="我想先以升級和畢業為目標努力"></p>
+<p>如果你想看圖的話，直接跳到下方的<a href="#杭州之旅">杭州之旅</a>章節就行。</p>
 <h2 id="一面"><a href="#一面" class="headerlink" title="一面"></a>一面</h2><h3 id="面試官的問題"><a href="#面試官的問題" class="headerlink" title="面試官的問題"></a>面試官的問題</h3><ol>
-<li>自我介紹</li>
+<li><a href="/about">自我介紹</a></li>
 <li>跨域怎樣處理？</li>
 <li>如何做模塊化？有什麼好處？</li>
-<li>你追求的前端是怎樣的一個前端？</li>
+<li><a href="/about">你追求的前端是怎樣的一個前端？</a></li>
 </ol>
 <h3 id="我的問題"><a href="#我的問題" class="headerlink" title="我的問題"></a>我的問題</h3><p>前後端分離？</p>
 <h2 id="二面"><a href="#二面" class="headerlink" title="二面"></a>二面</h2><h3 id="面試官的問題-1"><a href="#面試官的問題-1" class="headerlink" title="面試官的問題"></a>面試官的問題</h3><ol>
-<li>自我介紹</li>
-<li>學什麼專業？</li>
-<li>什麼是黑客松？做什麼的？</li>
+<li><a href="/about">自我介紹</a></li>
+<li><a href="/about">請介紹一下你的專業 (Major)</a>？</li>
+<li><a href="/2017/04/23/hackUST-2017-hackathon-summary/">什麼是黑客松？做什麼的？</a></li>
 <li>最近一次黑客松你做了什麼？</li>
 <li>說一下 React 實現原理</li>
 <li>有了解過 React 底部發生什麼事情嗎？</li>
@@ -43,9 +44,10 @@
 <li>React Router 發生什麼事情？</li>
 <li>Redux 做了什麼事情？</li>
 <li>如何做多狀態管理</li>
+<li><a href="/2017/09/27/async-summary/">異步操作</a></li>
 <li>輸入網址之後到瀏覽器渲染完成之間，發生什麼事情</li>
 </ol>
-<h3 id="我的問題："><a href="#我的問題：" class="headerlink" title="我的問題："></a>我的問題：</h3><ol>
+<h3 id="我的問題-1"><a href="#我的問題-1" class="headerlink" title="我的問題"></a>我的問題</h3><ol>
 <li>前後端分離？</li>
 <li>前端渲染？服務器渲染？前端下載框架，然後獲取伺服器資料再渲染？</li>
 </ol>
@@ -79,7 +81,7 @@
 <p>網易的門口也是蠻好找的，因為門口一大堆單車。。。</p>
 <p>面試當日，非常多人。隨便找幾個人談天，他們都是大牛，現在實習於中國的知名互聯網公司，讓我感到要爭取時間，學習一個。如果要問能不能贏 我也沒有底氣，畢竟能夠進去網易的都是大牛www</p>
 <p><img class="lozad" data-src="https://i.imgur.com/z8B9JbB.png" alt="如果要問能不能贏 我也沒有底氣"></p>
-<p>不過，同時也是要爭取時間吃飯，因為網易餐廳的菜單實在是太多了，很吸引人www</p>
+<p>你問我能不能面試過關，我只能說無可奉告，因為我沒有底氣。因此，選擇困難症的我只好爭取時間吃飯，因為網易餐廳的菜單實在是太多了，很吸引人www</p>
 <p><img class="lozad" data-src="https://i.imgur.com/vfbrXh2.jpg" alt="吃飯了"></p>
 <p><img class="lozad" data-src="https://i.imgur.com/XGOSYlY.jpg" alt="網易餐廳午餐"></p>
 <p>中午要吃得清淡一點，因為不知道有沒有面試，要是有的話，那就不能破喉嚨了。。。</p>
@@ -94,6 +96,8 @@
 <p>如果你在 2018 年之後要來杭州的話，可以找一下我。</p>
 <p>說到這裡，歡迎來到實力至上的世界。</p>
 <p><img class="lozad" data-src="https://i.imgur.com/4Ltl87d.png" alt=""></p>
+<h2 id="備註"><a href="#備註" class="headerlink" title="備註"></a>備註</h2><p>Hexo 框架有問題：當文章長度有一定長度，而且中英文混合的時候，<code>hexo serve</code> 會有亂碼問題。原因是 Node.js buffer 問題。。。</p>
+<p>本文已參加<a href="https://juejin.im/post/59aa744ff265da247c4f145c" rel="external nofollow noopener noreferrer" target="_blank">掘金秋招征文</a>。</p>
 ]]></content>
     
     <summary type="html">
@@ -108,7 +112,9 @@
     
       <category term="Interview" scheme="https://calpa.me/Tags/Interview/"/>
     
-      <category term="Hang Zhou" scheme="https://calpa.me/Tags/Hang-Zhou/"/>
+      <category term="杭州" scheme="https://calpa.me/Tags/%E6%9D%AD%E5%B7%9E/"/>
+    
+      <category term="掘金技術征文" scheme="https://calpa.me/Tags/%E6%8E%98%E9%87%91%E6%8A%80%E8%A1%93%E5%BE%81%E6%96%87/"/>
     
   </entry>
   
