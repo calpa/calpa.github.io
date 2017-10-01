@@ -1,7 +1,0 @@
-{
-  "name": "Calpa's Blog",
-  "short_name": "CalpaBlog",
-  "start_url": "/",
-  "display": "standalone",
-  "gcm_sender_id": "482941778795"
-}
