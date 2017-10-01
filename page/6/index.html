@@ -15,6 +15,18 @@
     <link rel="alternate" type="application/atom+xml" title="Calpa" href="/atom.xml">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="manifest" href="/manifest.json">
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
+    <script>
+      var OneSignal = window.OneSignal || [];
+      OneSignal.push(["init", {
+        appId: "272cd882-09dc-46af-bdee-842e3caf63c9",
+        autoRegister: false,
+        notifyButton: {
+          enable: true /* Set to false to hide */
+        }
+      }]);
+    </script>
     <meta name="google-site-verification" content="riZBcestky7i9xY__A-5J-2EE65T75X1u-zgbss37Io">
     <title>
         
@@ -389,7 +401,22 @@ Cookie的佔用空間非常小，大小限制于4KB左右，常見的用途是�
     </div>
   </div>
 
-  <div class="card card4" href="/2017/01/08/hexo-404-page/">
+  <div class="card card4" href="/2017/01/08/readme/">
+    <div class="wrapper black">
+      <div class="card-header" style="background: #fff url(/img/post-default.jpg) center/contain no-repeat" onclick="location.href='/2017/01/08/readme/'">
+      </div>
+      <div class="data" onclick="location.href='/2017/01/08/readme/'">
+        <div class="content">
+          <div class="stats"><a href="/2017/01/08/readme/"><span class="date">2017-01-08</span></a></div>
+          <h1 class="title"><a href="/2017/01/08/readme/">Github上的README.md</a></h1>
+          <p class="text"><a href="/2017/01/08/readme/">Hexo在渲染的時候默認是把source下面所有的.md檔案渲染成html，這樣的話會覆蓋掉Github上的CNAME和README.md。但是我又不想這樣，我想Github Repo下面可以直接看到這個blog的README.md內容。
+所以我就修改Hexo根目錄下的_c...</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card card5" href="/2017/01/08/hexo-404-page/">
     <div class="wrapper black">
       <div class="card-header" style="background: #fff url(/img/post-default.jpg) center/contain no-repeat" onclick="location.href='/2017/01/08/hexo-404-page/'">
       </div>
@@ -404,21 +431,6 @@ Cookie的佔用空間非常小，大小限制于4KB左右，常見的用途是�
 
 參考資料
 Creating a custom 40...</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="card card5" href="/2017/01/08/readme/">
-    <div class="wrapper black">
-      <div class="card-header" style="background: #fff url(/img/post-default.jpg) center/contain no-repeat" onclick="location.href='/2017/01/08/readme/'">
-      </div>
-      <div class="data" onclick="location.href='/2017/01/08/readme/'">
-        <div class="content">
-          <div class="stats"><a href="/2017/01/08/readme/"><span class="date">2017-01-08</span></a></div>
-          <h1 class="title"><a href="/2017/01/08/readme/">Github上的README.md</a></h1>
-          <p class="text"><a href="/2017/01/08/readme/">Hexo在渲染的時候默認是把source下面所有的.md檔案渲染成html，這樣的話會覆蓋掉Github上的CNAME和README.md。但是我又不想這樣，我想Github Repo下面可以直接看到這個blog的README.md內容。
-所以我就修改Hexo根目錄下的_c...</a></p>
         </div>
       </div>
     </div>
@@ -535,10 +547,6 @@ Creating a custom 40...</a></p>
               
               
               
-              
-              
-              
-              
               <a href="/Tags/#Markdown" title="Markdown" rel="2">Markdown</a>
               
               
@@ -551,11 +559,19 @@ Creating a custom 40...</a></p>
               
               
               
-              <a href="/Tags/#Github" title="Github" rel="2">Github</a>
+              
+              
+              
+              
+              <a href="/Tags/#Hexo" title="Hexo" rel="5">Hexo</a>
               
               
               
               <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
+              
+              
+              
+              <a href="/Tags/#Github" title="Github" rel="2">Github</a>
               
               
               
@@ -567,11 +583,9 @@ Creating a custom 40...</a></p>
               
               
               
-              <a href="/Tags/#Hexo" title="Hexo" rel="5">Hexo</a>
-              
-              
-              
               <a href="/Tags/#SEO" title="SEO" rel="2">SEO</a>
+              
+              
               
               
               
@@ -606,8 +620,6 @@ Creating a custom 40...</a></p>
               
               
               <a href="/Tags/#Blog" title="Blog" rel="2">Blog</a>
-              
-              
               
               
               
