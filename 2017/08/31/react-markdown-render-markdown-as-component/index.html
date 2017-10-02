@@ -27,15 +27,16 @@
     <!-- Open Graph -->
     
     <meta name="description" content="前言要寫出優雅的文檔是有難度的，尤其是需要格式規範的文章。而利用 Markdown，則可以專心寫作。Markdown 除了可以直接編譯為 HTML，還能編譯為 PowerPoint, Resume，還有 React 組件。無論是利用 Markdown 製作 PowerPoint，還是利用 Markdown 製作簡歷，都是非常方便的。如果你不是很熟悉 Markdown 語法的話，你可以在下文看 Ma">
+<meta name="keywords" content="Markdown,React">
 <meta property="og:type" content="article">
-<meta property="og:title" content="React-markdown -- 實時渲染 Markdown 的 React 工具 | Calpa's blog">
+<meta property="og:title" content="React-markdown -- 實時渲染 Markdown 的 React 工具 | Calpa&#39;s blog">
 <meta property="og:url" content="https://calpa.me/2017/08/31/react-markdown-render-markdown-as-component/index.html">
 <meta property="og:site_name" content="Calpa">
 <meta property="og:description" content="前言要寫出優雅的文檔是有難度的，尤其是需要格式規範的文章。而利用 Markdown，則可以專心寫作。Markdown 除了可以直接編譯為 HTML，還能編譯為 PowerPoint, Resume，還有 React 組件。無論是利用 Markdown 製作 PowerPoint，還是利用 Markdown 製作簡歷，都是非常方便的。如果你不是很熟悉 Markdown 語法的話，你可以在下文看 Ma">
 <meta property="og:image" content="https://i.imgur.com/UtbKsLJ.jpg">
 <meta property="og:updated_time" content="2017-09-30T12:24:26.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="React-markdown -- 實時渲染 Markdown 的 React 工具 | Calpa's blog">
+<meta name="twitter:title" content="React-markdown -- 實時渲染 Markdown 的 React 工具 | Calpa&#39;s blog">
 <meta name="twitter:description" content="前言要寫出優雅的文檔是有難度的，尤其是需要格式規範的文章。而利用 Markdown，則可以專心寫作。Markdown 除了可以直接編譯為 HTML，還能編譯為 PowerPoint, Resume，還有 React 組件。無論是利用 Markdown 製作 PowerPoint，還是利用 Markdown 製作簡歷，都是非常方便的。如果你不是很熟悉 Markdown 語法的話，你可以在下文看 Ma">
 <meta name="twitter:image" content="https://i.imgur.com/UtbKsLJ.jpg">
 
@@ -345,9 +346,7 @@ header.intro-header {
               
               
               
-              <a href="/Tags/#Front End" title="Front End" rel="4">Front End</a>
-              
-              
+              <a href="/Tags/#Front End" title="Front End" rel="5">Front End</a>
               
               
               
@@ -365,15 +364,11 @@ header.intro-header {
               
               
               
+              
+              
               <a href="/Tags/#Github" title="Github" rel="2">Github</a>
               
               
-              
-              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
-              
-              
-              
-              <a href="/Tags/#Hexo" title="Hexo" rel="5">Hexo</a>
               
               
               
@@ -382,6 +377,14 @@ header.intro-header {
               
               
               
+              
+              
+              
+              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
+              
+              
+              
+              <a href="/Tags/#Hexo" title="Hexo" rel="5">Hexo</a>
               
               
               
@@ -415,9 +418,9 @@ header.intro-header {
               
               
               
-              
-              
               <a href="/Tags/#CSS" title="CSS" rel="2">CSS</a>
+              
+              
               
               
               
@@ -451,6 +454,12 @@ header.intro-header {
       <ul class="list-inline" style="text-align: center;">
         
           <li>
+            <a href="/2017/10/01/frontend-developer-tools-in-macos/">
+              前端程序員的必備工具清單（MacOS）
+            </a>
+          </li>
+        
+          <li>
             <a href="/2017/09/30/hang-zhou-interview-summary/">
               【圖多】《遠征成功﹣﹣一個香港人北上杭州豬場的前端面試之路》
             </a>
@@ -474,17 +483,11 @@ header.intro-header {
             </a>
           </li>
         
-          <li>
-            <a href="/2017/08/04/utilize-github-issue-by-using-gitalk/">
-              善用 Github Issue 的開源評論插件 -- Gitalk
-            </a>
-          </li>
-        
       </ul>
     
     <hr>
 
-    <h5 style="text-align: center;">共47篇文章</h5>
+    <h5 style="text-align: center;">共48篇文章</h5>
     <hr>
 
     <!-- All Blog Posts -->
@@ -494,6 +497,12 @@ header.intro-header {
         
           
           
+              <li>
+                <a href="/archive/#2017-10">
+                  10月(1)
+                </a>
+              </li>
+            
           
               <li>
                 <a href="/archive/#2017-9">
@@ -587,10 +596,10 @@ function handleEnter(e) {
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> ReactMarkdown <span class="keyword">from</span> <span class="string">'react-markdown'</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> input = <span class="string">'# This is a header\n\nAnd this is a paragraph'</span>;</div><div class="line"></div><div class="line">&lt;ReactMarkdown source=&#123;input&#125; /&gt;</div></pre></td></tr></table></figure>
 <p>然後你會看到這樣的：</p>
 <p><img class="lozad" data-src="https://i.imgur.com/zR2Olai.png" alt="React Markdown 例子"></p>
-<p>官網上是這樣說的：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> React = <span class="built_in">require</span>(<span class="string">'react'</span>);</div><div class="line"><span class="keyword">var</span> ReactDOM = <span class="built_in">require</span>(<span class="string">'react-dom'</span>);</div><div class="line"><span class="keyword">var</span> ReactMarkdown = <span class="built_in">require</span>(<span class="string">'react-markdown'</span>);</div><div class="line"></div><div class="line"><span class="keyword">var</span> input = <span class="string">'# This is a header\n\nAnd this is a paragraph'</span>;</div><div class="line"></div><div class="line">ReactDOM.render(</div><div class="line">    &lt;ReactMarkdown source=&#123;input&#125; /&gt;,</div><div class="line">    document.getElementById('container')</div><div class="line">);</div></pre></td></tr></table></figure></p>
+<p>官網上是這樣說的：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> React = <span class="built_in">require</span>(<span class="string">'react'</span>);</div><div class="line"><span class="keyword">var</span> ReactDOM = <span class="built_in">require</span>(<span class="string">'react-dom'</span>);</div><div class="line"><span class="keyword">var</span> ReactMarkdown = <span class="built_in">require</span>(<span class="string">'react-markdown'</span>);</div><div class="line"></div><div class="line"><span class="keyword">var</span> input = <span class="string">'# This is a header\n\nAnd this is a paragraph'</span>;</div><div class="line"></div><div class="line">ReactDOM.render(</div><div class="line">    &lt;ReactMarkdown source=&#123;input&#125; /&gt;,</div><div class="line">    <span class="built_in">document</span>.getElementById(<span class="string">'container'</span>)</div><div class="line">);</div></pre></td></tr></table></figure></p>
 <h3 id="Webpack-1-配置"><a href="#Webpack-1-配置" class="headerlink" title="Webpack 1 配置"></a>Webpack 1 配置</h3><p>如果你是用 Webpack 1 的話，你需要安裝 json-loader：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install --save json-loader</div></pre></td></tr></table></figure></p>
 <p>並在你的 webpack 設置裡面加上：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">module</span>: &#123;</div><div class="line">    <span class="attr">loaders</span>: [&#123;</div><div class="line">      <span class="attr">test</span>: <span class="regexp">/\.json$/</span>,</div><div class="line">      <span class="attr">loader</span>: <span class="string">'json-loader'</span></div><div class="line">    &#125;]</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="built_in">module</span>: &#123;</div><div class="line">    loaders: [&#123;</div><div class="line">      test: <span class="regexp">/\.json$/</span>,</div><div class="line">      loader: <span class="string">'json-loader'</span></div><div class="line">    &#125;]</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>如果你設置 <code>escapeHtml</code> 或 <code>skipHtml</code> 為 <code>true</code>，該組件就不會使用<code>dangerouslySetInnerHTML</code>。</p>
 <h3 id="選項"><a href="#選項" class="headerlink" title="選項"></a>選項</h3><p>以下選項除了<code>source</code>之外都是可選的，其實這個工具已經配置成開箱即用，這裡就說幾個最底部的選項，更多的選項請去官網看。</p>
 <ul>

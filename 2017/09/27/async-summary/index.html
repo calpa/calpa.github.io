@@ -26,20 +26,18 @@
 
     <!-- Open Graph -->
     
-    <meta name="description" content="前言異步操作是非常常見的操作，也是其中一題常見的前端工程師面試題目。在日常開發中，我們會和伺服器交互，或者是和用戶的行動作出反應，比如說監聽某些點擊事件。這個時候，其實我們是執行了異步操作，我們需要等待對方若干時間才能收到返回值，甚至是一個錯誤的值。。。因此，異步操作很容易產生一些誤會。這裡，我會說一下異步操作，及其返回的處理方法。
-同步與異步的分別在同步的世界裡面，我們希望執行某些操作之後，就能">
+    <meta name="description" content="前言異步操作是非常常見的操作，也是其中一題常見的前端工程師面試題目。在日常開發中，我們會和伺服器交互，或者是和用戶的行動作出反應，比如說監聽某些點擊事件。這個時候，其實我們是執行了異步操作，我們需要等待對方若干時間才能收到返回值，甚至是一個錯誤的值。。。因此，異步操作很容易產生一些誤會。這裡，我會說一下異步操作，及其返回的處理方法。 同步與異步的分別在同步的世界裡面，我們希望執行某些操作之後，就能">
+<meta name="keywords" content="JavaScript,Front End">
 <meta property="og:type" content="article">
-<meta property="og:title" content="異步操作見聞錄 | Calpa's blog">
+<meta property="og:title" content="異步操作見聞錄 | Calpa&#39;s blog">
 <meta property="og:url" content="https://calpa.me/2017/09/27/async-summary/index.html">
 <meta property="og:site_name" content="Calpa">
-<meta property="og:description" content="前言異步操作是非常常見的操作，也是其中一題常見的前端工程師面試題目。在日常開發中，我們會和伺服器交互，或者是和用戶的行動作出反應，比如說監聽某些點擊事件。這個時候，其實我們是執行了異步操作，我們需要等待對方若干時間才能收到返回值，甚至是一個錯誤的值。。。因此，異步操作很容易產生一些誤會。這裡，我會說一下異步操作，及其返回的處理方法。
-同步與異步的分別在同步的世界裡面，我們希望執行某些操作之後，就能">
+<meta property="og:description" content="前言異步操作是非常常見的操作，也是其中一題常見的前端工程師面試題目。在日常開發中，我們會和伺服器交互，或者是和用戶的行動作出反應，比如說監聽某些點擊事件。這個時候，其實我們是執行了異步操作，我們需要等待對方若干時間才能收到返回值，甚至是一個錯誤的值。。。因此，異步操作很容易產生一些誤會。這裡，我會說一下異步操作，及其返回的處理方法。 同步與異步的分別在同步的世界裡面，我們希望執行某些操作之後，就能">
 <meta property="og:image" content="https://i.imgur.com/KMksHxZ.png">
 <meta property="og:updated_time" content="2017-09-30T12:44:38.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="異步操作見聞錄 | Calpa's blog">
-<meta name="twitter:description" content="前言異步操作是非常常見的操作，也是其中一題常見的前端工程師面試題目。在日常開發中，我們會和伺服器交互，或者是和用戶的行動作出反應，比如說監聽某些點擊事件。這個時候，其實我們是執行了異步操作，我們需要等待對方若干時間才能收到返回值，甚至是一個錯誤的值。。。因此，異步操作很容易產生一些誤會。這裡，我會說一下異步操作，及其返回的處理方法。
-同步與異步的分別在同步的世界裡面，我們希望執行某些操作之後，就能">
+<meta name="twitter:title" content="異步操作見聞錄 | Calpa&#39;s blog">
+<meta name="twitter:description" content="前言異步操作是非常常見的操作，也是其中一題常見的前端工程師面試題目。在日常開發中，我們會和伺服器交互，或者是和用戶的行動作出反應，比如說監聽某些點擊事件。這個時候，其實我們是執行了異步操作，我們需要等待對方若干時間才能收到返回值，甚至是一個錯誤的值。。。因此，異步操作很容易產生一些誤會。這裡，我會說一下異步操作，及其返回的處理方法。 同步與異步的分別在同步的世界裡面，我們希望執行某些操作之後，就能">
 <meta name="twitter:image" content="https://i.imgur.com/KMksHxZ.png">
 
     <!-- Bootstrap v3.3.7 Core CSS -->
@@ -346,9 +344,7 @@ header.intro-header {
               
               
               
-              <a href="/Tags/#Front End" title="Front End" rel="4">Front End</a>
-              
-              
+              <a href="/Tags/#Front End" title="Front End" rel="5">Front End</a>
               
               
               
@@ -366,15 +362,11 @@ header.intro-header {
               
               
               
+              
+              
               <a href="/Tags/#Github" title="Github" rel="2">Github</a>
               
               
-              
-              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
-              
-              
-              
-              <a href="/Tags/#Hexo" title="Hexo" rel="5">Hexo</a>
               
               
               
@@ -383,6 +375,14 @@ header.intro-header {
               
               
               
+              
+              
+              
+              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
+              
+              
+              
+              <a href="/Tags/#Hexo" title="Hexo" rel="5">Hexo</a>
               
               
               
@@ -416,9 +416,9 @@ header.intro-header {
               
               
               
-              
-              
               <a href="/Tags/#CSS" title="CSS" rel="2">CSS</a>
+              
+              
               
               
               
@@ -452,6 +452,12 @@ header.intro-header {
       <ul class="list-inline" style="text-align: center;">
         
           <li>
+            <a href="/2017/10/01/frontend-developer-tools-in-macos/">
+              前端程序員的必備工具清單（MacOS）
+            </a>
+          </li>
+        
+          <li>
             <a href="/2017/09/30/hang-zhou-interview-summary/">
               【圖多】《遠征成功﹣﹣一個香港人北上杭州豬場的前端面試之路》
             </a>
@@ -475,17 +481,11 @@ header.intro-header {
             </a>
           </li>
         
-          <li>
-            <a href="/2017/08/04/utilize-github-issue-by-using-gitalk/">
-              善用 Github Issue 的開源評論插件 -- Gitalk
-            </a>
-          </li>
-        
       </ul>
     
     <hr>
 
-    <h5 style="text-align: center;">共47篇文章</h5>
+    <h5 style="text-align: center;">共48篇文章</h5>
     <hr>
 
     <!-- All Blog Posts -->
@@ -495,6 +495,12 @@ header.intro-header {
         
           
           
+              <li>
+                <a href="/archive/#2017-10">
+                  10月(1)
+                </a>
+              </li>
+            
           
               <li>
                 <a href="/archive/#2017-9">

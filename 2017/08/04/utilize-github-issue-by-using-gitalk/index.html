@@ -27,15 +27,16 @@
     <!-- Open Graph -->
     
     <meta name="description" content="前言以前，我的博客是用 Disqus 的評論插件，但是無論是載入速度，還是樣式上，都是有所缺乏的。我一直沒有安裝其他的評論插件，因為覺得搬家有點麻煩。但是當我試用一下之後，我就覺得這個插件安裝很方便，功能也很實用，尤其是可以寫 Markdown 評論，就讓我非常喜歡這個插件了。因此，我拜讀了一下 Gitalk Github Repo 的代碼。我會在這裡說一下我對這個插件的理解，並提交繁體中文 R">
+<meta name="keywords" content="Front End,Blog">
 <meta property="og:type" content="article">
-<meta property="og:title" content="善用 Github Issue 的開源評論插件 -- Gitalk | Calpa's blog">
+<meta property="og:title" content="善用 Github Issue 的開源評論插件 -- Gitalk | Calpa&#39;s blog">
 <meta property="og:url" content="https://calpa.me/2017/08/04/utilize-github-issue-by-using-gitalk/index.html">
 <meta property="og:site_name" content="Calpa">
 <meta property="og:description" content="前言以前，我的博客是用 Disqus 的評論插件，但是無論是載入速度，還是樣式上，都是有所缺乏的。我一直沒有安裝其他的評論插件，因為覺得搬家有點麻煩。但是當我試用一下之後，我就覺得這個插件安裝很方便，功能也很實用，尤其是可以寫 Markdown 評論，就讓我非常喜歡這個插件了。因此，我拜讀了一下 Gitalk Github Repo 的代碼。我會在這裡說一下我對這個插件的理解，並提交繁體中文 R">
 <meta property="og:image" content="https://i.imgur.com/w6B3yom.png">
 <meta property="og:updated_time" content="2017-09-30T12:24:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="善用 Github Issue 的開源評論插件 -- Gitalk | Calpa's blog">
+<meta name="twitter:title" content="善用 Github Issue 的開源評論插件 -- Gitalk | Calpa&#39;s blog">
 <meta name="twitter:description" content="前言以前，我的博客是用 Disqus 的評論插件，但是無論是載入速度，還是樣式上，都是有所缺乏的。我一直沒有安裝其他的評論插件，因為覺得搬家有點麻煩。但是當我試用一下之後，我就覺得這個插件安裝很方便，功能也很實用，尤其是可以寫 Markdown 評論，就讓我非常喜歡這個插件了。因此，我拜讀了一下 Gitalk Github Repo 的代碼。我會在這裡說一下我對這個插件的理解，並提交繁體中文 R">
 <meta name="twitter:image" content="https://i.imgur.com/w6B3yom.png">
 
@@ -345,9 +346,7 @@ header.intro-header {
               
               
               
-              <a href="/Tags/#Front End" title="Front End" rel="4">Front End</a>
-              
-              
+              <a href="/Tags/#Front End" title="Front End" rel="5">Front End</a>
               
               
               
@@ -365,15 +364,11 @@ header.intro-header {
               
               
               
+              
+              
               <a href="/Tags/#Github" title="Github" rel="2">Github</a>
               
               
-              
-              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
-              
-              
-              
-              <a href="/Tags/#Hexo" title="Hexo" rel="5">Hexo</a>
               
               
               
@@ -382,6 +377,14 @@ header.intro-header {
               
               
               
+              
+              
+              
+              <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
+              
+              
+              
+              <a href="/Tags/#Hexo" title="Hexo" rel="5">Hexo</a>
               
               
               
@@ -415,9 +418,9 @@ header.intro-header {
               
               
               
-              
-              
               <a href="/Tags/#CSS" title="CSS" rel="2">CSS</a>
+              
+              
               
               
               
@@ -451,6 +454,12 @@ header.intro-header {
       <ul class="list-inline" style="text-align: center;">
         
           <li>
+            <a href="/2017/10/01/frontend-developer-tools-in-macos/">
+              前端程序員的必備工具清單（MacOS）
+            </a>
+          </li>
+        
+          <li>
             <a href="/2017/09/30/hang-zhou-interview-summary/">
               【圖多】《遠征成功﹣﹣一個香港人北上杭州豬場的前端面試之路》
             </a>
@@ -474,17 +483,11 @@ header.intro-header {
             </a>
           </li>
         
-          <li>
-            <a href="/2017/08/04/utilize-github-issue-by-using-gitalk/">
-              善用 Github Issue 的開源評論插件 -- Gitalk
-            </a>
-          </li>
-        
       </ul>
     
     <hr>
 
-    <h5 style="text-align: center;">共47篇文章</h5>
+    <h5 style="text-align: center;">共48篇文章</h5>
     <hr>
 
     <!-- All Blog Posts -->
@@ -494,6 +497,12 @@ header.intro-header {
         
           
           
+              <li>
+                <a href="/archive/#2017-10">
+                  10月(1)
+                </a>
+              </li>
+            
           
               <li>
                 <a href="/archive/#2017-9">
@@ -593,7 +602,7 @@ function handleEnter(e) {
 <p>然後把壓縮過的<code>gitalk.min.js</code> 放進你的項目。</p>
 <h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p><img class="lozad" data-src="https://i.imgur.com/C6HEsRv.png" alt="Register a new OAuth Application"></p>
 <p>Gitalk 需要 <strong>Github Application</strong>，如果沒有請點擊 <a href="https://github.com/settings/applications/new" rel="external nofollow noopener noreferrer" target="_blank">Register a new OAuth application</a> 申請，<code>Authorization callback URL</code> 填寫當前使用插件頁面的域名，例如我的博客就是填寫 <a href="https://calpa.me">https://calpa.me</a></p>
-<h3 id="代碼範例"><a href="#代碼範例" class="headerlink" title="代碼範例"></a>代碼範例</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> gitalk = <span class="keyword">new</span> Gitalk(&#123;</div><div class="line">  <span class="attr">clientID</span>: <span class="string">'Github Application Client ID'</span>,</div><div class="line">  <span class="attr">clientSecret</span>: <span class="string">'Github Application Client Secret'</span>,</div><div class="line">  <span class="attr">repo</span>: <span class="string">'Github repo'</span>,</div><div class="line">  <span class="attr">owner</span>: <span class="string">'Github repo owner'</span>,</div><div class="line">  <span class="attr">admin</span>: [<span class="string">'Github repo collaborators'</span>],</div><div class="line">&#125;)</div><div class="line"></div><div class="line">gitalk.render(<span class="string">'gitalk-container'</span>)</div></pre></td></tr></table></figure>
+<h3 id="代碼範例"><a href="#代碼範例" class="headerlink" title="代碼範例"></a>代碼範例</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> gitalk = <span class="keyword">new</span> Gitalk(&#123;</div><div class="line">  clientID: <span class="string">'Github Application Client ID'</span>,</div><div class="line">  clientSecret: <span class="string">'Github Application Client Secret'</span>,</div><div class="line">  repo: <span class="string">'Github repo'</span>,</div><div class="line">  owner: <span class="string">'Github repo owner'</span>,</div><div class="line">  admin: [<span class="string">'Github repo collaborators'</span>],</div><div class="line">&#125;)</div><div class="line"></div><div class="line">gitalk.render(<span class="string">'gitalk-container'</span>)</div></pre></td></tr></table></figure>
 <h2 id="Gitalk-選項"><a href="#Gitalk-選項" class="headerlink" title="Gitalk 選項"></a>Gitalk 選項</h2><ul>
 <li><p><strong>clientID</strong> <code>String</code></p>
 <p><strong>必須</strong>. Github Application Client ID.</p>
@@ -652,7 +661,7 @@ function handleEnter(e) {
 </li>
 <li><p><strong>flipMoveOptions</strong> <code>Object</code></p>
 <p>Default:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">staggerDelayBy</span>: <span class="number">150</span>,</div><div class="line">  <span class="attr">appearAnimation</span>: <span class="string">'accordionVertical'</span>,</div><div class="line">  <span class="attr">enterAnimation</span>: <span class="string">'accordionVertical'</span>,</div><div class="line">  <span class="attr">leaveAnimation</span>: <span class="string">'accordionVertical'</span>,</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  staggerDelayBy: <span class="number">150</span>,</div><div class="line">  appearAnimation: <span class="string">'accordionVertical'</span>,</div><div class="line">  enterAnimation: <span class="string">'accordionVertical'</span>,</div><div class="line">  leaveAnimation: <span class="string">'accordionVertical'</span>,</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>評論列表的動畫。 <a href="https://github.com/joshwcomeau/react-flip-move/blob/master/documentation/enter_leave_animations.md" rel="external nofollow noopener noreferrer" target="_blank">參考</a></p>
 </li>
 <li><p><strong>enableHotKey</strong> <code>Boolean</code></p>
