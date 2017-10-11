@@ -4,7 +4,6 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta rel="manifest" href="/manifest.json">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Calpa的技術博客，開發日常，以及遇到的坑">
     <meta name="keyword" content="calpa, blog, JavaScript">
@@ -60,15 +59,17 @@
     <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 
     <!-- OneSignal -->
+    <link rel="manifest" href="/manifest.json">
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
     <script>
-      var OneSignal = window.OneSignal || [];
-      OneSignal.push(["init", {
-        appId: "272cd882-09dc-46af-bdee-842e3caf63c9",
-        autoRegister: false,
-        notifyButton: {
-          enable: true
-        }
-      }]);
+        var OneSignal = window.OneSignal || [];
+        OneSignal.push(["init", {
+            appId: "272cd882-09dc-46af-bdee-842e3caf63c9",
+            autoRegister: true,
+            notifyButton: {
+                enable: true
+            }
+        }]);
     </script>
 </head>
 
@@ -110,6 +111,10 @@
             
               
                 
+              
+            
+              
+                
                   <li>
                     <a href="/Tags/">
                       Tags
@@ -120,13 +125,9 @@
             
               
                 
-              
-            
-              
-                
                   <li>
-                    <a href="/about/">
-                      About
+                    <a href="/archive/">
+                      Archive
                     </a>
                   </li>
                 
@@ -135,8 +136,8 @@
               
                 
                   <li>
-                    <a href="/archive/">
-                      Archive
+                    <a href="/about/">
+                      About
                     </a>
                   </li>
                 
@@ -355,23 +356,23 @@ header.intro-header {
               
               
               
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
               <a href="/Tags/#Markdown" title="Markdown" rel="2">Markdown</a>
               
               
               
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
               <a href="/Tags/#Github" title="Github" rel="2">Github</a>
-              
-              
               
               
               
@@ -607,12 +608,12 @@ function handleEnter(e) {
 <ul class="pager">
     
     <li class="previous">
-        <a href="/2017/01/14/javascript-variable-hoisting/" data-toggle="tooltip" data-placement="top" title="JavaScript的變量提升入門">&larr; Previous Post</a>
+        <a href="/2017/01/08/readme/" data-toggle="tooltip" data-placement="top" title="Github上的README.md">&larr; Previous Post</a>
     </li>
     
     
     <li class="next">
-        <a href="/2017/01/08/readme/" data-toggle="tooltip" data-placement="top" title="Github上的README.md">Next Post &rarr;</a>
+        <a href="/2017/01/08/hello-world/" data-toggle="tooltip" data-placement="top" title="Hello, World!">Next Post &rarr;</a>
     </li>
     
 </ul>

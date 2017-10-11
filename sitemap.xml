@@ -121,14 +121,14 @@
   </url>
   
   <url>
-    <loc>https://calpa.me/2017/04/25/coders-of-the-caribbean-review/</loc>
+    <loc>https://calpa.me/2017/04/23/hackUST-2017-hackathon-summary/</loc>
     
     <lastmod>2017-06-06T16:28:01.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://calpa.me/2017/04/05/front-end-booklist/</loc>
+    <loc>https://calpa.me/2017/04/25/coders-of-the-caribbean-review/</loc>
     
     <lastmod>2017-06-06T16:28:01.000Z</lastmod>
     
@@ -142,14 +142,14 @@
   </url>
   
   <url>
-    <loc>https://calpa.me/2017/04/23/hackUST-2017-hackathon-summary/</loc>
+    <loc>https://calpa.me/2017/02/23/github-edcation-package/</loc>
     
     <lastmod>2017-06-06T16:28:01.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://calpa.me/2017/02/23/github-edcation-package/</loc>
+    <loc>https://calpa.me/2017/04/05/front-end-booklist/</loc>
     
     <lastmod>2017-06-06T16:28:01.000Z</lastmod>
     
@@ -205,7 +205,7 @@
   </url>
   
   <url>
-    <loc>https://calpa.me/2017/02/02/javascript-true-and-false/</loc>
+    <loc>https://calpa.me/2017/01/14/javascript-variable-hoisting/</loc>
     
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     
@@ -219,28 +219,7 @@
   </url>
   
   <url>
-    <loc>https://calpa.me/2017/01/14/javascript-variable-hoisting/</loc>
-    
-    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://calpa.me/2017/04/27/n-ways-to-output-hello-world/</loc>
-    
-    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://calpa.me/2017/02/19/javascript-closure/</loc>
-    
-    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://calpa.me/2017/05/05/javascript-array/</loc>
     
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     
@@ -254,13 +233,6 @@
   </url>
   
   <url>
-    <loc>https://calpa.me/2017/01/20/using-javascript-to-create-web-storage/</loc>
-    
-    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://calpa.me/2017/03/25/javascript-this/</loc>
     
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
@@ -268,7 +240,35 @@
   </url>
   
   <url>
+    <loc>https://calpa.me/2017/02/19/javascript-closure/</loc>
+    
+    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://calpa.me/2017/05/03/redux-array-push-function/</loc>
+    
+    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://calpa.me/2017/01/20/using-javascript-to-create-web-storage/</loc>
+    
+    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://calpa.me/2017/05/05/javascript-array/</loc>
+    
+    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://calpa.me/2017/02/02/javascript-true-and-false/</loc>
     
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     

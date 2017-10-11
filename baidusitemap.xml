@@ -288,40 +288,6 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/04/05/front-end-booklist/</loc>
-    <lastmod>2017-06-06T16:28:01.000Z</lastmod>
-    <data>
-        <display>
-        <title>前端工程師的入門書單</title>
-        <pubTime>2017-04-05T14:51:00.000Z</pubTime>
-        
-        <tag>Web</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://calpa.me/2017/04/23/hackUST-2017-hackathon-summary/</loc>
-    <lastmod>2017-06-06T16:28:01.000Z</lastmod>
-    <data>
-        <display>
-        <title>hackUST 2017後記</title>
-        <pubTime>2017-04-23T12:44:00.000Z</pubTime>
-        
-        <tag>Hackathon</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://calpa.me/2017/04/25/coders-of-the-caribbean-review/</loc>
     <lastmod>2017-06-06T16:28:01.000Z</lastmod>
     <data>
@@ -339,12 +305,46 @@
 
     
   <url>
+    <loc>https://calpa.me/2017/04/05/front-end-booklist/</loc>
+    <lastmod>2017-06-06T16:28:01.000Z</lastmod>
+    <data>
+        <display>
+        <title>前端工程師的入門書單</title>
+        <pubTime>2017-04-05T14:51:00.000Z</pubTime>
+        
+        <tag>Web</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://calpa.me/2017/02/19/supercharger-hackathon/</loc>
     <lastmod>2017-06-06T16:28:01.000Z</lastmod>
     <data>
         <display>
         <title>SuperCharger Hackathon後記</title>
         <pubTime>2017-02-19T07:12:00.000Z</pubTime>
+        
+        <tag>Hackathon</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://calpa.me/2017/04/23/hackUST-2017-hackathon-summary/</loc>
+    <lastmod>2017-06-06T16:28:01.000Z</lastmod>
+    <data>
+        <display>
+        <title>hackUST 2017後記</title>
+        <pubTime>2017-04-23T12:44:00.000Z</pubTime>
         
         <tag>Hackathon</tag>
          
@@ -429,40 +429,6 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/02/02/javascript-true-and-false/</loc>
-    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
-    <data>
-        <display>
-        <title>JavaScript中的True與False</title>
-        <pubTime>2017-02-02T15:19:53.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://calpa.me/2017/05/05/javascript-array/</loc>
-    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
-    <data>
-        <display>
-        <title>JavaScript 數組去重</title>
-        <pubTime>2017-05-05T14:53:00.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://calpa.me/2017/01/14/javascript-variable-hoisting/</loc>
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     <data>
@@ -480,48 +446,29 @@
 
     
   <url>
+    <loc>https://calpa.me/2017/02/02/javascript-true-and-false/</loc>
+    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
+    <data>
+        <display>
+        <title>JavaScript中的True與False</title>
+        <pubTime>2017-02-02T15:19:53.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://calpa.me/2017/04/27/n-ways-to-output-hello-world/</loc>
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     <data>
         <display>
         <title>Hello World的四+N種方法</title>
         <pubTime>2017-04-27T06:34:00.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://calpa.me/2017/01/20/using-javascript-to-create-web-storage/</loc>
-    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
-    <data>
-        <display>
-        <title>利用JavaScript創建Web Storage</title>
-        <pubTime>2017-01-20T11:37:38.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-        <tag>Web</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://calpa.me/2017/02/19/javascript-closure/</loc>
-    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
-    <data>
-        <display>
-        <title>JavaScript的閉包(Closure)</title>
-        <pubTime>2017-02-19T07:12:00.000Z</pubTime>
         
         <tag>JavaScript</tag>
          
@@ -569,16 +516,16 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/05/06/introduction-to-regular-expression/</loc>
+    <loc>https://calpa.me/2017/01/20/using-javascript-to-create-web-storage/</loc>
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     <data>
         <display>
-        <title>初探正則表達式</title>
-        <pubTime>2017-05-06T12:13:00.000Z</pubTime>
+        <title>利用JavaScript創建Web Storage</title>
+        <pubTime>2017-01-20T11:37:38.000Z</pubTime>
         
         <tag>JavaScript</tag>
          
-        <tag>Regular Expression</tag>
+        <tag>Web</tag>
          
          
            
@@ -598,6 +545,59 @@
         <tag>JavaScript</tag>
          
         <tag>Redux</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://calpa.me/2017/02/19/javascript-closure/</loc>
+    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
+    <data>
+        <display>
+        <title>JavaScript的閉包(Closure)</title>
+        <pubTime>2017-02-19T07:12:00.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://calpa.me/2017/05/06/introduction-to-regular-expression/</loc>
+    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
+    <data>
+        <display>
+        <title>初探正則表達式</title>
+        <pubTime>2017-05-06T12:13:00.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+        <tag>Regular Expression</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://calpa.me/2017/05/05/javascript-array/</loc>
+    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
+    <data>
+        <display>
+        <title>JavaScript 數組去重</title>
+        <pubTime>2017-05-05T14:53:00.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
          
          
            
