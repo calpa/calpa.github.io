@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta rel="manifest" href="/manifest.json">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Calpa的技術博客，開發日常，以及遇到的坑">
     <meta name="keyword" content="calpa, blog, JavaScript">
@@ -56,6 +57,18 @@
 
     <!-- lazy loading -->
     <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+
+    <!-- OneSignal -->
+    <script>
+      var OneSignal = window.OneSignal || [];
+      OneSignal.push(["init", {
+        appId: "272cd882-09dc-46af-bdee-842e3caf63c9",
+        autoRegister: false,
+        notifyButton: {
+          enable: true
+        }
+      }]);
+    </script>
 </head>
 
 
@@ -87,6 +100,12 @@
             <a href="/">Home</a>
           </li>
           
+            
+              
+            
+              
+            
+              
             
               
                 
@@ -245,14 +264,6 @@
                       HTTP (1)
                     </a>
                   
-                    <a href="#Markdown" title="Markdown" rel="2">
-                      Markdown (2)
-                    </a>
-                  
-                    <a href="#MacOS" title="MacOS" rel="1">
-                      MacOS (1)
-                    </a>
-                  
                     <a href="#Performance" title="Performance" rel="1">
                       Performance (1)
                     </a>
@@ -265,12 +276,20 @@
                       Check-list (1)
                     </a>
                   
-                    <a href="#Git" title="Git" rel="1">
-                      Git (1)
+                    <a href="#Markdown" title="Markdown" rel="2">
+                      Markdown (2)
                     </a>
                   
                     <a href="#Github" title="Github" rel="2">
                       Github (2)
+                    </a>
+                  
+                    <a href="#Git" title="Git" rel="1">
+                      Git (1)
+                    </a>
+                  
+                    <a href="#MacOS" title="MacOS" rel="1">
+                      MacOS (1)
                     </a>
                   
                     <a href="#Hackathon" title="Hackathon" rel="2">
@@ -279,10 +298,6 @@
                   
                     <a href="#Hexo" title="Hexo" rel="5">
                       Hexo (5)
-                    </a>
-                  
-                    <a href="#SEO" title="SEO" rel="2">
-                      SEO (2)
                     </a>
                   
                     <a href="#Interview" title="Interview" rel="2">
@@ -295,6 +310,10 @@
                   
                     <a href="#掘金技術征文" title="掘金技術征文" rel="1">
                       掘金技術征文 (1)
+                    </a>
+                  
+                    <a href="#SEO" title="SEO" rel="2">
+                      SEO (2)
                     </a>
                   
                     <a href="#API" title="API" rel="1">
@@ -345,12 +364,12 @@
                       思考 (1)
                     </a>
                   
-                    <a href="#CSS" title="CSS" rel="2">
-                      CSS (2)
-                    </a>
-                  
                     <a href="#Library" title="Library" rel="1">
                       Library (1)
+                    </a>
+                  
+                    <a href="#CSS" title="CSS" rel="2">
+                      CSS (2)
                     </a>
                   
                     <a href="#Blog" title="Blog" rel="2">
@@ -390,17 +409,6 @@
                   <hr>
                   
                     <div class="post-preview">
-                      <a href="/2017/05/31/javascript-array-map-parseint-solutions/">
-                        <h2 class="post-title">
-                          JavaScript Array.map(parseInt) 錯誤解決方案
-                        </h2>
-
-                        
-                      </a>
-                    </div>
-                  <hr>
-                  
-                    <div class="post-preview">
                       <a href="/2017/05/06/introduction-to-regular-expression/">
                         <h2 class="post-title">
                           初探正則表達式
@@ -423,9 +431,9 @@
                   <hr>
                   
                     <div class="post-preview">
-                      <a href="/2017/02/19/javascript-closure/">
+                      <a href="/2017/05/31/javascript-array-map-parseint-solutions/">
                         <h2 class="post-title">
-                          JavaScript的閉包(Closure)
+                          JavaScript Array.map(parseInt) 錯誤解決方案
                         </h2>
 
                         
@@ -434,9 +442,9 @@
                   <hr>
                   
                     <div class="post-preview">
-                      <a href="/2017/03/25/javascript-this/">
+                      <a href="/2017/02/19/javascript-closure/">
                         <h2 class="post-title">
-                          JavaScript的this
+                          JavaScript的閉包(Closure)
                         </h2>
 
                         
@@ -456,6 +464,17 @@
                   <hr>
                   
                     <div class="post-preview">
+                      <a href="/2017/03/25/javascript-this/">
+                        <h2 class="post-title">
+                          JavaScript的this
+                        </h2>
+
+                        
+                      </a>
+                    </div>
+                  <hr>
+                  
+                    <div class="post-preview">
                       <a href="/2017/02/02/javascript-true-and-false/">
                         <h2 class="post-title">
                           JavaScript中的True與False
@@ -467,9 +486,9 @@
                   <hr>
                   
                     <div class="post-preview">
-                      <a href="/2017/01/14/javascript-variable-hoisting/">
+                      <a href="/2017/05/21/learn-javascript-in-six-steps/">
                         <h2 class="post-title">
-                          JavaScript的變量提升入門
+                          打好 JavaScript 基礎的6個步驟
                         </h2>
 
                         
@@ -478,9 +497,9 @@
                   <hr>
                   
                     <div class="post-preview">
-                      <a href="/2017/05/21/learn-javascript-in-six-steps/">
+                      <a href="/2017/01/14/javascript-variable-hoisting/">
                         <h2 class="post-title">
-                          打好 JavaScript 基礎的6個步驟
+                          JavaScript的變量提升入門
                         </h2>
 
                         
@@ -511,9 +530,9 @@
                   <hr>
                   
                     <div class="post-preview">
-                      <a href="/2017/01/20/using-javascript-to-create-web-storage/">
+                      <a href="/2017/07/06/titanic-a-set-of-animated-icons/">
                         <h2 class="post-title">
-                          利用JavaScript創建Web Storage
+                          簡單易用的開源 JavaScript 動畫圖標庫 -- Titanic
                         </h2>
 
                         
@@ -522,9 +541,9 @@
                   <hr>
                   
                     <div class="post-preview">
-                      <a href="/2017/07/06/titanic-a-set-of-animated-icons/">
+                      <a href="/2017/01/20/using-javascript-to-create-web-storage/">
                         <h2 class="post-title">
-                          簡單易用的開源 JavaScript 動畫圖標庫 -- Titanic
+                          利用JavaScript創建Web Storage
                         </h2>
 
                         
@@ -552,9 +571,9 @@
                   <hr>
                   
                     <div class="post-preview">
-                      <a href="/2017/10/02/frontend-developer-tools-in-macos/">
+                      <a href="/2017/06/19/front-end-performance-check-list-for-production-in-chinese/">
                         <h2 class="post-title">
-                          前端程序員的必備工具清單（MacOS）
+                          【翻譯】前端性能優化必備工具清單
                         </h2>
 
                         
@@ -563,9 +582,9 @@
                   <hr>
                   
                     <div class="post-preview">
-                      <a href="/2017/06/19/front-end-performance-check-list-for-production-in-chinese/">
+                      <a href="/2017/10/02/frontend-developer-tools-in-macos/">
                         <h2 class="post-title">
-                          【翻譯】前端性能優化必備工具清單
+                          前端程序員的必備工具清單（MacOS）
                         </h2>
 
                         
@@ -656,9 +675,9 @@
                   <hr>
                   
                     <div class="post-preview">
-                      <a href="/2017/01/20/using-javascript-to-create-web-storage/">
+                      <a href="/2017/02/22/using-javascript-to-push-web-notification/">
                         <h2 class="post-title">
-                          利用JavaScript創建Web Storage
+                          利用JavaScript推送Web Notification
                         </h2>
 
                         
@@ -667,9 +686,9 @@
                   <hr>
                   
                     <div class="post-preview">
-                      <a href="/2017/02/22/using-javascript-to-push-web-notification/">
+                      <a href="/2017/01/20/using-javascript-to-create-web-storage/">
                         <h2 class="post-title">
-                          利用JavaScript推送Web Notification
+                          利用JavaScript創建Web Storage
                         </h2>
 
                         
@@ -708,55 +727,6 @@
                       <a href="/2017/04/08/common-http-status-code/">
                         <h2 class="post-title">
                           常見的14種HTTP狀態碼
-                        </h2>
-
-                        
-                      </a>
-                    </div>
-                  <hr>
-                  
-                </div>
-              
-                <div class="one-tag-list" id="Markdown">
-                  <span class="fa fa-tags listing-seperator">
-                    <span>Markdown</span>
-                  </span>
-
-                  
-                    <div class="post-preview">
-                      <a href="/2017/06/01/create-markdown-powerpoint-in-5-mins/">
-                        <h2 class="post-title">
-                          5分鐘製作 Markdown PowerPoint
-                        </h2>
-
-                        
-                      </a>
-                    </div>
-                  <hr>
-                  
-                    <div class="post-preview">
-                      <a href="/2017/08/31/react-markdown-render-markdown-as-component/">
-                        <h2 class="post-title">
-                          React-markdown -- 實時渲染 Markdown 的 React 工具
-                        </h2>
-
-                        
-                      </a>
-                    </div>
-                  <hr>
-                  
-                </div>
-              
-                <div class="one-tag-list" id="MacOS">
-                  <span class="fa fa-tags listing-seperator">
-                    <span>MacOS</span>
-                  </span>
-
-                  
-                    <div class="post-preview">
-                      <a href="/2017/10/02/frontend-developer-tools-in-macos/">
-                        <h2 class="post-title">
-                          前端程序員的必備工具清單（MacOS）
                         </h2>
 
                         
@@ -823,16 +793,27 @@
                   
                 </div>
               
-                <div class="one-tag-list" id="Git">
+                <div class="one-tag-list" id="Markdown">
                   <span class="fa fa-tags listing-seperator">
-                    <span>Git</span>
+                    <span>Markdown</span>
                   </span>
 
                   
                     <div class="post-preview">
-                      <a href="/2017/04/01/git-workflow/">
+                      <a href="/2017/06/01/create-markdown-powerpoint-in-5-mins/">
                         <h2 class="post-title">
-                          Git多人合作開發工作流程
+                          5分鐘製作 Markdown PowerPoint
+                        </h2>
+
+                        
+                      </a>
+                    </div>
+                  <hr>
+                  
+                    <div class="post-preview">
+                      <a href="/2017/08/31/react-markdown-render-markdown-as-component/">
+                        <h2 class="post-title">
+                          React-markdown -- 實時渲染 Markdown 的 React 工具
                         </h2>
 
                         
@@ -863,6 +844,44 @@
                       <a href="/2017/04/11/github-ssh/">
                         <h2 class="post-title">
                           利用ssh連接Github的方法
+                        </h2>
+
+                        
+                      </a>
+                    </div>
+                  <hr>
+                  
+                </div>
+              
+                <div class="one-tag-list" id="Git">
+                  <span class="fa fa-tags listing-seperator">
+                    <span>Git</span>
+                  </span>
+
+                  
+                    <div class="post-preview">
+                      <a href="/2017/04/01/git-workflow/">
+                        <h2 class="post-title">
+                          Git多人合作開發工作流程
+                        </h2>
+
+                        
+                      </a>
+                    </div>
+                  <hr>
+                  
+                </div>
+              
+                <div class="one-tag-list" id="MacOS">
+                  <span class="fa fa-tags listing-seperator">
+                    <span>MacOS</span>
+                  </span>
+
+                  
+                    <div class="post-preview">
+                      <a href="/2017/10/02/frontend-developer-tools-in-macos/">
+                        <h2 class="post-title">
+                          前端程序員的必備工具清單（MacOS）
                         </h2>
 
                         
@@ -920,9 +939,9 @@
                   <hr>
                   
                     <div class="post-preview">
-                      <a href="/2017/02/26/hexo-change-site-url/">
+                      <a href="/2017/01/08/hexo-404-page/">
                         <h2 class="post-title">
-                          Hexo sitemap 簡單更改域名的方法
+                          Hexo之建立404 Page
                         </h2>
 
                         
@@ -931,9 +950,9 @@
                   <hr>
                   
                     <div class="post-preview">
-                      <a href="/2017/01/08/hexo-404-page/">
+                      <a href="/2017/02/26/hexo-change-site-url/">
                         <h2 class="post-title">
-                          Hexo之建立404 Page
+                          Hexo sitemap 簡單更改域名的方法
                         </h2>
 
                         
@@ -956,36 +975,6 @@
                       <a href="/2017/01/08/readme/">
                         <h2 class="post-title">
                           Github上的README.md
-                        </h2>
-
-                        
-                      </a>
-                    </div>
-                  <hr>
-                  
-                </div>
-              
-                <div class="one-tag-list" id="SEO">
-                  <span class="fa fa-tags listing-seperator">
-                    <span>SEO</span>
-                  </span>
-
-                  
-                    <div class="post-preview">
-                      <a href="/2017/02/26/hexo-change-site-url/">
-                        <h2 class="post-title">
-                          Hexo sitemap 簡單更改域名的方法
-                        </h2>
-
-                        
-                      </a>
-                    </div>
-                  <hr>
-                  
-                    <div class="post-preview">
-                      <a href="/2017/02/26/hexo-seo-nofollow/">
-                        <h2 class="post-title">
-                          Hexo優化之為外部鏈接添加nofollow屬性
                         </h2>
 
                         
@@ -1054,6 +1043,36 @@
                       <a href="/2017/09/30/hang-zhou-interview-summary/">
                         <h2 class="post-title">
                           【圖多】《遠征成功﹣﹣一個香港人北上杭州豬場的前端面試之路》
+                        </h2>
+
+                        
+                      </a>
+                    </div>
+                  <hr>
+                  
+                </div>
+              
+                <div class="one-tag-list" id="SEO">
+                  <span class="fa fa-tags listing-seperator">
+                    <span>SEO</span>
+                  </span>
+
+                  
+                    <div class="post-preview">
+                      <a href="/2017/02/26/hexo-change-site-url/">
+                        <h2 class="post-title">
+                          Hexo sitemap 簡單更改域名的方法
+                        </h2>
+
+                        
+                      </a>
+                    </div>
+                  <hr>
+                  
+                    <div class="post-preview">
+                      <a href="/2017/02/26/hexo-seo-nofollow/">
+                        <h2 class="post-title">
+                          Hexo優化之為外部鏈接添加nofollow屬性
                         </h2>
 
                         
@@ -1233,9 +1252,9 @@
                   <hr>
                   
                     <div class="post-preview">
-                      <a href="/2017/05/16/react-component-lifecycle/">
+                      <a href="/2017/08/31/react-markdown-render-markdown-as-component/">
                         <h2 class="post-title">
-                          React 組件生命週期 - 加載組件
+                          React-markdown -- 實時渲染 Markdown 的 React 工具
                         </h2>
 
                         
@@ -1244,9 +1263,9 @@
                   <hr>
                   
                     <div class="post-preview">
-                      <a href="/2017/08/31/react-markdown-render-markdown-as-component/">
+                      <a href="/2017/05/16/react-component-lifecycle/">
                         <h2 class="post-title">
-                          React-markdown -- 實時渲染 Markdown 的 React 工具
+                          React 組件生命週期 - 加載組件
                         </h2>
 
                         
@@ -1313,6 +1332,25 @@
                   
                 </div>
               
+                <div class="one-tag-list" id="Library">
+                  <span class="fa fa-tags listing-seperator">
+                    <span>Library</span>
+                  </span>
+
+                  
+                    <div class="post-preview">
+                      <a href="/2017/07/06/titanic-a-set-of-animated-icons/">
+                        <h2 class="post-title">
+                          簡單易用的開源 JavaScript 動畫圖標庫 -- Titanic
+                        </h2>
+
+                        
+                      </a>
+                    </div>
+                  <hr>
+                  
+                </div>
+              
                 <div class="one-tag-list" id="CSS">
                   <span class="fa fa-tags listing-seperator">
                     <span>CSS</span>
@@ -1334,25 +1372,6 @@
                       <a href="/2017/05/06/vertical-align-with-css/">
                         <h2 class="post-title">
                           CSS垂直置中的4種方法
-                        </h2>
-
-                        
-                      </a>
-                    </div>
-                  <hr>
-                  
-                </div>
-              
-                <div class="one-tag-list" id="Library">
-                  <span class="fa fa-tags listing-seperator">
-                    <span>Library</span>
-                  </span>
-
-                  
-                    <div class="post-preview">
-                      <a href="/2017/07/06/titanic-a-set-of-animated-icons/">
-                        <h2 class="post-title">
-                          簡單易用的開源 JavaScript 動畫圖標庫 -- Titanic
                         </h2>
 
                         
@@ -1477,21 +1496,21 @@
               
               
               
+              
+              
+              
+              
+              
+              
               <a href="/Tags/#Markdown" title="Markdown" rel="2">Markdown</a>
               
               
               
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
               <a href="/Tags/#Github" title="Github" rel="2">Github</a>
+              
+              
+              
+              
               
               
               
@@ -1503,15 +1522,15 @@
               
               
               
-              <a href="/Tags/#SEO" title="SEO" rel="2">SEO</a>
-              
-              
-              
               <a href="/Tags/#Interview" title="Interview" rel="2">Interview</a>
               
               
               
               
+              
+              
+              
+              <a href="/Tags/#SEO" title="SEO" rel="2">SEO</a>
               
               
               
@@ -1541,9 +1560,9 @@
               
               
               
+              
+              
               <a href="/Tags/#CSS" title="CSS" rel="2">CSS</a>
-              
-              
               
               
               

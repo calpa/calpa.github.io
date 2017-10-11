@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta rel="manifest" href="/manifest.json">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Calpa的技術博客，開發日常，以及遇到的坑">
     <meta name="keyword" content="calpa, blog, JavaScript">
@@ -55,6 +56,18 @@
 
     <!-- lazy loading -->
     <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+
+    <!-- OneSignal -->
+    <script>
+      var OneSignal = window.OneSignal || [];
+      OneSignal.push(["init", {
+        appId: "272cd882-09dc-46af-bdee-842e3caf63c9",
+        autoRegister: false,
+        notifyButton: {
+          enable: true
+        }
+      }]);
+    </script>
 </head>
 
 
@@ -86,6 +99,12 @@
             <a href="/">Home</a>
           </li>
           
+            
+              
+            
+              
+            
+              
             
               
                 
@@ -398,22 +417,7 @@ Cookie的佔用空間非常小，大小限制于4KB左右，常見的用途是�
     </div>
   </div>
 
-  <div class="card card5" href="/2017/01/08/readme/">
-    <div class="wrapper black">
-      <div class="card-header" style="background: #fff url(/img/post-default.jpg) center/contain no-repeat" onclick="location.href='/2017/01/08/readme/'">
-      </div>
-      <div class="data" onclick="location.href='/2017/01/08/readme/'">
-        <div class="content">
-          <div class="stats"><a href="/2017/01/08/readme/"><span class="date">2017-01-08</span></a></div>
-          <h1 class="title"><a href="/2017/01/08/readme/">Github上的README.md</a></h1>
-          <p class="text"><a href="/2017/01/08/readme/">Hexo在渲染的時候默認是把source下面所有的.md檔案渲染成html，這樣的話會覆蓋掉Github上的CNAME和README.md。但是我又不想這樣，我想Github Repo下面可以直接看到這個blog的README.md內容。
-所以我就修改Hexo根目錄下的_c...</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="card card6" href="/2017/01/08/hexo-404-page/">
+  <div class="card card5" href="/2017/01/08/hexo-404-page/">
     <div class="wrapper black">
       <div class="card-header" style="background: #fff url(/img/post-default.jpg) center/contain no-repeat" onclick="location.href='/2017/01/08/hexo-404-page/'">
       </div>
@@ -428,6 +432,21 @@ Cookie的佔用空間非常小，大小限制于4KB左右，常見的用途是�
 
 參考資料
 Creating a custom 40...</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card card6" href="/2017/01/08/readme/">
+    <div class="wrapper black">
+      <div class="card-header" style="background: #fff url(/img/post-default.jpg) center/contain no-repeat" onclick="location.href='/2017/01/08/readme/'">
+      </div>
+      <div class="data" onclick="location.href='/2017/01/08/readme/'">
+        <div class="content">
+          <div class="stats"><a href="/2017/01/08/readme/"><span class="date">2017-01-08</span></a></div>
+          <h1 class="title"><a href="/2017/01/08/readme/">Github上的README.md</a></h1>
+          <p class="text"><a href="/2017/01/08/readme/">Hexo在渲染的時候默認是把source下面所有的.md檔案渲染成html，這樣的話會覆蓋掉Github上的CNAME和README.md。但是我又不想這樣，我想Github Repo下面可以直接看到這個blog的README.md內容。
+所以我就修改Hexo根目錄下的_c...</a></p>
         </div>
       </div>
     </div>
@@ -548,21 +567,21 @@ Creating a custom 40...</a></p>
               
               
               
+              
+              
+              
+              
+              
+              
               <a href="/Tags/#Markdown" title="Markdown" rel="2">Markdown</a>
               
               
               
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
               <a href="/Tags/#Github" title="Github" rel="2">Github</a>
+              
+              
+              
+              
               
               
               
@@ -574,15 +593,15 @@ Creating a custom 40...</a></p>
               
               
               
-              <a href="/Tags/#SEO" title="SEO" rel="2">SEO</a>
-              
-              
-              
               <a href="/Tags/#Interview" title="Interview" rel="2">Interview</a>
               
               
               
               
+              
+              
+              
+              <a href="/Tags/#SEO" title="SEO" rel="2">SEO</a>
               
               
               
@@ -612,9 +631,9 @@ Creating a custom 40...</a></p>
               
               
               
+              
+              
               <a href="/Tags/#CSS" title="CSS" rel="2">CSS</a>
-              
-              
               
               
               
