@@ -64,7 +64,10 @@
         var OneSignal = window.OneSignal || [];
         OneSignal.push(["init", {
             appId: "272cd882-09dc-46af-bdee-842e3caf63c9",
-            autoRegister: true,
+            autoRegister: false,
+            httpPermissionRequest: {
+              enable: true,
+            },
             notifyButton: {
                 enable: true
             }
@@ -125,26 +128,6 @@
               
                 
                   <li>
-                    <a href="/archive/">
-                      Archive
-                    </a>
-                  </li>
-                
-              
-            
-              
-                
-                  <li>
-                    <a href="/about/">
-                      About
-                    </a>
-                  </li>
-                
-              
-            
-              
-                
-                  <li>
                     <a href="/search/">
                       Search
                     </a>
@@ -155,8 +138,28 @@
               
                 
                   <li>
+                    <a href="/archive/">
+                      Archive
+                    </a>
+                  </li>
+                
+              
+            
+              
+                
+                  <li>
                     <a href="/works/">
                       Works
+                    </a>
+                  </li>
+                
+              
+            
+              
+                
+                  <li>
+                    <a href="/about/">
+                      About
                     </a>
                   </li>
                 
@@ -257,16 +260,16 @@
                       Web (5)
                     </a>
                   
-                    <a href="#Markdown" title="Markdown" rel="2">
-                      Markdown (2)
-                    </a>
-                  
                     <a href="#Codingame" title="Codingame" rel="1">
                       Codingame (1)
                     </a>
                   
                     <a href="#HTTP" title="HTTP" rel="1">
                       HTTP (1)
+                    </a>
+                  
+                    <a href="#Markdown" title="Markdown" rel="2">
+                      Markdown (2)
                     </a>
                   
                     <a href="#Performance" title="Performance" rel="1">
@@ -281,24 +284,28 @@
                       Check-list (1)
                     </a>
                   
-                    <a href="#Git" title="Git" rel="1">
-                      Git (1)
+                    <a href="#MacOS" title="MacOS" rel="1">
+                      MacOS (1)
                     </a>
                   
                     <a href="#Github" title="Github" rel="2">
                       Github (2)
                     </a>
                   
-                    <a href="#MacOS" title="MacOS" rel="1">
-                      MacOS (1)
+                    <a href="#Git" title="Git" rel="1">
+                      Git (1)
+                    </a>
+                  
+                    <a href="#Hexo" title="Hexo" rel="5">
+                      Hexo (5)
                     </a>
                   
                     <a href="#Hackathon" title="Hackathon" rel="2">
                       Hackathon (2)
                     </a>
                   
-                    <a href="#Hexo" title="Hexo" rel="5">
-                      Hexo (5)
+                    <a href="#SEO" title="SEO" rel="2">
+                      SEO (2)
                     </a>
                   
                     <a href="#Interview" title="Interview" rel="2">
@@ -311,10 +318,6 @@
                   
                     <a href="#掘金技術征文" title="掘金技術征文" rel="1">
                       掘金技術征文 (1)
-                    </a>
-                  
-                    <a href="#SEO" title="SEO" rel="2">
-                      SEO (2)
                     </a>
                   
                     <a href="#API" title="API" rel="1">
@@ -337,12 +340,12 @@
                       Open Source (1)
                     </a>
                   
-                    <a href="#Regular Expression" title="Regular Expression" rel="1">
-                      Regular Expression (1)
-                    </a>
-                  
                     <a href="#KeyBoard" title="KeyBoard" rel="1">
                       KeyBoard (1)
+                    </a>
+                  
+                    <a href="#Regular Expression" title="Regular Expression" rel="1">
+                      Regular Expression (1)
                     </a>
                   
                     <a href="#ECMAScript" title="ECMAScript" rel="1">
@@ -353,12 +356,12 @@
                       React (3)
                     </a>
                   
-                    <a href="#Redux" title="Redux" rel="1">
-                      Redux (1)
-                    </a>
-                  
                     <a href="#React Native" title="React Native" rel="1">
                       React Native (1)
+                    </a>
+                  
+                    <a href="#Redux" title="Redux" rel="1">
+                      Redux (1)
                     </a>
                   
                     <a href="#思考" title="思考" rel="1">
@@ -410,6 +413,17 @@
                   <hr>
                   
                     <div class="post-preview">
+                      <a href="/2017/05/31/javascript-array-map-parseint-solutions/">
+                        <h2 class="post-title">
+                          JavaScript Array.map(parseInt) 錯誤解決方案
+                        </h2>
+
+                        
+                      </a>
+                    </div>
+                  <hr>
+                  
+                    <div class="post-preview">
                       <a href="/2017/05/06/introduction-to-regular-expression/">
                         <h2 class="post-title">
                           初探正則表達式
@@ -432,31 +446,9 @@
                   <hr>
                   
                     <div class="post-preview">
-                      <a href="/2017/05/31/javascript-array-map-parseint-solutions/">
-                        <h2 class="post-title">
-                          JavaScript Array.map(parseInt) 錯誤解決方案
-                        </h2>
-
-                        
-                      </a>
-                    </div>
-                  <hr>
-                  
-                    <div class="post-preview">
                       <a href="/2017/02/19/javascript-closure/">
                         <h2 class="post-title">
                           JavaScript的閉包(Closure)
-                        </h2>
-
-                        
-                      </a>
-                    </div>
-                  <hr>
-                  
-                    <div class="post-preview">
-                      <a href="/2017/05/18/javascript-data-structures/">
-                        <h2 class="post-title">
-                          利用 ECMAScript 学习如何判断数据类型
                         </h2>
 
                         
@@ -476,9 +468,9 @@
                   <hr>
                   
                     <div class="post-preview">
-                      <a href="/2017/01/14/javascript-variable-hoisting/">
+                      <a href="/2017/05/18/javascript-data-structures/">
                         <h2 class="post-title">
-                          JavaScript的變量提升入門
+                          利用 ECMAScript 学习如何判断数据类型
                         </h2>
 
                         
@@ -498,9 +490,9 @@
                   <hr>
                   
                     <div class="post-preview">
-                      <a href="/2017/04/27/n-ways-to-output-hello-world/">
+                      <a href="/2017/05/21/learn-javascript-in-six-steps/">
                         <h2 class="post-title">
-                          Hello World的四+N種方法
+                          打好 JavaScript 基礎的6個步驟
                         </h2>
 
                         
@@ -509,9 +501,20 @@
                   <hr>
                   
                     <div class="post-preview">
-                      <a href="/2017/05/21/learn-javascript-in-six-steps/">
+                      <a href="/2017/01/14/javascript-variable-hoisting/">
                         <h2 class="post-title">
-                          打好 JavaScript 基礎的6個步驟
+                          JavaScript的變量提升入門
+                        </h2>
+
+                        
+                      </a>
+                    </div>
+                  <hr>
+                  
+                    <div class="post-preview">
+                      <a href="/2017/04/27/n-ways-to-output-hello-world/">
+                        <h2 class="post-title">
+                          Hello World的四+N種方法
                         </h2>
 
                         
@@ -699,36 +702,6 @@
                   
                 </div>
               
-                <div class="one-tag-list" id="Markdown">
-                  <span class="fa fa-tags listing-seperator">
-                    <span>Markdown</span>
-                  </span>
-
-                  
-                    <div class="post-preview">
-                      <a href="/2017/06/01/create-markdown-powerpoint-in-5-mins/">
-                        <h2 class="post-title">
-                          5分鐘製作 Markdown PowerPoint
-                        </h2>
-
-                        
-                      </a>
-                    </div>
-                  <hr>
-                  
-                    <div class="post-preview">
-                      <a href="/2017/08/31/react-markdown-render-markdown-as-component/">
-                        <h2 class="post-title">
-                          React-markdown -- 實時渲染 Markdown 的 React 工具
-                        </h2>
-
-                        
-                      </a>
-                    </div>
-                  <hr>
-                  
-                </div>
-              
                 <div class="one-tag-list" id="Codingame">
                   <span class="fa fa-tags listing-seperator">
                     <span>Codingame</span>
@@ -758,6 +731,36 @@
                       <a href="/2017/04/08/common-http-status-code/">
                         <h2 class="post-title">
                           常見的14種HTTP狀態碼
+                        </h2>
+
+                        
+                      </a>
+                    </div>
+                  <hr>
+                  
+                </div>
+              
+                <div class="one-tag-list" id="Markdown">
+                  <span class="fa fa-tags listing-seperator">
+                    <span>Markdown</span>
+                  </span>
+
+                  
+                    <div class="post-preview">
+                      <a href="/2017/06/01/create-markdown-powerpoint-in-5-mins/">
+                        <h2 class="post-title">
+                          5分鐘製作 Markdown PowerPoint
+                        </h2>
+
+                        
+                      </a>
+                    </div>
+                  <hr>
+                  
+                    <div class="post-preview">
+                      <a href="/2017/08/31/react-markdown-render-markdown-as-component/">
+                        <h2 class="post-title">
+                          React-markdown -- 實時渲染 Markdown 的 React 工具
                         </h2>
 
                         
@@ -824,6 +827,55 @@
                   
                 </div>
               
+                <div class="one-tag-list" id="MacOS">
+                  <span class="fa fa-tags listing-seperator">
+                    <span>MacOS</span>
+                  </span>
+
+                  
+                    <div class="post-preview">
+                      <a href="/2017/10/02/frontend-developer-tools-in-macos/">
+                        <h2 class="post-title">
+                          前端程序員的必備工具清單（MacOS）
+                        </h2>
+
+                        
+                      </a>
+                    </div>
+                  <hr>
+                  
+                </div>
+              
+                <div class="one-tag-list" id="Github">
+                  <span class="fa fa-tags listing-seperator">
+                    <span>Github</span>
+                  </span>
+
+                  
+                    <div class="post-preview">
+                      <a href="/2017/04/11/github-ssh/">
+                        <h2 class="post-title">
+                          利用ssh連接Github的方法
+                        </h2>
+
+                        
+                      </a>
+                    </div>
+                  <hr>
+                  
+                    <div class="post-preview">
+                      <a href="/2017/02/23/github-edcation-package/">
+                        <h2 class="post-title">
+                          利用Github免費教育禮包更换.me域名
+                        </h2>
+
+                        
+                      </a>
+                    </div>
+                  <hr>
+                  
+                </div>
+              
                 <div class="one-tag-list" id="Git">
                   <span class="fa fa-tags listing-seperator">
                     <span>Git</span>
@@ -843,16 +895,16 @@
                   
                 </div>
               
-                <div class="one-tag-list" id="Github">
+                <div class="one-tag-list" id="Hexo">
                   <span class="fa fa-tags listing-seperator">
-                    <span>Github</span>
+                    <span>Hexo</span>
                   </span>
 
                   
                     <div class="post-preview">
-                      <a href="/2017/02/23/github-edcation-package/">
+                      <a href="/2017/01/08/hello-world/">
                         <h2 class="post-title">
-                          利用Github免費教育禮包更换.me域名
+                          Hello, World!
                         </h2>
 
                         
@@ -861,9 +913,9 @@
                   <hr>
                   
                     <div class="post-preview">
-                      <a href="/2017/04/11/github-ssh/">
+                      <a href="/2017/01/08/hexo-404-page/">
                         <h2 class="post-title">
-                          利用ssh連接Github的方法
+                          Hexo之建立404 Page
                         </h2>
 
                         
@@ -871,18 +923,32 @@
                     </div>
                   <hr>
                   
-                </div>
-              
-                <div class="one-tag-list" id="MacOS">
-                  <span class="fa fa-tags listing-seperator">
-                    <span>MacOS</span>
-                  </span>
+                    <div class="post-preview">
+                      <a href="/2017/02/26/hexo-change-site-url/">
+                        <h2 class="post-title">
+                          Hexo sitemap 簡單更改域名的方法
+                        </h2>
 
+                        
+                      </a>
+                    </div>
+                  <hr>
                   
                     <div class="post-preview">
-                      <a href="/2017/10/02/frontend-developer-tools-in-macos/">
+                      <a href="/2017/02/26/hexo-seo-nofollow/">
                         <h2 class="post-title">
-                          前端程序員的必備工具清單（MacOS）
+                          Hexo優化之為外部鏈接添加nofollow屬性
+                        </h2>
+
+                        
+                      </a>
+                    </div>
+                  <hr>
+                  
+                    <div class="post-preview">
+                      <a href="/2017/01/08/readme/">
+                        <h2 class="post-title">
+                          Github上的README.md
                         </h2>
 
                         
@@ -922,44 +988,11 @@
                   
                 </div>
               
-                <div class="one-tag-list" id="Hexo">
+                <div class="one-tag-list" id="SEO">
                   <span class="fa fa-tags listing-seperator">
-                    <span>Hexo</span>
+                    <span>SEO</span>
                   </span>
 
-                  
-                    <div class="post-preview">
-                      <a href="/2017/01/08/hello-world/">
-                        <h2 class="post-title">
-                          Hello, World!
-                        </h2>
-
-                        
-                      </a>
-                    </div>
-                  <hr>
-                  
-                    <div class="post-preview">
-                      <a href="/2017/01/08/hexo-404-page/">
-                        <h2 class="post-title">
-                          Hexo之建立404 Page
-                        </h2>
-
-                        
-                      </a>
-                    </div>
-                  <hr>
-                  
-                    <div class="post-preview">
-                      <a href="/2017/02/26/hexo-seo-nofollow/">
-                        <h2 class="post-title">
-                          Hexo優化之為外部鏈接添加nofollow屬性
-                        </h2>
-
-                        
-                      </a>
-                    </div>
-                  <hr>
                   
                     <div class="post-preview">
                       <a href="/2017/02/26/hexo-change-site-url/">
@@ -973,9 +1006,9 @@
                   <hr>
                   
                     <div class="post-preview">
-                      <a href="/2017/01/08/readme/">
+                      <a href="/2017/02/26/hexo-seo-nofollow/">
                         <h2 class="post-title">
-                          Github上的README.md
+                          Hexo優化之為外部鏈接添加nofollow屬性
                         </h2>
 
                         
@@ -1044,36 +1077,6 @@
                       <a href="/2017/09/30/hang-zhou-interview-summary/">
                         <h2 class="post-title">
                           【圖多】《遠征成功﹣﹣一個香港人北上杭州豬場的前端面試之路》
-                        </h2>
-
-                        
-                      </a>
-                    </div>
-                  <hr>
-                  
-                </div>
-              
-                <div class="one-tag-list" id="SEO">
-                  <span class="fa fa-tags listing-seperator">
-                    <span>SEO</span>
-                  </span>
-
-                  
-                    <div class="post-preview">
-                      <a href="/2017/02/26/hexo-seo-nofollow/">
-                        <h2 class="post-title">
-                          Hexo優化之為外部鏈接添加nofollow屬性
-                        </h2>
-
-                        
-                      </a>
-                    </div>
-                  <hr>
-                  
-                    <div class="post-preview">
-                      <a href="/2017/02/26/hexo-change-site-url/">
-                        <h2 class="post-title">
-                          Hexo sitemap 簡單更改域名的方法
                         </h2>
 
                         
@@ -1178,25 +1181,6 @@
                   
                 </div>
               
-                <div class="one-tag-list" id="Regular Expression">
-                  <span class="fa fa-tags listing-seperator">
-                    <span>Regular Expression</span>
-                  </span>
-
-                  
-                    <div class="post-preview">
-                      <a href="/2017/05/06/introduction-to-regular-expression/">
-                        <h2 class="post-title">
-                          初探正則表達式
-                        </h2>
-
-                        
-                      </a>
-                    </div>
-                  <hr>
-                  
-                </div>
-              
                 <div class="one-tag-list" id="KeyBoard">
                   <span class="fa fa-tags listing-seperator">
                     <span>KeyBoard</span>
@@ -1207,6 +1191,25 @@
                       <a href="/2017/07/02/introduction-to-hhkb-pro-2/">
                         <h2 class="post-title">
                           神兵利器 -- HHKB Pro 2 開箱文
+                        </h2>
+
+                        
+                      </a>
+                    </div>
+                  <hr>
+                  
+                </div>
+              
+                <div class="one-tag-list" id="Regular Expression">
+                  <span class="fa fa-tags listing-seperator">
+                    <span>Regular Expression</span>
+                  </span>
+
+                  
+                    <div class="post-preview">
+                      <a href="/2017/05/06/introduction-to-regular-expression/">
+                        <h2 class="post-title">
+                          初探正則表達式
                         </h2>
 
                         
@@ -1242,9 +1245,9 @@
 
                   
                     <div class="post-preview">
-                      <a href="/2017/05/16/react-component-lifecycle/">
+                      <a href="/2017/08/31/react-markdown-render-markdown-as-component/">
                         <h2 class="post-title">
-                          React 組件生命週期 - 加載組件
+                          React-markdown -- 實時渲染 Markdown 的 React 工具
                         </h2>
 
                         
@@ -1264,28 +1267,9 @@
                   <hr>
                   
                     <div class="post-preview">
-                      <a href="/2017/08/31/react-markdown-render-markdown-as-component/">
+                      <a href="/2017/05/16/react-component-lifecycle/">
                         <h2 class="post-title">
-                          React-markdown -- 實時渲染 Markdown 的 React 工具
-                        </h2>
-
-                        
-                      </a>
-                    </div>
-                  <hr>
-                  
-                </div>
-              
-                <div class="one-tag-list" id="Redux">
-                  <span class="fa fa-tags listing-seperator">
-                    <span>Redux</span>
-                  </span>
-
-                  
-                    <div class="post-preview">
-                      <a href="/2017/05/03/redux-array-push-function/">
-                        <h2 class="post-title">
-                          Redux push()是怎樣寫的？
+                          React 組件生命週期 - 加載組件
                         </h2>
 
                         
@@ -1305,6 +1289,25 @@
                       <a href="/2017/04/11/react-native-run-android/">
                         <h2 class="post-title">
                           【React Native】安裝Android Apk而無需連接伺服器的方法
+                        </h2>
+
+                        
+                      </a>
+                    </div>
+                  <hr>
+                  
+                </div>
+              
+                <div class="one-tag-list" id="Redux">
+                  <span class="fa fa-tags listing-seperator">
+                    <span>Redux</span>
+                  </span>
+
+                  
+                    <div class="post-preview">
+                      <a href="/2017/05/03/redux-array-push-function/">
+                        <h2 class="post-title">
+                          Redux push()是怎樣寫的？
                         </h2>
 
                         
@@ -1493,11 +1496,11 @@
               
               
               
+              
+              
+              
+              
               <a href="/Tags/#Markdown" title="Markdown" rel="2">Markdown</a>
-              
-              
-              
-              
               
               
               
@@ -1515,11 +1518,15 @@
               
               
               
+              <a href="/Tags/#Hexo" title="Hexo" rel="5">Hexo</a>
+              
+              
+              
               <a href="/Tags/#Hackathon" title="Hackathon" rel="2">Hackathon</a>
               
               
               
-              <a href="/Tags/#Hexo" title="Hexo" rel="5">Hexo</a>
+              <a href="/Tags/#SEO" title="SEO" rel="2">SEO</a>
               
               
               
@@ -1528,10 +1535,6 @@
               
               
               
-              
-              
-              
-              <a href="/Tags/#SEO" title="SEO" rel="2">SEO</a>
               
               
               
