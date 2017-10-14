@@ -64,7 +64,7 @@
   left: 0;
   width: 100%;
   z-index: 6;
-  transition: background .5s;
+  transition: background 0.5s;
   line-height: 1.7; }
   @media screen and (min-width: 768px) {
     .navbar-custom .container-fluid {
@@ -86,13 +86,11 @@
       border-radius: 3px;
       background: black;
       color: white;
-      padding-bottom: 3px;
-      padding-left: 5px;
-      padding-right: 5px;
-      padding-top: 1px; }
+      padding: 1px 5px 3px; }
     .navbar-custom.is-fixed .brand-blog {
       padding-left: 2px; }
-    .navbar-custom.is-fixed .navbar-brand, .navbar-custom.is-fixed .navbar-right a {
+    .navbar-custom.is-fixed .navbar-brand,
+    .navbar-custom.is-fixed .navbar-right a {
       color: black; }
     .navbar-custom.is-fixed .navbar-toggle span {
       background: black; }
@@ -120,7 +118,7 @@
       .navbar-custom .nav li a {
         color: white;
         padding: 20px; }
-        .navbar-custom .nav li a:hover, .navbar-custom .nav li a:focus {
+        .navbar-custom .nav li a:focus, .navbar-custom .nav li a:hover {
           color: #FC7097; }
         .navbar-custom .nav li a:active {
           background: none; } }
@@ -136,11 +134,12 @@
   .navbar-custom {
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden; }
-    .navbar-custom.is-fixed .nav li a, .navbar-custom.is-fixed .navbar-brand {
+    .navbar-custom.is-fixed .nav li a,
+    .navbar-custom.is-fixed .navbar-brand {
       color: #404040; }
-    .navbar-custom.is-fixed .nav li a:hover, .navbar-custom.is-fixed .nav li a:focus {
+    .navbar-custom.is-fixed .nav li a:focus, .navbar-custom.is-fixed .nav li a:hover {
       color: #0085a1; }
-    .navbar-custom.is-fixed .navbar-brand:hover, .navbar-custom.is-fixed .navbar-brand:focus {
+    .navbar-custom.is-fixed .navbar-brand:focus, .navbar-custom.is-fixed .navbar-brand:hover {
       color: #0085a1; } }
 
 @media only screen and (max-width: 767px) {
@@ -485,7 +484,7 @@ footer {
   .anchorjs-link:hover {
     color: #0085a1; }
   *:hover > .anchorjs-link {
-    transition: color .25s linear; } }
+    transition: color 0.25s linear; } }
 
 .list-inline {
   margin: 0; }
@@ -498,7 +497,7 @@ body {
   font-size: 16px;
   color: #404040;
   overflow-x: hidden;
-  font-family: -apple-system,  "PingFang SC","Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif; }
+  font-family: -apple-system, "PingFang SC","Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif; }
 
 p {
   margin: 0 0 20px; }
@@ -532,26 +531,26 @@ article .post-container h2 {
 
 .calpaFirstImage .black {
   color: #ebebeb; }
-  .calpaFirstImage .black:hover, .calpaFirstImage .black:focus {
+  .calpaFirstImage .black:focus, .calpaFirstImage .black:hover {
     color: #337ab7; }
 
 .calpaFirstImage .white {
   color: #404040; }
-  .calpaFirstImage .white:hover, .calpaFirstImage .white:focus {
+  .calpaFirstImage .white:focus, .calpaFirstImage .white:hover {
     color: #337ab7; }
 
 a {
   color: #337ab7; }
-  a:hover, a:focus {
+  a:focus, a:hover {
     color: #0085a1;
     text-decoration: none; }
-  a img:hover, a img:focus {
+  a img:focus, a img:hover {
     cursor: zoom-in; }
 
 blockquote {
   color: #808080;
   font-size: 0.95em;
-  margin: 20px 0 20px;
+  margin: 20px 0;
   border-color: #ff7e79; }
   blockquote p {
     margin: 0; }
@@ -576,7 +575,8 @@ img.shadow {
     padding: 0 0.4em;
     background: white; } }
 
-.table th, .table td {
+.table td,
+.table th {
   border: 1px solid #eee !important; }
 
 hr.small {
@@ -584,7 +584,8 @@ hr.small {
   margin: 15px auto;
   border: 4px white; }
 
-pre, .table-responsive {
+.table-responsive,
+pre {
   -webkit-overflow-scrolling: touch; }
 
 pre code {
@@ -593,7 +594,12 @@ pre code {
   white-space: pre;
   word-wrap: normal; }
 
-article .post-container h1, article .post-container h2, article .post-container h3, article .post-container h4, article .post-container h5, article .post-container h6 {
+article .post-container h1,
+article .post-container h2,
+article .post-container h3,
+article .post-container h4,
+article .post-container h5,
+article .post-container h6 {
   margin-top: -90px;
   padding: 100px 0 0; }
 
@@ -627,7 +633,8 @@ a:focus {
   margin-bottom: 0;
   padding-bottom: 0.5em;
   border-bottom: 1px solid #eeeeee; }
-  .floating-label-form-group input, .floating-label-form-group textarea {
+  .floating-label-form-group input,
+  .floating-label-form-group textarea {
     z-index: 1;
     position: relative;
     padding-right: 0;
