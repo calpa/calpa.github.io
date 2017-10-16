@@ -4,6 +4,7 @@
 
     
     
+    
   <url>
     <loc>https://calpa.me/2017/10/02/frontend-developer-tools-in-macos/</loc>
     <lastmod>2017-10-02T11:58:36.000Z</lastmod>
@@ -54,9 +55,9 @@
         <title>異步操作見聞錄</title>
         <pubTime>2017-09-27T12:00:00.000Z</pubTime>
         
-        <tag>JavaScript</tag>
-         
         <tag>Front End</tag>
+         
+        <tag>JavaScript</tag>
          
          
            
@@ -180,7 +181,6 @@
 
     
     
-    
   <url>
     <loc>https://calpa.me/2017/05/31/javascript-array-map-parseint-solutions/</loc>
     <lastmod>2017-07-13T23:11:43.000Z</lastmod>
@@ -271,31 +271,14 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/04/23/hackUST-2017-hackathon-summary/</loc>
+    <loc>https://calpa.me/2017/04/05/front-end-booklist/</loc>
     <lastmod>2017-06-06T16:28:01.000Z</lastmod>
     <data>
         <display>
-        <title>hackUST 2017後記</title>
-        <pubTime>2017-04-23T12:44:00.000Z</pubTime>
+        <title>前端工程師的入門書單</title>
+        <pubTime>2017-04-05T14:51:00.000Z</pubTime>
         
-        <tag>Hackathon</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://calpa.me/2017/02/19/supercharger-hackathon/</loc>
-    <lastmod>2017-06-06T16:28:01.000Z</lastmod>
-    <data>
-        <display>
-        <title>SuperCharger Hackathon後記</title>
-        <pubTime>2017-02-19T07:12:00.000Z</pubTime>
-        
-        <tag>Hackathon</tag>
+        <tag>Web</tag>
          
          
            
@@ -322,6 +305,23 @@
 
     
   <url>
+    <loc>https://calpa.me/2017/04/23/hackUST-2017-hackathon-summary/</loc>
+    <lastmod>2017-06-06T16:28:01.000Z</lastmod>
+    <data>
+        <display>
+        <title>hackUST 2017後記</title>
+        <pubTime>2017-04-23T12:44:00.000Z</pubTime>
+        
+        <tag>Hackathon</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://calpa.me/2017/04/25/coders-of-the-caribbean-review/</loc>
     <lastmod>2017-06-06T16:28:01.000Z</lastmod>
     <data>
@@ -339,14 +339,14 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/04/05/front-end-booklist/</loc>
+    <loc>https://calpa.me/2017/02/19/supercharger-hackathon/</loc>
     <lastmod>2017-06-06T16:28:01.000Z</lastmod>
     <data>
         <display>
-        <title>前端工程師的入門書單</title>
-        <pubTime>2017-04-05T14:51:00.000Z</pubTime>
+        <title>SuperCharger Hackathon後記</title>
+        <pubTime>2017-02-19T07:12:00.000Z</pubTime>
         
-        <tag>Web</tag>
+        <tag>Hackathon</tag>
          
          
            
@@ -446,6 +446,23 @@
 
     
   <url>
+    <loc>https://calpa.me/2017/02/19/javascript-closure/</loc>
+    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
+    <data>
+        <display>
+        <title>JavaScript的閉包(Closure)</title>
+        <pubTime>2017-02-19T07:12:00.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://calpa.me/2017/01/14/javascript-variable-hoisting/</loc>
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     <data>
@@ -463,46 +480,12 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/05/01/CreateListFromArrayLike-problem-solution/</loc>
-    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
-    <data>
-        <display>
-        <title>CreateListFromArrayLike called on non-object 報錯的解決方法</title>
-        <pubTime>2017-05-01T14:50:00.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://calpa.me/2017/04/27/n-ways-to-output-hello-world/</loc>
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     <data>
         <display>
         <title>Hello World的四+N種方法</title>
         <pubTime>2017-04-27T06:34:00.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://calpa.me/2017/05/05/javascript-array/</loc>
-    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
-    <data>
-        <display>
-        <title>JavaScript 數組去重</title>
-        <pubTime>2017-05-05T14:53:00.000Z</pubTime>
         
         <tag>JavaScript</tag>
          
@@ -533,33 +516,14 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/02/19/javascript-closure/</loc>
+    <loc>https://calpa.me/2017/05/05/javascript-array/</loc>
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     <data>
         <display>
-        <title>JavaScript的閉包(Closure)</title>
-        <pubTime>2017-02-19T07:12:00.000Z</pubTime>
+        <title>JavaScript 數組去重</title>
+        <pubTime>2017-05-05T14:53:00.000Z</pubTime>
         
         <tag>JavaScript</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://calpa.me/2017/01/20/using-javascript-to-create-web-storage/</loc>
-    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
-    <data>
-        <display>
-        <title>利用JavaScript創建Web Storage</title>
-        <pubTime>2017-01-20T11:37:38.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-        <tag>Web</tag>
          
          
            
@@ -588,6 +552,40 @@
 
     
   <url>
+    <loc>https://calpa.me/2017/03/25/javascript-this/</loc>
+    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
+    <data>
+        <display>
+        <title>JavaScript的this</title>
+        <pubTime>2017-03-25T04:44:00.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://calpa.me/2017/05/01/CreateListFromArrayLike-problem-solution/</loc>
+    <lastmod>2017-05-18T06:07:19.000Z</lastmod>
+    <data>
+        <display>
+        <title>CreateListFromArrayLike called on non-object 報錯的解決方法</title>
+        <pubTime>2017-05-01T14:50:00.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://calpa.me/2017/05/03/redux-array-push-function/</loc>
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     <data>
@@ -607,14 +605,16 @@
 
     
   <url>
-    <loc>https://calpa.me/2017/03/25/javascript-this/</loc>
+    <loc>https://calpa.me/2017/01/20/using-javascript-to-create-web-storage/</loc>
     <lastmod>2017-05-18T06:07:19.000Z</lastmod>
     <data>
         <display>
-        <title>JavaScript的this</title>
-        <pubTime>2017-03-25T04:44:00.000Z</pubTime>
+        <title>利用JavaScript創建Web Storage</title>
+        <pubTime>2017-01-20T11:37:38.000Z</pubTime>
         
         <tag>JavaScript</tag>
+         
+        <tag>Web</tag>
          
          
            
